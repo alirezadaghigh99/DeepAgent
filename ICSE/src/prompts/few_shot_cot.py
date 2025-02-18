@@ -299,25 +299,25 @@ def cot_fewshot_using_different_categories(prompt, example_pre_post, example_tra
     '''
     
 
-def cot_few_shot_using_same_or_different_category(prompt, example1, example2, example3, example4, category, is_same = False):
+def cot_few_shot_using_same_or_different_category(prompt, example1, example2, example3, example4, category, category1, category2, category3, category4, is_same = False):
     base_shots = f'''
         Here are some examples of how to generate the code for deep learning step by step.
 
         #Example 1:
-        Here is an example of pre-post processing stage
+        Here is an example of {category1}
         {example1}
 
         Example 2:
-        Here is an example of training stage
+        Here is an example of {category2}
         {example2}
 
         Example 3:
-        Here is an example for classification task
+        Here is an example for {category3}
         {example3}
         ```
         
         Example 4: 
-        Here is an example for image data
+        Here is an example for {category4}
         {example4}
         ```
         '''
