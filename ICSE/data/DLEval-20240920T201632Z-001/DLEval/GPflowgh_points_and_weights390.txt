@@ -1,0 +1,26 @@
+stage: Pre-Post processing
+task: Prediction
+data: tabular
+
+prompt:
+"Complete the following function :
+def gh_points_and_weights(n_gh: int) -> Tuple[tf.Tensor, tf.Tensor]:
+    r"""
+    Given the number of Gauss-Hermite points n_gh,
+    returns the points z and the weights dz to perform the following
+    uni-dimensional gaussian quadrature:
+
+    X ~ N(mean, stddev²)
+    E[f(X)] = ∫ f(x) p(x) dx = \sum_{i=1}^{n_gh} f(mean + stddev*z_i) dz_i
+
+    :param n_gh: Number of Gauss-Hermite points
+    :returns: Points z and weights dz to compute uni-dimensional gaussian expectation
+    """
+
+ ground Truth:gpflow/quadrature/gauss_hermite.py
+
+ repo:GPflow
+
+ function:gh_points_and_weights
+ 
+ test_cases:tests/gpflow/quadrature/test_quadrature.py 

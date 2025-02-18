@@ -1,0 +1,14 @@
+stage: Training
+task: Prediction
+data: 
+
+prompt:
+Create a Python class called fit with a method called fit that fits the local Laplace approximation at the parameters of a model. The method takes in parameters train_loader (a torch DataLoader), override (a boolean with a default value of True), and progress_bar (a boolean with a default value of False). If override is set to False, a ValueError is raised. The method then sets the model to evaluation mode, finds the last layer of the model, initializes certain parameters, and fits the model using the train_loader. Finally, the method sets the mean parameter and detaches it if backpropagation is disabled.
+
+ ground Truth:laplace/lllaplace.py
+
+ repo:Laplace
+
+ function:fit
+ 
+ test_cases:tests/test_lllaplace.py

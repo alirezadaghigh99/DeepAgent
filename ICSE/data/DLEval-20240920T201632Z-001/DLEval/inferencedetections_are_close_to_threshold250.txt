@@ -1,0 +1,14 @@
+stage: Inference
+task: Detection
+data: Text
+
+prompt:
+Generate a Python function called detections_are_close_to_threshold that takes in a Prediction object, a set of selected class names, a threshold value, an epsilon value, and a minimum number of objects close to the threshold. The function returns a boolean value indicating whether the number of detections close to the threshold is greater than or equal to the minimum number specified. The function calls another function called count_detections_close_to_threshold to calculate the number of detections close to the threshold.
+
+ ground Truth:inference/core/active_learning/samplers/close_to_threshold.py
+
+ repo:inference
+
+ function:detections_are_close_to_threshold
+ 
+ test_cases:tests/inference/unit_tests/core/active_learning/samplers/test_close_to_threshold.py::test_detection_prediction_is_close_to_threshold_when_minimum_objects_criterion_met

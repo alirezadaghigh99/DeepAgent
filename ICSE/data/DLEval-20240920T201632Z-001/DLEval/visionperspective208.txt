@@ -1,0 +1,32 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Generate a Python function called perspective that perform perspective transform of the given image.
+    If the image is torch Tensor, it is expected
+    to have [..., H, W] shape, where ... means an arbitrary number of leading dimensions.
+
+    Args:
+        img (PIL Image or Tensor): Image to be transformed.
+        startpoints (list of list of ints): List containing four lists of two integers corresponding to four corners
+            ``[top-left, top-right, bottom-right, bottom-left]`` of the original image.
+        endpoints (list of list of ints): List containing four lists of two integers corresponding to four corners
+            ``[top-left, top-right, bottom-right, bottom-left]`` of the transformed image.
+        interpolation (InterpolationMode): Desired interpolation enum defined by
+            :class:`torchvision.transforms.InterpolationMode`. Default is ``InterpolationMode.BILINEAR``.
+            If input is Tensor, only ``InterpolationMode.NEAREST``, ``InterpolationMode.BILINEAR`` are supported.
+            The corresponding Pillow integer constants, e.g. ``PIL.Image.BILINEAR`` are accepted as well.
+        fill (sequence or number, optional): Pixel fill value for the area outside the transformed
+            image. If given a number, the value is used for all bands respectively.
+
+    Returns:
+        PIL Image or Tensor: transformed Image.
+
+ ground Truth:torchvision/transforms/functional.py
+
+ repo:vision
+
+ function:perspective
+ 
+ test_cases:test/test_transforms.py::test_randomperspective_fill

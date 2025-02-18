@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: Classification
+data: Text
+
+prompt:
+Generate a Python function called get_num_labels that takes in a parameter y. If the shape of y is 0, it will raise a ValueError with the message 'Invalid labeling: Cannot contain 0 labels'. If y is an instance of csr_matrix, the function will return the maximum value of y's indices plus 1. Otherwise, it will return the maximum value of y plus 1.
+
+ ground Truth:small_text/utils/labels.py
+
+ repo:small-text
+
+ function:get_num_labels
+ 
+ test_cases:tests/unit/small_text/utils/test_labels.py::LabelUtilsTest

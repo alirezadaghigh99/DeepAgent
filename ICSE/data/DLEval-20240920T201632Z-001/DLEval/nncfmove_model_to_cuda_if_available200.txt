@@ -1,0 +1,14 @@
+stage: Inference
+task: 
+data: 
+
+prompt:
+Create a Python function called move_model_to_cuda_if_available that takes in a model as input. If the torch library detects that a CUDA device is available, the function will move the model to the CUDA device using the model.cuda() method. The function will then return the device of the first parameter of the model using next().
+
+ ground Truth:tests/torch/nas/helpers.py
+
+ repo:nncf
+
+ function:move_model_to_cuda_if_available
+ 
+ test_cases:tests/torch/nas/test_elastic_depth.py

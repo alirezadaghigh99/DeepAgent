@@ -1,0 +1,228 @@
+output file:
+processed_korniarotation_matrix_to_quaternion175.json
+function:
+rotation_matrix_to_quaternion
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestRotationMatrixToQuaternion::test_smoke_batch[cpu-float32-3]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestRotationMatrixToQuaternion::test_smoke_batch[cpu-float32-8] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestRotationMatrixToQuaternion::test_smoke_batch[cpu-float32-3] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestRotationMatrixToQuaternion::test_smoke_batch[cpu-float32-8]'}
+
+All Test Cases On Generated code:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'inductor', 'tvm', 'cudagraphs', 'openxla', 'onnxrt', 'jit', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 9 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestRotationMatrixToQuaternion::test_smoke_batch[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestRotationMatrixToQuaternion::test_smoke_batch[cpu-float32-3] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestRotationMatrixToQuaternion::test_smoke_batch[cpu-float32-8] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestRotationMatrixToQuaternion::test_identity[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestRotationMatrixToQuaternion::test_rot_x_45[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestRotationMatrixToQuaternion::test_back_and_forth[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestRotationMatrixToQuaternion::test_corner_case[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestRotationMatrixToQuaternion::test_gradcheck[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestRotationMatrixToQuaternion::test_dynamo[cpu-float32-inductor] PASSED
+
+=================================== FAILURES ===================================
+________ TestRotationMatrixToQuaternion.test_smoke_batch[cpu-float32-3] ________
+
+self = <tests.geometry.test_conversions.TestRotationMatrixToQuaternion object at 0x7a4490d64af0>
+batch_size = 3, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", (1, 3, 8))
+    def test_smoke_batch(self, batch_size, device, dtype):
+        matrix = torch.zeros(batch_size, 3, 3, device=device, dtype=dtype)
+>       quaternion = kornia.geometry.conversions.rotation_matrix_to_quaternion(matrix)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py:185: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/conversions.py:292: in rotation_matrix_to_quaternion
+    return rotation_matrix_to_quaternion(rotation_matrix, eps)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/temp.py:57: in rotation_matrix_to_quaternion
+    q = compute_quaternion(rotation_matrix, trace)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+r = tensor([[[0., 0., 0.],
+         [0., 0., 0.],
+         [0., 0., 0.]],
+
+        [[0., 0., 0.],
+         [0., 0., 0.],
+         [0., 0., 0.]],
+
+        [[0., 0., 0.],
+         [0., 0., 0.],
+         [0., 0., 0.]]])
+t = tensor([0., 0., 0.])
+
+    def compute_quaternion(r, t):
+>       if t > 0:
+E       RuntimeError: Boolean value of Tensor with more than one value is ambiguous
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/temp.py:32: RuntimeError
+________ TestRotationMatrixToQuaternion.test_smoke_batch[cpu-float32-8] ________
+
+self = <tests.geometry.test_conversions.TestRotationMatrixToQuaternion object at 0x7a4490d64df0>
+batch_size = 8, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", (1, 3, 8))
+    def test_smoke_batch(self, batch_size, device, dtype):
+        matrix = torch.zeros(batch_size, 3, 3, device=device, dtype=dtype)
+>       quaternion = kornia.geometry.conversions.rotation_matrix_to_quaternion(matrix)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py:185: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/conversions.py:292: in rotation_matrix_to_quaternion
+    return rotation_matrix_to_quaternion(rotation_matrix, eps)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/temp.py:57: in rotation_matrix_to_quaternion
+    q = compute_quaternion(rotation_matrix, trace)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+r = tensor([[[0., 0., 0.],
+         [0., 0., 0.],
+         [0., 0., 0.]],
+
+        [[0., 0., 0.],
+         [0., 0., 0.],
+ ...
+         [0., 0., 0.],
+         [0., 0., 0.]],
+
+        [[0., 0., 0.],
+         [0., 0., 0.],
+         [0., 0., 0.]]])
+t = tensor([0., 0., 0., 0., 0., 0., 0., 0.])
+
+    def compute_quaternion(r, t):
+>       if t > 0:
+E       RuntimeError: Boolean value of Tensor with more than one value is ambiguous
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/temp.py:32: RuntimeError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestRotationMatrixToQuaternion::test_smoke_batch[cpu-float32-3]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestRotationMatrixToQuaternion::test_smoke_batch[cpu-float32-8]
+========================= 2 failed, 7 passed in 2.07s ==========================
+
+
+Final Test Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'onnxrt', 'inductor', 'jit', 'openxla', 'tvm', None, 'cudagraphs'}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 9 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestRotationMatrixToQuaternion::test_smoke_batch[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestRotationMatrixToQuaternion::test_smoke_batch[cpu-float32-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestRotationMatrixToQuaternion::test_smoke_batch[cpu-float32-8] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestRotationMatrixToQuaternion::test_identity[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestRotationMatrixToQuaternion::test_rot_x_45[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestRotationMatrixToQuaternion::test_back_and_forth[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestRotationMatrixToQuaternion::test_corner_case[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestRotationMatrixToQuaternion::test_gradcheck[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestRotationMatrixToQuaternion::test_dynamo[cpu-float32-inductor] PASSED
+
+============================== 9 passed in 1.97s ===============================
+
+
+Initial Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'cudagraphs', 'jit', 'onnxrt', 'tvm', 'openxla', 'inductor', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 9 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestRotationMatrixToQuaternion::test_smoke_batch[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestRotationMatrixToQuaternion::test_smoke_batch[cpu-float32-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestRotationMatrixToQuaternion::test_smoke_batch[cpu-float32-8] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestRotationMatrixToQuaternion::test_identity[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestRotationMatrixToQuaternion::test_rot_x_45[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestRotationMatrixToQuaternion::test_back_and_forth[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestRotationMatrixToQuaternion::test_corner_case[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestRotationMatrixToQuaternion::test_gradcheck[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestRotationMatrixToQuaternion::test_dynamo[cpu-float32-inductor] PASSED
+
+============================== 9 passed in 2.01s ===============================

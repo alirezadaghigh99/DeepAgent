@@ -1,0 +1,11 @@
+{
+    "result": "Certainly! Below is a Python function `move_model_to_cuda_if_available` that moves a given model to a CUDA device if available, and then returns the device of the first parameter of the model:\n\n```python\nimport torch\n\ndef move_model_to_cuda_if_available(model):\n    \"\"\"\n    Moves the model to a CUDA device if available and returns the device of the first parameter.\n\n    Args:\n        model (torch.nn.Module): The model to be moved to CUDA if available.\n\n    Returns:\n        torch.device: The device of the first parameter of the model.\n    \"\"\"\n    if torch.cuda.is_available():\n        model = model.cuda()\n    \n    # Get the device of the first parameter of the model\n    first_param_device = next(model.parameters()).device\n    return first_param_device\n```\n\n### Explanation:\n- **CUDA Check**: The function first checks if a CUDA device is available using `torch.cuda.is_available()`.\n- **Model Transfer**: If a CUDA device is available, the model is moved to the CUDA device using `model.cuda()`.\n- **Device Retrieval**: The function then retrieves the device of the first parameter of the model using `next(model.parameters()).device`.\n- **Return**: Finally, it returns the device of the first parameter, which indicates where the model is currently located (either on a CPU or a CUDA device).",
+    "prompt": "Create a Python function called move_model_to_cuda_if_available that takes in a model as input. If the torch library detects that a CUDA device is available, the function will move the model to the CUDA device using the model.cuda() method. The function will then return the device of the first parameter of the model using next().",
+    "function_name": "move_model_to_cuda_if_available",
+    "ground_truth": "tests/torch/nas/helpers.py",
+    "test": "tests/torch/nas/test_elastic_depth.py",
+    "class": "",
+    "stage": "Inference",
+    "task": "",
+    "data": ""
+}

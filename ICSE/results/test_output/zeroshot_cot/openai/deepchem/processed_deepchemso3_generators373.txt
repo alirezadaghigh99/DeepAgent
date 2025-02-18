@@ -1,0 +1,266 @@
+output file:
+processed_deepchemso3_generators373.json
+function:
+so3_generators
+Error Cases:
+2025-02-14 03:53:05.393508: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739523185.404799 2200611 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1739523185.408300 2200611 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-02-14 03:53:05.421037: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_unitary_property', 'FAILED ../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_so3_commutation', '../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_unitary_property FAILED', '../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_so3_generators_shape FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_so3_j0', 'FAILED ../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_so3_j1', '../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_orthogonality FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_so3_generators_shape', '../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_so3_j0 FAILED', '../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_so3_commutation FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_orthogonality', '../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_so3_j1 FAILED'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/deepchem/deepchem/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/deepchem/deepchem
+configfile: setup.cfg
+plugins: flaky-3.8.1
+collecting ... collected 14 items
+
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_change_basis_real_to_complex_device FAILED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_change_basis_real_to_complex_dtype_conversion PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_change_basis_real_to_complex_j_0 PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_change_basis_real_to_complex_j_2 PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_orthogonality FAILED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_so3_commutation FAILED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_so3_generators_shape FAILED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_so3_j0 FAILED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_so3_j1 FAILED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_su2_commutation PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_su2_generators_angular_momentum_one PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_su2_generators_shape PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_su2_generators_zero_momenta PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_unitary_property FAILED
+
+=================================== FAILURES ===================================
+________ TestEquivarianceUtils.test_change_basis_real_to_complex_device ________
+
+self = <deepchem.utils.test.test_equivariance_utils.TestEquivarianceUtils testMethod=test_change_basis_real_to_complex_device>
+
+    @unittest.skipIf(not has_torch, "torch is not available")
+    def test_change_basis_real_to_complex_device(self) -> None:
+        # Test for device placement (CPU to CUDA)
+        j = 1
+        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        Q = equivariance_utils.change_basis_real_to_complex(j, device=device)
+>       self.assertEqual(Q.device, device)
+E       AssertionError: device(type='cuda', index=0) != device(type='cuda')
+
+/local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py:111: AssertionError
+___________________ TestEquivarianceUtils.test_orthogonality ___________________
+
+self = <deepchem.utils.test.test_equivariance_utils.TestEquivarianceUtils testMethod=test_orthogonality>
+
+    @unittest.skipIf(not has_torch, "torch is not available")
+    def test_orthogonality(self):
+        j = 2
+        alpha = torch.tensor([0.2])
+        beta = torch.tensor([0.1])
+        gamma = torch.tensor([0.7])
+    
+        D_matrix = equivariance_utils.wigner_D(j, alpha, beta, gamma)
+        D_matrix = D_matrix[0]
+        num_columns = D_matrix.shape[1]
+    
+        for col1 in range(num_columns):
+            for col2 in range(num_columns):
+                if col1 != col2:
+                    dot_product = torch.dot(D_matrix[:, col1], D_matrix[:,
+                                                                        col2])
+>                   self.assertAlmostEqual(dot_product.item(), 0.0, places=5)
+E                   AssertionError: (0.10217694938182831+0j) != 0.0 within 5 places (0.10217694938182831 difference)
+
+/local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py:203: AssertionError
+__________________ TestEquivarianceUtils.test_so3_commutation __________________
+
+self = <deepchem.utils.test.test_equivariance_utils.TestEquivarianceUtils testMethod=test_so3_commutation>
+
+    @unittest.skipIf(not has_torch, "torch is not available")
+    def test_so3_commutation(self):
+        j_values = [0, 1, 2, 3, 4,
+                    5]  # Test for multiple quantum angular momentum values
+        for j in j_values:
+            with self.subTest(j=j):
+                X = equivariance_utils.so3_generators(j)
+>               self.assertTrue(
+                    torch.allclose(equivariance_utils.commutator(X[0], X[1]),
+                                   X[2]))
+E               AssertionError: False is not true
+
+/local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py:141: AssertionError
+_______________ TestEquivarianceUtils.test_so3_generators_shape ________________
+
+self = <deepchem.utils.test.test_equivariance_utils.TestEquivarianceUtils testMethod=test_so3_generators_shape>
+
+    @unittest.skipIf(not has_torch, "torch is not available")
+    def test_so3_generators_shape(self):
+        j_values = [1, 2, 3, 4, 5]
+        for j in j_values:
+            with self.subTest(j=j):
+                result = equivariance_utils.so3_generators(j)
+                expected_shape = (3, 2 * j + 1, 2 * j + 1)
+>               self.assertEqual(result.shape, expected_shape)
+E               AssertionError: torch.Size([3, 2, 2]) != (3, 3, 3)
+
+/local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py:132: AssertionError
+______________________ TestEquivarianceUtils.test_so3_j0 _______________________
+
+self = <deepchem.utils.test.test_equivariance_utils.TestEquivarianceUtils testMethod=test_so3_j0>
+
+    @unittest.skipIf(not has_torch, "torch is not available")
+    def test_so3_j0(self):
+        j = 0
+        result = equivariance_utils.so3_generators(j)
+        expected = torch.tensor([[[0.]], [[0.]], [[0.]]],
+                                dtype=torch.float64).float()
+>       self.assertTrue(torch.allclose(result, expected))
+E       RuntimeError: ComplexFloat did not match Float
+
+/local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py:154: RuntimeError
+______________________ TestEquivarianceUtils.test_so3_j1 _______________________
+
+self = <deepchem.utils.test.test_equivariance_utils.TestEquivarianceUtils testMethod=test_so3_j1>
+
+    @unittest.skipIf(not has_torch, "torch is not available")
+    def test_so3_j1(self):
+        j = 1
+        result = equivariance_utils.so3_generators(j)
+        expected = torch.tensor(
+            [[[0.0000, 0.0000, 0.0000], [0.0000, 0.0000, -1.0000],
+              [0.0000, 1.0000, 0.0000]],
+             [[0.0000, 0.0000, 1.0000], [0.0000, 0.0000, 0.0000],
+              [-1.0000, 0.0000, 0.0000]],
+             [[0.0000, -1.0000, 0.0000], [1.0000, 0.0000, 0.0000],
+              [0.0000, 0.0000, 0.0000]]],
+            dtype=torch.float64).float()
+>       self.assertTrue(torch.allclose(result, expected, atol=1e-5))
+E       RuntimeError: ComplexFloat did not match Float
+
+/local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py:168: RuntimeError
+_________________ TestEquivarianceUtils.test_unitary_property __________________
+
+self = <deepchem.utils.test.test_equivariance_utils.TestEquivarianceUtils testMethod=test_unitary_property>
+
+    @unittest.skipIf(not has_torch, "torch is not available")
+    def test_unitary_property(self):
+        j = 2
+        alpha = torch.tensor([0.2])
+        beta = torch.tensor([0.1])
+        gamma = torch.tensor([0.7])
+    
+        D_matrix = equivariance_utils.wigner_D(j, alpha, beta, gamma)
+        D_matrix = D_matrix[0]
+        conjugate_transpose = torch.transpose(torch.conj(D_matrix), 0, 1)
+        identity_matrix = torch.eye(D_matrix.shape[0], dtype=D_matrix.dtype)
+    
+>       self.assertTrue(
+            torch.allclose(D_matrix @ conjugate_transpose,
+                           identity_matrix,
+                           atol=1e-5))
+E       AssertionError: False is not true
+
+/local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py:182: AssertionError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_change_basis_real_to_complex_device
+FAILED ../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_orthogonality
+FAILED ../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_so3_commutation
+FAILED ../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_so3_generators_shape
+FAILED ../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_so3_j0
+FAILED ../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_so3_j1
+FAILED ../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_unitary_property
+========================= 7 failed, 7 passed in 4.16s ==========================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/deepchem/deepchem/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/deepchem/deepchem
+configfile: setup.cfg
+plugins: flaky-3.8.1
+collecting ... collected 14 items
+
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_change_basis_real_to_complex_device FAILED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_change_basis_real_to_complex_dtype_conversion PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_change_basis_real_to_complex_j_0 PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_change_basis_real_to_complex_j_2 PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_orthogonality PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_so3_commutation PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_so3_generators_shape PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_so3_j0 PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_so3_j1 PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_su2_commutation PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_su2_generators_angular_momentum_one PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_su2_generators_shape PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_su2_generators_zero_momenta PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_unitary_property PASSED
+
+=================================== FAILURES ===================================
+________ TestEquivarianceUtils.test_change_basis_real_to_complex_device ________
+
+self = <deepchem.utils.test.test_equivariance_utils.TestEquivarianceUtils testMethod=test_change_basis_real_to_complex_device>
+
+    @unittest.skipIf(not has_torch, "torch is not available")
+    def test_change_basis_real_to_complex_device(self) -> None:
+        # Test for device placement (CPU to CUDA)
+        j = 1
+        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        Q = equivariance_utils.change_basis_real_to_complex(j, device=device)
+>       self.assertEqual(Q.device, device)
+E       AssertionError: device(type='cuda', index=0) != device(type='cuda')
+
+/local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py:111: AssertionError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_change_basis_real_to_complex_device
+========================= 1 failed, 13 passed in 4.12s =========================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/deepchem/deepchem/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/deepchem/deepchem
+configfile: setup.cfg
+plugins: flaky-3.8.1
+collecting ... collected 14 items
+
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_change_basis_real_to_complex_device FAILED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_change_basis_real_to_complex_dtype_conversion PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_change_basis_real_to_complex_j_0 PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_change_basis_real_to_complex_j_2 PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_orthogonality PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_so3_commutation PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_so3_generators_shape PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_so3_j0 PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_so3_j1 PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_su2_commutation PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_su2_generators_angular_momentum_one PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_su2_generators_shape PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_su2_generators_zero_momenta PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_unitary_property PASSED
+
+=================================== FAILURES ===================================
+________ TestEquivarianceUtils.test_change_basis_real_to_complex_device ________
+
+self = <deepchem.utils.test.test_equivariance_utils.TestEquivarianceUtils testMethod=test_change_basis_real_to_complex_device>
+
+    @unittest.skipIf(not has_torch, "torch is not available")
+    def test_change_basis_real_to_complex_device(self) -> None:
+        # Test for device placement (CPU to CUDA)
+        j = 1
+        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        Q = equivariance_utils.change_basis_real_to_complex(j, device=device)
+>       self.assertEqual(Q.device, device)
+E       AssertionError: device(type='cuda', index=0) != device(type='cuda')
+
+/local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py:111: AssertionError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_equivariance_utils.py::TestEquivarianceUtils::test_change_basis_real_to_complex_device
+========================= 1 failed, 13 passed in 4.14s =========================

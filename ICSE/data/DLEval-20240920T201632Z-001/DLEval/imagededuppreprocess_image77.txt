@@ -1,0 +1,32 @@
+stage: Pre-Post processing
+task: Segmentation
+data: Image
+
+prompt:
+Create a Python function preprocess_image that takes an image as input, optionally resizes it, and converts it to grayscale if specified. The function accepts both NumPy arrays and Pillow Image objects as input and returns the processed image as a NumPy array.
+
+Parameters:
+image: The input image, either as a NumPy array or a Pillow Image object.
+target_size: An optional tuple (width, height) specifying the size to resize the input image to. If not provided, the image size is not changed.
+grayscale: A boolean indicating whether to convert the image to grayscale. Defaults to False.
+Returns:
+A NumPy array representing the processed image, optionally resized and/or grayscaled.
+Process Overview:
+Input Validation:
+If the input is a NumPy array, convert it to a Pillow Image object.
+If the input is already a Pillow Image, proceed with it.
+Raise a ValueError if the input is neither a NumPy array nor a Pillow Image.
+Resizing:
+If target_size is provided, resize the image .
+Grayscale Conversion:
+If grayscale is True, convert the image to grayscale .
+Return Processed Image:
+Convert the processed Pillow Image back to a NumPy array and return it.
+
+ ground Truth:imagededup/utils/image_utils.py
+
+ repo:imagededup
+
+ function:preprocess_image
+ 
+ test_cases:tests/test_image_utils.py

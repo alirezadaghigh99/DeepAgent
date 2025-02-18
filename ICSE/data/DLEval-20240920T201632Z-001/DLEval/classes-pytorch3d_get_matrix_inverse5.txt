@@ -1,0 +1,38 @@
+stage: Tabular
+task: 
+data: pre-post process
+
+prompt:
+Generate the `_get_matrix_inverse` function for the following class that returns the inverse of `self._matrix`. The function should create an inverse mask, apply it to the matrix, and return the result. The output should be a tensor.
+
+```python
+class Translate(Transform3d):
+    def __init__(
+        self,
+        x,
+        y=None,
+        z=None,
+        dtype: torch.dtype = torch.float32,
+        device: Optional[Device] = None,
+    ) -> None:
+        xyz = _handle_input(x, y, z, dtype, device, "Translate")
+        super().__init__(device=xyz.device, dtype=dtype)
+        N = xyz.shape[0]
+
+        mat = torch.eye(4, dtype=dtype, device=self.device)
+        mat = mat.view(1, 4, 4).repeat(N, 1, 1)
+        mat[:, 3, :3] = xyz
+        self._matrix = mat
+
+    def _get_matrix_inverse(self) -> torch.Tensor:
+```
+
+ ground Truth:pytorch3d/transforms/transform3d.py
+
+ repo:pytorch3d
+
+ function:_get_matrix_inverse
+ 
+ class:Translate
+ 
+ test_cases:tests/test_transforms.py::TestRotate

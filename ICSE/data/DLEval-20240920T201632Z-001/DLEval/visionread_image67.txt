@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Generate a Python function called read_image that reads a JPEG, PNG, or GIF image from a specified path and converts it into a 3-dimensional RGB or grayscale Tensor. The function has three optional parameters: mode (ImageReadMode), apply_exif_orientation (bool), and returns a Tensor with values in the range of uint8 [0, 255]. The function also includes a docstring explaining its functionality and usage.
+
+ ground Truth:torchvision/io/image.py
+
+ repo:vision
+
+ function:read_image
+ 
+ test_cases:test/test_image.py

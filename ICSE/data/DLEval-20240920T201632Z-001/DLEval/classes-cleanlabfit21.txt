@@ -1,0 +1,64 @@
+stage: 
+task: Classification
+data: Training
+
+prompt:
+Generate a Python function `fit` for the class `CleanLearning` that trains a model `clf` with error-prone, noisy labels as if it had been trained on a dataset with perfect labels. The function should handle the following steps: 
+
+1. Validate input parameters, ensuring either `labels` or `y` is provided, but not both.
+2. If the classifier `clf` is the default one, ensure the input data `X` is two-dimensional.
+3. Combine keyword arguments for `clf.fit` using `clf_kwargs` and `clf_final_kwargs`.
+4. Check if sample weights are provided and ensure they are supported by the classifier.
+5. If `label_issues` is not provided, call the method `find_label_issues` to detect label issues using cross-validation, predicted probabilities, and optionally, noise matrices.
+6. Process `label_issues` to ensure it is correctly formatted and contains label quality scores if predicted probabilities are available.
+7. Prune the data to exclude examples with label issues and prepare cleaned data `x_cleaned` and `labels_cleaned`.
+8. Assign sample weights if the classifier supports them and include them in the final training step if necessary.
+9. Fit the classifier `clf` on the cleaned data `x_cleaned` with the corresponding labels `labels_cleaned` using the combined keyword arguments.
+10. Store the detected label issues in the class attribute `label_issues_df`.
+
+```python
+class CleanLearning(BaseEstimator):
+    def __init__(
+        self,
+        clf=None,
+        *,
+        seed=None,
+        cv_n_folds=5,
+        converge_latent_estimates=False,
+        pulearning=None,
+        find_label_issues_kwargs={},
+        label_quality_scores_kwargs={},
+        verbose=False,
+        low_memory=False,
+    ):
+        self.clf = clf
+        self.seed = seed
+        self.cv_n_folds = cv_n_folds
+        self.converge_latent_estimates = converge_latent_estimates
+        self.pulearning = pulearning
+        self.find_label_issues_kwargs = find_label_issues_kwargs
+        self.label_quality_scores_kwargs = label_quality_scores_kwargs
+        self.verbose = verbose
+        self.label_issues_df = None
+        self.label_issues_mask = None
+        self.sample_weight = None
+        self.confident_joint = None
+        self.py = None
+        self.ps = None
+        self.num_classes = None
+        self.noise_matrix = None
+        self.inverse_noise_matrix = None
+        self.clf_kwargs = None
+        self.clf_final_kwargs = None
+        self.low_memory = low_memory
+```
+
+ ground Truth:cleanlab/classification.py
+
+ repo:cleanlab
+
+ function:fit
+ 
+ class:CleanLearning
+ 
+ test_cases:tests/test_classification.py

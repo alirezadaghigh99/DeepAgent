@@ -1,0 +1,16 @@
+stage: Pre-Post processing
+task: Segmentation
+data: Image
+
+prompt:Write a Python function `gaussian_noise_image` that adds Gaussian noise to an input image tensor. The function should accept the following parameters: `image` (a float tensor), `mean` (mean of the Gaussian noise, defaulting to 0.0), `sigma` (standard deviation of the Gaussian noise, defaulting to 0.1), and `clip` (a boolean indicating whether to clip the output values to the [0, 1] range, defaulting to `True`). The function should return the noisy image tensor. Ensure that the input tensor is of a floating-point dtype and that `sigma` is non-negative, raising a `ValueError` if these conditions are not met.  if not image.is_floating_point():
+        raise ValueError(f"Input tensor is expected to be in float dtype, got dtype={image.dtype}")
+    if sigma < 0:
+        raise ValueError(f"sigma shouldn't be negative. Got {sigma}")
+
+ ground Truth:torchvision/transforms/v2/functional/_misc.py
+
+ repo:vision
+
+ function:gaussian_noise_image
+ 
+ test_cases:test/test_transforms_v2.py::TestGaussianNoise

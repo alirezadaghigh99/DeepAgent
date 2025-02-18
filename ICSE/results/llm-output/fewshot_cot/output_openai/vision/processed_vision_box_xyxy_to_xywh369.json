@@ -1,0 +1,11 @@
+{
+    "result": "To convert bounding boxes from the (x1, y1, x2, y2) format to the (x, y, w, h) format, you can follow these steps:\n\n1. Extract the top-left corner coordinates (x1, y1).\n2. Calculate the width (w) as the difference between x2 and x1.\n3. Calculate the height (h) as the difference between y2 and y1.\n4. Return the converted bounding boxes as a tensor.\n\nHere's how you can implement this in a Python function:\n\n```python\nimport torch\n\ndef _box_xyxy_to_xywh(boxes: torch.Tensor) -> torch.Tensor:\n    \"\"\"\n    Convert bounding boxes from (x1, y1, x2, y2) format to (x, y, w, h) format.\n\n    Args:\n        boxes (Tensor): Tensor of shape (N, 4) where each row is (x1, y1, x2, y2).\n\n    Returns:\n        Tensor: Tensor of shape (N, 4) where each row is (x, y, w, h).\n    \"\"\"\n    # 1. Extract the top-left corner coordinates (x1, y1)\n    x1, y1, x2, y2 = boxes.unbind(dim=1)\n\n    # 2. Calculate the width (w) as the difference between x2 and x1\n    w = x2 - x1\n\n    # 3. Calculate the height (h) as the difference between y2 and y1\n    h = y2 - y1\n\n    # 4. Stack the results to form the (x, y, w, h) format\n    boxes_xywh = torch.stack((x1, y1, w, h), dim=1)\n\n    return boxes_xywh\n```\n\nThis function takes a tensor of bounding boxes in the (x1, y1, x2, y2) format and returns a tensor with the bounding boxes in the (x, y, w, h) format. Each row in the input and output tensors corresponds to a bounding box.",
+    "prompt": "Write a Python function _box_xyxy_to_xywh that converts bounding boxes from the (x1, y1, x2, y2) format, where (x1, y1) and (x2, y2) represent the top-left and bottom-right corners, to the (x, y, w, h) format, where (x, y) represents the top-left corner and (w, h) represents the width and height. The function should return a tensor with the converted bounding boxes.",
+    "function_name": "_box_xyxy_to_xywh",
+    "ground_truth": "torchvision/ops/_box_convert.py",
+    "test": "test/test_ops.py::TestBoxConvert",
+    "class": "",
+    "stage": "Pre-Post processing",
+    "task": "Detection",
+    "data": "Image"
+}

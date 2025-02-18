@@ -1,0 +1,11 @@
+{
+    "result": "Error",
+    "prompt": "Write a Python function _unsafe_standard_stable that generates alpha-stable random variables using the Chambers-Mallows-Stuck method. The function takes alpha (float), beta (float), V (tensor), W (tensor), and coords (string). Ensure V and W have the same shape, raising an AssertionError otherwise. Use trigonometric operations and ensure numerical stability with small values using eps and clamping. Replace NaN values in the result with zeros. Handle two coords options, \"S0\" and \"S\". Raise a ValueError with the message \"Unknown coords: <coords>\" if coords is unrecognized. The output is a tensor, and the function fails if alpha is close to 1.",
+    "function_name": "_unsafe_standard_stable",
+    "ground_truth": "pyro/distributions/stable.py",
+    "test": "tests/distributions/test_stable.py::test_sample",
+    "class": "",
+    "stage": "Pre-Post processing",
+    "task": "",
+    "data": "Table"
+}

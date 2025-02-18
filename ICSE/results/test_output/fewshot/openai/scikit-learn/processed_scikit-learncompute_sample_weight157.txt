@@ -1,0 +1,596 @@
+output file:
+processed_scikit-learncompute_sample_weight157.json
+function:
+compute_sample_weight
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_sparse[csc_array]', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_sparse[csc_matrix] FAILED', "../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_errors[single-output-class_weight0-indices0-The only valid class_weight for subsampling is 'balanced'.] FAILED", '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_sparse[csc_array] FAILED', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_class_weight_does_not_contains_more_classes FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_class_weight_does_not_contains_more_classes', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_sparse[csc_matrix]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_errors[multi-output-class_weight1-None-For multi-output, class_weight should be a list of dicts, or the string]', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_errors[multi-output-class_weight2-None-Got 1 element\\\\(s\\\\) while having 2 outputs] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_with_subsample FAILED', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight FAILED', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_errors[multi-output-class_weight1-None-For multi-output, class_weight should be a list of dicts, or the string] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_errors[multi-output-class_weight2-None-Got 1 element\\\\(s\\\\) while having 2 outputs]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_with_subsample', "FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_errors[single-output-class_weight0-indices0-The only valid class_weight for subsampling is 'balanced'.]"}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.9.0, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/scikit-learn/scikit-learn
+configfile: setup.cfg
+plugins: cov-6.0.0
+collecting ... collected 20 items
+
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_class_weight I: Seeding RNGs with 71721541
+PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_class_weight_not_present[numeric-balanced-classes0-classes should have valid labels that are in y] [0 0 0 1 1 2]
+PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_class_weight_not_present[numeric-class_weight1-classes1-The classes, \\[0, 1, 2, 3\\], are not in class_weight] [0 0 0 1 1 2]
+PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_class_weight_not_present[numeric-balanced-classes2-classes should include all valid labels] [0 0 0 1 1 2]
+PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_class_weight_not_present[numeric-class_weight3-classes3-classes should include all valid labels] [0 0 0 1 1 2]
+PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_class_weight_not_present[string-class_weight4-classes4-The classes, \\['dog'\\], are not in class_weight] ['dog' 'cat' 'dog']
+PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_class_weight_dict PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_class_weight_invariance PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_class_weight_balanced_negative PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_class_weight_balanced_unordered PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_class_weight_default PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_with_subsample FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_errors[single-output-class_weight0-indices0-The only valid class_weight for subsampling is 'balanced'.] FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_errors[multi-output-class_weight1-None-For multi-output, class_weight should be a list of dicts, or the string] FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_errors[multi-output-class_weight2-None-Got 1 element\\(s\\) while having 2 outputs] FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_more_than_32 PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_class_weight_does_not_contains_more_classes FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_sparse[csc_matrix] FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_sparse[csc_array] FAILED
+
+=================================== FAILURES ===================================
+__________________________ test_compute_sample_weight __________________________
+
+    def test_compute_sample_weight():
+        # Test (and demo) compute_sample_weight.
+        # Test with balanced classes
+        y = np.asarray([1, 1, 1, 2, 2, 2])
+        sample_weight = compute_sample_weight("balanced", y)
+        assert_array_almost_equal(sample_weight, [1.0, 1.0, 1.0, 1.0, 1.0, 1.0])
+    
+        # Test with user-defined weights
+        sample_weight = compute_sample_weight({1: 2, 2: 1}, y)
+        assert_array_almost_equal(sample_weight, [2.0, 2.0, 2.0, 1.0, 1.0, 1.0])
+    
+        # Test with column vector of balanced classes
+        y = np.asarray([[1], [1], [1], [2], [2], [2]])
+>       sample_weight = compute_sample_weight("balanced", y)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py:188: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/class_weight.py:73: in compute_sample_weight
+    return compute_sample_weight(class_weight, y)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/temp.py:24: in compute_sample_weight
+    class_weight_vect = compute_class_weight(class_weight='balanced', classes=unique_classes, y=y)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:189: in wrapper
+    return func(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+class_weight = 'balanced'
+
+    @validate_params({'class_weight': [dict, StrOptions({'balanced'}), None], 'classes': [np.ndarray], 'y': ['array-like']}, prefer_skip_nested_validation=True)
+    def compute_class_weight(class_weight, *, classes, y):
+        """Estimate class weights for unbalanced datasets.
+    
+        Parameters
+        ----------
+        class_weight : dict, "balanced" or None
+            If "balanced", class weights will be given by
+            `n_samples / (n_classes * np.bincount(y))`.
+            If a dictionary is given, keys are classes and values are corresponding class
+            weights.
+            If `None` is given, the class weights will be uniform.
+    
+        classes : ndarray
+            Array of the classes occurring in the data, as given by
+            `np.unique(y_org)` with `y_org` the original class labels.
+    
+        y : array-like of shape (n_samples,)
+            Array of original class labels per sample.
+    
+        Returns
+        -------
+        class_weight_vect : ndarray of shape (n_classes,)
+            Array with `class_weight_vect[i]` the weight for i-th class.
+    
+        References
+        ----------
+        The "balanced" heuristic is inspired by
+        Logistic Regression in Rare Events Data, King, Zen, 2001.
+    
+        Examples
+        --------
+        >>> import numpy as np
+        >>> from sklearn.utils.class_weight import compute_class_weight
+        >>> y = [1, 1, 1, 1, 0, 0]
+        >>> compute_class_weight(class_weight="balanced", classes=np.unique(y), y=y)
+        array([1.5 , 0.75])
+        """
+        from ..preprocessing import LabelEncoder
+>       if set(y) - set(classes):
+E       TypeError: unhashable type: 'numpy.ndarray'
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/class_weight.py:45: TypeError
+__________________ test_compute_sample_weight_with_subsample ___________________
+
+    def test_compute_sample_weight_with_subsample():
+        # Test compute_sample_weight with subsamples specified.
+        # Test with balanced classes and all samples present
+        y = np.asarray([1, 1, 1, 2, 2, 2])
+        sample_weight = compute_sample_weight("balanced", y, indices=range(6))
+        assert_array_almost_equal(sample_weight, [1.0, 1.0, 1.0, 1.0, 1.0, 1.0])
+    
+        # Test with column vector of balanced classes and all samples present
+        y = np.asarray([[1], [1], [1], [2], [2], [2]])
+>       sample_weight = compute_sample_weight("balanced", y, indices=range(6))
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py:228: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/class_weight.py:73: in compute_sample_weight
+    return compute_sample_weight(class_weight, y)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/temp.py:24: in compute_sample_weight
+    class_weight_vect = compute_class_weight(class_weight='balanced', classes=unique_classes, y=y)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:189: in wrapper
+    return func(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+class_weight = 'balanced'
+
+    @validate_params({'class_weight': [dict, StrOptions({'balanced'}), None], 'classes': [np.ndarray], 'y': ['array-like']}, prefer_skip_nested_validation=True)
+    def compute_class_weight(class_weight, *, classes, y):
+        """Estimate class weights for unbalanced datasets.
+    
+        Parameters
+        ----------
+        class_weight : dict, "balanced" or None
+            If "balanced", class weights will be given by
+            `n_samples / (n_classes * np.bincount(y))`.
+            If a dictionary is given, keys are classes and values are corresponding class
+            weights.
+            If `None` is given, the class weights will be uniform.
+    
+        classes : ndarray
+            Array of the classes occurring in the data, as given by
+            `np.unique(y_org)` with `y_org` the original class labels.
+    
+        y : array-like of shape (n_samples,)
+            Array of original class labels per sample.
+    
+        Returns
+        -------
+        class_weight_vect : ndarray of shape (n_classes,)
+            Array with `class_weight_vect[i]` the weight for i-th class.
+    
+        References
+        ----------
+        The "balanced" heuristic is inspired by
+        Logistic Regression in Rare Events Data, King, Zen, 2001.
+    
+        Examples
+        --------
+        >>> import numpy as np
+        >>> from sklearn.utils.class_weight import compute_class_weight
+        >>> y = [1, 1, 1, 1, 0, 0]
+        >>> compute_class_weight(class_weight="balanced", classes=np.unique(y), y=y)
+        array([1.5 , 0.75])
+        """
+        from ..preprocessing import LabelEncoder
+>       if set(y) - set(classes):
+E       TypeError: unhashable type: 'numpy.ndarray'
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/class_weight.py:45: TypeError
+_ test_compute_sample_weight_errors[single-output-class_weight0-indices0-The only valid class_weight for subsampling is 'balanced'.] _
+
+y_type = 'single-output', class_weight = {1: 2, 2: 1}, indices = range(0, 4)
+err_msg = "The only valid class_weight for subsampling is 'balanced'."
+
+    @pytest.mark.parametrize(
+        "y_type, class_weight, indices, err_msg",
+        [
+            (
+                "single-output",
+                {1: 2, 2: 1},
+                range(4),
+                "The only valid class_weight for subsampling is 'balanced'.",
+            ),
+            (
+                "multi-output",
+                {1: 2, 2: 1},
+                None,
+                "For multi-output, class_weight should be a list of dicts, or the string",
+            ),
+            (
+                "multi-output",
+                [{1: 2, 2: 1}],
+                None,
+                r"Got 1 element\(s\) while having 2 outputs",
+            ),
+        ],
+    )
+    def test_compute_sample_weight_errors(y_type, class_weight, indices, err_msg):
+        # Test compute_sample_weight raises errors expected.
+        # Invalid preset string
+        y_single_output = np.asarray([1, 1, 1, 2, 2, 2])
+        y_multi_output = np.asarray([[1, 0], [1, 0], [1, 0], [2, 1], [2, 1], [2, 1]])
+    
+        y = y_single_output if y_type == "single-output" else y_multi_output
+        with pytest.raises(ValueError, match=err_msg):
+>           compute_sample_weight(class_weight, y, indices=indices)
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py:289: Failed
+_ test_compute_sample_weight_errors[multi-output-class_weight1-None-For multi-output, class_weight should be a list of dicts, or the string] _
+
+y_type = 'multi-output', class_weight = {1: 2, 2: 1}, indices = None
+err_msg = 'For multi-output, class_weight should be a list of dicts, or the string'
+
+    @pytest.mark.parametrize(
+        "y_type, class_weight, indices, err_msg",
+        [
+            (
+                "single-output",
+                {1: 2, 2: 1},
+                range(4),
+                "The only valid class_weight for subsampling is 'balanced'.",
+            ),
+            (
+                "multi-output",
+                {1: 2, 2: 1},
+                None,
+                "For multi-output, class_weight should be a list of dicts, or the string",
+            ),
+            (
+                "multi-output",
+                [{1: 2, 2: 1}],
+                None,
+                r"Got 1 element\(s\) while having 2 outputs",
+            ),
+        ],
+    )
+    def test_compute_sample_weight_errors(y_type, class_weight, indices, err_msg):
+        # Test compute_sample_weight raises errors expected.
+        # Invalid preset string
+        y_single_output = np.asarray([1, 1, 1, 2, 2, 2])
+        y_multi_output = np.asarray([[1, 0], [1, 0], [1, 0], [2, 1], [2, 1], [2, 1]])
+    
+        y = y_single_output if y_type == "single-output" else y_multi_output
+        with pytest.raises(ValueError, match=err_msg):
+>           compute_sample_weight(class_weight, y, indices=indices)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py:289: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/class_weight.py:73: in compute_sample_weight
+    return compute_sample_weight(class_weight, y)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/temp.py:34: in compute_sample_weight
+    sample_weight_vect = np.array([class_weight_dict.get(cls, 1.0) for cls in y])
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <iterator object at 0x7752ad012e80>
+
+>   sample_weight_vect = np.array([class_weight_dict.get(cls, 1.0) for cls in y])
+E   TypeError: unhashable type: 'numpy.ndarray'
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/temp.py:34: TypeError
+_ test_compute_sample_weight_errors[multi-output-class_weight2-None-Got 1 element\\(s\\) while having 2 outputs] _
+
+y_type = 'multi-output', class_weight = [{1: 2, 2: 1}], indices = None
+err_msg = 'Got 1 element\\(s\\) while having 2 outputs'
+
+    @pytest.mark.parametrize(
+        "y_type, class_weight, indices, err_msg",
+        [
+            (
+                "single-output",
+                {1: 2, 2: 1},
+                range(4),
+                "The only valid class_weight for subsampling is 'balanced'.",
+            ),
+            (
+                "multi-output",
+                {1: 2, 2: 1},
+                None,
+                "For multi-output, class_weight should be a list of dicts, or the string",
+            ),
+            (
+                "multi-output",
+                [{1: 2, 2: 1}],
+                None,
+                r"Got 1 element\(s\) while having 2 outputs",
+            ),
+        ],
+    )
+    def test_compute_sample_weight_errors(y_type, class_weight, indices, err_msg):
+        # Test compute_sample_weight raises errors expected.
+        # Invalid preset string
+        y_single_output = np.asarray([1, 1, 1, 2, 2, 2])
+        y_multi_output = np.asarray([[1, 0], [1, 0], [1, 0], [2, 1], [2, 1], [2, 1]])
+    
+        y = y_single_output if y_type == "single-output" else y_multi_output
+        with pytest.raises(ValueError, match=err_msg):
+>           compute_sample_weight(class_weight, y, indices=indices)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py:289: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/class_weight.py:73: in compute_sample_weight
+    return compute_sample_weight(class_weight, y)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/temp.py:34: in compute_sample_weight
+    sample_weight_vect = np.array([class_weight_dict.get(cls, 1.0) for cls in y])
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <iterator object at 0x7752a7d7a4f0>
+
+>   sample_weight_vect = np.array([class_weight_dict.get(cls, 1.0) for cls in y])
+E   TypeError: unhashable type: 'numpy.ndarray'
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/temp.py:34: TypeError
+_______________ test_class_weight_does_not_contains_more_classes _______________
+
+    def test_class_weight_does_not_contains_more_classes():
+        """Check that class_weight can contain more labels than in y.
+    
+        Non-regression test for #22413
+        """
+        tree = DecisionTreeClassifier(class_weight={0: 1, 1: 10, 2: 20})
+    
+        # Does not raise
+>       tree.fit([[0, 0, 1], [1, 0, 1], [1, 2, 0]], [0, 0, 1])
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py:308: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/base.py:1330: in wrapper
+    return fit_method(estimator, *args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/tree/_classes.py:1019: in fit
+    super()._fit(
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/tree/_classes.py:311: in _fit
+    expanded_class_weight = compute_sample_weight(
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:189: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/class_weight.py:73: in compute_sample_weight
+    return compute_sample_weight(class_weight, y)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/temp.py:34: in compute_sample_weight
+    sample_weight_vect = np.array([class_weight_dict.get(cls, 1.0) for cls in y])
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <iterator object at 0x7752ace4e8e0>
+
+>   sample_weight_vect = np.array([class_weight_dict.get(cls, 1.0) for cls in y])
+E   TypeError: unhashable type: 'numpy.ndarray'
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/temp.py:34: TypeError
+________________ test_compute_sample_weight_sparse[csc_matrix] _________________
+
+csc_container = <class 'scipy.sparse._csc.csc_matrix'>
+
+    @pytest.mark.parametrize("csc_container", CSC_CONTAINERS)
+    def test_compute_sample_weight_sparse(csc_container):
+        """Check that we can compute weight for sparse `y`."""
+        y = csc_container(np.asarray([[0], [1], [1]]))
+>       sample_weight = compute_sample_weight("balanced", y)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py:315: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/class_weight.py:73: in compute_sample_weight
+    return compute_sample_weight(class_weight, y)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/temp.py:24: in compute_sample_weight
+    class_weight_vect = compute_class_weight(class_weight='balanced', classes=unique_classes, y=y)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:189: in wrapper
+    return func(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+class_weight = 'balanced'
+
+    @validate_params({'class_weight': [dict, StrOptions({'balanced'}), None], 'classes': [np.ndarray], 'y': ['array-like']}, prefer_skip_nested_validation=True)
+    def compute_class_weight(class_weight, *, classes, y):
+        """Estimate class weights for unbalanced datasets.
+    
+        Parameters
+        ----------
+        class_weight : dict, "balanced" or None
+            If "balanced", class weights will be given by
+            `n_samples / (n_classes * np.bincount(y))`.
+            If a dictionary is given, keys are classes and values are corresponding class
+            weights.
+            If `None` is given, the class weights will be uniform.
+    
+        classes : ndarray
+            Array of the classes occurring in the data, as given by
+            `np.unique(y_org)` with `y_org` the original class labels.
+    
+        y : array-like of shape (n_samples,)
+            Array of original class labels per sample.
+    
+        Returns
+        -------
+        class_weight_vect : ndarray of shape (n_classes,)
+            Array with `class_weight_vect[i]` the weight for i-th class.
+    
+        References
+        ----------
+        The "balanced" heuristic is inspired by
+        Logistic Regression in Rare Events Data, King, Zen, 2001.
+    
+        Examples
+        --------
+        >>> import numpy as np
+        >>> from sklearn.utils.class_weight import compute_class_weight
+        >>> y = [1, 1, 1, 1, 0, 0]
+        >>> compute_class_weight(class_weight="balanced", classes=np.unique(y), y=y)
+        array([1.5 , 0.75])
+        """
+        from ..preprocessing import LabelEncoder
+>       if set(y) - set(classes):
+E       TypeError: iteration over a 0-d array
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/class_weight.py:45: TypeError
+_________________ test_compute_sample_weight_sparse[csc_array] _________________
+
+csc_container = <class 'scipy.sparse._csc.csc_array'>
+
+    @pytest.mark.parametrize("csc_container", CSC_CONTAINERS)
+    def test_compute_sample_weight_sparse(csc_container):
+        """Check that we can compute weight for sparse `y`."""
+        y = csc_container(np.asarray([[0], [1], [1]]))
+>       sample_weight = compute_sample_weight("balanced", y)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py:315: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/class_weight.py:73: in compute_sample_weight
+    return compute_sample_weight(class_weight, y)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/temp.py:24: in compute_sample_weight
+    class_weight_vect = compute_class_weight(class_weight='balanced', classes=unique_classes, y=y)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:189: in wrapper
+    return func(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+class_weight = 'balanced'
+
+    @validate_params({'class_weight': [dict, StrOptions({'balanced'}), None], 'classes': [np.ndarray], 'y': ['array-like']}, prefer_skip_nested_validation=True)
+    def compute_class_weight(class_weight, *, classes, y):
+        """Estimate class weights for unbalanced datasets.
+    
+        Parameters
+        ----------
+        class_weight : dict, "balanced" or None
+            If "balanced", class weights will be given by
+            `n_samples / (n_classes * np.bincount(y))`.
+            If a dictionary is given, keys are classes and values are corresponding class
+            weights.
+            If `None` is given, the class weights will be uniform.
+    
+        classes : ndarray
+            Array of the classes occurring in the data, as given by
+            `np.unique(y_org)` with `y_org` the original class labels.
+    
+        y : array-like of shape (n_samples,)
+            Array of original class labels per sample.
+    
+        Returns
+        -------
+        class_weight_vect : ndarray of shape (n_classes,)
+            Array with `class_weight_vect[i]` the weight for i-th class.
+    
+        References
+        ----------
+        The "balanced" heuristic is inspired by
+        Logistic Regression in Rare Events Data, King, Zen, 2001.
+    
+        Examples
+        --------
+        >>> import numpy as np
+        >>> from sklearn.utils.class_weight import compute_class_weight
+        >>> y = [1, 1, 1, 1, 0, 0]
+        >>> compute_class_weight(class_weight="balanced", classes=np.unique(y), y=y)
+        array([1.5 , 0.75])
+        """
+        from ..preprocessing import LabelEncoder
+>       if set(y) - set(classes):
+E       TypeError: iteration over a 0-d array
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/class_weight.py:45: TypeError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_with_subsample
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_errors[single-output-class_weight0-indices0-The only valid class_weight for subsampling is 'balanced'.]
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_errors[multi-output-class_weight1-None-For multi-output, class_weight should be a list of dicts, or the string]
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_errors[multi-output-class_weight2-None-Got 1 element\\(s\\) while having 2 outputs]
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_class_weight_does_not_contains_more_classes
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_sparse[csc_matrix]
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_sparse[csc_array]
+========================= 8 failed, 12 passed in 0.49s =========================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.9.0, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/scikit-learn/scikit-learn
+configfile: setup.cfg
+plugins: cov-6.0.0
+collecting ... collected 20 items
+
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_class_weight I: Seeding RNGs with 1190753648
+PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_class_weight_not_present[numeric-balanced-classes0-classes should have valid labels that are in y] [0 0 0 1 1 2]
+PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_class_weight_not_present[numeric-class_weight1-classes1-The classes, \\[0, 1, 2, 3\\], are not in class_weight] [0 0 0 1 1 2]
+PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_class_weight_not_present[numeric-balanced-classes2-classes should include all valid labels] [0 0 0 1 1 2]
+PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_class_weight_not_present[numeric-class_weight3-classes3-classes should include all valid labels] [0 0 0 1 1 2]
+PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_class_weight_not_present[string-class_weight4-classes4-The classes, \\['dog'\\], are not in class_weight] ['dog' 'cat' 'dog']
+PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_class_weight_dict PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_class_weight_invariance PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_class_weight_balanced_negative PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_class_weight_balanced_unordered PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_class_weight_default PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_with_subsample PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_errors[single-output-class_weight0-indices0-The only valid class_weight for subsampling is 'balanced'.] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_errors[multi-output-class_weight1-None-For multi-output, class_weight should be a list of dicts, or the string] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_errors[multi-output-class_weight2-None-Got 1 element\\(s\\) while having 2 outputs] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_more_than_32 PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_class_weight_does_not_contains_more_classes PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_sparse[csc_matrix] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_sparse[csc_array] PASSED
+
+============================== 20 passed in 0.28s ==============================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.9.0, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/scikit-learn/scikit-learn
+configfile: setup.cfg
+plugins: cov-6.0.0
+collecting ... collected 20 items
+
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_class_weight I: Seeding RNGs with 1807906728
+PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_class_weight_not_present[numeric-balanced-classes0-classes should have valid labels that are in y] [0 0 0 1 1 2]
+PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_class_weight_not_present[numeric-class_weight1-classes1-The classes, \\[0, 1, 2, 3\\], are not in class_weight] [0 0 0 1 1 2]
+PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_class_weight_not_present[numeric-balanced-classes2-classes should include all valid labels] [0 0 0 1 1 2]
+PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_class_weight_not_present[numeric-class_weight3-classes3-classes should include all valid labels] [0 0 0 1 1 2]
+PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_class_weight_not_present[string-class_weight4-classes4-The classes, \\['dog'\\], are not in class_weight] ['dog' 'cat' 'dog']
+PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_class_weight_dict PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_class_weight_invariance PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_class_weight_balanced_negative PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_class_weight_balanced_unordered PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_class_weight_default PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_with_subsample PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_errors[single-output-class_weight0-indices0-The only valid class_weight for subsampling is 'balanced'.] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_errors[multi-output-class_weight1-None-For multi-output, class_weight should be a list of dicts, or the string] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_errors[multi-output-class_weight2-None-Got 1 element\\(s\\) while having 2 outputs] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_more_than_32 PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_class_weight_does_not_contains_more_classes PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_sparse[csc_matrix] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/tests/test_class_weight.py::test_compute_sample_weight_sparse[csc_array] PASSED
+
+============================== 20 passed in 0.31s ==============================

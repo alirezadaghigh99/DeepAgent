@@ -1,0 +1,11 @@
+{
+    "result": "Error",
+    "prompt": "Generate a Python method `inverse` for the `EmpiricalNormalization` class that denormalizes the input `y` using the stored mean and variance. The method should multiply `y` by the standard deviation (calculated from `_var` and `eps`) and then add the mean (`_mean`). The method should return the denormalized output.\n\nClass structure:\n\n```python\nclass EmpiricalNormalization(nn.Module):\n    def __init__(\n        self,\n        shape,\n        batch_axis=0,\n        eps=1e-2,\n        dtype=np.float32,\n        until=None,\n        clip_threshold=None,\n    ):\n        self.batch_axis = batch_axis\n        self.eps = dtype.type(eps)\n        self.until = until\n        self.clip_threshold = clip_threshold\n        self.register_buffer(\n            \"_mean\",\n            torch.tensor(np.expand_dims(np.zeros(shape, dtype=dtype), batch_axis)),\n        )\n        self.register_buffer(\n            \"_var\",\n            torch.tensor(np.expand_dims(np.ones(shape, dtype=dtype), batch_axis)),\n        )\n        self.register_buffer(\"count\", torch.tensor(0))\n\n\n\n        def inverse(self, y):\n            # Implement the function as described in the prompt",
+    "function_name": "inverse",
+    "ground_truth": "pfrl/nn/empirical_normalization.py",
+    "test": "tests/nn_tests/test_empirical_normalization.py",
+    "class": "EmpiricalNormalization",
+    "stage": "",
+    "task": "",
+    "data": "Training"
+}

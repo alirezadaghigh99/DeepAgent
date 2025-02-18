@@ -1,0 +1,499 @@
+output file:
+processed_korniaget_rotation_matrix2d102.json
+function:
+get_rotation_matrix2d
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_rotation_90deg_and_scale[cpu-float32-5] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_rotation_45deg[cpu-float32-2] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_rotation_45deg[cpu-float32-5]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_gradcheck[cpu-1]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_90deg_rotation[cpu-float32-2]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_rotation_45deg[cpu-float32-5] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_90deg_rotation[cpu-float32-5] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_gradcheck[cpu-1] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_90deg_rotation[cpu-float32-2] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_rotation_90deg_and_scale[cpu-float32-2] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_rotation_90deg_and_scale[cpu-float32-5]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_rotation_45deg[cpu-float32-2]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_90deg_rotation[cpu-float32-5]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_rotation_90deg_and_scale[cpu-float32-2]'}
+
+All Test Cases On Generated code:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'tvm', 'inductor', 'onnxrt', 'jit', 'cudagraphs', 'openxla', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 10 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_90deg_rotation[cpu-float32-1] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_90deg_rotation[cpu-float32-2] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_90deg_rotation[cpu-float32-5] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_rotation_90deg_and_scale[cpu-float32-1] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_rotation_90deg_and_scale[cpu-float32-2] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_rotation_90deg_and_scale[cpu-float32-5] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_rotation_45deg[cpu-float32-1] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_rotation_45deg[cpu-float32-2] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_rotation_45deg[cpu-float32-5] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_gradcheck[cpu-1] FAILED
+
+=================================== FAILURES ===================================
+___________ TestRotationMatrix2d.test_90deg_rotation[cpu-float32-1] ____________
+
+self = <test_imgwarp.TestRotationMatrix2d object at 0x76838ff372b0>
+batch_size = 1, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 5])
+    def test_90deg_rotation(self, batch_size, device, dtype):
+        # generate input data
+        center_base = torch.zeros(batch_size, 2, device=device, dtype=dtype)
+        angle_base = torch.ones(batch_size, device=device, dtype=dtype)
+        scale_base = torch.ones(batch_size, 2, device=device, dtype=dtype)
+    
+        # 90 deg rotation
+        center = center_base
+        angle = 90.0 * angle_base
+        scale = scale_base
+>       M = kornia.geometry.get_rotation_matrix2d(center, angle, scale)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py:115: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+center = tensor([[0., 0.]]), angle = tensor([90.]), scale = tensor([[1., 1.]])
+
+    def get_rotation_matrix2d(center: Tensor, angle: Tensor, scale: Tensor) -> Tensor:
+>       from .temp import get_rotation_matrix2d
+E       ImportError: cannot import name 'get_rotation_matrix2d' from 'kornia.geometry.transform.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/imgwarp.py:250: ImportError
+___________ TestRotationMatrix2d.test_90deg_rotation[cpu-float32-2] ____________
+
+self = <test_imgwarp.TestRotationMatrix2d object at 0x76838ff37220>
+batch_size = 2, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 5])
+    def test_90deg_rotation(self, batch_size, device, dtype):
+        # generate input data
+        center_base = torch.zeros(batch_size, 2, device=device, dtype=dtype)
+        angle_base = torch.ones(batch_size, device=device, dtype=dtype)
+        scale_base = torch.ones(batch_size, 2, device=device, dtype=dtype)
+    
+        # 90 deg rotation
+        center = center_base
+        angle = 90.0 * angle_base
+        scale = scale_base
+>       M = kornia.geometry.get_rotation_matrix2d(center, angle, scale)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py:115: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+center = tensor([[0., 0.],
+        [0., 0.]]), angle = tensor([90., 90.])
+scale = tensor([[1., 1.],
+        [1., 1.]])
+
+    def get_rotation_matrix2d(center: Tensor, angle: Tensor, scale: Tensor) -> Tensor:
+>       from .temp import get_rotation_matrix2d
+E       ImportError: cannot import name 'get_rotation_matrix2d' from 'kornia.geometry.transform.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/imgwarp.py:250: ImportError
+___________ TestRotationMatrix2d.test_90deg_rotation[cpu-float32-5] ____________
+
+self = <test_imgwarp.TestRotationMatrix2d object at 0x76838ff374c0>
+batch_size = 5, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 5])
+    def test_90deg_rotation(self, batch_size, device, dtype):
+        # generate input data
+        center_base = torch.zeros(batch_size, 2, device=device, dtype=dtype)
+        angle_base = torch.ones(batch_size, device=device, dtype=dtype)
+        scale_base = torch.ones(batch_size, 2, device=device, dtype=dtype)
+    
+        # 90 deg rotation
+        center = center_base
+        angle = 90.0 * angle_base
+        scale = scale_base
+>       M = kornia.geometry.get_rotation_matrix2d(center, angle, scale)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py:115: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+center = tensor([[0., 0.],
+        [0., 0.],
+        [0., 0.],
+        [0., 0.],
+        [0., 0.]])
+angle = tensor([90., 90., 90., 90., 90.])
+scale = tensor([[1., 1.],
+        [1., 1.],
+        [1., 1.],
+        [1., 1.],
+        [1., 1.]])
+
+    def get_rotation_matrix2d(center: Tensor, angle: Tensor, scale: Tensor) -> Tensor:
+>       from .temp import get_rotation_matrix2d
+E       ImportError: cannot import name 'get_rotation_matrix2d' from 'kornia.geometry.transform.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/imgwarp.py:250: ImportError
+______ TestRotationMatrix2d.test_rotation_90deg_and_scale[cpu-float32-1] _______
+
+self = <test_imgwarp.TestRotationMatrix2d object at 0x76838ff37850>
+batch_size = 1, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 5])
+    def test_rotation_90deg_and_scale(self, batch_size, device, dtype):
+        # generate input data
+        center_base = torch.zeros(batch_size, 2, device=device, dtype=dtype)
+        angle_base = torch.ones(batch_size, device=device, dtype=dtype)
+        scale_base = torch.ones(batch_size, 2, device=device, dtype=dtype)
+    
+        # 90 deg rotation + 2x scale
+        center = center_base
+        angle = 90.0 * angle_base
+        scale = 2.0 * scale_base
+>       M = kornia.geometry.get_rotation_matrix2d(center, angle, scale)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py:134: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+center = tensor([[0., 0.]]), angle = tensor([90.]), scale = tensor([[2., 2.]])
+
+    def get_rotation_matrix2d(center: Tensor, angle: Tensor, scale: Tensor) -> Tensor:
+>       from .temp import get_rotation_matrix2d
+E       ImportError: cannot import name 'get_rotation_matrix2d' from 'kornia.geometry.transform.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/imgwarp.py:250: ImportError
+______ TestRotationMatrix2d.test_rotation_90deg_and_scale[cpu-float32-2] _______
+
+self = <test_imgwarp.TestRotationMatrix2d object at 0x76838ff37790>
+batch_size = 2, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 5])
+    def test_rotation_90deg_and_scale(self, batch_size, device, dtype):
+        # generate input data
+        center_base = torch.zeros(batch_size, 2, device=device, dtype=dtype)
+        angle_base = torch.ones(batch_size, device=device, dtype=dtype)
+        scale_base = torch.ones(batch_size, 2, device=device, dtype=dtype)
+    
+        # 90 deg rotation + 2x scale
+        center = center_base
+        angle = 90.0 * angle_base
+        scale = 2.0 * scale_base
+>       M = kornia.geometry.get_rotation_matrix2d(center, angle, scale)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py:134: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+center = tensor([[0., 0.],
+        [0., 0.]]), angle = tensor([90., 90.])
+scale = tensor([[2., 2.],
+        [2., 2.]])
+
+    def get_rotation_matrix2d(center: Tensor, angle: Tensor, scale: Tensor) -> Tensor:
+>       from .temp import get_rotation_matrix2d
+E       ImportError: cannot import name 'get_rotation_matrix2d' from 'kornia.geometry.transform.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/imgwarp.py:250: ImportError
+______ TestRotationMatrix2d.test_rotation_90deg_and_scale[cpu-float32-5] _______
+
+self = <test_imgwarp.TestRotationMatrix2d object at 0x76838ff37a90>
+batch_size = 5, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 5])
+    def test_rotation_90deg_and_scale(self, batch_size, device, dtype):
+        # generate input data
+        center_base = torch.zeros(batch_size, 2, device=device, dtype=dtype)
+        angle_base = torch.ones(batch_size, device=device, dtype=dtype)
+        scale_base = torch.ones(batch_size, 2, device=device, dtype=dtype)
+    
+        # 90 deg rotation + 2x scale
+        center = center_base
+        angle = 90.0 * angle_base
+        scale = 2.0 * scale_base
+>       M = kornia.geometry.get_rotation_matrix2d(center, angle, scale)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py:134: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+center = tensor([[0., 0.],
+        [0., 0.],
+        [0., 0.],
+        [0., 0.],
+        [0., 0.]])
+angle = tensor([90., 90., 90., 90., 90.])
+scale = tensor([[2., 2.],
+        [2., 2.],
+        [2., 2.],
+        [2., 2.],
+        [2., 2.]])
+
+    def get_rotation_matrix2d(center: Tensor, angle: Tensor, scale: Tensor) -> Tensor:
+>       from .temp import get_rotation_matrix2d
+E       ImportError: cannot import name 'get_rotation_matrix2d' from 'kornia.geometry.transform.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/imgwarp.py:250: ImportError
+___________ TestRotationMatrix2d.test_rotation_45deg[cpu-float32-1] ____________
+
+self = <test_imgwarp.TestRotationMatrix2d object at 0x76838ff37e20>
+batch_size = 1, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 5])
+    def test_rotation_45deg(self, batch_size, device, dtype):
+        # generate input data
+        center_base = torch.zeros(batch_size, 2, device=device, dtype=dtype)
+        angle_base = torch.ones(batch_size, device=device, dtype=dtype)
+        scale_base = torch.ones(batch_size, 2, device=device, dtype=dtype)
+    
+        # 45 deg rotation
+        center = center_base
+        angle = 45.0 * angle_base
+        scale = scale_base
+    
+>       M = kornia.geometry.get_rotation_matrix2d(center, angle, scale)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py:154: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+center = tensor([[0., 0.]]), angle = tensor([45.]), scale = tensor([[1., 1.]])
+
+    def get_rotation_matrix2d(center: Tensor, angle: Tensor, scale: Tensor) -> Tensor:
+>       from .temp import get_rotation_matrix2d
+E       ImportError: cannot import name 'get_rotation_matrix2d' from 'kornia.geometry.transform.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/imgwarp.py:250: ImportError
+___________ TestRotationMatrix2d.test_rotation_45deg[cpu-float32-2] ____________
+
+self = <test_imgwarp.TestRotationMatrix2d object at 0x76838ff37d60>
+batch_size = 2, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 5])
+    def test_rotation_45deg(self, batch_size, device, dtype):
+        # generate input data
+        center_base = torch.zeros(batch_size, 2, device=device, dtype=dtype)
+        angle_base = torch.ones(batch_size, device=device, dtype=dtype)
+        scale_base = torch.ones(batch_size, 2, device=device, dtype=dtype)
+    
+        # 45 deg rotation
+        center = center_base
+        angle = 45.0 * angle_base
+        scale = scale_base
+    
+>       M = kornia.geometry.get_rotation_matrix2d(center, angle, scale)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py:154: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+center = tensor([[0., 0.],
+        [0., 0.]]), angle = tensor([45., 45.])
+scale = tensor([[1., 1.],
+        [1., 1.]])
+
+    def get_rotation_matrix2d(center: Tensor, angle: Tensor, scale: Tensor) -> Tensor:
+>       from .temp import get_rotation_matrix2d
+E       ImportError: cannot import name 'get_rotation_matrix2d' from 'kornia.geometry.transform.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/imgwarp.py:250: ImportError
+___________ TestRotationMatrix2d.test_rotation_45deg[cpu-float32-5] ____________
+
+self = <test_imgwarp.TestRotationMatrix2d object at 0x76838ff6c0a0>
+batch_size = 5, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 5])
+    def test_rotation_45deg(self, batch_size, device, dtype):
+        # generate input data
+        center_base = torch.zeros(batch_size, 2, device=device, dtype=dtype)
+        angle_base = torch.ones(batch_size, device=device, dtype=dtype)
+        scale_base = torch.ones(batch_size, 2, device=device, dtype=dtype)
+    
+        # 45 deg rotation
+        center = center_base
+        angle = 45.0 * angle_base
+        scale = scale_base
+    
+>       M = kornia.geometry.get_rotation_matrix2d(center, angle, scale)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py:154: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+center = tensor([[0., 0.],
+        [0., 0.],
+        [0., 0.],
+        [0., 0.],
+        [0., 0.]])
+angle = tensor([45., 45., 45., 45., 45.])
+scale = tensor([[1., 1.],
+        [1., 1.],
+        [1., 1.],
+        [1., 1.],
+        [1., 1.]])
+
+    def get_rotation_matrix2d(center: Tensor, angle: Tensor, scale: Tensor) -> Tensor:
+>       from .temp import get_rotation_matrix2d
+E       ImportError: cannot import name 'get_rotation_matrix2d' from 'kornia.geometry.transform.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/imgwarp.py:250: ImportError
+__________________ TestRotationMatrix2d.test_gradcheck[cpu-1] __________________
+
+self = <test_imgwarp.TestRotationMatrix2d object at 0x76838ff6c3a0>
+batch_size = 1, device = device(type='cpu')
+
+    @pytest.mark.parametrize("batch_size", [1])
+    def test_gradcheck(self, batch_size, device):
+        dtype = torch.float64
+        # generate input data
+        center_base = torch.zeros(batch_size, 2, device=device, dtype=dtype)
+        angle_base = torch.ones(batch_size, device=device, dtype=dtype)
+        scale_base = torch.ones(batch_size, 2, device=device, dtype=dtype)
+    
+        # 45 deg rotation
+        center = center_base
+        angle = 45.0 * angle_base
+        scale = scale_base
+    
+        # evaluate function gradient
+>       self.gradcheck(kornia.geometry.get_rotation_matrix2d, (center, angle, scale))
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py:176: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:143: in gradcheck
+    return gradcheck(func, inputs, raise_exception=raise_exception, fast_mode=fast_mode, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2052: in gradcheck
+    return _gradcheck_helper(**args)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2074: in _gradcheck_helper
+    func_out = func(*tupled_inputs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+center = tensor([[0., 0.]], dtype=torch.float64, requires_grad=True)
+angle = tensor([45.], dtype=torch.float64, requires_grad=True)
+scale = tensor([[1., 1.]], dtype=torch.float64, requires_grad=True)
+
+    def get_rotation_matrix2d(center: Tensor, angle: Tensor, scale: Tensor) -> Tensor:
+>       from .temp import get_rotation_matrix2d
+E       ImportError: cannot import name 'get_rotation_matrix2d' from 'kornia.geometry.transform.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/imgwarp.py:250: ImportError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_90deg_rotation[cpu-float32-1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_90deg_rotation[cpu-float32-2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_90deg_rotation[cpu-float32-5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_rotation_90deg_and_scale[cpu-float32-1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_rotation_90deg_and_scale[cpu-float32-2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_rotation_90deg_and_scale[cpu-float32-5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_rotation_45deg[cpu-float32-1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_rotation_45deg[cpu-float32-2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_rotation_45deg[cpu-float32-5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_gradcheck[cpu-1]
+============================== 10 failed in 0.62s ==============================
+
+
+Final Test Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'openxla', 'tvm', 'cudagraphs', 'inductor', 'jit', 'onnxrt', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 10 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_90deg_rotation[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_90deg_rotation[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_90deg_rotation[cpu-float32-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_rotation_90deg_and_scale[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_rotation_90deg_and_scale[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_rotation_90deg_and_scale[cpu-float32-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_rotation_45deg[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_rotation_45deg[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_rotation_45deg[cpu-float32-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_gradcheck[cpu-1] PASSED
+
+============================== 10 passed in 0.19s ==============================
+
+
+Initial Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'jit', 'openxla', 'onnxrt', 'tvm', 'inductor', 'cudagraphs', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 10 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_90deg_rotation[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_90deg_rotation[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_90deg_rotation[cpu-float32-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_rotation_90deg_and_scale[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_rotation_90deg_and_scale[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_rotation_90deg_and_scale[cpu-float32-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_rotation_45deg[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_rotation_45deg[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_rotation_45deg[cpu-float32-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d::test_gradcheck[cpu-1] PASSED
+
+============================== 10 passed in 0.25s ==============================

@@ -1,0 +1,14 @@
+stage: Model Construction
+task: 
+data: Image
+
+prompt:
+Create a Python function called do_conv2d that performs a 2D convolution operation. The function takes in parameters conv (a convolutional layer), input_ (input tensor), padding (optional padding value), weight (optional weight tensor), and bias (optional bias tensor). If the weight, bias, or padding parameters are not provided, the function will use the values from the convolutional layer. The output of the function is the result of the convolution operation.
+
+ ground Truth:tests/torch/nas/helpers.py
+
+ repo:nncf
+
+ function:do_conv2d
+ 
+  test_cases:tests/torch/nas/test_elastic_kernel.py

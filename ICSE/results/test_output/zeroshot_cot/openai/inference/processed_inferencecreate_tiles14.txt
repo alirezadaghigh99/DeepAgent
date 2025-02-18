@@ -1,0 +1,1452 @@
+output file:
+processed_inferencecreate_tiles14.json
+function:
+create_tiles
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_all_images_and_custom_grid_to_small_to_fit_images FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_one_image_and_enforced_grid', '../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_one_image FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_all_images_and_custom_grid', 'FAILED ../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_all_images_and_custom_grid_to_small_to_fit_images', '../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_three_images FAILED', '../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_four_images FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_four_images', '../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_two_images FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_three_images', 'FAILED ../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_all_images_and_custom_colors', '../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_one_image_and_enforced_grid FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_one_image', '../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_all_images_and_custom_grid FAILED', '../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_all_images FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_all_images', '../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_all_images_and_custom_colors FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_two_images'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/inference/inference/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/inference/inference
+configfile: pytest.ini
+plugins: anyio-4.8.0, requests-mock-1.11.0, timeout-2.3.1, retry-1.6.3, asyncio-0.21.1
+asyncio: mode=Mode.STRICT
+collecting ... [02/14/25 03:37:17] WARNING  Your inference package version 0.31.1 is out of date! Please upgrade to version    __init__.py:41
+                             0.37.1 of inference for the latest features and bug fixes by running `pip install                
+                             --upgrade inference`.                                                                            
+collected 10 items
+
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_generate_color_image PASSED
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_one_image FAILED
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_one_image_and_enforced_grid FAILED
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_two_images FAILED
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_three_images FAILED
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_four_images FAILED
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_all_images FAILED
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_all_images_and_custom_grid FAILED
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_all_images_and_custom_colors FAILED
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_all_images_and_custom_grid_to_small_to_fit_images FAILED
+
+=================================== FAILURES ===================================
+_______________________ test_create_tiles_with_one_image _______________________
+
+one_image = array([[[235, 152,  97],
+        [235, 152,  97],
+        [236, 153,  98],
+        ...,
+        [253, 223, 188],
+     ...[ 70, 146, 142],
+        ...,
+        [ 68, 146, 135],
+        [ 44, 122, 111],
+        [ 37, 115, 104]]], dtype=uint8)
+single_image_tile = array([[[235, 152,  97],
+        [235, 152,  97],
+        [236, 153,  98],
+        ...,
+        [253, 223, 188],
+     ...[  0,   0,   0],
+        ...,
+        [  0,   0,   0],
+        [  0,   0,   0],
+        [  0,   0,   0]]], dtype=uint8)
+
+    def test_create_tiles_with_one_image(
+        one_image: np.ndarray, single_image_tile: np.ndarray
+    ) -> None:
+        # when
+        result = create_tiles(images=[one_image])
+    
+        # then
+>       assert np.allclose(result, single_image_tile, atol=5.0)
+
+/local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/inference/inference/venv/lib/python3.11/site-packages/numpy/core/numeric.py:2241: in allclose
+    res = all(isclose(a, b, rtol=rtol, atol=atol, equal_nan=equal_nan))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = None
+b = array([[[235, 152,  97],
+        [235, 152,  97],
+        [236, 153,  98],
+        ...,
+        [253, 223, 188],
+     ...[  0,   0,   0],
+        ...,
+        [  0,   0,   0],
+        [  0,   0,   0],
+        [  0,   0,   0]]], dtype=uint8)
+rtol = 1e-05, atol = 5.0, equal_nan = False
+
+    @array_function_dispatch(_isclose_dispatcher)
+    def isclose(a, b, rtol=1.e-5, atol=1.e-8, equal_nan=False):
+        """
+        Returns a boolean array where two arrays are element-wise equal within a
+        tolerance.
+    
+        The tolerance values are positive, typically very small numbers.  The
+        relative difference (`rtol` * abs(`b`)) and the absolute difference
+        `atol` are added together to compare against the absolute difference
+        between `a` and `b`.
+    
+        .. warning:: The default `atol` is not appropriate for comparing numbers
+                     that are much smaller than one (see Notes).
+    
+        Parameters
+        ----------
+        a, b : array_like
+            Input arrays to compare.
+        rtol : float
+            The relative tolerance parameter (see Notes).
+        atol : float
+            The absolute tolerance parameter (see Notes).
+        equal_nan : bool
+            Whether to compare NaN's as equal.  If True, NaN's in `a` will be
+            considered equal to NaN's in `b` in the output array.
+    
+        Returns
+        -------
+        y : array_like
+            Returns a boolean array of where `a` and `b` are equal within the
+            given tolerance. If both `a` and `b` are scalars, returns a single
+            boolean value.
+    
+        See Also
+        --------
+        allclose
+        math.isclose
+    
+        Notes
+        -----
+        .. versionadded:: 1.7.0
+    
+        For finite values, isclose uses the following equation to test whether
+        two floating point values are equivalent.
+    
+         absolute(`a` - `b`) <= (`atol` + `rtol` * absolute(`b`))
+    
+        Unlike the built-in `math.isclose`, the above equation is not symmetric
+        in `a` and `b` -- it assumes `b` is the reference value -- so that
+        `isclose(a, b)` might be different from `isclose(b, a)`. Furthermore,
+        the default value of atol is not zero, and is used to determine what
+        small values should be considered close to zero. The default value is
+        appropriate for expected values of order unity: if the expected values
+        are significantly smaller than one, it can result in false positives.
+        `atol` should be carefully selected for the use case at hand. A zero value
+        for `atol` will result in `False` if either `a` or `b` is zero.
+    
+        `isclose` is not defined for non-numeric data types.
+        `bool` is considered a numeric data-type for this purpose.
+    
+        Examples
+        --------
+        >>> np.isclose([1e10,1e-7], [1.00001e10,1e-8])
+        array([ True, False])
+        >>> np.isclose([1e10,1e-8], [1.00001e10,1e-9])
+        array([ True, True])
+        >>> np.isclose([1e10,1e-8], [1.0001e10,1e-9])
+        array([False,  True])
+        >>> np.isclose([1.0, np.nan], [1.0, np.nan])
+        array([ True, False])
+        >>> np.isclose([1.0, np.nan], [1.0, np.nan], equal_nan=True)
+        array([ True, True])
+        >>> np.isclose([1e-8, 1e-7], [0.0, 0.0])
+        array([ True, False])
+        >>> np.isclose([1e-100, 1e-7], [0.0, 0.0], atol=0.0)
+        array([False, False])
+        >>> np.isclose([1e-10, 1e-10], [1e-20, 0.0])
+        array([ True,  True])
+        >>> np.isclose([1e-10, 1e-10], [1e-20, 0.999999e-10], atol=0.0)
+        array([False,  True])
+        """
+        def within_tol(x, y, atol, rtol):
+            with errstate(invalid='ignore'), _no_nep50_warning():
+                return less_equal(abs(x-y), atol + rtol * abs(y))
+    
+        x = asanyarray(a)
+        y = asanyarray(b)
+    
+        # Make sure y is an inexact type to avoid bad behavior on abs(MIN_INT).
+        # This will cause casting of x later. Also, make sure to allow subclasses
+        # (e.g., for numpy.ma).
+        # NOTE: We explicitly allow timedelta, which used to work. This could
+        #       possibly be deprecated. See also gh-18286.
+        #       timedelta works if `atol` is an integer or also a timedelta.
+        #       Although, the default tolerances are unlikely to be useful
+        if y.dtype.kind != "m":
+            dt = multiarray.result_type(y, 1.)
+            y = asanyarray(y, dtype=dt)
+    
+>       xfin = isfinite(x)
+E       TypeError: ufunc 'isfinite' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
+
+/local/data0/moved_data/publishablew/inference/inference/venv/lib/python3.11/site-packages/numpy/core/numeric.py:2348: TypeError
+______________ test_create_tiles_with_one_image_and_enforced_grid ______________
+
+one_image = array([[[235, 152,  97],
+        [235, 152,  97],
+        [236, 153,  98],
+        ...,
+        [253, 223, 188],
+     ...[ 70, 146, 142],
+        ...,
+        [ 68, 146, 135],
+        [ 44, 122, 111],
+        [ 37, 115, 104]]], dtype=uint8)
+single_image_tile_enforced_grid = array([[[235, 152,  97],
+        [235, 152,  97],
+        [236, 153,  98],
+        ...,
+        [  0,   0,   0],
+     ...[  0,   0,   0],
+        ...,
+        [  0,   0,   0],
+        [  0,   0,   0],
+        [  0,   0,   0]]], dtype=uint8)
+
+    def test_create_tiles_with_one_image_and_enforced_grid(
+        one_image: np.ndarray, single_image_tile_enforced_grid: np.ndarray
+    ) -> None:
+        # when
+        result = create_tiles(images=[one_image], grid_size=(None, 3))
+    
+        # then
+>       assert np.allclose(result, single_image_tile_enforced_grid, atol=5.0)
+
+/local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/inference/inference/venv/lib/python3.11/site-packages/numpy/core/numeric.py:2241: in allclose
+    res = all(isclose(a, b, rtol=rtol, atol=atol, equal_nan=equal_nan))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = None
+b = array([[[235, 152,  97],
+        [235, 152,  97],
+        [236, 153,  98],
+        ...,
+        [  0,   0,   0],
+     ...[  0,   0,   0],
+        ...,
+        [  0,   0,   0],
+        [  0,   0,   0],
+        [  0,   0,   0]]], dtype=uint8)
+rtol = 1e-05, atol = 5.0, equal_nan = False
+
+    @array_function_dispatch(_isclose_dispatcher)
+    def isclose(a, b, rtol=1.e-5, atol=1.e-8, equal_nan=False):
+        """
+        Returns a boolean array where two arrays are element-wise equal within a
+        tolerance.
+    
+        The tolerance values are positive, typically very small numbers.  The
+        relative difference (`rtol` * abs(`b`)) and the absolute difference
+        `atol` are added together to compare against the absolute difference
+        between `a` and `b`.
+    
+        .. warning:: The default `atol` is not appropriate for comparing numbers
+                     that are much smaller than one (see Notes).
+    
+        Parameters
+        ----------
+        a, b : array_like
+            Input arrays to compare.
+        rtol : float
+            The relative tolerance parameter (see Notes).
+        atol : float
+            The absolute tolerance parameter (see Notes).
+        equal_nan : bool
+            Whether to compare NaN's as equal.  If True, NaN's in `a` will be
+            considered equal to NaN's in `b` in the output array.
+    
+        Returns
+        -------
+        y : array_like
+            Returns a boolean array of where `a` and `b` are equal within the
+            given tolerance. If both `a` and `b` are scalars, returns a single
+            boolean value.
+    
+        See Also
+        --------
+        allclose
+        math.isclose
+    
+        Notes
+        -----
+        .. versionadded:: 1.7.0
+    
+        For finite values, isclose uses the following equation to test whether
+        two floating point values are equivalent.
+    
+         absolute(`a` - `b`) <= (`atol` + `rtol` * absolute(`b`))
+    
+        Unlike the built-in `math.isclose`, the above equation is not symmetric
+        in `a` and `b` -- it assumes `b` is the reference value -- so that
+        `isclose(a, b)` might be different from `isclose(b, a)`. Furthermore,
+        the default value of atol is not zero, and is used to determine what
+        small values should be considered close to zero. The default value is
+        appropriate for expected values of order unity: if the expected values
+        are significantly smaller than one, it can result in false positives.
+        `atol` should be carefully selected for the use case at hand. A zero value
+        for `atol` will result in `False` if either `a` or `b` is zero.
+    
+        `isclose` is not defined for non-numeric data types.
+        `bool` is considered a numeric data-type for this purpose.
+    
+        Examples
+        --------
+        >>> np.isclose([1e10,1e-7], [1.00001e10,1e-8])
+        array([ True, False])
+        >>> np.isclose([1e10,1e-8], [1.00001e10,1e-9])
+        array([ True, True])
+        >>> np.isclose([1e10,1e-8], [1.0001e10,1e-9])
+        array([False,  True])
+        >>> np.isclose([1.0, np.nan], [1.0, np.nan])
+        array([ True, False])
+        >>> np.isclose([1.0, np.nan], [1.0, np.nan], equal_nan=True)
+        array([ True, True])
+        >>> np.isclose([1e-8, 1e-7], [0.0, 0.0])
+        array([ True, False])
+        >>> np.isclose([1e-100, 1e-7], [0.0, 0.0], atol=0.0)
+        array([False, False])
+        >>> np.isclose([1e-10, 1e-10], [1e-20, 0.0])
+        array([ True,  True])
+        >>> np.isclose([1e-10, 1e-10], [1e-20, 0.999999e-10], atol=0.0)
+        array([False,  True])
+        """
+        def within_tol(x, y, atol, rtol):
+            with errstate(invalid='ignore'), _no_nep50_warning():
+                return less_equal(abs(x-y), atol + rtol * abs(y))
+    
+        x = asanyarray(a)
+        y = asanyarray(b)
+    
+        # Make sure y is an inexact type to avoid bad behavior on abs(MIN_INT).
+        # This will cause casting of x later. Also, make sure to allow subclasses
+        # (e.g., for numpy.ma).
+        # NOTE: We explicitly allow timedelta, which used to work. This could
+        #       possibly be deprecated. See also gh-18286.
+        #       timedelta works if `atol` is an integer or also a timedelta.
+        #       Although, the default tolerances are unlikely to be useful
+        if y.dtype.kind != "m":
+            dt = multiarray.result_type(y, 1.)
+            y = asanyarray(y, dtype=dt)
+    
+>       xfin = isfinite(x)
+E       TypeError: ufunc 'isfinite' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
+
+/local/data0/moved_data/publishablew/inference/inference/venv/lib/python3.11/site-packages/numpy/core/numeric.py:2348: TypeError
+______________________ test_create_tiles_with_two_images _______________________
+
+two_images = [array([[[235, 152,  97],
+        [235, 152,  97],
+        [236, 153,  98],
+        ...,
+        [253, 223, 188],
+    ... 95,  81,  62],
+        ...,
+        [170, 164, 165],
+        [169, 163, 164],
+        [170, 164, 165]]], dtype=uint8)]
+two_images_tile = array([[[235, 152,  97],
+        [235, 152,  97],
+        [236, 153,  98],
+        ...,
+        [149, 116,  71],
+     ...[  0,   0,   0],
+        ...,
+        [  0,   0,   0],
+        [  0,   0,   0],
+        [  0,   0,   0]]], dtype=uint8)
+
+    def test_create_tiles_with_two_images(
+        two_images: List[np.ndarray], two_images_tile: np.ndarray
+    ) -> None:
+        # when
+        result = create_tiles(images=two_images)
+    
+        # then
+>       assert np.allclose(result, two_images_tile, atol=5.0)
+
+/local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py:44: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/inference/inference/venv/lib/python3.11/site-packages/numpy/core/numeric.py:2241: in allclose
+    res = all(isclose(a, b, rtol=rtol, atol=atol, equal_nan=equal_nan))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = None
+b = array([[[235, 152,  97],
+        [235, 152,  97],
+        [236, 153,  98],
+        ...,
+        [149, 116,  71],
+     ...[  0,   0,   0],
+        ...,
+        [  0,   0,   0],
+        [  0,   0,   0],
+        [  0,   0,   0]]], dtype=uint8)
+rtol = 1e-05, atol = 5.0, equal_nan = False
+
+    @array_function_dispatch(_isclose_dispatcher)
+    def isclose(a, b, rtol=1.e-5, atol=1.e-8, equal_nan=False):
+        """
+        Returns a boolean array where two arrays are element-wise equal within a
+        tolerance.
+    
+        The tolerance values are positive, typically very small numbers.  The
+        relative difference (`rtol` * abs(`b`)) and the absolute difference
+        `atol` are added together to compare against the absolute difference
+        between `a` and `b`.
+    
+        .. warning:: The default `atol` is not appropriate for comparing numbers
+                     that are much smaller than one (see Notes).
+    
+        Parameters
+        ----------
+        a, b : array_like
+            Input arrays to compare.
+        rtol : float
+            The relative tolerance parameter (see Notes).
+        atol : float
+            The absolute tolerance parameter (see Notes).
+        equal_nan : bool
+            Whether to compare NaN's as equal.  If True, NaN's in `a` will be
+            considered equal to NaN's in `b` in the output array.
+    
+        Returns
+        -------
+        y : array_like
+            Returns a boolean array of where `a` and `b` are equal within the
+            given tolerance. If both `a` and `b` are scalars, returns a single
+            boolean value.
+    
+        See Also
+        --------
+        allclose
+        math.isclose
+    
+        Notes
+        -----
+        .. versionadded:: 1.7.0
+    
+        For finite values, isclose uses the following equation to test whether
+        two floating point values are equivalent.
+    
+         absolute(`a` - `b`) <= (`atol` + `rtol` * absolute(`b`))
+    
+        Unlike the built-in `math.isclose`, the above equation is not symmetric
+        in `a` and `b` -- it assumes `b` is the reference value -- so that
+        `isclose(a, b)` might be different from `isclose(b, a)`. Furthermore,
+        the default value of atol is not zero, and is used to determine what
+        small values should be considered close to zero. The default value is
+        appropriate for expected values of order unity: if the expected values
+        are significantly smaller than one, it can result in false positives.
+        `atol` should be carefully selected for the use case at hand. A zero value
+        for `atol` will result in `False` if either `a` or `b` is zero.
+    
+        `isclose` is not defined for non-numeric data types.
+        `bool` is considered a numeric data-type for this purpose.
+    
+        Examples
+        --------
+        >>> np.isclose([1e10,1e-7], [1.00001e10,1e-8])
+        array([ True, False])
+        >>> np.isclose([1e10,1e-8], [1.00001e10,1e-9])
+        array([ True, True])
+        >>> np.isclose([1e10,1e-8], [1.0001e10,1e-9])
+        array([False,  True])
+        >>> np.isclose([1.0, np.nan], [1.0, np.nan])
+        array([ True, False])
+        >>> np.isclose([1.0, np.nan], [1.0, np.nan], equal_nan=True)
+        array([ True, True])
+        >>> np.isclose([1e-8, 1e-7], [0.0, 0.0])
+        array([ True, False])
+        >>> np.isclose([1e-100, 1e-7], [0.0, 0.0], atol=0.0)
+        array([False, False])
+        >>> np.isclose([1e-10, 1e-10], [1e-20, 0.0])
+        array([ True,  True])
+        >>> np.isclose([1e-10, 1e-10], [1e-20, 0.999999e-10], atol=0.0)
+        array([False,  True])
+        """
+        def within_tol(x, y, atol, rtol):
+            with errstate(invalid='ignore'), _no_nep50_warning():
+                return less_equal(abs(x-y), atol + rtol * abs(y))
+    
+        x = asanyarray(a)
+        y = asanyarray(b)
+    
+        # Make sure y is an inexact type to avoid bad behavior on abs(MIN_INT).
+        # This will cause casting of x later. Also, make sure to allow subclasses
+        # (e.g., for numpy.ma).
+        # NOTE: We explicitly allow timedelta, which used to work. This could
+        #       possibly be deprecated. See also gh-18286.
+        #       timedelta works if `atol` is an integer or also a timedelta.
+        #       Although, the default tolerances are unlikely to be useful
+        if y.dtype.kind != "m":
+            dt = multiarray.result_type(y, 1.)
+            y = asanyarray(y, dtype=dt)
+    
+>       xfin = isfinite(x)
+E       TypeError: ufunc 'isfinite' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
+
+/local/data0/moved_data/publishablew/inference/inference/venv/lib/python3.11/site-packages/numpy/core/numeric.py:2348: TypeError
+_____________________ test_create_tiles_with_three_images ______________________
+
+three_images = [array([[[235, 152,  97],
+        [235, 152,  97],
+        [236, 153,  98],
+        ...,
+        [253, 223, 188],
+    ...181, 134, 102],
+        ...,
+        [ 85,  76,  73],
+        [ 85,  76,  73],
+        [ 85,  76,  73]]], dtype=uint8)]
+three_images_tile = array([[[235, 152,  97],
+        [235, 152,  97],
+        [236, 153,  98],
+        ...,
+        [202, 170, 157],
+     ...[  0,   0,   0],
+        ...,
+        [  0,   0,   0],
+        [  0,   0,   0],
+        [  0,   0,   0]]], dtype=uint8)
+
+    def test_create_tiles_with_three_images(
+        three_images: List[np.ndarray], three_images_tile: np.ndarray
+    ) -> None:
+        # when
+        result = create_tiles(images=three_images)
+    
+        # then
+>       assert np.allclose(result, three_images_tile, atol=5.0)
+
+/local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py:54: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/inference/inference/venv/lib/python3.11/site-packages/numpy/core/numeric.py:2241: in allclose
+    res = all(isclose(a, b, rtol=rtol, atol=atol, equal_nan=equal_nan))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = None
+b = array([[[235, 152,  97],
+        [235, 152,  97],
+        [236, 153,  98],
+        ...,
+        [202, 170, 157],
+     ...[  0,   0,   0],
+        ...,
+        [  0,   0,   0],
+        [  0,   0,   0],
+        [  0,   0,   0]]], dtype=uint8)
+rtol = 1e-05, atol = 5.0, equal_nan = False
+
+    @array_function_dispatch(_isclose_dispatcher)
+    def isclose(a, b, rtol=1.e-5, atol=1.e-8, equal_nan=False):
+        """
+        Returns a boolean array where two arrays are element-wise equal within a
+        tolerance.
+    
+        The tolerance values are positive, typically very small numbers.  The
+        relative difference (`rtol` * abs(`b`)) and the absolute difference
+        `atol` are added together to compare against the absolute difference
+        between `a` and `b`.
+    
+        .. warning:: The default `atol` is not appropriate for comparing numbers
+                     that are much smaller than one (see Notes).
+    
+        Parameters
+        ----------
+        a, b : array_like
+            Input arrays to compare.
+        rtol : float
+            The relative tolerance parameter (see Notes).
+        atol : float
+            The absolute tolerance parameter (see Notes).
+        equal_nan : bool
+            Whether to compare NaN's as equal.  If True, NaN's in `a` will be
+            considered equal to NaN's in `b` in the output array.
+    
+        Returns
+        -------
+        y : array_like
+            Returns a boolean array of where `a` and `b` are equal within the
+            given tolerance. If both `a` and `b` are scalars, returns a single
+            boolean value.
+    
+        See Also
+        --------
+        allclose
+        math.isclose
+    
+        Notes
+        -----
+        .. versionadded:: 1.7.0
+    
+        For finite values, isclose uses the following equation to test whether
+        two floating point values are equivalent.
+    
+         absolute(`a` - `b`) <= (`atol` + `rtol` * absolute(`b`))
+    
+        Unlike the built-in `math.isclose`, the above equation is not symmetric
+        in `a` and `b` -- it assumes `b` is the reference value -- so that
+        `isclose(a, b)` might be different from `isclose(b, a)`. Furthermore,
+        the default value of atol is not zero, and is used to determine what
+        small values should be considered close to zero. The default value is
+        appropriate for expected values of order unity: if the expected values
+        are significantly smaller than one, it can result in false positives.
+        `atol` should be carefully selected for the use case at hand. A zero value
+        for `atol` will result in `False` if either `a` or `b` is zero.
+    
+        `isclose` is not defined for non-numeric data types.
+        `bool` is considered a numeric data-type for this purpose.
+    
+        Examples
+        --------
+        >>> np.isclose([1e10,1e-7], [1.00001e10,1e-8])
+        array([ True, False])
+        >>> np.isclose([1e10,1e-8], [1.00001e10,1e-9])
+        array([ True, True])
+        >>> np.isclose([1e10,1e-8], [1.0001e10,1e-9])
+        array([False,  True])
+        >>> np.isclose([1.0, np.nan], [1.0, np.nan])
+        array([ True, False])
+        >>> np.isclose([1.0, np.nan], [1.0, np.nan], equal_nan=True)
+        array([ True, True])
+        >>> np.isclose([1e-8, 1e-7], [0.0, 0.0])
+        array([ True, False])
+        >>> np.isclose([1e-100, 1e-7], [0.0, 0.0], atol=0.0)
+        array([False, False])
+        >>> np.isclose([1e-10, 1e-10], [1e-20, 0.0])
+        array([ True,  True])
+        >>> np.isclose([1e-10, 1e-10], [1e-20, 0.999999e-10], atol=0.0)
+        array([False,  True])
+        """
+        def within_tol(x, y, atol, rtol):
+            with errstate(invalid='ignore'), _no_nep50_warning():
+                return less_equal(abs(x-y), atol + rtol * abs(y))
+    
+        x = asanyarray(a)
+        y = asanyarray(b)
+    
+        # Make sure y is an inexact type to avoid bad behavior on abs(MIN_INT).
+        # This will cause casting of x later. Also, make sure to allow subclasses
+        # (e.g., for numpy.ma).
+        # NOTE: We explicitly allow timedelta, which used to work. This could
+        #       possibly be deprecated. See also gh-18286.
+        #       timedelta works if `atol` is an integer or also a timedelta.
+        #       Although, the default tolerances are unlikely to be useful
+        if y.dtype.kind != "m":
+            dt = multiarray.result_type(y, 1.)
+            y = asanyarray(y, dtype=dt)
+    
+>       xfin = isfinite(x)
+E       TypeError: ufunc 'isfinite' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
+
+/local/data0/moved_data/publishablew/inference/inference/venv/lib/python3.11/site-packages/numpy/core/numeric.py:2348: TypeError
+______________________ test_create_tiles_with_four_images ______________________
+
+four_images = [array([[[235, 152,  97],
+        [235, 152,  97],
+        [236, 153,  98],
+        ...,
+        [253, 223, 188],
+    ...103,  72,  47],
+        ...,
+        [ 26,  69, 102],
+        [ 30,  68, 102],
+        [ 28,  67,  99]]], dtype=uint8)]
+four_images_tile = array([[[  0,   0,   0],
+        [235, 152,  97],
+        [235, 152,  97],
+        ...,
+        [148, 115,  70],
+     ...[186, 138, 104],
+        ...,
+        [  0,   0,   0],
+        [  0,   0,   0],
+        [  0,   0,   0]]], dtype=uint8)
+
+    def test_create_tiles_with_four_images(
+        four_images: List[np.ndarray], four_images_tile: np.ndarray
+    ) -> None:
+        # when
+        result = create_tiles(images=four_images)
+    
+        # then
+>       assert np.allclose(result, four_images_tile, atol=5.0)
+
+/local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py:64: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/inference/inference/venv/lib/python3.11/site-packages/numpy/core/numeric.py:2241: in allclose
+    res = all(isclose(a, b, rtol=rtol, atol=atol, equal_nan=equal_nan))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = None
+b = array([[[  0,   0,   0],
+        [235, 152,  97],
+        [235, 152,  97],
+        ...,
+        [148, 115,  70],
+     ...[186, 138, 104],
+        ...,
+        [  0,   0,   0],
+        [  0,   0,   0],
+        [  0,   0,   0]]], dtype=uint8)
+rtol = 1e-05, atol = 5.0, equal_nan = False
+
+    @array_function_dispatch(_isclose_dispatcher)
+    def isclose(a, b, rtol=1.e-5, atol=1.e-8, equal_nan=False):
+        """
+        Returns a boolean array where two arrays are element-wise equal within a
+        tolerance.
+    
+        The tolerance values are positive, typically very small numbers.  The
+        relative difference (`rtol` * abs(`b`)) and the absolute difference
+        `atol` are added together to compare against the absolute difference
+        between `a` and `b`.
+    
+        .. warning:: The default `atol` is not appropriate for comparing numbers
+                     that are much smaller than one (see Notes).
+    
+        Parameters
+        ----------
+        a, b : array_like
+            Input arrays to compare.
+        rtol : float
+            The relative tolerance parameter (see Notes).
+        atol : float
+            The absolute tolerance parameter (see Notes).
+        equal_nan : bool
+            Whether to compare NaN's as equal.  If True, NaN's in `a` will be
+            considered equal to NaN's in `b` in the output array.
+    
+        Returns
+        -------
+        y : array_like
+            Returns a boolean array of where `a` and `b` are equal within the
+            given tolerance. If both `a` and `b` are scalars, returns a single
+            boolean value.
+    
+        See Also
+        --------
+        allclose
+        math.isclose
+    
+        Notes
+        -----
+        .. versionadded:: 1.7.0
+    
+        For finite values, isclose uses the following equation to test whether
+        two floating point values are equivalent.
+    
+         absolute(`a` - `b`) <= (`atol` + `rtol` * absolute(`b`))
+    
+        Unlike the built-in `math.isclose`, the above equation is not symmetric
+        in `a` and `b` -- it assumes `b` is the reference value -- so that
+        `isclose(a, b)` might be different from `isclose(b, a)`. Furthermore,
+        the default value of atol is not zero, and is used to determine what
+        small values should be considered close to zero. The default value is
+        appropriate for expected values of order unity: if the expected values
+        are significantly smaller than one, it can result in false positives.
+        `atol` should be carefully selected for the use case at hand. A zero value
+        for `atol` will result in `False` if either `a` or `b` is zero.
+    
+        `isclose` is not defined for non-numeric data types.
+        `bool` is considered a numeric data-type for this purpose.
+    
+        Examples
+        --------
+        >>> np.isclose([1e10,1e-7], [1.00001e10,1e-8])
+        array([ True, False])
+        >>> np.isclose([1e10,1e-8], [1.00001e10,1e-9])
+        array([ True, True])
+        >>> np.isclose([1e10,1e-8], [1.0001e10,1e-9])
+        array([False,  True])
+        >>> np.isclose([1.0, np.nan], [1.0, np.nan])
+        array([ True, False])
+        >>> np.isclose([1.0, np.nan], [1.0, np.nan], equal_nan=True)
+        array([ True, True])
+        >>> np.isclose([1e-8, 1e-7], [0.0, 0.0])
+        array([ True, False])
+        >>> np.isclose([1e-100, 1e-7], [0.0, 0.0], atol=0.0)
+        array([False, False])
+        >>> np.isclose([1e-10, 1e-10], [1e-20, 0.0])
+        array([ True,  True])
+        >>> np.isclose([1e-10, 1e-10], [1e-20, 0.999999e-10], atol=0.0)
+        array([False,  True])
+        """
+        def within_tol(x, y, atol, rtol):
+            with errstate(invalid='ignore'), _no_nep50_warning():
+                return less_equal(abs(x-y), atol + rtol * abs(y))
+    
+        x = asanyarray(a)
+        y = asanyarray(b)
+    
+        # Make sure y is an inexact type to avoid bad behavior on abs(MIN_INT).
+        # This will cause casting of x later. Also, make sure to allow subclasses
+        # (e.g., for numpy.ma).
+        # NOTE: We explicitly allow timedelta, which used to work. This could
+        #       possibly be deprecated. See also gh-18286.
+        #       timedelta works if `atol` is an integer or also a timedelta.
+        #       Although, the default tolerances are unlikely to be useful
+        if y.dtype.kind != "m":
+            dt = multiarray.result_type(y, 1.)
+            y = asanyarray(y, dtype=dt)
+    
+>       xfin = isfinite(x)
+E       TypeError: ufunc 'isfinite' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
+
+/local/data0/moved_data/publishablew/inference/inference/venv/lib/python3.11/site-packages/numpy/core/numeric.py:2348: TypeError
+______________________ test_create_tiles_with_all_images _______________________
+
+all_images = [array([[[235, 152,  97],
+        [235, 152,  97],
+        [236, 153,  98],
+        ...,
+        [253, 223, 188],
+    ... 15,  20,  29],
+        ...,
+        [  5,   5,   5],
+        [  5,   5,   5],
+        [  5,   5,   5]]], dtype=uint8)]
+all_images_tile = array([[[0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        ...,
+        [0, 0, 0],
+        [0, 0, 0],
+        [0...     [0, 0, 0],
+        [0, 0, 0],
+        ...,
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0]]], dtype=uint8)
+
+    def test_create_tiles_with_all_images(
+        all_images: List[np.ndarray], all_images_tile: np.ndarray
+    ) -> None:
+        # when
+        result = create_tiles(images=all_images)
+    
+        # then
+>       assert np.allclose(result, all_images_tile, atol=5.0)
+
+/local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py:74: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/inference/inference/venv/lib/python3.11/site-packages/numpy/core/numeric.py:2241: in allclose
+    res = all(isclose(a, b, rtol=rtol, atol=atol, equal_nan=equal_nan))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = None
+b = array([[[0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        ...,
+        [0, 0, 0],
+        [0, 0, 0],
+        [0...     [0, 0, 0],
+        [0, 0, 0],
+        ...,
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0]]], dtype=uint8)
+rtol = 1e-05, atol = 5.0, equal_nan = False
+
+    @array_function_dispatch(_isclose_dispatcher)
+    def isclose(a, b, rtol=1.e-5, atol=1.e-8, equal_nan=False):
+        """
+        Returns a boolean array where two arrays are element-wise equal within a
+        tolerance.
+    
+        The tolerance values are positive, typically very small numbers.  The
+        relative difference (`rtol` * abs(`b`)) and the absolute difference
+        `atol` are added together to compare against the absolute difference
+        between `a` and `b`.
+    
+        .. warning:: The default `atol` is not appropriate for comparing numbers
+                     that are much smaller than one (see Notes).
+    
+        Parameters
+        ----------
+        a, b : array_like
+            Input arrays to compare.
+        rtol : float
+            The relative tolerance parameter (see Notes).
+        atol : float
+            The absolute tolerance parameter (see Notes).
+        equal_nan : bool
+            Whether to compare NaN's as equal.  If True, NaN's in `a` will be
+            considered equal to NaN's in `b` in the output array.
+    
+        Returns
+        -------
+        y : array_like
+            Returns a boolean array of where `a` and `b` are equal within the
+            given tolerance. If both `a` and `b` are scalars, returns a single
+            boolean value.
+    
+        See Also
+        --------
+        allclose
+        math.isclose
+    
+        Notes
+        -----
+        .. versionadded:: 1.7.0
+    
+        For finite values, isclose uses the following equation to test whether
+        two floating point values are equivalent.
+    
+         absolute(`a` - `b`) <= (`atol` + `rtol` * absolute(`b`))
+    
+        Unlike the built-in `math.isclose`, the above equation is not symmetric
+        in `a` and `b` -- it assumes `b` is the reference value -- so that
+        `isclose(a, b)` might be different from `isclose(b, a)`. Furthermore,
+        the default value of atol is not zero, and is used to determine what
+        small values should be considered close to zero. The default value is
+        appropriate for expected values of order unity: if the expected values
+        are significantly smaller than one, it can result in false positives.
+        `atol` should be carefully selected for the use case at hand. A zero value
+        for `atol` will result in `False` if either `a` or `b` is zero.
+    
+        `isclose` is not defined for non-numeric data types.
+        `bool` is considered a numeric data-type for this purpose.
+    
+        Examples
+        --------
+        >>> np.isclose([1e10,1e-7], [1.00001e10,1e-8])
+        array([ True, False])
+        >>> np.isclose([1e10,1e-8], [1.00001e10,1e-9])
+        array([ True, True])
+        >>> np.isclose([1e10,1e-8], [1.0001e10,1e-9])
+        array([False,  True])
+        >>> np.isclose([1.0, np.nan], [1.0, np.nan])
+        array([ True, False])
+        >>> np.isclose([1.0, np.nan], [1.0, np.nan], equal_nan=True)
+        array([ True, True])
+        >>> np.isclose([1e-8, 1e-7], [0.0, 0.0])
+        array([ True, False])
+        >>> np.isclose([1e-100, 1e-7], [0.0, 0.0], atol=0.0)
+        array([False, False])
+        >>> np.isclose([1e-10, 1e-10], [1e-20, 0.0])
+        array([ True,  True])
+        >>> np.isclose([1e-10, 1e-10], [1e-20, 0.999999e-10], atol=0.0)
+        array([False,  True])
+        """
+        def within_tol(x, y, atol, rtol):
+            with errstate(invalid='ignore'), _no_nep50_warning():
+                return less_equal(abs(x-y), atol + rtol * abs(y))
+    
+        x = asanyarray(a)
+        y = asanyarray(b)
+    
+        # Make sure y is an inexact type to avoid bad behavior on abs(MIN_INT).
+        # This will cause casting of x later. Also, make sure to allow subclasses
+        # (e.g., for numpy.ma).
+        # NOTE: We explicitly allow timedelta, which used to work. This could
+        #       possibly be deprecated. See also gh-18286.
+        #       timedelta works if `atol` is an integer or also a timedelta.
+        #       Although, the default tolerances are unlikely to be useful
+        if y.dtype.kind != "m":
+            dt = multiarray.result_type(y, 1.)
+            y = asanyarray(y, dtype=dt)
+    
+>       xfin = isfinite(x)
+E       TypeError: ufunc 'isfinite' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
+
+/local/data0/moved_data/publishablew/inference/inference/venv/lib/python3.11/site-packages/numpy/core/numeric.py:2348: TypeError
+______________ test_create_tiles_with_all_images_and_custom_grid _______________
+
+all_images = [array([[[235, 152,  97],
+        [235, 152,  97],
+        [236, 153,  98],
+        ...,
+        [253, 223, 188],
+    ... 15,  20,  29],
+        ...,
+        [  5,   5,   5],
+        [  5,   5,   5],
+        [  5,   5,   5]]], dtype=uint8)]
+all_images_tile_and_custom_grid = array([[[0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        ...,
+        [0, 0, 0],
+        [0, 0, 0],
+        [0...     [0, 0, 0],
+        [0, 0, 0],
+        ...,
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0]]], dtype=uint8)
+
+    def test_create_tiles_with_all_images_and_custom_grid(
+        all_images: List[np.ndarray], all_images_tile_and_custom_grid: np.ndarray
+    ) -> None:
+        # when
+        result = create_tiles(images=all_images, grid_size=(3, 3))
+    
+        # then
+>       assert np.allclose(result, all_images_tile_and_custom_grid, atol=5.0)
+
+/local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py:84: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/inference/inference/venv/lib/python3.11/site-packages/numpy/core/numeric.py:2241: in allclose
+    res = all(isclose(a, b, rtol=rtol, atol=atol, equal_nan=equal_nan))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = None
+b = array([[[0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        ...,
+        [0, 0, 0],
+        [0, 0, 0],
+        [0...     [0, 0, 0],
+        [0, 0, 0],
+        ...,
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0]]], dtype=uint8)
+rtol = 1e-05, atol = 5.0, equal_nan = False
+
+    @array_function_dispatch(_isclose_dispatcher)
+    def isclose(a, b, rtol=1.e-5, atol=1.e-8, equal_nan=False):
+        """
+        Returns a boolean array where two arrays are element-wise equal within a
+        tolerance.
+    
+        The tolerance values are positive, typically very small numbers.  The
+        relative difference (`rtol` * abs(`b`)) and the absolute difference
+        `atol` are added together to compare against the absolute difference
+        between `a` and `b`.
+    
+        .. warning:: The default `atol` is not appropriate for comparing numbers
+                     that are much smaller than one (see Notes).
+    
+        Parameters
+        ----------
+        a, b : array_like
+            Input arrays to compare.
+        rtol : float
+            The relative tolerance parameter (see Notes).
+        atol : float
+            The absolute tolerance parameter (see Notes).
+        equal_nan : bool
+            Whether to compare NaN's as equal.  If True, NaN's in `a` will be
+            considered equal to NaN's in `b` in the output array.
+    
+        Returns
+        -------
+        y : array_like
+            Returns a boolean array of where `a` and `b` are equal within the
+            given tolerance. If both `a` and `b` are scalars, returns a single
+            boolean value.
+    
+        See Also
+        --------
+        allclose
+        math.isclose
+    
+        Notes
+        -----
+        .. versionadded:: 1.7.0
+    
+        For finite values, isclose uses the following equation to test whether
+        two floating point values are equivalent.
+    
+         absolute(`a` - `b`) <= (`atol` + `rtol` * absolute(`b`))
+    
+        Unlike the built-in `math.isclose`, the above equation is not symmetric
+        in `a` and `b` -- it assumes `b` is the reference value -- so that
+        `isclose(a, b)` might be different from `isclose(b, a)`. Furthermore,
+        the default value of atol is not zero, and is used to determine what
+        small values should be considered close to zero. The default value is
+        appropriate for expected values of order unity: if the expected values
+        are significantly smaller than one, it can result in false positives.
+        `atol` should be carefully selected for the use case at hand. A zero value
+        for `atol` will result in `False` if either `a` or `b` is zero.
+    
+        `isclose` is not defined for non-numeric data types.
+        `bool` is considered a numeric data-type for this purpose.
+    
+        Examples
+        --------
+        >>> np.isclose([1e10,1e-7], [1.00001e10,1e-8])
+        array([ True, False])
+        >>> np.isclose([1e10,1e-8], [1.00001e10,1e-9])
+        array([ True, True])
+        >>> np.isclose([1e10,1e-8], [1.0001e10,1e-9])
+        array([False,  True])
+        >>> np.isclose([1.0, np.nan], [1.0, np.nan])
+        array([ True, False])
+        >>> np.isclose([1.0, np.nan], [1.0, np.nan], equal_nan=True)
+        array([ True, True])
+        >>> np.isclose([1e-8, 1e-7], [0.0, 0.0])
+        array([ True, False])
+        >>> np.isclose([1e-100, 1e-7], [0.0, 0.0], atol=0.0)
+        array([False, False])
+        >>> np.isclose([1e-10, 1e-10], [1e-20, 0.0])
+        array([ True,  True])
+        >>> np.isclose([1e-10, 1e-10], [1e-20, 0.999999e-10], atol=0.0)
+        array([False,  True])
+        """
+        def within_tol(x, y, atol, rtol):
+            with errstate(invalid='ignore'), _no_nep50_warning():
+                return less_equal(abs(x-y), atol + rtol * abs(y))
+    
+        x = asanyarray(a)
+        y = asanyarray(b)
+    
+        # Make sure y is an inexact type to avoid bad behavior on abs(MIN_INT).
+        # This will cause casting of x later. Also, make sure to allow subclasses
+        # (e.g., for numpy.ma).
+        # NOTE: We explicitly allow timedelta, which used to work. This could
+        #       possibly be deprecated. See also gh-18286.
+        #       timedelta works if `atol` is an integer or also a timedelta.
+        #       Although, the default tolerances are unlikely to be useful
+        if y.dtype.kind != "m":
+            dt = multiarray.result_type(y, 1.)
+            y = asanyarray(y, dtype=dt)
+    
+>       xfin = isfinite(x)
+E       TypeError: ufunc 'isfinite' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
+
+/local/data0/moved_data/publishablew/inference/inference/venv/lib/python3.11/site-packages/numpy/core/numeric.py:2348: TypeError
+_____________ test_create_tiles_with_all_images_and_custom_colors ______________
+
+all_images = [array([[[235, 152,  97],
+        [235, 152,  97],
+        [236, 153,  98],
+        ...,
+        [253, 223, 188],
+    ... 15,  20,  29],
+        ...,
+        [  5,   5,   5],
+        [  5,   5,   5],
+        [  5,   5,   5]]], dtype=uint8)]
+all_images_tile_and_custom_colors = array([[[224, 224, 224],
+        [224, 224, 224],
+        [224, 224, 224],
+        ...,
+        [224, 224, 224],
+     ...[224, 224, 224],
+        ...,
+        [224, 224, 224],
+        [224, 224, 224],
+        [224, 224, 224]]], dtype=uint8)
+
+    def test_create_tiles_with_all_images_and_custom_colors(
+        all_images: List[np.ndarray], all_images_tile_and_custom_colors: np.ndarray
+    ) -> None:
+        # when
+        result = create_tiles(
+            images=all_images,
+            tile_margin_color=(127, 127, 127),
+            tile_padding_color=(224, 224, 224),
+        )
+    
+        # then
+>       assert np.allclose(result, all_images_tile_and_custom_colors, atol=5.0)
+
+/local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py:98: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/inference/inference/venv/lib/python3.11/site-packages/numpy/core/numeric.py:2241: in allclose
+    res = all(isclose(a, b, rtol=rtol, atol=atol, equal_nan=equal_nan))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = None
+b = array([[[224, 224, 224],
+        [224, 224, 224],
+        [224, 224, 224],
+        ...,
+        [224, 224, 224],
+     ...[224, 224, 224],
+        ...,
+        [224, 224, 224],
+        [224, 224, 224],
+        [224, 224, 224]]], dtype=uint8)
+rtol = 1e-05, atol = 5.0, equal_nan = False
+
+    @array_function_dispatch(_isclose_dispatcher)
+    def isclose(a, b, rtol=1.e-5, atol=1.e-8, equal_nan=False):
+        """
+        Returns a boolean array where two arrays are element-wise equal within a
+        tolerance.
+    
+        The tolerance values are positive, typically very small numbers.  The
+        relative difference (`rtol` * abs(`b`)) and the absolute difference
+        `atol` are added together to compare against the absolute difference
+        between `a` and `b`.
+    
+        .. warning:: The default `atol` is not appropriate for comparing numbers
+                     that are much smaller than one (see Notes).
+    
+        Parameters
+        ----------
+        a, b : array_like
+            Input arrays to compare.
+        rtol : float
+            The relative tolerance parameter (see Notes).
+        atol : float
+            The absolute tolerance parameter (see Notes).
+        equal_nan : bool
+            Whether to compare NaN's as equal.  If True, NaN's in `a` will be
+            considered equal to NaN's in `b` in the output array.
+    
+        Returns
+        -------
+        y : array_like
+            Returns a boolean array of where `a` and `b` are equal within the
+            given tolerance. If both `a` and `b` are scalars, returns a single
+            boolean value.
+    
+        See Also
+        --------
+        allclose
+        math.isclose
+    
+        Notes
+        -----
+        .. versionadded:: 1.7.0
+    
+        For finite values, isclose uses the following equation to test whether
+        two floating point values are equivalent.
+    
+         absolute(`a` - `b`) <= (`atol` + `rtol` * absolute(`b`))
+    
+        Unlike the built-in `math.isclose`, the above equation is not symmetric
+        in `a` and `b` -- it assumes `b` is the reference value -- so that
+        `isclose(a, b)` might be different from `isclose(b, a)`. Furthermore,
+        the default value of atol is not zero, and is used to determine what
+        small values should be considered close to zero. The default value is
+        appropriate for expected values of order unity: if the expected values
+        are significantly smaller than one, it can result in false positives.
+        `atol` should be carefully selected for the use case at hand. A zero value
+        for `atol` will result in `False` if either `a` or `b` is zero.
+    
+        `isclose` is not defined for non-numeric data types.
+        `bool` is considered a numeric data-type for this purpose.
+    
+        Examples
+        --------
+        >>> np.isclose([1e10,1e-7], [1.00001e10,1e-8])
+        array([ True, False])
+        >>> np.isclose([1e10,1e-8], [1.00001e10,1e-9])
+        array([ True, True])
+        >>> np.isclose([1e10,1e-8], [1.0001e10,1e-9])
+        array([False,  True])
+        >>> np.isclose([1.0, np.nan], [1.0, np.nan])
+        array([ True, False])
+        >>> np.isclose([1.0, np.nan], [1.0, np.nan], equal_nan=True)
+        array([ True, True])
+        >>> np.isclose([1e-8, 1e-7], [0.0, 0.0])
+        array([ True, False])
+        >>> np.isclose([1e-100, 1e-7], [0.0, 0.0], atol=0.0)
+        array([False, False])
+        >>> np.isclose([1e-10, 1e-10], [1e-20, 0.0])
+        array([ True,  True])
+        >>> np.isclose([1e-10, 1e-10], [1e-20, 0.999999e-10], atol=0.0)
+        array([False,  True])
+        """
+        def within_tol(x, y, atol, rtol):
+            with errstate(invalid='ignore'), _no_nep50_warning():
+                return less_equal(abs(x-y), atol + rtol * abs(y))
+    
+        x = asanyarray(a)
+        y = asanyarray(b)
+    
+        # Make sure y is an inexact type to avoid bad behavior on abs(MIN_INT).
+        # This will cause casting of x later. Also, make sure to allow subclasses
+        # (e.g., for numpy.ma).
+        # NOTE: We explicitly allow timedelta, which used to work. This could
+        #       possibly be deprecated. See also gh-18286.
+        #       timedelta works if `atol` is an integer or also a timedelta.
+        #       Although, the default tolerances are unlikely to be useful
+        if y.dtype.kind != "m":
+            dt = multiarray.result_type(y, 1.)
+            y = asanyarray(y, dtype=dt)
+    
+>       xfin = isfinite(x)
+E       TypeError: ufunc 'isfinite' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
+
+/local/data0/moved_data/publishablew/inference/inference/venv/lib/python3.11/site-packages/numpy/core/numeric.py:2348: TypeError
+___ test_create_tiles_with_all_images_and_custom_grid_to_small_to_fit_images ___
+
+all_images = [array([[[235, 152,  97],
+        [235, 152,  97],
+        [236, 153,  98],
+        ...,
+        [253, 223, 188],
+    ... 15,  20,  29],
+        ...,
+        [  5,   5,   5],
+        [  5,   5,   5],
+        [  5,   5,   5]]], dtype=uint8)]
+
+    def test_create_tiles_with_all_images_and_custom_grid_to_small_to_fit_images(
+        all_images: List[np.ndarray],
+    ) -> None:
+>       with pytest.raises(ValueError):
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+/local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py:104: Failed
+=============================== warnings summary ===============================
+../../../../../../local/data0/moved_data/publishablew/inference/inference/venv/lib/python3.11/site-packages/pydantic/fields.py:1042
+  PydanticDeprecatedSince20: Using extra keyword arguments on `Field` is deprecated and will be removed. Use `json_schema_extra` instead. (Extra keys: 'example'). Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+
+../../../../../../local/data0/moved_data/publishablew/inference/inference/venv/lib/python3.11/site-packages/pydantic/fields.py:1042
+  PydanticDeprecatedSince20: Using extra keyword arguments on `Field` is deprecated and will be removed. Use `json_schema_extra` instead. (Extra keys: 'field'). Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+
+../../../../../../local/data0/moved_data/publishablew/inference/inference/venv/lib/python3.11/site-packages/starlette/formparsers.py:12
+  PendingDeprecationWarning: Please use `import python_multipart` instead.
+
+../../../../../../local/data0/moved_data/publishablew/inference/inference/inference/core/workflows/execution_engine/entities/types.py:1137
+../../../../../../local/data0/moved_data/publishablew/inference/inference/inference/core/workflows/execution_engine/entities/types.py:1150
+../../../../../../local/data0/moved_data/publishablew/inference/inference/inference/core/workflows/execution_engine/entities/types.py:1166
+  PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+
+../../../../../../local/data0/moved_data/publishablew/inference/inference/inference/core/entities/requests/clip.py:29
+../../../../../../local/data0/moved_data/publishablew/inference/inference/inference/core/entities/requests/gaze.py:40
+../../../../../../local/data0/moved_data/publishablew/inference/inference/inference/core/entities/requests/cogvlm.py:41
+../../../../../../local/data0/moved_data/publishablew/inference/inference/inference/core/entities/requests/trocr.py:25
+  PydanticDeprecatedSince20: Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+
+../../../../../../local/data0/moved_data/publishablew/inference/inference/venv/lib/python3.11/site-packages/pydantic/deprecated/class_validators.py:121
+../../../../../../local/data0/moved_data/publishablew/inference/inference/venv/lib/python3.11/site-packages/pydantic/deprecated/class_validators.py:121
+  PydanticDeprecatedSince20: `allow_reuse` is deprecated and will be ignored; it should no longer be necessary. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+
+../../../../../../local/data0/moved_data/publishablew/inference/inference/venv/lib/python3.11/site-packages/timm/models/layers/__init__.py:48
+  FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_one_image
+FAILED ../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_one_image_and_enforced_grid
+FAILED ../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_two_images
+FAILED ../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_three_images
+FAILED ../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_four_images
+FAILED ../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_all_images
+FAILED ../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_all_images_and_custom_grid
+FAILED ../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_all_images_and_custom_colors
+FAILED ../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_all_images_and_custom_grid_to_small_to_fit_images
+=================== 9 failed, 1 passed, 13 warnings in 4.16s ===================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/inference/inference/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/inference/inference
+configfile: pytest.ini
+plugins: anyio-4.8.0, requests-mock-1.11.0, timeout-2.3.1, retry-1.6.3, asyncio-0.21.1
+asyncio: mode=Mode.STRICT
+collecting ... [02/14/25 03:37:23] WARNING  Your inference package version 0.31.1 is out of date! Please upgrade to version    __init__.py:41
+                             0.37.1 of inference for the latest features and bug fixes by running `pip install                
+                             --upgrade inference`.                                                                            
+collected 10 items
+
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_generate_color_image PASSED
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_one_image PASSED
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_one_image_and_enforced_grid PASSED
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_two_images PASSED
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_three_images PASSED
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_four_images PASSED
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_all_images PASSED
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_all_images_and_custom_grid PASSED
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_all_images_and_custom_colors PASSED
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_all_images_and_custom_grid_to_small_to_fit_images PASSED
+
+=============================== warnings summary ===============================
+../../../../../../local/data0/moved_data/publishablew/inference/inference/venv/lib/python3.11/site-packages/pydantic/fields.py:1042
+  PydanticDeprecatedSince20: Using extra keyword arguments on `Field` is deprecated and will be removed. Use `json_schema_extra` instead. (Extra keys: 'example'). Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+
+../../../../../../local/data0/moved_data/publishablew/inference/inference/venv/lib/python3.11/site-packages/pydantic/fields.py:1042
+  PydanticDeprecatedSince20: Using extra keyword arguments on `Field` is deprecated and will be removed. Use `json_schema_extra` instead. (Extra keys: 'field'). Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+
+../../../../../../local/data0/moved_data/publishablew/inference/inference/venv/lib/python3.11/site-packages/starlette/formparsers.py:12
+  PendingDeprecationWarning: Please use `import python_multipart` instead.
+
+../../../../../../local/data0/moved_data/publishablew/inference/inference/inference/core/workflows/execution_engine/entities/types.py:1137
+../../../../../../local/data0/moved_data/publishablew/inference/inference/inference/core/workflows/execution_engine/entities/types.py:1150
+../../../../../../local/data0/moved_data/publishablew/inference/inference/inference/core/workflows/execution_engine/entities/types.py:1166
+  PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+
+../../../../../../local/data0/moved_data/publishablew/inference/inference/inference/core/entities/requests/clip.py:29
+../../../../../../local/data0/moved_data/publishablew/inference/inference/inference/core/entities/requests/gaze.py:40
+../../../../../../local/data0/moved_data/publishablew/inference/inference/inference/core/entities/requests/cogvlm.py:41
+../../../../../../local/data0/moved_data/publishablew/inference/inference/inference/core/entities/requests/trocr.py:25
+  PydanticDeprecatedSince20: Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+
+../../../../../../local/data0/moved_data/publishablew/inference/inference/venv/lib/python3.11/site-packages/pydantic/deprecated/class_validators.py:121
+../../../../../../local/data0/moved_data/publishablew/inference/inference/venv/lib/python3.11/site-packages/pydantic/deprecated/class_validators.py:121
+  PydanticDeprecatedSince20: `allow_reuse` is deprecated and will be ignored; it should no longer be necessary. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+
+../../../../../../local/data0/moved_data/publishablew/inference/inference/venv/lib/python3.11/site-packages/timm/models/layers/__init__.py:48
+  FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================= 10 passed, 13 warnings in 4.34s ========================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/inference/inference/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/inference/inference
+configfile: pytest.ini
+plugins: anyio-4.8.0, requests-mock-1.11.0, timeout-2.3.1, retry-1.6.3, asyncio-0.21.1
+asyncio: mode=Mode.STRICT
+collecting ... [02/14/25 03:37:12] WARNING  Your inference package version 0.31.1 is out of date! Please upgrade to version    __init__.py:41
+                             0.37.1 of inference for the latest features and bug fixes by running `pip install                
+                             --upgrade inference`.                                                                            
+collected 10 items
+
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_generate_color_image PASSED
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_one_image PASSED
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_one_image_and_enforced_grid PASSED
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_two_images PASSED
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_three_images PASSED
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_four_images PASSED
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_all_images PASSED
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_all_images_and_custom_grid PASSED
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_all_images_and_custom_colors PASSED
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference/unit_tests/core/utils/test_drawing.py::test_create_tiles_with_all_images_and_custom_grid_to_small_to_fit_images PASSED
+
+=============================== warnings summary ===============================
+../../../../../../local/data0/moved_data/publishablew/inference/inference/venv/lib/python3.11/site-packages/pydantic/fields.py:1042
+  PydanticDeprecatedSince20: Using extra keyword arguments on `Field` is deprecated and will be removed. Use `json_schema_extra` instead. (Extra keys: 'example'). Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+
+../../../../../../local/data0/moved_data/publishablew/inference/inference/venv/lib/python3.11/site-packages/pydantic/fields.py:1042
+  PydanticDeprecatedSince20: Using extra keyword arguments on `Field` is deprecated and will be removed. Use `json_schema_extra` instead. (Extra keys: 'field'). Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+
+../../../../../../local/data0/moved_data/publishablew/inference/inference/venv/lib/python3.11/site-packages/starlette/formparsers.py:12
+  PendingDeprecationWarning: Please use `import python_multipart` instead.
+
+../../../../../../local/data0/moved_data/publishablew/inference/inference/inference/core/workflows/execution_engine/entities/types.py:1137
+../../../../../../local/data0/moved_data/publishablew/inference/inference/inference/core/workflows/execution_engine/entities/types.py:1150
+../../../../../../local/data0/moved_data/publishablew/inference/inference/inference/core/workflows/execution_engine/entities/types.py:1166
+  PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+
+../../../../../../local/data0/moved_data/publishablew/inference/inference/inference/core/entities/requests/clip.py:29
+../../../../../../local/data0/moved_data/publishablew/inference/inference/inference/core/entities/requests/gaze.py:40
+../../../../../../local/data0/moved_data/publishablew/inference/inference/inference/core/entities/requests/cogvlm.py:41
+../../../../../../local/data0/moved_data/publishablew/inference/inference/inference/core/entities/requests/trocr.py:25
+  PydanticDeprecatedSince20: Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+
+../../../../../../local/data0/moved_data/publishablew/inference/inference/venv/lib/python3.11/site-packages/pydantic/deprecated/class_validators.py:121
+../../../../../../local/data0/moved_data/publishablew/inference/inference/venv/lib/python3.11/site-packages/pydantic/deprecated/class_validators.py:121
+  PydanticDeprecatedSince20: `allow_reuse` is deprecated and will be ignored; it should no longer be necessary. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+
+../../../../../../local/data0/moved_data/publishablew/inference/inference/venv/lib/python3.11/site-packages/timm/models/layers/__init__.py:48
+  FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================= 10 passed, 13 warnings in 4.39s ========================

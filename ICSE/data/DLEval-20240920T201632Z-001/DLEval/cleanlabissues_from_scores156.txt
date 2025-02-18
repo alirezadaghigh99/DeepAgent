@@ -1,0 +1,26 @@
+stage: Evaluating&Metrics
+task: segmentation
+data: Image
+
+prompt:
+Create a Python function `issues_from_scores` that identifies mislabeled pixels or images based on label quality scores and a user-defined `threshold`. The function should accept:
+
+- `image_scores` (np.ndarray): Array of shape `(N,)` for image scores.
+- `pixel_scores` (Optional[np.ndarray]): Optional array of shape `(N, H, W)` for pixel-level scores.
+- `threshold` (float): A value between 0 and 1 that determines which scores are considered issues.
+
+The function returns:
+
+- A boolean mask (np.ndarray) if `pixel_scores` is provided, marking issues as `True`.
+- An array of image indices (np.ndarray) if `pixel_scores` is not provided, for images below the threshold.
+
+Raise `ValueError` if `image_scores` is `None`, if `threshold` is outside the [0, 1] range, or if `threshold` is `None`.
+
+ ground Truth:cleanlab/segmentation/rank.py
+
+ repo:cleanlab
+
+ function:issues_from_scores
+ 
+ test_cases: tests/test_segmentation.py::test_issues_from_scores_different_input_sizes
+ 

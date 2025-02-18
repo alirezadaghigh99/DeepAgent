@@ -1,0 +1,14 @@
+stage: Model Construction
+task: 
+data: 
+
+prompt:
+Create a Python function called gaussian_filter_3d that defines a 3D Gaussian filter for smoothing. The function takes in a parameter called kernel_sigma, which can be either a list of deviations for each direction or an integer for isotropic deviation. The function returns a TensorFlow tensor representing a Gaussian kernel of shape [3*k for k in kernel_sigma]. The output is the Gaussian kernel tensor for 3D smoothing.
+
+ ground Truth:deepreg/model/layer_util.py
+
+ repo:DeepReg
+
+ function:gaussian_filter_3d
+ 
+ test_cases:test/unit/test_layer_util.py::TestGaussianFilter3D

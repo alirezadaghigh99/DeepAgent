@@ -1,0 +1,36 @@
+stage: Image
+task: 
+data: Model construction
+
+prompt:
+Write a Python function `forward` for the `Affine` class that applies multiple elementary affine transformations (rotation, translation, scaling, and shearing) to a batch of input tensors. The function takes a 4D tensor with shape `[batch_size, channels, height, width]` as input and returns a transformed tensor of the same shape. The affine transformation is computed using parameters such as `angle`, `translation`, `scale_factor`, `shear`, and `center`, with optional interpolation modes and padding options.
+
+```python
+class Affine(nn.Module):
+    def __init__(
+        self,
+        angle: Optional[torch.Tensor] = None,
+        translation: Optional[torch.Tensor] = None,
+        scale_factor: Optional[torch.Tensor] = None,
+        shear: Optional[torch.Tensor] = None,
+        center: Optional[torch.Tensor] = None,
+        mode: str = "bilinear",
+        padding_mode: str = "zeros",
+        align_corners: bool = True,
+    ) -> None:
+        # Initialization code...
+
+    def forward(self, input: torch.Tensor) -> torch.Tensor:
+``` 
+
+The `forward` function constructs an affine transformation matrix based on the provided parameters and applies this transformation to the input tensor.
+
+ ground Truth:kornia/geometry/transform/affwarp.py
+
+ repo:kornia
+
+ function:forward
+ 
+ class:Affine
+ 
+ test_cases:tests/geometry/transform/test_affine.py::TestAffine2d

@@ -1,0 +1,20 @@
+stage: Evaluating&Metrics
+task: Classification
+data: Table
+
+prompt:
+Generate a Python function called coverage_error that calculates the coverage error measure. The function takes in three parameters: y_true, y_score, and an optional parameter sample_weight. 
+
+The y_true parameter is an array-like object containing true binary labels in binary indicator format. The y_score parameter is an array-like object containing target scores. The sample_weight parameter is an array-like object containing sample weights.
+
+The function calculates how far we need to go through the ranked scores to cover all true labels. It handles ties in y_scores by giving the maximal rank that would have been assigned to all tied values. The function returns the coverage error as a float value.
+
+Make sure to read more about coverage error in the User Guide provided in the code. The function also includes examples of how to use it with sample inputs and expected outputs.
+
+ ground Truth:sklearn/metrics/_ranking.py
+
+ repo:scikit-learn
+
+ function:coverage_error
+ 
+ test_cases: sklearn/metrics/tests/test_ranking.py

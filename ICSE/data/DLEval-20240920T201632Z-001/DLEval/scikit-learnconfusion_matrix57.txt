@@ -1,0 +1,56 @@
+stage: Evaluating&Metrics
+task: 
+data: 
+
+prompt:
+Generate a Python function called confusion_matrix that Compute confusion matrix to evaluate the accuracy of a classification.
+
+    By definition a confusion matrix :math:`C` is such that :math:`C_{i, j}`
+    is equal to the number of observations known to be in group :math:`i` and
+    predicted to be in group :math:`j`.
+
+    Thus in binary classification, the count of true negatives is
+    :math:`C_{0,0}`, false negatives is :math:`C_{1,0}`, true positives is
+    :math:`C_{1,1}` and false positives is :math:`C_{0,1}`.
+
+
+    Parameters
+    ----------
+    y_true : array-like of shape (n_samples,)
+        Ground truth (correct) target values.
+
+    y_pred : array-like of shape (n_samples,)
+        Estimated targets as returned by a classifier.
+
+    labels : array-like of shape (n_classes), default=None
+        List of labels to index the matrix. This may be used to reorder
+        or select a subset of labels.
+        If ``None`` is given, those that appear at least once
+        in ``y_true`` or ``y_pred`` are used in sorted order.
+
+    sample_weight : array-like of shape (n_samples,), default=None
+        Sample weights.
+
+        .. versionadded:: 0.18
+
+    normalize : {'true', 'pred', 'all'}, default=None
+        Normalizes confusion matrix over the true (rows), predicted (columns)
+        conditions or all the population. If None, confusion matrix will not be
+        normalized.
+
+    Returns
+    -------
+    C : ndarray of shape (n_classes, n_classes)
+        Confusion matrix whose i-th row and j-th
+        column entry indicates the number of
+        samples with true label being i-th class
+        and predicted label being j-th class.
+
+
+ ground Truth:sklearn/metrics/_classification.py
+
+ repo:scikit-learn
+
+test_cases:sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning
+
+ function:confusion_matrix

@@ -1,0 +1,11 @@
+{
+    "result": "Certainly! Below is a Python function `U2` that generates the matrix representation of the U2 gate using the given parameters `phi` and `delta`. The function returns a 2x2 matrix as a NumPy array.\n\n```python\nimport numpy as np\n\ndef U2(phi: float, delta: float) -> np.ndarray:\n    \"\"\"\n    Generate the matrix representation of the U2 gate.\n\n    Args:\n        phi (float): Azimuthal angle.\n        delta (float): Quantum phase.\n\n    Returns:\n        np.ndarray: A 2x2 matrix representing the U2 gate.\n    \"\"\"\n    # Calculate the elements of the U2 matrix\n    element_00 = 1 / np.sqrt(2)\n    element_01 = -np.exp(1j * delta) / np.sqrt(2)\n    element_10 = np.exp(1j * phi) / np.sqrt(2)\n    element_11 = np.exp(1j * (phi + delta)) / np.sqrt(2)\n\n    # Construct the U2 matrix\n    u2_matrix = np.array([\n        [element_00, element_01],\n        [element_10, element_11]\n    ], dtype=complex)\n\n    return u2_matrix\n\n# Example usage:\nphi = np.pi / 4\ndelta = np.pi / 2\nu2_gate = U2(phi, delta)\nprint(u2_gate)\n```\n\nThis function calculates each element of the U2 matrix using the provided `phi` and `delta` values, and then constructs the matrix using NumPy's array functionality. The matrix is returned as a complex-valued 2x2 NumPy array.",
+    "prompt": "Generate a Python function called U2 that returns the matrix representation of the U2 gate. The function takes two input parameters: phi (float) representing the azimuthal angle and delta (float) representing the quantum phase. The output is a 2x2 matrix in the form of a NumPy array, calculated as:\n\nU2(phi, delta) = 1/sqrt(2) * [[1, -exp(i*delta)], [exp(i*phi), exp(i*(phi + delta))]]",
+    "function_name": "U2",
+    "ground_truth": "tests/gate_data.py",
+    "test": "tests/ops/qubit/test_parametric_ops.py::TestOperations",
+    "class": "",
+    "stage": "Pre-Post processing",
+    "task": "",
+    "data": ""
+}

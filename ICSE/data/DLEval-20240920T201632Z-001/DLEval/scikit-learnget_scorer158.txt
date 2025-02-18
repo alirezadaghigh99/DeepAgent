@@ -1,0 +1,18 @@
+stage: Evaluating&Metrics
+task: 
+data: Table
+
+prompt:
+Generate a Python function called get_scorer that takes a parameter called scoring. The function retrieves a scorer based on the input scoring method, which can be a string, a callable, or None. If the input is a string, the function returns a copy of the scorer object corresponding to that string. If the input is a callable, the function returns the input as is. If the input is None, the function returns None.
+
+The function includes a docstring with information on how to use it, including examples. It also handles errors by raising a ValueError if the input scoring value is not valid.
+
+The function returns the scorer object based on the input scoring method.
+
+ ground Truth:sklearn/metrics/_scorer.py
+
+ repo:scikit-learn
+
+ function:get_scorer
+ 
+ test_cases:sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores

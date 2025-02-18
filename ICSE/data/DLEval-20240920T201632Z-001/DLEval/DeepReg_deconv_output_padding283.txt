@@ -1,0 +1,14 @@
+stage: Model Construction
+task: 
+data: Image
+
+prompt:
+Write a Python function `_deconv_output_padding` that calculates the `output_padding` for a 1D `Conv3DTranspose` operation, given the `input_shape`, `output_shape`, `kernel_size`, `stride`, and `padding` type. The function should support "same", "valid", and "full" padding types, and raise a `ValueError` if an unknown padding type is provided. The function should return the calculated `output_padding`.
+
+ ground Truth:deepreg/model/layer_util.py
+
+ repo:DeepReg
+
+ function:_deconv_output_padding
+ 
+ test_cases:test/unit/test_layer_util.py::TestDeconvOutputPadding

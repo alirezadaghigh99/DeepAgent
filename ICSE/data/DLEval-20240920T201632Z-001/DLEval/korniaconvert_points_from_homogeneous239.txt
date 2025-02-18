@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: Detection
+data: Image
+
+prompt:
+Create a function `convert_points_from_homogeneous` that converts points from homogeneous to Euclidean space. The function takes a tensor `points` with shape `(B, N, D)` and an optional `eps` parameter to avoid division by zero. It returns a tensor of shape `(B, N, D-1)` representing the points in Euclidean space. A `TypeError` is raised if the input is not a tensor, and a `ValueError` is raised if the input tensor has fewer than two dimensions.
+
+ ground Truth:kornia/geometry/conversions.py
+
+ repo:kornia
+
+ function:convert_points_from_homogeneous
+ 
+ test_cases:tests/geometry/test_conversions.py::TestConvertPointsFromHomogeneous

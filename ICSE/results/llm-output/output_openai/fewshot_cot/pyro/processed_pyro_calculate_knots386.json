@@ -1,0 +1,11 @@
+{
+    "result": "Error",
+    "prompt": "Generate a Python function _calculate_knots that takes lengths as a tensor, lower as a float, and upper as a float, and returns two tensors: the adjusted lengths and the knot positions. The function should scale and shift the cumulative sum of the lengths to fit between lower and upper, and ensure the knot points start at lower and end at upper.",
+    "function_name": "_calculate_knots",
+    "ground_truth": "pyro/distributions/transforms/spline.py",
+    "test": "tests/distributions/test_transforms.py::test_conditional_compose_transform_module",
+    "class": "",
+    "stage": "Pre-Post processing",
+    "task": "",
+    "data": "Table"
+}

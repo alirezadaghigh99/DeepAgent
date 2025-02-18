@@ -1,0 +1,716 @@
+output file:
+processed_classes-pyroloss and grads45.json
+function:
+loss_and_grads
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[reparam-ReweightedWakeSleep]', '../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::PoissonGammaTests::test_rws_reparameterized FAILED [ 30%]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_rws_reparameterized', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[nonreparam-ReweightedWakeSleep]', '../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_rws_reparameterized FAILED [ 83%]', '../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[reparam-ReweightedWakeSleep] FAILED [ 42%]', '../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[nonreparam-ReweightedWakeSleep] FAILED [ 54%]', '../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_rws_nonreparameterized_vectorized FAILED [ 82%]', '../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::PoissonGammaTests::test_rws_nonreparameterized FAILED [ 29%]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_rws_nonreparameterized', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_rws_reparameterized_vectorized', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_rws_nonreparameterized_vectorized', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_rws_reparameterized', '../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_rws_reparameterized FAILED [ 14%]', '../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_rws_nonreparameterized FAILED [ 80%]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_rws_nonreparameterized', '../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_rws_nonreparameterized FAILED [ 13%]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::PoissonGammaTests::test_rws_reparameterized', '../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_rws_reparameterized_vectorized FAILED [ 85%]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::PoissonGammaTests::test_rws_nonreparameterized'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/pyro/pyro/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/pyro/pyro
+configfile: setup.cfg
+plugins: typeguard-4.4.1, jaxtyping-0.2.19
+collecting ... collected 68 items
+
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_elbo_analytic_kl PASSED [  1%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_elbo_nonreparameterized PASSED [  2%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_elbo_reparameterized PASSED [  4%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_elbo_tail_adaptive PASSED [  5%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_mmd_nonvectorized PASSED [  7%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_mmd_vectorized PASSED [  8%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_renyi_nonreparameterized PASSED [ 10%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_renyi_reparameterized PASSED [ 11%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_rws_nonreparameterized FAILED [ 13%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_rws_reparameterized FAILED [ 14%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::TestFixedModelGuide::test_guide_and_model_both_fixed PASSED [ 16%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::TestFixedModelGuide::test_guide_and_model_free PASSED [ 17%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::TestFixedModelGuide::test_guide_fixed PASSED [ 19%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::TestFixedModelGuide::test_model_fixed PASSED [ 20%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::PoissonGammaTests::test_elbo_nonreparameterized PASSED [ 22%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::PoissonGammaTests::test_elbo_reparameterized PASSED [ 23%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::PoissonGammaTests::test_mmd_vectorized PASSED [ 25%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::PoissonGammaTests::test_renyi_nonreparameterized PASSED [ 26%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::PoissonGammaTests::test_renyi_reparameterized PASSED [ 27%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::PoissonGammaTests::test_rws_nonreparameterized FAILED [ 29%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::PoissonGammaTests::test_rws_reparameterized FAILED [ 30%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[reparam-JitTrace_ELBO] XFAIL [ 32%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[reparam-JitTraceGraph_ELBO] XFAIL [ 33%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[reparam-JitTraceEnum_ELBO] XFAIL [ 35%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[reparam-Trace_ELBO] PASSED [ 36%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[reparam-TraceGraph_ELBO] PASSED [ 38%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[reparam-TraceEnum_ELBO] PASSED [ 39%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[reparam-RenyiELBO] PASSED [ 41%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[reparam-ReweightedWakeSleep] FAILED [ 42%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[nonreparam-JitTrace_ELBO] XFAIL [ 44%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[nonreparam-JitTraceGraph_ELBO] XFAIL [ 45%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[nonreparam-JitTraceEnum_ELBO] XFAIL [ 47%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[nonreparam-Trace_ELBO] PASSED [ 48%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[nonreparam-TraceGraph_ELBO] PASSED [ 50%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[nonreparam-TraceEnum_ELBO] PASSED [ 51%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[nonreparam-RenyiELBO] PASSED [ 52%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[nonreparam-ReweightedWakeSleep] FAILED [ 54%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[rsvi-JitTrace_ELBO] XFAIL [ 55%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[rsvi-JitTraceGraph_ELBO] XFAIL [ 57%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[rsvi-JitTraceEnum_ELBO] XFAIL [ 58%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[rsvi-Trace_ELBO] PASSED [ 60%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[rsvi-TraceGraph_ELBO] PASSED [ 61%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[rsvi-TraceEnum_ELBO] PASSED [ 63%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[rsvi-RenyiELBO] XFAIL [ 64%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[rsvi-ReweightedWakeSleep] XFAIL [ 66%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_elbo_nonreparameterized PASSED [ 67%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_elbo_nonreparameterized_vectorized PASSED [ 69%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_elbo_reparameterized PASSED [ 70%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_elbo_reparameterized_vectorized PASSED [ 72%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_mmd_vectorized PASSED [ 73%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_renyi_nonreparameterized PASSED [ 75%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_renyi_nonreparameterized_vectorized PASSED [ 76%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_renyi_reparameterized PASSED [ 77%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_renyi_reparameterized_vectorized PASSED [ 79%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_rws_nonreparameterized FAILED [ 80%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_rws_nonreparameterized_vectorized FAILED [ 82%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_rws_reparameterized FAILED [ 83%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_rws_reparameterized_vectorized FAILED [ 85%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::SafetyTests::test_duplicate_names PASSED [ 86%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::SafetyTests::test_duplicate_obs_name PASSED [ 88%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::SafetyTests::test_extra_samples PASSED [ 89%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_energy_distance_univariate[0] PASSED [ 91%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_energy_distance_univariate[0.0001] PASSED [ 92%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_energy_distance_multivariate[0] PASSED [ 94%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_energy_distance_multivariate[1] PASSED [ 95%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_reparam_stable PASSED [ 97%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_sequential_plating_sum PASSED [ 98%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_non_nested_plating_sum PASSED [100%]
+
+=================================== FAILURES ===================================
+________________ NormalNormalTests.test_rws_nonreparameterized _________________
+
+self = <tests.infer.test_inference.NormalNormalTests testMethod=test_rws_nonreparameterized>
+
+    def test_rws_nonreparameterized(self):
+>       self.do_elbo_test(False, 7500, ReweightedWakeSleep(num_particles=3))
+
+/local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py:104: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py:166: in do_elbo_test
+    svi.step()
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/infer/svi.py:145: in step
+    loss = self.loss_and_grads(self.model, self.guide, *args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pyro.infer.rws.ReweightedWakeSleep object at 0x7dc1eef243d0>
+model = <function NormalNormalTests.do_elbo_test.<locals>.model at 0x7dc1ee863740>
+guide = <function NormalNormalTests.do_elbo_test.<locals>.guide at 0x7dc1ee8632e0>
+args = (), kwargs = {}, wake_theta_loss = tensor(6.4629)
+wake_phi_loss = tensor(-0.8139, grad_fn=<NegBackward0>)
+
+    def loss_and_grads(self, model, guide, *args, **kwargs):
+        wake_theta_loss, wake_phi_loss = self._loss(model, guide, args, kwargs)
+>       model.zero_grad()
+E       AttributeError: 'function' object has no attribute 'zero_grad'
+
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/infer/rws.py:163: AttributeError
+----------------------------- Captured stderr call -----------------------------
+I 	 Guessed max_plate_nesting = 2
+------------------------------ Captured log call -------------------------------
+INFO     root:elbo.py:184 Guessed max_plate_nesting = 2
+__________________ NormalNormalTests.test_rws_reparameterized __________________
+
+self = <tests.infer.test_inference.NormalNormalTests testMethod=test_rws_reparameterized>
+
+    def test_rws_reparameterized(self):
+>       self.do_elbo_test(True, 2500, ReweightedWakeSleep(num_particles=3))
+
+/local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py:101: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py:166: in do_elbo_test
+    svi.step()
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/infer/svi.py:145: in step
+    loss = self.loss_and_grads(self.model, self.guide, *args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pyro.infer.rws.ReweightedWakeSleep object at 0x7dc1ed9e5f50>
+model = <function NormalNormalTests.do_elbo_test.<locals>.model at 0x7dc1ee861800>
+guide = <function NormalNormalTests.do_elbo_test.<locals>.guide at 0x7dc1ee861300>
+args = (), kwargs = {}, wake_theta_loss = tensor(6.4629)
+wake_phi_loss = tensor(-0.8139, grad_fn=<NegBackward0>)
+
+    def loss_and_grads(self, model, guide, *args, **kwargs):
+        wake_theta_loss, wake_phi_loss = self._loss(model, guide, args, kwargs)
+>       model.zero_grad()
+E       AttributeError: 'function' object has no attribute 'zero_grad'
+
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/infer/rws.py:163: AttributeError
+----------------------------- Captured stderr call -----------------------------
+I 	 Guessed max_plate_nesting = 2
+------------------------------ Captured log call -------------------------------
+INFO     root:elbo.py:184 Guessed max_plate_nesting = 2
+________________ PoissonGammaTests.test_rws_nonreparameterized _________________
+
+self = <tests.infer.test_inference.PoissonGammaTests testMethod=test_rws_nonreparameterized>
+
+    def test_rws_nonreparameterized(self):
+>       self.do_elbo_test(False, 12500, ReweightedWakeSleep(num_particles=2))
+
+/local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py:337: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py:383: in do_elbo_test
+    svi.step()
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/infer/svi.py:145: in step
+    loss = self.loss_and_grads(self.model, self.guide, *args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pyro.infer.rws.ReweightedWakeSleep object at 0x7dc259322c90>
+model = <function PoissonGammaTests.do_elbo_test.<locals>.model at 0x7dc1ed9dd300>
+guide = <function PoissonGammaTests.do_elbo_test.<locals>.guide at 0x7dc1ed9ddf80>
+args = (), kwargs = {}, wake_theta_loss = tensor(5.3495)
+wake_phi_loss = tensor(1.0199, grad_fn=<NegBackward0>)
+
+    def loss_and_grads(self, model, guide, *args, **kwargs):
+        wake_theta_loss, wake_phi_loss = self._loss(model, guide, args, kwargs)
+>       model.zero_grad()
+E       AttributeError: 'function' object has no attribute 'zero_grad'
+
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/infer/rws.py:163: AttributeError
+----------------------------- Captured stderr call -----------------------------
+I 	 Guessed max_plate_nesting = 2
+------------------------------ Captured log call -------------------------------
+INFO     root:elbo.py:184 Guessed max_plate_nesting = 2
+__________________ PoissonGammaTests.test_rws_reparameterized __________________
+
+self = <tests.infer.test_inference.PoissonGammaTests testMethod=test_rws_reparameterized>
+
+    def test_rws_reparameterized(self):
+>       self.do_elbo_test(True, 5000, ReweightedWakeSleep(num_particles=2))
+
+/local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py:334: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py:383: in do_elbo_test
+    svi.step()
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/infer/svi.py:145: in step
+    loss = self.loss_and_grads(self.model, self.guide, *args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pyro.infer.rws.ReweightedWakeSleep object at 0x7dc1ee3ec550>
+model = <function PoissonGammaTests.do_elbo_test.<locals>.model at 0x7dc1ed9ddbc0>
+guide = <function PoissonGammaTests.do_elbo_test.<locals>.guide at 0x7dc1ed9de0c0>
+args = (), kwargs = {}, wake_theta_loss = tensor(5.3495)
+wake_phi_loss = tensor(1.0199, grad_fn=<NegBackward0>)
+
+    def loss_and_grads(self, model, guide, *args, **kwargs):
+        wake_theta_loss, wake_phi_loss = self._loss(model, guide, args, kwargs)
+>       model.zero_grad()
+E       AttributeError: 'function' object has no attribute 'zero_grad'
+
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/infer/rws.py:163: AttributeError
+----------------------------- Captured stderr call -----------------------------
+I 	 Guessed max_plate_nesting = 2
+------------------------------ Captured log call -------------------------------
+INFO     root:elbo.py:184 Guessed max_plate_nesting = 2
+_____________ test_exponential_gamma[reparam-ReweightedWakeSleep] ______________
+
+gamma_dist = <class 'pyro.distributions.torch.Gamma'>, n_steps = 5000
+elbo_impl = <class 'pyro.infer.rws.ReweightedWakeSleep'>
+
+    @pytest.mark.stage("integration", "integration_batch_1")
+    @pytest.mark.parametrize(
+        "elbo_impl",
+        [
+            xfail_param(JitTrace_ELBO, reason="incorrect gradients", run=False),
+            xfail_param(JitTraceGraph_ELBO, reason="incorrect gradients", run=False),
+            xfail_param(JitTraceEnum_ELBO, reason="incorrect gradients", run=False),
+            Trace_ELBO,
+            TraceGraph_ELBO,
+            TraceEnum_ELBO,
+            RenyiELBO,
+            ReweightedWakeSleep,
+        ],
+    )
+    @pytest.mark.parametrize(
+        "gamma_dist,n_steps",
+        [
+            (dist.Gamma, 5000),
+            (fakes.NonreparameterizedGamma, 10000),
+            (ShapeAugmentedGamma, 5000),
+        ],
+        ids=["reparam", "nonreparam", "rsvi"],
+    )
+    def test_exponential_gamma(gamma_dist, n_steps, elbo_impl):
+        pyro.clear_param_store()
+    
+        # gamma prior hyperparameter
+        alpha0 = torch.tensor(1.0)
+        # gamma prior hyperparameter
+        beta0 = torch.tensor(1.0)
+        n_data = 2
+        data = torch.tensor([3.0, 2.0])  # two observations
+        alpha_n = alpha0 + torch.tensor(float(n_data))  # posterior alpha
+        beta_n = beta0 + torch.sum(data)  # posterior beta
+        prec = 0.2 if gamma_dist.has_rsample else 0.25
+    
+        def model(alpha0, beta0, alpha_n, beta_n):
+            lambda_latent = pyro.sample("lambda_latent", gamma_dist(alpha0, beta0))
+            with pyro.plate("data", n_data):
+                pyro.sample("obs", dist.Exponential(lambda_latent), obs=data)
+            return lambda_latent
+    
+        def guide(alpha0, beta0, alpha_n, beta_n):
+            alpha_q = pyro.param(
+                "alpha_q", alpha_n * math.exp(0.17), constraint=constraints.positive
+            )
+            beta_q = pyro.param(
+                "beta_q", beta_n / math.exp(0.143), constraint=constraints.positive
+            )
+            pyro.sample("lambda_latent", gamma_dist(alpha_q, beta_q))
+    
+        adam = optim.Adam({"lr": 0.0003, "betas": (0.97, 0.999)})
+        if elbo_impl is RenyiELBO:
+            elbo = elbo_impl(
+                alpha=0.2,
+                num_particles=3,
+                max_plate_nesting=1,
+                strict_enumeration_warning=False,
+            )
+        elif elbo_impl is ReweightedWakeSleep:
+            if gamma_dist is ShapeAugmentedGamma:
+                pytest.xfail(
+                    reason="ShapeAugmentedGamma not suported for ReweightedWakeSleep"
+                )
+            else:
+                elbo = elbo_impl(
+                    num_particles=3, max_plate_nesting=1, strict_enumeration_warning=False
+                )
+        else:
+            elbo = elbo_impl(max_plate_nesting=1, strict_enumeration_warning=False)
+        svi = SVI(model, guide, adam, loss=elbo)
+    
+        with xfail_if_not_implemented():
+            for k in range(n_steps):
+>               svi.step(alpha0, beta0, alpha_n, beta_n)
+
+/local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py:567: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/infer/svi.py:145: in step
+    loss = self.loss_and_grads(self.model, self.guide, *args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pyro.infer.rws.ReweightedWakeSleep object at 0x7dc1ecf81290>
+model = <function test_exponential_gamma.<locals>.model at 0x7dc1ed9de660>
+guide = <function test_exponential_gamma.<locals>.guide at 0x7dc1ed9dd800>
+args = (tensor(1.), tensor(1.), tensor(3.), tensor(6.)), kwargs = {}
+wake_theta_loss = tensor(4.5475)
+wake_phi_loss = tensor(-0.0416, grad_fn=<NegBackward0>)
+
+    def loss_and_grads(self, model, guide, *args, **kwargs):
+        wake_theta_loss, wake_phi_loss = self._loss(model, guide, args, kwargs)
+>       model.zero_grad()
+E       AttributeError: 'function' object has no attribute 'zero_grad'
+
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/infer/rws.py:163: AttributeError
+____________ test_exponential_gamma[nonreparam-ReweightedWakeSleep] ____________
+
+gamma_dist = <class 'pyro.distributions.testing.fakes.NonreparameterizedGamma'>
+n_steps = 10000, elbo_impl = <class 'pyro.infer.rws.ReweightedWakeSleep'>
+
+    @pytest.mark.stage("integration", "integration_batch_1")
+    @pytest.mark.parametrize(
+        "elbo_impl",
+        [
+            xfail_param(JitTrace_ELBO, reason="incorrect gradients", run=False),
+            xfail_param(JitTraceGraph_ELBO, reason="incorrect gradients", run=False),
+            xfail_param(JitTraceEnum_ELBO, reason="incorrect gradients", run=False),
+            Trace_ELBO,
+            TraceGraph_ELBO,
+            TraceEnum_ELBO,
+            RenyiELBO,
+            ReweightedWakeSleep,
+        ],
+    )
+    @pytest.mark.parametrize(
+        "gamma_dist,n_steps",
+        [
+            (dist.Gamma, 5000),
+            (fakes.NonreparameterizedGamma, 10000),
+            (ShapeAugmentedGamma, 5000),
+        ],
+        ids=["reparam", "nonreparam", "rsvi"],
+    )
+    def test_exponential_gamma(gamma_dist, n_steps, elbo_impl):
+        pyro.clear_param_store()
+    
+        # gamma prior hyperparameter
+        alpha0 = torch.tensor(1.0)
+        # gamma prior hyperparameter
+        beta0 = torch.tensor(1.0)
+        n_data = 2
+        data = torch.tensor([3.0, 2.0])  # two observations
+        alpha_n = alpha0 + torch.tensor(float(n_data))  # posterior alpha
+        beta_n = beta0 + torch.sum(data)  # posterior beta
+        prec = 0.2 if gamma_dist.has_rsample else 0.25
+    
+        def model(alpha0, beta0, alpha_n, beta_n):
+            lambda_latent = pyro.sample("lambda_latent", gamma_dist(alpha0, beta0))
+            with pyro.plate("data", n_data):
+                pyro.sample("obs", dist.Exponential(lambda_latent), obs=data)
+            return lambda_latent
+    
+        def guide(alpha0, beta0, alpha_n, beta_n):
+            alpha_q = pyro.param(
+                "alpha_q", alpha_n * math.exp(0.17), constraint=constraints.positive
+            )
+            beta_q = pyro.param(
+                "beta_q", beta_n / math.exp(0.143), constraint=constraints.positive
+            )
+            pyro.sample("lambda_latent", gamma_dist(alpha_q, beta_q))
+    
+        adam = optim.Adam({"lr": 0.0003, "betas": (0.97, 0.999)})
+        if elbo_impl is RenyiELBO:
+            elbo = elbo_impl(
+                alpha=0.2,
+                num_particles=3,
+                max_plate_nesting=1,
+                strict_enumeration_warning=False,
+            )
+        elif elbo_impl is ReweightedWakeSleep:
+            if gamma_dist is ShapeAugmentedGamma:
+                pytest.xfail(
+                    reason="ShapeAugmentedGamma not suported for ReweightedWakeSleep"
+                )
+            else:
+                elbo = elbo_impl(
+                    num_particles=3, max_plate_nesting=1, strict_enumeration_warning=False
+                )
+        else:
+            elbo = elbo_impl(max_plate_nesting=1, strict_enumeration_warning=False)
+        svi = SVI(model, guide, adam, loss=elbo)
+    
+        with xfail_if_not_implemented():
+            for k in range(n_steps):
+>               svi.step(alpha0, beta0, alpha_n, beta_n)
+
+/local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py:567: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/infer/svi.py:145: in step
+    loss = self.loss_and_grads(self.model, self.guide, *args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pyro.infer.rws.ReweightedWakeSleep object at 0x7dc1ec52e9d0>
+model = <function test_exponential_gamma.<locals>.model at 0x7dc1ed9dfd80>
+guide = <function test_exponential_gamma.<locals>.guide at 0x7dc1ee89e5c0>
+args = (tensor(1.), tensor(1.), tensor(3.), tensor(6.)), kwargs = {}
+wake_theta_loss = tensor(4.5475)
+wake_phi_loss = tensor(-0.0416, grad_fn=<NegBackward0>)
+
+    def loss_and_grads(self, model, guide, *args, **kwargs):
+        wake_theta_loss, wake_phi_loss = self._loss(model, guide, args, kwargs)
+>       model.zero_grad()
+E       AttributeError: 'function' object has no attribute 'zero_grad'
+
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/infer/rws.py:163: AttributeError
+________________ BernoulliBetaTests.test_rws_nonreparameterized ________________
+
+self = <tests.infer.test_inference.BernoulliBetaTests testMethod=test_rws_nonreparameterized>
+
+    def test_rws_nonreparameterized(self):
+>       self.do_elbo_test(False, 5000, ReweightedWakeSleep(num_particles=2))
+
+/local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py:656: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py:711: in do_elbo_test
+    svi.step()
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/infer/svi.py:145: in step
+    loss = self.loss_and_grads(self.model, self.guide, *args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pyro.infer.rws.ReweightedWakeSleep object at 0x7dc1ec32b390>
+model = <function BernoulliBetaTests.do_elbo_test.<locals>.model at 0x7dc1ee334680>
+guide = <function BernoulliBetaTests.do_elbo_test.<locals>.guide at 0x7dc1ee335bc0>
+args = (), kwargs = {}, wake_theta_loss = tensor(2.9379)
+wake_phi_loss = tensor(-0.5095, grad_fn=<NegBackward0>)
+
+    def loss_and_grads(self, model, guide, *args, **kwargs):
+        wake_theta_loss, wake_phi_loss = self._loss(model, guide, args, kwargs)
+>       model.zero_grad()
+E       AttributeError: 'function' object has no attribute 'zero_grad'
+
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/infer/rws.py:163: AttributeError
+----------------------------- Captured stderr call -----------------------------
+I 	 Guessed max_plate_nesting = 2
+------------------------------ Captured log call -------------------------------
+INFO     root:elbo.py:184 Guessed max_plate_nesting = 2
+__________ BernoulliBetaTests.test_rws_nonreparameterized_vectorized ___________
+
+self = <tests.infer.test_inference.BernoulliBetaTests testMethod=test_rws_nonreparameterized_vectorized>
+
+    def test_rws_nonreparameterized_vectorized(self):
+>       self.do_elbo_test(
+            False,
+            5000,
+            ReweightedWakeSleep(
+                num_particles=2, vectorize_particles=True, max_plate_nesting=1
+            ),
+        )
+
+/local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py:668: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py:711: in do_elbo_test
+    svi.step()
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/infer/svi.py:145: in step
+    loss = self.loss_and_grads(self.model, self.guide, *args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pyro.infer.rws.ReweightedWakeSleep object at 0x7dc1ee3ed990>
+model = <function BernoulliBetaTests.do_elbo_test.<locals>.model at 0x7dc1ee335300>
+guide = <function BernoulliBetaTests.do_elbo_test.<locals>.guide at 0x7dc1ee3358a0>
+args = (), kwargs = {}, wake_theta_loss = tensor(2.8760)
+wake_phi_loss = tensor(-0.4793, grad_fn=<NegBackward0>)
+
+    def loss_and_grads(self, model, guide, *args, **kwargs):
+        wake_theta_loss, wake_phi_loss = self._loss(model, guide, args, kwargs)
+>       model.zero_grad()
+E       AttributeError: 'function' object has no attribute 'zero_grad'
+
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/infer/rws.py:163: AttributeError
+_________________ BernoulliBetaTests.test_rws_reparameterized __________________
+
+self = <tests.infer.test_inference.BernoulliBetaTests testMethod=test_rws_reparameterized>
+
+    def test_rws_reparameterized(self):
+>       self.do_elbo_test(True, 5000, ReweightedWakeSleep(num_particles=2))
+
+/local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py:653: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py:711: in do_elbo_test
+    svi.step()
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/infer/svi.py:145: in step
+    loss = self.loss_and_grads(self.model, self.guide, *args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pyro.infer.rws.ReweightedWakeSleep object at 0x7dc1ed9be890>
+model = <function BernoulliBetaTests.do_elbo_test.<locals>.model at 0x7dc1ee335a80>
+guide = <function BernoulliBetaTests.do_elbo_test.<locals>.guide at 0x7dc1ee335580>
+args = (), kwargs = {}, wake_theta_loss = tensor(2.9379)
+wake_phi_loss = tensor(-0.5095, grad_fn=<NegBackward0>)
+
+    def loss_and_grads(self, model, guide, *args, **kwargs):
+        wake_theta_loss, wake_phi_loss = self._loss(model, guide, args, kwargs)
+>       model.zero_grad()
+E       AttributeError: 'function' object has no attribute 'zero_grad'
+
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/infer/rws.py:163: AttributeError
+----------------------------- Captured stderr call -----------------------------
+I 	 Guessed max_plate_nesting = 2
+------------------------------ Captured log call -------------------------------
+INFO     root:elbo.py:184 Guessed max_plate_nesting = 2
+____________ BernoulliBetaTests.test_rws_reparameterized_vectorized ____________
+
+self = <tests.infer.test_inference.BernoulliBetaTests testMethod=test_rws_reparameterized_vectorized>
+
+    def test_rws_reparameterized_vectorized(self):
+>       self.do_elbo_test(
+            True,
+            5000,
+            ReweightedWakeSleep(
+                num_particles=2, vectorize_particles=True, max_plate_nesting=1
+            ),
+        )
+
+/local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py:659: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py:711: in do_elbo_test
+    svi.step()
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/infer/svi.py:145: in step
+    loss = self.loss_and_grads(self.model, self.guide, *args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pyro.infer.rws.ReweightedWakeSleep object at 0x7dc1ee350b10>
+model = <function BernoulliBetaTests.do_elbo_test.<locals>.model at 0x7dc1ee335da0>
+guide = <function BernoulliBetaTests.do_elbo_test.<locals>.guide at 0x7dc1ee335ee0>
+args = (), kwargs = {}, wake_theta_loss = tensor(2.8760)
+wake_phi_loss = tensor(-0.4793, grad_fn=<NegBackward0>)
+
+    def loss_and_grads(self, model, guide, *args, **kwargs):
+        wake_theta_loss, wake_phi_loss = self._loss(model, guide, args, kwargs)
+>       model.zero_grad()
+E       AttributeError: 'function' object has no attribute 'zero_grad'
+
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/infer/rws.py:163: AttributeError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_rws_nonreparameterized
+FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_rws_reparameterized
+FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::PoissonGammaTests::test_rws_nonreparameterized
+FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::PoissonGammaTests::test_rws_reparameterized
+FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[reparam-ReweightedWakeSleep]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[nonreparam-ReweightedWakeSleep]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_rws_nonreparameterized
+FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_rws_nonreparameterized_vectorized
+FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_rws_reparameterized
+FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_rws_reparameterized_vectorized
+============ 10 failed, 47 passed, 11 xfailed in 474.30s (0:07:54) =============
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/pyro/pyro/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/pyro/pyro
+configfile: setup.cfg
+plugins: typeguard-4.4.1, jaxtyping-0.2.19
+collecting ... collected 68 items
+
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_elbo_analytic_kl PASSED [  1%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_elbo_nonreparameterized PASSED [  2%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_elbo_reparameterized PASSED [  4%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_elbo_tail_adaptive PASSED [  5%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_mmd_nonvectorized PASSED [  7%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_mmd_vectorized PASSED [  8%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_renyi_nonreparameterized PASSED [ 10%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_renyi_reparameterized PASSED [ 11%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_rws_nonreparameterized PASSED [ 13%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_rws_reparameterized PASSED [ 14%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::TestFixedModelGuide::test_guide_and_model_both_fixed PASSED [ 16%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::TestFixedModelGuide::test_guide_and_model_free PASSED [ 17%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::TestFixedModelGuide::test_guide_fixed PASSED [ 19%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::TestFixedModelGuide::test_model_fixed PASSED [ 20%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::PoissonGammaTests::test_elbo_nonreparameterized PASSED [ 22%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::PoissonGammaTests::test_elbo_reparameterized PASSED [ 23%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::PoissonGammaTests::test_mmd_vectorized PASSED [ 25%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::PoissonGammaTests::test_renyi_nonreparameterized PASSED [ 26%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::PoissonGammaTests::test_renyi_reparameterized PASSED [ 27%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::PoissonGammaTests::test_rws_nonreparameterized PASSED [ 29%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::PoissonGammaTests::test_rws_reparameterized PASSED [ 30%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[reparam-JitTrace_ELBO] XFAIL [ 32%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[reparam-JitTraceGraph_ELBO] XFAIL [ 33%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[reparam-JitTraceEnum_ELBO] XFAIL [ 35%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[reparam-Trace_ELBO] PASSED [ 36%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[reparam-TraceGraph_ELBO] PASSED [ 38%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[reparam-TraceEnum_ELBO] PASSED [ 39%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[reparam-RenyiELBO] PASSED [ 41%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[reparam-ReweightedWakeSleep] PASSED [ 42%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[nonreparam-JitTrace_ELBO] XFAIL [ 44%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[nonreparam-JitTraceGraph_ELBO] XFAIL [ 45%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[nonreparam-JitTraceEnum_ELBO] XFAIL [ 47%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[nonreparam-Trace_ELBO] PASSED [ 48%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[nonreparam-TraceGraph_ELBO] PASSED [ 50%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[nonreparam-TraceEnum_ELBO] PASSED [ 51%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[nonreparam-RenyiELBO] PASSED [ 52%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[nonreparam-ReweightedWakeSleep] PASSED [ 54%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[rsvi-JitTrace_ELBO] XFAIL [ 55%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[rsvi-JitTraceGraph_ELBO] XFAIL [ 57%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[rsvi-JitTraceEnum_ELBO] XFAIL [ 58%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[rsvi-Trace_ELBO] PASSED [ 60%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[rsvi-TraceGraph_ELBO] PASSED [ 61%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[rsvi-TraceEnum_ELBO] PASSED [ 63%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[rsvi-RenyiELBO] XFAIL [ 64%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[rsvi-ReweightedWakeSleep] XFAIL [ 66%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_elbo_nonreparameterized PASSED [ 67%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_elbo_nonreparameterized_vectorized PASSED [ 69%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_elbo_reparameterized PASSED [ 70%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_elbo_reparameterized_vectorized PASSED [ 72%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_mmd_vectorized PASSED [ 73%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_renyi_nonreparameterized PASSED [ 75%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_renyi_nonreparameterized_vectorized PASSED [ 76%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_renyi_reparameterized PASSED [ 77%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_renyi_reparameterized_vectorized PASSED [ 79%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_rws_nonreparameterized PASSED [ 80%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_rws_nonreparameterized_vectorized PASSED [ 82%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_rws_reparameterized PASSED [ 83%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_rws_reparameterized_vectorized PASSED [ 85%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::SafetyTests::test_duplicate_names PASSED [ 86%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::SafetyTests::test_duplicate_obs_name PASSED [ 88%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::SafetyTests::test_extra_samples PASSED [ 89%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_energy_distance_univariate[0] PASSED [ 91%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_energy_distance_univariate[0.0001] PASSED [ 92%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_energy_distance_multivariate[0] PASSED [ 94%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_energy_distance_multivariate[1] PASSED [ 95%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_reparam_stable PASSED [ 97%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_sequential_plating_sum PASSED [ 98%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_non_nested_plating_sum PASSED [100%]
+
+================== 57 passed, 11 xfailed in 555.45s (0:09:15) ==================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/pyro/pyro/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/pyro/pyro
+configfile: setup.cfg
+plugins: typeguard-4.4.1, jaxtyping-0.2.19
+collecting ... collected 68 items
+
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_elbo_analytic_kl PASSED [  1%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_elbo_nonreparameterized PASSED [  2%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_elbo_reparameterized PASSED [  4%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_elbo_tail_adaptive PASSED [  5%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_mmd_nonvectorized PASSED [  7%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_mmd_vectorized PASSED [  8%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_renyi_nonreparameterized PASSED [ 10%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_renyi_reparameterized PASSED [ 11%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_rws_nonreparameterized PASSED [ 13%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::NormalNormalTests::test_rws_reparameterized PASSED [ 14%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::TestFixedModelGuide::test_guide_and_model_both_fixed PASSED [ 16%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::TestFixedModelGuide::test_guide_and_model_free PASSED [ 17%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::TestFixedModelGuide::test_guide_fixed PASSED [ 19%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::TestFixedModelGuide::test_model_fixed PASSED [ 20%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::PoissonGammaTests::test_elbo_nonreparameterized PASSED [ 22%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::PoissonGammaTests::test_elbo_reparameterized PASSED [ 23%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::PoissonGammaTests::test_mmd_vectorized PASSED [ 25%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::PoissonGammaTests::test_renyi_nonreparameterized PASSED [ 26%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::PoissonGammaTests::test_renyi_reparameterized PASSED [ 27%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::PoissonGammaTests::test_rws_nonreparameterized PASSED [ 29%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::PoissonGammaTests::test_rws_reparameterized PASSED [ 30%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[reparam-JitTrace_ELBO] XFAIL [ 32%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[reparam-JitTraceGraph_ELBO] XFAIL [ 33%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[reparam-JitTraceEnum_ELBO] XFAIL [ 35%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[reparam-Trace_ELBO] PASSED [ 36%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[reparam-TraceGraph_ELBO] PASSED [ 38%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[reparam-TraceEnum_ELBO] PASSED [ 39%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[reparam-RenyiELBO] PASSED [ 41%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[reparam-ReweightedWakeSleep] PASSED [ 42%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[nonreparam-JitTrace_ELBO] XFAIL [ 44%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[nonreparam-JitTraceGraph_ELBO] XFAIL [ 45%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[nonreparam-JitTraceEnum_ELBO] XFAIL [ 47%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[nonreparam-Trace_ELBO] PASSED [ 48%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[nonreparam-TraceGraph_ELBO] PASSED [ 50%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[nonreparam-TraceEnum_ELBO] PASSED [ 51%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[nonreparam-RenyiELBO] PASSED [ 52%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[nonreparam-ReweightedWakeSleep] PASSED [ 54%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[rsvi-JitTrace_ELBO] XFAIL [ 55%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[rsvi-JitTraceGraph_ELBO] XFAIL [ 57%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[rsvi-JitTraceEnum_ELBO] XFAIL [ 58%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[rsvi-Trace_ELBO] PASSED [ 60%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[rsvi-TraceGraph_ELBO] PASSED [ 61%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[rsvi-TraceEnum_ELBO] PASSED [ 63%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[rsvi-RenyiELBO] XFAIL [ 64%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_exponential_gamma[rsvi-ReweightedWakeSleep] XFAIL [ 66%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_elbo_nonreparameterized PASSED [ 67%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_elbo_nonreparameterized_vectorized PASSED [ 69%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_elbo_reparameterized PASSED [ 70%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_elbo_reparameterized_vectorized PASSED [ 72%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_mmd_vectorized PASSED [ 73%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_renyi_nonreparameterized PASSED [ 75%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_renyi_nonreparameterized_vectorized PASSED [ 76%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_renyi_reparameterized PASSED [ 77%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_renyi_reparameterized_vectorized PASSED [ 79%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_rws_nonreparameterized PASSED [ 80%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_rws_nonreparameterized_vectorized PASSED [ 82%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_rws_reparameterized PASSED [ 83%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::BernoulliBetaTests::test_rws_reparameterized_vectorized PASSED [ 85%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::SafetyTests::test_duplicate_names PASSED [ 86%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::SafetyTests::test_duplicate_obs_name PASSED [ 88%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::SafetyTests::test_extra_samples PASSED [ 89%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_energy_distance_univariate[0] PASSED [ 91%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_energy_distance_univariate[0.0001] PASSED [ 92%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_energy_distance_multivariate[0] PASSED [ 94%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_energy_distance_multivariate[1] PASSED [ 95%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_reparam_stable PASSED [ 97%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_sequential_plating_sum PASSED [ 98%]
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/infer/test_inference.py::test_non_nested_plating_sum PASSED [100%]
+
+================== 57 passed, 11 xfailed in 589.78s (0:09:49) ==================

@@ -1,0 +1,298 @@
+output file:
+processed_umaptswspectral_layout348.json
+function:
+tswspectral_layout
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/publishablew/umap/umap/umap/tests/test_spectral.py::test_ensure_fallback_to_random_on_spectral_failure', '../../../../../../local/data0/moved_data/publishablew/umap/umap/umap/tests/test_spectral.py::test_ensure_fallback_to_random_on_spectral_failure FAILED'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/umap/umap/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/umap/umap
+collecting ... collected 2 items
+
+../../../../../../local/data0/moved_data/publishablew/umap/umap/umap/tests/test_spectral.py::test_tsw_spectral_init FAILED
+../../../../../../local/data0/moved_data/publishablew/umap/umap/umap/tests/test_spectral.py::test_ensure_fallback_to_random_on_spectral_failure FAILED
+
+=================================== FAILURES ===================================
+____________________________ test_tsw_spectral_init ____________________________
+
+iris = {'data': array([[5.1, 3.5, 1.4, 0.2],
+       [4.9, 3. , 1.4, 0.2],
+       [4.7, 3.2, 1.3, 0.2],
+       [4.6, 3.1, 1.5,... width (cm)', 'petal length (cm)', 'petal width (cm)'], 'filename': 'iris.csv', 'data_module': 'sklearn.datasets.data'}
+
+    @pytest.mark.skipif(
+        scipy_full_version < (1, 10),
+        reason="SciPy installing with Python 3.7 does not converge under same circumstances",
+    )
+    def test_tsw_spectral_init(iris):
+        # create an arbitrary (dense) random affinity matrix
+        seed = 42
+        rng = np.random.default_rng(seed=seed)
+        # matrix must be of sufficient size of lobpcg will refuse to work on it
+        n = 20
+        graph = rng.standard_normal(n * n).reshape((n, n)) ** 2
+        graph = graph.T * graph
+    
+        spec = spectral_layout(None, graph, 2, random_state=seed**2)
+>       tsw_spec = tswspectral_layout(None, graph, 2, random_state=seed**2, tol=1e-8)
+
+/local/data0/moved_data/publishablew/umap/umap/umap/tests/test_spectral.py:29: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/umap/umap/umap/spectral.py:200: in tswspectral_layout
+    return tswspectral_layout(data, graph, dim, random_state, metric, metric_kwds, method, tol, maxiter)
+/local/data0/moved_data/publishablew/umap/umap/umap/temp.py:41: in tswspectral_layout
+    u, s, vt = svds(L, k=dim + 1, tol=tol, maxiter=maxiter, which='SM')
+/local/data0/moved_data/publishablew/umap/umap/venv/lib/python3.11/site-packages/scipy/_lib/_util.py:440: in wrapper
+    return fun(*args, **kwargs)
+/local/data0/moved_data/publishablew/umap/umap/venv/lib/python3.11/site-packages/scipy/sparse/linalg/_eigen/_svds.py:433: in svds
+    args = _iv(A, k, ncv, tol, which, v0, maxiter, return_singular_vectors,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+A = <20x20 MatrixLinearOperator with dtype=float64>, k = 3, ncv = None
+tol = 1e-08, which = 'SM', v0 = None, maxiter = 0, return_singular = True
+solver = 'arpack', rng = None
+
+    def _iv(A, k, ncv, tol, which, v0, maxiter,
+            return_singular, solver, rng):
+    
+        # input validation/standardization for `solver`
+        # out of order because it's needed for other parameters
+        solver = str(solver).lower()
+        solvers = {"arpack", "lobpcg", "propack"}
+        if solver not in solvers:
+            raise ValueError(f"solver must be one of {solvers}.")
+    
+        # input validation/standardization for `A`
+        A = aslinearoperator(A)  # this takes care of some input validation
+        if not np.issubdtype(A.dtype, np.number):
+            message = "`A` must be of numeric data type."
+            raise ValueError(message)
+        if math.prod(A.shape) == 0:
+            message = "`A` must not be empty."
+            raise ValueError(message)
+    
+        # input validation/standardization for `k`
+        kmax = min(A.shape) if solver == 'propack' else min(A.shape) - 1
+        if int(k) != k or not (0 < k <= kmax):
+            message = "`k` must be an integer satisfying `0 < k < min(A.shape)`."
+            raise ValueError(message)
+        k = int(k)
+    
+        # input validation/standardization for `ncv`
+        if solver == "arpack" and ncv is not None:
+            if int(ncv) != ncv or not (k < ncv < min(A.shape)):
+                message = ("`ncv` must be an integer satisfying "
+                           "`k < ncv < min(A.shape)`.")
+                raise ValueError(message)
+            ncv = int(ncv)
+    
+        # input validation/standardization for `tol`
+        if tol < 0 or not np.isfinite(tol):
+            message = "`tol` must be a non-negative floating point value."
+            raise ValueError(message)
+        tol = float(tol)
+    
+        # input validation/standardization for `which`
+        which = str(which).upper()
+        whichs = {'LM', 'SM'}
+        if which not in whichs:
+            raise ValueError(f"`which` must be in {whichs}.")
+    
+        # input validation/standardization for `v0`
+        if v0 is not None:
+            v0 = np.atleast_1d(v0)
+            if not (np.issubdtype(v0.dtype, np.complexfloating)
+                    or np.issubdtype(v0.dtype, np.floating)):
+                message = ("`v0` must be of floating or complex floating "
+                           "data type.")
+                raise ValueError(message)
+    
+            shape = (A.shape[0],) if solver == 'propack' else (min(A.shape),)
+            if v0.shape != shape:
+                message = f"`v0` must have shape {shape}."
+                raise ValueError(message)
+    
+        # input validation/standardization for `maxiter`
+        if maxiter is not None and (int(maxiter) != maxiter or maxiter <= 0):
+            message = "`maxiter` must be a positive integer."
+>           raise ValueError(message)
+E           ValueError: `maxiter` must be a positive integer.
+
+/local/data0/moved_data/publishablew/umap/umap/venv/lib/python3.11/site-packages/scipy/sparse/linalg/_eigen/_svds.py:84: ValueError
+______________ test_ensure_fallback_to_random_on_spectral_failure ______________
+
+    @pytest.mark.skipif(
+        scipy_full_version < (1, 10),
+        reason="SciPy installing with Py 3.7 does not warn reliably on convergence failure",
+    )
+    def test_ensure_fallback_to_random_on_spectral_failure():
+        dim = 1000
+        k = 10
+        assert k >= 10
+        assert dim // 10 > k
+        y = np.eye(dim, k=1)
+        u = np.random.random((dim, dim // 10))
+        graph = y + y.T + u @ u.T
+        with pytest.warns(UserWarning, match="Spectral initialisation failed!"):
+>           tswspectral_layout(u, graph, k, random_state=42, maxiter=2, method="lobpcg")
+
+/local/data0/moved_data/publishablew/umap/umap/umap/tests/test_spectral.py:51: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/umap/umap/umap/spectral.py:200: in tswspectral_layout
+    return tswspectral_layout(data, graph, dim, random_state, metric, metric_kwds, method, tol, maxiter)
+/local/data0/moved_data/publishablew/umap/umap/umap/temp.py:41: in tswspectral_layout
+    u, s, vt = svds(L, k=dim + 1, tol=tol, maxiter=maxiter, which='SM')
+/local/data0/moved_data/publishablew/umap/umap/venv/lib/python3.11/site-packages/scipy/_lib/_util.py:440: in wrapper
+    return fun(*args, **kwargs)
+/local/data0/moved_data/publishablew/umap/umap/venv/lib/python3.11/site-packages/scipy/sparse/linalg/_eigen/_svds.py:509: in svds
+    _, eigvec = eigsh(XH_X, k=k, tol=tol ** 2, maxiter=maxiter,
+/local/data0/moved_data/publishablew/umap/umap/venv/lib/python3.11/site-packages/scipy/sparse/linalg/_eigen/arpack/arpack.py:1696: in eigsh
+    params.iterate()
+/local/data0/moved_data/publishablew/umap/umap/venv/lib/python3.11/site-packages/scipy/sparse/linalg/_eigen/arpack/arpack.py:576: in iterate
+    self._raise_no_convergence()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <scipy.sparse.linalg._eigen.arpack.arpack._SymmetricArpackParams object at 0x72810cd2e6d0>
+
+    def _raise_no_convergence(self):
+        msg = "No convergence (%d iterations, %d/%d eigenvectors converged)"
+        k_ok = self.iparam[4]
+        num_iter = self.iparam[2]
+        try:
+            ev, vec = self.extract(True)
+        except ArpackError as err:
+            msg = f"{msg} [{err}]"
+            ev = np.zeros((0,))
+            vec = np.zeros((self.n, 0))
+            k_ok = 0
+>       raise ArpackNoConvergence(msg % (num_iter, k_ok, self.k), ev, vec)
+E       scipy.sparse.linalg._eigen.arpack.arpack.ArpackNoConvergence: ARPACK error -1: No convergence (3 iterations, 1/11 eigenvectors converged)
+
+/local/data0/moved_data/publishablew/umap/umap/venv/lib/python3.11/site-packages/scipy/sparse/linalg/_eigen/arpack/arpack.py:383: ArpackNoConvergence
+
+During handling of the above exception, another exception occurred:
+
+    @pytest.mark.skipif(
+        scipy_full_version < (1, 10),
+        reason="SciPy installing with Py 3.7 does not warn reliably on convergence failure",
+    )
+    def test_ensure_fallback_to_random_on_spectral_failure():
+        dim = 1000
+        k = 10
+        assert k >= 10
+        assert dim // 10 > k
+        y = np.eye(dim, k=1)
+        u = np.random.random((dim, dim // 10))
+        graph = y + y.T + u @ u.T
+>       with pytest.warns(UserWarning, match="Spectral initialisation failed!"):
+E       Failed: DID NOT WARN. No warnings of type (<class 'UserWarning'>,) were emitted.
+E        Emitted warnings: [].
+
+/local/data0/moved_data/publishablew/umap/umap/umap/tests/test_spectral.py:50: Failed
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/umap/umap/umap/tests/test_spectral.py::test_tsw_spectral_init
+FAILED ../../../../../../local/data0/moved_data/publishablew/umap/umap/umap/tests/test_spectral.py::test_ensure_fallback_to_random_on_spectral_failure
+============================== 2 failed in 0.28s ===============================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/umap/umap/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/umap/umap
+collecting ... collected 2 items
+
+../../../../../../local/data0/moved_data/publishablew/umap/umap/umap/tests/test_spectral.py::test_tsw_spectral_init FAILED
+../../../../../../local/data0/moved_data/publishablew/umap/umap/umap/tests/test_spectral.py::test_ensure_fallback_to_random_on_spectral_failure PASSED
+
+=================================== FAILURES ===================================
+____________________________ test_tsw_spectral_init ____________________________
+
+iris = {'data': array([[5.1, 3.5, 1.4, 0.2],
+       [4.9, 3. , 1.4, 0.2],
+       [4.7, 3.2, 1.3, 0.2],
+       [4.6, 3.1, 1.5,... width (cm)', 'petal length (cm)', 'petal width (cm)'], 'filename': 'iris.csv', 'data_module': 'sklearn.datasets.data'}
+
+    @pytest.mark.skipif(
+        scipy_full_version < (1, 10),
+        reason="SciPy installing with Python 3.7 does not converge under same circumstances",
+    )
+    def test_tsw_spectral_init(iris):
+        # create an arbitrary (dense) random affinity matrix
+        seed = 42
+        rng = np.random.default_rng(seed=seed)
+        # matrix must be of sufficient size of lobpcg will refuse to work on it
+        n = 20
+        graph = rng.standard_normal(n * n).reshape((n, n)) ** 2
+        graph = graph.T * graph
+    
+        spec = spectral_layout(None, graph, 2, random_state=seed**2)
+        tsw_spec = tswspectral_layout(None, graph, 2, random_state=seed**2, tol=1e-8)
+    
+        # Make sure the two methods produce similar embeddings.
+        rmsd = np.mean(np.sum((spec - tsw_spec) ** 2, axis=1))
+>       assert (
+            rmsd < 1e-6
+        ), "tsvd-warmed spectral init insufficiently close to standard spectral init"
+E       AssertionError: tsvd-warmed spectral init insufficiently close to standard spectral init
+E       assert np.float64(0.20000000000355764) < 1e-06
+
+/local/data0/moved_data/publishablew/umap/umap/umap/tests/test_spectral.py:33: AssertionError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/umap/umap/umap/tests/test_spectral.py::test_tsw_spectral_init
+========================= 1 failed, 1 passed in 0.41s ==========================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/umap/umap/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/umap/umap
+collecting ... collected 2 items
+
+../../../../../../local/data0/moved_data/publishablew/umap/umap/umap/tests/test_spectral.py::test_tsw_spectral_init FAILED
+../../../../../../local/data0/moved_data/publishablew/umap/umap/umap/tests/test_spectral.py::test_ensure_fallback_to_random_on_spectral_failure PASSED
+
+=================================== FAILURES ===================================
+____________________________ test_tsw_spectral_init ____________________________
+
+iris = {'data': array([[5.1, 3.5, 1.4, 0.2],
+       [4.9, 3. , 1.4, 0.2],
+       [4.7, 3.2, 1.3, 0.2],
+       [4.6, 3.1, 1.5,... width (cm)', 'petal length (cm)', 'petal width (cm)'], 'filename': 'iris.csv', 'data_module': 'sklearn.datasets.data'}
+
+    @pytest.mark.skipif(
+        scipy_full_version < (1, 10),
+        reason="SciPy installing with Python 3.7 does not converge under same circumstances",
+    )
+    def test_tsw_spectral_init(iris):
+        # create an arbitrary (dense) random affinity matrix
+        seed = 42
+        rng = np.random.default_rng(seed=seed)
+        # matrix must be of sufficient size of lobpcg will refuse to work on it
+        n = 20
+        graph = rng.standard_normal(n * n).reshape((n, n)) ** 2
+        graph = graph.T * graph
+    
+        spec = spectral_layout(None, graph, 2, random_state=seed**2)
+        tsw_spec = tswspectral_layout(None, graph, 2, random_state=seed**2, tol=1e-8)
+    
+        # Make sure the two methods produce similar embeddings.
+        rmsd = np.mean(np.sum((spec - tsw_spec) ** 2, axis=1))
+>       assert (
+            rmsd < 1e-6
+        ), "tsvd-warmed spectral init insufficiently close to standard spectral init"
+E       AssertionError: tsvd-warmed spectral init insufficiently close to standard spectral init
+E       assert np.float64(0.20000000000355764) < 1e-06
+
+/local/data0/moved_data/publishablew/umap/umap/umap/tests/test_spectral.py:33: AssertionError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/umap/umap/umap/tests/test_spectral.py::test_tsw_spectral_init
+========================= 1 failed, 1 passed in 0.72s ==========================

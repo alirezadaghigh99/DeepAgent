@@ -1,0 +1,16 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Create a Python function called scale_intrinsics that takes in a camera matrix (with shape (B, 3, 3)) containing intrinsic parameters and a scale factor (either a float or a tensor) as input. The function scales the focal length and center of projection in the camera matrix by the given scale factor. 
+
+The function then returns the scaled camera matrix with the same shape as the input (B, 3, 3).
+
+ ground Truth:kornia/geometry/epipolar/projection.py
+
+ repo:kornia
+
+ function:scale_intrinsics
+ 
+ test_cases:tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics

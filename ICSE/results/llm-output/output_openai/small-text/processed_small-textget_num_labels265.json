@@ -1,0 +1,11 @@
+{
+    "result": "To implement the `get_num_labels` function, we need to handle two main cases based on the type of `y`. If `y` is a sparse matrix of type `csr_matrix` from the `scipy.sparse` module, we will calculate the number of labels based on the indices of the non-zero elements. Otherwise, we assume `y` is a dense array-like structure and calculate the number of labels based on its maximum value.\n\nHere's how you can implement this function:\n\n```python\nimport numpy as np\nfrom scipy.sparse import csr_matrix\n\ndef get_num_labels(y):\n    # Check if the input has a shape of 0\n    if np.size(y) == 0:\n        raise ValueError('Invalid labeling: Cannot contain 0 labels')\n    \n    # Check if y is an instance of csr_matrix\n    if isinstance(y, csr_matrix):\n        # Get the maximum index from the non-zero elements\n        num_labels = y.indices.max() + 1\n    else:\n        # Assume y is a dense array-like structure\n        num_labels = np.max(y) + 1\n    \n    return num_labels\n```\n\n### Explanation:\n\n1. **Check for Zero Shape**: We use `np.size(y)` to determine if `y` has any elements. If it returns 0, we raise a `ValueError`.\n\n2. **Handling `csr_matrix`**: If `y` is an instance of `csr_matrix`, we use `y.indices` to access the indices of the non-zero elements. The maximum index value plus one gives us the number of labels.\n\n3. **Handling Dense Arrays**: For dense arrays, we use `np.max(y)` to find the maximum value in `y` and add one to determine the number of labels.\n\nThis function should work for both sparse and dense representations of label data. Make sure to have `numpy` and `scipy` installed in your environment to use this function.",
+    "prompt": "Generate a Python function called get_num_labels that takes in a parameter y. If the shape of y is 0, it will raise a ValueError with the message 'Invalid labeling: Cannot contain 0 labels'. If y is an instance of csr_matrix, the function will return the maximum value of y's indices plus 1. Otherwise, it will return the maximum value of y plus 1.",
+    "function_name": "get_num_labels",
+    "ground_truth": "small_text/utils/labels.py",
+    "test": "tests/unit/small_text/utils/test_labels.py::LabelUtilsTest",
+    "class": "",
+    "stage": "Pre-Post processing",
+    "task": "Classification",
+    "data": "Text"
+}

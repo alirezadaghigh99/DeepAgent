@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Generate a Python function called rotation_matrix_to_quaternion that converts a 3x3 rotation matrix to a 4d quaternion vector. The input parameters are a rotation matrix tensor and a small value eps to avoid zero division. The output is a quaternion tensor with components in (w, x, y, z) format. The function returns the quaternion tensor with shape (*, 4). The function includes examples of usage and error handling for input types and sizes.
+
+ ground Truth:kornia/geometry/conversions.py
+
+ repo:kornia
+
+ function:rotation_matrix_to_quaternion
+ 
+ test_cases:tests/geometry/test_conversions.py::TestRotationMatrixToQuaternion

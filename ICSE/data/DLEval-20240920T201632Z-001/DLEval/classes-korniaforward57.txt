@@ -1,0 +1,26 @@
+stage: Image
+task: 
+data: Training
+
+prompt:
+
+**Task:** Write the `forward` method for the `AdjustHue` class. This method should adjust the hue of the input image tensor by a specified hue factor.
+**Class Context:**
+```python
+class AdjustHue(Module):
+    def forward(self, input: Tensor) -> Tensor:
+        # Implement this function
+```
+- The method should apply the hue adjustment to the input tensor using the provided `hue_factor`.
+- The input tensor is expected to be an RGB image with pixel values in the range [0, 1] and of shape `(*, 3, H, W)`
+This prompt instructs the user to implement the `forward` method for adjusting the hue of an image tensor using the provided `hue_factor`.
+
+ ground Truth:kornia/enhance/adjust.py
+
+ repo:kornia
+
+ function:forward
+ 
+ class:AdjustHue
+ 
+ test_cases:tests/enhance/test_adjust.py::TestAdjustHue

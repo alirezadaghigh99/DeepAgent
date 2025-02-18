@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: Text
+
+prompt:
+Generate a Python function called build_charlm_vocab that builds a vocabulary for a CharacterLanguageModel. The function takes in a file path and an optional cutoff value. It reads the files in the specified path, accumulates the counter of characters, and then passes a list of characters to the vocab builder. The function removes infrequent characters based on the cutoff value. If the training data is empty or all characters are less frequent than the cutoff, it raises a ValueError. The function returns the built vocabulary.
+
+ ground Truth:stanza/models/common/char_model.py
+
+ repo:stanza
+
+ function:build_charlm_vocab
+ 
+ test_cases:stanza/tests/common/test_char_model.py::TestCharModel

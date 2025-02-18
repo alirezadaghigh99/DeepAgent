@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: Table
+
+prompt:
+Generate a Python function called estimate_bandwidth that estimates the bandwidth to use with the mean-shift algorithm. The function takes input points X as an array-like of shape (n_samples, n_features), with optional parameters quantile (default=0.3), n_samples (default=None), random_state (default=0), and n_jobs (default=None). The function returns the bandwidth parameter as a float. The function utilizes the NearestNeighbors class to calculate the bandwidth based on the input data. The function also includes examples of usage with numpy and sklearn.cluster.
+
+ ground Truth:sklearn/cluster/_mean_shift.py
+
+ repo:scikit-learn
+
+ function:estimate_bandwidth
+ 
+ test_cases:sklearn/cluster/tests/

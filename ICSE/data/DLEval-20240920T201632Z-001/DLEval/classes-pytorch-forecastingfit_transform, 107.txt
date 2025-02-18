@@ -1,0 +1,23 @@
+stage: 
+task: Classification
+data: pre-post process
+
+prompt:
+Generate a Python function called `fit_transform` that fits the normalizer to the data and then scales the input data based on group-specific normalization parameters. The input is a pandas Series `y`, a pandas DataFrame `X` with group columns, and a boolean `return_norm` indicating whether to return the normalization parameters. The output is the scaled data, and optionally the normalization parameters if `return_norm` is `True`.
+
+```python
+class GroupNormalizer(TorchNormalizer):
+    def fit_transform(
+        self, y: pd.Series, X: pd.DataFrame, return_norm: bool = False
+    ) -> Union[np.ndarray, Tuple[np.ndarray, np.ndarray]]:
+```
+
+ ground Truth:pytorch_forecasting/data/encoders.py
+
+ repo:pytorch-forecasting
+
+ function:fit_transform
+ 
+ test_cases:tests/test_data/test_encoders.py
+ 
+ class:GroupNormalizer

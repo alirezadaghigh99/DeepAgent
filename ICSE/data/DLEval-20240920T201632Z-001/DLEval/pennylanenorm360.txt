@@ -1,0 +1,14 @@
+stage: Model Construction
+task: 
+data: 
+
+prompt:
+Generate a Python function called norm that computes the norm of a tensor in each interface. The function takes in a tensor as input, along with an optional argument like which specifies the interface (e.g. "jax", "tensorflow", "torch", "autograd", or defaulting to "scipy"). Depending on the specified interface, the function imports the appropriate norm function from the corresponding library. If using the "torch" interface and an "axis" argument is provided, it is converted to the appropriate format for the torch library. If using the "autograd" interface and certain conditions are met, a custom norm function called _flat_autograd_norm is used. The function then returns the computed norm of the tensor using the selected interface and any additional keyword arguments passed.
+
+ ground Truth:pennylane/math/multi_dispatch.py
+
+ repo:pennylane
+
+ function:norm
+ 
+ test_cases:tests/ops/qubit/test_matrix_ops.py::TestBlockEncode::test_unitary

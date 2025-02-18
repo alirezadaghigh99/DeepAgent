@@ -1,0 +1,24 @@
+stage: Inference
+task: Detection
+data: Image
+
+prompt:
+Generate a Python function called match_fginn that finds nearest neighbors in desc2 for each vector in desc1. The inputs are Tensors desc1, desc2, lafs1, lafs2, th, spatial_th, mutual, and dm. The function returns a tuple of Tensors containing the descriptor distance of matching descriptors and the long tensor indexes of matching descriptors in desc1 and desc2. The function also performs a mutual nearest neighbor check if specified.
+def match_fginn(
+    desc1: Tensor,
+    desc2: Tensor,
+    lafs1: Tensor,
+    lafs2: Tensor,
+    th: float = 0.8,
+    spatial_th: float = 10.0,
+    mutual: bool = False,
+    dm: Optional[Tensor] = None,
+) -> Tuple[Tensor, Tensor]:
+
+ ground Truth:kornia/feature/matching.py
+
+ repo:kornia
+
+ function:match_fginn
+ 
+ test_cases:tests/feature/test_matching.py::TestMatchFGINN

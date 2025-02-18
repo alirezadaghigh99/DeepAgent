@@ -1,0 +1,16 @@
+stage: Model Construction
+task: 
+data: 
+
+prompt:
+Generate a Python function called create_knn_graph_and_index that calculates the KNN graph from input features. The function takes in a feature array, optional parameters for the number of nearest neighbors and distance metric, a boolean flag for correcting exact duplicates, and additional keyword arguments for the search index constructor. 
+
+The function returns a tuple containing a sparse, weighted adjacency matrix representing the KNN graph of the feature array and a k-nearest neighbors search object fitted to the input feature array. The function also includes examples demonstrating its usage with numpy arrays.
+
+ ground Truth:cleanlab/internal/neighbor/knn_graph.py
+
+ repo:cleanlab
+
+ function:create_knn_graph_and_index
+ 
+ test_cases:tests/internal/neighbor/test_neighbor.py

@@ -1,0 +1,496 @@
+output file:
+processed_korniascale_intrinsics186.json
+function:
+scale_intrinsics
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_smoke_float[cpu-float32] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_scale_double[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_shape[cpu-float32-4] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_smoke_float[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_shape[cpu-float32-9] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_shape[cpu-float32-9]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_shape[cpu-float32-2] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_smoke_tensor[cpu-float32] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_smoke_tensor[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_scale_double[cpu-float32] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_gradcheck[cpu] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_shape[cpu-float32-4]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_gradcheck[cpu]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_shape[cpu-float32-2]'}
+
+All Test Cases On Generated code:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'cudagraphs', 'jit', 'inductor', 'onnxrt', 'openxla', 'tvm', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 8 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_smoke_float[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_smoke_tensor[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_shape[cpu-float32-1] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_shape[cpu-float32-2] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_shape[cpu-float32-4] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_shape[cpu-float32-9] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_scale_double[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_gradcheck[cpu] FAILED
+
+=================================== FAILURES ===================================
+______________ TestScaleIntrinsics.test_smoke_float[cpu-float32] _______________
+
+self = <test_projection.TestScaleIntrinsics object at 0x7b6133f11f90>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_smoke_float(self, device, dtype):
+        scale_factor: float = 1.0
+        camera_matrix = torch.rand(1, 3, 3, device=device, dtype=dtype)
+>       camera_matrix_scale = epi.scale_intrinsics(camera_matrix, scale_factor)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/projection.py:54: in scale_intrinsics
+    return scale_intrinsics(camera_matrix, scale_factor)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+camera_matrix = tensor([[[0.2759, 0.1401, 0.3605],
+         [0.0698, 0.7519, 0.9274],
+         [0.3838, 0.1507, 0.7513]]])
+scale_factor = array(1.)
+
+    def scale_intrinsics(camera_matrix, scale_factor):
+        """
+        Scales the focal length and center of projection in the camera matrix by the given scale factor.
+    
+        Parameters:
+        - camera_matrix: A numpy array of shape (B, 3, 3) representing the intrinsic parameters of a camera.
+        - scale_factor: A float or a numpy array representing the scaling factor.
+    
+        Returns:
+        - A numpy array of the scaled camera matrix with shape (B, 3, 3).
+        """
+        if isinstance(scale_factor, (int, float)):
+            scale_factor = np.array(scale_factor)
+>       scaled_camera_matrix = camera_matrix.copy()
+E       AttributeError: 'Tensor' object has no attribute 'copy'. Did you mean: 'copy_'?
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:24: AttributeError
+______________ TestScaleIntrinsics.test_smoke_tensor[cpu-float32] ______________
+
+self = <test_projection.TestScaleIntrinsics object at 0x7b6133f12380>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_smoke_tensor(self, device, dtype):
+        scale_factor = torch.tensor(1.0)
+        camera_matrix = torch.rand(1, 3, 3, device=device, dtype=dtype)
+>       camera_matrix_scale = epi.scale_intrinsics(camera_matrix, scale_factor)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/projection.py:54: in scale_intrinsics
+    return scale_intrinsics(camera_matrix, scale_factor)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+camera_matrix = tensor([[[0.0453, 0.6635, 0.0734],
+         [0.0232, 0.3120, 0.9405],
+         [0.2812, 0.4915, 0.3136]]])
+scale_factor = tensor(1.)
+
+    def scale_intrinsics(camera_matrix, scale_factor):
+        """
+        Scales the focal length and center of projection in the camera matrix by the given scale factor.
+    
+        Parameters:
+        - camera_matrix: A numpy array of shape (B, 3, 3) representing the intrinsic parameters of a camera.
+        - scale_factor: A float or a numpy array representing the scaling factor.
+    
+        Returns:
+        - A numpy array of the scaled camera matrix with shape (B, 3, 3).
+        """
+        if isinstance(scale_factor, (int, float)):
+            scale_factor = np.array(scale_factor)
+>       scaled_camera_matrix = camera_matrix.copy()
+E       AttributeError: 'Tensor' object has no attribute 'copy'. Did you mean: 'copy_'?
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:24: AttributeError
+________________ TestScaleIntrinsics.test_shape[cpu-float32-1] _________________
+
+self = <test_projection.TestScaleIntrinsics object at 0x7b6133f12770>
+batch_size = 1, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 4, 9])
+    def test_shape(self, batch_size, device, dtype):
+        B: int = batch_size
+        scale_factor = torch.rand(B, device=device, dtype=dtype)
+        camera_matrix = torch.rand(B, 3, 3, device=device, dtype=dtype)
+>       camera_matrix_scale = epi.scale_intrinsics(camera_matrix, scale_factor)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py:46: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/projection.py:54: in scale_intrinsics
+    return scale_intrinsics(camera_matrix, scale_factor)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+camera_matrix = tensor([[[0.5577, 0.1803, 0.5722],
+         [0.7186, 0.4840, 0.4015],
+         [0.0352, 0.1453, 0.1370]]])
+scale_factor = tensor([0.1897])
+
+    def scale_intrinsics(camera_matrix, scale_factor):
+        """
+        Scales the focal length and center of projection in the camera matrix by the given scale factor.
+    
+        Parameters:
+        - camera_matrix: A numpy array of shape (B, 3, 3) representing the intrinsic parameters of a camera.
+        - scale_factor: A float or a numpy array representing the scaling factor.
+    
+        Returns:
+        - A numpy array of the scaled camera matrix with shape (B, 3, 3).
+        """
+        if isinstance(scale_factor, (int, float)):
+            scale_factor = np.array(scale_factor)
+>       scaled_camera_matrix = camera_matrix.copy()
+E       AttributeError: 'Tensor' object has no attribute 'copy'. Did you mean: 'copy_'?
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:24: AttributeError
+________________ TestScaleIntrinsics.test_shape[cpu-float32-2] _________________
+
+self = <test_projection.TestScaleIntrinsics object at 0x7b6133f126b0>
+batch_size = 2, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 4, 9])
+    def test_shape(self, batch_size, device, dtype):
+        B: int = batch_size
+        scale_factor = torch.rand(B, device=device, dtype=dtype)
+        camera_matrix = torch.rand(B, 3, 3, device=device, dtype=dtype)
+>       camera_matrix_scale = epi.scale_intrinsics(camera_matrix, scale_factor)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py:46: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/projection.py:54: in scale_intrinsics
+    return scale_intrinsics(camera_matrix, scale_factor)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+camera_matrix = tensor([[[0.0338, 0.0657, 0.6097],
+         [0.3543, 0.5783, 0.4211],
+         [0.6131, 0.5505, 0.6176]],
+
+        [[0.6719, 0.0743, 0.0458],
+         [0.6720, 0.0609, 0.4563],
+         [0.6384, 0.1713, 0.7776]]])
+scale_factor = tensor([0.0445, 0.0075])
+
+    def scale_intrinsics(camera_matrix, scale_factor):
+        """
+        Scales the focal length and center of projection in the camera matrix by the given scale factor.
+    
+        Parameters:
+        - camera_matrix: A numpy array of shape (B, 3, 3) representing the intrinsic parameters of a camera.
+        - scale_factor: A float or a numpy array representing the scaling factor.
+    
+        Returns:
+        - A numpy array of the scaled camera matrix with shape (B, 3, 3).
+        """
+        if isinstance(scale_factor, (int, float)):
+            scale_factor = np.array(scale_factor)
+>       scaled_camera_matrix = camera_matrix.copy()
+E       AttributeError: 'Tensor' object has no attribute 'copy'. Did you mean: 'copy_'?
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:24: AttributeError
+________________ TestScaleIntrinsics.test_shape[cpu-float32-4] _________________
+
+self = <test_projection.TestScaleIntrinsics object at 0x7b6133f11ea0>
+batch_size = 4, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 4, 9])
+    def test_shape(self, batch_size, device, dtype):
+        B: int = batch_size
+        scale_factor = torch.rand(B, device=device, dtype=dtype)
+        camera_matrix = torch.rand(B, 3, 3, device=device, dtype=dtype)
+>       camera_matrix_scale = epi.scale_intrinsics(camera_matrix, scale_factor)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py:46: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/projection.py:54: in scale_intrinsics
+    return scale_intrinsics(camera_matrix, scale_factor)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+camera_matrix = tensor([[[0.2230, 0.9668, 0.7607],
+         [0.8263, 0.0178, 0.6604],
+         [0.5480, 0.2693, 0.9363]],
+
+        [[0..., 0.1915]],
+
+        [[0.2729, 0.8112, 0.9551],
+         [0.2715, 0.0419, 0.2166],
+         [0.9054, 0.4309, 0.1877]]])
+scale_factor = tensor([0.5216, 0.9695, 0.5358, 0.0647])
+
+    def scale_intrinsics(camera_matrix, scale_factor):
+        """
+        Scales the focal length and center of projection in the camera matrix by the given scale factor.
+    
+        Parameters:
+        - camera_matrix: A numpy array of shape (B, 3, 3) representing the intrinsic parameters of a camera.
+        - scale_factor: A float or a numpy array representing the scaling factor.
+    
+        Returns:
+        - A numpy array of the scaled camera matrix with shape (B, 3, 3).
+        """
+        if isinstance(scale_factor, (int, float)):
+            scale_factor = np.array(scale_factor)
+>       scaled_camera_matrix = camera_matrix.copy()
+E       AttributeError: 'Tensor' object has no attribute 'copy'. Did you mean: 'copy_'?
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:24: AttributeError
+________________ TestScaleIntrinsics.test_shape[cpu-float32-9] _________________
+
+self = <test_projection.TestScaleIntrinsics object at 0x7b6133f129b0>
+batch_size = 9, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 4, 9])
+    def test_shape(self, batch_size, device, dtype):
+        B: int = batch_size
+        scale_factor = torch.rand(B, device=device, dtype=dtype)
+        camera_matrix = torch.rand(B, 3, 3, device=device, dtype=dtype)
+>       camera_matrix_scale = epi.scale_intrinsics(camera_matrix, scale_factor)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py:46: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/projection.py:54: in scale_intrinsics
+    return scale_intrinsics(camera_matrix, scale_factor)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+camera_matrix = tensor([[[0.2304, 0.2167, 0.5825],
+         [0.5127, 0.5079, 0.6699],
+         [0.4487, 0.1698, 0.7858]],
+
+        [[0..., 0.9786]],
+
+        [[0.7858, 0.0371, 0.9073],
+         [0.3097, 0.8489, 0.0132],
+         [0.2774, 0.4197, 0.7440]]])
+scale_factor = tensor([0.2593, 0.4967, 0.2974, 0.1903, 0.3801, 0.5353, 0.1538, 0.4723, 0.2675])
+
+    def scale_intrinsics(camera_matrix, scale_factor):
+        """
+        Scales the focal length and center of projection in the camera matrix by the given scale factor.
+    
+        Parameters:
+        - camera_matrix: A numpy array of shape (B, 3, 3) representing the intrinsic parameters of a camera.
+        - scale_factor: A float or a numpy array representing the scaling factor.
+    
+        Returns:
+        - A numpy array of the scaled camera matrix with shape (B, 3, 3).
+        """
+        if isinstance(scale_factor, (int, float)):
+            scale_factor = np.array(scale_factor)
+>       scaled_camera_matrix = camera_matrix.copy()
+E       AttributeError: 'Tensor' object has no attribute 'copy'. Did you mean: 'copy_'?
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:24: AttributeError
+______________ TestScaleIntrinsics.test_scale_double[cpu-float32] ______________
+
+self = <test_projection.TestScaleIntrinsics object at 0x7b6133f12c80>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_scale_double(self, device, dtype):
+        scale_factor = torch.tensor(0.5)
+        camera_matrix = torch.tensor(
+            [[[100.0, 0.0, 50.0], [0.0, 100.0, 50.0], [0.0, 0.0, 1.0]]], device=device, dtype=dtype
+        )
+    
+        camera_matrix_expected = torch.tensor(
+            [[[50.0, 0.0, 25.0], [0.0, 50.0, 25.0], [0.0, 0.0, 1.0]]], device=device, dtype=dtype
+        )
+    
+>       camera_matrix_scale = epi.scale_intrinsics(camera_matrix, scale_factor)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py:59: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/projection.py:54: in scale_intrinsics
+    return scale_intrinsics(camera_matrix, scale_factor)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+camera_matrix = tensor([[[100.,   0.,  50.],
+         [  0., 100.,  50.],
+         [  0.,   0.,   1.]]])
+scale_factor = tensor(0.5000)
+
+    def scale_intrinsics(camera_matrix, scale_factor):
+        """
+        Scales the focal length and center of projection in the camera matrix by the given scale factor.
+    
+        Parameters:
+        - camera_matrix: A numpy array of shape (B, 3, 3) representing the intrinsic parameters of a camera.
+        - scale_factor: A float or a numpy array representing the scaling factor.
+    
+        Returns:
+        - A numpy array of the scaled camera matrix with shape (B, 3, 3).
+        """
+        if isinstance(scale_factor, (int, float)):
+            scale_factor = np.array(scale_factor)
+>       scaled_camera_matrix = camera_matrix.copy()
+E       AttributeError: 'Tensor' object has no attribute 'copy'. Did you mean: 'copy_'?
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:24: AttributeError
+___________________ TestScaleIntrinsics.test_gradcheck[cpu] ____________________
+
+self = <test_projection.TestScaleIntrinsics object at 0x7b6133f12f50>
+device = device(type='cpu')
+
+    def test_gradcheck(self, device):
+        scale_factor = torch.ones(1, device=device, dtype=torch.float64, requires_grad=True)
+        camera_matrix = torch.ones(1, 3, 3, device=device, dtype=torch.float64)
+>       assert gradcheck(epi.scale_intrinsics, (camera_matrix, scale_factor), raise_exception=True, fast_mode=True)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py:65: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2052: in gradcheck
+    return _gradcheck_helper(**args)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2074: in _gradcheck_helper
+    func_out = func(*tupled_inputs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/projection.py:54: in scale_intrinsics
+    return scale_intrinsics(camera_matrix, scale_factor)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+camera_matrix = tensor([[[1., 1., 1.],
+         [1., 1., 1.],
+         [1., 1., 1.]]], dtype=torch.float64)
+scale_factor = tensor([1.], dtype=torch.float64, requires_grad=True)
+
+    def scale_intrinsics(camera_matrix, scale_factor):
+        """
+        Scales the focal length and center of projection in the camera matrix by the given scale factor.
+    
+        Parameters:
+        - camera_matrix: A numpy array of shape (B, 3, 3) representing the intrinsic parameters of a camera.
+        - scale_factor: A float or a numpy array representing the scaling factor.
+    
+        Returns:
+        - A numpy array of the scaled camera matrix with shape (B, 3, 3).
+        """
+        if isinstance(scale_factor, (int, float)):
+            scale_factor = np.array(scale_factor)
+>       scaled_camera_matrix = camera_matrix.copy()
+E       AttributeError: 'Tensor' object has no attribute 'copy'. Did you mean: 'copy_'?
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:24: AttributeError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_smoke_float[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_smoke_tensor[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_shape[cpu-float32-1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_shape[cpu-float32-2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_shape[cpu-float32-4]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_shape[cpu-float32-9]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_scale_double[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_gradcheck[cpu]
+============================== 8 failed in 0.37s ===============================
+
+
+Final Test Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'cudagraphs', 'tvm', 'openxla', 'jit', 'inductor', 'onnxrt', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 8 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_smoke_float[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_smoke_tensor[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_shape[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_shape[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_shape[cpu-float32-4] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_shape[cpu-float32-9] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_scale_double[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_gradcheck[cpu] PASSED
+
+============================== 8 passed in 0.16s ===============================
+
+
+Initial Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'onnxrt', 'openxla', 'jit', 'inductor', 'cudagraphs', 'tvm', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 8 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_smoke_float[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_smoke_tensor[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_shape[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_shape[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_shape[cpu-float32-4] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_shape[cpu-float32-9] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_scale_double[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_projection.py::TestScaleIntrinsics::test_gradcheck[cpu] PASSED
+
+============================== 8 passed in 0.17s ===============================

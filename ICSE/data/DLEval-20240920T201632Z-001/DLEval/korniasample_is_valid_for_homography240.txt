@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: Detection
+data: Image
+
+prompt:
+Generate a Python function called sample_is_valid_for_homography that implements the oriented constraint check from Marquez-Neila2015. The function takes two input tensors, points1 and points2, each with a shape of (B, 4, 2), where B is the batch size. The function returns a mask with the minimal sample that is good for homography estimation, with a shape of (B, 3, 3). The function first checks if the shapes of points1 and points2 are equal, then converts the points to homogeneous coordinates. and finally determines if the sample is valid for homography estimation. The output is a tensor representing the validity of the sample for each batch.
+
+ ground Truth:kornia/geometry/homography.py
+
+ repo:kornia
+
+ function:sample_is_valid_for_homography
+ 
+ test_cases:tests/geometry/test_homography.py::TestSampleValidation

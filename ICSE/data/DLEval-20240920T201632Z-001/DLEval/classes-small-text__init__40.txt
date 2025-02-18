@@ -1,0 +1,29 @@
+stage: Text
+task: Classification
+data: Model construction
+
+prompt:
+Generate a Python method `__init__` for the `KimCNN` class that initializes a convolutional neural network for text classification. The method should set up the necessary components, including an embedding layer, convolutional layers with various kernel heights, max-pooling layers, a dropout layer, and a fully connected layer for classification. The method should take as input parameters related to the vocabulary, embedding dimensions, kernel sizes, and other hyperparameters. If an `embedding_matrix` is provided, it should be used to initialize the embedding layer, and the `freeze_embedding_layer` flag should determine whether the embedding layer's weights are updated during training.
+
+Class structure:
+
+```python
+class KimCNN(nn.Module):
+    def __init__(self, vocabulary_size, max_seq_length, num_classes=2, out_channels=100,
+                 embed_dim=300, padding_idx=0, kernel_heights=[3, 4, 5], dropout=0.5,
+                 embedding_matrix=None, freeze_embedding_layer=False):
+        # Initialize the embedding layer
+        # Initialize convolutional layers with varying kernel heights
+        # Initialize max-pooling layers corresponding to each convolutional layer
+        # Initialize a dropout layer
+        # Initialize a fully connected layer for classification
+
+ ground Truth:small_text/integrations/pytorch/models/kimcnn.py
+
+ repo:small-text
+
+ function:__init__
+ 
+ class:KimCNN
+ 
+ test_cases:tests/unit/small_text/integrations/pytorch/models/test_kimcnn.py

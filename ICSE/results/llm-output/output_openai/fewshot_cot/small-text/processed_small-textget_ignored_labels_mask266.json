@@ -1,0 +1,11 @@
+{
+    "result": "Error",
+    "prompt": "Create a Python function called get_ignored_labels_mask that takes in two parameters: y (which can be either a csr_matrix or an array) and ignored_label_value. If y is a csr_matrix, the function will return an array where each element is True if any value in the corresponding row of y is equal to ignored_label_value, and False otherwise. If y is not a csr_matrix, the function will return an array where each element is True if the value in y is equal to ignored_label_value, and False otherwise.",
+    "function_name": "get_ignored_labels_mask",
+    "ground_truth": "small_text/utils/labels.py",
+    "test": "tests/unit/small_text/utils/test_labels.py::LabelUtilsTest",
+    "class": "",
+    "stage": "Pre-Post processing",
+    "task": "Classification",
+    "data": "Text"
+}

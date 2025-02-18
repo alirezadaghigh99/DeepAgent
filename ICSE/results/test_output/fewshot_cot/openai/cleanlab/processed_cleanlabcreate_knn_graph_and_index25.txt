@@ -1,0 +1,593 @@
+output file:
+processed_cleanlabcreate_knn_graph_and_index25.json
+function:
+create_knn_graph_and_index
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_create_knn_graph_properties', '../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_construct_knn_then_correct_knn_graph_does_the_same_work FAILED', '../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_knn_graph_duplicate_handling FAILED', '../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_create_knn_graph_correctness FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_create_knn_graph_correctness', 'FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_construct_knn_then_correct_knn_graph_does_the_same_work', 'FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_knn_graph_duplicate_handling', '../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_create_knn_graph_properties FAILED'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/bin/python
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/aliredaq/Desktop/ICSE/src/tester/.hypothesis/examples'))
+rootdir: /local/data0/moved_data/publishablew/cleanlab/cleanlab
+configfile: pyproject.toml
+plugins: hypothesis-6.124.1
+collecting ... collected 37 items
+
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=2-N=2] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=2-N=10] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=2-N=100] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=2-N=101] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=3-N=2] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=3-N=10] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=3-N=100] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=3-N=101] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=4-N=2] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=4-N=10] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=4-N=100] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=4-N=101] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=5-N=2] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=5-N=10] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=5-N=100] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=5-N=101] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=10-N=2] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=10-N=10] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=10-N=100] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=10-N=101] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=50-N=2] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=50-N=10] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=50-N=100] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=50-N=101] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=100-N=2] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=100-N=10] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=100-N=100] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=100-N=101] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_knn_kwargs PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_construct_knn_graph_from_index[cosine] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_construct_knn_graph_from_index[euclidean] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::TestKNNCorrection::test_knn_graph_corrects_missing_duplicates PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::TestKNNCorrection::test_knn_graph_corrects_order_of_duplicates PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_create_knn_graph_correctness FAILED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_create_knn_graph_properties FAILED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_knn_graph_duplicate_handling FAILED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_construct_knn_then_correct_knn_graph_does_the_same_work FAILED
+
+=================================== FAILURES ===================================
+______________________ test_create_knn_graph_correctness _______________________
+
+    def test_create_knn_graph_correctness():
+        """
+        Test to verify that the KNN graph creation and index correction handles duplicate points
+        and correctly calculates distances using a modified Euclidean distance metric that adds a large
+        bias for data points that are identical.
+        """
+    
+        # Define a set of points with duplicates
+        X = np.array(
+            [
+                [0, 0],
+                [0, 0],
+                [0, 0],
+                [1, 1],
+            ]
+        )
+    
+        # Define the expected distances and indices for k=3
+        expected_distances = np.array(
+            [
+                [0, 0, np.sqrt(2)],
+                [0, 0, np.sqrt(2)],
+                [0, 0, np.sqrt(2)],
+                [np.sqrt(2), np.sqrt(2), np.sqrt(2)],
+            ]
+        )
+        expected_indices = np.array(
+            [
+                [1, 2, 3],
+                [0, 2, 3],
+                [0, 1, 3],
+                [0, 1, 2],
+            ]
+        )
+    
+        ### TESTING graph WITH corrections
+>       knn_graph_corrected, _ = create_knn_graph_and_index(
+            features=X, n_neighbors=3, metric=noisy_euclidean_distance, correct_exact_duplicates=True
+        )
+
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py:276: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/internal/neighbor/knn_graph.py:106: in create_knn_graph_and_index
+    return create_knn_graph_and_index(features)
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/internal/neighbor/temp.py:30: in create_knn_graph_and_index
+    distances, indices = knn.kneighbors(features)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = NearestNeighbors(metric='euclidean')
+X = array([[0, 0],
+       [0, 0],
+       [0, 0],
+       [1, 1]])
+n_neighbors = 5, return_distance = True
+
+    def kneighbors(self, X=None, n_neighbors=None, return_distance=True):
+        """Find the K-neighbors of a point.
+    
+        Returns indices of and distances to the neighbors of each point.
+    
+        Parameters
+        ----------
+        X : {array-like, sparse matrix}, shape (n_queries, n_features), \
+            or (n_queries, n_indexed) if metric == 'precomputed', default=None
+            The query point or points.
+            If not provided, neighbors of each indexed point are returned.
+            In this case, the query point is not considered its own neighbor.
+    
+        n_neighbors : int, default=None
+            Number of neighbors required for each sample. The default is the
+            value passed to the constructor.
+    
+        return_distance : bool, default=True
+            Whether or not to return the distances.
+    
+        Returns
+        -------
+        neigh_dist : ndarray of shape (n_queries, n_neighbors)
+            Array representing the lengths to points, only present if
+            return_distance=True.
+    
+        neigh_ind : ndarray of shape (n_queries, n_neighbors)
+            Indices of the nearest points in the population matrix.
+    
+        Examples
+        --------
+        In the following example, we construct a NearestNeighbors
+        class from an array representing our data set and ask who's
+        the closest point to [1,1,1]
+    
+        >>> samples = [[0., 0., 0.], [0., .5, 0.], [1., 1., .5]]
+        >>> from sklearn.neighbors import NearestNeighbors
+        >>> neigh = NearestNeighbors(n_neighbors=1)
+        >>> neigh.fit(samples)
+        NearestNeighbors(n_neighbors=1)
+        >>> print(neigh.kneighbors([[1., 1., 1.]]))
+        (array([[0.5]]), array([[2]]))
+    
+        As you can see, it returns [[0.5]], and [[2]], which means that the
+        element is at distance 0.5 and is the third element of samples
+        (indexes start at 0). You can also query for multiple points:
+    
+        >>> X = [[0., 1., 0.], [1., 0., 1.]]
+        >>> neigh.kneighbors(X, return_distance=False)
+        array([[1],
+               [2]]...)
+        """
+        check_is_fitted(self)
+    
+        if n_neighbors is None:
+            n_neighbors = self.n_neighbors
+        elif n_neighbors <= 0:
+            raise ValueError("Expected n_neighbors > 0. Got %d" % n_neighbors)
+        elif not isinstance(n_neighbors, numbers.Integral):
+            raise TypeError(
+                "n_neighbors does not take %s value, enter integer value"
+                % type(n_neighbors)
+            )
+    
+        query_is_train = X is None
+        if query_is_train:
+            X = self._fit_X
+            # Include an extra neighbor to account for the sample itself being
+            # returned, which is removed later
+            n_neighbors += 1
+        else:
+            if self.metric == "precomputed":
+                X = _check_precomputed(X)
+            else:
+                X = self._validate_data(X, accept_sparse="csr", reset=False, order="C")
+    
+        n_samples_fit = self.n_samples_fit_
+        if n_neighbors > n_samples_fit:
+            if query_is_train:
+                n_neighbors -= 1  # ok to modify inplace because an error is raised
+                inequality_str = "n_neighbors < n_samples_fit"
+            else:
+                inequality_str = "n_neighbors <= n_samples_fit"
+>           raise ValueError(
+                f"Expected {inequality_str}, but "
+                f"n_neighbors = {n_neighbors}, n_samples_fit = {n_samples_fit}, "
+                f"n_samples = {X.shape[0]}"  # include n_samples for common tests
+            )
+E           ValueError: Expected n_neighbors <= n_samples_fit, but n_neighbors = 5, n_samples_fit = 4, n_samples = 4
+
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/sklearn/neighbors/_base.py:834: ValueError
+_______________________ test_create_knn_graph_properties _______________________
+  + Exception Group Traceback (most recent call last):
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/_pytest/runner.py", line 341, in from_call
+  |     result: TResult | None = func()
+  |                              ^^^^^^
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/_pytest/runner.py", line 242, in <lambda>
+  |     lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+  |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/pluggy/_hooks.py", line 513, in __call__
+  |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/pluggy/_manager.py", line 120, in _hookexec
+  |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/pluggy/_callers.py", line 182, in _multicall
+  |     return outcome.get_result()
+  |            ^^^^^^^^^^^^^^^^^^^^
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/pluggy/_result.py", line 100, in get_result
+  |     raise exc.with_traceback(exc.__traceback__)
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/pluggy/_callers.py", line 167, in _multicall
+  |     teardown.throw(outcome._exception)
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/_pytest/threadexception.py", line 92, in pytest_runtest_call
+  |     yield from thread_exception_runtest_hook()
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/_pytest/threadexception.py", line 68, in thread_exception_runtest_hook
+  |     yield
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/pluggy/_callers.py", line 167, in _multicall
+  |     teardown.throw(outcome._exception)
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/_pytest/unraisableexception.py", line 95, in pytest_runtest_call
+  |     yield from unraisable_exception_runtest_hook()
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/_pytest/unraisableexception.py", line 70, in unraisable_exception_runtest_hook
+  |     yield
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/pluggy/_callers.py", line 167, in _multicall
+  |     teardown.throw(outcome._exception)
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/_pytest/logging.py", line 846, in pytest_runtest_call
+  |     yield from self._runtest_for(item, "call")
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/_pytest/logging.py", line 829, in _runtest_for
+  |     yield
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/pluggy/_callers.py", line 167, in _multicall
+  |     teardown.throw(outcome._exception)
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/_pytest/capture.py", line 880, in pytest_runtest_call
+  |     return (yield)
+  |             ^^^^^
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/pluggy/_callers.py", line 167, in _multicall
+  |     teardown.throw(outcome._exception)
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/_pytest/skipping.py", line 257, in pytest_runtest_call
+  |     return (yield)
+  |             ^^^^^
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/pluggy/_callers.py", line 103, in _multicall
+  |     res = hook_impl.function(*args)
+  |           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/_pytest/runner.py", line 174, in pytest_runtest_call
+  |     item.runtest()
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/_pytest/python.py", line 1627, in runtest
+  |     self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/pluggy/_hooks.py", line 513, in __call__
+  |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/pluggy/_manager.py", line 120, in _hookexec
+  |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/pluggy/_callers.py", line 139, in _multicall
+  |     raise exception.with_traceback(exception.__traceback__)
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/pluggy/_callers.py", line 103, in _multicall
+  |     res = hook_impl.function(*args)
+  |           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/_pytest/python.py", line 159, in pytest_pyfunc_call
+  |     result = testfunction(**testargs)
+  |              ^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py", line 305, in test_create_knn_graph_properties
+  |     # A collection of data points to search over<
+  |                ^^^
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/hypothesis/core.py", line 1825, in wrapped_test
+  |     raise the_error_hypothesis_found
+  | ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py", line 339, in test_create_knn_graph_properties
+    |     assert i not in indices[i] or k > X.shape[0] - 1
+    | AssertionError: assert (0 not in array([0, 1, 2, 3, 4], dtype=int32) or 5 > (6 - 1))
+    | Falsifying example: test_create_knn_graph_properties(
+    |     X=array([[0., 0.],
+    |            [0., 0.],
+    |            [0., 0.],
+    |            [0., 0.],
+    |            [0., 0.],
+    |            [0., 0.]]),  # or any other generated value
+    |     k=5,
+    | )
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py", line 324, in test_create_knn_graph_properties
+    |     distances, indices = knn_graph.data.reshape(X.shape[0], k), knn_graph.indices.reshape(
+    |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | ValueError: cannot reshape array of size 30 into shape (6,1)
+    | Falsifying example: test_create_knn_graph_properties(
+    |     # The test always failed when commented parts were varied together.
+    |     X=array([[0., 0.],
+    |            [0., 0.],
+    |            [0., 0.],
+    |            [0., 0.],
+    |            [0., 0.],
+    |            [0., 0.]]),  # or any other generated value
+    |     k=1,  # or any other generated value
+    | )
+    +------------------------------------
+______________________ test_knn_graph_duplicate_handling _______________________
+  + Exception Group Traceback (most recent call last):
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/_pytest/runner.py", line 341, in from_call
+  |     result: TResult | None = func()
+  |                              ^^^^^^
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/_pytest/runner.py", line 242, in <lambda>
+  |     lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+  |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/pluggy/_hooks.py", line 513, in __call__
+  |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/pluggy/_manager.py", line 120, in _hookexec
+  |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/pluggy/_callers.py", line 182, in _multicall
+  |     return outcome.get_result()
+  |            ^^^^^^^^^^^^^^^^^^^^
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/pluggy/_result.py", line 100, in get_result
+  |     raise exc.with_traceback(exc.__traceback__)
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/pluggy/_callers.py", line 167, in _multicall
+  |     teardown.throw(outcome._exception)
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/_pytest/threadexception.py", line 92, in pytest_runtest_call
+  |     yield from thread_exception_runtest_hook()
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/_pytest/threadexception.py", line 68, in thread_exception_runtest_hook
+  |     yield
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/pluggy/_callers.py", line 167, in _multicall
+  |     teardown.throw(outcome._exception)
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/_pytest/unraisableexception.py", line 95, in pytest_runtest_call
+  |     yield from unraisable_exception_runtest_hook()
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/_pytest/unraisableexception.py", line 70, in unraisable_exception_runtest_hook
+  |     yield
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/pluggy/_callers.py", line 167, in _multicall
+  |     teardown.throw(outcome._exception)
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/_pytest/logging.py", line 846, in pytest_runtest_call
+  |     yield from self._runtest_for(item, "call")
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/_pytest/logging.py", line 829, in _runtest_for
+  |     yield
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/pluggy/_callers.py", line 167, in _multicall
+  |     teardown.throw(outcome._exception)
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/_pytest/capture.py", line 880, in pytest_runtest_call
+  |     return (yield)
+  |             ^^^^^
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/pluggy/_callers.py", line 167, in _multicall
+  |     teardown.throw(outcome._exception)
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/_pytest/skipping.py", line 257, in pytest_runtest_call
+  |     return (yield)
+  |             ^^^^^
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/pluggy/_callers.py", line 103, in _multicall
+  |     res = hook_impl.function(*args)
+  |           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/_pytest/runner.py", line 174, in pytest_runtest_call
+  |     item.runtest()
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/_pytest/python.py", line 1627, in runtest
+  |     self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/pluggy/_hooks.py", line 513, in __call__
+  |     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/pluggy/_manager.py", line 120, in _hookexec
+  |     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/pluggy/_callers.py", line 139, in _multicall
+  |     raise exception.with_traceback(exception.__traceback__)
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/pluggy/_callers.py", line 103, in _multicall
+  |     res = hook_impl.function(*args)
+  |           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/_pytest/python.py", line 159, in pytest_pyfunc_call
+  |     result = testfunction(**testargs)
+  |              ^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py", line 348, in test_knn_graph_duplicate_handling
+  |     # This point will be duplicated
+  |                ^^^
+  |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/lib/python3.11/site-packages/hypothesis/core.py", line 1825, in wrapped_test
+  |     raise the_error_hypothesis_found
+  | ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py", line 421, in test_knn_graph_duplicate_handling
+    |     assert calculate_precision(row, duplicate_ids) == 1
+    | AssertionError: assert 0.5 == 1
+    |  +  where 0.5 = <function test_knn_graph_duplicate_handling.<locals>.calculate_precision at 0x7e8d258e0540>(array([0, 0]), array([0, 1]))
+    | Falsifying example: test_knn_graph_duplicate_handling(
+    |     base_point=array([0., 0.]),  # or any other generated value
+    |     num_duplicates=2,  # or any other generated value
+    |     extra_points=array([[15.    , 16.    ],
+    |            [17.    , 18.    ],
+    |            [19.    , 20.    ],
+    |            [15.5   , 15.25  ],
+    |            [15.75  , 15.125 ],
+    |            [15.625 , 15.375 ],
+    |            [15.875 , 15.0625],
+    |            [15.3125, 15.8125],
+    |            [15.6875, 15.4375],
+    |            [16.5   , 16.25  ],
+    |            [16.75  , 17.5   ]]),  # or any other generated value
+    |     k=5,
+    | )
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py", line 383, in test_knn_graph_duplicate_handling
+    |     distances, indices = knn_graph.data.reshape(X.shape[0], k), knn_graph.indices.reshape(
+    |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | ValueError: cannot reshape array of size 65 into shape (13,1)
+    | Falsifying example: test_knn_graph_duplicate_handling(
+    |     # The test always failed when commented parts were varied together.
+    |     base_point=array([0., 0.]),  # or any other generated value
+    |     num_duplicates=2,  # or any other generated value
+    |     extra_points=array([[15.    , 16.    ],
+    |            [17.    , 18.    ],
+    |            [19.    , 20.    ],
+    |            [15.5   , 15.25  ],
+    |            [15.75  , 15.125 ],
+    |            [15.625 , 15.375 ],
+    |            [15.875 , 15.0625],
+    |            [15.3125, 15.8125],
+    |            [15.6875, 15.4375],
+    |            [16.5   , 16.25  ],
+    |            [16.75  , 17.5   ]]),  # or any other generated value
+    |     k=1,  # or any other generated value
+    | )
+    +------------------------------------
+_________ test_construct_knn_then_correct_knn_graph_does_the_same_work _________
+
+    def test_construct_knn_then_correct_knn_graph_does_the_same_work():
+        features = np.random.rand(1000, 2)
+        features[10:20] = features[10]  # Make the 10th to 20th rows identical
+        metric = noisy_euclidean_distance
+        n_neighbors = 50
+    
+        # Construct the index and knn_graph separately, the correction should happen during the knn_graph construction
+        knn = features_to_knn(features, n_neighbors=n_neighbors, metric=metric)
+        knn_graph_from_index = construct_knn_graph_from_index(knn)  # Without correction
+        knn_graph_from_index_with_correction = construct_knn_graph_from_index(
+            knn, correction_features=features
+        )
+        knn_graph, _ = create_knn_graph_and_index(
+            features=features, n_neighbors=n_neighbors, metric=metric
+        )
+    
+        # knn_graph has correction
+>       np.testing.assert_array_equal(
+            knn_graph_from_index_with_correction.toarray(), knn_graph.toarray()
+        )
+
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py:457: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (<built-in function eq>, array([[0.       , 0.       , 0.       , ..., 0.       , 0.       ,
+        0.       ],
+     ....       ,
+        0.       ],
+       [0.       , 0.       , 0.       , ..., 0.       , 0.       ,
+        0.       ]]))
+kwds = {'err_msg': '', 'header': 'Arrays are not equal', 'strict': False, 'verbose': True}
+
+    @wraps(func)
+    def inner(*args, **kwds):
+        with self._recreate_cm():
+>           return func(*args, **kwds)
+E           AssertionError: 
+E           Arrays are not equal
+E           
+E           Mismatched elements: 47928 / 1000000 (4.79%)
+E           Max absolute difference: 0.25836444
+E           Max relative difference: 1.
+E            x: array([[0.      , 0.      , 0.      , ..., 0.      , 0.      , 0.      ],
+E                  [0.      , 0.      , 0.      , ..., 0.      , 0.      , 0.      ],
+E                  [0.      , 0.      , 0.      , ..., 0.      , 0.026838, 0.      ],...
+E            y: array([[0.      , 0.      , 0.      , ..., 0.      , 0.      , 0.      ],
+E                  [0.      , 0.      , 0.      , ..., 0.      , 0.      , 0.      ],
+E                  [0.      , 0.      , 0.      , ..., 0.      , 0.026838, 0.      ],...
+
+/usr/lib/python3.11/contextlib.py:81: AssertionError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_create_knn_graph_correctness
+FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_create_knn_graph_properties
+FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_knn_graph_duplicate_handling
+FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_construct_knn_then_correct_knn_graph_does_the_same_work
+=================== 4 failed, 33 passed in 92.16s (0:01:32) ====================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/bin/python
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/aliredaq/Desktop/ICSE/src/tester/.hypothesis/examples'))
+rootdir: /local/data0/moved_data/publishablew/cleanlab/cleanlab
+configfile: pyproject.toml
+plugins: hypothesis-6.124.1
+collecting ... collected 37 items
+
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=2-N=2] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=2-N=10] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=2-N=100] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=2-N=101] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=3-N=2] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=3-N=10] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=3-N=100] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=3-N=101] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=4-N=2] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=4-N=10] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=4-N=100] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=4-N=101] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=5-N=2] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=5-N=10] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=5-N=100] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=5-N=101] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=10-N=2] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=10-N=10] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=10-N=100] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=10-N=101] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=50-N=2] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=50-N=10] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=50-N=100] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=50-N=101] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=100-N=2] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=100-N=10] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=100-N=100] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=100-N=101] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_knn_kwargs PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_construct_knn_graph_from_index[cosine] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_construct_knn_graph_from_index[euclidean] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::TestKNNCorrection::test_knn_graph_corrects_missing_duplicates PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::TestKNNCorrection::test_knn_graph_corrects_order_of_duplicates PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_create_knn_graph_correctness PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_create_knn_graph_properties PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_knn_graph_duplicate_handling PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_construct_knn_then_correct_knn_graph_does_the_same_work PASSED
+
+============================== 37 passed in 3.83s ==============================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/bin/python
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/aliredaq/Desktop/ICSE/src/tester/.hypothesis/examples'))
+rootdir: /local/data0/moved_data/publishablew/cleanlab/cleanlab
+configfile: pyproject.toml
+plugins: hypothesis-6.124.1
+collecting ... collected 37 items
+
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=2-N=2] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=2-N=10] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=2-N=100] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=2-N=101] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=3-N=2] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=3-N=10] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=3-N=100] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=3-N=101] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=4-N=2] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=4-N=10] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=4-N=100] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=4-N=101] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=5-N=2] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=5-N=10] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=5-N=100] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=5-N=101] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=10-N=2] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=10-N=10] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=10-N=100] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=10-N=101] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=50-N=2] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=50-N=10] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=50-N=100] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=50-N=101] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=100-N=2] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=100-N=10] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=100-N=100] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_features_to_knn[M=100-N=101] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_knn_kwargs PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_construct_knn_graph_from_index[cosine] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_construct_knn_graph_from_index[euclidean] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::TestKNNCorrection::test_knn_graph_corrects_missing_duplicates PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::TestKNNCorrection::test_knn_graph_corrects_order_of_duplicates PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_create_knn_graph_correctness PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_create_knn_graph_properties PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_knn_graph_duplicate_handling PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/internal/neighbor/test_neighbor.py::test_construct_knn_then_correct_knn_graph_does_the_same_work PASSED
+
+============================== 37 passed in 4.04s ==============================

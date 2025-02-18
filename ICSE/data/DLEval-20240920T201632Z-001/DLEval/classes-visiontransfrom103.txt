@@ -1,0 +1,33 @@
+stage: Image
+task: 
+data: pre-post process
+
+prompt:
+Generate a Python function `_transform` for the `TransposeDimensions` class that transposes the dimensions of the input based on its type. If no dimensions are specified for the input type, it returns the input as a `torch.Tensor`. It also get addition params as dict.
+
+```python
+class TransposeDimensions(Transform):
+    _transformed_types = (is_pure_tensor, tv_tensors.Image, tv_tensors.Video)
+
+    def __init__(self, dims: Union[Tuple[int, int], Dict[Type, Optional[Tuple[int, int]]]]) -> None:
+        super().__init__()
+        if not isinstance(dims, dict):
+            dims = _get_defaultdict(dims)
+        if torch.Tensor in dims and any(cls in dims for cls in [tv_tensors.Image, tv_tensors.Video]):
+            warnings.warn(
+                "Got `dims` values for `torch.Tensor` and either `tv_tensors.Image` or `tv_tensors.Video`. "
+                "Note that a plain `torch.Tensor` will *not* be transformed by this (or any other transformation) "
+                "in case a `tv_tensors.Image` or `tv_tensors.Video` is present in the input."
+            )
+        self.dims = dims
+```
+
+ ground Truth:torchvision/prototype/transforms/_misc.py
+
+ repo:vision
+
+ function:_transfrom
+ 
+ class:TransposeDimensions
+ 
+ test_cases:test/test_prototype_transforms.py::TestTransposeDimensions

@@ -1,0 +1,21 @@
+stage: Image
+task: Segmentation
+data: pre-post process
+
+prompt:
+Generate a Python function called `compute_transformation` that computes the transformation matrix for a random crop on 3D volumes. The input is a tensor, a dictionary of parameters, and a dictionary of flags. The output is a tensor representing the transformation matrix.
+
+```python
+class RandomCrop3D(GeometricAugmentationBase3D):
+    def compute_transformation(self, input: Tensor, params: Dict[str, Tensor], flags: Dict[str, Any]) -> Tensor:
+```
+
+ ground Truth:kornia/augmentation/_3d/geometric/crop.py
+
+ repo:kornia
+
+ function:compute_transformation
+ 
+ test_cases:tests/augmentation/test_augmentation.py::TestRandomCrop
+ 
+ class:RandomCrop3D

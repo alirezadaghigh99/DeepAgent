@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: Classification
+data: Text
+
+prompt:
+Generate a Python function called random_text_classification_dataset that generates a random text classification dataset. The function takes in parameters such as num_samples, max_length, num_classes, multi_label, vocab_size, device, target_labels, and dtype. It returns a PytorchTextClassificationDataset object with the generated dataset, vocabulary, multi_label setting, and target labels. The function ensures that all labels occur in the dataset and handles different scenarios based on the input parameters.
+
+ ground Truth:tests/utils/datasets.py
+
+ repo:small-text
+
+ function:random_text_classification_dataset
+ 
+ test_cases: tests/unit/small_text/initialization/test_strategies.py::RandomInitializationStratifiedTest

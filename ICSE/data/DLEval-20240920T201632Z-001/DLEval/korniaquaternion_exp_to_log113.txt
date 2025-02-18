@@ -1,0 +1,16 @@
+stage: Model Construction
+task: 
+data: Image
+
+prompt:
+Generate a Python function called quaternion_exp_to_log that applies the log map to a quaternion. The input is a tensor called quaternion in (w, x, y, z) format and a float called eps for clamping. The output is a tensor of shape (*, 3) representing the quaternion log map. The function checks if the input is a Tensor and has a shape of (*, 4). It then unpacks the quaternion into a vector and scalar, computes the quaternion norm, and applies the log map to calculate the quaternion log. An example usage is provided with a sample quaternion input. >>> quaternion = tensor((1., 0., 0., 0.))
+        >>> quaternion_exp_to_log(quaternion, eps=torch.finfo(quaternion.dtype).eps)
+        tensor([0., 0., 0.])
+
+ ground Truth:kornia/geometry/conversions.py
+
+ repo:kornia
+
+ function:quaternion_exp_to_log
+ 
+ test_cases:tests/geometry/epipolar/test_essential.py

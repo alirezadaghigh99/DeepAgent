@@ -1,0 +1,20 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Generate a Python function called rgb_to_hls that converts an RGB image to HLS format. The function takes in a PyTorch tensor called image representing the RGB image with shape (*, 3, H, W) and an epsilon value eps to avoid division by zero. The image data is assumed to be in the range of (0, 1).
+
+The function returns the HLS version of the input image with the same shape (*, 3, H, W). If the input image is not a PyTorch tensor, a TypeError is raised. If the input size does not have a shape of (*, 3, H, W), a ValueError is raised.
+
+The conversion process involves calculating the HLS components (hue, luminance, saturation) based on the RGB values of the input image. The resulting HLS image is returned as a PyTorch tensor.
+
+An example usage of the rgb_to_hls function is provided in the code snippet, where a random input RGB image tensor is converted to HLS format. Raise the value error if there input not instance of image or there was a problem with shape
+
+ ground Truth:kornia/color/hls.py
+
+ repo:kornia
+
+ function:rgb_to_hls
+ 
+ test_cases:tests/color/test_hls.py::TestRgbToHls

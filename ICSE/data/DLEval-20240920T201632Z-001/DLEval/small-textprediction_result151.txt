@@ -1,0 +1,14 @@
+stage: Inference
+task: 
+data: text
+
+prompt:
+Generate a Python function called prediction_result that takes in a probability matrix, a boolean indicating whether it is a multi-label classification, the number of classes, a boolean indicating whether to return the probability, and an optional argument that is deprecated. The function returns either an array of predictions or a sparse matrix of probabilities. If multi_label is True, it binarizes the predictions and converts them to a list format. If return_proba is True, it also returns the probability matrix. The function handles the deprecated argument and returns the appropriate output based on the input parameters. the default value of return_proba is False
+
+ ground Truth:small_text/utils/classification.py
+
+ repo:small-text
+
+ function:prediction_result
+ 
+ test_cases:tests/unit/small_text/utils/test_classification.py::ClassificationUtilsTest

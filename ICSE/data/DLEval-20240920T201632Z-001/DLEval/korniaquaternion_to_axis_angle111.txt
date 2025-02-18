@@ -1,0 +1,17 @@
+stage: Model Construction
+task: 
+data: Image
+
+prompt:
+Generate a Python function called quaternion_to_axis_angle that converts a quaternion vector to an axis angle of rotation in radians. The input is a tensor called quaternion with quaternions in (w, x, y, z) format. The output is a tensor with the axis angle of rotation. The function checks if the input is a tensor and has a shape of Nx4 or 4. It then unpacks the input and computes the conversion using mathematical operations. The final output is a tensor with the axis angle values.Example:
+        >>> quaternion = tensor((1., 0., 0., 0.))
+        >>> quaternion_to_axis_angle(quaternion)
+        tensor([0., 0., 0.])
+
+ ground Truth:kornia/geometry/conversions.py
+
+ repo:kornia
+
+ function:quaternion_to_axis_angle
+ 
+ test_cases:tests/geometry/test_conversions.py::TestQuaternionToAngleAxis

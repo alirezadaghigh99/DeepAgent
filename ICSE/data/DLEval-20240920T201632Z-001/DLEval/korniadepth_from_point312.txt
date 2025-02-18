@@ -1,0 +1,22 @@
+stage: Inference
+task: Prediction
+data: Image
+
+prompt:
+Write a python function depth_from_point that Return the depth of a point transformed by a rigid transform.
+
+    Args:
+       R: The rotation matrix with shape :math:`(*, 3, 3)`.
+       t: The translation vector with shape :math:`(*, 3, 1)`.
+       X: The 3d points with shape :math:`(*, 3)`.
+
+    Returns:
+       The depth value per point with shape :math:`(*, 1)`.
+
+ ground Truth:kornia/geometry/epipolar/projection.py#L151
+
+ repo:kornia
+
+ function:depth_from_point
+ 
+ test_cases:tests/geometry/epipolar/test_essential.py::TestMotionFromEssentialChooseSolution

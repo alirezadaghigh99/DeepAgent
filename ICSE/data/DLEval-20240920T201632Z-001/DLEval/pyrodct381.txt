@@ -1,0 +1,22 @@
+stage: Pre-Post processing
+task: Regression
+data: Table
+
+prompt:
+Write a python function dct in torch that Discrete cosine transform of type II, scaled to be orthonormal.
+
+    This is the inverse of :func:`idct_ii` , and is equivalent to
+    :func:`scipy.fftpack.dct` with ``norm="ortho"``.
+
+    :param Tensor x: The input signal.
+    :param int dim: Dimension along which to compute DCT.
+    :rtype: Tensor
+
+ ground Truth:pyro/ops/tensor_utils.py
+
+ repo:pyro
+
+ function:dct
+ 
+ test_cases:tests/ops/test_tensor_utils.py::test_dct_dim
+

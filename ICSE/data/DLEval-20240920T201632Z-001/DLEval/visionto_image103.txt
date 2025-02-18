@@ -1,0 +1,15 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Generate a Python function called to_image that takes in an input of type Union[torch.Tensor, PIL.Image.Image, np.ndarray] and returns an output of type tv_tensors.Image. The function first checks the type of the input and converts it accordingly - if the input is a numpy array, it converts it to a torch tensor with at least 3 dimensions and permutes the dimensions to (2, 0, 1). If the input is a PIL image, it uses the pil_to_tensor function to convert it. If the input is already a torch tensor, it returns the input as is. If the input is none of these types, it raises a TypeError. The output is a tv_tensors.Image object.
+
+ ground Truth:torchvision/transforms/v2/functional/_type_conversion.py
+
+ repo:vision
+
+ function:to_image
+ 
+ test_cases:test/test_transforms_v2.py::TestResize::test_image_correctness
+

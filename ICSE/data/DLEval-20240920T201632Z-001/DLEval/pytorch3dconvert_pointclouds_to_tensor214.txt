@@ -1,0 +1,19 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Create a Python function `convert_pointclouds_to_tensor` that:
+
+- Takes as input either a `torch.Tensor` or a `Pointclouds` object (`pcl`).
+- If `pcl` is a `Pointclouds` object, it converts the point cloud to a padded tensor representation and returns it along with the number of points per batch.
+- If `pcl` is a `torch.Tensor`, it returns the tensor itself and the number of points set to the size of the second dimension of `pcl`.
+- Raises a `ValueError` if the input is neither a `Pointclouds` object nor a `torch.Tensor`.
+
+ ground Truth:pytorch3d/ops/utils.py
+
+ repo:pytorch3d
+
+ function:convert_pointclouds_to_tensor
+ 
+ test_cases:tests/test_points_alignment.py::TestICP

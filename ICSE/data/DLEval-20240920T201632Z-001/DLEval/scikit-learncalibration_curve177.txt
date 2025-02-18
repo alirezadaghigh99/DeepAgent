@@ -1,0 +1,26 @@
+stage: Inference
+task: Classification
+data: Table
+
+prompt:
+Generate a Python function called calibration_curve that computes true and predicted probabilities for a calibration curve. The function takes in the following parameters:
+
+- y_true: array-like of shape (n_samples), representing the true targets.
+- y_prob: array-like of shape (n_samples), representing the probabilities of the positive class.
+- pos_label: int, float, bool, or str, default=None, indicating the label of the positive class.
+- n_bins: int, default=5, specifying the number of bins to discretize the [0, 1] interval.
+- strategy: {'uniform', 'quantile'}, default='uniform', determining the strategy used to define the widths of the bins.
+
+The function returns two arrays:
+- prob_true: ndarray of shape (n_bins,) or smaller, representing the proportion of samples whose class is the positive class in each bin (fraction of positives).
+- prob_pred: ndarray of shape (n_bins,) or smaller, representing the mean predicted probability in each bin.
+
+The function also includes examples demonstrating how to use it with sample data.
+
+ ground Truth:sklearn/calibration.py
+
+ repo:scikit-learn
+
+ function:calibration_curve
+ 
+ test_cases:sklearn/tests/test_calibration.py::test_calibration_display_pos_label

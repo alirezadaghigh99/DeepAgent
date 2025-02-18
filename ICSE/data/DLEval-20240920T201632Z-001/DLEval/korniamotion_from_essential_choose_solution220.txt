@@ -1,0 +1,14 @@
+stage: Model Construction
+task: 
+data: Image
+
+prompt:
+Create a function `motion_from_essential_choose_solution` that recovers the relative camera rotation and translation from an estimated essential matrix `E_mat`. The function checks corresponding points in two images using the camera matrices `K1` and `K2` and returns the best solution along with the triangulated 3D points. Input tensors include the essential matrix (`E_mat`), camera matrices (`K1`, `K2`), and point sets (`x1`, `x2`). An optional `mask` can exclude points from choosing the best solution. The function returns a tuple containing the rotation matrix, translation vector, and 3D points. Errors are raised for incorrect input shapes, and batch dimensions are handled appropriately.
+
+ ground Truth:kornia/geometry/epipolar/essential.py
+
+ repo:kornia
+
+ function:motion_from_essential_choose_solution
+ 
+ test_cases:tests/geometry/epipolar/test_essential.py::TestMotionFromEssentialChooseSolution

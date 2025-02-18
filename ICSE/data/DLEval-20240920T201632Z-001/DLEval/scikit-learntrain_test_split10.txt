@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: 
+
+prompt:
+Generate a Python function called train_test_split that splits arrays or matrices into random train and test subsets. The function takes in multiple arrays, test_size, train_size, random_state, shuffle, and stratify as parameters. It returns a list containing the train-test split of inputs. The function also includes input validation, shuffling, and stratification options.
+
+ ground Truth:sklearn/model_selection/_split.py
+
+ repo:scikit-learn
+
+ function:train_test_split
+ 
+ test_cases:sklearn/model_selection/tests/test_split.py

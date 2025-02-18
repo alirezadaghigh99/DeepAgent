@@ -1,0 +1,14 @@
+stage: Inference
+task: 
+data: 
+
+prompt:
+Implement a function called `load_model` that loads a machine learning model using PyTorch. The function should accept the model name, an optional boolean to indicate if pretrained weights should be used, the number of classes for the model, additional model parameters, and an optional path to custom weights. Depending on the model name, the function either loads a predefined model from `torchvision.models` or `custom_models`, or raises an exception if the model name is undefined. If `pretrained` is set to `False` and a weights path is provided, it loads the custom weights from the specified path, handling potential URL downloads and ensuring safe unpickling. The function returns the loaded model. 
+
+ ground Truth:examples/torch/common/model_loader.py
+
+ repo:nncf
+
+ function:load_model
+ 
+ test_cases:tests/torch/test_load_model_state.py 

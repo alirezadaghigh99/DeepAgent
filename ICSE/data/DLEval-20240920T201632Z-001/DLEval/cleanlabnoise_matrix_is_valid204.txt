@@ -1,0 +1,14 @@
+stage: Model Construction
+task: 
+data: 
+
+prompt:
+Generate a Python function called noise_matrix_is_valid that takes in a noise_matrix (np.ndarray), py (np.ndarray), and an optional verbose parameter. The function checks if the given noise_matrix is a learnable matrix, meaning it is possible to achieve better than random performance for the amount of noise in the matrix. The function calculates probabilities based on the input matrices and returns a boolean value indicating whether the noise matrix is learnable. The function includes detailed comments explaining the purpose of each step and the expected inputs and outputs.
+
+ ground Truth:cleanlab/benchmarking/noise_generation.py
+
+ repo:cleanlab
+
+ function:noise_matrix_is_valid
+ 
+ test_cases:tests/test_noise_generation.py

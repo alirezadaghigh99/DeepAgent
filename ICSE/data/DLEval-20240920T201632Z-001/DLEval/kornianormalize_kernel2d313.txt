@@ -1,0 +1,18 @@
+stage: Pre-Post processing
+task: Segmentation
+data: Image
+
+prompt:
+Write a python function normalize_kernel2d that Normalize both derivative and smoothing kernel.
+def normalize_kernel2d(input: Tensor) -> Tensor:
+    r"""Normalize both derivative and smoothing kernel."""
+    KORNIA_CHECK_SHAPE(input, ["*", "H", "W"])
+#complete this code
+
+ ground Truth:kornia/filters/kernels.py#L53
+
+ repo:kornia
+
+ function:normalize_kernel2d
+ 
+ test_cases:tests/filters/test_laplacian.py

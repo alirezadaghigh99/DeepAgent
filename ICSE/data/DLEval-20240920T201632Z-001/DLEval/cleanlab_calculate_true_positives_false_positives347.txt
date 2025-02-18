@@ -1,0 +1,20 @@
+stage: Evaluating&Metrics
+task: Detection
+data: Image
+
+prompt:
+Create a Python function called _calculate_true_positives_false_positives that calculates true positives (TP) and false positives (FP) for object detection tasks. The function takes in predicted bounding boxes (pred_bboxes) and ground truth bounding boxes (lab_bboxes) as numpy arrays, along with an optional Intersection over Union (IoU) threshold (iou_threshold) set to 0.5 by default. Additionally, there is a boolean parameter return_false_negative which, if set to True, will also return an array of False negatives.
+
+The function initializes arrays for true positives and false positives based on the shapes of the input bounding boxes. It then calculates the IoU values between the predicted and ground truth bounding boxes and determines the true positives and false positives based on the IoU threshold. If there are no ground truth bounding boxes, all predictions are considered false positives.
+
+If return_false_negative is True, the function also calculates false negatives and returns them along with true positives and false positives. Otherwise, it returns only true positives and false positives.
+
+Overall, the function provides a comprehensive evaluation of the detection performance by calculating true positives, false positives, and optionally false negatives.
+
+ ground Truth:cleanlab/object_detection/filter.py
+
+ repo:cleanlab
+
+ function:_calculate_true_positives_false_positives
+ 
+ test_cases:tests/test_object_detection.py

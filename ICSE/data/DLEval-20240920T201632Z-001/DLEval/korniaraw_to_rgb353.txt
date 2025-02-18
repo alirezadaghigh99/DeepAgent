@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Generate a Python function called raw_to_rgb that converts a raw Bayer image to an RGB version of the image. The function takes in a torch.Tensor called image and a CFA configuration called cfa. It returns the RGB version of the image with shape (*,3,H,W). The function assumes a CFA with 2 green, 1 red, and 1 blue, using bilinear interpolation for R/G and a fixed convolution for the green pixels. The input image data is expected to be in the range of (0, 1) and the Height/Width to be evenly divisible by 2. The function handles different CFA configurations (BG, GB, RG, GR) and performs necessary padding and interpolation to convert the raw image to RGB. If the input is not type of tensor, raise type error Input type is not a torch.Tensor. Got {type(image)}. if dimension is not correct, raise value error (f"Input size must have a shape of (*, 1, H, W). Got {image.shape}."). else if shape is not correct, raise value error Input H&W must be evenly disible by 2. Got {image.shape}
+
+ ground Truth:kornia/color/raw.py
+
+ repo:kornia
+
+ function:raw_to_rgb
+ 
+ test_cases:tests/color/test_raw.py::TestRawToRgb

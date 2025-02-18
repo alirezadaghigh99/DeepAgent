@@ -1,0 +1,14 @@
+stage: Inference
+task: 
+data: Image
+
+prompt:
+Implement a function named `_clamp_bounding_boxes` that adjusts bounding boxes to fit within a given canvas size. The function takes three inputs: `bounding_boxes`, a PyTorch tensor representing the bounding boxes; `format`, an enum of type `BoundingBoxFormat`, which can be one of the following: `XYXY`, `XYWH`, or `CXCYWH`; and `canvas_size`, a tuple representing the height and width of the canvas. The function ensures that the bounding boxes do not exceed the canvas boundaries by clamping their coordinates. It first converts the bounding boxes to the `XYXY` format for clamping, then converts them back to their original format before returning them as a PyTorch tensor in the same data type as the input.
+
+ ground Truth:torchvision/transforms/v2/functional/_meta.py
+
+ repo:vision
+
+ function:_clamp_bounding_boxes
+ 
+ test_cases:test/test_transforms_v2.py::TestResize::test_bounding_boxes_correctness

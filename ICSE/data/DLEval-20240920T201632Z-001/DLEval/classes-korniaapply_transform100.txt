@@ -1,0 +1,30 @@
+stage: Image
+task: 
+data: pre-post process
+
+prompt:
+Generate a Python function `apply_transform` for the `RandomSaturation` class that applies a random saturation transformation to an input tensor image. The input types are `input` (a tensor), `params` (a dictionary containing the transformation parameters), `flags` (a dictionary for additional flags), and an optional `transform` tensor. The output is the transformed tensor.
+
+```python
+class RandomSaturation(IntensityAugmentationBase2D):
+    def __init__(
+        self,
+        saturation: Tuple[float, float] = (1.0, 1.0),
+        same_on_batch: bool = False,
+        p: float = 1.0,
+        keepdim: bool = False,
+    ) -> None:
+        super().__init__(p=p, same_on_batch=same_on_batch, keepdim=keepdim)
+        self.saturation: Tensor = _range_bound(saturation, "saturation", center=1.0)
+        self._param_generator = rg.PlainUniformGenerator((self.saturation, "saturation_factor", None, None))
+```
+
+ ground Truth:kornia/augmentation/_2d/intensity/saturation.py
+
+ repo:kornia
+
+ function:apply_transform
+ 
+ test_cases:tests/augmentation/test_augmentation.py::TestRandomSaturation
+ 
+ class:RandomSaturation

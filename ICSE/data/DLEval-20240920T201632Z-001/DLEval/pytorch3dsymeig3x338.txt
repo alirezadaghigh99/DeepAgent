@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: Table
+
+prompt:
+Generate a Python function called symeig3x3 that computes eigenvalues and (optionally) eigenvectors of symmetric matrices with shape of (..., 3, 3). The function takes inputs as a torch.Tensor and an optional boolean parameter eigenvectors to determine whether to compute only eigenvalues or both eigenvalues and eigenvectors. The output is either a tuple of (eigenvalues, eigenvectors) or eigenvalues only, depending on the given parameters. Eigenvalues are of shape (..., 3) and eigenvectors are of shape (..., 3, 3).
+
+ ground Truth:pytorch3d/common/workaround/symeig3x3.py
+
+ repo:pytorch3d
+
+ function:symeig3x3
+ 
+ test_cases:tests/test_symeig3x3.py 

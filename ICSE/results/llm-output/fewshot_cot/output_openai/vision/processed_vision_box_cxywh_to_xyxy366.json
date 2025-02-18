@@ -1,0 +1,11 @@
+{
+    "result": "To convert bounding boxes from the (cx, cy, w, h) format to the (x1, y1, x2, y2) format, you can follow these steps:\n\n1. Calculate the top-left corner (x1, y1) by subtracting half of the width and height from the center coordinates (cx, cy).\n2. Calculate the bottom-right corner (x2, y2) by adding half of the width and height to the center coordinates (cx, cy).\n3. Return the converted bounding boxes as a tensor.\n\nHere's how you can implement this in Python using PyTorch:\n\n```python\nimport torch\n\ndef _box_cxcywh_to_xyxy(boxes: torch.Tensor) -> torch.Tensor:\n    \"\"\"\n    Convert bounding boxes from (cx, cy, w, h) format to (x1, y1, x2, y2) format.\n\n    Args:\n        boxes (Tensor): A tensor of shape (N, 4) where each row represents a bounding box\n                        in the format (cx, cy, w, h).\n\n    Returns:\n        Tensor: A tensor of shape (N, 4) where each row represents a bounding box\n                in the format (x1, y1, x2, y2).\n    \"\"\"\n    # 1. Extract the center coordinates and dimensions\n    cx, cy, w, h = boxes.unbind(-1)\n\n    # 2. Calculate the top-left corner (x1, y1)\n    x1 = cx - 0.5 * w\n    y1 = cy - 0.5 * h\n\n    # 3. Calculate the bottom-right corner (x2, y2)\n    x2 = cx + 0.5 * w\n    y2 = cy + 0.5 * h\n\n    # 4. Stack the results into a single tensor\n    return torch.stack((x1, y1, x2, y2), dim=-1)\n```\n\nThis function takes a tensor of bounding boxes in the (cx, cy, w, h) format and returns a tensor of bounding boxes in the (x1, y1, x2, y2) format. The use of `torch.unbind` and `torch.stack` helps in efficiently handling the tensor operations.",
+    "prompt": "Write a Python function _box_cxcywh_to_xyxy that converts bounding boxes from the (cx, cy, w, h) format, where (cx, cy) represents the center and (w, h) represents the width and height, to the (x1, y1, x2, y2) format, where (x1, y1) and (x2, y2) represent the top-left and bottom-right corners, respectively. The function should return a tensor with the converted bounding boxes.",
+    "function_name": "_box_cxcywh_to_xyxy",
+    "ground_truth": "torchvision/ops/_box_convert.py",
+    "test": "test/test_ops.py::TestBoxConvert",
+    "class": "",
+    "stage": "Pre-Post processing",
+    "task": "",
+    "data": "Image"
+}

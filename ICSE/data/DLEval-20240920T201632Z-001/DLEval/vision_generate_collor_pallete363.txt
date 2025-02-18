@@ -1,0 +1,15 @@
+stage: Pre-Post processing
+task: Detection
+data: image
+
+prompt:
+Generate a Python function that takes an integer num_objects (e.g., 5) and returns a list of RGB tuples calculated using the palette [33554431, 32767, 2097151], where each color is derived by (i * palette) % 255 for each object.
+
+
+ ground Truth:torchvision/utils.py
+
+ repo:vision
+
+ function:_generate_color_palette
+ 
+ test_cases:test/test_utils.py

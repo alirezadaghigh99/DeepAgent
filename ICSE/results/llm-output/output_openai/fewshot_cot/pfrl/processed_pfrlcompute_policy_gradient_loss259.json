@@ -1,0 +1,11 @@
+{
+    "result": "Error",
+    "prompt": "Generate a Python function called compute_policy_gradient_loss that computes the policy gradient loss with off-policy bias correction. The function takes in the following inputs: action (the action taken), advantage (the advantage of taking that action), action_distrib (the distribution of actions), action_distrib_mu (the distribution of actions from the behavior policy), action_value (the value of the action taken), v (the value function), and truncation_threshold (optional threshold for truncating the off-policy policy gradient term). The function returns the policy gradient loss as a scalar value.",
+    "function_name": "compute_policy_gradient_loss",
+    "ground_truth": "pfrl/agents/acer.py",
+    "test": "tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient",
+    "class": "",
+    "stage": "Training",
+    "task": "Prediction",
+    "data": "Table"
+}

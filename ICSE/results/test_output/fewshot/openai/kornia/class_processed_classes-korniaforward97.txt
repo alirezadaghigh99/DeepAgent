@@ -1,0 +1,186 @@
+output file:
+processed_classes-korniaforward97.json
+function:
+forward
+Error Cases:
+
+Pass or Failed: 1
+
+Related Failed Test Cases:
+set()
+
+All Test Cases On Generated code:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python3
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'jit', 'inductor', 'openxla', 'cudagraphs', 'onnxrt', 'tvm', None}
+model weights cached: ['checkpoints']
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 8 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_lovaz_softmax.py::TestLovaszSoftmaxLoss::test_smoke[cpu-float32] PASSED [ 12%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_lovaz_softmax.py::TestLovaszSoftmaxLoss::test_exception FAILED [ 25%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_lovaz_softmax.py::TestLovaszSoftmaxLoss::test_binary[cpu-float32] PASSED [ 37%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_lovaz_softmax.py::TestLovaszSoftmaxLoss::test_all_ones[cpu-float32] PASSED [ 50%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_lovaz_softmax.py::TestLovaszSoftmaxLoss::test_weight[cpu-float32] PASSED [ 62%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_lovaz_softmax.py::TestLovaszSoftmaxLoss::test_gradcheck[cpu] PASSED [ 75%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_lovaz_softmax.py::TestLovaszSoftmaxLoss::test_dynamo[cpu-float32-inductor] SKIPPED [ 87%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_lovaz_softmax.py::TestLovaszSoftmaxLoss::test_module[cpu-float32] PASSED [100%]
+
+=================================== FAILURES ===================================
+_____________________ TestLovaszSoftmaxLoss.test_exception _____________________
+
+self = <test_lovaz_softmax.TestLovaszSoftmaxLoss object at 0x7efbff331c90>
+
+    def test_exception(self):
+        criterion = kornia.losses.LovaszSoftmaxLoss()
+    
+        with pytest.raises(TypeError) as errinfo:
+>           criterion(torch.rand(1), torch.rand(1))
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_lovaz_softmax.py:23: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1736: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1747: in _call_impl
+    return forward_call(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = LovaszSoftmaxLoss(), pred = tensor([0.0827]), target = tensor([0.4185])
+
+    def forward(self, pred: torch.Tensor, target: torch.Tensor) -> torch.Tensor:
+        """
+        Computes the Lovasz-Softmax loss.
+    
+        Args:
+            pred (Tensor): Predicted logits of shape (N, C, H, W).
+            target (Tensor): Ground truth labels of shape (N, H, W).
+    
+        Returns:
+            Tensor: Scalar tensor representing the computed loss.
+        """
+        if pred.dim() != 4 or target.dim() != 3:
+>           raise ValueError('Expected pred of shape (N, C, H, W) and target of shape (N, H, W)')
+E           ValueError: Expected pred of shape (N, C, H, W) and target of shape (N, H, W)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/losses/lovasz_softmax.py:148: ValueError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_lovaz_softmax.py::TestLovaszSoftmaxLoss::test_exception
+==================== 1 failed, 6 passed, 1 skipped in 0.35s ====================
+
+
+Final Test Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python3
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'openxla', 'inductor', 'tvm', 'jit', 'onnxrt', 'cudagraphs', None}
+model weights cached: ['checkpoints']
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 8 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_lovaz_softmax.py::TestLovaszSoftmaxLoss::test_smoke[cpu-float32] PASSED [ 12%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_lovaz_softmax.py::TestLovaszSoftmaxLoss::test_exception PASSED [ 25%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_lovaz_softmax.py::TestLovaszSoftmaxLoss::test_binary[cpu-float32] PASSED [ 37%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_lovaz_softmax.py::TestLovaszSoftmaxLoss::test_all_ones[cpu-float32] PASSED [ 50%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_lovaz_softmax.py::TestLovaszSoftmaxLoss::test_weight[cpu-float32] PASSED [ 62%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_lovaz_softmax.py::TestLovaszSoftmaxLoss::test_gradcheck[cpu] PASSED [ 75%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_lovaz_softmax.py::TestLovaszSoftmaxLoss::test_dynamo[cpu-float32-inductor] SKIPPED [ 87%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_lovaz_softmax.py::TestLovaszSoftmaxLoss::test_module[cpu-float32] PASSED [100%]
+
+========================= 7 passed, 1 skipped in 0.16s =========================
+
+
+Initial Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python3
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'tvm', 'cudagraphs', 'openxla', 'onnxrt', 'jit', 'inductor', None}
+model weights cached: ['checkpoints']
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 8 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_lovaz_softmax.py::TestLovaszSoftmaxLoss::test_smoke[cpu-float32] PASSED [ 12%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_lovaz_softmax.py::TestLovaszSoftmaxLoss::test_exception PASSED [ 25%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_lovaz_softmax.py::TestLovaszSoftmaxLoss::test_binary[cpu-float32] PASSED [ 37%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_lovaz_softmax.py::TestLovaszSoftmaxLoss::test_all_ones[cpu-float32] PASSED [ 50%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_lovaz_softmax.py::TestLovaszSoftmaxLoss::test_weight[cpu-float32] PASSED [ 62%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_lovaz_softmax.py::TestLovaszSoftmaxLoss::test_gradcheck[cpu] PASSED [ 75%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_lovaz_softmax.py::TestLovaszSoftmaxLoss::test_dynamo[cpu-float32-inductor] SKIPPED [ 87%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_lovaz_softmax.py::TestLovaszSoftmaxLoss::test_module[cpu-float32] PASSED [100%]
+
+========================= 7 passed, 1 skipped in 0.17s =========================

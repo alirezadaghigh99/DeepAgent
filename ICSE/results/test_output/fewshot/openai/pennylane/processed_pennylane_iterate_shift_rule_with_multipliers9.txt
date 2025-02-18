@@ -1,0 +1,297 @@
+output file:
+processed_pennylane_iterate_shift_rule_with_multipliers9.json
+function:
+_iterate_shift_rule_with_multipliers
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_first_order[6.283185307179586] FAILED', '../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_second_order[None] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_second_order[6.283185307179586]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_second_order[None]', '../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_third_order[None] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_third_order[1.0471975511965976]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_third_order[6.283185307179586]', '../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_second_order[6.283185307179586] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_second_order[1.0471975511965976]', '../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_third_order[1.0471975511965976] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_third_order[None]', '../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_first_order[1.0471975511965976] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_first_order[1.0471975511965976]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_first_order[6.283185307179586]', '../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_third_order[6.283185307179586] FAILED', '../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_second_order[1.0471975511965976] FAILED'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/pennylane/pennylane/venv/bin/python
+cachedir: .pytest_cache
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+rootdir: /local/data0/moved_data/publishablew/pennylane/pennylane/tests
+configfile: pytest.ini
+plugins: flaky-3.8.1, xdist-3.6.1, split-0.10.0, rng-1.0.0, mock-3.14.0, forked-1.6.0, cov-6.0.0, benchmark-5.1.0
+collecting ... collected 9 items
+
+../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_first_order[None] PASSED
+../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_first_order[1.0471975511965976] FAILED
+../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_first_order[6.283185307179586] FAILED
+../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_second_order[None] FAILED
+../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_second_order[1.0471975511965976] FAILED
+../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_second_order[6.283185307179586] FAILED
+../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_third_order[None] FAILED
+../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_third_order[1.0471975511965976] FAILED
+../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_third_order[6.283185307179586] FAILED
+
+=================================== FAILURES ===================================
+___ TestIterateShiftRuleWithMultipliers.test_first_order[1.0471975511965976] ___
+
+self = <test_general_shift_rules.TestIterateShiftRuleWithMultipliers object at 0x7f4a92b365d0>
+period = 1.0471975511965976
+
+    @pytest.mark.parametrize("period", [None, np.pi / 3, 2 * np.pi])
+    def test_first_order(self, period):
+        """Test first order iteration of a rule with multipliers."""
+        rule = [(-0.9, 0.7, -0.2), (0.2, 1.2, 0.4)]
+        iterated_rule = _iterate_shift_rule_with_multipliers(rule, 1, period)
+>       assert np.allclose(iterated_rule, rule)
+E       assert False
+E        +  where False = <function allclose at 0x7f4ae99190b0>(array([[-0.9       ,  0.7       ,  0.84719755],\n       [ 0.2       ,  1.2       ,  0.4       ]]), [(-0.9, 0.7, -0.2), (0.2, 1.2, 0.4)])
+E        +    where <function allclose at 0x7f4ae99190b0> = np.allclose
+
+/local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py:89: AssertionError
+___ TestIterateShiftRuleWithMultipliers.test_first_order[6.283185307179586] ____
+
+self = <test_general_shift_rules.TestIterateShiftRuleWithMultipliers object at 0x7f4a92b369d0>
+period = 6.283185307179586
+
+    @pytest.mark.parametrize("period", [None, np.pi / 3, 2 * np.pi])
+    def test_first_order(self, period):
+        """Test first order iteration of a rule with multipliers."""
+        rule = [(-0.9, 0.7, -0.2), (0.2, 1.2, 0.4)]
+        iterated_rule = _iterate_shift_rule_with_multipliers(rule, 1, period)
+>       assert np.allclose(iterated_rule, rule)
+E       assert False
+E        +  where False = <function allclose at 0x7f4ae99190b0>(array([[-0.9       ,  0.7       ,  6.08318531],\n       [ 0.2       ,  1.2       ,  0.4       ]]), [(-0.9, 0.7, -0.2), (0.2, 1.2, 0.4)])
+E        +    where <function allclose at 0x7f4ae99190b0> = np.allclose
+
+/local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py:89: AssertionError
+_________ TestIterateShiftRuleWithMultipliers.test_second_order[None] __________
+
+self = <test_general_shift_rules.TestIterateShiftRuleWithMultipliers object at 0x7f4a92b376d0>
+period = None
+
+    @pytest.mark.parametrize("period", [None, np.pi / 3, 2 * np.pi])
+    def test_second_order(self, period):
+        """Test second order iteration of a rule with multipliers."""
+        rule = [(0.2, 1.2, 0.4), (-0.9, 0.7, -0.2)]
+        iterated_rule = _iterate_shift_rule_with_multipliers(rule, 2, period)
+        expected = np.array(
+            [
+                [0.2**2, 1.2**2, 0.4 * 1.2 + 0.4],
+                [0.2 * -0.9, 1.2 * 0.7, 0.4 * 0.7 - 0.2],
+                [-0.9 * 0.2, 0.7 * 1.2, -0.2 * 1.2 + 0.4],
+                [(-0.9) ** 2, 0.7**2, -0.2 * 0.7 - 0.2],
+            ]
+        )
+        if period == np.pi / 3:
+            expected[0, -1] -= period
+    
+>       assert np.allclose(iterated_rule, expected)
+E       assert False
+E        +  where False = <function allclose at 0x7f4ae99190b0>(array([[ 0.04,  1.44,  0.8 ],\n       [-0.18,  0.84,  0.2 ],\n       [-0.18,  0.84,  0.2 ],\n       [ 0.81,  0.49, -0.4 ]]), array([[ 0.04,  1.44,  0.88],\n       [-0.18,  0.84,  0.08],\n       [-0.18,  0.84,  0.16],\n       [ 0.81,  0.49, -0.34]]))
+E        +    where <function allclose at 0x7f4ae99190b0> = np.allclose
+
+/local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py:107: AssertionError
+__ TestIterateShiftRuleWithMultipliers.test_second_order[1.0471975511965976] ___
+
+self = <test_general_shift_rules.TestIterateShiftRuleWithMultipliers object at 0x7f4a92b37950>
+period = 1.0471975511965976
+
+    @pytest.mark.parametrize("period", [None, np.pi / 3, 2 * np.pi])
+    def test_second_order(self, period):
+        """Test second order iteration of a rule with multipliers."""
+        rule = [(0.2, 1.2, 0.4), (-0.9, 0.7, -0.2)]
+        iterated_rule = _iterate_shift_rule_with_multipliers(rule, 2, period)
+        expected = np.array(
+            [
+                [0.2**2, 1.2**2, 0.4 * 1.2 + 0.4],
+                [0.2 * -0.9, 1.2 * 0.7, 0.4 * 0.7 - 0.2],
+                [-0.9 * 0.2, 0.7 * 1.2, -0.2 * 1.2 + 0.4],
+                [(-0.9) ** 2, 0.7**2, -0.2 * 0.7 - 0.2],
+            ]
+        )
+        if period == np.pi / 3:
+            expected[0, -1] -= period
+    
+>       assert np.allclose(iterated_rule, expected)
+E       assert False
+E        +  where False = <function allclose at 0x7f4ae99190b0>(array([[ 0.04      ,  1.44      ,  0.8       ],\n       [-0.18      ,  0.84      ,  0.2       ],\n       [-0.18      ,  0.84      ,  0.2       ],\n       [ 0.81      ,  0.49      ,  0.64719755]]), array([[ 0.04      ,  1.44      , -0.16719755],\n       [-0.18      ,  0.84      ,  0.08      ],\n       [-0.18      ,  0.84      ,  0.16      ],\n       [ 0.81      ,  0.49      , -0.34      ]]))
+E        +    where <function allclose at 0x7f4ae99190b0> = np.allclose
+
+/local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py:107: AssertionError
+___ TestIterateShiftRuleWithMultipliers.test_second_order[6.283185307179586] ___
+
+self = <test_general_shift_rules.TestIterateShiftRuleWithMultipliers object at 0x7f4a92b37bd0>
+period = 6.283185307179586
+
+    @pytest.mark.parametrize("period", [None, np.pi / 3, 2 * np.pi])
+    def test_second_order(self, period):
+        """Test second order iteration of a rule with multipliers."""
+        rule = [(0.2, 1.2, 0.4), (-0.9, 0.7, -0.2)]
+        iterated_rule = _iterate_shift_rule_with_multipliers(rule, 2, period)
+        expected = np.array(
+            [
+                [0.2**2, 1.2**2, 0.4 * 1.2 + 0.4],
+                [0.2 * -0.9, 1.2 * 0.7, 0.4 * 0.7 - 0.2],
+                [-0.9 * 0.2, 0.7 * 1.2, -0.2 * 1.2 + 0.4],
+                [(-0.9) ** 2, 0.7**2, -0.2 * 0.7 - 0.2],
+            ]
+        )
+        if period == np.pi / 3:
+            expected[0, -1] -= period
+    
+>       assert np.allclose(iterated_rule, expected)
+E       assert False
+E        +  where False = <function allclose at 0x7f4ae99190b0>(array([[ 0.04      ,  1.44      ,  0.8       ],\n       [-0.18      ,  0.84      ,  0.2       ],\n       [-0.18      ,  0.84      ,  0.2       ],\n       [ 0.81      ,  0.49      ,  5.88318531]]), array([[ 0.04,  1.44,  0.88],\n       [-0.18,  0.84,  0.08],\n       [-0.18,  0.84,  0.16],\n       [ 0.81,  0.49, -0.34]]))
+E        +    where <function allclose at 0x7f4ae99190b0> = np.allclose
+
+/local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py:107: AssertionError
+__________ TestIterateShiftRuleWithMultipliers.test_third_order[None] __________
+
+self = <test_general_shift_rules.TestIterateShiftRuleWithMultipliers object at 0x7f4a92b48950>
+period = None
+
+    @pytest.mark.parametrize("period", [None, np.pi / 3, 2 * np.pi])
+    def test_third_order(self, period):
+        """Test third order iteration of a rule with multipliers."""
+        rule = [(0.2, 1.2, 0.4), (-0.9, 0.7, -0.2)]
+        iterated_rule = _iterate_shift_rule_with_multipliers(rule, 3, period)
+        expected = np.array(
+            [
+                [0.2**3, 1.2**3, (0.4 * 1.2 + 0.4) * 1.2 + 0.4],
+                [0.2**2 * -0.9, 1.2**2 * 0.7, (0.4 * 1.2 + 0.4) * 0.7 - 0.2],
+                [0.2 * -0.9 * 0.2, 1.2 * 0.7 * 1.2, (0.4 * 0.7 - 0.2) * 1.2 + 0.4],
+                [0.2 * (-0.9) ** 2, 1.2 * 0.7**2, (0.4 * 0.7 - 0.2) * 0.7 - 0.2],
+                [-0.9 * 0.2**2, 0.7 * 1.2**2, (-0.2 * 1.2 + 0.4) * 1.2 + 0.4],
+                [-0.9 * 0.2 * -0.9, 0.7 * 1.2 * 0.7, (-0.2 * 1.2 + 0.4) * 0.7 - 0.2],
+                [(-0.9) ** 2 * 0.2, 0.7**2 * 1.2, (-0.2 * 0.7 - 0.2) * 1.2 + 0.4],
+                [(-0.9) ** 3, 0.7**3, (-0.2 * 0.7 - 0.2) * 0.7 - 0.2],
+            ]
+        )
+        if period == np.pi / 3:
+            expected[0, -1] -= period
+            expected[4, -1] -= period
+    
+>       assert np.allclose(iterated_rule, expected)
+E       assert False
+E        +  where False = <function allclose at 0x7f4ae99190b0>(array([[ 0.008,  1.728,  1.2  ],\n       [-0.036,  1.008,  0.6  ],\n       [-0.036,  1.008,  0.6  ],\n       [ 0.162,  0.588,  0.   ],\n       [-0.036,  1.008,  0.6  ],\n       [ 0.162,  0.588,  0.   ],\n       [ 0.162,  0.588,  0.   ],\n       [-0.729,  0.343, -0.6  ]]), array([[ 0.008,  1.728,  1.456],\n       [-0.036,  1.008,  0.416],\n       [-0.036,  1.008,  0.496],\n       [ 0.162,  0.588, -0.144],\n       [-0.036,  1.008,  0.592],\n       [ 0.162,  0.588, -0.088],\n       [ 0.162,  0.588, -0.008],\n       [-0.729,  0.343, -0.438]]))
+E        +    where <function allclose at 0x7f4ae99190b0> = np.allclose
+
+/local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py:130: AssertionError
+___ TestIterateShiftRuleWithMultipliers.test_third_order[1.0471975511965976] ___
+
+self = <test_general_shift_rules.TestIterateShiftRuleWithMultipliers object at 0x7f4a92b48bd0>
+period = 1.0471975511965976
+
+    @pytest.mark.parametrize("period", [None, np.pi / 3, 2 * np.pi])
+    def test_third_order(self, period):
+        """Test third order iteration of a rule with multipliers."""
+        rule = [(0.2, 1.2, 0.4), (-0.9, 0.7, -0.2)]
+        iterated_rule = _iterate_shift_rule_with_multipliers(rule, 3, period)
+        expected = np.array(
+            [
+                [0.2**3, 1.2**3, (0.4 * 1.2 + 0.4) * 1.2 + 0.4],
+                [0.2**2 * -0.9, 1.2**2 * 0.7, (0.4 * 1.2 + 0.4) * 0.7 - 0.2],
+                [0.2 * -0.9 * 0.2, 1.2 * 0.7 * 1.2, (0.4 * 0.7 - 0.2) * 1.2 + 0.4],
+                [0.2 * (-0.9) ** 2, 1.2 * 0.7**2, (0.4 * 0.7 - 0.2) * 0.7 - 0.2],
+                [-0.9 * 0.2**2, 0.7 * 1.2**2, (-0.2 * 1.2 + 0.4) * 1.2 + 0.4],
+                [-0.9 * 0.2 * -0.9, 0.7 * 1.2 * 0.7, (-0.2 * 1.2 + 0.4) * 0.7 - 0.2],
+                [(-0.9) ** 2 * 0.2, 0.7**2 * 1.2, (-0.2 * 0.7 - 0.2) * 1.2 + 0.4],
+                [(-0.9) ** 3, 0.7**3, (-0.2 * 0.7 - 0.2) * 0.7 - 0.2],
+            ]
+        )
+        if period == np.pi / 3:
+            expected[0, -1] -= period
+            expected[4, -1] -= period
+    
+>       assert np.allclose(iterated_rule, expected)
+E       assert False
+E        +  where False = <function allclose at 0x7f4ae99190b0>(array([[ 0.008     ,  1.728     ,  0.15280245],\n       [-0.036     ,  1.008     ,  0.6       ],\n       [-0.036     ,  1.008     ,  0.6       ],\n       [ 0.162     ,  0.588     ,  0.        ],\n       [-0.036     ,  1.008     ,  0.6       ],\n       [ 0.162     ,  0.588     ,  0.        ],\n       [ 0.162     ,  0.588     ,  0.        ],\n       [-0.729     ,  0.343     ,  0.44719755]]), array([[ 0.008     ,  1.728     ,  0.40880245],\n       [-0.036     ,  1.008     ,  0.416     ],\n       [-0.036     ,  1.008     ,  0.496     ],\n       [ 0.162     ,  0.588     , -0.144     ],\n       [-0.036     ,  1.008     , -0.45519755],\n       [ 0.162     ,  0.588     , -0.088     ],\n       [ 0.162     ,  0.588     , -0.008     ],\n       [-0.729     ,  0.343     , -0.438     ]]))
+E        +    where <function allclose at 0x7f4ae99190b0> = np.allclose
+
+/local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py:130: AssertionError
+___ TestIterateShiftRuleWithMultipliers.test_third_order[6.283185307179586] ____
+
+self = <test_general_shift_rules.TestIterateShiftRuleWithMultipliers object at 0x7f4a92b48e50>
+period = 6.283185307179586
+
+    @pytest.mark.parametrize("period", [None, np.pi / 3, 2 * np.pi])
+    def test_third_order(self, period):
+        """Test third order iteration of a rule with multipliers."""
+        rule = [(0.2, 1.2, 0.4), (-0.9, 0.7, -0.2)]
+        iterated_rule = _iterate_shift_rule_with_multipliers(rule, 3, period)
+        expected = np.array(
+            [
+                [0.2**3, 1.2**3, (0.4 * 1.2 + 0.4) * 1.2 + 0.4],
+                [0.2**2 * -0.9, 1.2**2 * 0.7, (0.4 * 1.2 + 0.4) * 0.7 - 0.2],
+                [0.2 * -0.9 * 0.2, 1.2 * 0.7 * 1.2, (0.4 * 0.7 - 0.2) * 1.2 + 0.4],
+                [0.2 * (-0.9) ** 2, 1.2 * 0.7**2, (0.4 * 0.7 - 0.2) * 0.7 - 0.2],
+                [-0.9 * 0.2**2, 0.7 * 1.2**2, (-0.2 * 1.2 + 0.4) * 1.2 + 0.4],
+                [-0.9 * 0.2 * -0.9, 0.7 * 1.2 * 0.7, (-0.2 * 1.2 + 0.4) * 0.7 - 0.2],
+                [(-0.9) ** 2 * 0.2, 0.7**2 * 1.2, (-0.2 * 0.7 - 0.2) * 1.2 + 0.4],
+                [(-0.9) ** 3, 0.7**3, (-0.2 * 0.7 - 0.2) * 0.7 - 0.2],
+            ]
+        )
+        if period == np.pi / 3:
+            expected[0, -1] -= period
+            expected[4, -1] -= period
+    
+>       assert np.allclose(iterated_rule, expected)
+E       assert False
+E        +  where False = <function allclose at 0x7f4ae99190b0>(array([[ 0.008     ,  1.728     ,  1.2       ],\n       [-0.036     ,  1.008     ,  0.6       ],\n       [-0.036     ,  1.008     ,  0.6       ],\n       [ 0.162     ,  0.588     ,  0.        ],\n       [-0.036     ,  1.008     ,  0.6       ],\n       [ 0.162     ,  0.588     ,  0.        ],\n       [ 0.162     ,  0.588     ,  0.        ],\n       [-0.729     ,  0.343     ,  5.68318531]]), array([[ 0.008,  1.728,  1.456],\n       [-0.036,  1.008,  0.416],\n       [-0.036,  1.008,  0.496],\n       [ 0.162,  0.588, -0.144],\n       [-0.036,  1.008,  0.592],\n       [ 0.162,  0.588, -0.088],\n       [ 0.162,  0.588, -0.008],\n       [-0.729,  0.343, -0.438]]))
+E        +    where <function allclose at 0x7f4ae99190b0> = np.allclose
+
+/local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py:130: AssertionError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_first_order[1.0471975511965976]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_first_order[6.283185307179586]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_second_order[None]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_second_order[1.0471975511965976]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_second_order[6.283185307179586]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_third_order[None]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_third_order[1.0471975511965976]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_third_order[6.283185307179586]
+========================= 8 failed, 1 passed in 0.20s ==========================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/pennylane/pennylane/venv/bin/python
+cachedir: .pytest_cache
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+rootdir: /local/data0/moved_data/publishablew/pennylane/pennylane/tests
+configfile: pytest.ini
+plugins: flaky-3.8.1, xdist-3.6.1, split-0.10.0, rng-1.0.0, mock-3.14.0, forked-1.6.0, cov-6.0.0, benchmark-5.1.0
+collecting ... collected 9 items
+
+../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_first_order[None] PASSED
+../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_first_order[1.0471975511965976] PASSED
+../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_first_order[6.283185307179586] PASSED
+../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_second_order[None] PASSED
+../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_second_order[1.0471975511965976] PASSED
+../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_second_order[6.283185307179586] PASSED
+../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_third_order[None] PASSED
+../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_third_order[1.0471975511965976] PASSED
+../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_third_order[6.283185307179586] PASSED
+
+============================== 9 passed in 0.02s ===============================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/pennylane/pennylane/venv/bin/python
+cachedir: .pytest_cache
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+rootdir: /local/data0/moved_data/publishablew/pennylane/pennylane/tests
+configfile: pytest.ini
+plugins: flaky-3.8.1, xdist-3.6.1, split-0.10.0, rng-1.0.0, mock-3.14.0, forked-1.6.0, cov-6.0.0, benchmark-5.1.0
+collecting ... collected 9 items
+
+../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_first_order[None] PASSED
+../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_first_order[1.0471975511965976] PASSED
+../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_first_order[6.283185307179586] PASSED
+../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_second_order[None] PASSED
+../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_second_order[1.0471975511965976] PASSED
+../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_second_order[6.283185307179586] PASSED
+../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_third_order[None] PASSED
+../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_third_order[1.0471975511965976] PASSED
+../../../../../../local/data0/moved_data/publishablew/pennylane/pennylane/tests/gradients/core/test_general_shift_rules.py::TestIterateShiftRuleWithMultipliers::test_third_order[6.283185307179586] PASSED
+
+============================== 9 passed in 0.19s ===============================

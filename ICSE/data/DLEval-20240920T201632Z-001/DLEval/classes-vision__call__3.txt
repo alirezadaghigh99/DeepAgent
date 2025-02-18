@@ -1,0 +1,19 @@
+stage: Image
+task: 
+data: pre-post process
+
+prompt:
+Generate the __call__ function for the following class that converts a tensor or ndarray to a PIL Image:
+class ToPILImage:
+    def __init__(self, mode=None):
+        self.mode = mode
+
+ ground Truth:torchvision/transforms/transforms.py
+
+ repo:vision
+
+ function:__call__
+ 
+ class:ToPILImage
+ 
+ test_cases:test/test_transforms.py::TestToPil

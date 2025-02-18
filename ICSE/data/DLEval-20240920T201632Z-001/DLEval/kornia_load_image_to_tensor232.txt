@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Write a Python function `_load_image_to_tensor` that reads an image file from the specified `path_file`, decodes it using the Kornia Rust backend, and converts it to a PyTorch tensor. The function takes two inputs: `path_file`, which is a `Path` object pointing to a valid image file, and `device`, which specifies the device (e.g., CPU or GPU) where the image tensor should be placed. The function returns the image as a tensor with shape `(3, H, W)`, where `H` is the height and `W` is the width of the image. The function handles image files with `.jpg`, `.jpeg`, and other supported formats, raising an error if the image format is unsupported. It also ensures that the resulting tensor is moved to the specified device.
+
+ ground Truth:kornia/io/io.py#L28
+
+ repo:kornia
+
+ function:_load_image_to_tensor
+ 
+ test_cases:tests/io/test_io_image.py

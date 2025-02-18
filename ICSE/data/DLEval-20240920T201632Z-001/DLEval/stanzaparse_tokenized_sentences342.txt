@@ -1,0 +1,14 @@
+stage: Inference
+task: 
+data: text
+
+prompt:
+Generate a Python function called parse_tokenized_sentences that takes in arguments args, model, retag_pipeline, and sentences. The function returns a list of ParseResult objects after parsing the given sentences. The function first retags the sentences using the retag_tags function with the retag_pipeline and checks if the model uses xpos. It then creates a list of words with their corresponding tags from the sentences. The function logs a message indicating that retagging is finished and proceeds to parse the tagged text. It asserts that the length of the words list is equal to the length of the sentences. The function then parses the sentences without gradient using the model's parse_sentences_no_grad method with a specified evaluation batch size and prediction method. Finally, the function returns the parsed treebank.
+
+ ground Truth:stanza/models/constituency/text_processing.py
+
+ repo:stanza
+
+ function:parse_tokenized_sentences
+ 
+ test_cases:stanza/tests/constituency/test_text_processing.py

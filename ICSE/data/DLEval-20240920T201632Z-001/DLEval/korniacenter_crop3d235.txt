@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Create a function `center_crop3d` that crops a 3D volume tensor to the center region based on the specified dimensions. The function takes a tensor of shape `(B, C, D, H, W)` as input, where `B` is the batch size, `C` is the number of channels, and `D`, `H`, `W` are the depth, height, and width of the volume respectively. The function also takes a tuple `size` representing the desired output dimensions `(depth, height, width)`. Optional parameters include `interpolation` for interpolation mode and `align_corners` to control how the corners are aligned during the grid generation. The function returns the cropped 3D volume tensor and raises type or shape-related errors if inputs do not meet the expected criteria.
+
+ ground Truth:kornia/geometry/transform/crop3d.py
+
+ repo:kornia
+
+ function:center_crop3d
+ 
+ test_cases:tests/geometry/transform/test_crop3d.py::TestCenterCrop3D

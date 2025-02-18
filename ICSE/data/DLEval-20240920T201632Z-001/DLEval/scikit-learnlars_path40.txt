@@ -1,0 +1,14 @@
+stage: Training
+task: 
+data: Table
+
+prompt:
+Generate a Python function called lars_path that computes the Least Angle Regression or Lasso path using the LARS algorithm. The function takes in input parameters X, y, Xy, Gram, max_iter, alpha_min, method, copy_X, eps, copy_Gram, verbose, return_path, return_n_iter, and positive. It returns alphas, active indices, coefficients, and the number of iterations. The function also has a docstring with detailed information about the parameters, returns, examples, and references.
+
+ ground Truth:sklearn/linear_model/_least_angle.py
+
+ repo:scikit-learn
+
+ function:lars_path
+ 
+ test_cases:sklearn/linear_model/tests/test_least_angle.py

@@ -1,0 +1,11 @@
+{
+    "result": "Certainly! Below is a Python function named `_box_xyxy_to_xywh` that converts bounding boxes from the (x1, y1, x2, y2) format to the (x, y, w, h) format. This function uses PyTorch tensors for the input and output:\n\n```python\nimport torch\n\ndef _box_xyxy_to_xywh(boxes: torch.Tensor) -> torch.Tensor:\n    \"\"\"\n    Convert bounding boxes from (x1, y1, x2, y2) format to (x, y, w, h) format.\n\n    Args:\n        boxes (Tensor): A tensor of shape (N, 4) where N is the number of boxes.\n                        Each box is represented as (x1, y1, x2, y2).\n\n    Returns:\n        Tensor: A tensor of shape (N, 4) with boxes in (x, y, w, h) format.\n    \"\"\"\n    # Ensure the input is a tensor\n    if not isinstance(boxes, torch.Tensor):\n        raise TypeError(\"Input boxes should be a torch.Tensor\")\n\n    # Calculate width and height\n    widths = boxes[:, 2] - boxes[:, 0]\n    heights = boxes[:, 3] - boxes[:, 1]\n\n    # Create the new boxes in (x, y, w, h) format\n    xywh_boxes = torch.stack((boxes[:, 0], boxes[:, 1], widths, heights), dim=1)\n\n    return xywh_boxes\n```\n\n### Explanation:\n- **Input**: The function takes a tensor `boxes` of shape (N, 4), where N is the number of bounding boxes. Each box is represented in the (x1, y1, x2, y2) format.\n- **Output**: The function returns a tensor of the same shape (N, 4), but with each box in the (x, y, w, h) format.\n- **Conversion**:\n  - The top-left corner (x, y) remains the same as (x1, y1).\n  - The width `w` is calculated as `x2 - x1`.\n  - The height `h` is calculated as `y2 - y1`.\n- **Error Handling**: The function checks if the input is a PyTorch tensor and raises a `TypeError` if not.",
+    "prompt": "Write a Python function _box_xyxy_to_xywh that converts bounding boxes from the (x1, y1, x2, y2) format, where (x1, y1) and (x2, y2) represent the top-left and bottom-right corners, to the (x, y, w, h) format, where (x, y) represents the top-left corner and (w, h) represents the width and height. The function should return a tensor with the converted bounding boxes.",
+    "function_name": "_box_xyxy_to_xywh",
+    "ground_truth": "torchvision/ops/_box_convert.py",
+    "test": "test/test_ops.py::TestBoxConvert",
+    "class": "",
+    "stage": "Pre-Post processing",
+    "task": "Detection",
+    "data": "Image"
+}

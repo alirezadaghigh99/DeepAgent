@@ -1,0 +1,26 @@
+stage: Pre-Post processing
+task: Classification
+data: Table
+
+prompt:
+Create a Python function `labels_to_array` that converts various label types into a 1D NumPy array. The function should:
+- Accept `y` as input, which can be a list, numpy array, pandas Series, or pandas DataFrame.
+- Convert the input `y` to a 1D NumPy array and return it.
+- Raise a `ValueError` if the input is a DataFrame with more than one column or if the input cannot be converted to a 1D NumPy array.
+
+Input types:
+- `y`: Union[LabelLike, np.generic] - labels to be converted.
+
+Output:
+- Returns a 1D NumPy array of labels.
+
+Errors:
+- Raise a `ValueError` if the input is a DataFrame with more than one column or if the conversion to a 1D NumPy array fails.
+
+ ground Truth:cleanlab/internal/validation.py
+
+ repo:cleanlab
+
+ function:labels_to_array
+ 
+ test_cases:tests/test_validation.py::test_labels_to_array_return_values

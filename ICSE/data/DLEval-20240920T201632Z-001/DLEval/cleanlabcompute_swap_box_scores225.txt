@@ -1,0 +1,16 @@
+stage: Evaluating&Metrics
+task: Detection
+data: Image
+
+prompt:
+Generate a Python function called compute_swap_box_scores that calculates a numeric score for each annotated bounding box in each image, estimating the likelihood that the class label for this box was not accidentally swapped with another class. The function takes in several optional parameters including labels (a list of dictionaries containing labels for each image), predictions (a list of numpy arrays corresponding to model predictions for each image), alpha (a weighting parameter), high_probability_threshold (a probability threshold), overlapping_label_check (a boolean flag), and auxiliary_inputs (a list of dictionaries containing additional inputs for each image).
+
+The function returns a list of numpy arrays where each element corresponds to the swap scores for annotated boxes in each image. The scores range between 0 and 1, with lower values indicating boxes that are more likely to have been mislabeled. The function also handles cases where the number of annotated and predicted boxes vary for each image.
+
+ ground Truth:cleanlab/object_detection/rank.py
+
+ repo:cleanlab
+
+ function:compute_swap_box_scores
+ 
+ test_cases:tests/test_object_detection.py

@@ -1,0 +1,23 @@
+stage: Image
+task: Segmentation
+data: Evaluation/metrics
+
+prompt:
+Generate a Python function `forward` for the `LovaszSoftmaxLoss` class that computes the Lovasz-Softmax loss given the predicted logits (`pred`) and the ground truth labels (`target`). The function utilizes the `lovasz_softmax_loss` function to perform the computation. The input types are `pred` (a tensor of shape `(N, C, H, W)`) and `target` (a tensor of shape `(N, H, W)`). The output is a scalar tensor representing the computed loss.
+
+```python
+class LovaszSoftmaxLoss(nn.Module):
+    def __init__(self, weight: Optional[Tensor] = None) -> None:
+        super().__init__()
+        self.weight = weight
+```
+
+ ground Truth:kornia/losses/lovasz_softmax.py
+
+ repo:kornia
+
+ function:forward
+ 
+ class:LovaszSoftmaxLoss
+ 
+ test_cases:tests/losses/test_lovaz_softmax.py

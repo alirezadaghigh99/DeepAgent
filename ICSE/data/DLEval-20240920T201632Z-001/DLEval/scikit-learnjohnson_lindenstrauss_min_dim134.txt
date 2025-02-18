@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: Table
+
+prompt:
+Generate a Python function called johnson_lindenstrauss_min_dim that calculates the minimum number of components needed to guarantee a distortion rate within a specified range for a random projection. The function takes in the number of samples (n_samples) as an integer or array-like input and the maximum distortion rate (eps) as a float or array-like input. It returns the minimal number of components required to ensure an eps-embedding with good probability for the given number of samples. The function also includes references to the Johnson-Lindenstrauss lemma and provides examples of usage.
+
+ ground Truth:sklearn/random_projection.py
+
+ repo:scikit-learn
+
+ function:johnson_lindenstrauss_min_dim
+ 
+ test_cases:sklearn/tests/test_random_projection.py

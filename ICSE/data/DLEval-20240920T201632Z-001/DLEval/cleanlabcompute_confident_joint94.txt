@@ -1,0 +1,25 @@
+stage: Model Construction
+task: Classification
+data: 
+
+prompt:
+Generate a Python function called compute_confident_joint that estimates the confident counts of latent true vs observed noisy labels for the examples in a dataset. The function takes in the following parameters:
+
+- labels: An array or list of class labels for each example in the dataset.
+- pred_probs: An array of model-predicted class probabilities for each example in the dataset.
+- thresholds: An optional array of per-class threshold probabilities.
+- calibrate: A boolean flag indicating whether to calibrate the confident joint estimate.
+- multi_label: An optional boolean flag indicating if the dataset is multi-label classification.
+- return_indices_of_off_diagonals: An optional boolean flag indicating whether to return indices of examples counted in off-diagonals of the confident joint.
+
+The function returns an array representing counts of examples for which we are confident about their given and true label. If multi_label is True, the array has a different shape and represents a one-vs-rest format for the confident joint.
+
+Note that the function provides a vectorized implementation of the confident joint calculation for efficiency.
+
+ ground Truth:cleanlab/count.py
+
+ repo:cleanlab
+
+ function:compute_confident_joint
+ 
+ test_cases:tests/test_filter_count.py

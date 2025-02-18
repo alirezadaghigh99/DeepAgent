@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Generate a Python function called pil_to_tensor that converts a PIL Image to a tensor of the same type. The input parameter is a PIL Image called pic. The function does not support torchscript. It performs a deep copy of the underlying array. If the input is not a PIL Image, a TypeError is raised. If the input is an accimage Image, the function returns a tensor of type uint8. Otherwise, it converts the PIL Image to a tensor, rearranges the dimensions, and returns the tensor.
+
+ ground Truth:torchvision/transforms/functional.py
+
+ repo:vision
+
+ function:pil_to_tensor
+ 
+ test_cases:test/test_transforms.py::TestToTensor::test_pil_to_tensor

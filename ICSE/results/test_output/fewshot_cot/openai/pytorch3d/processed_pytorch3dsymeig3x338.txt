@@ -1,0 +1,481 @@
+output file:
+processed_pytorch3dsymeig3x338.json
+function:
+symeig3x3
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_more_dimensions FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_eigen_gpu', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_eigenvalues_cpu FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_eigenvectors_are_orthonormal_cpu', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_not_nan_or_inf_gpu', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_inputs_cpu', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_eigenvectors_are_orthonormal_gpu', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_eigen_gpu FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_eigen_cpu', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_inputs_gpu', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_not_nan_or_inf_cpu', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_eigenvectors_are_orthonormal_gpu FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_cpu', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_eigen_cpu FAILED', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_inputs_gpu FAILED', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_eigenvalues_gpu FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_more_dimensions', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_gpu FAILED', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_eigenvectors_are_orthonormal_cpu FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_gpu', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_not_nan_or_inf_cpu FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_eigenvalues_gpu', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_cpu FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_eigenvalues_cpu', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_inputs_cpu FAILED', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_not_nan_or_inf_gpu FAILED'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 13 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_eigenvalues_cpu FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_eigenvalues_gpu FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_inputs_cpu FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_inputs_gpu FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_eigenvectors_are_orthonormal_cpu FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_eigenvectors_are_orthonormal_gpu FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_cpu FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_gpu FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_eigen_cpu FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_eigen_gpu FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_not_nan_or_inf_cpu FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_not_nan_or_inf_gpu FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_more_dimensions FAILED
+
+=================================== FAILURES ===================================
+________________ TestSymEig3x3.test_degenerate_eigenvalues_cpu _________________
+
+self = <tests.test_symeig3x3.TestSymEig3x3 testMethod=test_degenerate_eigenvalues_cpu>
+
+    def test_degenerate_eigenvalues_cpu(self):
+>       self._test_degenerate_eigenvalues(self._cpu)
+
+/local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:193: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:211: in _test_degenerate_eigenvalues
+    self._test_eigenvalues_and_eigenvectors(
+/local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:176: in _test_eigenvalues_and_eigenvectors
+    eigenvalues, eigenvectors = symeig3x3(test_input, eigenvectors=True)
+/local/data0/moved_data/pytorch3d/pytorch3d/common/workaround/symeig3x3.py:211: in symeig3x3
+    from .temp import symeig3x3
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    import math
+    from typing import Optional, Tuple
+    import torch
+    import torch.nn.functional as F
+    from torch import nn
+    import torch
+    
+>   def symeig3x3(matrices: torch.Tensor, eigenvectors: bool=False) -> Union[torch.Tensor, Tuple[torch.Tensor, torch.Tensor]]:
+E   NameError: name 'Union' is not defined
+
+/local/data0/moved_data/pytorch3d/pytorch3d/common/workaround/temp.py:8: NameError
+________________ TestSymEig3x3.test_degenerate_eigenvalues_gpu _________________
+
+self = <tests.test_symeig3x3.TestSymEig3x3 testMethod=test_degenerate_eigenvalues_gpu>
+
+    def test_degenerate_eigenvalues_gpu(self):
+>       self._test_degenerate_eigenvalues(self._gpu)
+
+/local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:190: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:211: in _test_degenerate_eigenvalues
+    self._test_eigenvalues_and_eigenvectors(
+/local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:176: in _test_eigenvalues_and_eigenvectors
+    eigenvalues, eigenvectors = symeig3x3(test_input, eigenvectors=True)
+/local/data0/moved_data/pytorch3d/pytorch3d/common/workaround/symeig3x3.py:211: in symeig3x3
+    from .temp import symeig3x3
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    import math
+    from typing import Optional, Tuple
+    import torch
+    import torch.nn.functional as F
+    from torch import nn
+    import torch
+    
+>   def symeig3x3(matrices: torch.Tensor, eigenvectors: bool=False) -> Union[torch.Tensor, Tuple[torch.Tensor, torch.Tensor]]:
+E   NameError: name 'Union' is not defined
+
+/local/data0/moved_data/pytorch3d/pytorch3d/common/workaround/temp.py:8: NameError
+___________________ TestSymEig3x3.test_degenerate_inputs_cpu ___________________
+
+self = <tests.test_symeig3x3.TestSymEig3x3 testMethod=test_degenerate_inputs_cpu>
+
+    def test_degenerate_inputs_cpu(self):
+>       self._test_degenerate_inputs(self._cpu)
+
+/local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:112: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:122: in _test_degenerate_inputs
+    self._test_is_not_nan_or_inf(test_input)
+/local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:103: in _test_is_not_nan_or_inf
+    eigenvalues, eigenvectors = symeig3x3(test_input, eigenvectors=True)
+/local/data0/moved_data/pytorch3d/pytorch3d/common/workaround/symeig3x3.py:211: in symeig3x3
+    from .temp import symeig3x3
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    import math
+    from typing import Optional, Tuple
+    import torch
+    import torch.nn.functional as F
+    from torch import nn
+    import torch
+    
+>   def symeig3x3(matrices: torch.Tensor, eigenvectors: bool=False) -> Union[torch.Tensor, Tuple[torch.Tensor, torch.Tensor]]:
+E   NameError: name 'Union' is not defined
+
+/local/data0/moved_data/pytorch3d/pytorch3d/common/workaround/temp.py:8: NameError
+___________________ TestSymEig3x3.test_degenerate_inputs_gpu ___________________
+
+self = <tests.test_symeig3x3.TestSymEig3x3 testMethod=test_degenerate_inputs_gpu>
+
+    def test_degenerate_inputs_gpu(self):
+>       self._test_degenerate_inputs(self._gpu)
+
+/local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:122: in _test_degenerate_inputs
+    self._test_is_not_nan_or_inf(test_input)
+/local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:103: in _test_is_not_nan_or_inf
+    eigenvalues, eigenvectors = symeig3x3(test_input, eigenvectors=True)
+/local/data0/moved_data/pytorch3d/pytorch3d/common/workaround/symeig3x3.py:211: in symeig3x3
+    from .temp import symeig3x3
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    import math
+    from typing import Optional, Tuple
+    import torch
+    import torch.nn.functional as F
+    from torch import nn
+    import torch
+    
+>   def symeig3x3(matrices: torch.Tensor, eigenvectors: bool=False) -> Union[torch.Tensor, Tuple[torch.Tensor, torch.Tensor]]:
+E   NameError: name 'Union' is not defined
+
+/local/data0/moved_data/pytorch3d/pytorch3d/common/workaround/temp.py:8: NameError
+_____________ TestSymEig3x3.test_eigenvectors_are_orthonormal_cpu ______________
+
+self = <tests.test_symeig3x3.TestSymEig3x3 testMethod=test_eigenvectors_are_orthonormal_cpu>
+
+    def test_eigenvectors_are_orthonormal_cpu(self):
+        test_input = self.create_random_sym3x3(self._cpu, n=self.TEST_BATCH_SIZE)
+    
+>       self._test_eigenvectors_are_orthonormal(test_input)
+
+/local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:77: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:83: in _test_eigenvectors_are_orthonormal
+    eigenvalues, eigenvectors = symeig3x3(test_input, eigenvectors=True)
+/local/data0/moved_data/pytorch3d/pytorch3d/common/workaround/symeig3x3.py:211: in symeig3x3
+    from .temp import symeig3x3
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    import math
+    from typing import Optional, Tuple
+    import torch
+    import torch.nn.functional as F
+    from torch import nn
+    import torch
+    
+>   def symeig3x3(matrices: torch.Tensor, eigenvectors: bool=False) -> Union[torch.Tensor, Tuple[torch.Tensor, torch.Tensor]]:
+E   NameError: name 'Union' is not defined
+
+/local/data0/moved_data/pytorch3d/pytorch3d/common/workaround/temp.py:8: NameError
+_____________ TestSymEig3x3.test_eigenvectors_are_orthonormal_gpu ______________
+
+self = <tests.test_symeig3x3.TestSymEig3x3 testMethod=test_eigenvectors_are_orthonormal_gpu>
+
+    def test_eigenvectors_are_orthonormal_gpu(self):
+        test_input = self.create_random_sym3x3(self._gpu, n=self.TEST_BATCH_SIZE)
+    
+>       self._test_eigenvectors_are_orthonormal(test_input)
+
+/local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:72: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:83: in _test_eigenvectors_are_orthonormal
+    eigenvalues, eigenvectors = symeig3x3(test_input, eigenvectors=True)
+/local/data0/moved_data/pytorch3d/pytorch3d/common/workaround/symeig3x3.py:211: in symeig3x3
+    from .temp import symeig3x3
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    import math
+    from typing import Optional, Tuple
+    import torch
+    import torch.nn.functional as F
+    from torch import nn
+    import torch
+    
+>   def symeig3x3(matrices: torch.Tensor, eigenvectors: bool=False) -> Union[torch.Tensor, Tuple[torch.Tensor, torch.Tensor]]:
+E   NameError: name 'Union' is not defined
+
+/local/data0/moved_data/pytorch3d/pytorch3d/common/workaround/temp.py:8: NameError
+_______________________ TestSymEig3x3.test_gradients_cpu _______________________
+
+self = <tests.test_symeig3x3.TestSymEig3x3 testMethod=test_gradients_cpu>
+
+    def test_gradients_cpu(self):
+>       self._test_gradients(self._cpu)
+
+/local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:134: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:154: in _test_gradients
+    eigenvalues, eigenvectors = symeig3x3(test_input, eigenvectors=True)
+/local/data0/moved_data/pytorch3d/pytorch3d/common/workaround/symeig3x3.py:211: in symeig3x3
+    from .temp import symeig3x3
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    import math
+    from typing import Optional, Tuple
+    import torch
+    import torch.nn.functional as F
+    from torch import nn
+    import torch
+    
+>   def symeig3x3(matrices: torch.Tensor, eigenvectors: bool=False) -> Union[torch.Tensor, Tuple[torch.Tensor, torch.Tensor]]:
+E   NameError: name 'Union' is not defined
+
+/local/data0/moved_data/pytorch3d/pytorch3d/common/workaround/temp.py:8: NameError
+_______________________ TestSymEig3x3.test_gradients_gpu _______________________
+
+self = <tests.test_symeig3x3.TestSymEig3x3 testMethod=test_gradients_gpu>
+
+    def test_gradients_gpu(self):
+>       self._test_gradients(self._gpu)
+
+/local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:137: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:154: in _test_gradients
+    eigenvalues, eigenvectors = symeig3x3(test_input, eigenvectors=True)
+/local/data0/moved_data/pytorch3d/pytorch3d/common/workaround/symeig3x3.py:211: in symeig3x3
+    from .temp import symeig3x3
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    import math
+    from typing import Optional, Tuple
+    import torch
+    import torch.nn.functional as F
+    from torch import nn
+    import torch
+    
+>   def symeig3x3(matrices: torch.Tensor, eigenvectors: bool=False) -> Union[torch.Tensor, Tuple[torch.Tensor, torch.Tensor]]:
+E   NameError: name 'Union' is not defined
+
+/local/data0/moved_data/pytorch3d/pytorch3d/common/workaround/temp.py:8: NameError
+_______________________ TestSymEig3x3.test_is_eigen_cpu ________________________
+
+self = <tests.test_symeig3x3.TestSymEig3x3 testMethod=test_is_eigen_cpu>
+
+    def test_is_eigen_cpu(self):
+        test_input = self.create_random_sym3x3(self._cpu, n=self.TEST_BATCH_SIZE)
+    
+>       self._test_is_eigen(test_input)
+
+/local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:53: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:60: in _test_is_eigen
+    eigenvalues, eigenvectors = symeig3x3(test_input, eigenvectors=True)
+/local/data0/moved_data/pytorch3d/pytorch3d/common/workaround/symeig3x3.py:211: in symeig3x3
+    from .temp import symeig3x3
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    import math
+    from typing import Optional, Tuple
+    import torch
+    import torch.nn.functional as F
+    from torch import nn
+    import torch
+    
+>   def symeig3x3(matrices: torch.Tensor, eigenvectors: bool=False) -> Union[torch.Tensor, Tuple[torch.Tensor, torch.Tensor]]:
+E   NameError: name 'Union' is not defined
+
+/local/data0/moved_data/pytorch3d/pytorch3d/common/workaround/temp.py:8: NameError
+_______________________ TestSymEig3x3.test_is_eigen_gpu ________________________
+
+self = <tests.test_symeig3x3.TestSymEig3x3 testMethod=test_is_eigen_gpu>
+
+    def test_is_eigen_gpu(self):
+        test_input = self.create_random_sym3x3(self._gpu, n=self.TEST_BATCH_SIZE)
+    
+>       self._test_is_eigen(test_input)
+
+/local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:60: in _test_is_eigen
+    eigenvalues, eigenvectors = symeig3x3(test_input, eigenvectors=True)
+/local/data0/moved_data/pytorch3d/pytorch3d/common/workaround/symeig3x3.py:211: in symeig3x3
+    from .temp import symeig3x3
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    import math
+    from typing import Optional, Tuple
+    import torch
+    import torch.nn.functional as F
+    from torch import nn
+    import torch
+    
+>   def symeig3x3(matrices: torch.Tensor, eigenvectors: bool=False) -> Union[torch.Tensor, Tuple[torch.Tensor, torch.Tensor]]:
+E   NameError: name 'Union' is not defined
+
+/local/data0/moved_data/pytorch3d/pytorch3d/common/workaround/temp.py:8: NameError
+___________________ TestSymEig3x3.test_is_not_nan_or_inf_cpu ___________________
+
+self = <tests.test_symeig3x3.TestSymEig3x3 testMethod=test_is_not_nan_or_inf_cpu>
+
+    def test_is_not_nan_or_inf_cpu(self):
+        test_input = self.create_random_sym3x3(self._cpu, n=self.TEST_BATCH_SIZE)
+    
+>       self._test_is_not_nan_or_inf(test_input)
+
+/local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:100: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:103: in _test_is_not_nan_or_inf
+    eigenvalues, eigenvectors = symeig3x3(test_input, eigenvectors=True)
+/local/data0/moved_data/pytorch3d/pytorch3d/common/workaround/symeig3x3.py:211: in symeig3x3
+    from .temp import symeig3x3
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    import math
+    from typing import Optional, Tuple
+    import torch
+    import torch.nn.functional as F
+    from torch import nn
+    import torch
+    
+>   def symeig3x3(matrices: torch.Tensor, eigenvectors: bool=False) -> Union[torch.Tensor, Tuple[torch.Tensor, torch.Tensor]]:
+E   NameError: name 'Union' is not defined
+
+/local/data0/moved_data/pytorch3d/pytorch3d/common/workaround/temp.py:8: NameError
+___________________ TestSymEig3x3.test_is_not_nan_or_inf_gpu ___________________
+
+self = <tests.test_symeig3x3.TestSymEig3x3 testMethod=test_is_not_nan_or_inf_gpu>
+
+    def test_is_not_nan_or_inf_gpu(self):
+        test_input = self.create_random_sym3x3(self._gpu, n=self.TEST_BATCH_SIZE)
+    
+>       self._test_is_not_nan_or_inf(test_input)
+
+/local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:95: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:103: in _test_is_not_nan_or_inf
+    eigenvalues, eigenvectors = symeig3x3(test_input, eigenvectors=True)
+/local/data0/moved_data/pytorch3d/pytorch3d/common/workaround/symeig3x3.py:211: in symeig3x3
+    from .temp import symeig3x3
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    import math
+    from typing import Optional, Tuple
+    import torch
+    import torch.nn.functional as F
+    from torch import nn
+    import torch
+    
+>   def symeig3x3(matrices: torch.Tensor, eigenvectors: bool=False) -> Union[torch.Tensor, Tuple[torch.Tensor, torch.Tensor]]:
+E   NameError: name 'Union' is not defined
+
+/local/data0/moved_data/pytorch3d/pytorch3d/common/workaround/temp.py:8: NameError
+______________________ TestSymEig3x3.test_more_dimensions ______________________
+
+self = <tests.test_symeig3x3.TestSymEig3x3 testMethod=test_more_dimensions>
+
+    def test_more_dimensions(self):
+        """
+        Tests if function supports arbitrary leading dimensions
+        """
+        repeat = 4
+    
+        test_input = self.create_random_sym3x3(self._cpu, n=16)
+        test_input_4d = test_input[None, ...].expand((repeat,) + test_input.shape)
+    
+>       eigenvalues, eigenvectors = symeig3x3(test_input, eigenvectors=True)
+
+/local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:255: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/pytorch3d/common/workaround/symeig3x3.py:211: in symeig3x3
+    from .temp import symeig3x3
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    import math
+    from typing import Optional, Tuple
+    import torch
+    import torch.nn.functional as F
+    from torch import nn
+    import torch
+    
+>   def symeig3x3(matrices: torch.Tensor, eigenvectors: bool=False) -> Union[torch.Tensor, Tuple[torch.Tensor, torch.Tensor]]:
+E   NameError: name 'Union' is not defined
+
+/local/data0/moved_data/pytorch3d/pytorch3d/common/workaround/temp.py:8: NameError
+=============================== warnings summary ===============================
+tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_cpu
+tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_gpu
+  /local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:153: UserWarning: Anomaly Detection has been enabled. This mode will increase the runtime and should only be enabled for debugging.
+    with torch.autograd.detect_anomaly():
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_eigenvalues_cpu
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_eigenvalues_gpu
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_inputs_cpu
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_inputs_gpu
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_eigenvectors_are_orthonormal_cpu
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_eigenvectors_are_orthonormal_gpu
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_cpu
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_gpu
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_eigen_cpu
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_eigen_gpu
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_not_nan_or_inf_cpu
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_not_nan_or_inf_gpu
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_more_dimensions
+======================== 13 failed, 2 warnings in 1.33s ========================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 13 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_eigenvalues_cpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_eigenvalues_gpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_inputs_cpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_inputs_gpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_eigenvectors_are_orthonormal_cpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_eigenvectors_are_orthonormal_gpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_cpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_gpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_eigen_cpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_eigen_gpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_not_nan_or_inf_cpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_not_nan_or_inf_gpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_more_dimensions PASSED
+
+=============================== warnings summary ===============================
+tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_cpu
+tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_gpu
+  /local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:153: UserWarning: Anomaly Detection has been enabled. This mode will increase the runtime and should only be enabled for debugging.
+    with torch.autograd.detect_anomaly():
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 13 passed, 2 warnings in 4.26s ========================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 13 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_eigenvalues_cpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_eigenvalues_gpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_inputs_cpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_inputs_gpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_eigenvectors_are_orthonormal_cpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_eigenvectors_are_orthonormal_gpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_cpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_gpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_eigen_cpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_eigen_gpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_not_nan_or_inf_cpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_not_nan_or_inf_gpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_more_dimensions PASSED
+
+=============================== warnings summary ===============================
+tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_cpu
+tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_gpu
+  /local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:153: UserWarning: Anomaly Detection has been enabled. This mode will increase the runtime and should only be enabled for debugging.
+    with torch.autograd.detect_anomaly():
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 13 passed, 2 warnings in 6.06s ========================

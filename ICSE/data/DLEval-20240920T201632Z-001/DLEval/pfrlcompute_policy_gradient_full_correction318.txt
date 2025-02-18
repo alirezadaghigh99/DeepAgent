@@ -1,0 +1,14 @@
+stage: Training
+task: 
+data: 
+
+prompt:
+Create a function `compute_policy_gradient_full_correction` that calculates the off-policy bias correction term for all actions. The function takes `action_distrib` and `action_distrib_mu` (both `torch.distributions.Categorical`), `action_value`, a scalar `v`, and a `truncation_threshold`. It computes the importance weights, applies truncation, calculates the advantage, and returns the corrected policy gradient. Ensure assertions on input types and values, and use `torch.no_grad()` during weight computation.
+
+ ground Truth:pfrl/agents/acer.py
+
+ repo:pfrl
+
+ function:compute_policy_gradient_full_correction
+ 
+ test_cases:tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_full_correction_term

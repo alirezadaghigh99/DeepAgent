@@ -1,0 +1,155 @@
+output file:
+processed_neurodiffeqsafe_diff45.json
+function:
+safe_diff
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_diff FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_higher_order_derivatives', 'FAILED ../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_safe_diff', '../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_safe_diff FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_diff', '../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_higher_order_derivatives FAILED'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq
+collecting ... collected 5 items
+
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_safe_diff FAILED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_unsafe_diff PASSED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_diff FAILED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_higher_order_derivatives FAILED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_legacy_signature PASSED
+
+=================================== FAILURES ===================================
+________________________________ test_safe_diff ________________________________
+
+    def test_safe_diff():
+        with pytest.raises(ValueError):
+            u, t = get_data(flatten_u=True, flatten_t=True)
+>           check_output(t, safe_diff(u, t))
+
+/local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/neurodiffeq/_version_utils.py:35: in wrapper
+    return f(*args, **kwargs)
+/local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/neurodiffeq/neurodiffeq.py:38: in safe_diff
+    return safe_diff(u, t, order)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+u = tensor([0.7568, 0.0929, 0.3489, 0.3282, 0.4568, 0.0423, 0.9237, 0.0174, 0.9551,
+        0.2980], device='cuda:0', grad_fn=<ViewBackward0>)
+t = tensor([0.8699, 0.3048, 0.5907, 0.5729, 0.6759, 0.2057, 0.9611, 0.1319, 0.9773,
+        0.5459], device='cuda:0', requires_grad=True)
+order = 1
+
+    def safe_diff(u, t, order=1):
+        if not isinstance(u, torch.Tensor) or not isinstance(t, torch.Tensor):
+            raise ValueError('Both u and t must be PyTorch tensors.')
+>       if u.shape != t.shape or u.shape[1] != 1:
+E       IndexError: tuple index out of range
+
+/local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/neurodiffeq/temp.py:9: IndexError
+__________________________________ test_diff ___________________________________
+
+    def test_diff():
+        # with default shape_check
+        with pytest.raises(ValueError):
+            u, t = get_data(flatten_u=True, flatten_t=True)
+>           check_output(t, diff(u, t))
+
+/local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py:51: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/neurodiffeq/_version_utils.py:35: in wrapper
+    return f(*args, **kwargs)
+/local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/neurodiffeq/neurodiffeq.py:77: in diff
+    return safe_diff(u, t, order=order)
+/local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/neurodiffeq/_version_utils.py:35: in wrapper
+    return f(*args, **kwargs)
+/local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/neurodiffeq/neurodiffeq.py:38: in safe_diff
+    return safe_diff(u, t, order)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+u = tensor([0.5101, 0.2585, 0.8308, 0.0152, 0.0011, 0.0854, 0.3293, 0.0726, 0.1471,
+        0.2223], device='cuda:0', grad_fn=<ViewBackward0>)
+t = tensor([0.7142, 0.5085, 0.9115, 0.1233, 0.0328, 0.2923, 0.5738, 0.2695, 0.3836,
+        0.4715], device='cuda:0', requires_grad=True)
+order = 1
+
+    def safe_diff(u, t, order=1):
+        if not isinstance(u, torch.Tensor) or not isinstance(t, torch.Tensor):
+            raise ValueError('Both u and t must be PyTorch tensors.')
+>       if u.shape != t.shape or u.shape[1] != 1:
+E       IndexError: tuple index out of range
+
+/local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/neurodiffeq/temp.py:9: IndexError
+________________________ test_higher_order_derivatives _________________________
+
+    def test_higher_order_derivatives():
+        u, t = get_data(flatten_u=False, flatten_t=False, f=lambda x: x ** 2)
+>       assert torch.isclose(diff(u, t), t * 2).all()
+
+/local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py:89: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <torch.utils._device.DeviceContext object at 0x72b18ee929d0>
+func = <built-in method isclose of type object at 0x72b2a4cd0240>, types = ()
+args = (tensor([[1.6554],
+        [1.1217],
+        [0.9655],
+        [0.8145],
+        [1.2469],
+        [1.4967],
+        [...19],
+        [1.1214],
+        [0.8376],
+        [1.9943],
+        [1.5939]], device='cuda:0', grad_fn=<MulBackward0>))
+kwargs = {}
+
+    def __torch_function__(self, func, types, args=(), kwargs=None):
+        kwargs = kwargs or {}
+        if func in _device_constructors() and kwargs.get('device') is None:
+            kwargs['device'] = self.device
+>       return func(*args, **kwargs)
+E       RuntimeError: The size of tensor a (9) must match the size of tensor b (10) at non-singleton dimension 0
+
+/local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/venv/lib/python3.11/site-packages/torch/utils/_device.py:106: RuntimeError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_safe_diff
+FAILED ../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_diff
+FAILED ../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_higher_order_derivatives
+========================= 3 failed, 2 passed in 2.28s ==========================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq
+collecting ... collected 5 items
+
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_safe_diff PASSED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_unsafe_diff PASSED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_diff PASSED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_higher_order_derivatives PASSED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_legacy_signature PASSED
+
+============================== 5 passed in 2.04s ===============================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq
+collecting ... collected 5 items
+
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_safe_diff PASSED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_unsafe_diff PASSED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_diff PASSED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_higher_order_derivatives PASSED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_legacy_signature PASSED
+
+============================== 5 passed in 2.11s ===============================

@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: 
+
+prompt:
+Generate a Python function called diff that calculates the derivative of a variable with respect to another variable. The function takes in two torch tensors u and t, representing the variables, an optional parameter order for the order of the derivative (default is 1), and a boolean parameter shape_check for performing shape checking (default is True). The function returns the derivative evaluated at t as a torch tensor. 
+
+ ground Truth:neurodiffeq/neurodiffeq.py
+
+ repo:neurodiffeq
+
+ function:diff
+ 
+ test_cases:tests/test_neurodiffeq.py

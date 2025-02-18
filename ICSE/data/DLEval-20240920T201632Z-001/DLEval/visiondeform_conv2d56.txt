@@ -1,0 +1,15 @@
+stage: Model Construction
+task: Classification
+data: image
+
+prompt:
+Create a Python function called deform_conv2d that performs Deformable Convolution v2 or Deformable Convolution based on the presence of a mask. The function takes input, offset, weight, and optional bias tensors along with stride, padding, dilation, and mask parameters. It returns the result of the convolution operation as a tensor. The function also includes examples of how to use it with sample input tensors.
+
+ ground Truth:torchvision/ops/deform_conv.py
+
+ repo:vision
+
+ function:deform_conv2d
+ 
+ test_cases:test/test_ops.py::TestDeformConv::test_backward
+

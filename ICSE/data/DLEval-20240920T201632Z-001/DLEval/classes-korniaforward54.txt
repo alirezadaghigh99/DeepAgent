@@ -1,0 +1,32 @@
+stage: Image
+task: 
+data: Training
+
+prompt:
+
+
+**Task:** Write the `forward` method for the `Rot180` class. This method should rotate the input tensor by 180 degrees.
+
+**Class Context:**
+```python
+class Rot180(Module):
+    def forward(self, input: Tensor) -> Tensor:
+        # Implement this function
+```
+
+**Requirements:**
+- The input tensor can be of shape `(C, H, W)` or a batch of tensors of shape `(*, C, H, W)`.
+
+---
+
+This prompt guides the user to implement the `forward` method that performs a 180-degree rotation on the input tensor.
+
+ ground Truth:kornia/geometry/transform/flips.py
+
+ repo:kornia
+
+ class:Rot180
+ 
+ function:forward
+ 
+ test_cases:tests/geometry/transform/test_flip.py::TestRot180

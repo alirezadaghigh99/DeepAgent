@@ -1,0 +1,23 @@
+stage: Training
+task: 
+data: 
+
+prompt:
+Write a python function grad that calculate Gradient of tensor u with respect to a tuple of tensors xs.
+    Given :math:`u` and :math:`x_1`, ..., :math:`x_n`, the function returns
+    :math:`\frac{\partial u}{\partial x_1}`, ..., :math:`\frac{\partial u}{\partial x_n}`
+
+    :param u: The :math:`u` described above.
+    :type u: `torch.Tensor`
+    :param *xs: The sequence of :math:`x_i` described above.
+    :type xs: `torch.Tensor`
+    :return: A tuple of :math:`\frac{\partial u}{\partial x_1}`, ..., :math:`\frac{\partial u}{\partial x_n}`
+    :rtype: List[`torch.Tensor`]
+
+ ground Truth:neurodiffeq/operators.py#L15
+
+ repo:neurodiffeq
+
+ function:grad
+ 
+ test_cases:tests/test_operators_spherical.py

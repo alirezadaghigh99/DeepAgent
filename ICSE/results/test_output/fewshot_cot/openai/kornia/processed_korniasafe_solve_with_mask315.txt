@@ -1,0 +1,205 @@
+output file:
+processed_korniasafe_solve_with_mask315.json
+function:
+safe_solve_with_mask
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/utils/test_helpers.py::TestSolveWithMask::test_all_bad[cpu-float32] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/utils/test_helpers.py::TestSolveWithMask::test_all_bad[cpu-float32]'}
+
+All Test Cases On Generated code:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'inductor', 'onnxrt', 'tvm', 'openxla', 'cudagraphs', 'jit', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 2 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/utils/test_helpers.py::TestSolveWithMask::test_smoke[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/utils/test_helpers.py::TestSolveWithMask::test_all_bad[cpu-float32] FAILED
+
+=================================== FAILURES ===================================
+_________________ TestSolveWithMask.test_all_bad[cpu-float32] __________________
+
+self = <test_helpers.TestSolveWithMask object at 0x7f266cf2e3e0>
+device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.skipif(
+        (int(torch.__version__.split(".")[0]) == 1) and (int(torch.__version__.split(".")[1]) < 10),
+        reason="<1.10.0 not supporting",
+    )
+    def test_all_bad(self, device, dtype):
+        A = torch.ones(10, 3, 3, device=device, dtype=dtype)
+        B = torch.ones(10, 3, device=device, dtype=dtype)
+    
+>       X, _, mask = safe_solve_with_mask(B, A)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/utils/test_helpers.py:143: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/helpers.py:198: in safe_solve_with_mask
+    return safe_solve_with_mask(B, A)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/temp.py:50: in safe_solve_with_mask
+    raise e
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+B = tensor([[1., 1., 1.],
+        [1., 1., 1.],
+        [1., 1., 1.],
+        [1., 1., 1.],
+        [1., 1., 1.],
+        [1., 1., 1.],
+        [1., 1., 1.],
+        [1., 1., 1.],
+        [1., 1., 1.],
+        [1., 1., 1.]])
+A = tensor([[[1., 1., 1.],
+         [1., 1., 1.],
+         [1., 1., 1.]],
+
+        [[1., 1., 1.],
+         [1., 1., 1.],
+ ...
+         [1., 1., 1.],
+         [1., 1., 1.]],
+
+        [[1., 1., 1.],
+         [1., 1., 1.],
+         [1., 1., 1.]]])
+
+    def safe_solve_with_mask(B: torch.Tensor, A: torch.Tensor):
+        """
+        Solve the system of linear equations AX = B safely, handling singular matrices.
+    
+        Args:
+            B (Tensor): The right-hand side tensor in the equation AX = B.
+            A (Tensor): The matrix tensor that will be solved against B.
+    
+        Returns:
+            X (Tensor): The solution tensor that satisfies AX = B.
+            A_LU (Tensor): The LU decomposition of matrix A.
+            valid_mask (Tensor): A boolean tensor indicating which rows were solved successfully.
+        """
+        assert isinstance(B, torch.Tensor), 'B must be a torch.Tensor'
+        if B.dtype not in [torch.float32, torch.float64]:
+            B = B.to(torch.float32)
+        pytorch_version = torch.__version__.split('.')
+        major_version = int(pytorch_version[0])
+        minor_version = int(pytorch_version[1])
+        valid_mask = torch.ones(B.size(0), dtype=torch.bool, device=B.device)
+        try:
+            if major_version > 1 or (major_version == 1 and minor_version >= 10):
+>               A_LU, pivots = torch.linalg.lu_factor(A)
+E               RuntimeError: torch.linalg.lu_factor: (Batch element 0): U[2,2] is zero and using it on lu_solve would result in a division by zero. If you still want to perform the factorization, consider calling linalg.lu(A, pivot) or linalg.lu_factor_ex(A, pivot)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/temp.py:38: RuntimeError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/utils/test_helpers.py::TestSolveWithMask::test_all_bad[cpu-float32]
+========================= 1 failed, 1 passed in 0.37s ==========================
+
+
+Final Test Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'cudagraphs', 'inductor', 'openxla', 'jit', 'onnxrt', 'tvm', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 2 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/utils/test_helpers.py::TestSolveWithMask::test_smoke[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/utils/test_helpers.py::TestSolveWithMask::test_all_bad[cpu-float32] PASSED
+
+============================== 2 passed in 0.19s ===============================
+
+
+Initial Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'tvm', 'inductor', 'cudagraphs', 'onnxrt', 'jit', None, 'openxla'}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 2 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/utils/test_helpers.py::TestSolveWithMask::test_smoke[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/utils/test_helpers.py::TestSolveWithMask::test_all_bad[cpu-float32] PASSED
+
+============================== 2 passed in 0.14s ===============================

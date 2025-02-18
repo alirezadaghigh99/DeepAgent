@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: Regression
+data: 
+
+prompt:
+Create a Python function called compute_centroid that takes in a numpy array of shape (N, 3) representing coordinates of atoms and returns a numpy array of shape (3,) representing the centroid (x, y, z) of the provided coordinates.
+
+ ground Truth:deepchem/utils/geometry_utils.py
+
+ repo:deepchem
+
+ function:compute_centroid
+ 
+ test_cases:deepchem/utils/test/test_geometry_utils.py

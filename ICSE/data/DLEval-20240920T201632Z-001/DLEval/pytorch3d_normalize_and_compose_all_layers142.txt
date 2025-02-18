@@ -1,0 +1,21 @@
+stage: Pre-Post processing
+task: Segmentation
+data: Image
+
+prompt:
+Generate a Python function called _normalize_and_compose_all_layers that normalizes each bg/surface/fg buffer by its weight and composes them using alpha-compositing. The function takes three input parameters: background_color (a 3-dimensional RGB tensor), splatted_colors_per_occlusion_layer (a 5-dimensional RGBA tensor representing foreground, surface, and background splatting), and splatted_weights_per_occlusion_layer (a 4-dimensional weight tensor). The function returns output_colors, a 4-dimensional RGBA tensor. Args:
+        background_color: (3) RGB tensor.
+        splatter_colors_per_occlusion_layer: (N, H, W, 4, 3) RGBA tensor, last dimension
+            corresponds to foreground, surface, and background splatting.
+        splatted_weights_per_occlusion_layer: (N, H, W, 1, 3) weight tensor.
+
+    Returns:
+        output_colors: (N, H, W, 4) RGBA tensor.
+
+ ground Truth:pytorch3d/renderer/splatter_blend.py
+
+ repo:pytorch3d
+
+ function:_normalize_and_compose_all_layers
+ 
+ test_cases:tests/test_splatter_blend.py

@@ -1,0 +1,912 @@
+output file:
+processed_pytorch3drasterize_meshes336.json
+function:
+rasterize_meshes
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_order_of_ties', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpu_vs_cuda FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_bin_size_error', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_bary_clip FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cuda_naive_vs_binned_perspective_correct', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpu_vs_cuda', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cuda_naive', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_bin_size_error FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_naive_vs_cuda_binned', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpp_bary_clip', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cpu_naive FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cpu_naive', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cuda_binned FAILED', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cuda_naive FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cuda_binned', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_bary_clip', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpu_vs_cuda_naive FAILED', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_perspective_correct FAILED', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpp_perspective_correct FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpu_vs_cuda_naive', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_naive_vs_cuda_binned FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_perspective_correct', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpp_perspective_correct', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_order_of_ties FAILED', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cuda_naive_vs_binned_perspective_correct FAILED', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpp_bary_clip FAILED'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 17 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_bin_size_error FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_coarse_cpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_coarse_cuda PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_compare_coarse_cpu_vs_cuda PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_bary_clip FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_naive_vs_cuda_binned FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_perspective_correct FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpu_vs_cuda_naive FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cuda_naive_vs_binned_perspective_correct FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_order_of_ties FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpp_bary_clip FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpp_perspective_correct FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpu_vs_cuda FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cpu_naive FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cuda_binned FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cuda_naive FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_python PASSED
+
+=================================== FAILURES ===================================
+___________________ TestRasterizeMeshes.test_bin_size_error ____________________
+
+self = <tests.test_rasterize_meshes.TestRasterizeMeshes testMethod=test_bin_size_error>
+
+    def test_bin_size_error(self):
+        meshes = ico_sphere(2)
+        image_size = 1024
+        bin_size = 16
+        with self.assertRaisesRegex(ValueError, "bin_size too small"):
+>           rasterize_meshes(meshes, image_size, 0.0, 2, bin_size)
+E           AssertionError: ValueError not raised
+
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:466: AssertionError
+________________ TestRasterizeMeshes.test_cpp_vs_cuda_bary_clip ________________
+
+self = <tests.test_rasterize_meshes.TestRasterizeMeshes testMethod=test_cpp_vs_cuda_bary_clip>
+
+    def test_cpp_vs_cuda_bary_clip(self):
+        meshes = ico_sphere(2, device=torch.device("cpu"))
+        verts1, faces1 = meshes.get_mesh_verts_faces(0)
+        verts1.requires_grad = True
+        meshes1 = Meshes(verts=[verts1], faces=[faces1])
+        device = get_random_cuda_device()
+        verts2 = verts1.detach().to(device).requires_grad_(True)
+        faces2 = faces1.detach().clone().to(device)
+        meshes2 = Meshes(verts=[verts2], faces=[faces2])
+    
+        kwargs = {"image_size": 64, "clip_barycentric_coords": True}
+        fn1 = functools.partial(rasterize_meshes, meshes1, **kwargs)
+        fn2 = functools.partial(rasterize_meshes, meshes2, bin_size=0, **kwargs)
+        args = ()
+>       self._compare_impls(fn1, fn2, args, args, verts1, verts2, compare_grads=True)
+
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:410: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <tests.test_rasterize_meshes.TestRasterizeMeshes testMethod=test_cpp_vs_cuda_bary_clip>
+fn1 = functools.partial(<function rasterize_meshes at 0x7fa3d4589040>, <pytorch3d.structures.meshes.Meshes object at 0x7fa3cfb38820>, image_size=64, clip_barycentric_coords=True)
+fn2 = functools.partial(<function rasterize_meshes at 0x7fa3d4589040>, <pytorch3d.structures.meshes.Meshes object at 0x7fa3cfb38760>, bin_size=0, image_size=64, clip_barycentric_coords=True)
+args1 = (), args2 = ()
+grad_var1 = tensor([[-0.5257,  0.8507,  0.0000],
+        [ 0.5257,  0.8507,  0.0000],
+        [-0.5257, -0.8507,  0.0000],
+       ...2629,  0.1624, -0.9511],
+        [ 0.5257,  0.0000, -0.8506],
+        [-0.5257,  0.0000, -0.8506]], requires_grad=True)
+grad_var2 = tensor([[-0.5257,  0.8507,  0.0000],
+        [ 0.5257,  0.8507,  0.0000],
+        [-0.5257, -0.8507,  0.0000],
+       ....9511],
+        [ 0.5257,  0.0000, -0.8506],
+        [-0.5257,  0.0000, -0.8506]], device='cuda:0', requires_grad=True)
+compare_grads = True
+
+    def _compare_impls(
+        self,
+        fn1,
+        fn2,
+        args1,
+        args2,
+        grad_var1=None,
+        grad_var2=None,
+        compare_grads=False,
+    ):
+        idx1, zbuf1, bary1, dist1 = fn1(*args1)
+        idx2, zbuf2, bary2, dist2 = fn2(*args2)
+        self.assertTrue((idx1.cpu() == idx2.cpu()).all().item())
+        self.assertClose(zbuf1.cpu(), zbuf2.cpu(), rtol=1e-4)
+        self.assertClose(dist1.cpu(), dist2.cpu(), rtol=6e-3)
+        self.assertClose(bary1.cpu(), bary2.cpu(), rtol=1e-3)
+        if not compare_grads:
+            return
+    
+        # Compare gradients.
+        torch.manual_seed(231)
+        grad_zbuf = torch.randn_like(zbuf1)
+        grad_dist = torch.randn_like(dist1)
+        grad_bary = torch.randn_like(bary1)
+        loss1 = (
+            (dist1 * grad_dist).sum()
+            + (zbuf1 * grad_zbuf).sum()
+            + (bary1 * grad_bary).sum()
+        )
+    
+        # avoid gradient error if rasterize_meshes_python() culls all triangles
+        loss1 += grad_var1.sum() * 0.0
+    
+        loss1.backward()
+        grad_verts1 = grad_var1.grad.data.clone().cpu()
+    
+        grad_zbuf = grad_zbuf.to(zbuf2)
+        grad_dist = grad_dist.to(dist2)
+        grad_bary = grad_bary.to(bary2)
+        loss2 = (
+            (dist2 * grad_dist).sum()
+            + (zbuf2 * grad_zbuf).sum()
+            + (bary2 * grad_bary).sum()
+        )
+    
+        # avoid gradient error if rasterize_meshes_python() culls all triangles
+>       loss2 += grad_var2.sum() * 0.0
+E       RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!
+
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:589: RuntimeError
+__________ TestRasterizeMeshes.test_cpp_vs_cuda_naive_vs_cuda_binned ___________
+
+self = <tests.test_rasterize_meshes.TestRasterizeMeshes testMethod=test_cpp_vs_cuda_naive_vs_cuda_binned>
+
+    def test_cpp_vs_cuda_naive_vs_cuda_binned(self):
+        # Make sure that the backward pass runs for all pathways
+        image_size = 64  # test is too slow for very large images.
+        N = 1
+        radius = 0.1**2
+        faces_per_pixel = 3
+    
+        grad_zbuf = torch.randn(N, image_size, image_size, faces_per_pixel)
+        grad_dist = torch.randn(N, image_size, image_size, faces_per_pixel)
+        grad_bary = torch.randn(N, image_size, image_size, faces_per_pixel, 3)
+    
+        device = torch.device("cpu")
+        meshes = ico_sphere(0, device)
+        verts, faces = meshes.get_mesh_verts_faces(0)
+        verts.requires_grad = True
+        meshes = Meshes(verts=[verts], faces=[faces])
+    
+        # Option I: CPU, naive
+        args = (meshes, image_size, radius, faces_per_pixel)
+        idx1, zbuf1, bary1, dist1 = rasterize_meshes(*args)
+    
+        loss = (
+            (zbuf1 * grad_zbuf).sum()
+            + (dist1 * grad_dist).sum()
+            + (bary1 * grad_bary).sum()
+        )
+>       loss.backward()
+
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:260: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/venv/lib/python3.8/site-packages/torch/_tensor.py:521: in backward
+    torch.autograd.backward(
+/local/data0/moved_data/pytorch3d/venv/lib/python3.8/site-packages/torch/autograd/__init__.py:289: in backward
+    _engine_run_backward(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+t_outputs = (tensor(nan),), args = ((None,), False, False, ())
+kwargs = {'accumulate_grad': True, 'allow_unreachable': True}
+attach_logging_hooks = False
+
+    def _engine_run_backward(t_outputs, *args, **kwargs):
+        attach_logging_hooks = log.getEffectiveLevel() <= logging.DEBUG
+        if attach_logging_hooks:
+            unregister_hooks = _register_logging_hooks_on_whole_graph(t_outputs)
+        try:
+>           return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+                t_outputs, *args, **kwargs
+            )  # Calls into the C++ engine to run the backward pass
+E           RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn
+
+/local/data0/moved_data/pytorch3d/venv/lib/python3.8/site-packages/torch/autograd/graph.py:769: RuntimeError
+___________ TestRasterizeMeshes.test_cpp_vs_cuda_perspective_correct ___________
+
+self = <tests.test_rasterize_meshes.TestRasterizeMeshes testMethod=test_cpp_vs_cuda_perspective_correct>
+
+    def test_cpp_vs_cuda_perspective_correct(self):
+        meshes = ico_sphere(2, device=torch.device("cpu"))
+        verts1, faces1 = meshes.get_mesh_verts_faces(0)
+        verts1.requires_grad = True
+        meshes1 = Meshes(verts=[verts1], faces=[faces1])
+        device = get_random_cuda_device()
+        verts2 = verts1.detach().to(device).requires_grad_(True)
+        faces2 = faces1.detach().clone().to(device)
+        meshes2 = Meshes(verts=[verts2], faces=[faces2])
+    
+        kwargs = {"image_size": 64, "perspective_correct": True}
+        fn1 = functools.partial(rasterize_meshes, meshes1, **kwargs)
+        fn2 = functools.partial(rasterize_meshes, meshes2, bin_size=0, **kwargs)
+        args = ()
+>       self._compare_impls(fn1, fn2, args, args, verts1, verts2, compare_grads=True)
+
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:443: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <tests.test_rasterize_meshes.TestRasterizeMeshes testMethod=test_cpp_vs_cuda_perspective_correct>
+fn1 = functools.partial(<function rasterize_meshes at 0x7fa3d4589040>, <pytorch3d.structures.meshes.Meshes object at 0x7fa484af3430>, image_size=64, perspective_correct=True)
+fn2 = functools.partial(<function rasterize_meshes at 0x7fa3d4589040>, <pytorch3d.structures.meshes.Meshes object at 0x7fa484af34f0>, bin_size=0, image_size=64, perspective_correct=True)
+args1 = (), args2 = ()
+grad_var1 = tensor([[-0.5257,  0.8507,  0.0000],
+        [ 0.5257,  0.8507,  0.0000],
+        [-0.5257, -0.8507,  0.0000],
+       ...2629,  0.1624, -0.9511],
+        [ 0.5257,  0.0000, -0.8506],
+        [-0.5257,  0.0000, -0.8506]], requires_grad=True)
+grad_var2 = tensor([[-0.5257,  0.8507,  0.0000],
+        [ 0.5257,  0.8507,  0.0000],
+        [-0.5257, -0.8507,  0.0000],
+       ....9511],
+        [ 0.5257,  0.0000, -0.8506],
+        [-0.5257,  0.0000, -0.8506]], device='cuda:0', requires_grad=True)
+compare_grads = True
+
+    def _compare_impls(
+        self,
+        fn1,
+        fn2,
+        args1,
+        args2,
+        grad_var1=None,
+        grad_var2=None,
+        compare_grads=False,
+    ):
+        idx1, zbuf1, bary1, dist1 = fn1(*args1)
+        idx2, zbuf2, bary2, dist2 = fn2(*args2)
+        self.assertTrue((idx1.cpu() == idx2.cpu()).all().item())
+        self.assertClose(zbuf1.cpu(), zbuf2.cpu(), rtol=1e-4)
+        self.assertClose(dist1.cpu(), dist2.cpu(), rtol=6e-3)
+        self.assertClose(bary1.cpu(), bary2.cpu(), rtol=1e-3)
+        if not compare_grads:
+            return
+    
+        # Compare gradients.
+        torch.manual_seed(231)
+        grad_zbuf = torch.randn_like(zbuf1)
+        grad_dist = torch.randn_like(dist1)
+        grad_bary = torch.randn_like(bary1)
+        loss1 = (
+            (dist1 * grad_dist).sum()
+            + (zbuf1 * grad_zbuf).sum()
+            + (bary1 * grad_bary).sum()
+        )
+    
+        # avoid gradient error if rasterize_meshes_python() culls all triangles
+        loss1 += grad_var1.sum() * 0.0
+    
+        loss1.backward()
+        grad_verts1 = grad_var1.grad.data.clone().cpu()
+    
+        grad_zbuf = grad_zbuf.to(zbuf2)
+        grad_dist = grad_dist.to(dist2)
+        grad_bary = grad_bary.to(bary2)
+        loss2 = (
+            (dist2 * grad_dist).sum()
+            + (zbuf2 * grad_zbuf).sum()
+            + (bary2 * grad_bary).sum()
+        )
+    
+        # avoid gradient error if rasterize_meshes_python() culls all triangles
+>       loss2 += grad_var2.sum() * 0.0
+E       RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!
+
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:589: RuntimeError
+__________________ TestRasterizeMeshes.test_cpu_vs_cuda_naive __________________
+
+self = <tests.test_rasterize_meshes.TestRasterizeMeshes testMethod=test_cpu_vs_cuda_naive>
+
+    def test_cpu_vs_cuda_naive(self):
+        """
+        Compare naive versions of cuda and cpp
+        """
+    
+        torch.manual_seed(231)
+        image_size = 64
+        radius = 0.1**2
+        faces_per_pixel = 3
+        device = torch.device("cpu")
+        meshes_cpu = ico_sphere(0, device)
+        verts1, faces1 = meshes_cpu.get_mesh_verts_faces(0)
+        verts1.requires_grad = True
+        meshes_cpu = Meshes(verts=[verts1], faces=[faces1])
+    
+        device = get_random_cuda_device()
+        meshes_cuda = ico_sphere(0, device)
+        verts2, faces2 = meshes_cuda.get_mesh_verts_faces(0)
+        verts2.requires_grad = True
+        meshes_cuda = Meshes(verts=[verts2], faces=[faces2])
+    
+        barycentric_clip = True
+        args_cpu = (
+            meshes_cpu,
+            image_size,
+            radius,
+            faces_per_pixel,
+            None,
+            None,
+            False,
+            barycentric_clip,
+            False,
+        )
+        args_cuda = (
+            meshes_cuda,
+            image_size,
+            radius,
+            faces_per_pixel,
+            0,
+            0,
+            False,
+            barycentric_clip,
+            False,
+        )
+>       self._compare_impls(
+            rasterize_meshes,
+            rasterize_meshes,
+            args_cpu,
+            args_cuda,
+            verts1,
+            verts2,
+            compare_grads=True,
+        )
+
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:218: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <tests.test_rasterize_meshes.TestRasterizeMeshes testMethod=test_cpu_vs_cuda_naive>
+fn1 = <function rasterize_meshes at 0x7fa3d4589040>
+fn2 = <function rasterize_meshes at 0x7fa3d4589040>
+args1 = (<pytorch3d.structures.meshes.Meshes object at 0x7fa484a7d850>, 64, 0.010000000000000002, 3, None, None, ...)
+args2 = (<pytorch3d.structures.meshes.Meshes object at 0x7fa484a7d760>, 64, 0.010000000000000002, 3, 0, 0, ...)
+grad_var1 = tensor([[-0.5257,  0.8507,  0.0000],
+        [ 0.5257,  0.8507,  0.0000],
+        [-0.5257, -0.8507,  0.0000],
+       ...8507,  0.0000,  0.5257],
+        [-0.8507,  0.0000, -0.5257],
+        [-0.8507,  0.0000,  0.5257]], requires_grad=True)
+grad_var2 = tensor([[-0.5257,  0.8507,  0.0000],
+        [ 0.5257,  0.8507,  0.0000],
+        [-0.5257, -0.8507,  0.0000],
+       ....5257],
+        [-0.8507,  0.0000, -0.5257],
+        [-0.8507,  0.0000,  0.5257]], device='cuda:0', requires_grad=True)
+compare_grads = True
+
+    def _compare_impls(
+        self,
+        fn1,
+        fn2,
+        args1,
+        args2,
+        grad_var1=None,
+        grad_var2=None,
+        compare_grads=False,
+    ):
+        idx1, zbuf1, bary1, dist1 = fn1(*args1)
+        idx2, zbuf2, bary2, dist2 = fn2(*args2)
+        self.assertTrue((idx1.cpu() == idx2.cpu()).all().item())
+        self.assertClose(zbuf1.cpu(), zbuf2.cpu(), rtol=1e-4)
+        self.assertClose(dist1.cpu(), dist2.cpu(), rtol=6e-3)
+        self.assertClose(bary1.cpu(), bary2.cpu(), rtol=1e-3)
+        if not compare_grads:
+            return
+    
+        # Compare gradients.
+        torch.manual_seed(231)
+        grad_zbuf = torch.randn_like(zbuf1)
+        grad_dist = torch.randn_like(dist1)
+        grad_bary = torch.randn_like(bary1)
+        loss1 = (
+            (dist1 * grad_dist).sum()
+            + (zbuf1 * grad_zbuf).sum()
+            + (bary1 * grad_bary).sum()
+        )
+    
+        # avoid gradient error if rasterize_meshes_python() culls all triangles
+        loss1 += grad_var1.sum() * 0.0
+    
+        loss1.backward()
+        grad_verts1 = grad_var1.grad.data.clone().cpu()
+    
+        grad_zbuf = grad_zbuf.to(zbuf2)
+        grad_dist = grad_dist.to(dist2)
+        grad_bary = grad_bary.to(bary2)
+        loss2 = (
+            (dist2 * grad_dist).sum()
+            + (zbuf2 * grad_zbuf).sum()
+            + (bary2 * grad_bary).sum()
+        )
+    
+        # avoid gradient error if rasterize_meshes_python() culls all triangles
+>       loss2 += grad_var2.sum() * 0.0
+E       RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!
+
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:589: RuntimeError
+______ TestRasterizeMeshes.test_cuda_naive_vs_binned_perspective_correct _______
+
+self = <tests.test_rasterize_meshes.TestRasterizeMeshes testMethod=test_cuda_naive_vs_binned_perspective_correct>
+
+    def test_cuda_naive_vs_binned_perspective_correct(self):
+        device = get_random_cuda_device()
+        meshes = ico_sphere(2, device=device)
+        verts1, faces1 = meshes.get_mesh_verts_faces(0)
+        verts1.requires_grad = True
+        meshes1 = Meshes(verts=[verts1], faces=[faces1])
+        verts2 = verts1.detach().clone().requires_grad_(True)
+        faces2 = faces1.detach().clone()
+        meshes2 = Meshes(verts=[verts2], faces=[faces2])
+    
+        kwargs = {"image_size": 64, "perspective_correct": True}
+        fn1 = functools.partial(rasterize_meshes, meshes1, bin_size=0, **kwargs)
+        fn2 = functools.partial(rasterize_meshes, meshes2, bin_size=8, **kwargs)
+        args = ()
+>       self._compare_impls(fn1, fn2, args, args, verts1, verts2, compare_grads=True)
+
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:459: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <tests.test_rasterize_meshes.TestRasterizeMeshes testMethod=test_cuda_naive_vs_binned_perspective_correct>
+fn1 = functools.partial(<function rasterize_meshes at 0x7fa3d4589040>, <pytorch3d.structures.meshes.Meshes object at 0x7fa484ae90a0>, bin_size=0, image_size=64, perspective_correct=True)
+fn2 = functools.partial(<function rasterize_meshes at 0x7fa3d4589040>, <pytorch3d.structures.meshes.Meshes object at 0x7fa484ae9a90>, bin_size=8, image_size=64, perspective_correct=True)
+args1 = (), args2 = ()
+grad_var1 = tensor([[-0.5257,  0.8507,  0.0000],
+        [ 0.5257,  0.8507,  0.0000],
+        [-0.5257, -0.8507,  0.0000],
+       ....9511],
+        [ 0.5257,  0.0000, -0.8506],
+        [-0.5257,  0.0000, -0.8506]], device='cuda:0', requires_grad=True)
+grad_var2 = tensor([[-0.5257,  0.8507,  0.0000],
+        [ 0.5257,  0.8507,  0.0000],
+        [-0.5257, -0.8507,  0.0000],
+       ....9511],
+        [ 0.5257,  0.0000, -0.8506],
+        [-0.5257,  0.0000, -0.8506]], device='cuda:0', requires_grad=True)
+compare_grads = True
+
+    def _compare_impls(
+        self,
+        fn1,
+        fn2,
+        args1,
+        args2,
+        grad_var1=None,
+        grad_var2=None,
+        compare_grads=False,
+    ):
+        idx1, zbuf1, bary1, dist1 = fn1(*args1)
+        idx2, zbuf2, bary2, dist2 = fn2(*args2)
+        self.assertTrue((idx1.cpu() == idx2.cpu()).all().item())
+        self.assertClose(zbuf1.cpu(), zbuf2.cpu(), rtol=1e-4)
+        self.assertClose(dist1.cpu(), dist2.cpu(), rtol=6e-3)
+        self.assertClose(bary1.cpu(), bary2.cpu(), rtol=1e-3)
+        if not compare_grads:
+            return
+    
+        # Compare gradients.
+        torch.manual_seed(231)
+        grad_zbuf = torch.randn_like(zbuf1)
+        grad_dist = torch.randn_like(dist1)
+        grad_bary = torch.randn_like(bary1)
+        loss1 = (
+            (dist1 * grad_dist).sum()
+            + (zbuf1 * grad_zbuf).sum()
+            + (bary1 * grad_bary).sum()
+        )
+    
+        # avoid gradient error if rasterize_meshes_python() culls all triangles
+>       loss1 += grad_var1.sum() * 0.0
+E       RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!
+
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:574: RuntimeError
+____________________ TestRasterizeMeshes.test_order_of_ties ____________________
+
+self = <tests.test_rasterize_meshes.TestRasterizeMeshes testMethod=test_order_of_ties>
+
+    def test_order_of_ties(self):
+        # Tied faces are rasterized in index order
+        # We rasterize a mesh with many faces.
+        device = torch.device("cuda:0")
+        verts = -5 * torch.eye(3, dtype=torch.float32, device=device)[None]
+        faces = torch.arange(3, device=device, dtype=torch.int64).expand(1, 100, 3)
+        mesh = Meshes(verts=verts, faces=faces)
+    
+        R, T = look_at_view_transform(2.7, 0.0, 0.0)
+        cameras = FoVPerspectiveCameras(device=device, R=R, T=T)
+    
+        raster_settings = RasterizationSettings(
+            image_size=28, faces_per_pixel=100, bin_size=0
+        )
+        rasterizer = MeshRasterizer(raster_settings=raster_settings)
+    
+        out = rasterizer(mesh, cameras=cameras)
+>       self.assertClose(
+            out.pix_to_face[0, 14:, :14],
+            torch.arange(100, device=device).expand(14, 14, 100),
+        )
+
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:1182: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <tests.test_rasterize_meshes.TestRasterizeMeshes testMethod=test_order_of_ties>
+input = tensor([[[-1, -1, -1,  ..., -1, -1, -1],
+         [-1, -1, -1,  ..., -1, -1, -1],
+         [-1, -1, -1,  ..., -1, -1, ....., -1, -1, -1],
+         [-1, -1, -1,  ..., -1, -1, -1],
+         [-1, -1, -1,  ..., -1, -1, -1]]], dtype=torch.int32)
+other = tensor([[[ 0,  1,  2,  ..., 97, 98, 99],
+         [ 0,  1,  2,  ..., 97, 98, 99],
+         [ 0,  1,  2,  ..., 97, 98, ... ..., 97, 98, 99],
+         [ 0,  1,  2,  ..., 97, 98, 99],
+         [ 0,  1,  2,  ..., 97, 98, 99]]], device='cuda:0')
+
+    def assertClose(
+        self,
+        input: TensorOrArray,
+        other: TensorOrArray,
+        *,
+        rtol: float = 1e-05,
+        atol: float = 1e-08,
+        equal_nan: bool = False,
+        msg: Optional[str] = None,
+    ) -> None:
+        """
+        Verifies that two tensors or arrays have the same shape and are close
+            given absolute and relative tolerance, i.e. checks
+            `all(|input - other| <= atol + rtol * |other|)`;
+            raises AssertionError otherwise.
+        Args:
+            input, other: two tensors or two arrays.
+            rtol, atol, equal_nan: as for torch.allclose.
+            msg: message in case the assertion is violated.
+        Note:
+            Optional arguments here are all keyword-only, to avoid confusion
+            with msg arguments on other assert functions.
+        """
+    
+        self.assertEqual(np.shape(input), np.shape(other))
+    
+        backend = torch if torch.is_tensor(input) else np
+>       close = backend.allclose(
+            input, other, rtol=rtol, atol=atol, equal_nan=equal_nan
+        )
+E       RuntimeError: Int did not match Long
+
+/local/data0/moved_data/pytorch3d/tests/common_testing.py:176: RuntimeError
+_______________ TestRasterizeMeshes.test_python_vs_cpp_bary_clip _______________
+
+self = <tests.test_rasterize_meshes.TestRasterizeMeshes testMethod=test_python_vs_cpp_bary_clip>
+
+    def test_python_vs_cpp_bary_clip(self):
+        torch.manual_seed(232)
+        N = 2
+        V = 10
+        F = 5
+        verts1 = torch.randn(N, V, 3, requires_grad=True)
+        verts2 = verts1.detach().clone().requires_grad_(True)
+        faces = torch.randint(V, size=(N, F, 3))
+        meshes1 = Meshes(verts1, faces)
+        meshes2 = Meshes(verts2, faces)
+    
+        kwargs = {"image_size": 24, "clip_barycentric_coords": True}
+        fn1 = functools.partial(rasterize_meshes, meshes1, **kwargs)
+        fn2 = functools.partial(rasterize_meshes_python, meshes2, **kwargs)
+        args = ()
+>       self._compare_impls(fn1, fn2, args, args, verts1, verts2, compare_grads=True)
+
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:394: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:556: in _compare_impls
+    self.assertClose(zbuf1.cpu(), zbuf2.cpu(), rtol=1e-4)
+/local/data0/moved_data/pytorch3d/tests/common_testing.py:209: in assertClose
+    self.fail(err)
+E   AssertionError: Not close. Max diff inf. Shape (2, 24, 24, 8). At (0, 0, 0, 0).
+__________ TestRasterizeMeshes.test_python_vs_cpp_perspective_correct __________
+
+self = <tests.test_rasterize_meshes.TestRasterizeMeshes testMethod=test_python_vs_cpp_perspective_correct>
+
+    def test_python_vs_cpp_perspective_correct(self):
+        torch.manual_seed(232)
+        N = 2
+        V = 10
+        F = 5
+        verts1 = torch.randn(N, V, 3, requires_grad=True)
+        verts2 = verts1.detach().clone().requires_grad_(True)
+        faces = torch.randint(V, size=(N, F, 3))
+        meshes1 = Meshes(verts1, faces)
+        meshes2 = Meshes(verts2, faces)
+    
+        kwargs = {"image_size": 24, "perspective_correct": True}
+        fn1 = functools.partial(rasterize_meshes, meshes1, **kwargs)
+        fn2 = functools.partial(rasterize_meshes_python, meshes2, **kwargs)
+        args = ()
+>       self._compare_impls(fn1, fn2, args, args, verts1, verts2, compare_grads=True)
+
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:427: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:556: in _compare_impls
+    self.assertClose(zbuf1.cpu(), zbuf2.cpu(), rtol=1e-4)
+/local/data0/moved_data/pytorch3d/tests/common_testing.py:209: in assertClose
+    self.fail(err)
+E   AssertionError: Not close. Max diff inf. Shape (2, 24, 24, 8). At (0, 0, 0, 0).
+________________ TestRasterizeMeshes.test_python_vs_cpu_vs_cuda ________________
+
+self = <tests.test_rasterize_meshes.TestRasterizeMeshes testMethod=test_python_vs_cpu_vs_cuda>
+
+    def test_python_vs_cpu_vs_cuda(self):
+        torch.manual_seed(231)
+        device = torch.device("cpu")
+        image_size = 32
+        blur_radius = 0.1**2
+        faces_per_pixel = 3
+    
+        for d in ["cpu", get_random_cuda_device()]:
+            device = torch.device(d)
+            compare_grads = True
+            # Mesh with a single face.
+            verts1 = torch.tensor(
+                [[0.0, 0.6, 0.1], [-0.7, -0.4, 0.5], [0.7, -0.4, 0.7]],
+                dtype=torch.float32,
+                requires_grad=True,
+                device=device,
+            )
+            faces1 = torch.tensor([[0, 1, 2]], dtype=torch.int64, device=device)
+            meshes1 = Meshes(verts=[verts1], faces=[faces1])
+            args1 = (meshes1, image_size, blur_radius, faces_per_pixel)
+            verts2 = verts1.detach().clone()
+            verts2.requires_grad = True
+            meshes2 = Meshes(verts=[verts2], faces=[faces1])
+            args2 = (meshes2, image_size, blur_radius, faces_per_pixel)
+>           self._compare_impls(
+                rasterize_meshes_python,
+                rasterize_meshes,
+                args1,
+                args2,
+                verts1,
+                verts2,
+                compare_grads=compare_grads,
+            )
+
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:555: in _compare_impls
+    self.assertTrue((idx1.cpu() == idx2.cpu()).all().item())
+E   AssertionError: False is not true
+__________________ TestRasterizeMeshes.test_simple_cpu_naive ___________________
+
+self = <tests.test_rasterize_meshes.TestRasterizeMeshes testMethod=test_simple_cpu_naive>
+
+    def test_simple_cpu_naive(self):
+        n_threads = torch.get_num_threads()
+        torch.set_num_threads(1)  # single threaded
+>       self._test_simple_cpu_naive_instance()
+
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:40: in _test_simple_cpu_naive_instance
+    self._simple_triangle_raster(rasterize_meshes, device, bin_size=0)
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:1000: in _simple_triangle_raster
+    self.assertClose(p2face[..., 0], expected_p2face_k0)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <tests.test_rasterize_meshes.TestRasterizeMeshes testMethod=test_simple_cpu_naive>
+input = tensor([[[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+         [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+         [-1, -1...      [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+         [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1]]], dtype=torch.int32)
+other = tensor([[[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+         [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+         [-1, -1...1, -1, -1, -1],
+         [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+         [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1]]])
+
+    def assertClose(
+        self,
+        input: TensorOrArray,
+        other: TensorOrArray,
+        *,
+        rtol: float = 1e-05,
+        atol: float = 1e-08,
+        equal_nan: bool = False,
+        msg: Optional[str] = None,
+    ) -> None:
+        """
+        Verifies that two tensors or arrays have the same shape and are close
+            given absolute and relative tolerance, i.e. checks
+            `all(|input - other| <= atol + rtol * |other|)`;
+            raises AssertionError otherwise.
+        Args:
+            input, other: two tensors or two arrays.
+            rtol, atol, equal_nan: as for torch.allclose.
+            msg: message in case the assertion is violated.
+        Note:
+            Optional arguments here are all keyword-only, to avoid confusion
+            with msg arguments on other assert functions.
+        """
+    
+        self.assertEqual(np.shape(input), np.shape(other))
+    
+        backend = torch if torch.is_tensor(input) else np
+>       close = backend.allclose(
+            input, other, rtol=rtol, atol=atol, equal_nan=equal_nan
+        )
+E       RuntimeError: Int did not match Long
+
+/local/data0/moved_data/pytorch3d/tests/common_testing.py:176: RuntimeError
+_________________ TestRasterizeMeshes.test_simple_cuda_binned __________________
+
+self = <tests.test_rasterize_meshes.TestRasterizeMeshes testMethod=test_simple_cuda_binned>
+
+    def test_simple_cuda_binned(self):
+        device = get_random_cuda_device()
+>       self._simple_triangle_raster(rasterize_meshes, device, bin_size=5)
+
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:66: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:1000: in _simple_triangle_raster
+    self.assertClose(p2face[..., 0], expected_p2face_k0)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <tests.test_rasterize_meshes.TestRasterizeMeshes testMethod=test_simple_cuda_binned>
+input = tensor([[[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+         [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+         [-1, -1...      [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+         [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1]]], dtype=torch.int32)
+other = tensor([[[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+         [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+         [-1, -1...        [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+         [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1]]], device='cuda:0')
+
+    def assertClose(
+        self,
+        input: TensorOrArray,
+        other: TensorOrArray,
+        *,
+        rtol: float = 1e-05,
+        atol: float = 1e-08,
+        equal_nan: bool = False,
+        msg: Optional[str] = None,
+    ) -> None:
+        """
+        Verifies that two tensors or arrays have the same shape and are close
+            given absolute and relative tolerance, i.e. checks
+            `all(|input - other| <= atol + rtol * |other|)`;
+            raises AssertionError otherwise.
+        Args:
+            input, other: two tensors or two arrays.
+            rtol, atol, equal_nan: as for torch.allclose.
+            msg: message in case the assertion is violated.
+        Note:
+            Optional arguments here are all keyword-only, to avoid confusion
+            with msg arguments on other assert functions.
+        """
+    
+        self.assertEqual(np.shape(input), np.shape(other))
+    
+        backend = torch if torch.is_tensor(input) else np
+>       close = backend.allclose(
+            input, other, rtol=rtol, atol=atol, equal_nan=equal_nan
+        )
+E       RuntimeError: Int did not match Long
+
+/local/data0/moved_data/pytorch3d/tests/common_testing.py:176: RuntimeError
+__________________ TestRasterizeMeshes.test_simple_cuda_naive __________________
+
+self = <tests.test_rasterize_meshes.TestRasterizeMeshes testMethod=test_simple_cuda_naive>
+
+    def test_simple_cuda_naive(self):
+        device = get_random_cuda_device()
+>       self._simple_triangle_raster(rasterize_meshes, device, bin_size=0)
+
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:58: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:1000: in _simple_triangle_raster
+    self.assertClose(p2face[..., 0], expected_p2face_k0)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <tests.test_rasterize_meshes.TestRasterizeMeshes testMethod=test_simple_cuda_naive>
+input = tensor([[[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+         [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+         [-1, -1...      [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+         [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1]]], dtype=torch.int32)
+other = tensor([[[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+         [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+         [-1, -1...        [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1],
+         [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1]]], device='cuda:0')
+
+    def assertClose(
+        self,
+        input: TensorOrArray,
+        other: TensorOrArray,
+        *,
+        rtol: float = 1e-05,
+        atol: float = 1e-08,
+        equal_nan: bool = False,
+        msg: Optional[str] = None,
+    ) -> None:
+        """
+        Verifies that two tensors or arrays have the same shape and are close
+            given absolute and relative tolerance, i.e. checks
+            `all(|input - other| <= atol + rtol * |other|)`;
+            raises AssertionError otherwise.
+        Args:
+            input, other: two tensors or two arrays.
+            rtol, atol, equal_nan: as for torch.allclose.
+            msg: message in case the assertion is violated.
+        Note:
+            Optional arguments here are all keyword-only, to avoid confusion
+            with msg arguments on other assert functions.
+        """
+    
+        self.assertEqual(np.shape(input), np.shape(other))
+    
+        backend = torch if torch.is_tensor(input) else np
+>       close = backend.allclose(
+            input, other, rtol=rtol, atol=atol, equal_nan=equal_nan
+        )
+E       RuntimeError: Int did not match Long
+
+/local/data0/moved_data/pytorch3d/tests/common_testing.py:176: RuntimeError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_bin_size_error
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_bary_clip
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_naive_vs_cuda_binned
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_perspective_correct
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpu_vs_cuda_naive
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cuda_naive_vs_binned_perspective_correct
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_order_of_ties
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpp_bary_clip
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpp_perspective_correct
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpu_vs_cuda
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cpu_naive
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cuda_binned
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cuda_naive
+========================= 13 failed, 4 passed in 3.40s =========================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 17 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_bin_size_error PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_coarse_cpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_coarse_cuda PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_compare_coarse_cpu_vs_cuda PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_bary_clip PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_naive_vs_cuda_binned PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_perspective_correct PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpu_vs_cuda_naive PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cuda_naive_vs_binned_perspective_correct PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_order_of_ties PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpp_bary_clip PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpp_perspective_correct PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpu_vs_cuda PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cpu_naive PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cuda_binned PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cuda_naive PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_python PASSED
+
+============================= 17 passed in 14.26s ==============================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 17 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_bin_size_error PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_coarse_cpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_coarse_cuda PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_compare_coarse_cpu_vs_cuda PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_bary_clip PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_naive_vs_cuda_binned PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_perspective_correct PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpu_vs_cuda_naive PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cuda_naive_vs_binned_perspective_correct PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_order_of_ties PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpp_bary_clip PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpp_perspective_correct PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpu_vs_cuda PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cpu_naive PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cuda_binned PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cuda_naive PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_python PASSED
+
+============================= 17 passed in 14.35s ==============================

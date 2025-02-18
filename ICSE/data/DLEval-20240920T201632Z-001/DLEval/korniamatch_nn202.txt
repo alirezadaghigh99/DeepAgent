@@ -1,0 +1,33 @@
+stage: Evaluating&Metrics
+task: 
+data: Image
+
+prompt:
+Create a Python function `match_nn` that:
+
+- Takes three parameters:
+  - `desc1`: A tensor containing a batch of descriptors with shape `(B1, D)`.
+  - `desc2`: A tensor containing another batch of descriptors with shape `(B2, D)`.
+  - `dm`: An optional precomputed distance matrix tensor of shape `(B1, B2)`. If not provided, the function computes the distance matrix using `torch.cdist`.
+  
+- The function finds the nearest neighbors in `desc2` for each vector in `desc1`:
+  - Checks if the input descriptors have the correct shapes.
+  - If either `desc1` or `desc2` is empty, it returns a placeholder output using `_no_match`.
+  - If `dm` is not provided, it calculates the distance matrix between `desc1` and `desc2`.
+  - Finds the minimum distances and their corresponding indices in `desc2` for each vector in `desc1`.
+  - Constructs a tensor containing the indices of matching descriptors in `desc1` and `desc2`.
+
+- Returns:
+  - A tensor of matching descriptor distances with shape `(B1, 1)`.
+  - A tensor of long indices of matching descriptors in `desc1` and `desc2` with shape `(B1, 2)`.
+
+Errors:
+- The function assumes that the input tensors have compatible shapes and does not include explicit error handling for incompatible inputs.
+
+ ground Truth:kornia/feature/matching.py#L60
+
+ repo:kornia
+
+ function:match_nn
+ 
+ test_cases:tests/feature/test_matching.py::TestMatchSNN

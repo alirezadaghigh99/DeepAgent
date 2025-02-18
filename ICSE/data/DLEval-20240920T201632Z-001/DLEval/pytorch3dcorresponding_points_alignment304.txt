@@ -1,0 +1,51 @@
+stage: Pre-Post processing
+task: 
+data: 
+
+prompt:
+Generate a Python function called corresponding_points_alignment that Finds a similarity transformation (rotation `R`, translation `T`
+    and optionally scale `s`)  between two given sets of corresponding
+    `d`-dimensional points `X` and `Y` such that:
+
+    `s[i] X[i] R[i] + T[i] = Y[i]`,
+
+    for all batch indexes `i` in the least squares sense.
+
+    The algorithm is also known as Umeyama [1].
+
+    Args:
+        **X**: Batch of `d`-dimensional points of shape `(minibatch, num_point, d)`
+            or a `Pointclouds` object.
+        **Y**: Batch of `d`-dimensional points of shape `(minibatch, num_point, d)`
+            or a `Pointclouds` object.
+        **weights**: Batch of non-negative weights of
+            shape `(minibatch, num_point)` or list of `minibatch` 1-dimensional
+            tensors that may have different shapes; in that case, the length of
+            i-th tensor should be equal to the number of points in X_i and Y_i.
+            Passing `None` means uniform weights.
+        **estimate_scale**: If `True`, also estimates a scaling component `s`
+            of the transformation. Otherwise assumes an identity
+            scale and returns a tensor of ones.
+        **allow_reflection**: If `True`, allows the algorithm to return `R`
+            which is orthonormal but has determinant==-1.
+        **eps**: A scalar for clamping to avoid dividing by zero. Active for the
+            code that estimates the output scale `s`.
+
+    Returns:
+        3-element named tuple `SimilarityTransform` containing
+        - **R**: Batch of orthonormal matrices of shape `(minibatch, d, d)`.
+        - **T**: Batch of translations of shape `(minibatch, d)`.
+        - **s**: batch of scaling factors of shape `(minibatch, )`.if (Xt.shape != Yt.shape) or (num_points != num_points_Y).any():
+        raise ValueError(
+            "Point sets X and Y have to have the same \
+            number of batches, points and dimensions."
+        )if Xt.shape[:2] != weights.shape:
+            raise ValueError("weights should have the same first two dimensions as X.")
+
+ ground Truth:pytorch3d/ops/points_alignment.py
+
+ repo:pytorch3d
+
+ function:corresponding_points_alignment
+ 
+ test_cases:tests/test_points_alignment.py

@@ -1,0 +1,1616 @@
+output file:
+processed_visionnms36.json
+function:
+nms
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_qnms[1-0-0.2] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[3] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_gpu[0.8-cuda] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[4-0.5]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[4-0.5] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[3-10-0.2] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype1-0.5] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype1-0.5]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype1-0.2] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[0-0.5]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[1-0-0.8]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype1-0.2] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[2] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[0-0.2]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype0-0.8] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[2-50-0.2] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_input_errors FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype1-0.2]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[2-50-0.5] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype0-0.2] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast[dtype0-0.2] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[1-0-0.2] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[2-50-0.5]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[2]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_nms_ref[0-0.2]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_nms_input_errors', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[8-0.5]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[6-0.8] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast[dtype0-0.2] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_nms_input_errors FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[7-0.2]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[3-0.5]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_nms_float16[cuda]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_nms_float16[cuda] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[7-0.5] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[6] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_nms_ref[0-0.2] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype1-0.5] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype1-0.2]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[4-0.8]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_batched_nms_implementations[0]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_nms_gpu[0.2-cuda]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype0-0.8]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype1-0.2]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_qnms[1-0-0.2] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_gpu[0.5-cuda]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_qnms[1-0-0.2]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[1] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_batched_nms_implementations[0] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[9-0.2] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[9] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[2-0.8] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[3-0.8]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[8]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast[dtype0-0.2]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[2-0.2] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_batched_nms_implementations[0] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[3-0.2]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_input_errors', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype1-0.8]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[1-0.8] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype0-0.8]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[0-0.2] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[1-0.8]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[8-0.2]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[7-0.5]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[9-0.8] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype1-0.5]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_nms_ref[0-0.2]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype0-0.5] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype0-0.2]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype1-0.8] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[5-0.5]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype0-0.8] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype0-0.8]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype0-0.5]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[4]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype1-0.2]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_qnms[1-0-0.2]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype1-0.2] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_nms_gpu[0.2-cuda]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[3-0.2] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[8-0.5] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_nms_gpu[0.2-cuda]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_float16[cuda] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[1-0.2] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[5] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[1-0-0.5]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_qnms[1-0-0.2]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype1-0.2] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_nms_gpu[0.2-cuda] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[0-0.8] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype1-0.5]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_batched_nms_implementations[0]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_nms_float16[cuda] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[3-10-0.5]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype1-0.5] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype1-0.2] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype0-0.2] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[5-0.8]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype0-0.8] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[1]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype0-0.5]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_nms_ref[0-0.2] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_qnms[1-0-0.2] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype1-0.8]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_nms_input_errors', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[6-0.5] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[0]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype0-0.5] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype0-0.5]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[5-0.8] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_batched_nms_implementations[0] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_float16[cuda]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_batched_nms_implementations[0] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype0-0.5]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_gpu[0.8-cuda]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype1-0.5]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype1-0.2]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast[dtype0-0.2]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_nms_input_errors', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[2-0.5] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[7]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype1-0.8]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_nms_ref[0-0.2]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype1-0.5]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[0-0.5] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[8-0.2] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype0-0.8]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype1-0.2]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[5-0.5] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[9-0.8]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast[dtype0-0.2] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype0-0.2] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype0-0.5]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[7] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype0-0.8] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype1-0.5] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[8-0.8]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[8] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_nms_ref[0-0.2] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_nms_gpu[0.2-cuda]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast[dtype0-0.2]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype0-0.5] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_nms_ref[0-0.2] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[2-0.2]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[6-0.2]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[9-0.5] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_nms_gpu[0.2-cuda] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[1-0-0.5] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_nms_input_errors FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[4-0.2]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_nms_ref[0-0.2]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[2-50-0.2]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[2-50-0.8]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[5]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[1-0-0.2]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[6-0.8]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype1-0.5] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[6-0.5]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[5-0.2] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype1-0.2] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast[dtype0-0.2] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_nms_float16[cuda] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype0-0.5]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[2-50-0.8] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype1-0.5]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_nms_input_errors FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[3-0.5] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype0-0.5] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype1-0.8] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[7-0.8]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype1-0.8]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype0-0.2]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_nms_float16[cuda]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[8-0.8] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype1-0.8] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[1-0.5] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[4-0.8] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_nms_input_errors FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[1-0.2]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[5-0.2]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_gpu[0.2-cuda]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype1-0.8]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype1-0.8] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype0-0.2] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[6]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[7-0.2] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_batched_nms_implementations[0]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype1-0.5] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_gpu[0.2-cuda] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype1-0.8]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_nms_gpu[0.2-cuda] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_batched_nms_implementations[0]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[9]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_nms_float16[cuda]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype0-0.5] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[2-0.5]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[3-10-0.2]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[3-10-0.8]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[4] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_nms_input_errors', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[2-0.8]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[0] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[1-0.5]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_gpu[0.5-cuda] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[4-0.2] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[1-0-0.8] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[7-0.8] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[0-0.8]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_qnms[1-0-0.2]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype0-0.2]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype0-0.5] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype0-0.2] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast[dtype0-0.2]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype0-0.2]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype1-0.8] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_nms_gpu[0.2-cuda] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[6-0.2] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_nms_float16[cuda] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[3]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype0-0.8] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype0-0.2]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[3-10-0.8] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype1-0.8] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype0-0.2]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_qnms[1-0-0.2] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype0-0.8] FAILED', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[3-0.8] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[9-0.5]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_nms_float16[cuda]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype0-0.8]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[3-10-0.5] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype0-0.8]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype0-0.2] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[9-0.2]'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/vision/vision/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/vision/vision
+configfile: pytest.ini
+plugins: mock-3.14.0
+collecting ... collected 130 items
+
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[0-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[0-0.5] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[0-0.8] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[1-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[1-0.5] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[1-0.8] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[2-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[2-0.5] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[2-0.8] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[3-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[3-0.5] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[3-0.8] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[4-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[4-0.5] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[4-0.8] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[5-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[5-0.5] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[5-0.8] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[6-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[6-0.5] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[6-0.8] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[7-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[7-0.5] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[7-0.8] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[8-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[8-0.5] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[8-0.8] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[9-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[9-0.5] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[9-0.8] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_input_errors FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[1-0-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[1-0-0.5] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[1-0-0.8] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[2-50-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[2-50-0.5] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[2-50-0.8] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[3-10-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[3-10-0.5] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[3-10-0.8] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_gpu[0.2-cuda] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_gpu[0.2-mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_gpu[0.5-cuda] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_gpu[0.5-mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_gpu[0.8-cuda] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_gpu[0.8-mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype0-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype0-0.5] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype0-0.8] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype1-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype1-0.5] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype1-0.8] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype0-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype0-0.5] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype0-0.8] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype1-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype1-0.5] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype1-0.8] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_float16[cuda] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_float16[mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[0] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[1] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[3] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[4] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[5] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[6] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[7] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[8] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[9] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast[dtype0-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast[dtype0-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast[dtype0-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast[dtype0-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype0-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype0-0.5] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype0-0.8] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype1-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype1-0.5] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype1-0.8] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype0-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype0-0.5] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype0-0.8] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype1-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype1-0.5] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype1-0.8] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype0-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype0-0.5] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype0-0.8] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype1-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype1-0.5] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype1-0.8] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype0-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype0-0.5] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype0-0.8] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype1-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype1-0.5] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype1-0.8] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_batched_nms_implementations[0] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_batched_nms_implementations[0] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_batched_nms_implementations[0] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_batched_nms_implementations[0] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_nms_float16[cuda] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_nms_float16[mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_nms_float16[cuda] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_nms_float16[mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_nms_float16[cuda] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_nms_float16[mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_nms_float16[cuda] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_nms_float16[mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_nms_gpu[0.2-cuda] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_nms_gpu[0.2-mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_nms_gpu[0.2-cuda] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_nms_gpu[0.2-mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_nms_gpu[0.2-cuda] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_nms_gpu[0.2-mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_nms_gpu[0.2-cuda] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_nms_gpu[0.2-mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_nms_input_errors FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_nms_input_errors FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_nms_input_errors FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_nms_input_errors FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_nms_ref[0-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_nms_ref[0-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_nms_ref[0-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_nms_ref[0-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_qnms[1-0-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_qnms[1-0-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_qnms[1-0-0.2] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_qnms[1-0-0.2] FAILED
+
+=================================== FAILURES ===================================
+_________________________ TestNMS.test_nms_ref[0-0.2] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:794: in test_nms_ref
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________________ TestNMS.test_nms_ref[0-0.5] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:794: in test_nms_ref
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________________ TestNMS.test_nms_ref[0-0.8] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:794: in test_nms_ref
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________________ TestNMS.test_nms_ref[1-0.2] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:794: in test_nms_ref
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________________ TestNMS.test_nms_ref[1-0.5] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:794: in test_nms_ref
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________________ TestNMS.test_nms_ref[1-0.8] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:794: in test_nms_ref
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________________ TestNMS.test_nms_ref[2-0.2] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:794: in test_nms_ref
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________________ TestNMS.test_nms_ref[2-0.5] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:794: in test_nms_ref
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________________ TestNMS.test_nms_ref[2-0.8] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:794: in test_nms_ref
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________________ TestNMS.test_nms_ref[3-0.2] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:794: in test_nms_ref
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________________ TestNMS.test_nms_ref[3-0.5] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:794: in test_nms_ref
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________________ TestNMS.test_nms_ref[3-0.8] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:794: in test_nms_ref
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________________ TestNMS.test_nms_ref[4-0.2] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:794: in test_nms_ref
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________________ TestNMS.test_nms_ref[4-0.5] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:794: in test_nms_ref
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________________ TestNMS.test_nms_ref[4-0.8] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:794: in test_nms_ref
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________________ TestNMS.test_nms_ref[5-0.2] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:794: in test_nms_ref
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________________ TestNMS.test_nms_ref[5-0.5] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:794: in test_nms_ref
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________________ TestNMS.test_nms_ref[5-0.8] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:794: in test_nms_ref
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________________ TestNMS.test_nms_ref[6-0.2] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:794: in test_nms_ref
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________________ TestNMS.test_nms_ref[6-0.5] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:794: in test_nms_ref
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________________ TestNMS.test_nms_ref[6-0.8] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:794: in test_nms_ref
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________________ TestNMS.test_nms_ref[7-0.2] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:794: in test_nms_ref
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________________ TestNMS.test_nms_ref[7-0.5] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:794: in test_nms_ref
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________________ TestNMS.test_nms_ref[7-0.8] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:794: in test_nms_ref
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________________ TestNMS.test_nms_ref[8-0.2] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:794: in test_nms_ref
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________________ TestNMS.test_nms_ref[8-0.5] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:794: in test_nms_ref
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________________ TestNMS.test_nms_ref[8-0.8] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:794: in test_nms_ref
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________________ TestNMS.test_nms_ref[9-0.2] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:794: in test_nms_ref
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________________ TestNMS.test_nms_ref[9-0.5] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:794: in test_nms_ref
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________________ TestNMS.test_nms_ref[9-0.8] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:794: in test_nms_ref
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+________________________ TestNMS.test_nms_input_errors _________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:799: in test_nms_input_errors
+    ops.nms(torch.rand(4), torch.rand(3), 0.5)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+__________________________ TestNMS.test_qnms[1-0-0.2] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:824: in test_qnms
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+__________________________ TestNMS.test_qnms[1-0-0.5] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:824: in test_qnms
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+__________________________ TestNMS.test_qnms[1-0-0.8] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:824: in test_qnms
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________________ TestNMS.test_qnms[2-50-0.2] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:824: in test_qnms
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________________ TestNMS.test_qnms[2-50-0.5] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:824: in test_qnms
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________________ TestNMS.test_qnms[2-50-0.8] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:824: in test_qnms
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________________ TestNMS.test_qnms[3-10-0.2] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:824: in test_qnms
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________________ TestNMS.test_qnms[3-10-0.5] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:824: in test_qnms
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________________ TestNMS.test_qnms[3-10-0.8] __________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:824: in test_qnms
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+________________________ TestNMS.test_nms_gpu[0.2-cuda] ________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:844: in test_nms_gpu
+    r_cpu = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+________________________ TestNMS.test_nms_gpu[0.5-cuda] ________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:844: in test_nms_gpu
+    r_cpu = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+________________________ TestNMS.test_nms_gpu[0.8-cuda] ________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:844: in test_nms_gpu
+    r_cpu = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+______________________ TestNMS.test_autocast[dtype0-0.2] _______________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:860: in test_autocast
+    self.test_nms_gpu(iou=iou, dtype=dtype, device="cuda")
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:844: in test_nms_gpu
+    r_cpu = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+______________________ TestNMS.test_autocast[dtype0-0.5] _______________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:860: in test_autocast
+    self.test_nms_gpu(iou=iou, dtype=dtype, device="cuda")
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:844: in test_nms_gpu
+    r_cpu = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+______________________ TestNMS.test_autocast[dtype0-0.8] _______________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:860: in test_autocast
+    self.test_nms_gpu(iou=iou, dtype=dtype, device="cuda")
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:844: in test_nms_gpu
+    r_cpu = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+______________________ TestNMS.test_autocast[dtype1-0.2] _______________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:860: in test_autocast
+    self.test_nms_gpu(iou=iou, dtype=dtype, device="cuda")
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:844: in test_nms_gpu
+    r_cpu = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+______________________ TestNMS.test_autocast[dtype1-0.5] _______________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:860: in test_autocast
+    self.test_nms_gpu(iou=iou, dtype=dtype, device="cuda")
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:844: in test_nms_gpu
+    r_cpu = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+______________________ TestNMS.test_autocast[dtype1-0.8] _______________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:860: in test_autocast
+    self.test_nms_gpu(iou=iou, dtype=dtype, device="cuda")
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:844: in test_nms_gpu
+    r_cpu = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+____________________ TestNMS.test_autocast_cpu[dtype0-0.2] _____________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:867: in test_autocast_cpu
+    keep_ref_float = ops.nms(boxes.to(dtype).float(), scores.to(dtype).float(), iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+____________________ TestNMS.test_autocast_cpu[dtype0-0.5] _____________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:867: in test_autocast_cpu
+    keep_ref_float = ops.nms(boxes.to(dtype).float(), scores.to(dtype).float(), iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+____________________ TestNMS.test_autocast_cpu[dtype0-0.8] _____________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:867: in test_autocast_cpu
+    keep_ref_float = ops.nms(boxes.to(dtype).float(), scores.to(dtype).float(), iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+____________________ TestNMS.test_autocast_cpu[dtype1-0.2] _____________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:867: in test_autocast_cpu
+    keep_ref_float = ops.nms(boxes.to(dtype).float(), scores.to(dtype).float(), iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+____________________ TestNMS.test_autocast_cpu[dtype1-0.5] _____________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:867: in test_autocast_cpu
+    keep_ref_float = ops.nms(boxes.to(dtype).float(), scores.to(dtype).float(), iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+____________________ TestNMS.test_autocast_cpu[dtype1-0.8] _____________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:867: in test_autocast_cpu
+    keep_ref_float = ops.nms(boxes.to(dtype).float(), scores.to(dtype).float(), iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+________________________ TestNMS.test_nms_float16[cuda] ________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:890: in test_nms_float16
+    keep32 = ops.nms(boxes, scores, iou_thres)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________ TestNMS.test_batched_nms_implementations[0] __________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:909: in test_batched_nms_implementations
+    keep_vanilla = ops.boxes._batched_nms_vanilla(boxes, scores, idxs, iou_threshold)
+/local/data0/moved_data/publishablew/vision/vision/venv/lib/python3.11/site-packages/torch/jit/_trace.py:1444: in wrapper
+    return fn(*args, **kwargs)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:85: in _batched_nms_vanilla
+    curr_keep_indices = nms(boxes[curr_indices], scores[curr_indices], iou_threshold)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________ TestNMS.test_batched_nms_implementations[1] __________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:909: in test_batched_nms_implementations
+    keep_vanilla = ops.boxes._batched_nms_vanilla(boxes, scores, idxs, iou_threshold)
+/local/data0/moved_data/publishablew/vision/vision/venv/lib/python3.11/site-packages/torch/jit/_trace.py:1444: in wrapper
+    return fn(*args, **kwargs)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:85: in _batched_nms_vanilla
+    curr_keep_indices = nms(boxes[curr_indices], scores[curr_indices], iou_threshold)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________ TestNMS.test_batched_nms_implementations[2] __________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:909: in test_batched_nms_implementations
+    keep_vanilla = ops.boxes._batched_nms_vanilla(boxes, scores, idxs, iou_threshold)
+/local/data0/moved_data/publishablew/vision/vision/venv/lib/python3.11/site-packages/torch/jit/_trace.py:1444: in wrapper
+    return fn(*args, **kwargs)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:85: in _batched_nms_vanilla
+    curr_keep_indices = nms(boxes[curr_indices], scores[curr_indices], iou_threshold)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________ TestNMS.test_batched_nms_implementations[3] __________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:909: in test_batched_nms_implementations
+    keep_vanilla = ops.boxes._batched_nms_vanilla(boxes, scores, idxs, iou_threshold)
+/local/data0/moved_data/publishablew/vision/vision/venv/lib/python3.11/site-packages/torch/jit/_trace.py:1444: in wrapper
+    return fn(*args, **kwargs)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:85: in _batched_nms_vanilla
+    curr_keep_indices = nms(boxes[curr_indices], scores[curr_indices], iou_threshold)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________ TestNMS.test_batched_nms_implementations[4] __________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:909: in test_batched_nms_implementations
+    keep_vanilla = ops.boxes._batched_nms_vanilla(boxes, scores, idxs, iou_threshold)
+/local/data0/moved_data/publishablew/vision/vision/venv/lib/python3.11/site-packages/torch/jit/_trace.py:1444: in wrapper
+    return fn(*args, **kwargs)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:85: in _batched_nms_vanilla
+    curr_keep_indices = nms(boxes[curr_indices], scores[curr_indices], iou_threshold)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________ TestNMS.test_batched_nms_implementations[5] __________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:909: in test_batched_nms_implementations
+    keep_vanilla = ops.boxes._batched_nms_vanilla(boxes, scores, idxs, iou_threshold)
+/local/data0/moved_data/publishablew/vision/vision/venv/lib/python3.11/site-packages/torch/jit/_trace.py:1444: in wrapper
+    return fn(*args, **kwargs)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:85: in _batched_nms_vanilla
+    curr_keep_indices = nms(boxes[curr_indices], scores[curr_indices], iou_threshold)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________ TestNMS.test_batched_nms_implementations[6] __________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:909: in test_batched_nms_implementations
+    keep_vanilla = ops.boxes._batched_nms_vanilla(boxes, scores, idxs, iou_threshold)
+/local/data0/moved_data/publishablew/vision/vision/venv/lib/python3.11/site-packages/torch/jit/_trace.py:1444: in wrapper
+    return fn(*args, **kwargs)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:85: in _batched_nms_vanilla
+    curr_keep_indices = nms(boxes[curr_indices], scores[curr_indices], iou_threshold)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________ TestNMS.test_batched_nms_implementations[7] __________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:909: in test_batched_nms_implementations
+    keep_vanilla = ops.boxes._batched_nms_vanilla(boxes, scores, idxs, iou_threshold)
+/local/data0/moved_data/publishablew/vision/vision/venv/lib/python3.11/site-packages/torch/jit/_trace.py:1444: in wrapper
+    return fn(*args, **kwargs)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:85: in _batched_nms_vanilla
+    curr_keep_indices = nms(boxes[curr_indices], scores[curr_indices], iou_threshold)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________ TestNMS.test_batched_nms_implementations[8] __________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:909: in test_batched_nms_implementations
+    keep_vanilla = ops.boxes._batched_nms_vanilla(boxes, scores, idxs, iou_threshold)
+/local/data0/moved_data/publishablew/vision/vision/venv/lib/python3.11/site-packages/torch/jit/_trace.py:1444: in wrapper
+    return fn(*args, **kwargs)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:85: in _batched_nms_vanilla
+    curr_keep_indices = nms(boxes[curr_indices], scores[curr_indices], iou_threshold)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________ TestNMS.test_batched_nms_implementations[9] __________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:909: in test_batched_nms_implementations
+    keep_vanilla = ops.boxes._batched_nms_vanilla(boxes, scores, idxs, iou_threshold)
+/local/data0/moved_data/publishablew/vision/vision/venv/lib/python3.11/site-packages/torch/jit/_trace.py:1444: in wrapper
+    return fn(*args, **kwargs)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:85: in _batched_nms_vanilla
+    curr_keep_indices = nms(boxes[curr_indices], scores[curr_indices], iou_threshold)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+________________ TestNMS.test_schema__test_autocast[dtype0-0.2] ________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:860: in test_autocast
+    self.test_nms_gpu(iou=iou, dtype=dtype, device="cuda")
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:844: in test_nms_gpu
+    r_cpu = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+________ TestNMS.test_autograd_registration__test_autocast[dtype0-0.2] _________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:860: in test_autocast
+    self.test_nms_gpu(iou=iou, dtype=dtype, device="cuda")
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:844: in test_nms_gpu
+    r_cpu = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+______________ TestNMS.test_faketensor__test_autocast[dtype0-0.2] ______________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:860: in test_autocast
+    self.test_nms_gpu(iou=iou, dtype=dtype, device="cuda")
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:844: in test_nms_gpu
+    r_cpu = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________ TestNMS.test_aot_dispatch_dynamic__test_autocast[dtype0-0.2] _________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:860: in test_autocast
+    self.test_nms_gpu(iou=iou, dtype=dtype, device="cuda")
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:844: in test_nms_gpu
+    r_cpu = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+______________ TestNMS.test_schema__test_autocast_cpu[dtype0-0.2] ______________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:867: in test_autocast_cpu
+    keep_ref_float = ops.nms(boxes.to(dtype).float(), scores.to(dtype).float(), iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+______________ TestNMS.test_schema__test_autocast_cpu[dtype0-0.5] ______________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:867: in test_autocast_cpu
+    keep_ref_float = ops.nms(boxes.to(dtype).float(), scores.to(dtype).float(), iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+______________ TestNMS.test_schema__test_autocast_cpu[dtype0-0.8] ______________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:867: in test_autocast_cpu
+    keep_ref_float = ops.nms(boxes.to(dtype).float(), scores.to(dtype).float(), iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+______________ TestNMS.test_schema__test_autocast_cpu[dtype1-0.2] ______________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:867: in test_autocast_cpu
+    keep_ref_float = ops.nms(boxes.to(dtype).float(), scores.to(dtype).float(), iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+______________ TestNMS.test_schema__test_autocast_cpu[dtype1-0.5] ______________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:867: in test_autocast_cpu
+    keep_ref_float = ops.nms(boxes.to(dtype).float(), scores.to(dtype).float(), iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+______________ TestNMS.test_schema__test_autocast_cpu[dtype1-0.8] ______________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:867: in test_autocast_cpu
+    keep_ref_float = ops.nms(boxes.to(dtype).float(), scores.to(dtype).float(), iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+______ TestNMS.test_autograd_registration__test_autocast_cpu[dtype0-0.2] _______
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:867: in test_autocast_cpu
+    keep_ref_float = ops.nms(boxes.to(dtype).float(), scores.to(dtype).float(), iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+______ TestNMS.test_autograd_registration__test_autocast_cpu[dtype0-0.5] _______
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:867: in test_autocast_cpu
+    keep_ref_float = ops.nms(boxes.to(dtype).float(), scores.to(dtype).float(), iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+______ TestNMS.test_autograd_registration__test_autocast_cpu[dtype0-0.8] _______
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:867: in test_autocast_cpu
+    keep_ref_float = ops.nms(boxes.to(dtype).float(), scores.to(dtype).float(), iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+______ TestNMS.test_autograd_registration__test_autocast_cpu[dtype1-0.2] _______
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:867: in test_autocast_cpu
+    keep_ref_float = ops.nms(boxes.to(dtype).float(), scores.to(dtype).float(), iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+______ TestNMS.test_autograd_registration__test_autocast_cpu[dtype1-0.5] _______
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:867: in test_autocast_cpu
+    keep_ref_float = ops.nms(boxes.to(dtype).float(), scores.to(dtype).float(), iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+______ TestNMS.test_autograd_registration__test_autocast_cpu[dtype1-0.8] _______
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:867: in test_autocast_cpu
+    keep_ref_float = ops.nms(boxes.to(dtype).float(), scores.to(dtype).float(), iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+____________ TestNMS.test_faketensor__test_autocast_cpu[dtype0-0.2] ____________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:867: in test_autocast_cpu
+    keep_ref_float = ops.nms(boxes.to(dtype).float(), scores.to(dtype).float(), iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+____________ TestNMS.test_faketensor__test_autocast_cpu[dtype0-0.5] ____________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:867: in test_autocast_cpu
+    keep_ref_float = ops.nms(boxes.to(dtype).float(), scores.to(dtype).float(), iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+____________ TestNMS.test_faketensor__test_autocast_cpu[dtype0-0.8] ____________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:867: in test_autocast_cpu
+    keep_ref_float = ops.nms(boxes.to(dtype).float(), scores.to(dtype).float(), iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+____________ TestNMS.test_faketensor__test_autocast_cpu[dtype1-0.2] ____________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:867: in test_autocast_cpu
+    keep_ref_float = ops.nms(boxes.to(dtype).float(), scores.to(dtype).float(), iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+____________ TestNMS.test_faketensor__test_autocast_cpu[dtype1-0.5] ____________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:867: in test_autocast_cpu
+    keep_ref_float = ops.nms(boxes.to(dtype).float(), scores.to(dtype).float(), iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+____________ TestNMS.test_faketensor__test_autocast_cpu[dtype1-0.8] ____________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:867: in test_autocast_cpu
+    keep_ref_float = ops.nms(boxes.to(dtype).float(), scores.to(dtype).float(), iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_______ TestNMS.test_aot_dispatch_dynamic__test_autocast_cpu[dtype0-0.2] _______
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:867: in test_autocast_cpu
+    keep_ref_float = ops.nms(boxes.to(dtype).float(), scores.to(dtype).float(), iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_______ TestNMS.test_aot_dispatch_dynamic__test_autocast_cpu[dtype0-0.5] _______
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:867: in test_autocast_cpu
+    keep_ref_float = ops.nms(boxes.to(dtype).float(), scores.to(dtype).float(), iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_______ TestNMS.test_aot_dispatch_dynamic__test_autocast_cpu[dtype0-0.8] _______
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:867: in test_autocast_cpu
+    keep_ref_float = ops.nms(boxes.to(dtype).float(), scores.to(dtype).float(), iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_______ TestNMS.test_aot_dispatch_dynamic__test_autocast_cpu[dtype1-0.2] _______
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:867: in test_autocast_cpu
+    keep_ref_float = ops.nms(boxes.to(dtype).float(), scores.to(dtype).float(), iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_______ TestNMS.test_aot_dispatch_dynamic__test_autocast_cpu[dtype1-0.5] _______
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:867: in test_autocast_cpu
+    keep_ref_float = ops.nms(boxes.to(dtype).float(), scores.to(dtype).float(), iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_______ TestNMS.test_aot_dispatch_dynamic__test_autocast_cpu[dtype1-0.8] _______
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:867: in test_autocast_cpu
+    keep_ref_float = ops.nms(boxes.to(dtype).float(), scores.to(dtype).float(), iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+___________ TestNMS.test_schema__test_batched_nms_implementations[0] ___________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:909: in test_batched_nms_implementations
+    keep_vanilla = ops.boxes._batched_nms_vanilla(boxes, scores, idxs, iou_threshold)
+/local/data0/moved_data/publishablew/vision/vision/venv/lib/python3.11/site-packages/torch/jit/_trace.py:1444: in wrapper
+    return fn(*args, **kwargs)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:85: in _batched_nms_vanilla
+    curr_keep_indices = nms(boxes[curr_indices], scores[curr_indices], iou_threshold)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+___ TestNMS.test_autograd_registration__test_batched_nms_implementations[0] ____
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:909: in test_batched_nms_implementations
+    keep_vanilla = ops.boxes._batched_nms_vanilla(boxes, scores, idxs, iou_threshold)
+/local/data0/moved_data/publishablew/vision/vision/venv/lib/python3.11/site-packages/torch/jit/_trace.py:1444: in wrapper
+    return fn(*args, **kwargs)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:85: in _batched_nms_vanilla
+    curr_keep_indices = nms(boxes[curr_indices], scores[curr_indices], iou_threshold)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________ TestNMS.test_faketensor__test_batched_nms_implementations[0] _________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:909: in test_batched_nms_implementations
+    keep_vanilla = ops.boxes._batched_nms_vanilla(boxes, scores, idxs, iou_threshold)
+/local/data0/moved_data/publishablew/vision/vision/venv/lib/python3.11/site-packages/torch/jit/_trace.py:1444: in wrapper
+    return fn(*args, **kwargs)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:85: in _batched_nms_vanilla
+    curr_keep_indices = nms(boxes[curr_indices], scores[curr_indices], iou_threshold)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+____ TestNMS.test_aot_dispatch_dynamic__test_batched_nms_implementations[0] ____
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:909: in test_batched_nms_implementations
+    keep_vanilla = ops.boxes._batched_nms_vanilla(boxes, scores, idxs, iou_threshold)
+/local/data0/moved_data/publishablew/vision/vision/venv/lib/python3.11/site-packages/torch/jit/_trace.py:1444: in wrapper
+    return fn(*args, **kwargs)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:85: in _batched_nms_vanilla
+    curr_keep_indices = nms(boxes[curr_indices], scores[curr_indices], iou_threshold)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________ TestNMS.test_schema__test_nms_float16[cuda] __________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:890: in test_nms_float16
+    keep32 = ops.nms(boxes, scores, iou_thres)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+__________ TestNMS.test_autograd_registration__test_nms_float16[cuda] __________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:890: in test_nms_float16
+    keep32 = ops.nms(boxes, scores, iou_thres)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_______________ TestNMS.test_faketensor__test_nms_float16[cuda] ________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:890: in test_nms_float16
+    keep32 = ops.nms(boxes, scores, iou_thres)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+__________ TestNMS.test_aot_dispatch_dynamic__test_nms_float16[cuda] ___________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:890: in test_nms_float16
+    keep32 = ops.nms(boxes, scores, iou_thres)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________ TestNMS.test_schema__test_nms_gpu[0.2-cuda] __________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:844: in test_nms_gpu
+    r_cpu = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+__________ TestNMS.test_autograd_registration__test_nms_gpu[0.2-cuda] __________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:844: in test_nms_gpu
+    r_cpu = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_______________ TestNMS.test_faketensor__test_nms_gpu[0.2-cuda] ________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:844: in test_nms_gpu
+    r_cpu = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+__________ TestNMS.test_aot_dispatch_dynamic__test_nms_gpu[0.2-cuda] ___________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:844: in test_nms_gpu
+    r_cpu = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+__________________ TestNMS.test_schema__test_nms_input_errors __________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:799: in test_nms_input_errors
+    ops.nms(torch.rand(4), torch.rand(3), 0.5)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+__________ TestNMS.test_autograd_registration__test_nms_input_errors ___________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:799: in test_nms_input_errors
+    ops.nms(torch.rand(4), torch.rand(3), 0.5)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+________________ TestNMS.test_faketensor__test_nms_input_errors ________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:799: in test_nms_input_errors
+    ops.nms(torch.rand(4), torch.rand(3), 0.5)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+___________ TestNMS.test_aot_dispatch_dynamic__test_nms_input_errors ___________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:799: in test_nms_input_errors
+    ops.nms(torch.rand(4), torch.rand(3), 0.5)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+___________________ TestNMS.test_schema__test_nms_ref[0-0.2] ___________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:794: in test_nms_ref
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+___________ TestNMS.test_autograd_registration__test_nms_ref[0-0.2] ____________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:794: in test_nms_ref
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________ TestNMS.test_faketensor__test_nms_ref[0-0.2] _________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:794: in test_nms_ref
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+____________ TestNMS.test_aot_dispatch_dynamic__test_nms_ref[0-0.2] ____________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:794: in test_nms_ref
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+___________________ TestNMS.test_schema__test_qnms[1-0-0.2] ____________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:824: in test_qnms
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+____________ TestNMS.test_autograd_registration__test_qnms[1-0-0.2] ____________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:824: in test_qnms
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+_________________ TestNMS.test_faketensor__test_qnms[1-0-0.2] __________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:824: in test_qnms
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+____________ TestNMS.test_aot_dispatch_dynamic__test_qnms[1-0-0.2] _____________
+/local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:824: in test_qnms
+    keep = ops.nms(boxes, scores, iou)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/boxes.py:11: in nms
+    from .temp import nms
+/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/temp.py:10: in <module>
+    from torchvision.ops import nms1 as torchvision_nms
+E   ImportError: cannot import name 'nms1' from 'torchvision.ops' (/local/data0/moved_data/publishablew/vision/vision/torchvision/ops/__init__.py)
+=============================== warnings summary ===============================
+test/test_ops.py: 10 warnings
+  /local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:859: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+    with torch.cuda.amp.autocast():
+
+test/test_ops.py: 30 warnings
+  /local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:866: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+    with torch.cpu.amp.autocast():
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[0-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[0-0.5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[0-0.8]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[1-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[1-0.5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[1-0.8]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[2-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[2-0.5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[2-0.8]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[3-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[3-0.5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[3-0.8]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[4-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[4-0.5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[4-0.8]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[5-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[5-0.5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[5-0.8]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[6-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[6-0.5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[6-0.8]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[7-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[7-0.5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[7-0.8]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[8-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[8-0.5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[8-0.8]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[9-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[9-0.5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[9-0.8]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_input_errors
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[1-0-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[1-0-0.5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[1-0-0.8]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[2-50-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[2-50-0.5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[2-50-0.8]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[3-10-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[3-10-0.5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[3-10-0.8]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_gpu[0.2-cuda]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_gpu[0.5-cuda]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_gpu[0.8-cuda]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype0-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype0-0.5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype0-0.8]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype1-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype1-0.5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype1-0.8]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype0-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype0-0.5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype0-0.8]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype1-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype1-0.5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype1-0.8]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_float16[cuda]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[0]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[3]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[4]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[6]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[7]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[8]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[9]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast[dtype0-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast[dtype0-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast[dtype0-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast[dtype0-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype0-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype0-0.5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype0-0.8]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype1-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype1-0.5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype1-0.8]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype0-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype0-0.5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype0-0.8]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype1-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype1-0.5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype1-0.8]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype0-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype0-0.5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype0-0.8]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype1-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype1-0.5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype1-0.8]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype0-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype0-0.5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype0-0.8]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype1-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype1-0.5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype1-0.8]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_batched_nms_implementations[0]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_batched_nms_implementations[0]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_batched_nms_implementations[0]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_batched_nms_implementations[0]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_nms_float16[cuda]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_nms_float16[cuda]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_nms_float16[cuda]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_nms_float16[cuda]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_nms_gpu[0.2-cuda]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_nms_gpu[0.2-cuda]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_nms_gpu[0.2-cuda]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_nms_gpu[0.2-cuda]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_nms_input_errors
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_nms_input_errors
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_nms_input_errors
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_nms_input_errors
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_nms_ref[0-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_nms_ref[0-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_nms_ref[0-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_nms_ref[0-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_qnms[1-0-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_qnms[1-0-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_qnms[1-0-0.2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_qnms[1-0-0.2]
+================= 118 failed, 12 skipped, 40 warnings in 7.56s =================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/vision/vision/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/vision/vision
+configfile: pytest.ini
+plugins: mock-3.14.0
+collecting ... collected 130 items
+
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[0-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[0-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[1-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[1-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[1-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[2-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[2-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[2-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[3-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[3-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[3-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[4-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[4-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[4-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[5-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[5-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[5-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[6-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[6-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[6-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[7-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[7-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[7-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[8-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[8-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[8-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[9-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[9-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[9-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_input_errors PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[1-0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[1-0-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[1-0-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[2-50-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[2-50-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[2-50-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[3-10-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[3-10-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[3-10-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_gpu[0.2-cuda] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_gpu[0.2-mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_gpu[0.5-cuda] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_gpu[0.5-mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_gpu[0.8-cuda] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_gpu[0.8-mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype0-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype0-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype1-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype1-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype1-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype0-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype0-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype1-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype1-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype1-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_float16[cuda] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_float16[mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[0] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[1] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[3] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[4] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[6] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[7] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[9] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast[dtype0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast[dtype0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast[dtype0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast[dtype0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype0-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype0-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype1-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype1-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype1-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype0-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype0-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype1-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype1-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype1-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype0-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype0-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype1-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype1-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype1-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype0-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype0-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype1-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype1-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype1-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_batched_nms_implementations[0] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_batched_nms_implementations[0] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_batched_nms_implementations[0] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_batched_nms_implementations[0] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_nms_float16[cuda] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_nms_float16[mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_nms_float16[cuda] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_nms_float16[mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_nms_float16[cuda] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_nms_float16[mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_nms_float16[cuda] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_nms_float16[mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_nms_gpu[0.2-cuda] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_nms_gpu[0.2-mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_nms_gpu[0.2-cuda] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_nms_gpu[0.2-mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_nms_gpu[0.2-cuda] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_nms_gpu[0.2-mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_nms_gpu[0.2-cuda] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_nms_gpu[0.2-mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_nms_input_errors PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_nms_input_errors PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_nms_input_errors PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_nms_input_errors PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_nms_ref[0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_nms_ref[0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_nms_ref[0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_nms_ref[0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_qnms[1-0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_qnms[1-0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_qnms[1-0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_qnms[1-0-0.2] PASSED
+
+=============================== warnings summary ===============================
+test/test_ops.py: 10 warnings
+  /local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:859: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+    with torch.cuda.amp.autocast():
+
+test/test_ops.py: 30 warnings
+  /local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:866: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+    with torch.cpu.amp.autocast():
+
+test/test_ops.py: 75 warnings
+  /local/data0/moved_data/publishablew/vision/vision/torchvision/_meta_registrations.py:173: FutureWarning: `create_unbacked_symint` is deprecated, please use `new_dynamic_size` instead
+    num_to_keep = ctx.create_unbacked_symint()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================ 118 passed, 12 skipped, 115 warnings in 3.30s =================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/vision/vision/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/vision/vision
+configfile: pytest.ini
+plugins: mock-3.14.0
+collecting ... collected 130 items
+
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[0-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[0-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[1-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[1-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[1-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[2-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[2-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[2-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[3-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[3-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[3-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[4-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[4-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[4-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[5-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[5-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[5-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[6-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[6-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[6-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[7-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[7-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[7-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[8-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[8-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[8-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[9-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[9-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_ref[9-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_input_errors PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[1-0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[1-0-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[1-0-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[2-50-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[2-50-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[2-50-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[3-10-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[3-10-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_qnms[3-10-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_gpu[0.2-cuda] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_gpu[0.2-mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_gpu[0.5-cuda] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_gpu[0.5-mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_gpu[0.8-cuda] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_gpu[0.8-mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype0-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype0-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype1-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype1-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast[dtype1-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype0-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype0-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype1-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype1-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autocast_cpu[dtype1-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_float16[cuda] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_nms_float16[mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[0] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[1] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[3] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[4] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[6] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[7] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_batched_nms_implementations[9] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast[dtype0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast[dtype0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast[dtype0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast[dtype0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype0-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype0-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype1-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype1-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_autocast_cpu[dtype1-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype0-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype0-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype1-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype1-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_autocast_cpu[dtype1-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype0-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype0-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype1-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype1-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_autocast_cpu[dtype1-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype0-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype0-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype1-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype1-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_autocast_cpu[dtype1-0.8] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_batched_nms_implementations[0] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_batched_nms_implementations[0] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_batched_nms_implementations[0] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_batched_nms_implementations[0] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_nms_float16[cuda] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_nms_float16[mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_nms_float16[cuda] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_nms_float16[mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_nms_float16[cuda] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_nms_float16[mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_nms_float16[cuda] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_nms_float16[mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_nms_gpu[0.2-cuda] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_nms_gpu[0.2-mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_nms_gpu[0.2-cuda] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_nms_gpu[0.2-mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_nms_gpu[0.2-cuda] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_nms_gpu[0.2-mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_nms_gpu[0.2-cuda] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_nms_gpu[0.2-mps] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_nms_input_errors PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_nms_input_errors PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_nms_input_errors PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_nms_input_errors PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_nms_ref[0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_nms_ref[0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_nms_ref[0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_nms_ref[0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_schema__test_qnms[1-0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_autograd_registration__test_qnms[1-0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_faketensor__test_qnms[1-0-0.2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_ops.py::TestNMS::test_aot_dispatch_dynamic__test_qnms[1-0-0.2] PASSED
+
+=============================== warnings summary ===============================
+test/test_ops.py: 10 warnings
+  /local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:859: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+    with torch.cuda.amp.autocast():
+
+test/test_ops.py: 30 warnings
+  /local/data0/moved_data/publishablew/vision/vision/test/test_ops.py:866: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+    with torch.cpu.amp.autocast():
+
+test/test_ops.py: 75 warnings
+  /local/data0/moved_data/publishablew/vision/vision/torchvision/_meta_registrations.py:173: FutureWarning: `create_unbacked_symint` is deprecated, please use `new_dynamic_size` instead
+    num_to_keep = ctx.create_unbacked_symint()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================ 118 passed, 12 skipped, 115 warnings in 3.31s =================

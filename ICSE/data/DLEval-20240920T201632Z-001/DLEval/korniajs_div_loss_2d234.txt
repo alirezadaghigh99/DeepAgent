@@ -1,0 +1,19 @@
+stage: Evaluating&Metrics
+task: Detection
+data: Image
+
+prompt:
+Generate a Python function called js_div_loss_2d that calculates the Jensen-Shannon divergence loss between two heatmaps. The function takes three arguments: pred (input tensor with shape (B, N, H, W)), target (target tensor with shape (B, N, H, W)), and reduction (specifies the reduction to apply to the output: 'none', 'mean', or 'sum'). The function returns a tensor.
+
+Example usage:
+pred = torch.full((1, 1, 2, 4), 0.125)
+loss = js_div_loss_2d(pred, pred)
+loss.item() should return 0.0.
+
+ ground Truth:kornia/losses/divergence.py
+
+ repo:kornia
+
+ function:js_div_loss_2d
+ 
+ test_cases:tests/losses/test_divergence.py::TestDivergenceLoss

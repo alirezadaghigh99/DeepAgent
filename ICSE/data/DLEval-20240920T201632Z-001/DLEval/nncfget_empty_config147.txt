@@ -1,0 +1,18 @@
+stage: Model Construction
+task: 
+data: 
+
+prompt:
+Generate a Python function called get_empty_config that takes in three optional parameters: model_size (default value of 4), input_sample_sizes (a list or tuple of integers, default value of None), and input_info (a dictionary, default value of None). The function returns an instance of NNCFConfig.
+
+If input_sample_sizes is None, it is set to [1, 1, 4, 4]. The function also contains a nested function _create_input_info that creates a list of dictionaries with the key "sample_size" based on the input_sample_sizes parameter.
+
+The NNCFConfig instance is created and updated with the keys "model" set to "empty_config", "model_size" set to the model_size parameter, and "input_info" set to input_info if it is provided, otherwise it is set to the result of calling _create_input_info(). The final output is the configured NNCFConfig instance.
+
+ ground Truth:tests/torch/helpers.py
+
+ repo:nncf
+
+ function:get_empty_config
+ 
+ test_cases:tests/torch/quantization/test_algo_quantization.py

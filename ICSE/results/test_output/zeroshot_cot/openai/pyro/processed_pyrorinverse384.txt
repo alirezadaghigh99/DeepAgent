@@ -1,0 +1,718 @@
+output file:
+processed_pyrorinverse384.json
+function:
+rinverse
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[False-A4]', '../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[True-A5] FAILED', '../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[False-A3] FAILED', '../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[False-A5] FAILED', '../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[True-A4] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[False-A5]', '../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[False-A2] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[False-A2]', '../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[False-A4] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[False-A3]', '../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[True-A2] FAILED', '../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[True-A3] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[True-A2]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[True-A4]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[True-A3]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[True-A5]'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/pyro/pyro/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/pyro/pyro
+configfile: setup.cfg
+plugins: typeguard-4.4.1, jaxtyping-0.2.19
+collecting ... collected 16 items
+
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[True-A0] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[True-A1] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[True-A2] FAILED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[True-A3] FAILED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[True-A4] FAILED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[True-A5] FAILED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[False-A0] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[False-A1] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[False-A2] FAILED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[False-A3] FAILED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[False-A4] FAILED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[False-A5] FAILED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_triangular_solve[lower] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_triangular_solve[upper] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_triangular_solve_transpose[lower] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_triangular_solve_transpose[upper] PASSED
+
+=================================== FAILURES ===================================
+__________________________ test_sym_rinverse[True-A2] __________________________
+
+A = tensor([[ 1.,  2.,  0.],
+        [ 2., -2.,  4.],
+        [ 0.,  4.,  5.]])
+use_sym = True
+
+    @pytest.mark.parametrize(
+        "A",
+        [
+            torch.tensor([[17.0]]),
+            torch.tensor([[1.0, 2.0], [2.0, -3.0]]),
+            torch.tensor([[1.0, 2, 0], [2, -2, 4], [0, 4, 5]]),
+            torch.tensor([[1.0, 2, 0, 7], [2, -2, 4, -1], [0, 4, 5, 8], [7, -1, 8, 1]]),
+            torch.tensor(
+                [
+                    [1.0, 2, 0, 7, 0],
+                    [2, -2, 4, -1, 2],
+                    [0, 4, 5, 8, -4],
+                    [7, -1, 8, 1, -3],
+                    [0, 2, -4, -3, -1],
+                ]
+            ),
+            torch.eye(40),
+        ],
+    )
+    @pytest.mark.parametrize("use_sym", [True, False])
+    def test_sym_rinverse(A, use_sym):
+        d = A.shape[-1]
+>       assert_equal(rinverse(A, sym=use_sym), torch.inverse(A), prec=1e-8)
+
+/local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/ops/linalg.py:14: in rinverse
+    return rinverse(M, sym)
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/ops/temp.py:32: in rinverse
+    minor = M[..., [k for k in range(3) if k != i], :][:, :, [l for l in range(3) if l != j]]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <torch.utils._device.DeviceContext object at 0x7c4fef29ba50>
+func = <slot wrapper '__getitem__' of 'torch._C.TensorBase' objects>, types = ()
+args = (tensor([[ 2., -2.,  4.],
+        [ 0.,  4.,  5.]]), (slice(None, None, None), slice(None, None, None), [1, 2]))
+kwargs = {}
+
+    def __torch_function__(self, func, types, args=(), kwargs=None):
+        kwargs = kwargs or {}
+        if func in _device_constructors() and kwargs.get('device') is None:
+            kwargs['device'] = self.device
+>       return func(*args, **kwargs)
+E       IndexError: too many indices for tensor of dimension 2
+
+/local/data0/moved_data/publishablew/pyro/pyro/venv/lib/python3.11/site-packages/torch/utils/_device.py:106: IndexError
+__________________________ test_sym_rinverse[True-A3] __________________________
+
+A = tensor([[ 1.,  2.,  0.,  7.],
+        [ 2., -2.,  4., -1.],
+        [ 0.,  4.,  5.,  8.],
+        [ 7., -1.,  8.,  1.]])
+use_sym = True
+
+    @pytest.mark.parametrize(
+        "A",
+        [
+            torch.tensor([[17.0]]),
+            torch.tensor([[1.0, 2.0], [2.0, -3.0]]),
+            torch.tensor([[1.0, 2, 0], [2, -2, 4], [0, 4, 5]]),
+            torch.tensor([[1.0, 2, 0, 7], [2, -2, 4, -1], [0, 4, 5, 8], [7, -1, 8, 1]]),
+            torch.tensor(
+                [
+                    [1.0, 2, 0, 7, 0],
+                    [2, -2, 4, -1, 2],
+                    [0, 4, 5, 8, -4],
+                    [7, -1, 8, 1, -3],
+                    [0, 2, -4, -3, -1],
+                ]
+            ),
+            torch.eye(40),
+        ],
+    )
+    @pytest.mark.parametrize("use_sym", [True, False])
+    def test_sym_rinverse(A, use_sym):
+        d = A.shape[-1]
+>       assert_equal(rinverse(A, sym=use_sym), torch.inverse(A), prec=1e-8)
+
+/local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/ops/linalg.py:14: in rinverse
+    return rinverse(M, sym)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+M = tensor([[ 1.,  2.,  0.,  7.],
+        [ 2., -2.,  4., -1.],
+        [ 0.,  4.,  5.,  8.],
+        [ 7., -1.,  8.,  1.]])
+sym = True
+
+    def rinverse(M, sym=False):
+        """Matrix inversion of rightmost dimensions (batched).
+    
+        For 1, 2, and 3 dimensions this uses the formulae.
+        For larger matrices, it uses blockwise inversion to reduce to
+        smaller matrices.
+        """
+        *batch_dims, n, m = M.shape
+        assert n == m, 'Matrix must be square'
+        if n == 1:
+            return 1.0 / M
+        elif n == 2:
+            a, b = (M[..., 0, 0], M[..., 0, 1])
+            c, d = (M[..., 1, 0], M[..., 1, 1])
+            det = a * d - b * c
+            inv = torch.empty_like(M)
+            inv[..., 0, 0] = d / det
+            inv[..., 0, 1] = -b / det
+            inv[..., 1, 0] = -c / det
+            inv[..., 1, 1] = a / det
+            return inv
+        elif n == 3:
+            inv = torch.empty_like(M)
+            for i in range(3):
+                for j in range(3):
+                    minor = M[..., [k for k in range(3) if k != i], :][:, :, [l for l in range(3) if l != j]]
+                    inv[..., j, i] = (-1) ** (i + j) * torch.det(minor)
+            det = M[..., 0, 0] * inv[..., 0, 0] + M[..., 0, 1] * inv[..., 1, 0] + M[..., 0, 2] * inv[..., 2, 0]
+            return inv / det.unsqueeze(-1).unsqueeze(-1)
+        else:
+            mid = n // 2
+            A = M[..., :mid, :mid]
+            B = M[..., :mid, mid:]
+            C = M[..., mid:, :mid]
+            D = M[..., mid:, mid:]
+>           A_inv = rinverse1(A, sym=sym)
+E           NameError: name 'rinverse1' is not defined
+
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/ops/temp.py:42: NameError
+__________________________ test_sym_rinverse[True-A4] __________________________
+
+A = tensor([[ 1.,  2.,  0.,  7.,  0.],
+        [ 2., -2.,  4., -1.,  2.],
+        [ 0.,  4.,  5.,  8., -4.],
+        [ 7., -1.,  8.,  1., -3.],
+        [ 0.,  2., -4., -3., -1.]])
+use_sym = True
+
+    @pytest.mark.parametrize(
+        "A",
+        [
+            torch.tensor([[17.0]]),
+            torch.tensor([[1.0, 2.0], [2.0, -3.0]]),
+            torch.tensor([[1.0, 2, 0], [2, -2, 4], [0, 4, 5]]),
+            torch.tensor([[1.0, 2, 0, 7], [2, -2, 4, -1], [0, 4, 5, 8], [7, -1, 8, 1]]),
+            torch.tensor(
+                [
+                    [1.0, 2, 0, 7, 0],
+                    [2, -2, 4, -1, 2],
+                    [0, 4, 5, 8, -4],
+                    [7, -1, 8, 1, -3],
+                    [0, 2, -4, -3, -1],
+                ]
+            ),
+            torch.eye(40),
+        ],
+    )
+    @pytest.mark.parametrize("use_sym", [True, False])
+    def test_sym_rinverse(A, use_sym):
+        d = A.shape[-1]
+>       assert_equal(rinverse(A, sym=use_sym), torch.inverse(A), prec=1e-8)
+
+/local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/ops/linalg.py:14: in rinverse
+    return rinverse(M, sym)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+M = tensor([[ 1.,  2.,  0.,  7.,  0.],
+        [ 2., -2.,  4., -1.,  2.],
+        [ 0.,  4.,  5.,  8., -4.],
+        [ 7., -1.,  8.,  1., -3.],
+        [ 0.,  2., -4., -3., -1.]])
+sym = True
+
+    def rinverse(M, sym=False):
+        """Matrix inversion of rightmost dimensions (batched).
+    
+        For 1, 2, and 3 dimensions this uses the formulae.
+        For larger matrices, it uses blockwise inversion to reduce to
+        smaller matrices.
+        """
+        *batch_dims, n, m = M.shape
+        assert n == m, 'Matrix must be square'
+        if n == 1:
+            return 1.0 / M
+        elif n == 2:
+            a, b = (M[..., 0, 0], M[..., 0, 1])
+            c, d = (M[..., 1, 0], M[..., 1, 1])
+            det = a * d - b * c
+            inv = torch.empty_like(M)
+            inv[..., 0, 0] = d / det
+            inv[..., 0, 1] = -b / det
+            inv[..., 1, 0] = -c / det
+            inv[..., 1, 1] = a / det
+            return inv
+        elif n == 3:
+            inv = torch.empty_like(M)
+            for i in range(3):
+                for j in range(3):
+                    minor = M[..., [k for k in range(3) if k != i], :][:, :, [l for l in range(3) if l != j]]
+                    inv[..., j, i] = (-1) ** (i + j) * torch.det(minor)
+            det = M[..., 0, 0] * inv[..., 0, 0] + M[..., 0, 1] * inv[..., 1, 0] + M[..., 0, 2] * inv[..., 2, 0]
+            return inv / det.unsqueeze(-1).unsqueeze(-1)
+        else:
+            mid = n // 2
+            A = M[..., :mid, :mid]
+            B = M[..., :mid, mid:]
+            C = M[..., mid:, :mid]
+            D = M[..., mid:, mid:]
+>           A_inv = rinverse1(A, sym=sym)
+E           NameError: name 'rinverse1' is not defined
+
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/ops/temp.py:42: NameError
+__________________________ test_sym_rinverse[True-A5] __________________________
+
+A = tensor([[1., 0., 0.,  ..., 0., 0., 0.],
+        [0., 1., 0.,  ..., 0., 0., 0.],
+        [0., 0., 1.,  ..., 0., 0., 0.]...       [0., 0., 0.,  ..., 1., 0., 0.],
+        [0., 0., 0.,  ..., 0., 1., 0.],
+        [0., 0., 0.,  ..., 0., 0., 1.]])
+use_sym = True
+
+    @pytest.mark.parametrize(
+        "A",
+        [
+            torch.tensor([[17.0]]),
+            torch.tensor([[1.0, 2.0], [2.0, -3.0]]),
+            torch.tensor([[1.0, 2, 0], [2, -2, 4], [0, 4, 5]]),
+            torch.tensor([[1.0, 2, 0, 7], [2, -2, 4, -1], [0, 4, 5, 8], [7, -1, 8, 1]]),
+            torch.tensor(
+                [
+                    [1.0, 2, 0, 7, 0],
+                    [2, -2, 4, -1, 2],
+                    [0, 4, 5, 8, -4],
+                    [7, -1, 8, 1, -3],
+                    [0, 2, -4, -3, -1],
+                ]
+            ),
+            torch.eye(40),
+        ],
+    )
+    @pytest.mark.parametrize("use_sym", [True, False])
+    def test_sym_rinverse(A, use_sym):
+        d = A.shape[-1]
+>       assert_equal(rinverse(A, sym=use_sym), torch.inverse(A), prec=1e-8)
+
+/local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/ops/linalg.py:14: in rinverse
+    return rinverse(M, sym)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+M = tensor([[1., 0., 0.,  ..., 0., 0., 0.],
+        [0., 1., 0.,  ..., 0., 0., 0.],
+        [0., 0., 1.,  ..., 0., 0., 0.]...       [0., 0., 0.,  ..., 1., 0., 0.],
+        [0., 0., 0.,  ..., 0., 1., 0.],
+        [0., 0., 0.,  ..., 0., 0., 1.]])
+sym = True
+
+    def rinverse(M, sym=False):
+        """Matrix inversion of rightmost dimensions (batched).
+    
+        For 1, 2, and 3 dimensions this uses the formulae.
+        For larger matrices, it uses blockwise inversion to reduce to
+        smaller matrices.
+        """
+        *batch_dims, n, m = M.shape
+        assert n == m, 'Matrix must be square'
+        if n == 1:
+            return 1.0 / M
+        elif n == 2:
+            a, b = (M[..., 0, 0], M[..., 0, 1])
+            c, d = (M[..., 1, 0], M[..., 1, 1])
+            det = a * d - b * c
+            inv = torch.empty_like(M)
+            inv[..., 0, 0] = d / det
+            inv[..., 0, 1] = -b / det
+            inv[..., 1, 0] = -c / det
+            inv[..., 1, 1] = a / det
+            return inv
+        elif n == 3:
+            inv = torch.empty_like(M)
+            for i in range(3):
+                for j in range(3):
+                    minor = M[..., [k for k in range(3) if k != i], :][:, :, [l for l in range(3) if l != j]]
+                    inv[..., j, i] = (-1) ** (i + j) * torch.det(minor)
+            det = M[..., 0, 0] * inv[..., 0, 0] + M[..., 0, 1] * inv[..., 1, 0] + M[..., 0, 2] * inv[..., 2, 0]
+            return inv / det.unsqueeze(-1).unsqueeze(-1)
+        else:
+            mid = n // 2
+            A = M[..., :mid, :mid]
+            B = M[..., :mid, mid:]
+            C = M[..., mid:, :mid]
+            D = M[..., mid:, mid:]
+>           A_inv = rinverse1(A, sym=sym)
+E           NameError: name 'rinverse1' is not defined
+
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/ops/temp.py:42: NameError
+_________________________ test_sym_rinverse[False-A2] __________________________
+
+A = tensor([[ 1.,  2.,  0.],
+        [ 2., -2.,  4.],
+        [ 0.,  4.,  5.]])
+use_sym = False
+
+    @pytest.mark.parametrize(
+        "A",
+        [
+            torch.tensor([[17.0]]),
+            torch.tensor([[1.0, 2.0], [2.0, -3.0]]),
+            torch.tensor([[1.0, 2, 0], [2, -2, 4], [0, 4, 5]]),
+            torch.tensor([[1.0, 2, 0, 7], [2, -2, 4, -1], [0, 4, 5, 8], [7, -1, 8, 1]]),
+            torch.tensor(
+                [
+                    [1.0, 2, 0, 7, 0],
+                    [2, -2, 4, -1, 2],
+                    [0, 4, 5, 8, -4],
+                    [7, -1, 8, 1, -3],
+                    [0, 2, -4, -3, -1],
+                ]
+            ),
+            torch.eye(40),
+        ],
+    )
+    @pytest.mark.parametrize("use_sym", [True, False])
+    def test_sym_rinverse(A, use_sym):
+        d = A.shape[-1]
+>       assert_equal(rinverse(A, sym=use_sym), torch.inverse(A), prec=1e-8)
+
+/local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/ops/linalg.py:14: in rinverse
+    return rinverse(M, sym)
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/ops/temp.py:32: in rinverse
+    minor = M[..., [k for k in range(3) if k != i], :][:, :, [l for l in range(3) if l != j]]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <torch.utils._device.DeviceContext object at 0x7c4fef29ba50>
+func = <slot wrapper '__getitem__' of 'torch._C.TensorBase' objects>, types = ()
+args = (tensor([[ 2., -2.,  4.],
+        [ 0.,  4.,  5.]]), (slice(None, None, None), slice(None, None, None), [1, 2]))
+kwargs = {}
+
+    def __torch_function__(self, func, types, args=(), kwargs=None):
+        kwargs = kwargs or {}
+        if func in _device_constructors() and kwargs.get('device') is None:
+            kwargs['device'] = self.device
+>       return func(*args, **kwargs)
+E       IndexError: too many indices for tensor of dimension 2
+
+/local/data0/moved_data/publishablew/pyro/pyro/venv/lib/python3.11/site-packages/torch/utils/_device.py:106: IndexError
+_________________________ test_sym_rinverse[False-A3] __________________________
+
+A = tensor([[ 1.,  2.,  0.,  7.],
+        [ 2., -2.,  4., -1.],
+        [ 0.,  4.,  5.,  8.],
+        [ 7., -1.,  8.,  1.]])
+use_sym = False
+
+    @pytest.mark.parametrize(
+        "A",
+        [
+            torch.tensor([[17.0]]),
+            torch.tensor([[1.0, 2.0], [2.0, -3.0]]),
+            torch.tensor([[1.0, 2, 0], [2, -2, 4], [0, 4, 5]]),
+            torch.tensor([[1.0, 2, 0, 7], [2, -2, 4, -1], [0, 4, 5, 8], [7, -1, 8, 1]]),
+            torch.tensor(
+                [
+                    [1.0, 2, 0, 7, 0],
+                    [2, -2, 4, -1, 2],
+                    [0, 4, 5, 8, -4],
+                    [7, -1, 8, 1, -3],
+                    [0, 2, -4, -3, -1],
+                ]
+            ),
+            torch.eye(40),
+        ],
+    )
+    @pytest.mark.parametrize("use_sym", [True, False])
+    def test_sym_rinverse(A, use_sym):
+        d = A.shape[-1]
+>       assert_equal(rinverse(A, sym=use_sym), torch.inverse(A), prec=1e-8)
+
+/local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/ops/linalg.py:14: in rinverse
+    return rinverse(M, sym)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+M = tensor([[ 1.,  2.,  0.,  7.],
+        [ 2., -2.,  4., -1.],
+        [ 0.,  4.,  5.,  8.],
+        [ 7., -1.,  8.,  1.]])
+sym = False
+
+    def rinverse(M, sym=False):
+        """Matrix inversion of rightmost dimensions (batched).
+    
+        For 1, 2, and 3 dimensions this uses the formulae.
+        For larger matrices, it uses blockwise inversion to reduce to
+        smaller matrices.
+        """
+        *batch_dims, n, m = M.shape
+        assert n == m, 'Matrix must be square'
+        if n == 1:
+            return 1.0 / M
+        elif n == 2:
+            a, b = (M[..., 0, 0], M[..., 0, 1])
+            c, d = (M[..., 1, 0], M[..., 1, 1])
+            det = a * d - b * c
+            inv = torch.empty_like(M)
+            inv[..., 0, 0] = d / det
+            inv[..., 0, 1] = -b / det
+            inv[..., 1, 0] = -c / det
+            inv[..., 1, 1] = a / det
+            return inv
+        elif n == 3:
+            inv = torch.empty_like(M)
+            for i in range(3):
+                for j in range(3):
+                    minor = M[..., [k for k in range(3) if k != i], :][:, :, [l for l in range(3) if l != j]]
+                    inv[..., j, i] = (-1) ** (i + j) * torch.det(minor)
+            det = M[..., 0, 0] * inv[..., 0, 0] + M[..., 0, 1] * inv[..., 1, 0] + M[..., 0, 2] * inv[..., 2, 0]
+            return inv / det.unsqueeze(-1).unsqueeze(-1)
+        else:
+            mid = n // 2
+            A = M[..., :mid, :mid]
+            B = M[..., :mid, mid:]
+            C = M[..., mid:, :mid]
+            D = M[..., mid:, mid:]
+>           A_inv = rinverse1(A, sym=sym)
+E           NameError: name 'rinverse1' is not defined
+
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/ops/temp.py:42: NameError
+_________________________ test_sym_rinverse[False-A4] __________________________
+
+A = tensor([[ 1.,  2.,  0.,  7.,  0.],
+        [ 2., -2.,  4., -1.,  2.],
+        [ 0.,  4.,  5.,  8., -4.],
+        [ 7., -1.,  8.,  1., -3.],
+        [ 0.,  2., -4., -3., -1.]])
+use_sym = False
+
+    @pytest.mark.parametrize(
+        "A",
+        [
+            torch.tensor([[17.0]]),
+            torch.tensor([[1.0, 2.0], [2.0, -3.0]]),
+            torch.tensor([[1.0, 2, 0], [2, -2, 4], [0, 4, 5]]),
+            torch.tensor([[1.0, 2, 0, 7], [2, -2, 4, -1], [0, 4, 5, 8], [7, -1, 8, 1]]),
+            torch.tensor(
+                [
+                    [1.0, 2, 0, 7, 0],
+                    [2, -2, 4, -1, 2],
+                    [0, 4, 5, 8, -4],
+                    [7, -1, 8, 1, -3],
+                    [0, 2, -4, -3, -1],
+                ]
+            ),
+            torch.eye(40),
+        ],
+    )
+    @pytest.mark.parametrize("use_sym", [True, False])
+    def test_sym_rinverse(A, use_sym):
+        d = A.shape[-1]
+>       assert_equal(rinverse(A, sym=use_sym), torch.inverse(A), prec=1e-8)
+
+/local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/ops/linalg.py:14: in rinverse
+    return rinverse(M, sym)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+M = tensor([[ 1.,  2.,  0.,  7.,  0.],
+        [ 2., -2.,  4., -1.,  2.],
+        [ 0.,  4.,  5.,  8., -4.],
+        [ 7., -1.,  8.,  1., -3.],
+        [ 0.,  2., -4., -3., -1.]])
+sym = False
+
+    def rinverse(M, sym=False):
+        """Matrix inversion of rightmost dimensions (batched).
+    
+        For 1, 2, and 3 dimensions this uses the formulae.
+        For larger matrices, it uses blockwise inversion to reduce to
+        smaller matrices.
+        """
+        *batch_dims, n, m = M.shape
+        assert n == m, 'Matrix must be square'
+        if n == 1:
+            return 1.0 / M
+        elif n == 2:
+            a, b = (M[..., 0, 0], M[..., 0, 1])
+            c, d = (M[..., 1, 0], M[..., 1, 1])
+            det = a * d - b * c
+            inv = torch.empty_like(M)
+            inv[..., 0, 0] = d / det
+            inv[..., 0, 1] = -b / det
+            inv[..., 1, 0] = -c / det
+            inv[..., 1, 1] = a / det
+            return inv
+        elif n == 3:
+            inv = torch.empty_like(M)
+            for i in range(3):
+                for j in range(3):
+                    minor = M[..., [k for k in range(3) if k != i], :][:, :, [l for l in range(3) if l != j]]
+                    inv[..., j, i] = (-1) ** (i + j) * torch.det(minor)
+            det = M[..., 0, 0] * inv[..., 0, 0] + M[..., 0, 1] * inv[..., 1, 0] + M[..., 0, 2] * inv[..., 2, 0]
+            return inv / det.unsqueeze(-1).unsqueeze(-1)
+        else:
+            mid = n // 2
+            A = M[..., :mid, :mid]
+            B = M[..., :mid, mid:]
+            C = M[..., mid:, :mid]
+            D = M[..., mid:, mid:]
+>           A_inv = rinverse1(A, sym=sym)
+E           NameError: name 'rinverse1' is not defined
+
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/ops/temp.py:42: NameError
+_________________________ test_sym_rinverse[False-A5] __________________________
+
+A = tensor([[1., 0., 0.,  ..., 0., 0., 0.],
+        [0., 1., 0.,  ..., 0., 0., 0.],
+        [0., 0., 1.,  ..., 0., 0., 0.]...       [0., 0., 0.,  ..., 1., 0., 0.],
+        [0., 0., 0.,  ..., 0., 1., 0.],
+        [0., 0., 0.,  ..., 0., 0., 1.]])
+use_sym = False
+
+    @pytest.mark.parametrize(
+        "A",
+        [
+            torch.tensor([[17.0]]),
+            torch.tensor([[1.0, 2.0], [2.0, -3.0]]),
+            torch.tensor([[1.0, 2, 0], [2, -2, 4], [0, 4, 5]]),
+            torch.tensor([[1.0, 2, 0, 7], [2, -2, 4, -1], [0, 4, 5, 8], [7, -1, 8, 1]]),
+            torch.tensor(
+                [
+                    [1.0, 2, 0, 7, 0],
+                    [2, -2, 4, -1, 2],
+                    [0, 4, 5, 8, -4],
+                    [7, -1, 8, 1, -3],
+                    [0, 2, -4, -3, -1],
+                ]
+            ),
+            torch.eye(40),
+        ],
+    )
+    @pytest.mark.parametrize("use_sym", [True, False])
+    def test_sym_rinverse(A, use_sym):
+        d = A.shape[-1]
+>       assert_equal(rinverse(A, sym=use_sym), torch.inverse(A), prec=1e-8)
+
+/local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/ops/linalg.py:14: in rinverse
+    return rinverse(M, sym)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+M = tensor([[1., 0., 0.,  ..., 0., 0., 0.],
+        [0., 1., 0.,  ..., 0., 0., 0.],
+        [0., 0., 1.,  ..., 0., 0., 0.]...       [0., 0., 0.,  ..., 1., 0., 0.],
+        [0., 0., 0.,  ..., 0., 1., 0.],
+        [0., 0., 0.,  ..., 0., 0., 1.]])
+sym = False
+
+    def rinverse(M, sym=False):
+        """Matrix inversion of rightmost dimensions (batched).
+    
+        For 1, 2, and 3 dimensions this uses the formulae.
+        For larger matrices, it uses blockwise inversion to reduce to
+        smaller matrices.
+        """
+        *batch_dims, n, m = M.shape
+        assert n == m, 'Matrix must be square'
+        if n == 1:
+            return 1.0 / M
+        elif n == 2:
+            a, b = (M[..., 0, 0], M[..., 0, 1])
+            c, d = (M[..., 1, 0], M[..., 1, 1])
+            det = a * d - b * c
+            inv = torch.empty_like(M)
+            inv[..., 0, 0] = d / det
+            inv[..., 0, 1] = -b / det
+            inv[..., 1, 0] = -c / det
+            inv[..., 1, 1] = a / det
+            return inv
+        elif n == 3:
+            inv = torch.empty_like(M)
+            for i in range(3):
+                for j in range(3):
+                    minor = M[..., [k for k in range(3) if k != i], :][:, :, [l for l in range(3) if l != j]]
+                    inv[..., j, i] = (-1) ** (i + j) * torch.det(minor)
+            det = M[..., 0, 0] * inv[..., 0, 0] + M[..., 0, 1] * inv[..., 1, 0] + M[..., 0, 2] * inv[..., 2, 0]
+            return inv / det.unsqueeze(-1).unsqueeze(-1)
+        else:
+            mid = n // 2
+            A = M[..., :mid, :mid]
+            B = M[..., :mid, mid:]
+            C = M[..., mid:, :mid]
+            D = M[..., mid:, mid:]
+>           A_inv = rinverse1(A, sym=sym)
+E           NameError: name 'rinverse1' is not defined
+
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/ops/temp.py:42: NameError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[True-A2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[True-A3]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[True-A4]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[True-A5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[False-A2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[False-A3]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[False-A4]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[False-A5]
+========================= 8 failed, 8 passed in 0.30s ==========================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/pyro/pyro/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/pyro/pyro
+configfile: setup.cfg
+plugins: typeguard-4.4.1, jaxtyping-0.2.19
+collecting ... collected 16 items
+
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[True-A0] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[True-A1] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[True-A2] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[True-A3] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[True-A4] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[True-A5] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[False-A0] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[False-A1] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[False-A2] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[False-A3] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[False-A4] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[False-A5] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_triangular_solve[lower] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_triangular_solve[upper] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_triangular_solve_transpose[lower] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_triangular_solve_transpose[upper] PASSED
+
+============================== 16 passed in 0.22s ==============================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/pyro/pyro/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/pyro/pyro
+configfile: setup.cfg
+plugins: typeguard-4.4.1, jaxtyping-0.2.19
+collecting ... collected 16 items
+
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[True-A0] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[True-A1] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[True-A2] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[True-A3] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[True-A4] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[True-A5] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[False-A0] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[False-A1] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[False-A2] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[False-A3] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[False-A4] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_sym_rinverse[False-A5] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_triangular_solve[lower] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_triangular_solve[upper] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_triangular_solve_transpose[lower] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_linalg.py::test_triangular_solve_transpose[upper] PASSED
+
+============================== 16 passed in 0.23s ==============================

@@ -1,0 +1,11 @@
+{
+    "result": "Error",
+    "prompt": "**Prompt:**\n\nWrite a Python function `evaluate` for the class `LinearInequalityConstraint` that checks if a set of input points satisfies the constraints defined by a matrix `A`, lower bounds, and upper bounds. The function should handle dimension mismatches and return a boolean array indicating whether each input point meets the constraints. The structure is:\n\n```python\nclass LinearInequalityConstraint(InequalityConstraint):\n    def __init__(self, constraint_matrix: np.ndarray, lower_bound: np.ndarray = None, upper_bound: np.ndarray = None):\n        super().__init__(lower_bound, upper_bound)\n        self.constraint_matrix = constraint_matrix\n\n    def evaluate(self, x: np.ndarray) -> np.ndarray:\n```",
+    "function_name": "evaluate",
+    "ground_truth": "emukit/core/constraints.py",
+    "test": "tests/emukit/core/test_constraints.py",
+    "class": "LinearInequalityConstraint",
+    "stage": "",
+    "task": "Prediction",
+    "data": "Evaluation/metrics"
+}

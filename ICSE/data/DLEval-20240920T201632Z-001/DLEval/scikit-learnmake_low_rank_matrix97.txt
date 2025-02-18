@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: Table
+
+prompt:
+Generate a Python function called make_low_rank_matrix that generates a mostly low rank matrix with bell-shaped singular values. The function takes in parameters such as n_samples, n_features, effective_rank, tail_strength, and random_state. It returns a matrix X of shape (n_samples, n_features) that represents the generated low rank matrix. The function utilizes random number generation for dataset creation and constructs the singular profile by combining signal and noise components based on the specified parameters. The function also includes examples of how to use it with sample input values.
+
+ ground Truth:sklearn/datasets/_samples_generator.py
+
+ repo:scikit-learn
+
+ function:make_low_rank_matrix
+ 
+ test_cases:sklearn/datasets/tests/test_samples_generator.py

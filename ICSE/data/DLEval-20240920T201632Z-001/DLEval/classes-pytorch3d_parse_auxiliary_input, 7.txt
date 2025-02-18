@@ -1,0 +1,59 @@
+stage: Tabular
+task: 
+data: pre-post process
+
+prompt:
+Generate the `_parse_auxiliary_input` function for the following class that interprets auxiliary inputs (normals, features) given to `__init__`. The inputs can be either a list of tensors with shape `(num_points, C)` or a padded float tensor of shape `(num_clouds, num_points, C)`. The function should return a tuple with the list, padded tensor, and number of channels.
+
+```python
+class Pointclouds:
+    _INTERNAL_TENSORS = [
+        "_points_packed",
+        "_points_padded",
+        "_normals_packed",
+        "_normals_padded",
+        "_features_packed",
+        "_features_padded",
+        "_packed_to_cloud_idx",
+        "_cloud_to_packed_first_idx",
+        "_num_points_per_cloud",
+        "_padded_to_packed_idx",
+        "valid",
+        "equisized",
+    ]
+
+    def __init__(self, points, normals=None, features=None) -> None:
+        self.device = torch.device("cpu")
+        self.equisized = False
+        self.valid = None
+        self._N = 0
+        self._P = 0
+        self._C = None
+        self._points_list = None
+        self._normals_list = None
+        self._features_list = None
+        self._num_points_per_cloud = None
+        self._points_packed = None
+        self._normals_packed = None
+        self._features_packed = None
+        self._packed_to_cloud_idx = None
+        self._cloud_to_packed_first_idx = None
+        self._points_padded = None
+        self._normals_padded = None
+        self._features_padded = None
+        self._padded_to_packed_idx = None
+        # initialization code...
+   def _parse_auxiliary_input1(
+        self, aux_input
+    ) -> Tuple[Optional[List[torch.Tensor]], Optional[torch.Tensor], Optional[int]]:
+```
+
+ ground Truth:pytorch3d/structures/pointclouds.py
+
+ repo:pytorch3d
+
+ function:_parse_auxiliary_input
+ 
+ test_cases:tests/test_pointclouds.py::TestPointclouds
+ 
+ class:Pointclouds

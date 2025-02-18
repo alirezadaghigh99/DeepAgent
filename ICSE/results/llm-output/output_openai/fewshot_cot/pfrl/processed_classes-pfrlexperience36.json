@@ -1,0 +1,11 @@
+{
+    "result": "Error",
+    "prompt": "Generate a Python method `experience` for the `EmpiricalNormalization` class that updates the running mean and variance of input values based on empirical data. The method should increment the count of observed samples, compute the mean and variance of the current batch of inputs, and update the running mean and variance using a weighted average. The method should only update the values if the total observed count is less than a specified threshold (`self.until`). The method should also handle edge cases where the batch size is zero.\n\nClass structure:\n\n```python\nclass EmpiricalNormalization(nn.Module):\n    def __init__(\n        self,\n        shape,\n        batch_axis=0,\n        eps=1e-2,\n        dtype=np.float32,\n        until=None,\n        clip_threshold=None,\n    ):\n        self.batch_axis = batch_axis\n        self.eps = dtype.type(eps)\n        self.until = until\n        self.clip_threshold = clip_threshold\n        self.register_buffer(\n            \"_mean\",\n            torch.tensor(np.expand_dims(np.zeros(shape, dtype=dtype), batch_axis)),\n        )\n        self.register_buffer(\n            \"_var\",\n            torch.tensor(np.expand_dims(np.ones(shape, dtype=dtype), batch_axis)),\n        )\n        self.register_buffer(\"count\", torch.tensor(0))\n\n        # cache\n        self._cached_std_inverse = None\n\n    def experience(self, x):\n        # Implement the function as described in the prompt\n```",
+    "function_name": "experience",
+    "ground_truth": "pfrl/nn/empirical_normalization.py",
+    "test": "tests/nn_tests/test_empirical_normalization.py",
+    "class": "EmpiricalNormalization",
+    "stage": "",
+    "task": "",
+    "data": "Training"
+}

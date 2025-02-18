@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: Detection
+data: Image
+
+prompt:
+Write a Python function `get_fast_detection_datasets` that generates synthetic datasets for object detection tasks. The function should accept the following inputs: `n_images` (number of total images), `max_elements_per_image` (maximum number of objects per image), `n_samples_per_class` (number of samples per class), `n_classes` (number of different classes), `seed` (random seed for reproducibility), `image_size` (size of each image), and `n_test_images` (number of images to be used for testing). The function should ensure that the number of generated images and elements per image are sufficient to cover the required samples per class and that the number of test images is within valid bounds. Use assertions to check that the total number of samples is greater than or equal to the required samples per class and that the number of test images is less than the total number of images and greater than zero. The function should return two datasets, one for training and one for testing, each containing images and corresponding detection targets.
+
+ ground Truth:tests/unit_tests_utils.py
+
+ repo:avalanche
+
+ function:get_fast_detection_datasets
+ 
+ test_cases:tests/benchmarks/utils/test_transformations.py

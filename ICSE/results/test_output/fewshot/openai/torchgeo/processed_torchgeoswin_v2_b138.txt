@@ -1,0 +1,1390 @@
+output file:
+processed_torchgeoswin_v2_b138.json
+function:
+swin_v2_b
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.LANDSAT_SI_SATLAS] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b', 'FAILED ../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL2_SI_MS_SATLAS]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.LANDSAT_SI_SATLAS]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL1_SI_SATLAS]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL1_MI_SATLAS]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL2_MI_RGB_SATLAS]', '../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL1_SI_SATLAS] FAILED', '../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL1_MI_SATLAS] FAILED', '../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL2_SI_MS_SATLAS] FAILED', '../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.NAIP_RGB_MI_SATLAS] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL2_MI_MS_SATLAS]', '../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.LANDSAT_MI_SATLAS]', '../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL2_MI_MS_SATLAS] FAILED', '../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.LANDSAT_MI_SATLAS] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL2_SI_RGB_SATLAS]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.NAIP_RGB_SI_SATLAS]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.NAIP_RGB_MI_SATLAS]', '../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL2_MI_RGB_SATLAS] FAILED', '../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.NAIP_RGB_SI_SATLAS] FAILED', '../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL2_SI_RGB_SATLAS] FAILED'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/torchgeo/torchgeo/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/torchgeo/torchgeo
+configfile: pyproject.toml
+plugins: hydra-core-1.3.2
+collecting ... collected 58 items / 14 deselected / 44 selected
+
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_swin_v2_t PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_swin_v2_t_weights[Swin_V2_T_Weights.SENTINEL2_MI_MS_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_swin_v2_t_weights[Swin_V2_T_Weights.SENTINEL2_MI_RGB_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_swin_v2_t_weights[Swin_V2_T_Weights.SENTINEL2_SI_MS_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_swin_v2_t_weights[Swin_V2_T_Weights.SENTINEL2_SI_RGB_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_bands[Swin_V2_T_Weights.SENTINEL2_MI_MS_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_bands[Swin_V2_T_Weights.SENTINEL2_MI_RGB_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_bands[Swin_V2_T_Weights.SENTINEL2_SI_MS_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_bands[Swin_V2_T_Weights.SENTINEL2_SI_RGB_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_transforms[Swin_V2_T_Weights.SENTINEL2_MI_MS_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_transforms[Swin_V2_T_Weights.SENTINEL2_MI_RGB_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_transforms[Swin_V2_T_Weights.SENTINEL2_SI_MS_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_transforms[Swin_V2_T_Weights.SENTINEL2_SI_RGB_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b FAILED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.NAIP_RGB_MI_SATLAS] FAILED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.NAIP_RGB_SI_SATLAS] FAILED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.LANDSAT_MI_SATLAS] FAILED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.LANDSAT_SI_SATLAS] FAILED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL1_MI_SATLAS] FAILED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL1_SI_SATLAS] FAILED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL2_MI_MS_SATLAS] FAILED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL2_MI_RGB_SATLAS] FAILED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL2_SI_MS_SATLAS] FAILED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL2_SI_RGB_SATLAS] FAILED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_bands[Swin_V2_B_Weights.NAIP_RGB_MI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_bands[Swin_V2_B_Weights.NAIP_RGB_SI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_bands[Swin_V2_B_Weights.LANDSAT_MI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_bands[Swin_V2_B_Weights.LANDSAT_SI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_bands[Swin_V2_B_Weights.SENTINEL1_MI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_bands[Swin_V2_B_Weights.SENTINEL1_SI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_bands[Swin_V2_B_Weights.SENTINEL2_MI_MS_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_bands[Swin_V2_B_Weights.SENTINEL2_MI_RGB_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_bands[Swin_V2_B_Weights.SENTINEL2_SI_MS_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_bands[Swin_V2_B_Weights.SENTINEL2_SI_RGB_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_transforms[Swin_V2_B_Weights.NAIP_RGB_MI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_transforms[Swin_V2_B_Weights.NAIP_RGB_SI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_transforms[Swin_V2_B_Weights.LANDSAT_MI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_transforms[Swin_V2_B_Weights.LANDSAT_SI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_transforms[Swin_V2_B_Weights.SENTINEL1_MI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_transforms[Swin_V2_B_Weights.SENTINEL1_SI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_transforms[Swin_V2_B_Weights.SENTINEL2_MI_MS_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_transforms[Swin_V2_B_Weights.SENTINEL2_MI_RGB_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_transforms[Swin_V2_B_Weights.SENTINEL2_SI_MS_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_transforms[Swin_V2_B_Weights.SENTINEL2_SI_RGB_SATLAS] PASSED
+
+=================================== FAILURES ===================================
+_________________________ TestSwin_V2_B.test_swin_v2_b _________________________
+
+self = <tests.models.test_swin.TestSwin_V2_B object at 0x73a96671a690>
+
+    def test_swin_v2_b(self) -> None:
+>       swin_v2_b()
+
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/torchgeo/models/swin.py:81: in swin_v2_b
+    return swin_v2_b(weights)
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/torchgeo/models/temp.py:23: in swin_v2_b
+    model = timm.create_model(model_name, pretrained=pretrained, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+model_name = 'swinv2_base_patch4_window7_224', pretrained = None
+pretrained_cfg = None, pretrained_cfg_overlay = None, checkpoint_path = None
+cache_dir = None, scriptable = None, exportable = None, no_jit = None
+kwargs = {}, model_source = 'timm', pretrained_tag = ''
+
+    def create_model(
+            model_name: str,
+            pretrained: bool = False,
+            pretrained_cfg: Optional[Union[str, Dict[str, Any], PretrainedCfg]] = None,
+            pretrained_cfg_overlay:  Optional[Dict[str, Any]] = None,
+            checkpoint_path: Optional[Union[str, Path]] = None,
+            cache_dir: Optional[Union[str, Path]] = None,
+            scriptable: Optional[bool] = None,
+            exportable: Optional[bool] = None,
+            no_jit: Optional[bool] = None,
+            **kwargs,
+    ):
+        """Create a model.
+    
+        Lookup model's entrypoint function and pass relevant args to create a new model.
+    
+        Tip:
+            **kwargs will be passed through entrypoint fn to ``timm.models.build_model_with_cfg()``
+            and then the model class __init__(). kwargs values set to None are pruned before passing.
+    
+        Args:
+            model_name: Name of model to instantiate.
+            pretrained: If set to `True`, load pretrained ImageNet-1k weights.
+            pretrained_cfg: Pass in an external pretrained_cfg for model.
+            pretrained_cfg_overlay: Replace key-values in base pretrained_cfg with these.
+            checkpoint_path: Path of checkpoint to load _after_ the model is initialized.
+            cache_dir: Override model cache dir for Hugging Face Hub and Torch checkpoints.
+            scriptable: Set layer config so that model is jit scriptable (not working for all models yet).
+            exportable: Set layer config so that model is traceable / ONNX exportable (not fully impl/obeyed yet).
+            no_jit: Set layer config so that model doesn't utilize jit scripted layers (so far activations only).
+    
+        Keyword Args:
+            drop_rate (float): Classifier dropout rate for training.
+            drop_path_rate (float): Stochastic depth drop rate for training.
+            global_pool (str): Classifier global pooling type.
+    
+        Example:
+    
+        ```py
+        >>> from timm import create_model
+    
+        >>> # Create a MobileNetV3-Large model with no pretrained weights.
+        >>> model = create_model('mobilenetv3_large_100')
+    
+        >>> # Create a MobileNetV3-Large model with pretrained weights.
+        >>> model = create_model('mobilenetv3_large_100', pretrained=True)
+        >>> model.num_classes
+        1000
+    
+        >>> # Create a MobileNetV3-Large model with pretrained weights and a new head with 10 classes.
+        >>> model = create_model('mobilenetv3_large_100', pretrained=True, num_classes=10)
+        >>> model.num_classes
+        10
+    
+        >>> # Create a Dinov2 small model with pretrained weights and save weights in a custom directory.
+        >>> model = create_model('vit_small_patch14_dinov2.lvd142m', pretrained=True, cache_dir="/data/my-models")
+        >>> # Data will be stored at `/data/my-models/models--timm--vit_small_patch14_dinov2.lvd142m/`
+        ```
+        """
+        # Parameters that aren't supported by all models or are intended to only override model defaults if set
+        # should default to None in command line args/cfg. Remove them if they are present and not set so that
+        # non-supporting models don't break and default args remain in effect.
+        kwargs = {k: v for k, v in kwargs.items() if v is not None}
+    
+        model_source, model_name = parse_model_name(model_name)
+        if model_source == 'hf-hub':
+            assert not pretrained_cfg, 'pretrained_cfg should not be set when sourcing model from Hugging Face Hub.'
+            # For model names specified in the form `hf-hub:path/architecture_name@revision`,
+            # load model weights + pretrained_cfg from Hugging Face hub.
+            pretrained_cfg, model_name, model_args = load_model_config_from_hf(
+                model_name,
+                cache_dir=cache_dir,
+            )
+            if model_args:
+                for k, v in model_args.items():
+                    kwargs.setdefault(k, v)
+        else:
+            model_name, pretrained_tag = split_model_name_tag(model_name)
+            if pretrained_tag and not pretrained_cfg:
+                # a valid pretrained_cfg argument takes priority over tag in model name
+                pretrained_cfg = pretrained_tag
+    
+        if not is_model(model_name):
+>           raise RuntimeError('Unknown model (%s)' % model_name)
+E           RuntimeError: Unknown model (swinv2_base_patch4_window7_224)
+
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/venv/lib/python3.11/site-packages/timm/models/_factory.py:122: RuntimeError
+__ TestSwin_V2_B.test_swin_v2_b_weights[Swin_V2_B_Weights.NAIP_RGB_MI_SATLAS] __
+
+self = <tests.models.test_swin.TestSwin_V2_B object at 0x73a966720150>
+mocked_weights = Swin_V2_B_Weights.NAIP_RGB_MI_SATLAS
+
+    def test_swin_v2_b_weights(self, mocked_weights: WeightsEnum) -> None:
+>       swin_v2_b(weights=mocked_weights)
+
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/torchgeo/models/swin.py:81: in swin_v2_b
+    return swin_v2_b(weights)
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/torchgeo/models/temp.py:23: in swin_v2_b
+    model = timm.create_model(model_name, pretrained=pretrained, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+model_name = 'swinv2_base_patch4_window7_224'
+pretrained = Swin_V2_B_Weights.NAIP_RGB_MI_SATLAS, pretrained_cfg = None
+pretrained_cfg_overlay = None, checkpoint_path = None, cache_dir = None
+scriptable = None, exportable = None, no_jit = None, kwargs = {}
+model_source = 'timm', pretrained_tag = ''
+
+    def create_model(
+            model_name: str,
+            pretrained: bool = False,
+            pretrained_cfg: Optional[Union[str, Dict[str, Any], PretrainedCfg]] = None,
+            pretrained_cfg_overlay:  Optional[Dict[str, Any]] = None,
+            checkpoint_path: Optional[Union[str, Path]] = None,
+            cache_dir: Optional[Union[str, Path]] = None,
+            scriptable: Optional[bool] = None,
+            exportable: Optional[bool] = None,
+            no_jit: Optional[bool] = None,
+            **kwargs,
+    ):
+        """Create a model.
+    
+        Lookup model's entrypoint function and pass relevant args to create a new model.
+    
+        Tip:
+            **kwargs will be passed through entrypoint fn to ``timm.models.build_model_with_cfg()``
+            and then the model class __init__(). kwargs values set to None are pruned before passing.
+    
+        Args:
+            model_name: Name of model to instantiate.
+            pretrained: If set to `True`, load pretrained ImageNet-1k weights.
+            pretrained_cfg: Pass in an external pretrained_cfg for model.
+            pretrained_cfg_overlay: Replace key-values in base pretrained_cfg with these.
+            checkpoint_path: Path of checkpoint to load _after_ the model is initialized.
+            cache_dir: Override model cache dir for Hugging Face Hub and Torch checkpoints.
+            scriptable: Set layer config so that model is jit scriptable (not working for all models yet).
+            exportable: Set layer config so that model is traceable / ONNX exportable (not fully impl/obeyed yet).
+            no_jit: Set layer config so that model doesn't utilize jit scripted layers (so far activations only).
+    
+        Keyword Args:
+            drop_rate (float): Classifier dropout rate for training.
+            drop_path_rate (float): Stochastic depth drop rate for training.
+            global_pool (str): Classifier global pooling type.
+    
+        Example:
+    
+        ```py
+        >>> from timm import create_model
+    
+        >>> # Create a MobileNetV3-Large model with no pretrained weights.
+        >>> model = create_model('mobilenetv3_large_100')
+    
+        >>> # Create a MobileNetV3-Large model with pretrained weights.
+        >>> model = create_model('mobilenetv3_large_100', pretrained=True)
+        >>> model.num_classes
+        1000
+    
+        >>> # Create a MobileNetV3-Large model with pretrained weights and a new head with 10 classes.
+        >>> model = create_model('mobilenetv3_large_100', pretrained=True, num_classes=10)
+        >>> model.num_classes
+        10
+    
+        >>> # Create a Dinov2 small model with pretrained weights and save weights in a custom directory.
+        >>> model = create_model('vit_small_patch14_dinov2.lvd142m', pretrained=True, cache_dir="/data/my-models")
+        >>> # Data will be stored at `/data/my-models/models--timm--vit_small_patch14_dinov2.lvd142m/`
+        ```
+        """
+        # Parameters that aren't supported by all models or are intended to only override model defaults if set
+        # should default to None in command line args/cfg. Remove them if they are present and not set so that
+        # non-supporting models don't break and default args remain in effect.
+        kwargs = {k: v for k, v in kwargs.items() if v is not None}
+    
+        model_source, model_name = parse_model_name(model_name)
+        if model_source == 'hf-hub':
+            assert not pretrained_cfg, 'pretrained_cfg should not be set when sourcing model from Hugging Face Hub.'
+            # For model names specified in the form `hf-hub:path/architecture_name@revision`,
+            # load model weights + pretrained_cfg from Hugging Face hub.
+            pretrained_cfg, model_name, model_args = load_model_config_from_hf(
+                model_name,
+                cache_dir=cache_dir,
+            )
+            if model_args:
+                for k, v in model_args.items():
+                    kwargs.setdefault(k, v)
+        else:
+            model_name, pretrained_tag = split_model_name_tag(model_name)
+            if pretrained_tag and not pretrained_cfg:
+                # a valid pretrained_cfg argument takes priority over tag in model name
+                pretrained_cfg = pretrained_tag
+    
+        if not is_model(model_name):
+>           raise RuntimeError('Unknown model (%s)' % model_name)
+E           RuntimeError: Unknown model (swinv2_base_patch4_window7_224)
+
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/venv/lib/python3.11/site-packages/timm/models/_factory.py:122: RuntimeError
+__ TestSwin_V2_B.test_swin_v2_b_weights[Swin_V2_B_Weights.NAIP_RGB_SI_SATLAS] __
+
+self = <tests.models.test_swin.TestSwin_V2_B object at 0x73a9667203d0>
+mocked_weights = Swin_V2_B_Weights.NAIP_RGB_SI_SATLAS
+
+    def test_swin_v2_b_weights(self, mocked_weights: WeightsEnum) -> None:
+>       swin_v2_b(weights=mocked_weights)
+
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/torchgeo/models/swin.py:81: in swin_v2_b
+    return swin_v2_b(weights)
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/torchgeo/models/temp.py:23: in swin_v2_b
+    model = timm.create_model(model_name, pretrained=pretrained, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+model_name = 'swinv2_base_patch4_window7_224'
+pretrained = Swin_V2_B_Weights.NAIP_RGB_SI_SATLAS, pretrained_cfg = None
+pretrained_cfg_overlay = None, checkpoint_path = None, cache_dir = None
+scriptable = None, exportable = None, no_jit = None, kwargs = {}
+model_source = 'timm', pretrained_tag = ''
+
+    def create_model(
+            model_name: str,
+            pretrained: bool = False,
+            pretrained_cfg: Optional[Union[str, Dict[str, Any], PretrainedCfg]] = None,
+            pretrained_cfg_overlay:  Optional[Dict[str, Any]] = None,
+            checkpoint_path: Optional[Union[str, Path]] = None,
+            cache_dir: Optional[Union[str, Path]] = None,
+            scriptable: Optional[bool] = None,
+            exportable: Optional[bool] = None,
+            no_jit: Optional[bool] = None,
+            **kwargs,
+    ):
+        """Create a model.
+    
+        Lookup model's entrypoint function and pass relevant args to create a new model.
+    
+        Tip:
+            **kwargs will be passed through entrypoint fn to ``timm.models.build_model_with_cfg()``
+            and then the model class __init__(). kwargs values set to None are pruned before passing.
+    
+        Args:
+            model_name: Name of model to instantiate.
+            pretrained: If set to `True`, load pretrained ImageNet-1k weights.
+            pretrained_cfg: Pass in an external pretrained_cfg for model.
+            pretrained_cfg_overlay: Replace key-values in base pretrained_cfg with these.
+            checkpoint_path: Path of checkpoint to load _after_ the model is initialized.
+            cache_dir: Override model cache dir for Hugging Face Hub and Torch checkpoints.
+            scriptable: Set layer config so that model is jit scriptable (not working for all models yet).
+            exportable: Set layer config so that model is traceable / ONNX exportable (not fully impl/obeyed yet).
+            no_jit: Set layer config so that model doesn't utilize jit scripted layers (so far activations only).
+    
+        Keyword Args:
+            drop_rate (float): Classifier dropout rate for training.
+            drop_path_rate (float): Stochastic depth drop rate for training.
+            global_pool (str): Classifier global pooling type.
+    
+        Example:
+    
+        ```py
+        >>> from timm import create_model
+    
+        >>> # Create a MobileNetV3-Large model with no pretrained weights.
+        >>> model = create_model('mobilenetv3_large_100')
+    
+        >>> # Create a MobileNetV3-Large model with pretrained weights.
+        >>> model = create_model('mobilenetv3_large_100', pretrained=True)
+        >>> model.num_classes
+        1000
+    
+        >>> # Create a MobileNetV3-Large model with pretrained weights and a new head with 10 classes.
+        >>> model = create_model('mobilenetv3_large_100', pretrained=True, num_classes=10)
+        >>> model.num_classes
+        10
+    
+        >>> # Create a Dinov2 small model with pretrained weights and save weights in a custom directory.
+        >>> model = create_model('vit_small_patch14_dinov2.lvd142m', pretrained=True, cache_dir="/data/my-models")
+        >>> # Data will be stored at `/data/my-models/models--timm--vit_small_patch14_dinov2.lvd142m/`
+        ```
+        """
+        # Parameters that aren't supported by all models or are intended to only override model defaults if set
+        # should default to None in command line args/cfg. Remove them if they are present and not set so that
+        # non-supporting models don't break and default args remain in effect.
+        kwargs = {k: v for k, v in kwargs.items() if v is not None}
+    
+        model_source, model_name = parse_model_name(model_name)
+        if model_source == 'hf-hub':
+            assert not pretrained_cfg, 'pretrained_cfg should not be set when sourcing model from Hugging Face Hub.'
+            # For model names specified in the form `hf-hub:path/architecture_name@revision`,
+            # load model weights + pretrained_cfg from Hugging Face hub.
+            pretrained_cfg, model_name, model_args = load_model_config_from_hf(
+                model_name,
+                cache_dir=cache_dir,
+            )
+            if model_args:
+                for k, v in model_args.items():
+                    kwargs.setdefault(k, v)
+        else:
+            model_name, pretrained_tag = split_model_name_tag(model_name)
+            if pretrained_tag and not pretrained_cfg:
+                # a valid pretrained_cfg argument takes priority over tag in model name
+                pretrained_cfg = pretrained_tag
+    
+        if not is_model(model_name):
+>           raise RuntimeError('Unknown model (%s)' % model_name)
+E           RuntimeError: Unknown model (swinv2_base_patch4_window7_224)
+
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/venv/lib/python3.11/site-packages/timm/models/_factory.py:122: RuntimeError
+__ TestSwin_V2_B.test_swin_v2_b_weights[Swin_V2_B_Weights.LANDSAT_MI_SATLAS] ___
+
+self = <tests.models.test_swin.TestSwin_V2_B object at 0x73a966720650>
+mocked_weights = Swin_V2_B_Weights.LANDSAT_MI_SATLAS
+
+    def test_swin_v2_b_weights(self, mocked_weights: WeightsEnum) -> None:
+>       swin_v2_b(weights=mocked_weights)
+
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/torchgeo/models/swin.py:81: in swin_v2_b
+    return swin_v2_b(weights)
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/torchgeo/models/temp.py:23: in swin_v2_b
+    model = timm.create_model(model_name, pretrained=pretrained, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+model_name = 'swinv2_base_patch4_window7_224'
+pretrained = Swin_V2_B_Weights.LANDSAT_MI_SATLAS, pretrained_cfg = None
+pretrained_cfg_overlay = None, checkpoint_path = None, cache_dir = None
+scriptable = None, exportable = None, no_jit = None, kwargs = {}
+model_source = 'timm', pretrained_tag = ''
+
+    def create_model(
+            model_name: str,
+            pretrained: bool = False,
+            pretrained_cfg: Optional[Union[str, Dict[str, Any], PretrainedCfg]] = None,
+            pretrained_cfg_overlay:  Optional[Dict[str, Any]] = None,
+            checkpoint_path: Optional[Union[str, Path]] = None,
+            cache_dir: Optional[Union[str, Path]] = None,
+            scriptable: Optional[bool] = None,
+            exportable: Optional[bool] = None,
+            no_jit: Optional[bool] = None,
+            **kwargs,
+    ):
+        """Create a model.
+    
+        Lookup model's entrypoint function and pass relevant args to create a new model.
+    
+        Tip:
+            **kwargs will be passed through entrypoint fn to ``timm.models.build_model_with_cfg()``
+            and then the model class __init__(). kwargs values set to None are pruned before passing.
+    
+        Args:
+            model_name: Name of model to instantiate.
+            pretrained: If set to `True`, load pretrained ImageNet-1k weights.
+            pretrained_cfg: Pass in an external pretrained_cfg for model.
+            pretrained_cfg_overlay: Replace key-values in base pretrained_cfg with these.
+            checkpoint_path: Path of checkpoint to load _after_ the model is initialized.
+            cache_dir: Override model cache dir for Hugging Face Hub and Torch checkpoints.
+            scriptable: Set layer config so that model is jit scriptable (not working for all models yet).
+            exportable: Set layer config so that model is traceable / ONNX exportable (not fully impl/obeyed yet).
+            no_jit: Set layer config so that model doesn't utilize jit scripted layers (so far activations only).
+    
+        Keyword Args:
+            drop_rate (float): Classifier dropout rate for training.
+            drop_path_rate (float): Stochastic depth drop rate for training.
+            global_pool (str): Classifier global pooling type.
+    
+        Example:
+    
+        ```py
+        >>> from timm import create_model
+    
+        >>> # Create a MobileNetV3-Large model with no pretrained weights.
+        >>> model = create_model('mobilenetv3_large_100')
+    
+        >>> # Create a MobileNetV3-Large model with pretrained weights.
+        >>> model = create_model('mobilenetv3_large_100', pretrained=True)
+        >>> model.num_classes
+        1000
+    
+        >>> # Create a MobileNetV3-Large model with pretrained weights and a new head with 10 classes.
+        >>> model = create_model('mobilenetv3_large_100', pretrained=True, num_classes=10)
+        >>> model.num_classes
+        10
+    
+        >>> # Create a Dinov2 small model with pretrained weights and save weights in a custom directory.
+        >>> model = create_model('vit_small_patch14_dinov2.lvd142m', pretrained=True, cache_dir="/data/my-models")
+        >>> # Data will be stored at `/data/my-models/models--timm--vit_small_patch14_dinov2.lvd142m/`
+        ```
+        """
+        # Parameters that aren't supported by all models or are intended to only override model defaults if set
+        # should default to None in command line args/cfg. Remove them if they are present and not set so that
+        # non-supporting models don't break and default args remain in effect.
+        kwargs = {k: v for k, v in kwargs.items() if v is not None}
+    
+        model_source, model_name = parse_model_name(model_name)
+        if model_source == 'hf-hub':
+            assert not pretrained_cfg, 'pretrained_cfg should not be set when sourcing model from Hugging Face Hub.'
+            # For model names specified in the form `hf-hub:path/architecture_name@revision`,
+            # load model weights + pretrained_cfg from Hugging Face hub.
+            pretrained_cfg, model_name, model_args = load_model_config_from_hf(
+                model_name,
+                cache_dir=cache_dir,
+            )
+            if model_args:
+                for k, v in model_args.items():
+                    kwargs.setdefault(k, v)
+        else:
+            model_name, pretrained_tag = split_model_name_tag(model_name)
+            if pretrained_tag and not pretrained_cfg:
+                # a valid pretrained_cfg argument takes priority over tag in model name
+                pretrained_cfg = pretrained_tag
+    
+        if not is_model(model_name):
+>           raise RuntimeError('Unknown model (%s)' % model_name)
+E           RuntimeError: Unknown model (swinv2_base_patch4_window7_224)
+
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/venv/lib/python3.11/site-packages/timm/models/_factory.py:122: RuntimeError
+__ TestSwin_V2_B.test_swin_v2_b_weights[Swin_V2_B_Weights.LANDSAT_SI_SATLAS] ___
+
+self = <tests.models.test_swin.TestSwin_V2_B object at 0x73a9667208d0>
+mocked_weights = Swin_V2_B_Weights.LANDSAT_SI_SATLAS
+
+    def test_swin_v2_b_weights(self, mocked_weights: WeightsEnum) -> None:
+>       swin_v2_b(weights=mocked_weights)
+
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/torchgeo/models/swin.py:81: in swin_v2_b
+    return swin_v2_b(weights)
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/torchgeo/models/temp.py:23: in swin_v2_b
+    model = timm.create_model(model_name, pretrained=pretrained, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+model_name = 'swinv2_base_patch4_window7_224'
+pretrained = Swin_V2_B_Weights.LANDSAT_SI_SATLAS, pretrained_cfg = None
+pretrained_cfg_overlay = None, checkpoint_path = None, cache_dir = None
+scriptable = None, exportable = None, no_jit = None, kwargs = {}
+model_source = 'timm', pretrained_tag = ''
+
+    def create_model(
+            model_name: str,
+            pretrained: bool = False,
+            pretrained_cfg: Optional[Union[str, Dict[str, Any], PretrainedCfg]] = None,
+            pretrained_cfg_overlay:  Optional[Dict[str, Any]] = None,
+            checkpoint_path: Optional[Union[str, Path]] = None,
+            cache_dir: Optional[Union[str, Path]] = None,
+            scriptable: Optional[bool] = None,
+            exportable: Optional[bool] = None,
+            no_jit: Optional[bool] = None,
+            **kwargs,
+    ):
+        """Create a model.
+    
+        Lookup model's entrypoint function and pass relevant args to create a new model.
+    
+        Tip:
+            **kwargs will be passed through entrypoint fn to ``timm.models.build_model_with_cfg()``
+            and then the model class __init__(). kwargs values set to None are pruned before passing.
+    
+        Args:
+            model_name: Name of model to instantiate.
+            pretrained: If set to `True`, load pretrained ImageNet-1k weights.
+            pretrained_cfg: Pass in an external pretrained_cfg for model.
+            pretrained_cfg_overlay: Replace key-values in base pretrained_cfg with these.
+            checkpoint_path: Path of checkpoint to load _after_ the model is initialized.
+            cache_dir: Override model cache dir for Hugging Face Hub and Torch checkpoints.
+            scriptable: Set layer config so that model is jit scriptable (not working for all models yet).
+            exportable: Set layer config so that model is traceable / ONNX exportable (not fully impl/obeyed yet).
+            no_jit: Set layer config so that model doesn't utilize jit scripted layers (so far activations only).
+    
+        Keyword Args:
+            drop_rate (float): Classifier dropout rate for training.
+            drop_path_rate (float): Stochastic depth drop rate for training.
+            global_pool (str): Classifier global pooling type.
+    
+        Example:
+    
+        ```py
+        >>> from timm import create_model
+    
+        >>> # Create a MobileNetV3-Large model with no pretrained weights.
+        >>> model = create_model('mobilenetv3_large_100')
+    
+        >>> # Create a MobileNetV3-Large model with pretrained weights.
+        >>> model = create_model('mobilenetv3_large_100', pretrained=True)
+        >>> model.num_classes
+        1000
+    
+        >>> # Create a MobileNetV3-Large model with pretrained weights and a new head with 10 classes.
+        >>> model = create_model('mobilenetv3_large_100', pretrained=True, num_classes=10)
+        >>> model.num_classes
+        10
+    
+        >>> # Create a Dinov2 small model with pretrained weights and save weights in a custom directory.
+        >>> model = create_model('vit_small_patch14_dinov2.lvd142m', pretrained=True, cache_dir="/data/my-models")
+        >>> # Data will be stored at `/data/my-models/models--timm--vit_small_patch14_dinov2.lvd142m/`
+        ```
+        """
+        # Parameters that aren't supported by all models or are intended to only override model defaults if set
+        # should default to None in command line args/cfg. Remove them if they are present and not set so that
+        # non-supporting models don't break and default args remain in effect.
+        kwargs = {k: v for k, v in kwargs.items() if v is not None}
+    
+        model_source, model_name = parse_model_name(model_name)
+        if model_source == 'hf-hub':
+            assert not pretrained_cfg, 'pretrained_cfg should not be set when sourcing model from Hugging Face Hub.'
+            # For model names specified in the form `hf-hub:path/architecture_name@revision`,
+            # load model weights + pretrained_cfg from Hugging Face hub.
+            pretrained_cfg, model_name, model_args = load_model_config_from_hf(
+                model_name,
+                cache_dir=cache_dir,
+            )
+            if model_args:
+                for k, v in model_args.items():
+                    kwargs.setdefault(k, v)
+        else:
+            model_name, pretrained_tag = split_model_name_tag(model_name)
+            if pretrained_tag and not pretrained_cfg:
+                # a valid pretrained_cfg argument takes priority over tag in model name
+                pretrained_cfg = pretrained_tag
+    
+        if not is_model(model_name):
+>           raise RuntimeError('Unknown model (%s)' % model_name)
+E           RuntimeError: Unknown model (swinv2_base_patch4_window7_224)
+
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/venv/lib/python3.11/site-packages/timm/models/_factory.py:122: RuntimeError
+_ TestSwin_V2_B.test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL1_MI_SATLAS] __
+
+self = <tests.models.test_swin.TestSwin_V2_B object at 0x73a966720b90>
+mocked_weights = Swin_V2_B_Weights.SENTINEL1_MI_SATLAS
+
+    def test_swin_v2_b_weights(self, mocked_weights: WeightsEnum) -> None:
+>       swin_v2_b(weights=mocked_weights)
+
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/torchgeo/models/swin.py:81: in swin_v2_b
+    return swin_v2_b(weights)
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/torchgeo/models/temp.py:23: in swin_v2_b
+    model = timm.create_model(model_name, pretrained=pretrained, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+model_name = 'swinv2_base_patch4_window7_224'
+pretrained = Swin_V2_B_Weights.SENTINEL1_MI_SATLAS, pretrained_cfg = None
+pretrained_cfg_overlay = None, checkpoint_path = None, cache_dir = None
+scriptable = None, exportable = None, no_jit = None, kwargs = {}
+model_source = 'timm', pretrained_tag = ''
+
+    def create_model(
+            model_name: str,
+            pretrained: bool = False,
+            pretrained_cfg: Optional[Union[str, Dict[str, Any], PretrainedCfg]] = None,
+            pretrained_cfg_overlay:  Optional[Dict[str, Any]] = None,
+            checkpoint_path: Optional[Union[str, Path]] = None,
+            cache_dir: Optional[Union[str, Path]] = None,
+            scriptable: Optional[bool] = None,
+            exportable: Optional[bool] = None,
+            no_jit: Optional[bool] = None,
+            **kwargs,
+    ):
+        """Create a model.
+    
+        Lookup model's entrypoint function and pass relevant args to create a new model.
+    
+        Tip:
+            **kwargs will be passed through entrypoint fn to ``timm.models.build_model_with_cfg()``
+            and then the model class __init__(). kwargs values set to None are pruned before passing.
+    
+        Args:
+            model_name: Name of model to instantiate.
+            pretrained: If set to `True`, load pretrained ImageNet-1k weights.
+            pretrained_cfg: Pass in an external pretrained_cfg for model.
+            pretrained_cfg_overlay: Replace key-values in base pretrained_cfg with these.
+            checkpoint_path: Path of checkpoint to load _after_ the model is initialized.
+            cache_dir: Override model cache dir for Hugging Face Hub and Torch checkpoints.
+            scriptable: Set layer config so that model is jit scriptable (not working for all models yet).
+            exportable: Set layer config so that model is traceable / ONNX exportable (not fully impl/obeyed yet).
+            no_jit: Set layer config so that model doesn't utilize jit scripted layers (so far activations only).
+    
+        Keyword Args:
+            drop_rate (float): Classifier dropout rate for training.
+            drop_path_rate (float): Stochastic depth drop rate for training.
+            global_pool (str): Classifier global pooling type.
+    
+        Example:
+    
+        ```py
+        >>> from timm import create_model
+    
+        >>> # Create a MobileNetV3-Large model with no pretrained weights.
+        >>> model = create_model('mobilenetv3_large_100')
+    
+        >>> # Create a MobileNetV3-Large model with pretrained weights.
+        >>> model = create_model('mobilenetv3_large_100', pretrained=True)
+        >>> model.num_classes
+        1000
+    
+        >>> # Create a MobileNetV3-Large model with pretrained weights and a new head with 10 classes.
+        >>> model = create_model('mobilenetv3_large_100', pretrained=True, num_classes=10)
+        >>> model.num_classes
+        10
+    
+        >>> # Create a Dinov2 small model with pretrained weights and save weights in a custom directory.
+        >>> model = create_model('vit_small_patch14_dinov2.lvd142m', pretrained=True, cache_dir="/data/my-models")
+        >>> # Data will be stored at `/data/my-models/models--timm--vit_small_patch14_dinov2.lvd142m/`
+        ```
+        """
+        # Parameters that aren't supported by all models or are intended to only override model defaults if set
+        # should default to None in command line args/cfg. Remove them if they are present and not set so that
+        # non-supporting models don't break and default args remain in effect.
+        kwargs = {k: v for k, v in kwargs.items() if v is not None}
+    
+        model_source, model_name = parse_model_name(model_name)
+        if model_source == 'hf-hub':
+            assert not pretrained_cfg, 'pretrained_cfg should not be set when sourcing model from Hugging Face Hub.'
+            # For model names specified in the form `hf-hub:path/architecture_name@revision`,
+            # load model weights + pretrained_cfg from Hugging Face hub.
+            pretrained_cfg, model_name, model_args = load_model_config_from_hf(
+                model_name,
+                cache_dir=cache_dir,
+            )
+            if model_args:
+                for k, v in model_args.items():
+                    kwargs.setdefault(k, v)
+        else:
+            model_name, pretrained_tag = split_model_name_tag(model_name)
+            if pretrained_tag and not pretrained_cfg:
+                # a valid pretrained_cfg argument takes priority over tag in model name
+                pretrained_cfg = pretrained_tag
+    
+        if not is_model(model_name):
+>           raise RuntimeError('Unknown model (%s)' % model_name)
+E           RuntimeError: Unknown model (swinv2_base_patch4_window7_224)
+
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/venv/lib/python3.11/site-packages/timm/models/_factory.py:122: RuntimeError
+_ TestSwin_V2_B.test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL1_SI_SATLAS] __
+
+self = <tests.models.test_swin.TestSwin_V2_B object at 0x73a966720e90>
+mocked_weights = Swin_V2_B_Weights.SENTINEL1_SI_SATLAS
+
+    def test_swin_v2_b_weights(self, mocked_weights: WeightsEnum) -> None:
+>       swin_v2_b(weights=mocked_weights)
+
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/torchgeo/models/swin.py:81: in swin_v2_b
+    return swin_v2_b(weights)
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/torchgeo/models/temp.py:23: in swin_v2_b
+    model = timm.create_model(model_name, pretrained=pretrained, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+model_name = 'swinv2_base_patch4_window7_224'
+pretrained = Swin_V2_B_Weights.SENTINEL1_SI_SATLAS, pretrained_cfg = None
+pretrained_cfg_overlay = None, checkpoint_path = None, cache_dir = None
+scriptable = None, exportable = None, no_jit = None, kwargs = {}
+model_source = 'timm', pretrained_tag = ''
+
+    def create_model(
+            model_name: str,
+            pretrained: bool = False,
+            pretrained_cfg: Optional[Union[str, Dict[str, Any], PretrainedCfg]] = None,
+            pretrained_cfg_overlay:  Optional[Dict[str, Any]] = None,
+            checkpoint_path: Optional[Union[str, Path]] = None,
+            cache_dir: Optional[Union[str, Path]] = None,
+            scriptable: Optional[bool] = None,
+            exportable: Optional[bool] = None,
+            no_jit: Optional[bool] = None,
+            **kwargs,
+    ):
+        """Create a model.
+    
+        Lookup model's entrypoint function and pass relevant args to create a new model.
+    
+        Tip:
+            **kwargs will be passed through entrypoint fn to ``timm.models.build_model_with_cfg()``
+            and then the model class __init__(). kwargs values set to None are pruned before passing.
+    
+        Args:
+            model_name: Name of model to instantiate.
+            pretrained: If set to `True`, load pretrained ImageNet-1k weights.
+            pretrained_cfg: Pass in an external pretrained_cfg for model.
+            pretrained_cfg_overlay: Replace key-values in base pretrained_cfg with these.
+            checkpoint_path: Path of checkpoint to load _after_ the model is initialized.
+            cache_dir: Override model cache dir for Hugging Face Hub and Torch checkpoints.
+            scriptable: Set layer config so that model is jit scriptable (not working for all models yet).
+            exportable: Set layer config so that model is traceable / ONNX exportable (not fully impl/obeyed yet).
+            no_jit: Set layer config so that model doesn't utilize jit scripted layers (so far activations only).
+    
+        Keyword Args:
+            drop_rate (float): Classifier dropout rate for training.
+            drop_path_rate (float): Stochastic depth drop rate for training.
+            global_pool (str): Classifier global pooling type.
+    
+        Example:
+    
+        ```py
+        >>> from timm import create_model
+    
+        >>> # Create a MobileNetV3-Large model with no pretrained weights.
+        >>> model = create_model('mobilenetv3_large_100')
+    
+        >>> # Create a MobileNetV3-Large model with pretrained weights.
+        >>> model = create_model('mobilenetv3_large_100', pretrained=True)
+        >>> model.num_classes
+        1000
+    
+        >>> # Create a MobileNetV3-Large model with pretrained weights and a new head with 10 classes.
+        >>> model = create_model('mobilenetv3_large_100', pretrained=True, num_classes=10)
+        >>> model.num_classes
+        10
+    
+        >>> # Create a Dinov2 small model with pretrained weights and save weights in a custom directory.
+        >>> model = create_model('vit_small_patch14_dinov2.lvd142m', pretrained=True, cache_dir="/data/my-models")
+        >>> # Data will be stored at `/data/my-models/models--timm--vit_small_patch14_dinov2.lvd142m/`
+        ```
+        """
+        # Parameters that aren't supported by all models or are intended to only override model defaults if set
+        # should default to None in command line args/cfg. Remove them if they are present and not set so that
+        # non-supporting models don't break and default args remain in effect.
+        kwargs = {k: v for k, v in kwargs.items() if v is not None}
+    
+        model_source, model_name = parse_model_name(model_name)
+        if model_source == 'hf-hub':
+            assert not pretrained_cfg, 'pretrained_cfg should not be set when sourcing model from Hugging Face Hub.'
+            # For model names specified in the form `hf-hub:path/architecture_name@revision`,
+            # load model weights + pretrained_cfg from Hugging Face hub.
+            pretrained_cfg, model_name, model_args = load_model_config_from_hf(
+                model_name,
+                cache_dir=cache_dir,
+            )
+            if model_args:
+                for k, v in model_args.items():
+                    kwargs.setdefault(k, v)
+        else:
+            model_name, pretrained_tag = split_model_name_tag(model_name)
+            if pretrained_tag and not pretrained_cfg:
+                # a valid pretrained_cfg argument takes priority over tag in model name
+                pretrained_cfg = pretrained_tag
+    
+        if not is_model(model_name):
+>           raise RuntimeError('Unknown model (%s)' % model_name)
+E           RuntimeError: Unknown model (swinv2_base_patch4_window7_224)
+
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/venv/lib/python3.11/site-packages/timm/models/_factory.py:122: RuntimeError
+_ TestSwin_V2_B.test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL2_MI_MS_SATLAS] _
+
+self = <tests.models.test_swin.TestSwin_V2_B object at 0x73a966721190>
+mocked_weights = Swin_V2_B_Weights.SENTINEL2_MI_MS_SATLAS
+
+    def test_swin_v2_b_weights(self, mocked_weights: WeightsEnum) -> None:
+>       swin_v2_b(weights=mocked_weights)
+
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/torchgeo/models/swin.py:81: in swin_v2_b
+    return swin_v2_b(weights)
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/torchgeo/models/temp.py:23: in swin_v2_b
+    model = timm.create_model(model_name, pretrained=pretrained, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+model_name = 'swinv2_base_patch4_window7_224'
+pretrained = Swin_V2_B_Weights.SENTINEL2_MI_MS_SATLAS, pretrained_cfg = None
+pretrained_cfg_overlay = None, checkpoint_path = None, cache_dir = None
+scriptable = None, exportable = None, no_jit = None, kwargs = {}
+model_source = 'timm', pretrained_tag = ''
+
+    def create_model(
+            model_name: str,
+            pretrained: bool = False,
+            pretrained_cfg: Optional[Union[str, Dict[str, Any], PretrainedCfg]] = None,
+            pretrained_cfg_overlay:  Optional[Dict[str, Any]] = None,
+            checkpoint_path: Optional[Union[str, Path]] = None,
+            cache_dir: Optional[Union[str, Path]] = None,
+            scriptable: Optional[bool] = None,
+            exportable: Optional[bool] = None,
+            no_jit: Optional[bool] = None,
+            **kwargs,
+    ):
+        """Create a model.
+    
+        Lookup model's entrypoint function and pass relevant args to create a new model.
+    
+        Tip:
+            **kwargs will be passed through entrypoint fn to ``timm.models.build_model_with_cfg()``
+            and then the model class __init__(). kwargs values set to None are pruned before passing.
+    
+        Args:
+            model_name: Name of model to instantiate.
+            pretrained: If set to `True`, load pretrained ImageNet-1k weights.
+            pretrained_cfg: Pass in an external pretrained_cfg for model.
+            pretrained_cfg_overlay: Replace key-values in base pretrained_cfg with these.
+            checkpoint_path: Path of checkpoint to load _after_ the model is initialized.
+            cache_dir: Override model cache dir for Hugging Face Hub and Torch checkpoints.
+            scriptable: Set layer config so that model is jit scriptable (not working for all models yet).
+            exportable: Set layer config so that model is traceable / ONNX exportable (not fully impl/obeyed yet).
+            no_jit: Set layer config so that model doesn't utilize jit scripted layers (so far activations only).
+    
+        Keyword Args:
+            drop_rate (float): Classifier dropout rate for training.
+            drop_path_rate (float): Stochastic depth drop rate for training.
+            global_pool (str): Classifier global pooling type.
+    
+        Example:
+    
+        ```py
+        >>> from timm import create_model
+    
+        >>> # Create a MobileNetV3-Large model with no pretrained weights.
+        >>> model = create_model('mobilenetv3_large_100')
+    
+        >>> # Create a MobileNetV3-Large model with pretrained weights.
+        >>> model = create_model('mobilenetv3_large_100', pretrained=True)
+        >>> model.num_classes
+        1000
+    
+        >>> # Create a MobileNetV3-Large model with pretrained weights and a new head with 10 classes.
+        >>> model = create_model('mobilenetv3_large_100', pretrained=True, num_classes=10)
+        >>> model.num_classes
+        10
+    
+        >>> # Create a Dinov2 small model with pretrained weights and save weights in a custom directory.
+        >>> model = create_model('vit_small_patch14_dinov2.lvd142m', pretrained=True, cache_dir="/data/my-models")
+        >>> # Data will be stored at `/data/my-models/models--timm--vit_small_patch14_dinov2.lvd142m/`
+        ```
+        """
+        # Parameters that aren't supported by all models or are intended to only override model defaults if set
+        # should default to None in command line args/cfg. Remove them if they are present and not set so that
+        # non-supporting models don't break and default args remain in effect.
+        kwargs = {k: v for k, v in kwargs.items() if v is not None}
+    
+        model_source, model_name = parse_model_name(model_name)
+        if model_source == 'hf-hub':
+            assert not pretrained_cfg, 'pretrained_cfg should not be set when sourcing model from Hugging Face Hub.'
+            # For model names specified in the form `hf-hub:path/architecture_name@revision`,
+            # load model weights + pretrained_cfg from Hugging Face hub.
+            pretrained_cfg, model_name, model_args = load_model_config_from_hf(
+                model_name,
+                cache_dir=cache_dir,
+            )
+            if model_args:
+                for k, v in model_args.items():
+                    kwargs.setdefault(k, v)
+        else:
+            model_name, pretrained_tag = split_model_name_tag(model_name)
+            if pretrained_tag and not pretrained_cfg:
+                # a valid pretrained_cfg argument takes priority over tag in model name
+                pretrained_cfg = pretrained_tag
+    
+        if not is_model(model_name):
+>           raise RuntimeError('Unknown model (%s)' % model_name)
+E           RuntimeError: Unknown model (swinv2_base_patch4_window7_224)
+
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/venv/lib/python3.11/site-packages/timm/models/_factory.py:122: RuntimeError
+_ TestSwin_V2_B.test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL2_MI_RGB_SATLAS] _
+
+self = <tests.models.test_swin.TestSwin_V2_B object at 0x73a966721490>
+mocked_weights = Swin_V2_B_Weights.SENTINEL2_MI_RGB_SATLAS
+
+    def test_swin_v2_b_weights(self, mocked_weights: WeightsEnum) -> None:
+>       swin_v2_b(weights=mocked_weights)
+
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/torchgeo/models/swin.py:81: in swin_v2_b
+    return swin_v2_b(weights)
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/torchgeo/models/temp.py:23: in swin_v2_b
+    model = timm.create_model(model_name, pretrained=pretrained, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+model_name = 'swinv2_base_patch4_window7_224'
+pretrained = Swin_V2_B_Weights.SENTINEL2_MI_RGB_SATLAS, pretrained_cfg = None
+pretrained_cfg_overlay = None, checkpoint_path = None, cache_dir = None
+scriptable = None, exportable = None, no_jit = None, kwargs = {}
+model_source = 'timm', pretrained_tag = ''
+
+    def create_model(
+            model_name: str,
+            pretrained: bool = False,
+            pretrained_cfg: Optional[Union[str, Dict[str, Any], PretrainedCfg]] = None,
+            pretrained_cfg_overlay:  Optional[Dict[str, Any]] = None,
+            checkpoint_path: Optional[Union[str, Path]] = None,
+            cache_dir: Optional[Union[str, Path]] = None,
+            scriptable: Optional[bool] = None,
+            exportable: Optional[bool] = None,
+            no_jit: Optional[bool] = None,
+            **kwargs,
+    ):
+        """Create a model.
+    
+        Lookup model's entrypoint function and pass relevant args to create a new model.
+    
+        Tip:
+            **kwargs will be passed through entrypoint fn to ``timm.models.build_model_with_cfg()``
+            and then the model class __init__(). kwargs values set to None are pruned before passing.
+    
+        Args:
+            model_name: Name of model to instantiate.
+            pretrained: If set to `True`, load pretrained ImageNet-1k weights.
+            pretrained_cfg: Pass in an external pretrained_cfg for model.
+            pretrained_cfg_overlay: Replace key-values in base pretrained_cfg with these.
+            checkpoint_path: Path of checkpoint to load _after_ the model is initialized.
+            cache_dir: Override model cache dir for Hugging Face Hub and Torch checkpoints.
+            scriptable: Set layer config so that model is jit scriptable (not working for all models yet).
+            exportable: Set layer config so that model is traceable / ONNX exportable (not fully impl/obeyed yet).
+            no_jit: Set layer config so that model doesn't utilize jit scripted layers (so far activations only).
+    
+        Keyword Args:
+            drop_rate (float): Classifier dropout rate for training.
+            drop_path_rate (float): Stochastic depth drop rate for training.
+            global_pool (str): Classifier global pooling type.
+    
+        Example:
+    
+        ```py
+        >>> from timm import create_model
+    
+        >>> # Create a MobileNetV3-Large model with no pretrained weights.
+        >>> model = create_model('mobilenetv3_large_100')
+    
+        >>> # Create a MobileNetV3-Large model with pretrained weights.
+        >>> model = create_model('mobilenetv3_large_100', pretrained=True)
+        >>> model.num_classes
+        1000
+    
+        >>> # Create a MobileNetV3-Large model with pretrained weights and a new head with 10 classes.
+        >>> model = create_model('mobilenetv3_large_100', pretrained=True, num_classes=10)
+        >>> model.num_classes
+        10
+    
+        >>> # Create a Dinov2 small model with pretrained weights and save weights in a custom directory.
+        >>> model = create_model('vit_small_patch14_dinov2.lvd142m', pretrained=True, cache_dir="/data/my-models")
+        >>> # Data will be stored at `/data/my-models/models--timm--vit_small_patch14_dinov2.lvd142m/`
+        ```
+        """
+        # Parameters that aren't supported by all models or are intended to only override model defaults if set
+        # should default to None in command line args/cfg. Remove them if they are present and not set so that
+        # non-supporting models don't break and default args remain in effect.
+        kwargs = {k: v for k, v in kwargs.items() if v is not None}
+    
+        model_source, model_name = parse_model_name(model_name)
+        if model_source == 'hf-hub':
+            assert not pretrained_cfg, 'pretrained_cfg should not be set when sourcing model from Hugging Face Hub.'
+            # For model names specified in the form `hf-hub:path/architecture_name@revision`,
+            # load model weights + pretrained_cfg from Hugging Face hub.
+            pretrained_cfg, model_name, model_args = load_model_config_from_hf(
+                model_name,
+                cache_dir=cache_dir,
+            )
+            if model_args:
+                for k, v in model_args.items():
+                    kwargs.setdefault(k, v)
+        else:
+            model_name, pretrained_tag = split_model_name_tag(model_name)
+            if pretrained_tag and not pretrained_cfg:
+                # a valid pretrained_cfg argument takes priority over tag in model name
+                pretrained_cfg = pretrained_tag
+    
+        if not is_model(model_name):
+>           raise RuntimeError('Unknown model (%s)' % model_name)
+E           RuntimeError: Unknown model (swinv2_base_patch4_window7_224)
+
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/venv/lib/python3.11/site-packages/timm/models/_factory.py:122: RuntimeError
+_ TestSwin_V2_B.test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL2_SI_MS_SATLAS] _
+
+self = <tests.models.test_swin.TestSwin_V2_B object at 0x73a966721790>
+mocked_weights = Swin_V2_B_Weights.SENTINEL2_SI_MS_SATLAS
+
+    def test_swin_v2_b_weights(self, mocked_weights: WeightsEnum) -> None:
+>       swin_v2_b(weights=mocked_weights)
+
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/torchgeo/models/swin.py:81: in swin_v2_b
+    return swin_v2_b(weights)
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/torchgeo/models/temp.py:23: in swin_v2_b
+    model = timm.create_model(model_name, pretrained=pretrained, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+model_name = 'swinv2_base_patch4_window7_224'
+pretrained = Swin_V2_B_Weights.SENTINEL2_SI_MS_SATLAS, pretrained_cfg = None
+pretrained_cfg_overlay = None, checkpoint_path = None, cache_dir = None
+scriptable = None, exportable = None, no_jit = None, kwargs = {}
+model_source = 'timm', pretrained_tag = ''
+
+    def create_model(
+            model_name: str,
+            pretrained: bool = False,
+            pretrained_cfg: Optional[Union[str, Dict[str, Any], PretrainedCfg]] = None,
+            pretrained_cfg_overlay:  Optional[Dict[str, Any]] = None,
+            checkpoint_path: Optional[Union[str, Path]] = None,
+            cache_dir: Optional[Union[str, Path]] = None,
+            scriptable: Optional[bool] = None,
+            exportable: Optional[bool] = None,
+            no_jit: Optional[bool] = None,
+            **kwargs,
+    ):
+        """Create a model.
+    
+        Lookup model's entrypoint function and pass relevant args to create a new model.
+    
+        Tip:
+            **kwargs will be passed through entrypoint fn to ``timm.models.build_model_with_cfg()``
+            and then the model class __init__(). kwargs values set to None are pruned before passing.
+    
+        Args:
+            model_name: Name of model to instantiate.
+            pretrained: If set to `True`, load pretrained ImageNet-1k weights.
+            pretrained_cfg: Pass in an external pretrained_cfg for model.
+            pretrained_cfg_overlay: Replace key-values in base pretrained_cfg with these.
+            checkpoint_path: Path of checkpoint to load _after_ the model is initialized.
+            cache_dir: Override model cache dir for Hugging Face Hub and Torch checkpoints.
+            scriptable: Set layer config so that model is jit scriptable (not working for all models yet).
+            exportable: Set layer config so that model is traceable / ONNX exportable (not fully impl/obeyed yet).
+            no_jit: Set layer config so that model doesn't utilize jit scripted layers (so far activations only).
+    
+        Keyword Args:
+            drop_rate (float): Classifier dropout rate for training.
+            drop_path_rate (float): Stochastic depth drop rate for training.
+            global_pool (str): Classifier global pooling type.
+    
+        Example:
+    
+        ```py
+        >>> from timm import create_model
+    
+        >>> # Create a MobileNetV3-Large model with no pretrained weights.
+        >>> model = create_model('mobilenetv3_large_100')
+    
+        >>> # Create a MobileNetV3-Large model with pretrained weights.
+        >>> model = create_model('mobilenetv3_large_100', pretrained=True)
+        >>> model.num_classes
+        1000
+    
+        >>> # Create a MobileNetV3-Large model with pretrained weights and a new head with 10 classes.
+        >>> model = create_model('mobilenetv3_large_100', pretrained=True, num_classes=10)
+        >>> model.num_classes
+        10
+    
+        >>> # Create a Dinov2 small model with pretrained weights and save weights in a custom directory.
+        >>> model = create_model('vit_small_patch14_dinov2.lvd142m', pretrained=True, cache_dir="/data/my-models")
+        >>> # Data will be stored at `/data/my-models/models--timm--vit_small_patch14_dinov2.lvd142m/`
+        ```
+        """
+        # Parameters that aren't supported by all models or are intended to only override model defaults if set
+        # should default to None in command line args/cfg. Remove them if they are present and not set so that
+        # non-supporting models don't break and default args remain in effect.
+        kwargs = {k: v for k, v in kwargs.items() if v is not None}
+    
+        model_source, model_name = parse_model_name(model_name)
+        if model_source == 'hf-hub':
+            assert not pretrained_cfg, 'pretrained_cfg should not be set when sourcing model from Hugging Face Hub.'
+            # For model names specified in the form `hf-hub:path/architecture_name@revision`,
+            # load model weights + pretrained_cfg from Hugging Face hub.
+            pretrained_cfg, model_name, model_args = load_model_config_from_hf(
+                model_name,
+                cache_dir=cache_dir,
+            )
+            if model_args:
+                for k, v in model_args.items():
+                    kwargs.setdefault(k, v)
+        else:
+            model_name, pretrained_tag = split_model_name_tag(model_name)
+            if pretrained_tag and not pretrained_cfg:
+                # a valid pretrained_cfg argument takes priority over tag in model name
+                pretrained_cfg = pretrained_tag
+    
+        if not is_model(model_name):
+>           raise RuntimeError('Unknown model (%s)' % model_name)
+E           RuntimeError: Unknown model (swinv2_base_patch4_window7_224)
+
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/venv/lib/python3.11/site-packages/timm/models/_factory.py:122: RuntimeError
+_ TestSwin_V2_B.test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL2_SI_RGB_SATLAS] _
+
+self = <tests.models.test_swin.TestSwin_V2_B object at 0x73a966721a50>
+mocked_weights = Swin_V2_B_Weights.SENTINEL2_SI_RGB_SATLAS
+
+    def test_swin_v2_b_weights(self, mocked_weights: WeightsEnum) -> None:
+>       swin_v2_b(weights=mocked_weights)
+
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/torchgeo/models/swin.py:81: in swin_v2_b
+    return swin_v2_b(weights)
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/torchgeo/models/temp.py:23: in swin_v2_b
+    model = timm.create_model(model_name, pretrained=pretrained, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+model_name = 'swinv2_base_patch4_window7_224'
+pretrained = Swin_V2_B_Weights.SENTINEL2_SI_RGB_SATLAS, pretrained_cfg = None
+pretrained_cfg_overlay = None, checkpoint_path = None, cache_dir = None
+scriptable = None, exportable = None, no_jit = None, kwargs = {}
+model_source = 'timm', pretrained_tag = ''
+
+    def create_model(
+            model_name: str,
+            pretrained: bool = False,
+            pretrained_cfg: Optional[Union[str, Dict[str, Any], PretrainedCfg]] = None,
+            pretrained_cfg_overlay:  Optional[Dict[str, Any]] = None,
+            checkpoint_path: Optional[Union[str, Path]] = None,
+            cache_dir: Optional[Union[str, Path]] = None,
+            scriptable: Optional[bool] = None,
+            exportable: Optional[bool] = None,
+            no_jit: Optional[bool] = None,
+            **kwargs,
+    ):
+        """Create a model.
+    
+        Lookup model's entrypoint function and pass relevant args to create a new model.
+    
+        Tip:
+            **kwargs will be passed through entrypoint fn to ``timm.models.build_model_with_cfg()``
+            and then the model class __init__(). kwargs values set to None are pruned before passing.
+    
+        Args:
+            model_name: Name of model to instantiate.
+            pretrained: If set to `True`, load pretrained ImageNet-1k weights.
+            pretrained_cfg: Pass in an external pretrained_cfg for model.
+            pretrained_cfg_overlay: Replace key-values in base pretrained_cfg with these.
+            checkpoint_path: Path of checkpoint to load _after_ the model is initialized.
+            cache_dir: Override model cache dir for Hugging Face Hub and Torch checkpoints.
+            scriptable: Set layer config so that model is jit scriptable (not working for all models yet).
+            exportable: Set layer config so that model is traceable / ONNX exportable (not fully impl/obeyed yet).
+            no_jit: Set layer config so that model doesn't utilize jit scripted layers (so far activations only).
+    
+        Keyword Args:
+            drop_rate (float): Classifier dropout rate for training.
+            drop_path_rate (float): Stochastic depth drop rate for training.
+            global_pool (str): Classifier global pooling type.
+    
+        Example:
+    
+        ```py
+        >>> from timm import create_model
+    
+        >>> # Create a MobileNetV3-Large model with no pretrained weights.
+        >>> model = create_model('mobilenetv3_large_100')
+    
+        >>> # Create a MobileNetV3-Large model with pretrained weights.
+        >>> model = create_model('mobilenetv3_large_100', pretrained=True)
+        >>> model.num_classes
+        1000
+    
+        >>> # Create a MobileNetV3-Large model with pretrained weights and a new head with 10 classes.
+        >>> model = create_model('mobilenetv3_large_100', pretrained=True, num_classes=10)
+        >>> model.num_classes
+        10
+    
+        >>> # Create a Dinov2 small model with pretrained weights and save weights in a custom directory.
+        >>> model = create_model('vit_small_patch14_dinov2.lvd142m', pretrained=True, cache_dir="/data/my-models")
+        >>> # Data will be stored at `/data/my-models/models--timm--vit_small_patch14_dinov2.lvd142m/`
+        ```
+        """
+        # Parameters that aren't supported by all models or are intended to only override model defaults if set
+        # should default to None in command line args/cfg. Remove them if they are present and not set so that
+        # non-supporting models don't break and default args remain in effect.
+        kwargs = {k: v for k, v in kwargs.items() if v is not None}
+    
+        model_source, model_name = parse_model_name(model_name)
+        if model_source == 'hf-hub':
+            assert not pretrained_cfg, 'pretrained_cfg should not be set when sourcing model from Hugging Face Hub.'
+            # For model names specified in the form `hf-hub:path/architecture_name@revision`,
+            # load model weights + pretrained_cfg from Hugging Face hub.
+            pretrained_cfg, model_name, model_args = load_model_config_from_hf(
+                model_name,
+                cache_dir=cache_dir,
+            )
+            if model_args:
+                for k, v in model_args.items():
+                    kwargs.setdefault(k, v)
+        else:
+            model_name, pretrained_tag = split_model_name_tag(model_name)
+            if pretrained_tag and not pretrained_cfg:
+                # a valid pretrained_cfg argument takes priority over tag in model name
+                pretrained_cfg = pretrained_tag
+    
+        if not is_model(model_name):
+>           raise RuntimeError('Unknown model (%s)' % model_name)
+E           RuntimeError: Unknown model (swinv2_base_patch4_window7_224)
+
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/venv/lib/python3.11/site-packages/timm/models/_factory.py:122: RuntimeError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b
+FAILED ../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.NAIP_RGB_MI_SATLAS]
+FAILED ../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.NAIP_RGB_SI_SATLAS]
+FAILED ../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.LANDSAT_MI_SATLAS]
+FAILED ../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.LANDSAT_SI_SATLAS]
+FAILED ../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL1_MI_SATLAS]
+FAILED ../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL1_SI_SATLAS]
+FAILED ../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL2_MI_MS_SATLAS]
+FAILED ../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL2_MI_RGB_SATLAS]
+FAILED ../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL2_SI_MS_SATLAS]
+FAILED ../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL2_SI_RGB_SATLAS]
+================ 11 failed, 33 passed, 14 deselected in 44.26s =================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/torchgeo/torchgeo/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/torchgeo/torchgeo
+configfile: pyproject.toml
+plugins: hydra-core-1.3.2
+collecting ... collected 58 items / 14 deselected / 44 selected
+
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_swin_v2_t PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_swin_v2_t_weights[Swin_V2_T_Weights.SENTINEL2_MI_MS_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_swin_v2_t_weights[Swin_V2_T_Weights.SENTINEL2_MI_RGB_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_swin_v2_t_weights[Swin_V2_T_Weights.SENTINEL2_SI_MS_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_swin_v2_t_weights[Swin_V2_T_Weights.SENTINEL2_SI_RGB_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_bands[Swin_V2_T_Weights.SENTINEL2_MI_MS_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_bands[Swin_V2_T_Weights.SENTINEL2_MI_RGB_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_bands[Swin_V2_T_Weights.SENTINEL2_SI_MS_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_bands[Swin_V2_T_Weights.SENTINEL2_SI_RGB_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_transforms[Swin_V2_T_Weights.SENTINEL2_MI_MS_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_transforms[Swin_V2_T_Weights.SENTINEL2_MI_RGB_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_transforms[Swin_V2_T_Weights.SENTINEL2_SI_MS_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_transforms[Swin_V2_T_Weights.SENTINEL2_SI_RGB_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.NAIP_RGB_MI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.NAIP_RGB_SI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.LANDSAT_MI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.LANDSAT_SI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL1_MI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL1_SI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL2_MI_MS_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL2_MI_RGB_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL2_SI_MS_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL2_SI_RGB_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_bands[Swin_V2_B_Weights.NAIP_RGB_MI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_bands[Swin_V2_B_Weights.NAIP_RGB_SI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_bands[Swin_V2_B_Weights.LANDSAT_MI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_bands[Swin_V2_B_Weights.LANDSAT_SI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_bands[Swin_V2_B_Weights.SENTINEL1_MI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_bands[Swin_V2_B_Weights.SENTINEL1_SI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_bands[Swin_V2_B_Weights.SENTINEL2_MI_MS_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_bands[Swin_V2_B_Weights.SENTINEL2_MI_RGB_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_bands[Swin_V2_B_Weights.SENTINEL2_SI_MS_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_bands[Swin_V2_B_Weights.SENTINEL2_SI_RGB_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_transforms[Swin_V2_B_Weights.NAIP_RGB_MI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_transforms[Swin_V2_B_Weights.NAIP_RGB_SI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_transforms[Swin_V2_B_Weights.LANDSAT_MI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_transforms[Swin_V2_B_Weights.LANDSAT_SI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_transforms[Swin_V2_B_Weights.SENTINEL1_MI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_transforms[Swin_V2_B_Weights.SENTINEL1_SI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_transforms[Swin_V2_B_Weights.SENTINEL2_MI_MS_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_transforms[Swin_V2_B_Weights.SENTINEL2_MI_RGB_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_transforms[Swin_V2_B_Weights.SENTINEL2_SI_MS_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_transforms[Swin_V2_B_Weights.SENTINEL2_SI_RGB_SATLAS] PASSED
+
+====================== 44 passed, 14 deselected in 56.86s ======================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/torchgeo/torchgeo/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/torchgeo/torchgeo
+configfile: pyproject.toml
+plugins: hydra-core-1.3.2
+collecting ... collected 58 items / 14 deselected / 44 selected
+
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_swin_v2_t PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_swin_v2_t_weights[Swin_V2_T_Weights.SENTINEL2_MI_MS_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_swin_v2_t_weights[Swin_V2_T_Weights.SENTINEL2_MI_RGB_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_swin_v2_t_weights[Swin_V2_T_Weights.SENTINEL2_SI_MS_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_swin_v2_t_weights[Swin_V2_T_Weights.SENTINEL2_SI_RGB_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_bands[Swin_V2_T_Weights.SENTINEL2_MI_MS_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_bands[Swin_V2_T_Weights.SENTINEL2_MI_RGB_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_bands[Swin_V2_T_Weights.SENTINEL2_SI_MS_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_bands[Swin_V2_T_Weights.SENTINEL2_SI_RGB_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_transforms[Swin_V2_T_Weights.SENTINEL2_MI_MS_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_transforms[Swin_V2_T_Weights.SENTINEL2_MI_RGB_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_transforms[Swin_V2_T_Weights.SENTINEL2_SI_MS_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_T::test_transforms[Swin_V2_T_Weights.SENTINEL2_SI_RGB_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.NAIP_RGB_MI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.NAIP_RGB_SI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.LANDSAT_MI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.LANDSAT_SI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL1_MI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL1_SI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL2_MI_MS_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL2_MI_RGB_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL2_SI_MS_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_swin_v2_b_weights[Swin_V2_B_Weights.SENTINEL2_SI_RGB_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_bands[Swin_V2_B_Weights.NAIP_RGB_MI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_bands[Swin_V2_B_Weights.NAIP_RGB_SI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_bands[Swin_V2_B_Weights.LANDSAT_MI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_bands[Swin_V2_B_Weights.LANDSAT_SI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_bands[Swin_V2_B_Weights.SENTINEL1_MI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_bands[Swin_V2_B_Weights.SENTINEL1_SI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_bands[Swin_V2_B_Weights.SENTINEL2_MI_MS_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_bands[Swin_V2_B_Weights.SENTINEL2_MI_RGB_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_bands[Swin_V2_B_Weights.SENTINEL2_SI_MS_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_bands[Swin_V2_B_Weights.SENTINEL2_SI_RGB_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_transforms[Swin_V2_B_Weights.NAIP_RGB_MI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_transforms[Swin_V2_B_Weights.NAIP_RGB_SI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_transforms[Swin_V2_B_Weights.LANDSAT_MI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_transforms[Swin_V2_B_Weights.LANDSAT_SI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_transforms[Swin_V2_B_Weights.SENTINEL1_MI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_transforms[Swin_V2_B_Weights.SENTINEL1_SI_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_transforms[Swin_V2_B_Weights.SENTINEL2_MI_MS_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_transforms[Swin_V2_B_Weights.SENTINEL2_MI_RGB_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_transforms[Swin_V2_B_Weights.SENTINEL2_SI_MS_SATLAS] PASSED
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_swin.py::TestSwin_V2_B::test_transforms[Swin_V2_B_Weights.SENTINEL2_SI_RGB_SATLAS] PASSED
+
+====================== 44 passed, 14 deselected in 55.89s ======================

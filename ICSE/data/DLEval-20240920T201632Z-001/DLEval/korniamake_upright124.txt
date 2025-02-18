@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Generate a Python function called make_upright that rectifies an affine matrix to make it upright. The function takes in a tensor laf of shape (B, N, 2, 3) and an optional float eps for safe division. It returns the rectified affine matrix laf of the same shape (B, N, 2, 3). The function first checks the validity of the input affine matrix using KORNIA_CHECK_LAF. It then calculates the determinant of the affine matrix and uses it to rectify the matrix by resetting the rotation matrix to an identity. The function performs operations equivalent to a 2x2 SVD and sets the rotation matrix to an identity. The rectified affine matrix is then scaled using the original determinant and returned. An example usage of the function is provided using torch tensors.
+
+ ground Truth:kornia/feature/laf.py
+
+ repo:kornia
+
+ function:make_upright
+ 
+ test_cases:tests/feature/test_laf.py::TestMakeUpright

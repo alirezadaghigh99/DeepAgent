@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Generate a Python function called unproject_points_z1 that unprojects one or more points from the canonical z=1 plane into the camera frame. The function takes in a Tensor called points_in_cam_canonical representing the points to unproject with shape (..., 2) and an optional Tensor called extension representing the extension (depth) of the points with shape (..., 1). The function returns a Tensor representing the unprojected points with shape (..., 3). An example usage of the function is provided where points and extension are tensors, and the output is a tensor of unprojected points.
+
+ ground Truth:kornia/geometry/camera/projection_z1.py
+
+ repo:kornia
+
+ function:unproject_points_z1
+ 
+ test_cases:tests/geometry/camera/test_projections.py::TestProjectionZ1

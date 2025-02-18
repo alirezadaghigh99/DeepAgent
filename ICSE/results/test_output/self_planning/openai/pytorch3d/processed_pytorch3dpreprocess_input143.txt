@@ -1,0 +1,168 @@
+output file:
+processed_pytorch3dpreprocess_input143.json
+function:
+preprocess_input
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/implicitron/models/test_utils.py::TestUtils::test_prepare_inputs_mask_depth_true', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/implicitron/models/test_utils.py::TestUtils::test_prepare_inputs_wrong_num_dim', 'FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/implicitron/models/test_utils.py::TestUtils::test_prepare_inputs_mask_image_true', '../../../../../../local/data0/moved_data/pytorch3d/tests/implicitron/models/test_utils.py::TestUtils::test_prepare_inputs_wrong_num_dim FAILED'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 5 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/implicitron/models/test_utils.py::TestUtils::test_prepare_inputs_mask_depth_true Warning: Thresholding foreground probability maps.
+Warning: Masking depth maps.
+FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/implicitron/models/test_utils.py::TestUtils::test_prepare_inputs_mask_image_true Warning: Thresholding foreground probability maps.
+Warning: Masking RGB images with background color.
+FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/implicitron/models/test_utils.py::TestUtils::test_prepare_inputs_wrong_num_dim FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/implicitron/models/test_utils.py::TestUtils::test_weighted_sum_losses PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/implicitron/models/test_utils.py::TestUtils::test_weighted_sum_losses_raise_warning PASSED
+
+=================================== FAILURES ===================================
+________________ TestUtils.test_prepare_inputs_mask_depth_true _________________
+
+self = <tests.implicitron.models.test_utils.TestUtils testMethod=test_prepare_inputs_mask_depth_true>
+
+    def test_prepare_inputs_mask_depth_true(self):
+        batch, channels, height, width = 2, 3, 10, 10
+        img = torch.ones(batch, channels, height, width)
+        depth_map = torch.randn(batch, channels, height, width)
+        # Create a mask on the lower triangular matrix
+        fg_prob = torch.tril(torch.ones(batch, 1, height, width)) * 0.3
+    
+        out_img, out_fg_prob, out_depth_map = preprocess_input(
+            img, fg_prob, depth_map, False, True, 0.3, (0.0, 0.0, 0.0)
+        )
+    
+        self.assertTrue(torch.equal(out_img, img))
+>       self.assertTrue(torch.equal(out_fg_prob, fg_prob >= 0.3))
+E       AssertionError: False is not true
+
+/local/data0/moved_data/pytorch3d/tests/implicitron/models/test_utils.py:53: AssertionError
+________________ TestUtils.test_prepare_inputs_mask_image_true _________________
+
+self = <tests.implicitron.models.test_utils.TestUtils testMethod=test_prepare_inputs_mask_image_true>
+
+    def test_prepare_inputs_mask_image_true(self):
+        batch, channels, height, width = 2, 3, 10, 10
+        img = torch.ones(batch, channels, height, width)
+        # Create a mask on the lower triangular matrix
+        fg_prob = torch.tril(torch.ones(batch, 1, height, width)) * 0.3
+    
+        out_img, out_fg_prob, out_depth_map = preprocess_input(
+            img, fg_prob, None, True, False, 0.3, (0.0, 0.0, 0.0)
+        )
+    
+>       self.assertTrue(torch.equal(out_img, torch.tril(img)))
+E       AssertionError: False is not true
+
+/local/data0/moved_data/pytorch3d/tests/implicitron/models/test_utils.py:37: AssertionError
+_________________ TestUtils.test_prepare_inputs_wrong_num_dim __________________
+ValueError: image_rgb must have shape (B, 3, H, W).
+
+During handling of the above exception, another exception occurred:
+
+self = <tests.implicitron.models.test_utils.TestUtils testMethod=test_prepare_inputs_wrong_num_dim>
+
+    def test_prepare_inputs_wrong_num_dim(self):
+        img = torch.randn(3, 3, 3)
+        text = (
+            "Model received unbatched inputs. "
+            + "Perhaps they came from a FrameData which had not been collated."
+        )
+        with self.assertRaisesRegex(ValueError, text):
+>           img, fg_prob, depth_map = preprocess_input(
+                img, None, None, True, True, 0.5, (0.0, 0.0, 0.0)
+            )
+E           AssertionError: "Model received unbatched inputs. Perhaps they came from a FrameData which had not been collated." does not match "image_rgb must have shape (B, 3, H, W)."
+
+/local/data0/moved_data/pytorch3d/tests/implicitron/models/test_utils.py:23: AssertionError
+=============================== warnings summary ===============================
+tests/implicitron/models/test_utils.py::TestUtils::test_weighted_sum_losses_raise_warning
+  /local/data0/moved_data/pytorch3d/pytorch3d/implicitron/models/utils.py:68: UserWarning: No main objective found.
+    warnings.warn('No main objective found.')
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/implicitron/models/test_utils.py::TestUtils::test_prepare_inputs_mask_depth_true
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/implicitron/models/test_utils.py::TestUtils::test_prepare_inputs_mask_image_true
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/implicitron/models/test_utils.py::TestUtils::test_prepare_inputs_wrong_num_dim
+==================== 3 failed, 2 passed, 1 warning in 0.98s ====================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 5 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/implicitron/models/test_utils.py::TestUtils::test_prepare_inputs_mask_depth_true PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/implicitron/models/test_utils.py::TestUtils::test_prepare_inputs_mask_image_true PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/implicitron/models/test_utils.py::TestUtils::test_prepare_inputs_wrong_num_dim PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/implicitron/models/test_utils.py::TestUtils::test_weighted_sum_losses PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/implicitron/models/test_utils.py::TestUtils::test_weighted_sum_losses_raise_warning PASSED
+
+=============================== warnings summary ===============================
+tests/implicitron/models/test_utils.py::TestUtils::test_prepare_inputs_mask_depth_true
+tests/implicitron/models/test_utils.py::TestUtils::test_prepare_inputs_mask_image_true
+  /local/data0/moved_data/pytorch3d/pytorch3d/implicitron/models/utils.py:74: UserWarning: Thresholding masks!
+    warnings.warn("Thresholding masks!")
+
+tests/implicitron/models/test_utils.py::TestUtils::test_prepare_inputs_mask_depth_true
+  /local/data0/moved_data/pytorch3d/pytorch3d/implicitron/models/utils.py:89: UserWarning: Masking depths!
+    warnings.warn("Masking depths!")
+
+tests/implicitron/models/test_utils.py::TestUtils::test_prepare_inputs_mask_image_true
+  /local/data0/moved_data/pytorch3d/pytorch3d/implicitron/models/utils.py:79: UserWarning: Masking images!
+    warnings.warn("Masking images!")
+
+tests/implicitron/models/test_utils.py::TestUtils::test_weighted_sum_losses_raise_warning
+  /local/data0/moved_data/pytorch3d/pytorch3d/implicitron/models/utils.py:120: UserWarning: No main objective found.
+    warnings.warn("No main objective found.")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 5 passed, 5 warnings in 0.96s =========================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 5 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/implicitron/models/test_utils.py::TestUtils::test_prepare_inputs_mask_depth_true PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/implicitron/models/test_utils.py::TestUtils::test_prepare_inputs_mask_image_true PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/implicitron/models/test_utils.py::TestUtils::test_prepare_inputs_wrong_num_dim PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/implicitron/models/test_utils.py::TestUtils::test_weighted_sum_losses PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/implicitron/models/test_utils.py::TestUtils::test_weighted_sum_losses_raise_warning PASSED
+
+=============================== warnings summary ===============================
+tests/implicitron/models/test_utils.py::TestUtils::test_prepare_inputs_mask_depth_true
+tests/implicitron/models/test_utils.py::TestUtils::test_prepare_inputs_mask_image_true
+  /local/data0/moved_data/pytorch3d/pytorch3d/implicitron/models/utils.py:74: UserWarning: Thresholding masks!
+    warnings.warn("Thresholding masks!")
+
+tests/implicitron/models/test_utils.py::TestUtils::test_prepare_inputs_mask_depth_true
+  /local/data0/moved_data/pytorch3d/pytorch3d/implicitron/models/utils.py:89: UserWarning: Masking depths!
+    warnings.warn("Masking depths!")
+
+tests/implicitron/models/test_utils.py::TestUtils::test_prepare_inputs_mask_image_true
+  /local/data0/moved_data/pytorch3d/pytorch3d/implicitron/models/utils.py:79: UserWarning: Masking images!
+    warnings.warn("Masking images!")
+
+tests/implicitron/models/test_utils.py::TestUtils::test_weighted_sum_losses_raise_warning
+  /local/data0/moved_data/pytorch3d/pytorch3d/implicitron/models/utils.py:120: UserWarning: No main objective found.
+    warnings.warn("No main objective found.")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 5 passed, 5 warnings in 1.56s =========================

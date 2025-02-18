@@ -1,0 +1,398 @@
+output file:
+processed_GPflowgauss_kl44.json
+function:
+gauss_kl
+Error Cases:
+2025-02-13 22:44:41.702348: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739504681.713416 1510062 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1739504681.716815 1510062 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-02-13 22:44:41.729265: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-1] FAILED', '../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-1] FAILED', '../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-0] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-1]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-0]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-0]', '../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-0] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-1]'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/GPflow/GPflow/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/GPflow/GPflow
+collecting ... collected 4 items
+
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-0] FAILED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-1] FAILED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-0] FAILED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-1] FAILED
+
+=================================== FAILURES ===================================
+______________________________ test_oned[True-0] _______________________________
+
+white = True, dim = 0
+
+    @pytest.mark.parametrize("dim", [0, 1])
+    @pytest.mark.parametrize("white", [True, False])
+    def test_oned(white: bool, dim: bool) -> None:
+        """
+        Check that the KL divergence matches a 1D by-hand calculation.
+        """
+        mu1d = Datum.mu[dim, :][None, :]  # [1, N]
+        s1d = Datum.sqrt[:, dim, dim][:, None, None]  # [N, 1, 1]
+        K1d = Datum.K_batch[:, dim, dim][:, None, None]  # [N, 1, 1]
+    
+>       kl = gauss_kl(mu1d, s1d, K1d if not white else None)
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py:223: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/kullback_leiblers.py:24: in gauss_kl
+    return gauss_kl(q_mu, q_sqrt, K)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+q_mu = array([[1.76405235, 0.40015721, 0.97873798, 2.2408932 ]])
+q_sqrt = array([[[-0.4380743 ]],
+
+       [[ 0.72909056]],
+
+       [[ 0.70657317]],
+
+       [[ 0.37642553]]])
+K = None, K_cholesky = None
+
+    def gauss_kl(q_mu, q_sqrt, K=None, K_cholesky=None):
+        """
+        Compute the KL divergence KL[q || p] where:
+        q(x) = N(q_mu, q_sqrt^2)
+        p(x) = N(0, K) if K is not None
+        p(x) = N(0, I) if K is None
+    
+        Args:
+            q_mu (np.ndarray): Mean of q, shape [M, L].
+            q_sqrt (np.ndarray): Covariance of q, shape [L, M, M] or [M, L].
+            K (np.ndarray, optional): Covariance of p, shape [M, M] or [L, M, M].
+            K_cholesky (np.ndarray, optional): Cholesky factor of K, same shape as K.
+    
+        Returns:
+            float: Sum of KL divergences for L distributions.
+        """
+        M, L = q_mu.shape
+        if K is None and K_cholesky is None:
+            K_inv = np.eye(M)
+            log_det_K = 0.0
+        elif K_cholesky is not None:
+            if K_cholesky.ndim == 2:
+                K_inv = np.linalg.inv(K_cholesky).T @ np.linalg.inv(K_cholesky)
+                log_det_K = 2 * np.sum(np.log(np.diag(K_cholesky)))
+            else:
+                K_inv = np.array([np.linalg.inv(chol).T @ np.linalg.inv(chol) for chol in K_cholesky])
+                log_det_K = 2 * np.sum(np.log(np.diagonal(K_cholesky, axis1=1, axis2=2)), axis=1)
+        elif K.ndim == 2:
+            K_inv = np.linalg.inv(K)
+            log_det_K = np.linalg.slogdet(K)[1]
+        else:
+            K_inv = np.array([np.linalg.inv(k) for k in K])
+            log_det_K = np.array([np.linalg.slogdet(k)[1] for k in K])
+        kl_divergence = 0.0
+        for l in range(L):
+            q_mu_l = q_mu[:, l]
+            if q_sqrt.ndim == 3:
+                q_cov_l = q_sqrt[l] @ q_sqrt[l].T
+                trace_term = np.trace(K_inv @ q_cov_l)
+                log_det_q = 2 * np.sum(np.log(np.diag(q_sqrt[l])))
+            else:
+                q_cov_l = np.diag(q_sqrt[:, l] ** 2)
+                trace_term = np.sum(K_inv * q_cov_l)
+                log_det_q = np.sum(np.log(q_sqrt[:, l] ** 2))
+>           if K.ndim == 3 or (K_cholesky is not None and K_cholesky.ndim == 3):
+E           AttributeError: 'NoneType' object has no attribute 'ndim'
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/temp.py:56: AttributeError
+______________________________ test_oned[True-1] _______________________________
+
+white = True, dim = 1
+
+    @pytest.mark.parametrize("dim", [0, 1])
+    @pytest.mark.parametrize("white", [True, False])
+    def test_oned(white: bool, dim: bool) -> None:
+        """
+        Check that the KL divergence matches a 1D by-hand calculation.
+        """
+        mu1d = Datum.mu[dim, :][None, :]  # [1, N]
+        s1d = Datum.sqrt[:, dim, dim][:, None, None]  # [N, 1, 1]
+        K1d = Datum.K_batch[:, dim, dim][:, None, None]  # [N, 1, 1]
+    
+>       kl = gauss_kl(mu1d, s1d, K1d if not white else None)
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py:223: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/kullback_leiblers.py:24: in gauss_kl
+    return gauss_kl(q_mu, q_sqrt, K)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+q_mu = array([[ 1.86755799, -0.97727788,  0.95008842, -0.15135721]])
+q_sqrt = array([[[ 0.3869025 ]],
+
+       [[-0.87079715]],
+
+       [[-1.34775906]],
+
+       [[-0.43515355]]])
+K = None, K_cholesky = None
+
+    def gauss_kl(q_mu, q_sqrt, K=None, K_cholesky=None):
+        """
+        Compute the KL divergence KL[q || p] where:
+        q(x) = N(q_mu, q_sqrt^2)
+        p(x) = N(0, K) if K is not None
+        p(x) = N(0, I) if K is None
+    
+        Args:
+            q_mu (np.ndarray): Mean of q, shape [M, L].
+            q_sqrt (np.ndarray): Covariance of q, shape [L, M, M] or [M, L].
+            K (np.ndarray, optional): Covariance of p, shape [M, M] or [L, M, M].
+            K_cholesky (np.ndarray, optional): Cholesky factor of K, same shape as K.
+    
+        Returns:
+            float: Sum of KL divergences for L distributions.
+        """
+        M, L = q_mu.shape
+        if K is None and K_cholesky is None:
+            K_inv = np.eye(M)
+            log_det_K = 0.0
+        elif K_cholesky is not None:
+            if K_cholesky.ndim == 2:
+                K_inv = np.linalg.inv(K_cholesky).T @ np.linalg.inv(K_cholesky)
+                log_det_K = 2 * np.sum(np.log(np.diag(K_cholesky)))
+            else:
+                K_inv = np.array([np.linalg.inv(chol).T @ np.linalg.inv(chol) for chol in K_cholesky])
+                log_det_K = 2 * np.sum(np.log(np.diagonal(K_cholesky, axis1=1, axis2=2)), axis=1)
+        elif K.ndim == 2:
+            K_inv = np.linalg.inv(K)
+            log_det_K = np.linalg.slogdet(K)[1]
+        else:
+            K_inv = np.array([np.linalg.inv(k) for k in K])
+            log_det_K = np.array([np.linalg.slogdet(k)[1] for k in K])
+        kl_divergence = 0.0
+        for l in range(L):
+            q_mu_l = q_mu[:, l]
+            if q_sqrt.ndim == 3:
+                q_cov_l = q_sqrt[l] @ q_sqrt[l].T
+                trace_term = np.trace(K_inv @ q_cov_l)
+                log_det_q = 2 * np.sum(np.log(np.diag(q_sqrt[l])))
+            else:
+                q_cov_l = np.diag(q_sqrt[:, l] ** 2)
+                trace_term = np.sum(K_inv * q_cov_l)
+                log_det_q = np.sum(np.log(q_sqrt[:, l] ** 2))
+>           if K.ndim == 3 or (K_cholesky is not None and K_cholesky.ndim == 3):
+E           AttributeError: 'NoneType' object has no attribute 'ndim'
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/temp.py:56: AttributeError
+______________________________ test_oned[False-0] ______________________________
+
+white = False, dim = 0
+
+    @pytest.mark.parametrize("dim", [0, 1])
+    @pytest.mark.parametrize("white", [True, False])
+    def test_oned(white: bool, dim: bool) -> None:
+        """
+        Check that the KL divergence matches a 1D by-hand calculation.
+        """
+        mu1d = Datum.mu[dim, :][None, :]  # [1, N]
+        s1d = Datum.sqrt[:, dim, dim][:, None, None]  # [N, 1, 1]
+        K1d = Datum.K_batch[:, dim, dim][:, None, None]  # [N, 1, 1]
+    
+>       kl = gauss_kl(mu1d, s1d, K1d if not white else None)
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py:223: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/check_shapes/decorator.py:198: in wrapped_function
+    _check_specs(post_specs)
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/check_shapes/decorator.py:186: in _check_specs
+    checker.check_shapes(processed_specs)
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/check_shapes/checker.py:311: in check_shapes
+    dim_checks = self._match_dims(shape_check)
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/check_shapes/checker.py:472: in _match_dims
+    self._assert(unallocated_len == 0)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <check_shapes.checker.ShapeChecker object at 0x737432f2d0d0>
+condition = False
+
+    def _assert(self, condition: bool) -> None:
+        """
+        Raise a nicely formatted :class:`ShapeMismatchError` if ``condition`` is not ``True``.
+        """
+        if not condition:
+            contexts: List[ErrorContext] = []
+            contexts.extend(self._additional_context)
+    
+            for shape, tensor_spec, context in self._observed_shapes:
+                shape_error_context: ErrorContext = ShapeContext(tensor_spec.shape, shape)
+                if tensor_spec.note is not None:
+                    shape_error_context = ParallelContext(
+                        (NoteContext(tensor_spec.note), shape_error_context)
+                    )
+                contexts.append(StackContext(context, shape_error_context))
+>           raise ShapeMismatchError(ParallelContext(tuple(contexts)))
+E           check_shapes.exceptions.ShapeMismatchError: 
+E           Tensor shape mismatch.
+E             Function: gauss_kl
+E               Declared: /local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/kullback_leiblers.py:21
+E               Argument: q_mu
+E                 Expected: [M, L]
+E                 Actual:   [1, 4]
+E               Argument: q_sqrt
+E                 Expected: [M_L_or_L_M_M...]
+E                 Actual:   [4, 1, 1]
+E               Argument: K
+E                 Expected: [broadcast L, M, M]
+E                 Actual:   [4, 1, 1]
+E               Argument: K_cholesky
+E                 Expected: [broadcast L, M, M]
+E                 Actual:   <Tensor is None or has unknown shape>
+E               Argument: return
+E                 Expected: []
+E                 Actual:   [4]
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/check_shapes/checker.py:607: ShapeMismatchError
+______________________________ test_oned[False-1] ______________________________
+
+white = False, dim = 1
+
+    @pytest.mark.parametrize("dim", [0, 1])
+    @pytest.mark.parametrize("white", [True, False])
+    def test_oned(white: bool, dim: bool) -> None:
+        """
+        Check that the KL divergence matches a 1D by-hand calculation.
+        """
+        mu1d = Datum.mu[dim, :][None, :]  # [1, N]
+        s1d = Datum.sqrt[:, dim, dim][:, None, None]  # [N, 1, 1]
+        K1d = Datum.K_batch[:, dim, dim][:, None, None]  # [N, 1, 1]
+    
+>       kl = gauss_kl(mu1d, s1d, K1d if not white else None)
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py:223: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/check_shapes/decorator.py:198: in wrapped_function
+    _check_specs(post_specs)
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/check_shapes/decorator.py:186: in _check_specs
+    checker.check_shapes(processed_specs)
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/check_shapes/checker.py:311: in check_shapes
+    dim_checks = self._match_dims(shape_check)
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/check_shapes/checker.py:472: in _match_dims
+    self._assert(unallocated_len == 0)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <check_shapes.checker.ShapeChecker object at 0x73743013d2d0>
+condition = False
+
+    def _assert(self, condition: bool) -> None:
+        """
+        Raise a nicely formatted :class:`ShapeMismatchError` if ``condition`` is not ``True``.
+        """
+        if not condition:
+            contexts: List[ErrorContext] = []
+            contexts.extend(self._additional_context)
+    
+            for shape, tensor_spec, context in self._observed_shapes:
+                shape_error_context: ErrorContext = ShapeContext(tensor_spec.shape, shape)
+                if tensor_spec.note is not None:
+                    shape_error_context = ParallelContext(
+                        (NoteContext(tensor_spec.note), shape_error_context)
+                    )
+                contexts.append(StackContext(context, shape_error_context))
+>           raise ShapeMismatchError(ParallelContext(tuple(contexts)))
+E           check_shapes.exceptions.ShapeMismatchError: 
+E           Tensor shape mismatch.
+E             Function: gauss_kl
+E               Declared: /local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/kullback_leiblers.py:21
+E               Argument: q_mu
+E                 Expected: [M, L]
+E                 Actual:   [1, 4]
+E               Argument: q_sqrt
+E                 Expected: [M_L_or_L_M_M...]
+E                 Actual:   [4, 1, 1]
+E               Argument: K
+E                 Expected: [broadcast L, M, M]
+E                 Actual:   [4, 1, 1]
+E               Argument: K_cholesky
+E                 Expected: [broadcast L, M, M]
+E                 Actual:   <Tensor is None or has unknown shape>
+E               Argument: return
+E                 Expected: []
+E                 Actual:   [4]
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/check_shapes/checker.py:607: ShapeMismatchError
+=============================== warnings summary ===============================
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:57
+  /local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:57: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    if (distutils.version.LooseVersion(tf.__version__) <
+
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:58
+  /local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:58: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    distutils.version.LooseVersion(required_tensorflow_version)):
+
+tests/gpflow/test_kullback_leiblers.py::test_oned[True-0]
+tests/gpflow/test_kullback_leiblers.py::test_oned[False-0]
+tests/gpflow/test_kullback_leiblers.py::test_oned[False-1]
+  /local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/temp.py:51: RuntimeWarning: invalid value encountered in log
+    log_det_q = 2 * np.sum(np.log(np.diag(q_sqrt[l])))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-0]
+FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-0]
+FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-1]
+======================== 4 failed, 5 warnings in 0.30s =========================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/GPflow/GPflow/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/GPflow/GPflow
+collecting ... collected 4 items
+
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-1] PASSED
+
+=============================== warnings summary ===============================
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:57
+  /local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:57: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    if (distutils.version.LooseVersion(tf.__version__) <
+
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:58
+  /local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:58: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    distutils.version.LooseVersion(required_tensorflow_version)):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 4 passed, 2 warnings in 0.68s =========================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/GPflow/GPflow/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/GPflow/GPflow
+collecting ... collected 4 items
+
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-1] PASSED
+
+=============================== warnings summary ===============================
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:57
+  /local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:57: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    if (distutils.version.LooseVersion(tf.__version__) <
+
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:58
+  /local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:58: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    distutils.version.LooseVersion(required_tensorflow_version)):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 4 passed, 2 warnings in 0.65s =========================

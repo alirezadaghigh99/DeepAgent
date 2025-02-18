@@ -1,0 +1,147 @@
+output file:
+processed_pyodaom86.json
+function:
+aom
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/pyod/pyod/pyod/test/test_combination.py::TestAOM::test_aom_static_n_buckets FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pyod/pyod/pyod/test/test_combination.py::TestAOM::test_aom_static_n_buckets', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pyod/pyod/pyod/test/test_combination.py::TestAOM::test_aom_static_repeat', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pyod/pyod/pyod/test/test_combination.py::TestAOM::test_aom_dynamic_repeat', '../../../../../../local/data0/moved_data/publishablew/pyod/pyod/pyod/test/test_combination.py::TestAOM::test_aom_static_repeat FAILED', '../../../../../../local/data0/moved_data/publishablew/pyod/pyod/pyod/test/test_combination.py::TestAOM::test_aom_static_norepeat FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pyod/pyod/pyod/test/test_combination.py::TestAOM::test_aom_static_norepeat', '../../../../../../local/data0/moved_data/publishablew/pyod/pyod/pyod/test/test_combination.py::TestAOM::test_aom_dynamic_repeat FAILED'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/pyod/pyod/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/pyod/pyod
+collecting ... collected 4 items
+
+../../../../../../local/data0/moved_data/publishablew/pyod/pyod/pyod/test/test_combination.py::TestAOM::test_aom_dynamic_repeat FAILED
+../../../../../../local/data0/moved_data/publishablew/pyod/pyod/pyod/test/test_combination.py::TestAOM::test_aom_static_n_buckets FAILED
+../../../../../../local/data0/moved_data/publishablew/pyod/pyod/pyod/test/test_combination.py::TestAOM::test_aom_static_norepeat FAILED
+../../../../../../local/data0/moved_data/publishablew/pyod/pyod/pyod/test/test_combination.py::TestAOM::test_aom_static_repeat FAILED
+
+=================================== FAILURES ===================================
+_______________________ TestAOM.test_aom_dynamic_repeat ________________________
+
+self = <pyod.test.test_combination.TestAOM testMethod=test_aom_dynamic_repeat>
+
+    def test_aom_dynamic_repeat(self):
+>       score = aom(self.scores, 3, method='dynamic',
+                    bootstrap_estimators=True,
+                    random_state=42)
+
+/local/data0/moved_data/publishablew/pyod/pyod/pyod/test/test_combination.py:66: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+scores = array([[0.5 , 0.8 , 0.6 , 0.9 , 0.7 , 0.6 ],
+       [0.8 , 0.75, 0.25, 0.6 , 0.45, 0.8 ],
+       [0.8 , 0.3 , 0.28, 0.99, 0.28, 0.3 ],
+       [0.74, 0.85, 0.38, 0.47, 0.27, 0.69]])
+n_buckets = 3, method = 'dynamic', bootstrap_estimators = True
+random_state = 42
+
+    def aom(scores, n_buckets=5, method='static', bootstrap_estimators=False, random_state=None):
+>       from .temp import aom
+E       ImportError: cannot import name 'aom' from 'pyod.models.temp' (/local/data0/moved_data/publishablew/pyod/pyod/pyod/models/temp.py)
+
+/local/data0/moved_data/publishablew/pyod/pyod/pyod/models/combination.py:15: ImportError
+______________________ TestAOM.test_aom_static_n_buckets _______________________
+
+self = <pyod.test.test_combination.TestAOM testMethod=test_aom_static_n_buckets>
+
+    def test_aom_static_n_buckets(self):
+        with assert_raises(ValueError):
+>           aom(self.scores, 5, method='static', bootstrap_estimators=False,
+                random_state=42)
+
+/local/data0/moved_data/publishablew/pyod/pyod/pyod/test/test_combination.py:60: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def aom(scores, n_buckets=5, method='static', bootstrap_estimators=False, random_state=None):
+>       from .temp import aom
+E       ImportError: cannot import name 'aom' from 'pyod.models.temp' (/local/data0/moved_data/publishablew/pyod/pyod/pyod/models/temp.py)
+
+/local/data0/moved_data/publishablew/pyod/pyod/pyod/models/combination.py:15: ImportError
+_______________________ TestAOM.test_aom_static_norepeat _______________________
+
+self = <pyod.test.test_combination.TestAOM testMethod=test_aom_static_norepeat>
+
+    def test_aom_static_norepeat(self):
+>       score = aom(self.scores, 3, method='static',
+                    bootstrap_estimators=False,
+                    random_state=42)
+
+/local/data0/moved_data/publishablew/pyod/pyod/pyod/test/test_combination.py:35: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+scores = array([[0.5 , 0.8 , 0.6 , 0.9 , 0.7 , 0.6 ],
+       [0.8 , 0.75, 0.25, 0.6 , 0.45, 0.8 ],
+       [0.8 , 0.3 , 0.28, 0.99, 0.28, 0.3 ],
+       [0.74, 0.85, 0.38, 0.47, 0.27, 0.69]])
+n_buckets = 3, method = 'static', bootstrap_estimators = False
+random_state = 42
+
+    def aom(scores, n_buckets=5, method='static', bootstrap_estimators=False, random_state=None):
+>       from .temp import aom
+E       ImportError: cannot import name 'aom' from 'pyod.models.temp' (/local/data0/moved_data/publishablew/pyod/pyod/pyod/models/temp.py)
+
+/local/data0/moved_data/publishablew/pyod/pyod/pyod/models/combination.py:15: ImportError
+________________________ TestAOM.test_aom_static_repeat ________________________
+
+self = <pyod.test.test_combination.TestAOM testMethod=test_aom_static_repeat>
+
+    def test_aom_static_repeat(self):
+>       score = aom(self.scores, 3, method='static', bootstrap_estimators=True,
+                    random_state=42)
+
+/local/data0/moved_data/publishablew/pyod/pyod/pyod/test/test_combination.py:54: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+scores = array([[0.5 , 0.8 , 0.6 , 0.9 , 0.7 , 0.6 ],
+       [0.8 , 0.75, 0.25, 0.6 , 0.45, 0.8 ],
+       [0.8 , 0.3 , 0.28, 0.99, 0.28, 0.3 ],
+       [0.74, 0.85, 0.38, 0.47, 0.27, 0.69]])
+n_buckets = 3, method = 'static', bootstrap_estimators = True, random_state = 42
+
+    def aom(scores, n_buckets=5, method='static', bootstrap_estimators=False, random_state=None):
+>       from .temp import aom
+E       ImportError: cannot import name 'aom' from 'pyod.models.temp' (/local/data0/moved_data/publishablew/pyod/pyod/pyod/models/temp.py)
+
+/local/data0/moved_data/publishablew/pyod/pyod/pyod/models/combination.py:15: ImportError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/pyod/pyod/pyod/test/test_combination.py::TestAOM::test_aom_dynamic_repeat
+FAILED ../../../../../../local/data0/moved_data/publishablew/pyod/pyod/pyod/test/test_combination.py::TestAOM::test_aom_static_n_buckets
+FAILED ../../../../../../local/data0/moved_data/publishablew/pyod/pyod/pyod/test/test_combination.py::TestAOM::test_aom_static_norepeat
+FAILED ../../../../../../local/data0/moved_data/publishablew/pyod/pyod/pyod/test/test_combination.py::TestAOM::test_aom_static_repeat
+============================== 4 failed in 0.51s ===============================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/pyod/pyod/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/pyod/pyod
+collecting ... collected 4 items
+
+../../../../../../local/data0/moved_data/publishablew/pyod/pyod/pyod/test/test_combination.py::TestAOM::test_aom_dynamic_repeat PASSED
+../../../../../../local/data0/moved_data/publishablew/pyod/pyod/pyod/test/test_combination.py::TestAOM::test_aom_static_n_buckets PASSED
+../../../../../../local/data0/moved_data/publishablew/pyod/pyod/pyod/test/test_combination.py::TestAOM::test_aom_static_norepeat PASSED
+../../../../../../local/data0/moved_data/publishablew/pyod/pyod/pyod/test/test_combination.py::TestAOM::test_aom_static_repeat PASSED
+
+============================== 4 passed in 0.45s ===============================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/pyod/pyod/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/pyod/pyod
+collecting ... collected 4 items
+
+../../../../../../local/data0/moved_data/publishablew/pyod/pyod/pyod/test/test_combination.py::TestAOM::test_aom_dynamic_repeat PASSED
+../../../../../../local/data0/moved_data/publishablew/pyod/pyod/pyod/test/test_combination.py::TestAOM::test_aom_static_n_buckets PASSED
+../../../../../../local/data0/moved_data/publishablew/pyod/pyod/pyod/test/test_combination.py::TestAOM::test_aom_static_norepeat PASSED
+../../../../../../local/data0/moved_data/publishablew/pyod/pyod/pyod/test/test_combination.py::TestAOM::test_aom_static_repeat PASSED
+
+============================== 4 passed in 0.45s ===============================

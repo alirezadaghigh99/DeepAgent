@@ -1,0 +1,58 @@
+stage: Image
+task: 
+data: pre-post process
+
+prompt:
+Write a python function compute_subpixel_step for the class DepthWrapper that Compute the required inverse depth step to achieve sub pixel accurate sampling of the depth cost volume,
+        per camera. class DepthWarper(Module):
+    
+
+    def __init__(
+        self,
+        pinhole_dst: PinholeCamera,
+        height: int,
+        width: int,
+        mode: str = "bilinear",
+        padding_mode: str = "zeros",
+        align_corners: bool = True,
+    ) -> None:
+        super().__init__()
+        # constructor members
+        self.width: int = width
+        self.height: int = height
+        self.mode: str = mode
+        self.padding_mode: str = padding_mode
+        self.eps = 1e-6
+        self.align_corners: bool = align_corners
+
+        # state members
+        self._pinhole_dst: PinholeCamera = pinhole_dst
+        self._pinhole_src: None | PinholeCamera = None
+        self._dst_proj_src: None | Tensor = None
+
+        self.grid: Tensor = self._create_meshgrid(height, width)
+
+
+    def _compute_projection(self, x: float, y: float, invd: float) -> Tensor:
+        if self._dst_proj_src is None or self._pinhole_src is None:
+            raise ValueError("Please, call compute_projection_matrix.")
+
+        point = tensor([[[x], [y], [invd], [1.0]]], device=self._dst_proj_src.device, dtype=self._dst_proj_src.dtype)
+        flow = torch.matmul(self._dst_proj_src, point)
+        z = 1.0 / flow[:, 2]
+        _x = flow[:, 0] * z
+        _y = flow[:, 1] * z
+        return kornia_ops.concatenate([_x, _y], 1)
+
+    def compute_subpixel_step(self) -> Tensor:
+        
+
+
+ ground Truth:kornia/geometry/depth.py
+
+ repo:kornia
+
+ function:compute_subpixel_step
+ 
+ test_cases:tests/geometry/test_depth_wrapper.py
+ class:DepthWarper

@@ -1,0 +1,113 @@
+output file:
+processed_classes-pytorch3d__init__111.json
+function:
+__init__
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestRotate::test_inverse FAILED [ 75%]', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestRotate::test_get_item FAILED [ 25%]', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestRotate::test_get_item', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestRotate::test_inverse'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 4 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestRotate::test_get_item FAILED [ 25%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestRotate::test_invalid_dimensions PASSED [ 50%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestRotate::test_inverse FAILED [ 75%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestRotate::test_single_matrix PASSED [100%]
+
+=================================== FAILURES ===================================
+___________________________ TestRotate.test_get_item ___________________________
+
+self = <tests.test_transforms.TestRotate testMethod=test_get_item>
+batch_size = 5
+
+    def test_get_item(self, batch_size=5):
+        device = torch.device("cuda:0")
+        r = random_rotations(batch_size, dtype=torch.float32, device=device)
+>       t3d = Rotate(r)
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:1010: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:565: in __init__
+    if not is_orthogonal(R[i], orthogonal_tol):
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+matrix = tensor([[-0.0630,  0.9918,  0.1115],
+        [ 0.7955,  0.1173, -0.5944],
+        [-0.6026,  0.0513, -0.7964]], device='cuda:0')
+tol = 1e-05
+
+    def is_orthogonal(matrix, tol):
+        identity = torch.eye(3, dtype=dtype, device=device)
+>       return torch.allclose(matrix @ matrix.transpose(-1, -2), identity, atol=tol)
+E       RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:559: RuntimeError
+___________________________ TestRotate.test_inverse ____________________________
+
+self = <tests.test_transforms.TestRotate testMethod=test_inverse>
+batch_size = 5
+
+    def test_inverse(self, batch_size=5):
+        device = torch.device("cuda:0")
+        log_rot = torch.randn((batch_size, 3), dtype=torch.float32, device=device)
+        R = so3_exp_map(log_rot)
+>       t = Rotate(R)
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:1000: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:565: in __init__
+    if not is_orthogonal(R[i], orthogonal_tol):
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+matrix = tensor([[ 0.7946,  0.4961,  0.3500],
+        [-0.3275,  0.8357, -0.4409],
+        [-0.5112,  0.2356,  0.8265]], device='cuda:0')
+tol = 1e-05
+
+    def is_orthogonal(matrix, tol):
+        identity = torch.eye(3, dtype=dtype, device=device)
+>       return torch.allclose(matrix @ matrix.transpose(-1, -2), identity, atol=tol)
+E       RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:559: RuntimeError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestRotate::test_get_item
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestRotate::test_inverse
+========================= 2 failed, 2 passed in 1.37s ==========================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 4 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestRotate::test_get_item PASSED [ 25%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestRotate::test_invalid_dimensions PASSED [ 50%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestRotate::test_inverse PASSED [ 75%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestRotate::test_single_matrix PASSED [100%]
+
+============================== 4 passed in 1.26s ===============================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 4 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestRotate::test_get_item PASSED [ 25%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestRotate::test_invalid_dimensions PASSED [ 50%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestRotate::test_inverse PASSED [ 75%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestRotate::test_single_matrix PASSED [100%]
+
+============================== 4 passed in 1.28s ===============================

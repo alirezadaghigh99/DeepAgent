@@ -1,0 +1,21 @@
+stage: Pre-Post processing
+task: Detection
+data: image
+
+prompt:
+Generate a Python function called project_points_z1 that projects one or more points from the camera frame into the canonical z=1 plane through perspective division. The input is a tensor called points_in_camera with shape (..., 3) representing the points to project. The function has a precondition that the points are in front of the camera (z > 0). If this is not the case, the points will be projected to the canonical plane, but the resulting points will be behind the camera and may cause numerical issues for z == 0. The output is a tensor representing the projected points with shape (..., 2). An example usage of the function is as follows:
+
+```python
+points = torch.tensor([1., 2., 3.])
+project_points_z1(points)
+```
+
+This will return a tensor with values [0.3333, 0.6667].
+
+ ground Truth:kornia/geometry/camera/projection_z1.py
+
+ repo:kornia
+
+ function:project_points_z1
+ 
+ test_cases:tests/geometry/camera/test_projections.py::TestProjectionZ1

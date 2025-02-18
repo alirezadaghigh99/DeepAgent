@@ -1,0 +1,14 @@
+stage: Model Construction
+task: Segmentation
+data: Image
+
+prompt:
+Generate a Python function called make_grid that creates a grid of images. The function takes in a tensor (either a torch.Tensor or a list of torch.Tensors) representing a 4D mini-batch of images, along with optional parameters such as nrow (number of images per row in the grid), padding, normalize (whether to shift images to the range 0-1), value_range (min and max values for normalization), scale_each (whether to scale each image separately), and pad_value (value for padded pixels). The function returns a torch.Tensor containing the grid of images.
+
+ ground Truth:torchvision/utils.py
+
+ repo:vision
+
+ function:make_grid
+ 
+ test_cases:test/test_utils.py

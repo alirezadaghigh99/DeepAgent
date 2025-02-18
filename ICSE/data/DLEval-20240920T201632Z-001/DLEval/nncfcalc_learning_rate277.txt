@@ -1,0 +1,14 @@
+stage: Training
+task: 
+data: 
+
+prompt:
+You need to implement a function called `calc_learning_rate` that calculates the learning rate during training based on the provided schedule type. The function takes inputs for the current epoch, initial learning rate, total epochs, current batch, total batches per epoch, and the learning rate schedule type, which defaults to "cosine." If "cosine" is selected, the learning rate should be calculated using a cosine annealing schedule; otherwise, if no schedule type is provided, return the initial learning rate. If an unsupported schedule type is given, raise ValueError("do not support: %s" % lr_schedule_type) The function outputs the calculated learning rate as a float.
+
+ ground Truth:nncf/experimental/torch/nas/bootstrapNAS/training/lr_scheduler.py
+
+ repo:nncf
+
+ function:calc_learning_rate
+ 
+ test_cases:tests/torch/nas/test_lr_scheduler.py

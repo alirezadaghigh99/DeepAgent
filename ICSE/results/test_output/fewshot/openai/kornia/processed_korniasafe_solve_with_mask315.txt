@@ -1,0 +1,154 @@
+output file:
+processed_korniasafe_solve_with_mask315.json
+function:
+safe_solve_with_mask
+Error Cases:
+
+Pass or Failed: 1
+
+Related Failed Test Cases:
+set()
+
+All Test Cases On Generated code:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'inductor', 'tvm', 'jit', 'onnxrt', 'cudagraphs', 'openxla', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 2 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/utils/test_helpers.py::TestSolveWithMask::test_smoke[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/utils/test_helpers.py::TestSolveWithMask::test_all_bad[cpu-float32] PASSED
+
+=============================== warnings summary ===============================
+tests/utils/test_helpers.py::TestSolveWithMask::test_smoke[cpu-float32]
+  /local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/functional.py:2135: UserWarning: torch.lu is deprecated in favor of torch.linalg.lu_factor / torch.linalg.lu_factor_ex and will be removed in a future PyTorch release.
+  LU, pivots = torch.lu(A, compute_pivots)
+  should be replaced with
+  LU, pivots = torch.linalg.lu_factor(A, compute_pivots)
+  and
+  LU, pivots, info = torch.lu(A, compute_pivots, get_infos=True)
+  should be replaced with
+  LU, pivots, info = torch.linalg.lu_factor_ex(A, compute_pivots) (Triggered internally at ../aten/src/ATen/native/BatchLinearAlgebra.cpp:1990.)
+    return torch._lu_with_info(A, pivot=pivot, check_errors=(not get_infos))
+
+tests/utils/test_helpers.py::TestSolveWithMask::test_smoke[cpu-float32]
+  /local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/temp.py:42: UserWarning: torch.lu_solve is deprecated in favor of torch.linalg.lu_solveand will be removed in a future PyTorch release.
+  Note that torch.linalg.lu_solve has its arguments reversed.
+  X = torch.lu_solve(B, LU, pivots)
+  should be replaced with
+  X = torch.linalg.lu_solve(LU, pivots, B) (Triggered internally at ../aten/src/ATen/native/BatchLinearAlgebra.cpp:2147.)
+    X = torch.lu_solve(B, A_LU, pivots)
+
+tests/utils/test_helpers.py::TestSolveWithMask::test_all_bad[cpu-float32]
+  /local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/temp.py:45: UserWarning: RuntimeError encountered: linalg.lu_solve: Incompatible shapes of A and B for the equation AX = B (3x3 and 10x3). Attempting to handle singular matrix.
+    warnings.warn(f'RuntimeError encountered: {e}. Attempting to handle singular matrix.')
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 2 passed, 3 warnings in 0.20s =========================
+
+
+Final Test Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'jit', 'tvm', 'cudagraphs', 'inductor', 'onnxrt', 'openxla', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 2 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/utils/test_helpers.py::TestSolveWithMask::test_smoke[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/utils/test_helpers.py::TestSolveWithMask::test_all_bad[cpu-float32] PASSED
+
+============================== 2 passed in 0.16s ===============================
+
+
+Initial Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'onnxrt', 'jit', 'openxla', 'tvm', 'cudagraphs', 'inductor', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 2 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/utils/test_helpers.py::TestSolveWithMask::test_smoke[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/utils/test_helpers.py::TestSolveWithMask::test_all_bad[cpu-float32] PASSED
+
+============================== 2 passed in 0.21s ===============================

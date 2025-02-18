@@ -1,0 +1,22 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Generate a Python function called _compute_splatting_colors_and_weights that computes the splatting weights and colors for each center pixel q and its surrounding nine splatting pixels p. The function takes in the following arguments:
+- pixel_coords_screen: a tensor of pixel screen coordinates with shape (N, H, W, K, 2)
+- colors: a tensor of RGBA pixel colors with shape (N, H, W, K, 4)
+- sigma: a float representing the splatting kernel variance
+- offsets: a tensor of splatting directions with shape (9, 2)
+
+The function returns a tensor splat_colors_and_weights with shape (N, H, W, K, 9, 5), where splat_colors_and_weights[..., :4] corresponds to the splatting colors and splat_colors_and_weights[..., 4:5] corresponds to the splatting weights. The "9" dimension represents the nine splatting directions.
+
+ ground Truth:pytorch3d/renderer/splatter_blend.py
+
+ repo:pytorch3d
+
+ function:_compute_splatting_colors_and_weights
+ 
+ test_cases:tests/test_splatter_blend.py 
+ 
+ 

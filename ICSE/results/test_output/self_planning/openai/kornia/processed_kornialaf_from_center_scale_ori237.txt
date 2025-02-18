@@ -1,0 +1,214 @@
+output file:
+processed_kornialaf_from_center_scale_ori237.json
+function:
+laf_from_center_scale_ori
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_cross_consistency[cpu]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_cross_consistency[cpu] FAILED'}
+
+All Test Cases On Generated code:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'tvm', 'cudagraphs', 'openxla', 'inductor', 'jit', 'onnxrt', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 6 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_shape[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_laf[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_laf_def[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_cross_consistency[cpu] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_gradcheck[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_jit[cpu-float32] SKIPPED
+
+=================================== FAILURES ===================================
+_________________ TestGetCreateLAF.test_cross_consistency[cpu] _________________
+
+self = <test_laf.TestGetCreateLAF object at 0x79dc29b54460>
+device = device(type='cpu')
+
+    def test_cross_consistency(self, device):
+        batch_size, channels = 3, 2
+        xy = torch.rand(batch_size, channels, 2, device=device)
+        ori = torch.rand(batch_size, channels, 1, device=device)
+        scale = torch.abs(torch.rand(batch_size, channels, 1, 1, device=device))
+        laf = kornia.feature.laf_from_center_scale_ori(xy, scale, ori)
+        scale2 = kornia.feature.get_laf_scale(laf)
+        self.assert_close(scale, scale2)
+        xy2 = kornia.feature.get_laf_center(laf)
+        self.assert_close(xy2, xy)
+        ori2 = kornia.feature.get_laf_orientation(laf)
+>       self.assert_close(ori2, ori)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py:515: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:106: in assert_close
+    return assert_close(actual, expected, rtol=rtol, atol=atol)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+actual = tensor([[[ -1.3025],
+         [-56.6846]],
+
+        [[ -1.1225],
+         [-35.0485]],
+
+        [[ -9.1974],
+         [ -5.5491]]])
+expected = tensor([[[0.0227],
+         [0.9893]],
+
+        [[0.0196],
+         [0.6117]],
+
+        [[0.1605],
+         [0.0969]]])
+rtol = 0.0001, atol = 1e-05, kwargs = {}
+
+    def assert_close(
+        actual: Tensor, expected: Tensor, *, rtol: Optional[float] = None, atol: Optional[float] = None, **kwargs: Any
+    ) -> None:
+        if rtol is None and atol is None:
+            # `torch.testing.assert_close` used different default tolerances than `torch.testing.assert_allclose`.
+            # TODO: remove this special handling as soon as https://github.com/kornia/kornia/issues/1134 is resolved
+            #  Basically, this whole wrapper function can be removed and `torch.testing.assert_close` can be used
+            #  directly.
+            rtol, atol = _default_tolerances(actual, expected)
+    
+>       return _assert_close(
+            actual,
+            expected,
+            rtol=rtol,
+            atol=atol,
+            # this is the default value for torch>=1.10, but not for torch==1.9
+            # TODO: remove this if kornia relies on torch>=1.10
+            check_stride=False,
+            equal_nan=False,
+            **kwargs,
+        )
+E       AssertionError: Tensor-likes are not close!
+E       
+E       Mismatched elements: 6 / 6 (100.0%)
+E       Greatest absolute difference: 57.673912048339844 at index (0, 1, 0) (up to 1e-05 allowed)
+E       Greatest relative difference: 58.29578399658203 at index (0, 0, 0) (up to 0.0001 allowed)
+
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:37: AssertionError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_cross_consistency[cpu]
+==================== 1 failed, 4 passed, 1 skipped in 0.33s ====================
+
+
+Final Test Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'cudagraphs', 'tvm', 'jit', 'inductor', 'onnxrt', 'openxla', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 6 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_shape[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_laf[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_laf_def[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_cross_consistency[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_gradcheck[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_jit[cpu-float32] SKIPPED
+
+========================= 5 passed, 1 skipped in 0.17s =========================
+
+
+Initial Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'inductor', 'cudagraphs', 'tvm', 'jit', 'openxla', 'onnxrt', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 6 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_shape[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_laf[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_laf_def[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_cross_consistency[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_gradcheck[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_jit[cpu-float32] SKIPPED
+
+========================= 5 passed, 1 skipped in 0.16s =========================

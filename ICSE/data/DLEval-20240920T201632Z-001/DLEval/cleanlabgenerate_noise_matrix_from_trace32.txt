@@ -1,0 +1,66 @@
+stage: Pre-Post processing
+task: Classification
+data: Table
+
+prompt:
+Create a Python function called generate_noise_matrix_from_trace that Generates a ``K x K`` noise matrix ``P(label=k_s|true_label=k_y)`` with
+    ``np.sum(np.diagonal(noise_matrix))`` equal to the given `trace`.
+
+    Parameters
+    ----------
+    K : int
+      Creates a noise matrix of shape ``(K, K)``. Implies there are
+      K classes for learning with noisy labels.
+
+    trace : float
+      Sum of diagonal entries of array of random probabilities returned.
+
+    max_trace_prob : float
+      Maximum probability of any entry in the trace of the return matrix.
+
+    min_trace_prob : float
+      Minimum probability of any entry in the trace of the return matrix.
+
+    max_noise_rate : float
+      Maximum noise_rate (non-diagonal entry) in the returned np.ndarray.
+
+    min_noise_rate : float
+      Minimum noise_rate (non-diagonal entry) in the returned np.ndarray.
+
+    valid_noise_matrix : bool, default=True
+      If ``True``, returns a matrix having all necessary conditions for
+      learning with noisy labels. In particular, ``p(true_label=k)p(label=k) < p(true_label=k,label=k)``
+      is satisfied. This requires that ``trace > 1``.
+
+    py : np.ndarray
+      An array of shape ``(K,)`` representing the fraction (prior probability) of each true class label, ``P(true_label = k)``.
+      This argument is **required** when ``valid_noise_matrix=True``.
+
+    frac_zero_noise_rates : float
+      The fraction of the ``n*(n-1)`` noise rates
+      that will be set to 0. Note that if you set a high trace, it may be
+      impossible to also have a low fraction of zero noise rates without
+      forcing all non-1 diagonal values. Instead, when this happens we only
+      guarantee to produce a noise matrix with `frac_zero_noise_rates` *or
+      higher*. The opposite occurs with a small trace.
+
+    seed : int
+      Seeds the random number generator for numpy.
+
+    max_iter : int, default=10000
+      The max number of tries to produce a valid matrix before returning ``None``.
+
+    Returns
+    -------
+    noise_matrix : np.ndarray or None
+      An array of shape ``(K, K)`` representing the noise matrix ``P(label=k_s|true_label=k_y)`` with `trace`
+      equal to ``np.sum(np.diagonal(noise_matrix))``. This a conditional probability matrix and a
+      left stochastic matrix. Returns ``None`` if `max_iter` is exceeded.
+
+ ground Truth:cleanlab/benchmarking/noise_generation.py
+
+ repo:cleanlab
+
+ function:generate_noise_matrix_from_trace
+ 
+ test_cases:tests/test_noise_generation.py

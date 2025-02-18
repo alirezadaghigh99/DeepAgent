@@ -1,0 +1,18 @@
+stage: Model Construction
+task: 
+data: 
+
+prompt:
+Generate a Python class called Kron with a class method called init_from_model that initializes Kronecker factors based on a model's architecture. The method takes in a model of type nn.Module or an iterable of nn.Parameter, as well as a torch.device. It returns an instance of Kron.
+
+The method first checks if the input model is an instance of torch.nn.Module, and if so, retrieves the parameters. It then iterates through the parameters and based on their dimensions, initializes Kronecker factors. For parameters with 1 dimension (bias), it creates a square matrix of zeros. For parameters with 2 or more dimensions (fully connected or convolutional layers), it creates square matrices for the input and output dimensions.
+
+If the parameter shape is invalid, it raises a ValueError. Finally, the method returns an instance of Kron initialized with the Kronecker factors.
+
+ ground Truth:laplace/utils/matrix.py
+
+ repo:Laplace
+
+ function:init_from_model
+ 
+ test_cases:tests/test_matrix.py

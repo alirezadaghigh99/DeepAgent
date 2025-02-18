@@ -1,0 +1,18 @@
+stage: Model Construction
+task: Detection
+data: Image
+
+prompt:
+Generate a Python function called KORNIA_CHECK_LAF that checks whether a Local Affine Frame (laf) tensor has a valid shape. The function takes in a tensor called laf and a boolean raises indicating whether an exception should be raised upon failure. If the input laf does not have a shape (B,N,2,3) and raises is True, an Exception will be raised.
+
+Example:
+lafs = torch.rand(2, 10, 2, 3)
+KORNIA_CHECK_LAF(lafs) should return True.
+
+ ground Truth:kornia/core/check.py
+
+ repo:kornia
+
+ function:KORNIA_CHECK_LAF
+ 
+ test_cases:tests/core/test_check.py::TestCheckLaf

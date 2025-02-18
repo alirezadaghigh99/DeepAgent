@@ -1,0 +1,25 @@
+stage: Evaluating&Metrics
+task: Classification
+data: Table
+
+prompt:
+Generate a Python function called get_label_quality_ensemble_scores that calculates label quality scores based on predictions from an ensemble of models. The function takes in the following parameters:
+
+- labels: a numpy array containing the labels for the dataset.
+- pred_probs_list: a list of numpy arrays, where each array represents the predicted probabilities from one model in the ensemble.
+- method: a string indicating the label quality scoring method to use.
+- adjust_pred_probs: a boolean indicating whether to adjust the predicted probabilities.
+- weight_ensemble_members_by: a string indicating the weighting scheme to aggregate scores from each model.
+- custom_weights: a numpy array of custom weights if using the "custom" weighting scheme.
+- log_loss_search_T_values: a list of float values for log loss search.
+- verbose: a boolean indicating whether to print statements.
+
+The function computes label quality scores for each model's predicted probabilities and aggregates them based on the chosen weighting scheme. The output is a numpy array containing one score (between 0 and 1) per example, where lower scores indicate more likely mislabeled examples.
+
+ ground Truth:cleanlab/rank.py
+
+ repo:cleanlab
+
+ function:get_label_quality_ensemble_scores
+ 
+ test_cases:tests/test_object_detection.py

@@ -1,0 +1,16 @@
+stage: Image
+task: 
+data: Model construction
+
+prompt:
+Generate the __init__ method for the Conv2d class that initializes a 2D convolutional layer with arguments passed to the class.
+
+ ground Truth:test/quantization/fx/test_quantize_fx.py
+
+ repo:pytorch
+
+ function:__init__
+ 
+ test_cases:test/quantization/fx/test_quantize_fx.py::TestQuantizeFx
+ 
+ class:Conv2d

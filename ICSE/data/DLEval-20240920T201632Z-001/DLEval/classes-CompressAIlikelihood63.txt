@@ -1,0 +1,40 @@
+stage: 
+task: 
+data: Inference
+
+prompt:
+Generate a Python method `_likelihood` for the `GaussianConditional` class that calculates the likelihood of input values under the model's learned Gaussian distribution. 
+Class structure:
+
+```python
+class GaussianConditional(EntropyModel):
+    def __init__(
+        self,
+        scale_table: Optional[Union[List, Tuple]],
+        *args: Any,
+        scale_bound: float = 0.11,
+        tail_mass: float = 1e-9,
+        **kwargs: Any,
+    ):
+        self.tail_mass = float(tail_mass)
+        self.lower_bound_scale = LowerBound(scale_bound)
+
+    def _standardized_cumulative(self, inputs: Tensor) -> Tensor:
+        # Computes the CDF of the standard normal distribution
+        half = float(0.5)
+        const = float(-(2**-0.5))
+        return half * torch.erfc(const * inputs)
+
+    def _likelihood(
+        self, inputs: Tensor, scales: Tensor, means: Optional[Tensor] = None
+    ) -> Tensor:
+        # Implement the function as described in the prompt
+```
+
+ ground Truth:compressai/entropy_models/entropy_models.py
+
+ repo:CompressAI
+
+ function:_likelihood
+ 
+ class:GaussianConditional

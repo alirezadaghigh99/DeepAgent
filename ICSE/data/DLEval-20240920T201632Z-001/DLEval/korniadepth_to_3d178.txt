@@ -1,0 +1,14 @@
+stage: Model Construction
+task: 
+data: Image
+
+prompt:
+Generate a Python function called depth_to_3d that takes in a tensor representing depth values per pixel, a tensor containing camera intrinsics, and a boolean flag to normalize points. The function computes a 3D point per pixel based on the depth value and camera intrinsics. The input depth tensor should have a shape of (B, 1, H, W) and the camera_matrix tensor should have a shape of (B, 3, 3). The function returns a tensor with a 3D point per pixel of the same resolution as the input, with a shape of (B, 3, H, W). The function also includes error handling for input types and shapes.
+
+ ground Truth:kornia/geometry/depth.py
+
+ repo:kornia
+
+ function:depth_to_3d
+ 
+ test_cases:tests/geometry/test_depth.py::TestDepthTo3d::test_shapes_broadcast

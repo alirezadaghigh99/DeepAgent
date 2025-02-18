@@ -1,0 +1,128 @@
+output file:
+processed_emukitconvert_y_list_to_array263.json
+function:
+convert_y_list_to_array
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/emukit/emukit/tests/emukit/multi_fidelity/test_convert_list_to_array.py::test_convert_y_list_to_array FAILED', '../../../../../../local/data0/moved_data/publishablew/emukit/emukit/tests/emukit/multi_fidelity/test_convert_list_to_array.py::test_convert_xy_lists_to_arrays FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/emukit/emukit/tests/emukit/multi_fidelity/test_convert_list_to_array.py::test_convert_y_list_to_array_fails_with_1d_input', '../../../../../../local/data0/moved_data/publishablew/emukit/emukit/tests/emukit/multi_fidelity/test_convert_list_to_array.py::test_convert_y_list_to_array_fails_with_1d_input FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/emukit/emukit/tests/emukit/multi_fidelity/test_convert_list_to_array.py::test_convert_y_list_to_array', 'FAILED ../../../../../../local/data0/moved_data/publishablew/emukit/emukit/tests/emukit/multi_fidelity/test_convert_list_to_array.py::test_convert_xy_lists_to_arrays'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/emukit/emukit/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/emukit/emukit
+configfile: pyproject.toml
+collecting ... collected 7 items
+
+../../../../../../local/data0/moved_data/publishablew/emukit/emukit/tests/emukit/multi_fidelity/test_convert_list_to_array.py::test_convert_x_list_to_array PASSED
+../../../../../../local/data0/moved_data/publishablew/emukit/emukit/tests/emukit/multi_fidelity/test_convert_list_to_array.py::test_convert_y_list_to_array FAILED
+../../../../../../local/data0/moved_data/publishablew/emukit/emukit/tests/emukit/multi_fidelity/test_convert_list_to_array.py::test_convert_xy_lists_to_arrays FAILED
+../../../../../../local/data0/moved_data/publishablew/emukit/emukit/tests/emukit/multi_fidelity/test_convert_list_to_array.py::test_convert_y_list_to_array_fails_with_1d_input FAILED
+../../../../../../local/data0/moved_data/publishablew/emukit/emukit/tests/emukit/multi_fidelity/test_convert_list_to_array.py::test_convert_x_list_to_array_fails_with_1d_input PASSED
+../../../../../../local/data0/moved_data/publishablew/emukit/emukit/tests/emukit/multi_fidelity/test_convert_list_to_array.py::test_convert_xy_lists_to_arrays_fails_with_different_number_of_fidelities PASSED
+../../../../../../local/data0/moved_data/publishablew/emukit/emukit/tests/emukit/multi_fidelity/test_convert_list_to_array.py::test_convert_xy_lists_to_arrays_fails_with_different_number_of_points_at_fidelity PASSED
+
+=================================== FAILURES ===================================
+_________________________ test_convert_y_list_to_array _________________________
+
+    def test_convert_y_list_to_array():
+        y_list = [np.array([[0.0], [1.0]]), np.array([[2.0], [5.0]])]
+>       y_array = convert_y_list_to_array(y_list)
+
+/local/data0/moved_data/publishablew/emukit/emukit/tests/emukit/multi_fidelity/test_convert_list_to_array.py:27: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+y_list = [array([[0.],
+       [1.]]), array([[2.],
+       [5.]])]
+
+    def convert_y_list_to_array(y_list: List) -> np.ndarray:
+>       from .temp import convert_y_list_to_array
+E       ImportError: cannot import name 'convert_y_list_to_array' from 'emukit.multi_fidelity.temp' (/local/data0/moved_data/publishablew/emukit/emukit/emukit/multi_fidelity/temp.py)
+
+/local/data0/moved_data/publishablew/emukit/emukit/emukit/multi_fidelity/convert_lists_to_array.py:29: ImportError
+_______________________ test_convert_xy_lists_to_arrays ________________________
+
+    def test_convert_xy_lists_to_arrays():
+        x_list = [np.array([[1, 0], [2, 1]]), np.array([[3, 2], [4, 5]])]
+        y_list = [np.array([[0.0], [1.0]]), np.array([[2.0], [5.0]])]
+>       x_array, y_array = convert_xy_lists_to_arrays(x_list, y_list)
+
+/local/data0/moved_data/publishablew/emukit/emukit/tests/emukit/multi_fidelity/test_convert_list_to_array.py:35: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/emukit/emukit/emukit/multi_fidelity/convert_lists_to_array.py:59: in convert_xy_lists_to_arrays
+    return (convert_x_list_to_array(x_list), convert_y_list_to_array(y_list))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+y_list = [array([[0.],
+       [1.]]), array([[2.],
+       [5.]])]
+
+    def convert_y_list_to_array(y_list: List) -> np.ndarray:
+>       from .temp import convert_y_list_to_array
+E       ImportError: cannot import name 'convert_y_list_to_array' from 'emukit.multi_fidelity.temp' (/local/data0/moved_data/publishablew/emukit/emukit/emukit/multi_fidelity/temp.py)
+
+/local/data0/moved_data/publishablew/emukit/emukit/emukit/multi_fidelity/convert_lists_to_array.py:29: ImportError
+_______________ test_convert_y_list_to_array_fails_with_1d_input _______________
+
+    def test_convert_y_list_to_array_fails_with_1d_input():
+        y_list = [np.array([0.0, 1.0]), np.array([2.0, 5.0])]
+        with pytest.raises(ValueError):
+>           convert_y_list_to_array(y_list)
+
+/local/data0/moved_data/publishablew/emukit/emukit/tests/emukit/multi_fidelity/test_convert_list_to_array.py:46: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+y_list = [array([0., 1.]), array([2., 5.])]
+
+    def convert_y_list_to_array(y_list: List) -> np.ndarray:
+>       from .temp import convert_y_list_to_array
+E       ImportError: cannot import name 'convert_y_list_to_array' from 'emukit.multi_fidelity.temp' (/local/data0/moved_data/publishablew/emukit/emukit/emukit/multi_fidelity/temp.py)
+
+/local/data0/moved_data/publishablew/emukit/emukit/emukit/multi_fidelity/convert_lists_to_array.py:29: ImportError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/emukit/emukit/tests/emukit/multi_fidelity/test_convert_list_to_array.py::test_convert_y_list_to_array
+FAILED ../../../../../../local/data0/moved_data/publishablew/emukit/emukit/tests/emukit/multi_fidelity/test_convert_list_to_array.py::test_convert_xy_lists_to_arrays
+FAILED ../../../../../../local/data0/moved_data/publishablew/emukit/emukit/tests/emukit/multi_fidelity/test_convert_list_to_array.py::test_convert_y_list_to_array_fails_with_1d_input
+========================= 3 failed, 4 passed in 0.10s ==========================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/emukit/emukit/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/emukit/emukit
+configfile: pyproject.toml
+collecting ... collected 7 items
+
+../../../../../../local/data0/moved_data/publishablew/emukit/emukit/tests/emukit/multi_fidelity/test_convert_list_to_array.py::test_convert_x_list_to_array PASSED
+../../../../../../local/data0/moved_data/publishablew/emukit/emukit/tests/emukit/multi_fidelity/test_convert_list_to_array.py::test_convert_y_list_to_array PASSED
+../../../../../../local/data0/moved_data/publishablew/emukit/emukit/tests/emukit/multi_fidelity/test_convert_list_to_array.py::test_convert_xy_lists_to_arrays PASSED
+../../../../../../local/data0/moved_data/publishablew/emukit/emukit/tests/emukit/multi_fidelity/test_convert_list_to_array.py::test_convert_y_list_to_array_fails_with_1d_input PASSED
+../../../../../../local/data0/moved_data/publishablew/emukit/emukit/tests/emukit/multi_fidelity/test_convert_list_to_array.py::test_convert_x_list_to_array_fails_with_1d_input PASSED
+../../../../../../local/data0/moved_data/publishablew/emukit/emukit/tests/emukit/multi_fidelity/test_convert_list_to_array.py::test_convert_xy_lists_to_arrays_fails_with_different_number_of_fidelities PASSED
+../../../../../../local/data0/moved_data/publishablew/emukit/emukit/tests/emukit/multi_fidelity/test_convert_list_to_array.py::test_convert_xy_lists_to_arrays_fails_with_different_number_of_points_at_fidelity PASSED
+
+============================== 7 passed in 0.01s ===============================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/emukit/emukit/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/emukit/emukit
+configfile: pyproject.toml
+collecting ... collected 7 items
+
+../../../../../../local/data0/moved_data/publishablew/emukit/emukit/tests/emukit/multi_fidelity/test_convert_list_to_array.py::test_convert_x_list_to_array PASSED
+../../../../../../local/data0/moved_data/publishablew/emukit/emukit/tests/emukit/multi_fidelity/test_convert_list_to_array.py::test_convert_y_list_to_array PASSED
+../../../../../../local/data0/moved_data/publishablew/emukit/emukit/tests/emukit/multi_fidelity/test_convert_list_to_array.py::test_convert_xy_lists_to_arrays PASSED
+../../../../../../local/data0/moved_data/publishablew/emukit/emukit/tests/emukit/multi_fidelity/test_convert_list_to_array.py::test_convert_y_list_to_array_fails_with_1d_input PASSED
+../../../../../../local/data0/moved_data/publishablew/emukit/emukit/tests/emukit/multi_fidelity/test_convert_list_to_array.py::test_convert_x_list_to_array_fails_with_1d_input PASSED
+../../../../../../local/data0/moved_data/publishablew/emukit/emukit/tests/emukit/multi_fidelity/test_convert_list_to_array.py::test_convert_xy_lists_to_arrays_fails_with_different_number_of_fidelities PASSED
+../../../../../../local/data0/moved_data/publishablew/emukit/emukit/tests/emukit/multi_fidelity/test_convert_list_to_array.py::test_convert_xy_lists_to_arrays_fails_with_different_number_of_points_at_fidelity PASSED
+
+============================== 7 passed in 0.01s ===============================

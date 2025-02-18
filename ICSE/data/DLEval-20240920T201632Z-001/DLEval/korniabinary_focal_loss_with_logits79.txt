@@ -1,0 +1,49 @@
+stage: Model Construction
+task: Classification
+data: Image
+
+prompt:
+Generate a Python function called binary_focal_loss_with_logits for Criterion that computes Binary Focal loss.
+
+Focal loss is computed as follows:
+
+    .. math::
+
+        \text{FL}(p_t) = -\alpha_t (1 - p_t)^{\gamma} \, \text{log}(p_t)
+
+    where:
+       - :math:`p_t` is the model's estimated probability for each class.
+
+    Args:
+        pred: logits tensor with shape :math:`(N, C, *)` where C = number of classes.
+        target: labels tensor with the same shape as pred :math:`(N, C, *)`
+          where each value is between 0 and 1.
+        alpha: Weighting factor :math:`\alpha \in [0, 1]`.
+        gamma: Focusing parameter :math:`\gamma >= 0`.
+        reduction: Specifies the reduction to apply to the
+          output: ``'none'`` | ``'mean'`` | ``'sum'``. ``'none'``: no reduction
+          will be applied, ``'mean'``: the sum of the output will be divided by
+          the number of elements in the output, ``'sum'``: the output will be
+          summed.
+        pos_weight: a weight of positive examples with shape :math:`(num\_of\_classes,)`.
+          It is possible to trade off recall and precision by adding weights to positive examples.
+        weight: weights for classes with shape :math:`(num\_of\_classes,)`.
+
+    Returns:
+        the computed loss.
+
+    Examples:
+        >>> C = 3  # num_classes
+        >>> pred = torch.randn(1, C, 5, requires_grad=True)
+        >>> target = torch.randint(2, (1, C, 5))
+        >>> kwargs = {"alpha": 0.25, "gamma": 2.0, "reduction": 'mean'}
+        >>> output = binary_focal_loss_with_logits(pred, target, **kwargs)
+        >>> output.backward()
+
+ ground Truth:kornia/losses/focal.py
+
+ repo:kornia
+
+ function:binary_focal_loss_with_logits
+ 
+ test_cases:tests/losses/test_focal_loss.py::TestBinaryFocalLossWithLogits

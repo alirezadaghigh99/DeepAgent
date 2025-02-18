@@ -1,0 +1,336 @@
+output file:
+processed_pfrltrain_agent341.json
+function:
+train_agent
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/experiments_tests/test_train_agent.py::test_eval_during_episode[True]', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/experiments_tests/test_train_agent.py::TestTrainAgent::test FAILED', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/experiments_tests/test_train_agent.py::test_eval_during_episode[False] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/experiments_tests/test_train_agent.py::TestTrainAgent::test', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/experiments_tests/test_train_agent.py::test_eval_during_episode[False]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/experiments_tests/test_train_agent.py::TestTrainAgent::test_needs_reset', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/experiments_tests/test_train_agent.py::test_eval_during_episode[True] FAILED', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/experiments_tests/test_train_agent.py::TestTrainAgent::test_needs_reset FAILED'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/pfrl/pfrl/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/pfrl/pfrl
+configfile: pytest.ini
+collecting ... collected 5 items
+
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/experiments_tests/test_train_agent.py::TestTrainAgent::test FAILED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/experiments_tests/test_train_agent.py::TestTrainAgent::test_needs_reset FAILED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/experiments_tests/test_train_agent.py::TestTrainAgent::test_unsupported_evaluation_hook PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/experiments_tests/test_train_agent.py::test_eval_during_episode[False] FAILED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/experiments_tests/test_train_agent.py::test_eval_during_episode[True] FAILED
+
+=================================== FAILURES ===================================
+_____________________________ TestTrainAgent.test ______________________________
+
+self = <test_train_agent.TestTrainAgent testMethod=test>
+
+    def test(self):
+        outdir = tempfile.mkdtemp()
+    
+        agent = mock.Mock()
+        env = mock.Mock()
+        # Reaches the terminal state after five actions
+        env.reset.side_effect = [("state", 0)]
+        env.step.side_effect = [
+            (("state", 1), 0, False, {}),
+            (("state", 2), 0, False, {}),
+            (("state", 3), -0.5, False, {}),
+            (("state", 4), 0, False, {}),
+            (("state", 5), 1, True, {}),
+        ]
+        hook = mock.Mock()
+    
+>       eval_stats_history = pfrl.experiments.train_agent(
+            agent=agent, env=env, steps=5, outdir=outdir, step_hooks=[hook]
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/experiments_tests/test_train_agent.py:27: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/experiments/train_agent.py:18: in train_agent
+    return train_agent(agent, env, steps, outdir, checkpoint_freq, max_episode_len, step_offset, evaluator, successful_score, step_hooks, eval_during_episode, logger)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+agent = <Mock id='138835003641168'>, env = <Mock id='138834015012816'>
+steps = 5, outdir = '/tmp/tmp3tmu4dsc', checkpoint_freq = None
+max_episode_len = None, step_offset = 0, evaluator = None
+successful_score = None, step_hooks = [<Mock id='138835920440720'>]
+eval_during_episode = False, logger = None
+
+    def train_agent(agent, env, steps, outdir, checkpoint_freq=1000, max_episode_len=None, step_offset=0, evaluator=None, successful_score=None, step_hooks=None, eval_during_episode=False, logger=None):
+        episode_rewards = []
+        episode_idx = 0
+        episode_reward = 0
+        observation = env.reset()
+        t = step_offset
+        os.makedirs(outdir, exist_ok=True)
+        while t < steps:
+            action = agent.act(observation)
+            next_observation, reward, done, info = env.step(action)
+            episode_reward += reward
+            agent.observe(observation, action, reward, next_observation, done)
+            if step_hooks:
+                for hook in step_hooks:
+                    hook(env, agent, t)
+            observation = next_observation
+            t += 1
+            if done or (max_episode_len and t % max_episode_len == 0):
+                episode_rewards.append(episode_reward)
+                episode_idx += 1
+                if logger:
+                    logger.info(f'Episode {episode_idx} finished with reward {episode_reward}')
+                observation = env.reset()
+                episode_reward = 0
+>           if t % checkpoint_freq == 0:
+E           TypeError: unsupported operand type(s) for %: 'int' and 'NoneType'
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/experiments/temp.py:32: TypeError
+_______________________ TestTrainAgent.test_needs_reset ________________________
+
+self = <test_train_agent.TestTrainAgent testMethod=test_needs_reset>
+
+    def test_needs_reset(self):
+        outdir = tempfile.mkdtemp()
+    
+        agent = mock.Mock()
+        env = mock.Mock()
+        # First episode: 0 -> 1 -> 2 -> 3 (reset)
+        # Second episode: 4 -> 5 -> 6 -> 7 (done)
+        env.reset.side_effect = [("state", 0), ("state", 4)]
+        env.step.side_effect = [
+            (("state", 1), 0, False, {}),
+            (("state", 2), 0, False, {}),
+            (("state", 3), 0, False, {"needs_reset": True}),
+            (("state", 5), -0.5, False, {}),
+            (("state", 6), 0, False, {}),
+            (("state", 7), 1, True, {}),
+        ]
+        hook = mock.Mock()
+    
+>       eval_stats_history = pfrl.experiments.train_agent(
+            agent=agent, env=env, steps=5, outdir=outdir, step_hooks=[hook]
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/experiments_tests/test_train_agent.py:69: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/experiments/train_agent.py:18: in train_agent
+    return train_agent(agent, env, steps, outdir, checkpoint_freq, max_episode_len, step_offset, evaluator, successful_score, step_hooks, eval_during_episode, logger)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+agent = <Mock id='138835112653904'>, env = <Mock id='138834139379088'>
+steps = 5, outdir = '/tmp/tmpa364sw1h', checkpoint_freq = None
+max_episode_len = None, step_offset = 0, evaluator = None
+successful_score = None, step_hooks = [<Mock id='138834038832656'>]
+eval_during_episode = False, logger = None
+
+    def train_agent(agent, env, steps, outdir, checkpoint_freq=1000, max_episode_len=None, step_offset=0, evaluator=None, successful_score=None, step_hooks=None, eval_during_episode=False, logger=None):
+        episode_rewards = []
+        episode_idx = 0
+        episode_reward = 0
+        observation = env.reset()
+        t = step_offset
+        os.makedirs(outdir, exist_ok=True)
+        while t < steps:
+            action = agent.act(observation)
+            next_observation, reward, done, info = env.step(action)
+            episode_reward += reward
+            agent.observe(observation, action, reward, next_observation, done)
+            if step_hooks:
+                for hook in step_hooks:
+                    hook(env, agent, t)
+            observation = next_observation
+            t += 1
+            if done or (max_episode_len and t % max_episode_len == 0):
+                episode_rewards.append(episode_reward)
+                episode_idx += 1
+                if logger:
+                    logger.info(f'Episode {episode_idx} finished with reward {episode_reward}')
+                observation = env.reset()
+                episode_reward = 0
+>           if t % checkpoint_freq == 0:
+E           TypeError: unsupported operand type(s) for %: 'int' and 'NoneType'
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/experiments/temp.py:32: TypeError
+_______________________ test_eval_during_episode[False] ________________________
+
+eval_during_episode = False
+
+    @pytest.mark.parametrize("eval_during_episode", [False, True])
+    def test_eval_during_episode(eval_during_episode):
+        outdir = tempfile.mkdtemp()
+    
+        agent = mock.MagicMock()
+        env = mock.Mock()
+        # Two episodes
+        env.reset.side_effect = [("state", 0)] * 2
+        env.step.side_effect = [
+            (("state", 1), 0, False, {}),
+            (("state", 2), 0, False, {}),
+            (("state", 3), -0.5, True, {}),
+            (("state", 4), 0, False, {}),
+            (("state", 5), 1, True, {}),
+        ]
+    
+        evaluator = mock.Mock()
+>       pfrl.experiments.train_agent(
+            agent=agent,
+            env=env,
+            steps=5,
+            outdir=outdir,
+            evaluator=evaluator,
+            eval_during_episode=eval_during_episode,
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/experiments_tests/test_train_agent.py:152: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/experiments/train_agent.py:18: in train_agent
+    return train_agent(agent, env, steps, outdir, checkpoint_freq, max_episode_len, step_offset, evaluator, successful_score, step_hooks, eval_during_episode, logger)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+agent = <MagicMock id='138837230912080'>, env = <Mock id='138835933579472'>
+steps = 5, outdir = '/tmp/tmp4o6jd058', checkpoint_freq = None
+max_episode_len = None, step_offset = 0, evaluator = <Mock id='138834038776336'>
+successful_score = None, step_hooks = (), eval_during_episode = False
+logger = None
+
+    def train_agent(agent, env, steps, outdir, checkpoint_freq=1000, max_episode_len=None, step_offset=0, evaluator=None, successful_score=None, step_hooks=None, eval_during_episode=False, logger=None):
+        episode_rewards = []
+        episode_idx = 0
+        episode_reward = 0
+        observation = env.reset()
+        t = step_offset
+        os.makedirs(outdir, exist_ok=True)
+        while t < steps:
+            action = agent.act(observation)
+            next_observation, reward, done, info = env.step(action)
+            episode_reward += reward
+            agent.observe(observation, action, reward, next_observation, done)
+            if step_hooks:
+                for hook in step_hooks:
+                    hook(env, agent, t)
+            observation = next_observation
+            t += 1
+            if done or (max_episode_len and t % max_episode_len == 0):
+                episode_rewards.append(episode_reward)
+                episode_idx += 1
+                if logger:
+                    logger.info(f'Episode {episode_idx} finished with reward {episode_reward}')
+                observation = env.reset()
+                episode_reward = 0
+>           if t % checkpoint_freq == 0:
+E           TypeError: unsupported operand type(s) for %: 'int' and 'NoneType'
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/experiments/temp.py:32: TypeError
+________________________ test_eval_during_episode[True] ________________________
+
+eval_during_episode = True
+
+    @pytest.mark.parametrize("eval_during_episode", [False, True])
+    def test_eval_during_episode(eval_during_episode):
+        outdir = tempfile.mkdtemp()
+    
+        agent = mock.MagicMock()
+        env = mock.Mock()
+        # Two episodes
+        env.reset.side_effect = [("state", 0)] * 2
+        env.step.side_effect = [
+            (("state", 1), 0, False, {}),
+            (("state", 2), 0, False, {}),
+            (("state", 3), -0.5, True, {}),
+            (("state", 4), 0, False, {}),
+            (("state", 5), 1, True, {}),
+        ]
+    
+        evaluator = mock.Mock()
+>       pfrl.experiments.train_agent(
+            agent=agent,
+            env=env,
+            steps=5,
+            outdir=outdir,
+            evaluator=evaluator,
+            eval_during_episode=eval_during_episode,
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/experiments_tests/test_train_agent.py:152: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/experiments/train_agent.py:18: in train_agent
+    return train_agent(agent, env, steps, outdir, checkpoint_freq, max_episode_len, step_offset, evaluator, successful_score, step_hooks, eval_during_episode, logger)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+agent = <MagicMock id='138833990674128'>, env = <Mock id='138833990669840'>
+steps = 5, outdir = '/tmp/tmpb_htlek3', checkpoint_freq = None
+max_episode_len = None, step_offset = 0, evaluator = <Mock id='138834016086800'>
+successful_score = None, step_hooks = (), eval_during_episode = True
+logger = None
+
+    def train_agent(agent, env, steps, outdir, checkpoint_freq=1000, max_episode_len=None, step_offset=0, evaluator=None, successful_score=None, step_hooks=None, eval_during_episode=False, logger=None):
+        episode_rewards = []
+        episode_idx = 0
+        episode_reward = 0
+        observation = env.reset()
+        t = step_offset
+        os.makedirs(outdir, exist_ok=True)
+        while t < steps:
+            action = agent.act(observation)
+            next_observation, reward, done, info = env.step(action)
+            episode_reward += reward
+            agent.observe(observation, action, reward, next_observation, done)
+            if step_hooks:
+                for hook in step_hooks:
+                    hook(env, agent, t)
+            observation = next_observation
+            t += 1
+            if done or (max_episode_len and t % max_episode_len == 0):
+                episode_rewards.append(episode_reward)
+                episode_idx += 1
+                if logger:
+                    logger.info(f'Episode {episode_idx} finished with reward {episode_reward}')
+                observation = env.reset()
+                episode_reward = 0
+>           if t % checkpoint_freq == 0:
+E           TypeError: unsupported operand type(s) for %: 'int' and 'NoneType'
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/experiments/temp.py:32: TypeError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/experiments_tests/test_train_agent.py::TestTrainAgent::test
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/experiments_tests/test_train_agent.py::TestTrainAgent::test_needs_reset
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/experiments_tests/test_train_agent.py::test_eval_during_episode[False]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/experiments_tests/test_train_agent.py::test_eval_during_episode[True]
+========================= 4 failed, 1 passed in 0.98s ==========================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/pfrl/pfrl/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/pfrl/pfrl
+configfile: pytest.ini
+collecting ... collected 5 items
+
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/experiments_tests/test_train_agent.py::TestTrainAgent::test PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/experiments_tests/test_train_agent.py::TestTrainAgent::test_needs_reset PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/experiments_tests/test_train_agent.py::TestTrainAgent::test_unsupported_evaluation_hook PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/experiments_tests/test_train_agent.py::test_eval_during_episode[False] PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/experiments_tests/test_train_agent.py::test_eval_during_episode[True] PASSED
+
+============================== 5 passed in 0.94s ===============================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/pfrl/pfrl/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/pfrl/pfrl
+configfile: pytest.ini
+collecting ... collected 5 items
+
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/experiments_tests/test_train_agent.py::TestTrainAgent::test PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/experiments_tests/test_train_agent.py::TestTrainAgent::test_needs_reset PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/experiments_tests/test_train_agent.py::TestTrainAgent::test_unsupported_evaluation_hook PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/experiments_tests/test_train_agent.py::test_eval_during_episode[False] PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/experiments_tests/test_train_agent.py::test_eval_during_episode[True] PASSED
+
+============================== 5 passed in 0.99s ===============================

@@ -1,0 +1,308 @@
+output file:
+processed_umaptswspectral_layout348.json
+function:
+tswspectral_layout
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/umap/umap/umap/tests/test_spectral.py::test_ensure_fallback_to_random_on_spectral_failure FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/umap/umap/umap/tests/test_spectral.py::test_ensure_fallback_to_random_on_spectral_failure'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/umap/umap/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/umap/umap
+collecting ... collected 2 items
+
+../../../../../../local/data0/moved_data/publishablew/umap/umap/umap/tests/test_spectral.py::test_tsw_spectral_init FAILED
+../../../../../../local/data0/moved_data/publishablew/umap/umap/umap/tests/test_spectral.py::test_ensure_fallback_to_random_on_spectral_failure FAILED
+
+=================================== FAILURES ===================================
+____________________________ test_tsw_spectral_init ____________________________
+
+iris = {'data': array([[5.1, 3.5, 1.4, 0.2],
+       [4.9, 3. , 1.4, 0.2],
+       [4.7, 3.2, 1.3, 0.2],
+       [4.6, 3.1, 1.5,... width (cm)', 'petal length (cm)', 'petal width (cm)'], 'filename': 'iris.csv', 'data_module': 'sklearn.datasets.data'}
+
+    @pytest.mark.skipif(
+        scipy_full_version < (1, 10),
+        reason="SciPy installing with Python 3.7 does not converge under same circumstances",
+    )
+    def test_tsw_spectral_init(iris):
+        # create an arbitrary (dense) random affinity matrix
+        seed = 42
+        rng = np.random.default_rng(seed=seed)
+        # matrix must be of sufficient size of lobpcg will refuse to work on it
+        n = 20
+        graph = rng.standard_normal(n * n).reshape((n, n)) ** 2
+        graph = graph.T * graph
+    
+        spec = spectral_layout(None, graph, 2, random_state=seed**2)
+>       tsw_spec = tswspectral_layout(None, graph, 2, random_state=seed**2, tol=1e-8)
+
+/local/data0/moved_data/publishablew/umap/umap/umap/tests/test_spectral.py:29: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/umap/umap/umap/spectral.py:200: in tswspectral_layout
+    return tswspectral_layout(data, graph, dim, random_state, metric, metric_kwds, method, tol, maxiter)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+data = None
+graph = array([[8.62158651e-03, 3.69615697e-02, 3.11114046e-01, 2.50540757e+00,
+        7.94209923e-01, 2.42492749e-01, 1.7120...45692759e-02, 5.30093613e-02, 2.65332760e-02,
+        2.14128063e-01, 1.14347124e-03, 5.88597645e-02, 2.46576211e-01]])
+dim = 2, random_state = RandomState(MT19937) at 0x76B01D7DB740
+metric = 'euclidean', metric_kwds = {}, method = None, tol = 1e-08, maxiter = 0
+
+    def tswspectral_layout(data, graph=None, dim=2, random_state=None, metric='euclidean', metric_kwds=None, method='truncated_svd', tol=1e-05, maxiter=300):
+        """
+        Compute the spectral embedding of a graph using a truncated SVD-based approach.
+    
+        Parameters:
+        - data: array-like, shape (n_samples, n_features)
+            Input data from which the graph is constructed.
+        - graph: sparse matrix, shape (n_samples, n_samples), optional
+            Precomputed adjacency matrix of the graph. If None, it will be computed from data.
+        - dim: int, default=2
+            Number of dimensions for the embedding.
+        - random_state: int, RandomState instance or None, optional
+            Random number generator seed control.
+        - metric: str, default='euclidean'
+            Metric to use for distance computation.
+        - metric_kwds: dict, optional
+            Additional keyword arguments for the metric function.
+        - method: str, default='truncated_svd'
+            Method to use for computing the spectral embedding.
+        - tol: float, default=1e-5
+            Tolerance for convergence.
+        - maxiter: int, default=300
+            Maximum number of iterations for the solver.
+    
+        Returns:
+        - embedding: array, shape (n_samples, dim)
+            Spectral embedding of the graph.
+        """
+        if graph is None:
+            metric_kwds = metric_kwds or {}
+            distances = pairwise_distances(data, metric=metric, **metric_kwds)
+            graph = sp.csr_matrix(distances)
+        n_samples = graph.shape[0]
+        random_state = check_random_state(random_state)
+        degree = np.array(graph.sum(axis=1)).flatten()
+        d_inv_sqrt = np.power(degree, -0.5, where=degree != 0)
+        d_inv_sqrt_mat = sp.diags(d_inv_sqrt)
+        laplacian = sp.eye(n_samples) - d_inv_sqrt_mat @ graph @ d_inv_sqrt_mat
+        if method == 'truncated_svd':
+            u, _, _ = svds(laplacian, k=dim + 1, tol=tol, maxiter=maxiter, which='SM', v0=random_state.rand(n_samples))
+            embedding = u[:, 1:dim + 1]
+        else:
+>           raise ValueError(f'Unknown method: {method}')
+E           ValueError: Unknown method: None
+
+/local/data0/moved_data/publishablew/umap/umap/umap/temp.py:59: ValueError
+______________ test_ensure_fallback_to_random_on_spectral_failure ______________
+
+    @pytest.mark.skipif(
+        scipy_full_version < (1, 10),
+        reason="SciPy installing with Py 3.7 does not warn reliably on convergence failure",
+    )
+    def test_ensure_fallback_to_random_on_spectral_failure():
+        dim = 1000
+        k = 10
+        assert k >= 10
+        assert dim // 10 > k
+        y = np.eye(dim, k=1)
+        u = np.random.random((dim, dim // 10))
+        graph = y + y.T + u @ u.T
+        with pytest.warns(UserWarning, match="Spectral initialisation failed!"):
+>           tswspectral_layout(u, graph, k, random_state=42, maxiter=2, method="lobpcg")
+
+/local/data0/moved_data/publishablew/umap/umap/umap/tests/test_spectral.py:51: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/umap/umap/umap/spectral.py:200: in tswspectral_layout
+    return tswspectral_layout(data, graph, dim, random_state, metric, metric_kwds, method, tol, maxiter)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+data = array([[0.02697041, 0.6867027 , 0.2337092 , ..., 0.91332953, 0.18105506,
+        0.51521039],
+       [0.5287143 , 0.49...41,
+        0.08168689],
+       [0.65345476, 0.15310301, 0.93510928, ..., 0.46673854, 0.82744635,
+        0.79337911]])
+graph = array([[30.52488488, 25.15586506, 24.08604689, ..., 21.40669912,
+        20.40108128, 22.07758782],
+       [25.1558650...51 , 21.94948188],
+       [22.07758782, 24.13867744, 25.13386463, ..., 22.2638664 ,
+        21.94948188, 30.22411991]])
+dim = 10, random_state = RandomState(MT19937) at 0x76B00EB6B540
+metric = 'euclidean', metric_kwds = {}, method = 'lobpcg', tol = 0.0
+maxiter = 2
+
+    def tswspectral_layout(data, graph=None, dim=2, random_state=None, metric='euclidean', metric_kwds=None, method='truncated_svd', tol=1e-05, maxiter=300):
+        """
+        Compute the spectral embedding of a graph using a truncated SVD-based approach.
+    
+        Parameters:
+        - data: array-like, shape (n_samples, n_features)
+            Input data from which the graph is constructed.
+        - graph: sparse matrix, shape (n_samples, n_samples), optional
+            Precomputed adjacency matrix of the graph. If None, it will be computed from data.
+        - dim: int, default=2
+            Number of dimensions for the embedding.
+        - random_state: int, RandomState instance or None, optional
+            Random number generator seed control.
+        - metric: str, default='euclidean'
+            Metric to use for distance computation.
+        - metric_kwds: dict, optional
+            Additional keyword arguments for the metric function.
+        - method: str, default='truncated_svd'
+            Method to use for computing the spectral embedding.
+        - tol: float, default=1e-5
+            Tolerance for convergence.
+        - maxiter: int, default=300
+            Maximum number of iterations for the solver.
+    
+        Returns:
+        - embedding: array, shape (n_samples, dim)
+            Spectral embedding of the graph.
+        """
+        if graph is None:
+            metric_kwds = metric_kwds or {}
+            distances = pairwise_distances(data, metric=metric, **metric_kwds)
+            graph = sp.csr_matrix(distances)
+        n_samples = graph.shape[0]
+        random_state = check_random_state(random_state)
+        degree = np.array(graph.sum(axis=1)).flatten()
+        d_inv_sqrt = np.power(degree, -0.5, where=degree != 0)
+        d_inv_sqrt_mat = sp.diags(d_inv_sqrt)
+        laplacian = sp.eye(n_samples) - d_inv_sqrt_mat @ graph @ d_inv_sqrt_mat
+        if method == 'truncated_svd':
+            u, _, _ = svds(laplacian, k=dim + 1, tol=tol, maxiter=maxiter, which='SM', v0=random_state.rand(n_samples))
+            embedding = u[:, 1:dim + 1]
+        else:
+>           raise ValueError(f'Unknown method: {method}')
+E           ValueError: Unknown method: lobpcg
+
+/local/data0/moved_data/publishablew/umap/umap/umap/temp.py:59: ValueError
+
+During handling of the above exception, another exception occurred:
+
+    @pytest.mark.skipif(
+        scipy_full_version < (1, 10),
+        reason="SciPy installing with Py 3.7 does not warn reliably on convergence failure",
+    )
+    def test_ensure_fallback_to_random_on_spectral_failure():
+        dim = 1000
+        k = 10
+        assert k >= 10
+        assert dim // 10 > k
+        y = np.eye(dim, k=1)
+        u = np.random.random((dim, dim // 10))
+        graph = y + y.T + u @ u.T
+>       with pytest.warns(UserWarning, match="Spectral initialisation failed!"):
+E       Failed: DID NOT WARN. No warnings of type (<class 'UserWarning'>,) were emitted.
+E        Emitted warnings: [].
+
+/local/data0/moved_data/publishablew/umap/umap/umap/tests/test_spectral.py:50: Failed
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/umap/umap/umap/tests/test_spectral.py::test_tsw_spectral_init
+FAILED ../../../../../../local/data0/moved_data/publishablew/umap/umap/umap/tests/test_spectral.py::test_ensure_fallback_to_random_on_spectral_failure
+============================== 2 failed in 0.14s ===============================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/umap/umap/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/umap/umap
+collecting ... collected 2 items
+
+../../../../../../local/data0/moved_data/publishablew/umap/umap/umap/tests/test_spectral.py::test_tsw_spectral_init FAILED
+../../../../../../local/data0/moved_data/publishablew/umap/umap/umap/tests/test_spectral.py::test_ensure_fallback_to_random_on_spectral_failure PASSED
+
+=================================== FAILURES ===================================
+____________________________ test_tsw_spectral_init ____________________________
+
+iris = {'data': array([[5.1, 3.5, 1.4, 0.2],
+       [4.9, 3. , 1.4, 0.2],
+       [4.7, 3.2, 1.3, 0.2],
+       [4.6, 3.1, 1.5,... width (cm)', 'petal length (cm)', 'petal width (cm)'], 'filename': 'iris.csv', 'data_module': 'sklearn.datasets.data'}
+
+    @pytest.mark.skipif(
+        scipy_full_version < (1, 10),
+        reason="SciPy installing with Python 3.7 does not converge under same circumstances",
+    )
+    def test_tsw_spectral_init(iris):
+        # create an arbitrary (dense) random affinity matrix
+        seed = 42
+        rng = np.random.default_rng(seed=seed)
+        # matrix must be of sufficient size of lobpcg will refuse to work on it
+        n = 20
+        graph = rng.standard_normal(n * n).reshape((n, n)) ** 2
+        graph = graph.T * graph
+    
+        spec = spectral_layout(None, graph, 2, random_state=seed**2)
+        tsw_spec = tswspectral_layout(None, graph, 2, random_state=seed**2, tol=1e-8)
+    
+        # Make sure the two methods produce similar embeddings.
+        rmsd = np.mean(np.sum((spec - tsw_spec) ** 2, axis=1))
+>       assert (
+            rmsd < 1e-6
+        ), "tsvd-warmed spectral init insufficiently close to standard spectral init"
+E       AssertionError: tsvd-warmed spectral init insufficiently close to standard spectral init
+E       assert np.float64(0.20000000000355764) < 1e-06
+
+/local/data0/moved_data/publishablew/umap/umap/umap/tests/test_spectral.py:33: AssertionError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/umap/umap/umap/tests/test_spectral.py::test_tsw_spectral_init
+========================= 1 failed, 1 passed in 0.52s ==========================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/umap/umap/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/umap/umap
+collecting ... collected 2 items
+
+../../../../../../local/data0/moved_data/publishablew/umap/umap/umap/tests/test_spectral.py::test_tsw_spectral_init FAILED
+../../../../../../local/data0/moved_data/publishablew/umap/umap/umap/tests/test_spectral.py::test_ensure_fallback_to_random_on_spectral_failure PASSED
+
+=================================== FAILURES ===================================
+____________________________ test_tsw_spectral_init ____________________________
+
+iris = {'data': array([[5.1, 3.5, 1.4, 0.2],
+       [4.9, 3. , 1.4, 0.2],
+       [4.7, 3.2, 1.3, 0.2],
+       [4.6, 3.1, 1.5,... width (cm)', 'petal length (cm)', 'petal width (cm)'], 'filename': 'iris.csv', 'data_module': 'sklearn.datasets.data'}
+
+    @pytest.mark.skipif(
+        scipy_full_version < (1, 10),
+        reason="SciPy installing with Python 3.7 does not converge under same circumstances",
+    )
+    def test_tsw_spectral_init(iris):
+        # create an arbitrary (dense) random affinity matrix
+        seed = 42
+        rng = np.random.default_rng(seed=seed)
+        # matrix must be of sufficient size of lobpcg will refuse to work on it
+        n = 20
+        graph = rng.standard_normal(n * n).reshape((n, n)) ** 2
+        graph = graph.T * graph
+    
+        spec = spectral_layout(None, graph, 2, random_state=seed**2)
+        tsw_spec = tswspectral_layout(None, graph, 2, random_state=seed**2, tol=1e-8)
+    
+        # Make sure the two methods produce similar embeddings.
+        rmsd = np.mean(np.sum((spec - tsw_spec) ** 2, axis=1))
+>       assert (
+            rmsd < 1e-6
+        ), "tsvd-warmed spectral init insufficiently close to standard spectral init"
+E       AssertionError: tsvd-warmed spectral init insufficiently close to standard spectral init
+E       assert np.float64(0.20000000000355764) < 1e-06
+
+/local/data0/moved_data/publishablew/umap/umap/umap/tests/test_spectral.py:33: AssertionError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/umap/umap/umap/tests/test_spectral.py::test_tsw_spectral_init
+========================= 1 failed, 1 passed in 0.47s ==========================

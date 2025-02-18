@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Create a Python method `through` within the `ParametrizedLine` class that constructs a parametrized line between two points, `p0` and `p1`. Both `p0` and `p1` are tensors of shape `(B, D)`, where `B` is the batch size and `D` is the dimensionality of the points. The method should return an instance of `ParametrizedLine` by calculating the direction vector from `p0` to `p1` and normalizing it. This method is useful in geometry-related tasks, such as computer graphics or physics simulations, where representing and working with lines in a parameterized form is necessary.
+
+ ground Truth:kornia/geometry/line.py
+
+ repo:kornia
+
+ function:through
+ 
+ test_cases:tests/geometry/test_line.py 

@@ -1,0 +1,11 @@
+{
+    "result": "Error",
+    "prompt": "write a python function to_pil_image Convert a tensor or a numpy array to a PIL Image, ensuring compatibility with expected modes and handling potential errors.\n\n**Inputs:**\n- `pic` (Tensor or numpy.ndarray): The image data to be converted.\n- `mode` (optional, str): The desired color mode for the output PIL Image. Supported modes are based on the number of channels in the image and include:\n\n  - For 1-channel images: `\"L\"` for grayscale, `\"I\"` for 32-bit signed integer pixels, `\"I;16\"` for 16-bit unsigned integer pixels, and `\"F\"` for floating-point pixels.\n  - For 2-channel images: `\"LA\"` for grayscale with alpha channel.\n  - For 3-channel images: `\"RGB\"` for standard RGB, `\"YCbCr\"` for color video format, `\"HSV\"` for hue, saturation, value.\n  - For 4-channel images: `\"RGBA\"` for RGB with alpha channel, `\"CMYK\"` for prepress, `\"RGBX\"` for RGB with padding.\n\n**Outputs:**\n- Returns a PIL Image converted from the input data.\n\n**Error Handling:**\n- Raises `TypeError` if the input is not a Tensor or numpy array.\n- Raises `ValueError` if the input image is not 2D or 3D.\n- Raises `ValueError` if the image has more than 4 channels.\n- Raises `ValueError` if the specified mode is incompatible with the input data.\n- Raises `TypeError` if the mode is not supported for the given input type.",
+    "function_name": "to_pil_image",
+    "ground_truth": "torchvision/transforms/functional.py",
+    "test": "test/test_transforms.py::TestToTensor",
+    "class": "",
+    "stage": "Model Construction",
+    "task": "",
+    "data": "Image"
+}

@@ -1,0 +1,11 @@
+{
+    "result": "To generate a Python function that converts three points to a local affine frame, we need to define the transformation from the given points to the desired local affine frame. Here's a possible implementation:\n\n```python\nimport torch\nfrom torch import Tensor\n\ndef laf_from_three_points(threepts: Tensor) -> Tensor:\n    \"\"\"Convert three points to local affine frame.\n\n    Order is (0,0), (0, 1), (1, 0).\n\n    Args:\n        threepts: :math:`(B, N, 2, 3)`.\n\n    Returns:\n        laf :math:`(B, N, 2, 3)`.\n    \"\"\"\n    # Ensure the input tensor has the correct shape\n    if threepts.shape[-2:] != (2, 3):\n        raise ValueError(\"Input tensor must have shape (B, N, 2, 3)\")\n\n    # Extract the three points\n    p0 = threepts[..., 0]  # (B, N, 2)\n    p1 = threepts[..., 1]  # (B, N, 2)\n    p2 = threepts[..., 2]  # (B, N, 2)\n\n    # Calculate the vectors for the local affine frame\n    v1 = p1 - p0  # Vector from p0 to p1\n    v2 = p2 - p0  # Vector from p0 to p2\n\n    # Construct the local affine frame\n    laf = torch.stack([v1, v2, p0], dim=-1)  # (B, N, 2, 3)\n\n    return laf\n```\n\n### Explanation:\n- **Input Shape**: The input tensor `threepts` is expected to have a shape of `(B, N, 2, 3)`, where `B` is the batch size, `N` is the number of sets of points, and each set contains three 2D points.\n- **Output Shape**: The output tensor `laf` will have the same shape `(B, N, 2, 3)`, representing the local affine frame.\n- **Process**:\n  - Extract the three points `p0`, `p1`, and `p2`.\n  - Compute vectors `v1` and `v2` from `p0` to `p1` and `p0` to `p2`, respectively.\n  - Stack these vectors along with `p0` to form the local affine frame.",
+    "prompt": "Generate the python function that Convert three points to local affine frame :\ndef laf_from_three_points(threepts: Tensor) -> Tensor:\n    \"\"\"Convert three points to local affine frame.\n\n    Order is (0,0), (0, 1), (1, 0).\n\n    Args:\n        threepts: :math:`(B, N, 2, 3)`.\n\n    Returns:\n        laf :math:`(B, N, 2, 3)`.\n    \"\"\"",
+    "function_name": "laf_from_three_points",
+    "ground_truth": "kornia/feature/laf.py",
+    "test": "tests/feature/test_laf.py::TestTransformLAFs::test_transform_points",
+    "class": "",
+    "stage": "Pre-Post processing",
+    "task": "Segmentation",
+    "data": "Image"
+}

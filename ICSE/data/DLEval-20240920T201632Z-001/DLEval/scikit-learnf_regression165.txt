@@ -1,0 +1,18 @@
+stage: Evaluating&Metrics
+task: Regression
+data: Table
+
+prompt:
+Generate a Python function called f_regression that performs univariate linear regression tests and returns F-statistic and p-values. The function takes in the data matrix X (array-like, sparse matrix of shape (n_samples, n_features)), the target vector y (array-like of shape (n_samples,)), and optional parameters center (bool, default=True) and force_finite (bool, default=True). 
+
+The function calculates the cross-correlation between each regressor and the target using r_regression, converts it to an F score, and then to a p-value. It ranks features based on their correlation with the target. The function returns f_statistic (ndarray of shape (n_features,)) and p_values (ndarray of shape (n_features,)).
+
+Additionally, the function handles cases where the F-statistic is not finite by setting it to specific values. 
+
+ ground Truth:sklearn/feature_selection/_univariate_selection.py
+
+ repo:scikit-learn
+
+ function:f_regression
+ 
+ test_cases:sklearn/feature_selection/tests/test_feature_select.py::test_f_regression_corner_case

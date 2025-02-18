@@ -1,0 +1,32 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:Create a Python function called convert_image_dtype that Convert a tensor image to the given ``dtype`` and scale the values accordingly
+    This function does not support PIL Image.
+
+    Args:
+        image (torch.Tensor): Image to be converted
+        dtype (torch.dtype): Desired data type of the output
+
+    Returns:
+        Tensor: Converted image
+
+    .. note::
+
+        When converting from a smaller to a larger integer ``dtype`` the maximum values are **not** mapped exactly.
+        If converted back and forth, this mismatch has no effect.
+
+    Raises:
+        RuntimeError: When trying to cast :class:`torch.float32` to :class:`torch.int32` or :class:`torch.int64` as
+            well as for trying to cast :class:`torch.float64` to :class:`torch.int64`. These conversions might lead to
+            overflow errors since the floating point ``dtype`` cannot store consecutive integers over the whole range
+            of the integer ``dtype``.
+
+ ground Truth:torchvision/transforms/functional.py
+
+ repo:vision
+
+ function:convert_image_dtype
+ 
+ test_cases:test/test_transforms_tensor.py::test_convert_image_dtype

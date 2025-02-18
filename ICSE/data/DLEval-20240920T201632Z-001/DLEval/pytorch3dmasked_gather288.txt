@@ -1,0 +1,14 @@
+stage: Model Construction
+task: 
+data: Image
+
+prompt:
+Write a Python function `masked_gather` that collects points from a tensor `points` based on indices provided in `idx`, where some indices might be `-1` to indicate padding. The function should replace `-1` indices with `0`, gather the corresponding points, and then set the gathered values corresponding to the original `-1` indices to `0.0`. Ensure that `points` and `idx` have matching batch dimensions, and raise a `ValueError` if they do not. The function should handle different shapes of `idx` and return the gathered points tensor.
+
+ ground Truth:pytorch3d/ops/utils.py
+
+ repo:pytorch3d
+
+ function:masked_gather
+ 
+ test_cases:tests/test_sample_farthest_points.py

@@ -1,0 +1,11 @@
+{
+    "result": "Error",
+    "prompt": "Generate a Python function called sample_n_k that samples k distinct elements uniformly from the range 0 to n. The inputs are two integers, n and k. The function will raise a ValueError if k is larger than n or is negative. If k is 0, the function will return an empty NumPy array. If 3 times k is greater than or equal to n, the function will use NumPy's random.choice function to sample k elements without replacement. Otherwise, the function will sample 2k elements and ensure that they are distinct before returning the first k elements. The output of the function is a NumPy array containing k distinct elements sampled from the range 0 to n.",
+    "function_name": "sample_n_k",
+    "ground_truth": "pfrl/utils/random.py",
+    "test": "tests/utils_tests/test_random.py::TestSampleNK::test_fast",
+    "class": "",
+    "stage": "Pre-Post processing",
+    "task": "",
+    "data": "Table"
+}

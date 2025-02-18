@@ -1,0 +1,14 @@
+stage: Evaluating&Metrics
+task: Classification
+data: Table
+
+prompt:
+Generate a Python function called find_predicted_neq_given that implements a simple baseline approach to identify label issues. The function takes in three parameters: labels (np.ndarray or list), pred_probs (np.ndarray), and multi_label (bool, optional). The function returns a boolean mask for the entire dataset where True represents a label issue and False represents an accurately labeled example with high confidence. The function includes input validation and handles cases where multi_label is True by calling a helper function _find_predicted_neq_given_multilabel.
+
+ ground Truth:cleanlab/filter.py
+
+ repo:cleanlab
+
+ function:find_predicted_neq_given
+ 
+ test_cases:tests/test_filter_count.py

@@ -1,0 +1,11 @@
+{
+    "result": "Error",
+    "prompt": "```python\nGenerate a Python method `_loss` for the `ReweightedWakeSleep` class, which computes the re-weighted wake-sleep estimators for the model (`wake-theta`) and the guide (`phi`). The method should return the model loss (`wake_theta_loss`) and the guide loss (`phi_loss`).\n\nThe class structure:\n\n```python\nclass ReweightedWakeSleep(ELBO):\n    def __init__(self, num_particles=2, insomnia=1.0, model_has_params=True, num_sleep_particles=None, vectorize_particles=True, max_plate_nesting=float(\"inf\"), strict_enumeration_warning=True):\n        # Initialization code\n        self.insomnia = insomnia  # Scaling factor for the wake-phi and sleep-phi terms\n        self.model_has_params = model_has_params  # Indicates if the model has learnable parameters\n        self.num_sleep_particles = num_particles if num_sleep_particles is None else num_sleep_particles  # Number of particles for sleep-phi estimator\n        assert insomnia >= 0 and insomnia <= 1, \"insomnia should be in [0, 1]\"\n\n    def _get_trace(self, model, guide, args, kwargs):\n        # Returns a single trace from the guide, and the model that is run against it\n\n    def _loss(self, model, guide, args, kwargs):\n        # Returns the computed model loss (wake_theta_loss) and guide loss (phi_loss)\n\n    def loss(self, model, guide, *args, **kwargs):\n        # Calls _loss method and returns the model loss and guide loss\n\n    def loss_and_grads(self, model, guide, *args, **kwargs):\n        # Computes RWS estimators for the model and guide and performs backpropagation on both\n```\n```\n\nIn the `_loss` function:\n- Calculate the `wake_theta_loss` using a weighted average of log joint probabilities from model traces.\n- Calculate the `wake_phi_loss` using normalized importance weights and log probabilities from guide traces.\n- Optionally, calculate the `sleep_phi_loss` using traces from the unconditioned model and the guide.\n- Combine these into the final `phi_loss` based on the `insomnia` parameter.\n- Return `wake_theta_loss` and `phi_loss`.\n\n```",
+    "function_name": "_loss",
+    "ground_truth": "pyro/infer/rws.py",
+    "test": "tests/infer/test_inference.py",
+    "class": "ReweightedWakeSleep",
+    "stage": "",
+    "task": "",
+    "data": "Inference"
+}

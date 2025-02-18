@@ -1,0 +1,14 @@
+stage: Model Construction
+task: Classification
+data: Image
+
+prompt:
+Generate a Python function called resnet50 that creates a ResNet-50 model. The function takes in optional pre-trained model weights, additional arguments, and keyword arguments. If weights are provided, the function sets the input channels based on the weights. The function then creates a ResNet-50 model using the timm library. If weights are provided, the function loads the state dictionary from the weights and ensures that certain keys are present. The function returns the ResNet-50 model.
+
+ ground Truth:torchgeo/models/resnet.py
+
+ repo:torchgeo
+
+ function:resnet50
+ 
+ test_cases:tests/models/test_resnet.py::TestResNet50

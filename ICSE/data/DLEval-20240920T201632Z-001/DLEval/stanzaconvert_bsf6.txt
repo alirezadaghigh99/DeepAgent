@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: Text
+
+prompt:
+Generate a Python function called convert_bsf that converts data file with NER markup in Brat Standoff Format to BEIOS or IOB format. The function takes in three parameters: data (tokenized data separated by spaces), bsf_markup (Brat Standoff Format markup), and converter (either 'beios' or 'iob'). It returns the data in BEIOS or IOB format according to the specified converter. The output is a string representing the converted data. The function also includes a nested function called join_simple_chunk that processes chunks of data and formats them accordingly.
+
+ ground Truth:stanza/utils/datasets/ner/convert_bsf_to_beios.py
+
+ repo:stanza
+
+ function:convert_bsf
+ 
+ test_cases:stanza/tests/ner/test_bsf_2_beios.py::TestBsf2Beios

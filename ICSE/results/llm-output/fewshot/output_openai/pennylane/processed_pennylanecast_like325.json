@@ -1,0 +1,11 @@
+{
+    "result": "Certainly! Below is a Python function called `cast_like` that takes in two parameters, `tensor1` and `tensor2`, and casts `tensor1` to the same data type as `tensor2`. The function also handles cases where the inputs can be lists or tuples by converting them to tensors first.\n\n```python\nimport torch\n\ndef cast_like(tensor1, tensor2):\n    \"\"\"\n    Casts tensor1 to the same data type as tensor2.\n\n    Args:\n        tensor1: A tensor, list, or tuple to be cast.\n        tensor2: A tensor, list, or tuple whose data type will be used for casting.\n\n    Returns:\n        A tensor with the same data type as tensor2.\n    \"\"\"\n    # Convert lists or tuples to tensors\n    if isinstance(tensor1, (list, tuple)):\n        tensor1 = torch.tensor(tensor1)\n    if isinstance(tensor2, (list, tuple)):\n        tensor2 = torch.tensor(tensor2)\n\n    # Cast tensor1 to the same dtype as tensor2\n    return tensor1.to(tensor2.dtype)\n\n# Example usage:\n# tensor1 = torch.tensor([1.0, 2.0, 3.0])\n# tensor2 = torch.tensor([1, 2, 3], dtype=torch.int32)\n# result = cast_like(tensor1, tensor2)\n# print(result)  # Output: tensor([1, 2, 3], dtype=torch.int32)\n```\n\nThis function first checks if the inputs are lists or tuples and converts them to PyTorch tensors. It then uses the `to` method to cast `tensor1` to the data type of `tensor2`. This approach ensures that the function can handle different input types and perform the casting operation correctly.",
+    "prompt": "Generate a Python function called cast_like that takes in two parameters, tensor1 and tensor2. The function casts tensor1 to the same data type as tensor2.\n\nYou should be aware that input can be list or tuple aswell.",
+    "function_name": "cast_like",
+    "ground_truth": "pennylane/math/utils.py",
+    "test": "tests/math/test_matrix_manipulation.py::TestPartialTrace",
+    "class": "",
+    "stage": "Pre-Post processing",
+    "task": "",
+    "data": ""
+}

@@ -1,0 +1,15 @@
+stage: Model Construction
+task: 
+data: Image
+
+prompt:
+Generate a Python function called swin_v2_b that returns a Swin Transformer v2 base model. The function takes in optional pre-trained model weights, additional arguments, and keyword arguments. If pre-trained weights are provided, the function loads them into the model. The output is a Swin Transformer Base model.
+
+ ground Truth:torchgeo/models/swin.py
+
+ repo:torchgeo
+
+ function:swin_v2_b
+ 
+ test_cases:tests/models/test_swin.py
+

@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: Segmentation
+data: Image
+
+prompt:
+Create a Python function called take_static_crop that takes in an image as a numpy array and crop parameters as a dictionary containing x_min, y_min, x_max, and y_max values as percentages of the image dimensions. The function should return a cropped version of the input image based on the specified crop parameters. The output should be a numpy array representing the cropped image.
+
+ ground Truth:inference/core/utils/preprocess.py
+
+ repo:inference
+
+ function:take_static_crop
+ 
+ test_cases:tests/inference/unit_tests/core/utils/test_preprocess.py

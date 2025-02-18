@@ -1,0 +1,320 @@
+output file:
+processed_GPflowgauss_kl44.json
+function:
+gauss_kl
+Error Cases:
+2025-02-14 01:43:19.985919: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739515399.997425 1849369 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1739515400.000855 1849369 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-02-14 01:43:20.013602: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1739515402.553903 1849369 gpu_device.cc:2022] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 9447 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3060, pci bus id: 0000:06:00.0, compute capability: 8.6
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-1] FAILED', '../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-1] FAILED', '../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-0] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-1]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-0]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-0]', '../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-0] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-1]'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/GPflow/GPflow/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/GPflow/GPflow
+collecting ... collected 4 items
+
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-0] FAILED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-1] FAILED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-0] FAILED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-1] FAILED
+
+=================================== FAILURES ===================================
+______________________________ test_oned[True-0] _______________________________
+
+white = True, dim = 0
+
+    @pytest.mark.parametrize("dim", [0, 1])
+    @pytest.mark.parametrize("white", [True, False])
+    def test_oned(white: bool, dim: bool) -> None:
+        """
+        Check that the KL divergence matches a 1D by-hand calculation.
+        """
+        mu1d = Datum.mu[dim, :][None, :]  # [1, N]
+        s1d = Datum.sqrt[:, dim, dim][:, None, None]  # [N, 1, 1]
+        K1d = Datum.K_batch[:, dim, dim][:, None, None]  # [N, 1, 1]
+    
+        kl = gauss_kl(mu1d, s1d, K1d if not white else None)
+        kl_1d = compute_kl_1d(
+            tf.reshape(mu1d, (-1,)),  # N
+            tf.reshape(s1d, (-1,)),  # N
+            None if white else tf.reshape(K1d, (-1,)),
+        )  # N
+>       np.testing.assert_allclose(kl, kl_1d)
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py:229: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (<function assert_allclose.<locals>.compare at 0x798d045a0d60>, array(nan), array(5.77366804))
+kwds = {'equal_nan': True, 'err_msg': '', 'header': 'Not equal to tolerance rtol=1e-07, atol=0', 'verbose': True}
+
+    @wraps(func)
+    def inner(*args, **kwds):
+        with self._recreate_cm():
+>           return func(*args, **kwds)
+E           AssertionError: 
+E           Not equal to tolerance rtol=1e-07, atol=0
+E           
+E           x and y nan location mismatch:
+E            x: array(nan)
+E            y: array(5.773668)
+
+/usr/lib/python3.11/contextlib.py:81: AssertionError
+______________________________ test_oned[True-1] _______________________________
+
+white = True, dim = 1
+
+    @pytest.mark.parametrize("dim", [0, 1])
+    @pytest.mark.parametrize("white", [True, False])
+    def test_oned(white: bool, dim: bool) -> None:
+        """
+        Check that the KL divergence matches a 1D by-hand calculation.
+        """
+        mu1d = Datum.mu[dim, :][None, :]  # [1, N]
+        s1d = Datum.sqrt[:, dim, dim][:, None, None]  # [N, 1, 1]
+        K1d = Datum.K_batch[:, dim, dim][:, None, None]  # [N, 1, 1]
+    
+        kl = gauss_kl(mu1d, s1d, K1d if not white else None)
+        kl_1d = compute_kl_1d(
+            tf.reshape(mu1d, (-1,)),  # N
+            tf.reshape(s1d, (-1,)),  # N
+            None if white else tf.reshape(K1d, (-1,)),
+        )  # N
+>       np.testing.assert_allclose(kl, kl_1d)
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py:229: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (<function assert_allclose.<locals>.compare at 0x798cfffe9940>, array(nan), array(3.76264996))
+kwds = {'equal_nan': True, 'err_msg': '', 'header': 'Not equal to tolerance rtol=1e-07, atol=0', 'verbose': True}
+
+    @wraps(func)
+    def inner(*args, **kwds):
+        with self._recreate_cm():
+>           return func(*args, **kwds)
+E           AssertionError: 
+E           Not equal to tolerance rtol=1e-07, atol=0
+E           
+E           x and y nan location mismatch:
+E            x: array(nan)
+E            y: array(3.76265)
+
+/usr/lib/python3.11/contextlib.py:81: AssertionError
+______________________________ test_oned[False-0] ______________________________
+
+white = False, dim = 0
+
+    @pytest.mark.parametrize("dim", [0, 1])
+    @pytest.mark.parametrize("white", [True, False])
+    def test_oned(white: bool, dim: bool) -> None:
+        """
+        Check that the KL divergence matches a 1D by-hand calculation.
+        """
+        mu1d = Datum.mu[dim, :][None, :]  # [1, N]
+        s1d = Datum.sqrt[:, dim, dim][:, None, None]  # [N, 1, 1]
+        K1d = Datum.K_batch[:, dim, dim][:, None, None]  # [N, 1, 1]
+    
+>       kl = gauss_kl(mu1d, s1d, K1d if not white else None)
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py:223: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/check_shapes/decorator.py:198: in wrapped_function
+    _check_specs(post_specs)
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/check_shapes/decorator.py:186: in _check_specs
+    checker.check_shapes(processed_specs)
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/check_shapes/checker.py:311: in check_shapes
+    dim_checks = self._match_dims(shape_check)
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/check_shapes/checker.py:472: in _match_dims
+    self._assert(unallocated_len == 0)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <check_shapes.checker.ShapeChecker object at 0x798d052f5ed0>
+condition = False
+
+    def _assert(self, condition: bool) -> None:
+        """
+        Raise a nicely formatted :class:`ShapeMismatchError` if ``condition`` is not ``True``.
+        """
+        if not condition:
+            contexts: List[ErrorContext] = []
+            contexts.extend(self._additional_context)
+    
+            for shape, tensor_spec, context in self._observed_shapes:
+                shape_error_context: ErrorContext = ShapeContext(tensor_spec.shape, shape)
+                if tensor_spec.note is not None:
+                    shape_error_context = ParallelContext(
+                        (NoteContext(tensor_spec.note), shape_error_context)
+                    )
+                contexts.append(StackContext(context, shape_error_context))
+>           raise ShapeMismatchError(ParallelContext(tuple(contexts)))
+E           check_shapes.exceptions.ShapeMismatchError: 
+E           Tensor shape mismatch.
+E             Function: gauss_kl
+E               Declared: /local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/kullback_leiblers.py:21
+E               Argument: q_mu
+E                 Expected: [M, L]
+E                 Actual:   [1, 4]
+E               Argument: q_sqrt
+E                 Expected: [M_L_or_L_M_M...]
+E                 Actual:   [4, 1, 1]
+E               Argument: K
+E                 Expected: [broadcast L, M, M]
+E                 Actual:   [4, 1, 1]
+E               Argument: K_cholesky
+E                 Expected: [broadcast L, M, M]
+E                 Actual:   <Tensor is None or has unknown shape>
+E               Argument: return
+E                 Expected: []
+E                 Actual:   [4]
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/check_shapes/checker.py:607: ShapeMismatchError
+______________________________ test_oned[False-1] ______________________________
+
+white = False, dim = 1
+
+    @pytest.mark.parametrize("dim", [0, 1])
+    @pytest.mark.parametrize("white", [True, False])
+    def test_oned(white: bool, dim: bool) -> None:
+        """
+        Check that the KL divergence matches a 1D by-hand calculation.
+        """
+        mu1d = Datum.mu[dim, :][None, :]  # [1, N]
+        s1d = Datum.sqrt[:, dim, dim][:, None, None]  # [N, 1, 1]
+        K1d = Datum.K_batch[:, dim, dim][:, None, None]  # [N, 1, 1]
+    
+>       kl = gauss_kl(mu1d, s1d, K1d if not white else None)
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py:223: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/check_shapes/decorator.py:198: in wrapped_function
+    _check_specs(post_specs)
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/check_shapes/decorator.py:186: in _check_specs
+    checker.check_shapes(processed_specs)
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/check_shapes/checker.py:311: in check_shapes
+    dim_checks = self._match_dims(shape_check)
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/check_shapes/checker.py:472: in _match_dims
+    self._assert(unallocated_len == 0)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <check_shapes.checker.ShapeChecker object at 0x798cfbd29890>
+condition = False
+
+    def _assert(self, condition: bool) -> None:
+        """
+        Raise a nicely formatted :class:`ShapeMismatchError` if ``condition`` is not ``True``.
+        """
+        if not condition:
+            contexts: List[ErrorContext] = []
+            contexts.extend(self._additional_context)
+    
+            for shape, tensor_spec, context in self._observed_shapes:
+                shape_error_context: ErrorContext = ShapeContext(tensor_spec.shape, shape)
+                if tensor_spec.note is not None:
+                    shape_error_context = ParallelContext(
+                        (NoteContext(tensor_spec.note), shape_error_context)
+                    )
+                contexts.append(StackContext(context, shape_error_context))
+>           raise ShapeMismatchError(ParallelContext(tuple(contexts)))
+E           check_shapes.exceptions.ShapeMismatchError: 
+E           Tensor shape mismatch.
+E             Function: gauss_kl
+E               Declared: /local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/kullback_leiblers.py:21
+E               Argument: q_mu
+E                 Expected: [M, L]
+E                 Actual:   [1, 4]
+E               Argument: q_sqrt
+E                 Expected: [M_L_or_L_M_M...]
+E                 Actual:   [4, 1, 1]
+E               Argument: K
+E                 Expected: [broadcast L, M, M]
+E                 Actual:   [4, 1, 1]
+E               Argument: K_cholesky
+E                 Expected: [broadcast L, M, M]
+E                 Actual:   <Tensor is None or has unknown shape>
+E               Argument: return
+E                 Expected: []
+E                 Actual:   [4]
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/check_shapes/checker.py:607: ShapeMismatchError
+=============================== warnings summary ===============================
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:57
+  /local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:57: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    if (distutils.version.LooseVersion(tf.__version__) <
+
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:58
+  /local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:58: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    distutils.version.LooseVersion(required_tensorflow_version)):
+
+tests/gpflow/test_kullback_leiblers.py::test_oned[True-0]
+tests/gpflow/test_kullback_leiblers.py::test_oned[True-1]
+tests/gpflow/test_kullback_leiblers.py::test_oned[False-0]
+tests/gpflow/test_kullback_leiblers.py::test_oned[False-1]
+  /local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/temp.py:32: RuntimeWarning: invalid value encountered in log
+    log_det_q_sigma_l = 2 * np.sum(np.log(np.diag(q_sqrt[l])))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-0]
+FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-0]
+FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-1]
+======================== 4 failed, 6 warnings in 0.87s =========================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/GPflow/GPflow/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/GPflow/GPflow
+collecting ... collected 4 items
+
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-1] PASSED
+
+=============================== warnings summary ===============================
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:57
+  /local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:57: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    if (distutils.version.LooseVersion(tf.__version__) <
+
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:58
+  /local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:58: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    distutils.version.LooseVersion(required_tensorflow_version)):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 4 passed, 2 warnings in 0.64s =========================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/GPflow/GPflow/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/GPflow/GPflow
+collecting ... collected 4 items
+
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-1] PASSED
+
+=============================== warnings summary ===============================
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:57
+  /local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:57: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    if (distutils.version.LooseVersion(tf.__version__) <
+
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:58
+  /local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:58: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    distutils.version.LooseVersion(required_tensorflow_version)):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 4 passed, 2 warnings in 0.72s =========================

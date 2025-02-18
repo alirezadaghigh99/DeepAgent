@@ -1,0 +1,165 @@
+output file:
+processed_nncfget_available_cpu_count88.json
+function:
+get_available_cpu_count
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_physical', '../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_exception FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_logical', '../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_none FAILED', '../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_logical FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_exception', '../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_physical FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_none'}
+
+All Test Cases On Generated code:
+INFO:nncf:NNCF initialized successfully. Supported frameworks detected: torch, tensorflow, onnx
+============================= test session starts ==============================
+platform linux -- Python 3.9.0, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/nncf/nncf/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/nncf/nncf
+configfile: pyproject.toml
+plugins: mock-3.14.0, dependency-0.6.0
+collecting ... collected 12 items
+
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_fail_if_symlink_not_symlink PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_fail_if_symlink_is_symlink PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_safe_open_not_symlink PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_safe_open_is_symlink PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_is_windows PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_is_linux PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_logical FAILED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_physical FAILED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_none FAILED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_exception FAILED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_memory_amount PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_memory_amount_exception PASSED
+
+=================================== FAILURES ===================================
+_____________________ test_get_available_cpu_count_logical _____________________
+
+mock_cpu_count = <MagicMock name='cpu_count' id='132969003076000'>
+
+    def test_get_available_cpu_count_logical(mock_cpu_count):
+        mock_cpu_count.return_value = 4
+>       result = get_available_cpu_count()
+
+/local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py:78: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+logical = True
+
+    def get_available_cpu_count(logical: bool=True) -> int:
+>       from .temp import get_available_cpu_count
+E       ImportError: cannot import name 'get_available_cpu_count' from 'nncf.common.utils.temp' (/local/data0/moved_data/publishablew/nncf/nncf/nncf/common/utils/temp.py)
+
+/local/data0/moved_data/publishablew/nncf/nncf/nncf/common/utils/os.py:34: ImportError
+____________________ test_get_available_cpu_count_physical _____________________
+
+mock_cpu_count = <MagicMock name='cpu_count' id='132969002781856'>
+
+    def test_get_available_cpu_count_physical(mock_cpu_count):
+        mock_cpu_count.return_value = 2
+>       result = get_available_cpu_count(logical=False)
+
+/local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py:84: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+logical = False
+
+    def get_available_cpu_count(logical: bool=True) -> int:
+>       from .temp import get_available_cpu_count
+E       ImportError: cannot import name 'get_available_cpu_count' from 'nncf.common.utils.temp' (/local/data0/moved_data/publishablew/nncf/nncf/nncf/common/utils/temp.py)
+
+/local/data0/moved_data/publishablew/nncf/nncf/nncf/common/utils/os.py:34: ImportError
+______________________ test_get_available_cpu_count_none _______________________
+
+mock_cpu_count = <MagicMock name='cpu_count' id='132969002869760'>
+
+    def test_get_available_cpu_count_none(mock_cpu_count):
+        mock_cpu_count.return_value = None
+>       result = get_available_cpu_count()
+
+/local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py:90: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+logical = True
+
+    def get_available_cpu_count(logical: bool=True) -> int:
+>       from .temp import get_available_cpu_count
+E       ImportError: cannot import name 'get_available_cpu_count' from 'nncf.common.utils.temp' (/local/data0/moved_data/publishablew/nncf/nncf/nncf/common/utils/temp.py)
+
+/local/data0/moved_data/publishablew/nncf/nncf/nncf/common/utils/os.py:34: ImportError
+____________________ test_get_available_cpu_count_exception ____________________
+
+mock_cpu_count = <MagicMock name='cpu_count' id='132969002449744'>
+
+    def test_get_available_cpu_count_exception(mock_cpu_count):
+        mock_cpu_count.side_effect = Exception("Error fetching CPU count")
+>       result = get_available_cpu_count()
+
+/local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+logical = True
+
+    def get_available_cpu_count(logical: bool=True) -> int:
+>       from .temp import get_available_cpu_count
+E       ImportError: cannot import name 'get_available_cpu_count' from 'nncf.common.utils.temp' (/local/data0/moved_data/publishablew/nncf/nncf/nncf/common/utils/temp.py)
+
+/local/data0/moved_data/publishablew/nncf/nncf/nncf/common/utils/os.py:34: ImportError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_logical
+FAILED ../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_physical
+FAILED ../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_none
+FAILED ../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_exception
+========================= 4 failed, 8 passed in 0.10s ==========================
+
+
+Final Test Result:
+INFO:nncf:NNCF initialized successfully. Supported frameworks detected: torch, tensorflow, onnx
+============================= test session starts ==============================
+platform linux -- Python 3.9.0, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/nncf/nncf/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/nncf/nncf
+configfile: pyproject.toml
+plugins: mock-3.14.0, dependency-0.6.0
+collecting ... collected 12 items
+
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_fail_if_symlink_not_symlink PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_fail_if_symlink_is_symlink PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_safe_open_not_symlink PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_safe_open_is_symlink PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_is_windows PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_is_linux PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_logical PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_physical PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_none PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_exception PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_memory_amount PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_memory_amount_exception PASSED
+
+============================== 12 passed in 0.03s ==============================
+
+
+Initial Result:
+INFO:nncf:NNCF initialized successfully. Supported frameworks detected: torch, tensorflow, onnx
+============================= test session starts ==============================
+platform linux -- Python 3.9.0, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/nncf/nncf/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/nncf/nncf
+configfile: pyproject.toml
+plugins: mock-3.14.0, dependency-0.6.0
+collecting ... collected 12 items
+
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_fail_if_symlink_not_symlink PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_fail_if_symlink_is_symlink PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_safe_open_not_symlink PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_safe_open_is_symlink PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_is_windows PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_is_linux PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_logical PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_physical PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_none PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_exception PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_memory_amount PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_memory_amount_exception PASSED
+
+============================== 12 passed in 0.23s ==============================

@@ -1,0 +1,16 @@
+stage: Pre-Post processing
+task: 
+data: image
+
+prompt:
+Create a Python function numpy_array_to_base64_jpeg that converts a NumPy array representing an image into a Base64-encoded JPEG string. The function takes the following parameter:
+
+image: A NumPy array representing the image. The array is expected to have a shape compatible with OpenCV's image encoding, such as (H, W, 3) for a color image or (H, W) for a grayscale image.
+
+ ground Truth:inference_sdk/http/utils/encoding.py#L12
+
+ repo:inference
+
+ function:numpy_array_to_base64_jpeg
+ 
+ test_cases:tests/inference_sdk/unit_tests/http/utils/test_encoding.py::test_numpy_array_to_base64_jpeg

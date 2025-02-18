@@ -1,0 +1,115 @@
+output file:
+processed_inferencebytes_to_pillow_image253.json
+function:
+bytes_to_pillow_image
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference_sdk/unit_tests/http/utils/test_encoding.py::test_bytes_to_pillow_image_when_bytes_represent_image[JPEG] FAILED', '../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference_sdk/unit_tests/http/utils/test_encoding.py::test_bytes_to_pillow_image_when_bytes_represent_image[PNG] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference_sdk/unit_tests/http/utils/test_encoding.py::test_bytes_to_pillow_image_when_bytes_represent_image[PNG]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference_sdk/unit_tests/http/utils/test_encoding.py::test_bytes_to_pillow_image_when_bytes_represent_image[JPEG]'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/inference/inference/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/inference/inference
+configfile: pytest.ini
+plugins: anyio-4.8.0, requests-mock-1.11.0, timeout-2.3.1, retry-1.6.3, asyncio-0.21.1
+asyncio: mode=Mode.STRICT
+collecting ... collected 2 items
+
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference_sdk/unit_tests/http/utils/test_encoding.py::test_bytes_to_pillow_image_when_bytes_represent_image[PNG] FAILED
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference_sdk/unit_tests/http/utils/test_encoding.py::test_bytes_to_pillow_image_when_bytes_represent_image[JPEG] FAILED
+
+=================================== FAILURES ===================================
+__________ test_bytes_to_pillow_image_when_bytes_represent_image[PNG] __________
+
+encoding = 'PNG'
+
+    @pytest.mark.parametrize("encoding", ["PNG", "JPEG"])
+    def test_bytes_to_pillow_image_when_bytes_represent_image(
+        encoding: Optional[str],
+    ) -> None:
+        # given
+        image = Image.new(mode="RGB", size=(128, 128), color=(0, 0, 0))
+        with BytesIO() as buffer:
+            image.save(buffer, format=encoding)
+            payload = buffer.getvalue()
+    
+        # when
+>       recovered_image = bytes_to_pillow_image(payload=payload)
+
+/local/data0/moved_data/publishablew/inference/inference/tests/inference_sdk/unit_tests/http/utils/test_encoding.py:100: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+payload = b'\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x00\x80\x00\x00\x00\x80\x08\x02\x00\x00\x00L\\\xf6\x9c\x00\x00\x00DIDATx...00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x18\xc0\x80\x00\x01c\x16u\x00\x00\x00\x00\x00IEND\xaeB`\x82'
+
+    def bytes_to_pillow_image(payload: bytes) -> Image.Image:
+>       from .temp import bytes_to_pillow_image
+E       ImportError: cannot import name 'bytes_to_pillow_image' from 'inference_sdk.http.utils.temp' (/local/data0/moved_data/publishablew/inference/inference/inference_sdk/http/utils/temp.py)
+
+/local/data0/moved_data/publishablew/inference/inference/inference_sdk/http/utils/encoding.py:30: ImportError
+_________ test_bytes_to_pillow_image_when_bytes_represent_image[JPEG] __________
+
+encoding = 'JPEG'
+
+    @pytest.mark.parametrize("encoding", ["PNG", "JPEG"])
+    def test_bytes_to_pillow_image_when_bytes_represent_image(
+        encoding: Optional[str],
+    ) -> None:
+        # given
+        image = Image.new(mode="RGB", size=(128, 128), color=(0, 0, 0))
+        with BytesIO() as buffer:
+            image.save(buffer, format=encoding)
+            payload = buffer.getvalue()
+    
+        # when
+>       recovered_image = bytes_to_pillow_image(payload=payload)
+
+/local/data0/moved_data/publishablew/inference/inference/tests/inference_sdk/unit_tests/http/utils/test_encoding.py:100: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+payload = b'\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x00\x00\x01\x00\x01\x00\x00\xff\xdb\x00C\x00\x08\x06\x06\x07\x06\x05\x08\x0...a0\x02\x8a(\xa0\x02\x8a(\xa0\x02\x8a(\xa0\x02\x8a(\xa0\x02\x8a(\xa0\x02\x8a(\xa0\x02\x8a(\xa0\x02\x8a(\xa0\x0f\xff\xd9'
+
+    def bytes_to_pillow_image(payload: bytes) -> Image.Image:
+>       from .temp import bytes_to_pillow_image
+E       ImportError: cannot import name 'bytes_to_pillow_image' from 'inference_sdk.http.utils.temp' (/local/data0/moved_data/publishablew/inference/inference/inference_sdk/http/utils/temp.py)
+
+/local/data0/moved_data/publishablew/inference/inference/inference_sdk/http/utils/encoding.py:30: ImportError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference_sdk/unit_tests/http/utils/test_encoding.py::test_bytes_to_pillow_image_when_bytes_represent_image[PNG]
+FAILED ../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference_sdk/unit_tests/http/utils/test_encoding.py::test_bytes_to_pillow_image_when_bytes_represent_image[JPEG]
+============================== 2 failed in 0.53s ===============================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/inference/inference/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/inference/inference
+configfile: pytest.ini
+plugins: anyio-4.8.0, requests-mock-1.11.0, timeout-2.3.1, retry-1.6.3, asyncio-0.21.1
+asyncio: mode=Mode.STRICT
+collecting ... collected 2 items
+
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference_sdk/unit_tests/http/utils/test_encoding.py::test_bytes_to_pillow_image_when_bytes_represent_image[PNG] PASSED
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference_sdk/unit_tests/http/utils/test_encoding.py::test_bytes_to_pillow_image_when_bytes_represent_image[JPEG] PASSED
+
+============================== 2 passed in 0.40s ===============================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/inference/inference/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/inference/inference
+configfile: pytest.ini
+plugins: anyio-4.8.0, requests-mock-1.11.0, timeout-2.3.1, retry-1.6.3, asyncio-0.21.1
+asyncio: mode=Mode.STRICT
+collecting ... collected 2 items
+
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference_sdk/unit_tests/http/utils/test_encoding.py::test_bytes_to_pillow_image_when_bytes_represent_image[PNG] PASSED
+../../../../../../local/data0/moved_data/publishablew/inference/inference/tests/inference_sdk/unit_tests/http/utils/test_encoding.py::test_bytes_to_pillow_image_when_bytes_represent_image[JPEG] PASSED
+
+============================== 2 passed in 1.01s ===============================

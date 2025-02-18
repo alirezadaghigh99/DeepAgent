@@ -1,0 +1,14 @@
+stage: Model Construction
+task: 
+data: 
+
+prompt:
+Generate a Python function called xavier_normal_ that fills a given input Tensor with values sampled from a Xavier normal distribution. The function takes in a Tensor called tensor, an optional scaling factor called gain (default value of 1.0), and an optional torch Generator called generator (default value of None). 
+
+ ground Truth:torch/nn/init.py
+
+ repo:pytorch
+
+ function:xavier_normal_
+ 
+ test_cases:test/nn/test_init.py::TestNNInit::test_xavier_normal_errors_on_inputs_smaller_than_2d 

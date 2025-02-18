@@ -1,0 +1,24 @@
+stage: Pre-Post processing
+task: Segmentation
+data: Image
+
+prompt:Implement a function named `draw_segmentation_masks` that overlays segmentation masks onto an RGB image. The function takes the following inputs: `image`, a PyTorch tensor of shape (3, H, W) representing the RGB image; `masks`, a tensor of shape (num_masks, H, W) or (H, W) with boolean values indicating the mask regions; `alpha`, a float between 0 and 1 that controls the transparency of the masks; and `colors`, which can be a list of colors, a single color, or left as `None` to generate random colors.
+
+The function raises the following errors to ensure input validity:
+- `TypeError` if the `image` is not a tensor.
+- `ValueError` if the `image` tensor's dtype is neither `uint8` nor a floating point.
+- `ValueError` if the `image` tensor does not have exactly 3 dimensions or if it is not an RGB image (3 channels).
+- `ValueError` if the `masks` tensor does not have 2 or 3 dimensions.
+- `ValueError` if the `masks` tensor is not of boolean dtype.
+- `ValueError` if the `masks` tensor's spatial dimensions do not match the `image` tensor.
+
+The function handles the application of masks, including overlapping masks, and adjusts the transparency using the `alpha` parameter. The resulting image tensor, with the masks applied, is returned in the same dtype as the original image.
+
+ ground Truth:torchvision/utils.py
+
+ repo:vision
+
+ function:draw_segmentation_masks
+ 
+ test_cases:test/test_utils.py::test_draw_segmentation_masks
+

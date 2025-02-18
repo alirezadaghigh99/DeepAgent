@@ -1,0 +1,396 @@
+output file:
+processed_classes-pytorch3dpadded_to_packed_idx9.json
+function:
+padded_to_packed_idx
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_padded_to_packed_idx FAILED [ 65%]', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_simple', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_padded_to_packed_idx', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_simple FAILED [ 73%]'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 26 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_all_constructions PASSED [  3%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_allempty PASSED [  7%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_clone_list PASSED [ 11%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_clone_tensor PASSED [ 15%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_detach PASSED [ 19%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_empty PASSED [ 23%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_estimate_normals PASSED [ 26%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_extend_list PASSED [ 30%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_get_bounding_boxes PASSED [ 34%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_get_cloud PASSED [ 38%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_getitem PASSED [ 42%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_init_error PASSED [ 46%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_inside_box PASSED [ 50%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_join_pointclouds_as_batch PASSED [ 53%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_list_someempty PASSED [ 57%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_offset PASSED [ 61%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_padded_to_packed_idx FAILED [ 65%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_scale PASSED [ 69%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_simple FAILED [ 73%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_simple_random_clouds PASSED [ 76%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_split PASSED [ 80%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_subsample PASSED [ 84%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_to PASSED [ 88%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_to_list FAILED [ 92%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_to_tensor FAILED [ 96%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_update_padded PASSED [100%]
+
+=================================== FAILURES ===================================
+__________________ TestPointclouds.test_padded_to_packed_idx ___________________
+
+self = <tests.test_pointclouds.TestPointclouds testMethod=test_padded_to_packed_idx>
+
+    def test_padded_to_packed_idx(self):
+        device = torch.device("cuda:0")
+        points_list = []
+        npoints = [10, 20, 30]
+        for p in npoints:
+            points = torch.rand((p, 3), dtype=torch.float32, device=device)
+            points_list.append(points)
+    
+        clouds = Pointclouds(points_list)
+    
+>       padded_to_packed_idx = clouds.padded_to_packed_idx()
+
+/local/data0/moved_data/pytorch3d/tests/test_pointclouds.py:836: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pytorch3d.structures.pointclouds.Pointclouds object at 0x77e1e90a0cd0>
+
+    def padded_to_packed_idx(self):
+        """
+        Compute or return the 1D tensor that maps indices from the padded
+        representation to the packed representation of point clouds.
+        """
+        if self._padded_to_packed_idx is not None:
+            return self._padded_to_packed_idx
+        if self._points_padded is None or self._num_points_per_cloud is None:
+>           raise ValueError('Padded points or number of points per cloud is not set.')
+E           ValueError: Padded points or number of points per cloud is not set.
+
+/local/data0/moved_data/pytorch3d/pytorch3d/structures/pointclouds.py:475: ValueError
+_________________________ TestPointclouds.test_simple __________________________
+
+self = <tests.test_pointclouds.TestPointclouds testMethod=test_simple>
+
+    def test_simple(self):
+        device = torch.device("cuda:0")
+        points = [
+            torch.tensor(
+                [[0.1, 0.3, 0.5], [0.5, 0.2, 0.1], [0.6, 0.8, 0.7]],
+                dtype=torch.float32,
+                device=device,
+            ),
+            torch.tensor(
+                [[0.1, 0.3, 0.3], [0.6, 0.7, 0.8], [0.2, 0.3, 0.4], [0.1, 0.5, 0.3]],
+                dtype=torch.float32,
+                device=device,
+            ),
+            torch.tensor(
+                [
+                    [0.7, 0.3, 0.6],
+                    [0.2, 0.4, 0.8],
+                    [0.9, 0.5, 0.2],
+                    [0.2, 0.3, 0.4],
+                    [0.9, 0.3, 0.8],
+                ],
+                dtype=torch.float32,
+                device=device,
+            ),
+        ]
+        clouds = Pointclouds(points)
+    
+        self.assertClose(
+            (clouds.packed_to_cloud_idx()).cpu(),
+            torch.tensor([0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 2]),
+        )
+        self.assertClose(
+            clouds.cloud_to_packed_first_idx().cpu(), torch.tensor([0, 3, 7])
+        )
+        self.assertClose(clouds.num_points_per_cloud().cpu(), torch.tensor([3, 4, 5]))
+        self.assertClose(
+>           clouds.padded_to_packed_idx().cpu(),
+            torch.tensor([0, 1, 2, 5, 6, 7, 8, 10, 11, 12, 13, 14]),
+        )
+
+/local/data0/moved_data/pytorch3d/tests/test_pointclouds.py:135: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pytorch3d.structures.pointclouds.Pointclouds object at 0x77e21448a310>
+
+    def padded_to_packed_idx(self):
+        """
+        Compute or return the 1D tensor that maps indices from the padded
+        representation to the packed representation of point clouds.
+        """
+        if self._padded_to_packed_idx is not None:
+            return self._padded_to_packed_idx
+        if self._points_padded is None or self._num_points_per_cloud is None:
+>           raise ValueError('Padded points or number of points per cloud is not set.')
+E           ValueError: Padded points or number of points per cloud is not set.
+
+/local/data0/moved_data/pytorch3d/pytorch3d/structures/pointclouds.py:475: ValueError
+_________________________ TestPointclouds.test_to_list _________________________
+
+self = <tests.test_pointclouds.TestPointclouds testMethod=test_to_list>
+
+    def test_to_list(self):
+        cloud = self.init_cloud(5, 100, 10)
+        device = torch.device("cuda:1")
+    
+>       new_cloud = cloud.to(device)
+
+/local/data0/moved_data/pytorch3d/tests/test_pointclouds.py:710: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/pytorch3d/structures/pointclouds.py:629: in to
+    other._points_list = [v.to(device_) for v in other.points_list()]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <list_iterator object at 0x77e2144eb550>
+
+>   other._points_list = [v.to(device_) for v in other.points_list()]
+E   RuntimeError: CUDA error: invalid device ordinal
+E   CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+E   For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+E   Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+/local/data0/moved_data/pytorch3d/pytorch3d/structures/pointclouds.py:629: RuntimeError
+________________________ TestPointclouds.test_to_tensor ________________________
+
+self = <tests.test_pointclouds.TestPointclouds testMethod=test_to_tensor>
+
+    def test_to_tensor(self):
+        cloud = self.init_cloud(5, 100, 10, lists_to_tensors=True)
+        device = torch.device("cuda:1")
+    
+>       new_cloud = cloud.to(device)
+
+/local/data0/moved_data/pytorch3d/tests/test_pointclouds.py:747: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/pytorch3d/structures/pointclouds.py:629: in to
+    other._points_list = [v.to(device_) for v in other.points_list()]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <list_iterator object at 0x77e2144f2640>
+
+>   other._points_list = [v.to(device_) for v in other.points_list()]
+E   RuntimeError: CUDA error: invalid device ordinal
+E   CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+E   For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+E   Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+/local/data0/moved_data/pytorch3d/pytorch3d/structures/pointclouds.py:629: RuntimeError
+=============================== warnings summary ===============================
+tests/test_pointclouds.py::TestPointclouds::test_clone_list
+  /local/data0/moved_data/pytorch3d/tests/common_testing.py:85: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+    self.assertNotEqual(tensor1.storage().data_ptr(), tensor2.storage().data_ptr())
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_padded_to_packed_idx
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_simple
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_to_list
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_to_tensor
+=================== 4 failed, 22 passed, 1 warning in 1.81s ====================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 26 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_all_constructions PASSED [  3%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_allempty PASSED [  7%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_clone_list PASSED [ 11%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_clone_tensor PASSED [ 15%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_detach PASSED [ 19%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_empty PASSED [ 23%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_estimate_normals PASSED [ 26%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_extend_list PASSED [ 30%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_get_bounding_boxes PASSED [ 34%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_get_cloud PASSED [ 38%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_getitem PASSED [ 42%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_init_error PASSED [ 46%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_inside_box PASSED [ 50%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_join_pointclouds_as_batch PASSED [ 53%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_list_someempty PASSED [ 57%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_offset PASSED [ 61%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_padded_to_packed_idx PASSED [ 65%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_scale PASSED [ 69%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_simple PASSED [ 73%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_simple_random_clouds PASSED [ 76%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_split PASSED [ 80%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_subsample PASSED [ 84%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_to PASSED [ 88%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_to_list FAILED [ 92%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_to_tensor FAILED [ 96%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_update_padded PASSED [100%]
+
+=================================== FAILURES ===================================
+_________________________ TestPointclouds.test_to_list _________________________
+
+self = <tests.test_pointclouds.TestPointclouds testMethod=test_to_list>
+
+    def test_to_list(self):
+        cloud = self.init_cloud(5, 100, 10)
+        device = torch.device("cuda:1")
+    
+>       new_cloud = cloud.to(device)
+
+/local/data0/moved_data/pytorch3d/tests/test_pointclouds.py:710: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/pytorch3d/structures/pointclouds.py:801: in to
+    other._points_list = [v.to(device_) for v in other.points_list()]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <list_iterator object at 0x7810dc761dc0>
+
+>   other._points_list = [v.to(device_) for v in other.points_list()]
+E   RuntimeError: CUDA error: invalid device ordinal
+E   CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+E   For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+E   Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+/local/data0/moved_data/pytorch3d/pytorch3d/structures/pointclouds.py:801: RuntimeError
+________________________ TestPointclouds.test_to_tensor ________________________
+
+self = <tests.test_pointclouds.TestPointclouds testMethod=test_to_tensor>
+
+    def test_to_tensor(self):
+        cloud = self.init_cloud(5, 100, 10, lists_to_tensors=True)
+        device = torch.device("cuda:1")
+    
+>       new_cloud = cloud.to(device)
+
+/local/data0/moved_data/pytorch3d/tests/test_pointclouds.py:747: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/pytorch3d/structures/pointclouds.py:801: in to
+    other._points_list = [v.to(device_) for v in other.points_list()]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <list_iterator object at 0x781107e654c0>
+
+>   other._points_list = [v.to(device_) for v in other.points_list()]
+E   RuntimeError: CUDA error: invalid device ordinal
+E   CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+E   For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+E   Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+/local/data0/moved_data/pytorch3d/pytorch3d/structures/pointclouds.py:801: RuntimeError
+=============================== warnings summary ===============================
+tests/test_pointclouds.py::TestPointclouds::test_clone_list
+  /local/data0/moved_data/pytorch3d/tests/common_testing.py:85: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+    self.assertNotEqual(tensor1.storage().data_ptr(), tensor2.storage().data_ptr())
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_to_list
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_to_tensor
+=================== 2 failed, 24 passed, 1 warning in 1.80s ====================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 26 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_all_constructions PASSED [  3%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_allempty PASSED [  7%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_clone_list PASSED [ 11%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_clone_tensor PASSED [ 15%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_detach PASSED [ 19%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_empty PASSED [ 23%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_estimate_normals PASSED [ 26%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_extend_list PASSED [ 30%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_get_bounding_boxes PASSED [ 34%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_get_cloud PASSED [ 38%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_getitem PASSED [ 42%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_init_error PASSED [ 46%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_inside_box PASSED [ 50%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_join_pointclouds_as_batch PASSED [ 53%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_list_someempty PASSED [ 57%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_offset PASSED [ 61%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_padded_to_packed_idx PASSED [ 65%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_scale PASSED [ 69%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_simple PASSED [ 73%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_simple_random_clouds PASSED [ 76%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_split PASSED [ 80%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_subsample PASSED [ 84%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_to PASSED [ 88%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_to_list FAILED [ 92%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_to_tensor FAILED [ 96%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_update_padded PASSED [100%]
+
+=================================== FAILURES ===================================
+_________________________ TestPointclouds.test_to_list _________________________
+
+self = <tests.test_pointclouds.TestPointclouds testMethod=test_to_list>
+
+    def test_to_list(self):
+        cloud = self.init_cloud(5, 100, 10)
+        device = torch.device("cuda:1")
+    
+>       new_cloud = cloud.to(device)
+
+/local/data0/moved_data/pytorch3d/tests/test_pointclouds.py:710: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/pytorch3d/structures/pointclouds.py:801: in to
+    other._points_list = [v.to(device_) for v in other.points_list()]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <list_iterator object at 0x71bf5e0b6fa0>
+
+>   other._points_list = [v.to(device_) for v in other.points_list()]
+E   RuntimeError: CUDA error: invalid device ordinal
+E   CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+E   For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+E   Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+/local/data0/moved_data/pytorch3d/pytorch3d/structures/pointclouds.py:801: RuntimeError
+________________________ TestPointclouds.test_to_tensor ________________________
+
+self = <tests.test_pointclouds.TestPointclouds testMethod=test_to_tensor>
+
+    def test_to_tensor(self):
+        cloud = self.init_cloud(5, 100, 10, lists_to_tensors=True)
+        device = torch.device("cuda:1")
+    
+>       new_cloud = cloud.to(device)
+
+/local/data0/moved_data/pytorch3d/tests/test_pointclouds.py:747: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/pytorch3d/structures/pointclouds.py:801: in to
+    other._points_list = [v.to(device_) for v in other.points_list()]
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <list_iterator object at 0x71bf89adc4c0>
+
+>   other._points_list = [v.to(device_) for v in other.points_list()]
+E   RuntimeError: CUDA error: invalid device ordinal
+E   CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+E   For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+E   Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+/local/data0/moved_data/pytorch3d/pytorch3d/structures/pointclouds.py:801: RuntimeError
+=============================== warnings summary ===============================
+tests/test_pointclouds.py::TestPointclouds::test_clone_list
+  /local/data0/moved_data/pytorch3d/tests/common_testing.py:85: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+    self.assertNotEqual(tensor1.storage().data_ptr(), tensor2.storage().data_ptr())
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_to_list
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_pointclouds.py::TestPointclouds::test_to_tensor
+=================== 2 failed, 24 passed, 1 warning in 1.88s ====================

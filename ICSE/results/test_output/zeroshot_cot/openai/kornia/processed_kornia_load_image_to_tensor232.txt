@@ -1,0 +1,689 @@
+output file:
+processed_kornia_load_image_to_tensor232.json
+function:
+_load_image_to_tensor
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.GRAY32-expected_type1-1-jpg] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.GRAY8-expected_type0-1-jpg] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGBA8-expected_type3-4-png] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.GRAY8-expected_type0-1-png]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGB8-expected_type2-3-jpg]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.GRAY32-expected_type1-1-png] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGB32-expected_type4-3-png] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.GRAY8-expected_type0-1-png] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGB32-expected_type4-3-jpg] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGBA8-expected_type3-4-jpg] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.GRAY32-expected_type1-1-png]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_device[cpu]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_device[cpu] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGB8-expected_type2-3-jpg] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGB32-expected_type4-3-png]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGBA8-expected_type3-4-png]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGB32-expected_type4-3-jpg]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_smoke', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_smoke FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGBA8-expected_type3-4-jpg]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGB8-expected_type2-3-png] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGB8-expected_type2-3-png]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.GRAY32-expected_type1-1-jpg]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.GRAY8-expected_type0-1-jpg]'}
+
+All Test Cases On Generated code:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'jit', 'inductor', 'tvm', 'openxla', 'onnxrt', 'cudagraphs', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 13 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_smoke FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_device[cpu] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.GRAY8-expected_type0-1-png] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.GRAY8-expected_type0-1-jpg] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.GRAY32-expected_type1-1-png] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.GRAY32-expected_type1-1-jpg] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGB8-expected_type2-3-png] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGB8-expected_type2-3-jpg] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGBA8-expected_type3-4-png] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGBA8-expected_type3-4-jpg] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGB32-expected_type4-3-png] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGB32-expected_type4-3-jpg] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_write_image[cpu-3-jpg] PASSED
+
+=================================== FAILURES ===================================
+____________________________ TestIoImage.test_smoke ____________________________
+
+self = <test_io_image.TestIoImage object at 0x78f31cd20d00>
+tmp_path = PosixPath('/tmp/pytest-of-aliredaq/pytest-250/test_smoke0')
+
+    def test_smoke(self, tmp_path: Path) -> None:
+        height, width = 4, 5
+        img_th: Tensor = create_random_img8_torch(height, width, 3)
+    
+        file_path = tmp_path / "image.jpg"
+        write_image(str(file_path), img_th)
+    
+        assert file_path.is_file()
+    
+>       img_load: Tensor = load_image(str(file_path), ImageLoadType.UNCHANGED)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py:77: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:67: in load_image
+    image: Tensor = _load_image_to_tensor(path_file, device)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:22: in _load_image_to_tensor
+    return _load_image_to_tensor(path_file, device)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/temp.py:19: in _load_image_to_tensor
+    image = K.io.load_image(str(path_file), K.io.ImageLoadType.RGB32)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:67: in load_image
+    image: Tensor = _load_image_to_tensor(path_file, device)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:22: in _load_image_to_tensor
+    return _load_image_to_tensor(path_file, device)
+E   RecursionError: maximum recursion depth exceeded in comparison
+!!! Recursion detected (same locals & position)
+_________________________ TestIoImage.test_device[cpu] _________________________
+
+self = <test_io_image.TestIoImage object at 0x78f31cd20fa0>
+device = device(type='cpu')
+png_image = PosixPath('/tmp/pytest-of-aliredaq/pytest-250/data0/image.png')
+
+    def test_device(self, device, png_image: Path) -> None:
+        file_path = Path(png_image)
+    
+        assert file_path.is_file()
+    
+>       img_th: Tensor = load_image(file_path, ImageLoadType.UNCHANGED, str(device))
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py:88: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:67: in load_image
+    image: Tensor = _load_image_to_tensor(path_file, device)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:22: in _load_image_to_tensor
+    return _load_image_to_tensor(path_file, device)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/temp.py:19: in _load_image_to_tensor
+    image = K.io.load_image(str(path_file), K.io.ImageLoadType.RGB32)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:67: in load_image
+    image: Tensor = _load_image_to_tensor(path_file, device)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:22: in _load_image_to_tensor
+    return _load_image_to_tensor(path_file, device)
+E   RecursionError: maximum recursion depth exceeded in comparison
+!!! Recursion detected (same locals & position)
+___ TestIoImage.test_load_image[3-ImageLoadType.GRAY8-expected_type0-1-png] ____
+
+self = <test_io_image.TestIoImage object at 0x78f31cd21630>
+images_fn = {'jpg': PosixPath('/tmp/pytest-of-aliredaq/pytest-250/data1/image.jpg'), 'png': PosixPath('/tmp/pytest-of-aliredaq/pytest-250/data0/image.png')}
+ext = 'png', channels = 3, load_type = <ImageLoadType.GRAY8: 1>
+expected_type = torch.uint8, expected_channels = 1
+
+    @pytest.mark.parametrize("ext", ["png", "jpg"])
+    @pytest.mark.parametrize(
+        "channels,load_type,expected_type,expected_channels",
+        [
+            # NOTE: these tests which should write and load images with channel size != 3, didn't do it
+            # (1, ImageLoadType.GRAY8, torch.uint8, 1),
+            (3, ImageLoadType.GRAY8, torch.uint8, 1),
+            # (4, ImageLoadType.GRAY8, torch.uint8, 1),
+            # (1, ImageLoadType.GRAY32, torch.float32, 1),
+            (3, ImageLoadType.GRAY32, torch.float32, 1),
+            # (4, ImageLoadType.GRAY32, torch.float32, 1),
+            (3, ImageLoadType.RGB8, torch.uint8, 3),
+            # (1, ImageLoadType.RGB8, torch.uint8, 3),
+            (3, ImageLoadType.RGBA8, torch.uint8, 4),
+            # (1, ImageLoadType.RGB32, torch.float32, 3),
+            (3, ImageLoadType.RGB32, torch.float32, 3),
+        ],
+    )
+    def test_load_image(self, images_fn, ext, channels, load_type, expected_type, expected_channels):
+        file_path = images_fn[ext]
+    
+        assert file_path.is_file()
+    
+>       img = load_image(file_path, load_type)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py:114: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:67: in load_image
+    image: Tensor = _load_image_to_tensor(path_file, device)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:22: in _load_image_to_tensor
+    return _load_image_to_tensor(path_file, device)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/temp.py:19: in _load_image_to_tensor
+    image = K.io.load_image(str(path_file), K.io.ImageLoadType.RGB32)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:67: in load_image
+    image: Tensor = _load_image_to_tensor(path_file, device)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:22: in _load_image_to_tensor
+    return _load_image_to_tensor(path_file, device)
+E   RecursionError: maximum recursion depth exceeded in comparison
+!!! Recursion detected (same locals & position)
+___ TestIoImage.test_load_image[3-ImageLoadType.GRAY8-expected_type0-1-jpg] ____
+
+self = <test_io_image.TestIoImage object at 0x78f31cd21510>
+images_fn = {'jpg': PosixPath('/tmp/pytest-of-aliredaq/pytest-250/data1/image.jpg'), 'png': PosixPath('/tmp/pytest-of-aliredaq/pytest-250/data0/image.png')}
+ext = 'jpg', channels = 3, load_type = <ImageLoadType.GRAY8: 1>
+expected_type = torch.uint8, expected_channels = 1
+
+    @pytest.mark.parametrize("ext", ["png", "jpg"])
+    @pytest.mark.parametrize(
+        "channels,load_type,expected_type,expected_channels",
+        [
+            # NOTE: these tests which should write and load images with channel size != 3, didn't do it
+            # (1, ImageLoadType.GRAY8, torch.uint8, 1),
+            (3, ImageLoadType.GRAY8, torch.uint8, 1),
+            # (4, ImageLoadType.GRAY8, torch.uint8, 1),
+            # (1, ImageLoadType.GRAY32, torch.float32, 1),
+            (3, ImageLoadType.GRAY32, torch.float32, 1),
+            # (4, ImageLoadType.GRAY32, torch.float32, 1),
+            (3, ImageLoadType.RGB8, torch.uint8, 3),
+            # (1, ImageLoadType.RGB8, torch.uint8, 3),
+            (3, ImageLoadType.RGBA8, torch.uint8, 4),
+            # (1, ImageLoadType.RGB32, torch.float32, 3),
+            (3, ImageLoadType.RGB32, torch.float32, 3),
+        ],
+    )
+    def test_load_image(self, images_fn, ext, channels, load_type, expected_type, expected_channels):
+        file_path = images_fn[ext]
+    
+        assert file_path.is_file()
+    
+>       img = load_image(file_path, load_type)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py:114: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:67: in load_image
+    image: Tensor = _load_image_to_tensor(path_file, device)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:22: in _load_image_to_tensor
+    return _load_image_to_tensor(path_file, device)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/temp.py:19: in _load_image_to_tensor
+    image = K.io.load_image(str(path_file), K.io.ImageLoadType.RGB32)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:67: in load_image
+    image: Tensor = _load_image_to_tensor(path_file, device)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:22: in _load_image_to_tensor
+    return _load_image_to_tensor(path_file, device)
+E   RecursionError: maximum recursion depth exceeded in comparison
+!!! Recursion detected (same locals & position)
+___ TestIoImage.test_load_image[3-ImageLoadType.GRAY32-expected_type1-1-png] ___
+
+self = <test_io_image.TestIoImage object at 0x78f31cd215d0>
+images_fn = {'jpg': PosixPath('/tmp/pytest-of-aliredaq/pytest-250/data1/image.jpg'), 'png': PosixPath('/tmp/pytest-of-aliredaq/pytest-250/data0/image.png')}
+ext = 'png', channels = 3, load_type = <ImageLoadType.GRAY32: 4>
+expected_type = torch.float32, expected_channels = 1
+
+    @pytest.mark.parametrize("ext", ["png", "jpg"])
+    @pytest.mark.parametrize(
+        "channels,load_type,expected_type,expected_channels",
+        [
+            # NOTE: these tests which should write and load images with channel size != 3, didn't do it
+            # (1, ImageLoadType.GRAY8, torch.uint8, 1),
+            (3, ImageLoadType.GRAY8, torch.uint8, 1),
+            # (4, ImageLoadType.GRAY8, torch.uint8, 1),
+            # (1, ImageLoadType.GRAY32, torch.float32, 1),
+            (3, ImageLoadType.GRAY32, torch.float32, 1),
+            # (4, ImageLoadType.GRAY32, torch.float32, 1),
+            (3, ImageLoadType.RGB8, torch.uint8, 3),
+            # (1, ImageLoadType.RGB8, torch.uint8, 3),
+            (3, ImageLoadType.RGBA8, torch.uint8, 4),
+            # (1, ImageLoadType.RGB32, torch.float32, 3),
+            (3, ImageLoadType.RGB32, torch.float32, 3),
+        ],
+    )
+    def test_load_image(self, images_fn, ext, channels, load_type, expected_type, expected_channels):
+        file_path = images_fn[ext]
+    
+        assert file_path.is_file()
+    
+>       img = load_image(file_path, load_type)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py:114: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:67: in load_image
+    image: Tensor = _load_image_to_tensor(path_file, device)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:22: in _load_image_to_tensor
+    return _load_image_to_tensor(path_file, device)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/temp.py:19: in _load_image_to_tensor
+    image = K.io.load_image(str(path_file), K.io.ImageLoadType.RGB32)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:67: in load_image
+    image: Tensor = _load_image_to_tensor(path_file, device)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:22: in _load_image_to_tensor
+    return _load_image_to_tensor(path_file, device)
+E   RecursionError: maximum recursion depth exceeded in comparison
+!!! Recursion detected (same locals & position)
+___ TestIoImage.test_load_image[3-ImageLoadType.GRAY32-expected_type1-1-jpg] ___
+
+self = <test_io_image.TestIoImage object at 0x78f31cd212a0>
+images_fn = {'jpg': PosixPath('/tmp/pytest-of-aliredaq/pytest-250/data1/image.jpg'), 'png': PosixPath('/tmp/pytest-of-aliredaq/pytest-250/data0/image.png')}
+ext = 'jpg', channels = 3, load_type = <ImageLoadType.GRAY32: 4>
+expected_type = torch.float32, expected_channels = 1
+
+    @pytest.mark.parametrize("ext", ["png", "jpg"])
+    @pytest.mark.parametrize(
+        "channels,load_type,expected_type,expected_channels",
+        [
+            # NOTE: these tests which should write and load images with channel size != 3, didn't do it
+            # (1, ImageLoadType.GRAY8, torch.uint8, 1),
+            (3, ImageLoadType.GRAY8, torch.uint8, 1),
+            # (4, ImageLoadType.GRAY8, torch.uint8, 1),
+            # (1, ImageLoadType.GRAY32, torch.float32, 1),
+            (3, ImageLoadType.GRAY32, torch.float32, 1),
+            # (4, ImageLoadType.GRAY32, torch.float32, 1),
+            (3, ImageLoadType.RGB8, torch.uint8, 3),
+            # (1, ImageLoadType.RGB8, torch.uint8, 3),
+            (3, ImageLoadType.RGBA8, torch.uint8, 4),
+            # (1, ImageLoadType.RGB32, torch.float32, 3),
+            (3, ImageLoadType.RGB32, torch.float32, 3),
+        ],
+    )
+    def test_load_image(self, images_fn, ext, channels, load_type, expected_type, expected_channels):
+        file_path = images_fn[ext]
+    
+        assert file_path.is_file()
+    
+>       img = load_image(file_path, load_type)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py:114: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:67: in load_image
+    image: Tensor = _load_image_to_tensor(path_file, device)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:22: in _load_image_to_tensor
+    return _load_image_to_tensor(path_file, device)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/temp.py:19: in _load_image_to_tensor
+    image = K.io.load_image(str(path_file), K.io.ImageLoadType.RGB32)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:67: in load_image
+    image: Tensor = _load_image_to_tensor(path_file, device)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:22: in _load_image_to_tensor
+    return _load_image_to_tensor(path_file, device)
+E   RecursionError: maximum recursion depth exceeded in comparison
+!!! Recursion detected (same locals & position)
+____ TestIoImage.test_load_image[3-ImageLoadType.RGB8-expected_type2-3-png] ____
+
+self = <test_io_image.TestIoImage object at 0x78f31cd21ae0>
+images_fn = {'jpg': PosixPath('/tmp/pytest-of-aliredaq/pytest-250/data1/image.jpg'), 'png': PosixPath('/tmp/pytest-of-aliredaq/pytest-250/data0/image.png')}
+ext = 'png', channels = 3, load_type = <ImageLoadType.RGB8: 2>
+expected_type = torch.uint8, expected_channels = 3
+
+    @pytest.mark.parametrize("ext", ["png", "jpg"])
+    @pytest.mark.parametrize(
+        "channels,load_type,expected_type,expected_channels",
+        [
+            # NOTE: these tests which should write and load images with channel size != 3, didn't do it
+            # (1, ImageLoadType.GRAY8, torch.uint8, 1),
+            (3, ImageLoadType.GRAY8, torch.uint8, 1),
+            # (4, ImageLoadType.GRAY8, torch.uint8, 1),
+            # (1, ImageLoadType.GRAY32, torch.float32, 1),
+            (3, ImageLoadType.GRAY32, torch.float32, 1),
+            # (4, ImageLoadType.GRAY32, torch.float32, 1),
+            (3, ImageLoadType.RGB8, torch.uint8, 3),
+            # (1, ImageLoadType.RGB8, torch.uint8, 3),
+            (3, ImageLoadType.RGBA8, torch.uint8, 4),
+            # (1, ImageLoadType.RGB32, torch.float32, 3),
+            (3, ImageLoadType.RGB32, torch.float32, 3),
+        ],
+    )
+    def test_load_image(self, images_fn, ext, channels, load_type, expected_type, expected_channels):
+        file_path = images_fn[ext]
+    
+        assert file_path.is_file()
+    
+>       img = load_image(file_path, load_type)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py:114: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:67: in load_image
+    image: Tensor = _load_image_to_tensor(path_file, device)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:22: in _load_image_to_tensor
+    return _load_image_to_tensor(path_file, device)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/temp.py:19: in _load_image_to_tensor
+    image = K.io.load_image(str(path_file), K.io.ImageLoadType.RGB32)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:67: in load_image
+    image: Tensor = _load_image_to_tensor(path_file, device)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:22: in _load_image_to_tensor
+    return _load_image_to_tensor(path_file, device)
+E   RecursionError: maximum recursion depth exceeded in comparison
+!!! Recursion detected (same locals & position)
+____ TestIoImage.test_load_image[3-ImageLoadType.RGB8-expected_type2-3-jpg] ____
+
+self = <test_io_image.TestIoImage object at 0x78f31cd21ba0>
+images_fn = {'jpg': PosixPath('/tmp/pytest-of-aliredaq/pytest-250/data1/image.jpg'), 'png': PosixPath('/tmp/pytest-of-aliredaq/pytest-250/data0/image.png')}
+ext = 'jpg', channels = 3, load_type = <ImageLoadType.RGB8: 2>
+expected_type = torch.uint8, expected_channels = 3
+
+    @pytest.mark.parametrize("ext", ["png", "jpg"])
+    @pytest.mark.parametrize(
+        "channels,load_type,expected_type,expected_channels",
+        [
+            # NOTE: these tests which should write and load images with channel size != 3, didn't do it
+            # (1, ImageLoadType.GRAY8, torch.uint8, 1),
+            (3, ImageLoadType.GRAY8, torch.uint8, 1),
+            # (4, ImageLoadType.GRAY8, torch.uint8, 1),
+            # (1, ImageLoadType.GRAY32, torch.float32, 1),
+            (3, ImageLoadType.GRAY32, torch.float32, 1),
+            # (4, ImageLoadType.GRAY32, torch.float32, 1),
+            (3, ImageLoadType.RGB8, torch.uint8, 3),
+            # (1, ImageLoadType.RGB8, torch.uint8, 3),
+            (3, ImageLoadType.RGBA8, torch.uint8, 4),
+            # (1, ImageLoadType.RGB32, torch.float32, 3),
+            (3, ImageLoadType.RGB32, torch.float32, 3),
+        ],
+    )
+    def test_load_image(self, images_fn, ext, channels, load_type, expected_type, expected_channels):
+        file_path = images_fn[ext]
+    
+        assert file_path.is_file()
+    
+>       img = load_image(file_path, load_type)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py:114: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:67: in load_image
+    image: Tensor = _load_image_to_tensor(path_file, device)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:22: in _load_image_to_tensor
+    return _load_image_to_tensor(path_file, device)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/temp.py:19: in _load_image_to_tensor
+    image = K.io.load_image(str(path_file), K.io.ImageLoadType.RGB32)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:67: in load_image
+    image: Tensor = _load_image_to_tensor(path_file, device)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:22: in _load_image_to_tensor
+    return _load_image_to_tensor(path_file, device)
+E   RecursionError: maximum recursion depth exceeded in comparison
+!!! Recursion detected (same locals & position)
+___ TestIoImage.test_load_image[3-ImageLoadType.RGBA8-expected_type3-4-png] ____
+
+self = <test_io_image.TestIoImage object at 0x78f31cd21c60>
+images_fn = {'jpg': PosixPath('/tmp/pytest-of-aliredaq/pytest-250/data1/image.jpg'), 'png': PosixPath('/tmp/pytest-of-aliredaq/pytest-250/data0/image.png')}
+ext = 'png', channels = 3, load_type = <ImageLoadType.RGBA8: 3>
+expected_type = torch.uint8, expected_channels = 4
+
+    @pytest.mark.parametrize("ext", ["png", "jpg"])
+    @pytest.mark.parametrize(
+        "channels,load_type,expected_type,expected_channels",
+        [
+            # NOTE: these tests which should write and load images with channel size != 3, didn't do it
+            # (1, ImageLoadType.GRAY8, torch.uint8, 1),
+            (3, ImageLoadType.GRAY8, torch.uint8, 1),
+            # (4, ImageLoadType.GRAY8, torch.uint8, 1),
+            # (1, ImageLoadType.GRAY32, torch.float32, 1),
+            (3, ImageLoadType.GRAY32, torch.float32, 1),
+            # (4, ImageLoadType.GRAY32, torch.float32, 1),
+            (3, ImageLoadType.RGB8, torch.uint8, 3),
+            # (1, ImageLoadType.RGB8, torch.uint8, 3),
+            (3, ImageLoadType.RGBA8, torch.uint8, 4),
+            # (1, ImageLoadType.RGB32, torch.float32, 3),
+            (3, ImageLoadType.RGB32, torch.float32, 3),
+        ],
+    )
+    def test_load_image(self, images_fn, ext, channels, load_type, expected_type, expected_channels):
+        file_path = images_fn[ext]
+    
+        assert file_path.is_file()
+    
+>       img = load_image(file_path, load_type)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py:114: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:67: in load_image
+    image: Tensor = _load_image_to_tensor(path_file, device)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:22: in _load_image_to_tensor
+    return _load_image_to_tensor(path_file, device)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/temp.py:19: in _load_image_to_tensor
+    image = K.io.load_image(str(path_file), K.io.ImageLoadType.RGB32)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:67: in load_image
+    image: Tensor = _load_image_to_tensor(path_file, device)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:22: in _load_image_to_tensor
+    return _load_image_to_tensor(path_file, device)
+E   RecursionError: maximum recursion depth exceeded in comparison
+!!! Recursion detected (same locals & position)
+___ TestIoImage.test_load_image[3-ImageLoadType.RGBA8-expected_type3-4-jpg] ____
+
+self = <test_io_image.TestIoImage object at 0x78f31cd21d20>
+images_fn = {'jpg': PosixPath('/tmp/pytest-of-aliredaq/pytest-250/data1/image.jpg'), 'png': PosixPath('/tmp/pytest-of-aliredaq/pytest-250/data0/image.png')}
+ext = 'jpg', channels = 3, load_type = <ImageLoadType.RGBA8: 3>
+expected_type = torch.uint8, expected_channels = 4
+
+    @pytest.mark.parametrize("ext", ["png", "jpg"])
+    @pytest.mark.parametrize(
+        "channels,load_type,expected_type,expected_channels",
+        [
+            # NOTE: these tests which should write and load images with channel size != 3, didn't do it
+            # (1, ImageLoadType.GRAY8, torch.uint8, 1),
+            (3, ImageLoadType.GRAY8, torch.uint8, 1),
+            # (4, ImageLoadType.GRAY8, torch.uint8, 1),
+            # (1, ImageLoadType.GRAY32, torch.float32, 1),
+            (3, ImageLoadType.GRAY32, torch.float32, 1),
+            # (4, ImageLoadType.GRAY32, torch.float32, 1),
+            (3, ImageLoadType.RGB8, torch.uint8, 3),
+            # (1, ImageLoadType.RGB8, torch.uint8, 3),
+            (3, ImageLoadType.RGBA8, torch.uint8, 4),
+            # (1, ImageLoadType.RGB32, torch.float32, 3),
+            (3, ImageLoadType.RGB32, torch.float32, 3),
+        ],
+    )
+    def test_load_image(self, images_fn, ext, channels, load_type, expected_type, expected_channels):
+        file_path = images_fn[ext]
+    
+        assert file_path.is_file()
+    
+>       img = load_image(file_path, load_type)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py:114: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:67: in load_image
+    image: Tensor = _load_image_to_tensor(path_file, device)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:22: in _load_image_to_tensor
+    return _load_image_to_tensor(path_file, device)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/temp.py:19: in _load_image_to_tensor
+    image = K.io.load_image(str(path_file), K.io.ImageLoadType.RGB32)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:67: in load_image
+    image: Tensor = _load_image_to_tensor(path_file, device)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:22: in _load_image_to_tensor
+    return _load_image_to_tensor(path_file, device)
+E   RecursionError: maximum recursion depth exceeded in comparison
+!!! Recursion detected (same locals & position)
+___ TestIoImage.test_load_image[3-ImageLoadType.RGB32-expected_type4-3-png] ____
+
+self = <test_io_image.TestIoImage object at 0x78f31cd21de0>
+images_fn = {'jpg': PosixPath('/tmp/pytest-of-aliredaq/pytest-250/data1/image.jpg'), 'png': PosixPath('/tmp/pytest-of-aliredaq/pytest-250/data0/image.png')}
+ext = 'png', channels = 3, load_type = <ImageLoadType.RGB32: 5>
+expected_type = torch.float32, expected_channels = 3
+
+    @pytest.mark.parametrize("ext", ["png", "jpg"])
+    @pytest.mark.parametrize(
+        "channels,load_type,expected_type,expected_channels",
+        [
+            # NOTE: these tests which should write and load images with channel size != 3, didn't do it
+            # (1, ImageLoadType.GRAY8, torch.uint8, 1),
+            (3, ImageLoadType.GRAY8, torch.uint8, 1),
+            # (4, ImageLoadType.GRAY8, torch.uint8, 1),
+            # (1, ImageLoadType.GRAY32, torch.float32, 1),
+            (3, ImageLoadType.GRAY32, torch.float32, 1),
+            # (4, ImageLoadType.GRAY32, torch.float32, 1),
+            (3, ImageLoadType.RGB8, torch.uint8, 3),
+            # (1, ImageLoadType.RGB8, torch.uint8, 3),
+            (3, ImageLoadType.RGBA8, torch.uint8, 4),
+            # (1, ImageLoadType.RGB32, torch.float32, 3),
+            (3, ImageLoadType.RGB32, torch.float32, 3),
+        ],
+    )
+    def test_load_image(self, images_fn, ext, channels, load_type, expected_type, expected_channels):
+        file_path = images_fn[ext]
+    
+        assert file_path.is_file()
+    
+>       img = load_image(file_path, load_type)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py:114: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:67: in load_image
+    image: Tensor = _load_image_to_tensor(path_file, device)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:22: in _load_image_to_tensor
+    return _load_image_to_tensor(path_file, device)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/temp.py:19: in _load_image_to_tensor
+    image = K.io.load_image(str(path_file), K.io.ImageLoadType.RGB32)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:67: in load_image
+    image: Tensor = _load_image_to_tensor(path_file, device)
+E   RecursionError: maximum recursion depth exceeded in comparison
+!!! Recursion detected (same locals & position)
+___ TestIoImage.test_load_image[3-ImageLoadType.RGB32-expected_type4-3-jpg] ____
+
+self = <test_io_image.TestIoImage object at 0x78f31cd21ea0>
+images_fn = {'jpg': PosixPath('/tmp/pytest-of-aliredaq/pytest-250/data1/image.jpg'), 'png': PosixPath('/tmp/pytest-of-aliredaq/pytest-250/data0/image.png')}
+ext = 'jpg', channels = 3, load_type = <ImageLoadType.RGB32: 5>
+expected_type = torch.float32, expected_channels = 3
+
+    @pytest.mark.parametrize("ext", ["png", "jpg"])
+    @pytest.mark.parametrize(
+        "channels,load_type,expected_type,expected_channels",
+        [
+            # NOTE: these tests which should write and load images with channel size != 3, didn't do it
+            # (1, ImageLoadType.GRAY8, torch.uint8, 1),
+            (3, ImageLoadType.GRAY8, torch.uint8, 1),
+            # (4, ImageLoadType.GRAY8, torch.uint8, 1),
+            # (1, ImageLoadType.GRAY32, torch.float32, 1),
+            (3, ImageLoadType.GRAY32, torch.float32, 1),
+            # (4, ImageLoadType.GRAY32, torch.float32, 1),
+            (3, ImageLoadType.RGB8, torch.uint8, 3),
+            # (1, ImageLoadType.RGB8, torch.uint8, 3),
+            (3, ImageLoadType.RGBA8, torch.uint8, 4),
+            # (1, ImageLoadType.RGB32, torch.float32, 3),
+            (3, ImageLoadType.RGB32, torch.float32, 3),
+        ],
+    )
+    def test_load_image(self, images_fn, ext, channels, load_type, expected_type, expected_channels):
+        file_path = images_fn[ext]
+    
+        assert file_path.is_file()
+    
+>       img = load_image(file_path, load_type)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py:114: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:67: in load_image
+    image: Tensor = _load_image_to_tensor(path_file, device)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:22: in _load_image_to_tensor
+    return _load_image_to_tensor(path_file, device)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/temp.py:19: in _load_image_to_tensor
+    image = K.io.load_image(str(path_file), K.io.ImageLoadType.RGB32)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/io/io.py:67: in load_image
+    image: Tensor = _load_image_to_tensor(path_file, device)
+E   RecursionError: maximum recursion depth exceeded in comparison
+!!! Recursion detected (same locals & position)
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_smoke
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_device[cpu]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.GRAY8-expected_type0-1-png]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.GRAY8-expected_type0-1-jpg]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.GRAY32-expected_type1-1-png]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.GRAY32-expected_type1-1-jpg]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGB8-expected_type2-3-png]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGB8-expected_type2-3-jpg]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGBA8-expected_type3-4-png]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGBA8-expected_type3-4-jpg]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGB32-expected_type4-3-png]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGB32-expected_type4-3-jpg]
+========================= 12 failed, 1 passed in 0.93s =========================
+
+
+Final Test Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'tvm', 'inductor', 'onnxrt', 'jit', 'cudagraphs', 'openxla', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 13 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_smoke PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_device[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.GRAY8-expected_type0-1-png] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.GRAY8-expected_type0-1-jpg] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.GRAY32-expected_type1-1-png] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.GRAY32-expected_type1-1-jpg] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGB8-expected_type2-3-png] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGB8-expected_type2-3-jpg] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGBA8-expected_type3-4-png] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGBA8-expected_type3-4-jpg] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGB32-expected_type4-3-png] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGB32-expected_type4-3-jpg] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_write_image[cpu-3-jpg] PASSED
+
+============================== 13 passed in 0.77s ==============================
+
+
+Initial Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'openxla', 'onnxrt', 'cudagraphs', 'jit', 'tvm', 'inductor', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 13 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_smoke PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_device[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.GRAY8-expected_type0-1-png] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.GRAY8-expected_type0-1-jpg] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.GRAY32-expected_type1-1-png] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.GRAY32-expected_type1-1-jpg] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGB8-expected_type2-3-png] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGB8-expected_type2-3-jpg] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGBA8-expected_type3-4-png] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGBA8-expected_type3-4-jpg] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGB32-expected_type4-3-png] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_load_image[3-ImageLoadType.RGB32-expected_type4-3-jpg] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/io/test_io_image.py::TestIoImage::test_write_image[cpu-3-jpg] PASSED
+
+============================== 13 passed in 2.58s ==============================

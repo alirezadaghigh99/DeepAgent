@@ -1,0 +1,24 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Create a Python function called rescale that resizes an input torch.Tensor with the given factor. The function takes in the following parameters: input (torch.Tensor), factor (float or tuple of floats), interpolation (string, default="bilinear"), align_corners (optional bool), and antialias (bool, default=False). 
+
+The function rescales the input tensor based on the factor provided, using the specified interpolation method. If a scalar factor is provided, it is used for both the x and y directions. The function returns the rescaled tensor with the shape specified by the new size.
+
+An example of using the rescale function is shown below:
+```python
+img = torch.rand(1, 3, 4, 4)
+out = rescale(img, (2, 3))
+print(out.shape)
+```
+This example rescales the input image tensor 'img' by a factor of (2, 3) and prints out the shape of the resulting tensor.
+
+ ground Truth:kornia/geometry/transform/affwarp.py
+
+ repo:kornia
+
+ function:rescale
+ 
+ test_cases:tests/geometry/transform/test_affine.py

@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Create a Python function called vector_to_skew_symmetric_matrix that converts a 3D vector into its corresponding skew-symmetric matrix. The input should be a PyTorch Tensor of shape (B, 3) or (3,), representing a batch of 3D vectors or a single 3D vector. The function should return a PyTorch Tensor of shape (B, 3, 3) or (3, 3) containing the skew-symmetric matrices. It should include error handling to ensure the input vector has the correct shape and raise a ValueError if it does not
+
+ ground Truth:kornia/geometry/conversions.py#L1490
+
+ repo:kornia
+
+ function:vector_to_skew_symmetric_matrix
+ 
+ test_cases:tests/geometry/test_conversions.py::test_vector_to_skew_symmetric_matrix

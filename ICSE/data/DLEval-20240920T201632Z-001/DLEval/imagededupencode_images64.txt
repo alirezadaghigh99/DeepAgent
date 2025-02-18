@@ -1,0 +1,29 @@
+stage: Pre-Post processing
+task: Detection
+data: 
+
+prompt:
+Generate a Python class called encode_images with the following methods:
+- encode_images(self, image_dir=None, recursive: bool = False, num_enc_workers: int = cpu_count())
+
+The encode_images method generates hashes for all images in a given directory of images. It takes three arguments:
+- image_dir: Path to the image directory.
+- recursive: Optional, find images recursively in a nested image directory structure, set to False by default.
+- num_enc_workers: Optional, number of CPU cores to use for multiprocessing encoding generation, set to the number of CPUs in the system by default. 0 disables multiprocessing.
+
+The method returns a dictionary that contains a mapping of filenames and corresponding 64-character hash strings, such as {'Image1.jpg': 'hash_string1', 'Image2.jpg': 'hash_string2', ...}
+
+Example usage:
+```
+from imagededup.methods import <hash-method>
+myencoder = <hash-method>()
+mapping = myencoder.encode_images('path/to/directory')
+```
+
+ ground Truth:imagededup/methods/hashing.py
+
+ repo:imagededup
+
+ function:encode_images
+ 
+ test_cases: tests/test_hashing.py

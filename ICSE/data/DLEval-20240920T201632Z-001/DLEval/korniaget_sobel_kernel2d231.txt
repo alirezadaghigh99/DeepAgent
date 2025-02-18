@@ -1,0 +1,21 @@
+stage: Model Construction
+task: 
+data: Image
+
+prompt:
+Create a Python function get_sobel_kernel2d that returns a 2D Sobel kernel for edge detection.Input types:
+
+device: An optional device parameter to specify where the kernel tensor should be stored (e.g., CPU or GPU).
+dtype: An optional data type for the kernel tensor.
+Output:
+
+A stacked tensor containing the Sobel kernels for the x and y directions.
+
+
+ ground Truth:kornia/filters/kernels.py#L437
+
+ repo:kornia
+
+ function:get_sobel_kernel2d
+ 
+ test_cases:tests/filters/test_sobel.py::TestSpatialGradient

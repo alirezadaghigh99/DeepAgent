@@ -1,0 +1,60 @@
+stage: Model Construction
+task: 
+data: 
+
+prompt:
+complete the __init__ function for A simple fully connected feed-forward network, otherwise known as a multilayer perceptron (MLP).
+
+    Examples
+    --------
+    >>> model = MultilayerPerceptron(d_input=10, d_hidden=(2,3), d_output=2, dropout=0.0, activation_fn='relu')
+    >>> x = torch.ones(2, 10)
+    >>> out = model(x)
+    >>> print(out.shape)
+    torch.Size([2, 2])
+    """
+
+    def __init__(self,
+                 d_input: int,
+                 d_output: int,
+                 d_hidden: Optional[tuple] = None,
+                 dropout: float = 0.0,
+                 batch_norm: bool = False,
+                 batch_norm_momentum: float = 0.1,
+                 activation_fn: Union[Callable, str] = 'relu',
+                 skip_connection: bool = False,
+                 weighted_skip: bool = True):
+        
+        """Initialize the model.
+
+        Parameters
+        ----------
+        d_input: int
+            the dimension of the input layer
+        d_output: int
+            the dimension of the output layer
+        d_hidden: tuple
+            the dimensions of the hidden layers
+        dropout: float
+            the dropout probability
+        batch_norm: bool
+            whether to use batch normalization
+        batch_norm_momentum: float
+            the momentum for batch normalization
+        activation_fn: str
+            the activation function to use in the hidden layers
+        skip_connection: bool
+            whether to add a skip connection from the input to the output
+        weighted_skip: bool
+            whether to add a weighted skip connection from the input to the output
+        """
+
+ ground Truth:deepchem/models/torch_models/torch_model.py
+
+ repo:deepchem
+
+ function:__init__
+ 
+ class:MultilayerPerceptron
+ 
+ test_cases:deepchem/models/tests/test_layers.py::test_multilayer_perceptron

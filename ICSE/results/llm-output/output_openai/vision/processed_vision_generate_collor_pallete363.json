@@ -1,0 +1,11 @@
+{
+    "result": "To generate a list of RGB tuples based on the given palette and the number of objects, we can follow these steps:\n\n1. Define the palette as a list of integers.\n2. Initialize an empty list to store the RGB tuples.\n3. Loop over the range of `num_objects`.\n4. For each object, calculate the RGB values by iterating over the palette and applying the formula `(i * color) % 255`.\n5. Append the resulting RGB tuple to the list.\n6. Return the list of RGB tuples.\n\nHere's the Python function implementing this logic:\n\n```python\ndef generate_rgb_tuples(num_objects):\n    palette = [33554431, 32767, 2097151]\n    rgb_tuples = []\n    \n    for i in range(num_objects):\n        rgb = tuple((i * color) % 255 for color in palette)\n        rgb_tuples.append(rgb)\n    \n    return rgb_tuples\n\n# Example usage:\nnum_objects = 5\nrgb_list = generate_rgb_tuples(num_objects)\nprint(rgb_list)\n```\n\nThis function will generate a list of RGB tuples, where each tuple is calculated based on the index `i` and the given palette. Each color component in the tuple is derived by taking the product of the index and the corresponding palette value, then taking the modulus with 255 to ensure the value is within the valid range for RGB components.",
+    "prompt": "Generate a Python function that takes an integer num_objects (e.g., 5) and returns a list of RGB tuples calculated using the palette [33554431, 32767, 2097151], where each color is derived by (i * palette) % 255 for each object.",
+    "function_name": "_generate_color_palette",
+    "ground_truth": "torchvision/utils.py",
+    "test": "test/test_utils.py",
+    "class": "",
+    "stage": "Pre-Post processing",
+    "task": "Detection",
+    "data": "image"
+}

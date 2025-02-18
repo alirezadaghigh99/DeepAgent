@@ -1,0 +1,11 @@
+{
+    "result": "Error",
+    "prompt": "Create a Python function called load_image_rgb that takes in a value of any type and a boolean disable_preproc_auto_orient as input. The function returns a NumPy array representing the loaded image in RGB format. The function internally calls another function load_image to load the image and determine if it is in BGR format. If the image is in BGR format, it converts it to RGB. The output of the function is the loaded image in RGB format.",
+    "function_name": "load_image_rgb",
+    "ground_truth": "inference/core/utils/image_utils.py",
+    "test": "tests/inference/unit_tests/core/utils/test_image_utils.py::test_load_image_when_load_should_succeed_from_known_type",
+    "class": "",
+    "stage": "Pre-Post processing",
+    "task": "Classification",
+    "data": "image"
+}

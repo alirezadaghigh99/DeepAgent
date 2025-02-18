@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: Classification
+data: Image
+
+prompt:
+Create a Python function `_torch_svd_cast` that enables the use of Singular Value Decomposition (SVD) for tensors with data types other than `float32` or `float64`. The function returns a tuple containing the three components of the SVD (U, S, V). The function raises a `ValueError` if the input is not a tensor.
+
+ ground Truth:kornia/utils/helpers.py#L175
+
+ repo:kornia
+
+ function:_torch_svd_cast
+ 
+ test_cases:tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT

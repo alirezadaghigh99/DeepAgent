@@ -1,0 +1,458 @@
+output file:
+processed_scikit-learnorthogonal_mp_gram172.json
+function:
+orthogonal_mp_gram
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_gram_numerical_consistency', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_orthogonal_mp_gram_readonly FAILED', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_tol FAILED', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_path FAILED', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_unreachable_accuracy FAILED', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_perfect_signal_recovery FAILED', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_return_path_prop_with_gram FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_with_without_gram_tol', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_with_without_gram FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_gram_dtype_match[float32]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_unreachable_accuracy', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_orthogonal_mp_gram_readonly', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_correct_shapes_gram', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_return_path_prop_with_gram', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_perfect_signal_recovery', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_with_without_gram', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_gram_dtype_match[float32] FAILED', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_gram_numerical_consistency FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_path', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_correct_shapes_gram FAILED', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_with_without_gram_tol FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_tol', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_reaches_least_squares', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_reaches_least_squares FAILED'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.9.0, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/scikit-learn/scikit-learn
+configfile: setup.cfg
+plugins: cov-6.0.0
+collecting ... collected 23 items
+
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_correct_shapes I: Seeding RNGs with 177471471
+PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_correct_shapes_gram FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_n_nonzero_coefs PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_tol FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_with_without_gram FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_with_without_gram_tol FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_unreachable_accuracy FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_bad_input[keyword_params0-positional_params0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_bad_input[keyword_params0-positional_params1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_perfect_signal_recovery FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_orthogonal_mp_gram_readonly FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_estimator PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_estimator_n_nonzero_coefs PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_identical_regressors PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_swapped_regressors PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_no_atoms PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_path FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_return_path_prop_with_gram FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_cv PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_reaches_least_squares FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_gram_dtype_match[float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_gram_dtype_match[float64] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_gram_numerical_consistency FAILED
+
+=================================== FAILURES ===================================
+___________________________ test_correct_shapes_gram ___________________________
+
+    def test_correct_shapes_gram():
+>       assert orthogonal_mp_gram(G, Xy[:, 0], n_nonzero_coefs=5).shape == (n_features,)
+E       AssertionError
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py:47: AssertionError
+___________________________________ test_tol ___________________________________
+
+    def test_tol():
+        tol = 0.5
+        gamma = orthogonal_mp(X, y[:, 0], tol=tol)
+        gamma_gram = orthogonal_mp(X, y[:, 0], tol=tol, precompute=True)
+        assert np.sum((y[:, 0] - np.dot(X, gamma)) ** 2) <= tol
+>       assert np.sum((y[:, 0] - np.dot(X, gamma_gram)) ** 2) <= tol
+E       AssertionError
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py:64: AssertionError
+____________________________ test_with_without_gram ____________________________
+
+    def test_with_without_gram():
+>       assert_array_almost_equal(
+            orthogonal_mp(X, y, n_nonzero_coefs=5),
+            orthogonal_mp(X, y, n_nonzero_coefs=5, precompute=True),
+        )
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py:68: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/local/lib/python3.9/contextlib.py:79: in inner
+    return func(*args, **kwds)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/lib/python3.9/site-packages/numpy/_utils/__init__.py:85: in wrapper
+    return fun(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (<function assert_array_almost_equal.<locals>.compare at 0x71cd72822160>, array([[ 0.        ,  0.        ,  0.       ...      ,  0.        ],
+       [ 0.        ,  0.        ,  0.        ],
+       [ 0.        ,  0.        ,  0.        ]]))
+kwds = {'err_msg': '', 'header': 'Arrays are not almost equal to 6 decimals', 'precision': 6, 'verbose': True}
+
+    @wraps(func)
+    def inner(*args, **kwds):
+        with self._recreate_cm():
+>           return func(*args, **kwds)
+E           AssertionError: 
+E           Arrays are not almost equal to 6 decimals
+E           
+E           Mismatched elements: 19 / 105 (18.1%)
+E           Max absolute difference among violations: 1.90890194
+E           Max relative difference among violations: 43.22358574
+E            ACTUAL: array([[ 0.      ,  0.      ,  0.      ],
+E                  [ 0.      ,  0.      ,  0.      ],
+E                  [ 0.      ,  0.685979,  0.      ],...
+E            DESIRED: array([[ 0.      ,  0.      ,  0.      ],
+E                  [ 0.      ,  0.      ,  0.      ],
+E                  [ 0.      ,  0.      ,  0.      ],...
+
+/usr/local/lib/python3.9/contextlib.py:79: AssertionError
+__________________________ test_with_without_gram_tol __________________________
+
+    def test_with_without_gram_tol():
+>       assert_array_almost_equal(
+            orthogonal_mp(X, y, tol=1.0), orthogonal_mp(X, y, tol=1.0, precompute=True)
+        )
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py:75: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/local/lib/python3.9/contextlib.py:79: in inner
+    return func(*args, **kwds)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/lib/python3.9/site-packages/numpy/_utils/__init__.py:85: in wrapper
+    return fun(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (<function assert_array_almost_equal.<locals>.compare at 0x71cd6359a430>, array([[ 0.        ,  0.        ,  0.       ...      ,  0.        ],
+       [ 0.        ,  0.        ,  0.        ],
+       [ 0.        ,  0.        ,  0.        ]]))
+kwds = {'err_msg': '', 'header': 'Arrays are not almost equal to 6 decimals', 'precision': 6, 'verbose': True}
+
+    @wraps(func)
+    def inner(*args, **kwds):
+        with self._recreate_cm():
+>           return func(*args, **kwds)
+E           AssertionError: 
+E           Arrays are not almost equal to 6 decimals
+E           
+E           Mismatched elements: 19 / 105 (18.1%)
+E           Max absolute difference among violations: 1.90890194
+E           Max relative difference among violations: 43.22358574
+E            ACTUAL: array([[ 0.      ,  0.      ,  0.      ],
+E                  [ 0.      ,  0.      ,  0.      ],
+E                  [ 0.      ,  0.685979,  0.      ],...
+E            DESIRED: array([[ 0.      ,  0.      ,  0.      ],
+E                  [ 0.      ,  0.      ,  0.      ],
+E                  [ 0.      ,  0.      ,  0.      ],...
+
+/usr/local/lib/python3.9/contextlib.py:79: AssertionError
+__________________________ test_unreachable_accuracy ___________________________
+
+    def test_unreachable_accuracy():
+        assert_array_almost_equal(
+            orthogonal_mp(X, y, tol=0), orthogonal_mp(X, y, n_nonzero_coefs=n_features)
+        )
+        warning_message = (
+            "Orthogonal matching pursuit ended prematurely "
+            "due to linear dependence in the dictionary. "
+            "The requested precision might not have been met."
+        )
+        with pytest.warns(RuntimeWarning, match=warning_message):
+>           assert_array_almost_equal(
+                orthogonal_mp(X, y, tol=0, precompute=True),
+                orthogonal_mp(X, y, precompute=True, n_nonzero_coefs=n_features),
+            )
+E           Failed: DID NOT WARN. No warnings of type (<class 'RuntimeWarning'>,) were emitted.
+E            Emitted warnings: [].
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py:90: Failed
+_________________________ test_perfect_signal_recovery _________________________
+
+    def test_perfect_signal_recovery():
+        (idx,) = gamma[:, 0].nonzero()
+        gamma_rec = orthogonal_mp(X, y[:, 0], n_nonzero_coefs=5)
+        gamma_gram = orthogonal_mp_gram(G, Xy[:, 0], n_nonzero_coefs=5)
+        assert_array_equal(idx, np.flatnonzero(gamma_rec))
+>       assert_array_equal(idx, np.flatnonzero(gamma_gram))
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py:111: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/lib/python3.9/site-packages/numpy/_utils/__init__.py:85: in wrapper
+    return fun(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (<built-in function eq>, array([17, 18, 29, 31, 32]), array([17, 24, 32]))
+kwds = {'err_msg': '', 'header': 'Arrays are not equal', 'strict': False, 'verbose': True}
+
+    @wraps(func)
+    def inner(*args, **kwds):
+        with self._recreate_cm():
+>           return func(*args, **kwds)
+E           AssertionError: 
+E           Arrays are not equal
+E           
+E           (shapes (5,), (3,) mismatch)
+E            ACTUAL: array([17, 18, 29, 31, 32])
+E            DESIRED: array([17, 24, 32])
+
+/usr/local/lib/python3.9/contextlib.py:79: AssertionError
+_______________________ test_orthogonal_mp_gram_readonly _______________________
+
+    def test_orthogonal_mp_gram_readonly():
+        # Non-regression test for:
+        # https://github.com/scikit-learn/scikit-learn/issues/5956
+        (idx,) = gamma[:, 0].nonzero()
+        G_readonly = G.copy()
+        G_readonly.setflags(write=False)
+        Xy_readonly = Xy.copy()
+        Xy_readonly.setflags(write=False)
+        gamma_gram = orthogonal_mp_gram(
+            G_readonly, Xy_readonly[:, 0], n_nonzero_coefs=5, copy_Gram=False, copy_Xy=False
+        )
+>       assert_array_equal(idx, np.flatnonzero(gamma_gram))
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py:127: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/lib/python3.9/site-packages/numpy/_utils/__init__.py:85: in wrapper
+    return fun(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (<built-in function eq>, array([17, 18, 29, 31, 32]), array([17, 24, 32]))
+kwds = {'err_msg': '', 'header': 'Arrays are not equal', 'strict': False, 'verbose': True}
+
+    @wraps(func)
+    def inner(*args, **kwds):
+        with self._recreate_cm():
+>           return func(*args, **kwds)
+E           AssertionError: 
+E           Arrays are not equal
+E           
+E           (shapes (5,), (3,) mismatch)
+E            ACTUAL: array([17, 18, 29, 31, 32])
+E            DESIRED: array([17, 24, 32])
+
+/usr/local/lib/python3.9/contextlib.py:79: AssertionError
+________________________________ test_omp_path _________________________________
+
+    def test_omp_path():
+        path = orthogonal_mp(X, y, n_nonzero_coefs=5, return_path=True)
+        last = orthogonal_mp(X, y, n_nonzero_coefs=5, return_path=False)
+        assert path.shape == (n_features, n_targets, 5)
+        assert_array_almost_equal(path[:, :, -1], last)
+        path = orthogonal_mp_gram(G, Xy, n_nonzero_coefs=5, return_path=True)
+        last = orthogonal_mp_gram(G, Xy, n_nonzero_coefs=5, return_path=False)
+>       assert path.shape == (n_features, n_targets, 5)
+E       AssertionError
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py:217: AssertionError
+_____________________ test_omp_return_path_prop_with_gram ______________________
+
+    def test_omp_return_path_prop_with_gram():
+        path = orthogonal_mp(X, y, n_nonzero_coefs=5, return_path=True, precompute=True)
+        last = orthogonal_mp(X, y, n_nonzero_coefs=5, return_path=False, precompute=True)
+>       assert path.shape == (n_features, n_targets, 5)
+E       AssertionError
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py:224: AssertionError
+________________________ test_omp_reaches_least_squares ________________________
+
+    def test_omp_reaches_least_squares():
+        # Use small simple data; it's a sanity check but OMP can stop early
+        rng = check_random_state(0)
+        n_samples, n_features = (10, 8)
+        n_targets = 3
+        X = rng.randn(n_samples, n_features)
+        Y = rng.randn(n_samples, n_targets)
+        omp = OrthogonalMatchingPursuit(n_nonzero_coefs=n_features)
+        lstsq = LinearRegression()
+>       omp.fit(X, Y)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py:251: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/base.py:1330: in wrapper
+    return fit_method(estimator, *args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = OrthogonalMatchingPursuit(n_nonzero_coefs=8)
+X = array([[ 1.43827488,  0.97980299,  1.31175998,  1.7845787 ,  1.93079174,
+        -0.97373692,  0.91514616, -0.06942718...     [ 0.81362322, -0.65518004,  0.73536363, -1.14112459, -0.8075634 ,
+        -0.57530871, -0.34649479,  0.13809537]])
+y = array([[-0.89567591,  0.32170813, -0.39182998],
+       [-1.26676976,  0.90913384,  1.03839676],
+       [ 1.4482535 , -...4960335,  0.11190429],
+       [-0.90364948,  1.36450283, -1.2711114 ],
+       [-0.47798088,  1.34382367,  0.62302237]])
+
+    @_fit_context(prefer_skip_nested_validation=True)
+    def fit(self, X, y):
+        """Fit the model using X, y as training data.
+    
+        Parameters
+        ----------
+        X : array-like of shape (n_samples, n_features)
+            Training data.
+    
+        y : array-like of shape (n_samples,) or (n_samples, n_targets)
+            Target values. Will be cast to X's dtype if necessary.
+    
+        Returns
+        -------
+        self : object
+            Returns an instance of self.
+        """
+        X, y = validate_data(self, X, y, multi_output=True, y_numeric=True)
+        n_features = X.shape[1]
+        X, y, X_offset, y_offset, X_scale, Gram, Xy = _pre_fit(X, y, None, self.precompute, self.fit_intercept, copy=True)
+        if y.ndim == 1:
+            y = y[:, np.newaxis]
+        if self.n_nonzero_coefs is None and self.tol is None:
+            self.n_nonzero_coefs_ = max(int(0.1 * n_features), 1)
+        elif self.tol is not None:
+            self.n_nonzero_coefs_ = None
+        else:
+            self.n_nonzero_coefs_ = self.n_nonzero_coefs
+        if Gram is False:
+            coef_, self.n_iter_ = orthogonal_mp(X, y, n_nonzero_coefs=self.n_nonzero_coefs_, tol=self.tol, precompute=False, copy_X=True, return_n_iter=True)
+        else:
+            norms_sq = np.sum(y ** 2, axis=0) if self.tol is not None else None
+>           coef_, self.n_iter_ = orthogonal_mp_gram(Gram, Xy=Xy, n_nonzero_coefs=self.n_nonzero_coefs_, tol=self.tol, norms_squared=norms_sq, copy_Gram=True, copy_Xy=True, return_n_iter=True)
+E           ValueError: too many values to unpack (expected 2)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/_omp.py:619: ValueError
+______________________ test_omp_gram_dtype_match[float32] ______________________
+
+data_type = <class 'numpy.float32'>
+
+    @pytest.mark.parametrize("data_type", (np.float32, np.float64))
+    def test_omp_gram_dtype_match(data_type):
+        # verify matching input data type and output data type
+        coef = orthogonal_mp_gram(
+            G.astype(data_type), Xy.astype(data_type), n_nonzero_coefs=5
+        )
+>       assert coef.dtype == data_type
+E       AssertionError
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py:262: AssertionError
+_____________________ test_omp_gram_numerical_consistency ______________________
+
+    def test_omp_gram_numerical_consistency():
+        # verify numericaly consistency among np.float32 and np.float64
+        coef_32 = orthogonal_mp_gram(
+            G.astype(np.float32), Xy.astype(np.float32), n_nonzero_coefs=5
+        )
+        coef_64 = orthogonal_mp_gram(
+            G.astype(np.float32), Xy.astype(np.float64), n_nonzero_coefs=5
+        )
+>       assert_allclose(coef_32, coef_64)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py:273: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_testing.py:239: in assert_allclose
+    np_assert_allclose(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (<function assert_allclose.<locals>.compare at 0x71cd634b3af0>, array([[ 0.        ,  0.        ,  0.        ],
+      ...      ,  0.        ],
+       [ 0.        ,  0.        ,  0.        ],
+       [ 0.        ,  0.        ,  0.        ]]))
+kwds = {'equal_nan': True, 'err_msg': '', 'header': 'Not equal to tolerance rtol=1e-07, atol=0', 'strict': False, ...}
+
+    @wraps(func)
+    def inner(*args, **kwds):
+        with self._recreate_cm():
+>           return func(*args, **kwds)
+E           AssertionError: 
+E           Not equal to tolerance rtol=1e-07, atol=0
+E           
+E           Mismatched elements: 1 / 105 (0.952%)
+E           Max absolute difference among violations: 4.67133873e-09
+E           Max relative difference among violations: 1.08765701e-07
+E            ACTUAL: array([[ 0.      ,  0.      ,  0.      ],
+E                  [ 0.      ,  0.      ,  0.      ],
+E                  [ 0.      ,  0.      ,  0.      ],...
+E            DESIRED: array([[ 0.      ,  0.      ,  0.      ],
+E                  [ 0.      ,  0.      ,  0.      ],
+E                  [ 0.      ,  0.      ,  0.      ],...
+
+/usr/local/lib/python3.9/contextlib.py:79: AssertionError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_correct_shapes_gram
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_tol
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_with_without_gram
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_with_without_gram_tol
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_unreachable_accuracy
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_perfect_signal_recovery
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_orthogonal_mp_gram_readonly
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_path
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_return_path_prop_with_gram
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_reaches_least_squares
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_gram_dtype_match[float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_gram_numerical_consistency
+================== 12 failed, 11 passed, 6 warnings in 0.39s ===================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.9.0, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/scikit-learn/scikit-learn
+configfile: setup.cfg
+plugins: cov-6.0.0
+collecting ... collected 23 items
+
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_correct_shapes I: Seeding RNGs with 454609284
+PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_correct_shapes_gram PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_n_nonzero_coefs PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_tol PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_with_without_gram PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_with_without_gram_tol PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_unreachable_accuracy PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_bad_input[keyword_params0-positional_params0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_bad_input[keyword_params0-positional_params1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_perfect_signal_recovery PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_orthogonal_mp_gram_readonly PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_estimator PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_estimator_n_nonzero_coefs PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_identical_regressors PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_swapped_regressors PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_no_atoms PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_path PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_return_path_prop_with_gram PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_cv PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_reaches_least_squares PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_gram_dtype_match[float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_gram_dtype_match[float64] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_gram_numerical_consistency PASSED
+
+======================== 23 passed, 6 warnings in 0.23s ========================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.9.0, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/scikit-learn/scikit-learn
+configfile: setup.cfg
+plugins: cov-6.0.0
+collecting ... collected 23 items
+
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_correct_shapes I: Seeding RNGs with 946119656
+PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_correct_shapes_gram PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_n_nonzero_coefs PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_tol PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_with_without_gram PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_with_without_gram_tol PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_unreachable_accuracy PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_bad_input[keyword_params0-positional_params0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_bad_input[keyword_params0-positional_params1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_perfect_signal_recovery PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_orthogonal_mp_gram_readonly PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_estimator PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_estimator_n_nonzero_coefs PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_identical_regressors PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_swapped_regressors PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_no_atoms PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_path PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_return_path_prop_with_gram PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_cv PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_reaches_least_squares PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_gram_dtype_match[float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_gram_dtype_match[float64] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/linear_model/tests/test_omp.py::test_omp_gram_numerical_consistency PASSED
+
+======================== 23 passed, 6 warnings in 0.24s ========================

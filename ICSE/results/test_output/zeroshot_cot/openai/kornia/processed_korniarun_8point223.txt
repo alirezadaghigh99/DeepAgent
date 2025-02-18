@@ -1,0 +1,648 @@
+output file:
+processed_korniarun_8point223.json
+function:
+run_8point
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_smoke[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape[cpu-float32-2-9] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_gradcheck[cpu]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_synthetic_sampson[cpu-float32] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_opencv_svd[cpu-float32] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_synthetic_sampson[cpu-float32]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_noweights[cpu-float32-2-8]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_noweights[cpu-float32-2-8] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_smoke[cpu-float32] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_gradcheck[cpu] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape[cpu-float32-2-9]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_noweights[cpu-float32-3-10] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_noweights[cpu-float32-3-10]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_opencv_svd[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape[cpu-float32-3-10] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape[cpu-float32-3-10]'}
+
+All Test Cases On Generated code:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'jit', 'cudagraphs', 'openxla', 'onnxrt', 'tvm', 'inductor', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 16 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_smoke[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape[cpu-float32-1-8] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape[cpu-float32-2-9] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape[cpu-float32-3-10] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_noweights[cpu-float32-1-8] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_noweights[cpu-float32-2-8] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_noweights[cpu-float32-3-10] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_7point[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_7point[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_7point[cpu-float32-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_opencv_svd[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_7point_opencv[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_synthetic_sampson_7point[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_epipolar_constraint_7point[cpu-float32] XFAIL
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_synthetic_sampson[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_gradcheck[cpu] FAILED
+
+=================================== FAILURES ===================================
+_________________ TestFindFundamental.test_smoke[cpu-float32] __________________
+
+self = <test_fundamental.TestFindFundamental object at 0x7c861021a8f0>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_smoke(self, device, dtype):
+        points1 = torch.rand(1, 8, 2, device=device, dtype=dtype)
+        points2 = torch.rand(1, 8, 2, device=device, dtype=dtype)
+        weights = torch.ones(1, 8, device=device, dtype=dtype)
+>       F_mat = epi.find_fundamental(points1, points2, weights)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py:81: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:173: in find_fundamental
+    result = run_8point(points1, points2, weights)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:112: in run_8point
+    return run_8point(points1, points2, weights)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:50: in run_8point
+    points1_normalized, T1 = normalize_points(points1)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+points = tensor([[[0.2400, 0.3586],
+         [0.6781, 0.5090],
+         [0.6184, 0.1468],
+         [0.3703, 0.2141],
+         [0.1758, 0.5249],
+         [0.2503, 0.1781],
+         [0.9290, 0.7298],
+         [0.5151, 0.7580]]])
+
+    def normalize_points(points):
+        """Normalize a set of points so that the centroid is at the origin and the average distance is √2."""
+        centroid = points.mean(dim=1, keepdim=True)
+        centered_points = points - centroid
+>       scale = torch.sqrt(2.0) / torch.mean(torch.norm(centered_points, dim=2), dim=1, keepdim=True)
+E       TypeError: sqrt(): argument 'input' (position 1) must be Tensor, not float
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:15: TypeError
+_______________ TestFindFundamental.test_shape[cpu-float32-1-8] ________________
+
+self = <test_fundamental.TestFindFundamental object at 0x7c861021ada0>
+batch_size = 1, num_points = 8, device = device(type='cpu')
+dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size, num_points", [(1, 8), (2, 9), (3, 10)])
+    def test_shape(self, batch_size, num_points, device, dtype):
+        B, N = batch_size, num_points
+        points1 = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points2 = torch.rand(B, N, 2, device=device, dtype=dtype)
+        weights = torch.ones(B, N, device=device, dtype=dtype)
+>       F_mat = epi.find_fundamental(points1, points2, weights)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py:90: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:173: in find_fundamental
+    result = run_8point(points1, points2, weights)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:112: in run_8point
+    return run_8point(points1, points2, weights)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:50: in run_8point
+    points1_normalized, T1 = normalize_points(points1)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+points = tensor([[[0.9967, 0.8752],
+         [0.5787, 0.2852],
+         [0.9735, 0.4331],
+         [0.5388, 0.7284],
+         [0.2410, 0.8489],
+         [0.6885, 0.1634],
+         [0.6944, 0.3583],
+         [0.7223, 0.4277]]])
+
+    def normalize_points(points):
+        """Normalize a set of points so that the centroid is at the origin and the average distance is √2."""
+        centroid = points.mean(dim=1, keepdim=True)
+        centered_points = points - centroid
+>       scale = torch.sqrt(2.0) / torch.mean(torch.norm(centered_points, dim=2), dim=1, keepdim=True)
+E       TypeError: sqrt(): argument 'input' (position 1) must be Tensor, not float
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:15: TypeError
+_______________ TestFindFundamental.test_shape[cpu-float32-2-9] ________________
+
+self = <test_fundamental.TestFindFundamental object at 0x7c861021ace0>
+batch_size = 2, num_points = 9, device = device(type='cpu')
+dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size, num_points", [(1, 8), (2, 9), (3, 10)])
+    def test_shape(self, batch_size, num_points, device, dtype):
+        B, N = batch_size, num_points
+        points1 = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points2 = torch.rand(B, N, 2, device=device, dtype=dtype)
+        weights = torch.ones(B, N, device=device, dtype=dtype)
+>       F_mat = epi.find_fundamental(points1, points2, weights)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py:90: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:173: in find_fundamental
+    result = run_8point(points1, points2, weights)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:112: in run_8point
+    return run_8point(points1, points2, weights)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:50: in run_8point
+    points1_normalized, T1 = normalize_points(points1)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+points = tensor([[[0.6767, 0.7724],
+         [0.1370, 0.0103],
+         [0.6316, 0.3277],
+         [0.4630, 0.8479],
+         [... 0.6138],
+         [0.5075, 0.1093],
+         [0.8242, 0.2626],
+         [0.9425, 0.7416],
+         [0.9408, 0.0359]]])
+
+    def normalize_points(points):
+        """Normalize a set of points so that the centroid is at the origin and the average distance is √2."""
+        centroid = points.mean(dim=1, keepdim=True)
+        centered_points = points - centroid
+>       scale = torch.sqrt(2.0) / torch.mean(torch.norm(centered_points, dim=2), dim=1, keepdim=True)
+E       TypeError: sqrt(): argument 'input' (position 1) must be Tensor, not float
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:15: TypeError
+_______________ TestFindFundamental.test_shape[cpu-float32-3-10] _______________
+
+self = <test_fundamental.TestFindFundamental object at 0x7c861021b040>
+batch_size = 3, num_points = 10, device = device(type='cpu')
+dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size, num_points", [(1, 8), (2, 9), (3, 10)])
+    def test_shape(self, batch_size, num_points, device, dtype):
+        B, N = batch_size, num_points
+        points1 = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points2 = torch.rand(B, N, 2, device=device, dtype=dtype)
+        weights = torch.ones(B, N, device=device, dtype=dtype)
+>       F_mat = epi.find_fundamental(points1, points2, weights)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py:90: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:173: in find_fundamental
+    result = run_8point(points1, points2, weights)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:112: in run_8point
+    return run_8point(points1, points2, weights)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:50: in run_8point
+    points1_normalized, T1 = normalize_points(points1)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+points = tensor([[[0.2232, 0.9605],
+         [0.8283, 0.7258],
+         [0.5986, 0.6624],
+         [0.7207, 0.6716],
+         [... 0.9495],
+         [0.0216, 0.4650],
+         [0.1945, 0.3181],
+         [0.3887, 0.7752],
+         [0.2617, 0.7795]]])
+
+    def normalize_points(points):
+        """Normalize a set of points so that the centroid is at the origin and the average distance is √2."""
+        centroid = points.mean(dim=1, keepdim=True)
+        centered_points = points - centroid
+>       scale = torch.sqrt(2.0) / torch.mean(torch.norm(centered_points, dim=2), dim=1, keepdim=True)
+E       TypeError: sqrt(): argument 'input' (position 1) must be Tensor, not float
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:15: TypeError
+__________ TestFindFundamental.test_shape_noweights[cpu-float32-1-8] ___________
+
+self = <test_fundamental.TestFindFundamental object at 0x7c861021b3d0>
+batch_size = 1, num_points = 8, device = device(type='cpu')
+dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size, num_points", [(1, 8), (2, 8), (3, 10)])
+    def test_shape_noweights(self, batch_size, num_points, device, dtype):
+        B, N = batch_size, num_points
+        points1 = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points2 = torch.rand(B, N, 2, device=device, dtype=dtype)
+        weights = None
+>       F_mat = epi.find_fundamental(points1, points2, weights)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py:99: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:173: in find_fundamental
+    result = run_8point(points1, points2, weights)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:112: in run_8point
+    return run_8point(points1, points2, weights)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:50: in run_8point
+    points1_normalized, T1 = normalize_points(points1)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+points = tensor([[[0.0433, 0.6845],
+         [0.2947, 0.1325],
+         [0.4599, 0.4511],
+         [0.0164, 0.5736],
+         [0.3791, 0.4840],
+         [0.5741, 0.6435],
+         [0.1174, 0.5054],
+         [0.2845, 0.1692]]])
+
+    def normalize_points(points):
+        """Normalize a set of points so that the centroid is at the origin and the average distance is √2."""
+        centroid = points.mean(dim=1, keepdim=True)
+        centered_points = points - centroid
+>       scale = torch.sqrt(2.0) / torch.mean(torch.norm(centered_points, dim=2), dim=1, keepdim=True)
+E       TypeError: sqrt(): argument 'input' (position 1) must be Tensor, not float
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:15: TypeError
+__________ TestFindFundamental.test_shape_noweights[cpu-float32-2-8] ___________
+
+self = <test_fundamental.TestFindFundamental object at 0x7c861021b310>
+batch_size = 2, num_points = 8, device = device(type='cpu')
+dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size, num_points", [(1, 8), (2, 8), (3, 10)])
+    def test_shape_noweights(self, batch_size, num_points, device, dtype):
+        B, N = batch_size, num_points
+        points1 = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points2 = torch.rand(B, N, 2, device=device, dtype=dtype)
+        weights = None
+>       F_mat = epi.find_fundamental(points1, points2, weights)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py:99: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:173: in find_fundamental
+    result = run_8point(points1, points2, weights)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:112: in run_8point
+    return run_8point(points1, points2, weights)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:50: in run_8point
+    points1_normalized, T1 = normalize_points(points1)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+points = tensor([[[0.6018, 0.1193],
+         [0.5171, 0.7175],
+         [0.5014, 0.7295],
+         [0.9242, 0.1566],
+         [... 0.2570],
+         [0.3179, 0.7571],
+         [0.1058, 0.9411],
+         [0.2918, 0.6922],
+         [0.9811, 0.3289]]])
+
+    def normalize_points(points):
+        """Normalize a set of points so that the centroid is at the origin and the average distance is √2."""
+        centroid = points.mean(dim=1, keepdim=True)
+        centered_points = points - centroid
+>       scale = torch.sqrt(2.0) / torch.mean(torch.norm(centered_points, dim=2), dim=1, keepdim=True)
+E       TypeError: sqrt(): argument 'input' (position 1) must be Tensor, not float
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:15: TypeError
+__________ TestFindFundamental.test_shape_noweights[cpu-float32-3-10] __________
+
+self = <test_fundamental.TestFindFundamental object at 0x7c861021b670>
+batch_size = 3, num_points = 10, device = device(type='cpu')
+dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size, num_points", [(1, 8), (2, 8), (3, 10)])
+    def test_shape_noweights(self, batch_size, num_points, device, dtype):
+        B, N = batch_size, num_points
+        points1 = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points2 = torch.rand(B, N, 2, device=device, dtype=dtype)
+        weights = None
+>       F_mat = epi.find_fundamental(points1, points2, weights)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py:99: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:173: in find_fundamental
+    result = run_8point(points1, points2, weights)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:112: in run_8point
+    return run_8point(points1, points2, weights)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:50: in run_8point
+    points1_normalized, T1 = normalize_points(points1)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+points = tensor([[[0.7191, 0.1869],
+         [0.2919, 0.1928],
+         [0.7286, 0.9319],
+         [0.1273, 0.1833],
+         [... 0.8457],
+         [0.3286, 0.6447],
+         [0.9293, 0.0509],
+         [0.0718, 0.0125],
+         [0.1814, 0.7147]]])
+
+    def normalize_points(points):
+        """Normalize a set of points so that the centroid is at the origin and the average distance is √2."""
+        centroid = points.mean(dim=1, keepdim=True)
+        centered_points = points - centroid
+>       scale = torch.sqrt(2.0) / torch.mean(torch.norm(centered_points, dim=2), dim=1, keepdim=True)
+E       TypeError: sqrt(): argument 'input' (position 1) must be Tensor, not float
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:15: TypeError
+_______________ TestFindFundamental.test_opencv_svd[cpu-float32] _______________
+
+self = <test_fundamental.TestFindFundamental object at 0x7c861021bf10>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_opencv_svd(self, device, dtype):
+        points1 = torch.tensor(
+            [
+                [
+                    [0.8569, 0.5982],
+                    [0.0059, 0.9649],
+                    [0.1968, 0.8846],
+                    [0.6084, 0.3467],
+                    [0.9633, 0.5274],
+                    [0.8941, 0.8939],
+                    [0.0863, 0.5133],
+                    [0.2645, 0.8882],
+                    [0.2411, 0.3045],
+                    [0.8199, 0.4107],
+                ]
+            ],
+            device=device,
+            dtype=dtype,
+        )
+    
+        points2 = torch.tensor(
+            [
+                [
+                    [0.0928, 0.3013],
+                    [0.0989, 0.9649],
+                    [0.0341, 0.4827],
+                    [0.8294, 0.4469],
+                    [0.2230, 0.2998],
+                    [0.1722, 0.8182],
+                    [0.5264, 0.8869],
+                    [0.8908, 0.1233],
+                    [0.2338, 0.7663],
+                    [0.4466, 0.5696],
+                ]
+            ],
+            device=device,
+            dtype=dtype,
+        )
+    
+        weights = torch.ones(1, 10, device=device, dtype=dtype)
+    
+        # generated with OpenCV using above points
+        # import cv2
+        # Fm_expected, _ = cv2.findFundamentalMat(
+        #   points1.detach().numpy().reshape(-1, 1, 2),
+        #   points2.detach().numpy().reshape(-1, 1, 2), cv2.FM_8POINT)
+    
+        Fm_expected = torch.tensor(
+            [
+                [
+                    [-0.47408533, 0.22033807, -0.00346677],
+                    [0.54935973, 1.31080955, -1.25028275],
+                    [-0.36690215, -1.08143769, 1.0],
+                ]
+            ],
+            device=device,
+            dtype=dtype,
+        )
+    
+>       F_mat = epi.find_fundamental(points1, points2, weights)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py:170: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:173: in find_fundamental
+    result = run_8point(points1, points2, weights)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:112: in run_8point
+    return run_8point(points1, points2, weights)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:50: in run_8point
+    points1_normalized, T1 = normalize_points(points1)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+points = tensor([[[0.8569, 0.5982],
+         [0.0059, 0.9649],
+         [0.1968, 0.8846],
+         [0.6084, 0.3467],
+         [... 0.8939],
+         [0.0863, 0.5133],
+         [0.2645, 0.8882],
+         [0.2411, 0.3045],
+         [0.8199, 0.4107]]])
+
+    def normalize_points(points):
+        """Normalize a set of points so that the centroid is at the origin and the average distance is √2."""
+        centroid = points.mean(dim=1, keepdim=True)
+        centered_points = points - centroid
+>       scale = torch.sqrt(2.0) / torch.mean(torch.norm(centered_points, dim=2), dim=1, keepdim=True)
+E       TypeError: sqrt(): argument 'input' (position 1) must be Tensor, not float
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:15: TypeError
+___________ TestFindFundamental.test_synthetic_sampson[cpu-float32] ____________
+
+self = <test_fundamental.TestFindFundamental object at 0x7c861021ac50>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_synthetic_sampson(self, device, dtype):
+        scene: Dict[str, torch.Tensor] = generate_two_view_random_scene(device, dtype)
+    
+        x1 = scene["x1"]
+        x2 = scene["x2"]
+    
+        weights = torch.ones_like(x1)[..., 0]
+>       F_est = epi.find_fundamental(x1, x2, weights)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py:270: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:173: in find_fundamental
+    result = run_8point(points1, points2, weights)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:112: in run_8point
+    return run_8point(points1, points2, weights)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:50: in run_8point
+    points1_normalized, T1 = normalize_points(points1)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+points = tensor([[[ 61.2670,  86.4110],
+         [ 62.0624,  68.9196],
+         [ 61.1170,  87.9600],
+         [ 62.7735,  81.8...   [ 60.9506, 107.1586],
+         [ 57.9049,  94.0243],
+         [ 77.3866,  89.1877],
+         [ 55.3328,  99.2143]]])
+
+    def normalize_points(points):
+        """Normalize a set of points so that the centroid is at the origin and the average distance is √2."""
+        centroid = points.mean(dim=1, keepdim=True)
+        centered_points = points - centroid
+>       scale = torch.sqrt(2.0) / torch.mean(torch.norm(centered_points, dim=2), dim=1, keepdim=True)
+E       TypeError: sqrt(): argument 'input' (position 1) must be Tensor, not float
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:15: TypeError
+___________________ TestFindFundamental.test_gradcheck[cpu] ____________________
+
+self = <test_fundamental.TestFindFundamental object at 0x7c861024cb80>
+device = device(type='cpu')
+
+    def test_gradcheck(self, device):
+        points1 = torch.rand(1, 10, 2, device=device, dtype=torch.float64, requires_grad=True)
+        points2 = torch.rand(1, 10, 2, device=device, dtype=torch.float64)
+        weights = torch.ones(1, 10, device=device, dtype=torch.float64)
+>       self.gradcheck(epi.find_fundamental, (points1, points2, weights))
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py:279: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:143: in gradcheck
+    return gradcheck(func, inputs, raise_exception=raise_exception, fast_mode=fast_mode, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2052: in gradcheck
+    return _gradcheck_helper(**args)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2074: in _gradcheck_helper
+    func_out = func(*tupled_inputs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:173: in find_fundamental
+    result = run_8point(points1, points2, weights)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:112: in run_8point
+    return run_8point(points1, points2, weights)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:50: in run_8point
+    points1_normalized, T1 = normalize_points(points1)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+points = tensor([[[0.7384, 0.5241],
+         [0.6234, 0.1261],
+         [0.4192, 0.5905],
+         [0.6571, 0.5640],
+         [...     [0.6792, 0.2233],
+         [0.2898, 0.5188],
+         [0.9017, 0.9187]]], dtype=torch.float64, requires_grad=True)
+
+    def normalize_points(points):
+        """Normalize a set of points so that the centroid is at the origin and the average distance is √2."""
+        centroid = points.mean(dim=1, keepdim=True)
+        centered_points = points - centroid
+>       scale = torch.sqrt(2.0) / torch.mean(torch.norm(centered_points, dim=2), dim=1, keepdim=True)
+E       TypeError: sqrt(): argument 'input' (position 1) must be Tensor, not float
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:15: TypeError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_smoke[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape[cpu-float32-1-8]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape[cpu-float32-2-9]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape[cpu-float32-3-10]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_noweights[cpu-float32-1-8]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_noweights[cpu-float32-2-8]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_noweights[cpu-float32-3-10]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_opencv_svd[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_synthetic_sampson[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_gradcheck[cpu]
+=================== 10 failed, 5 passed, 1 xfailed in 0.49s ====================
+
+
+Final Test Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'jit', 'onnxrt', 'tvm', 'inductor', 'cudagraphs', None, 'openxla'}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 16 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_smoke[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape[cpu-float32-1-8] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape[cpu-float32-2-9] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape[cpu-float32-3-10] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_noweights[cpu-float32-1-8] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_noweights[cpu-float32-2-8] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_noweights[cpu-float32-3-10] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_7point[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_7point[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_7point[cpu-float32-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_opencv_svd[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_7point_opencv[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_synthetic_sampson_7point[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_epipolar_constraint_7point[cpu-float32] XPASS
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_synthetic_sampson[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_gradcheck[cpu] PASSED
+
+======================== 15 passed, 1 xpassed in 0.20s =========================
+
+
+Initial Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'inductor', 'cudagraphs', None, 'onnxrt', 'openxla', 'jit', 'tvm'}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 16 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_smoke[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape[cpu-float32-1-8] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape[cpu-float32-2-9] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape[cpu-float32-3-10] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_noweights[cpu-float32-1-8] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_noweights[cpu-float32-2-8] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_noweights[cpu-float32-3-10] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_7point[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_7point[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_7point[cpu-float32-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_opencv_svd[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_7point_opencv[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_synthetic_sampson_7point[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_epipolar_constraint_7point[cpu-float32] XPASS
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_synthetic_sampson[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_gradcheck[cpu] PASSED
+
+======================== 15 passed, 1 xpassed in 0.21s =========================

@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: Detection
+data: Image
+
+prompt:
+Generate a Python function called motion_from_essential that takes in a torch.Tensor E_mat representing an essential matrix and returns the four possible poses for the decomposition of the Essential matrix. The possible solutions are [R1,t], [R1,-t], [R2,t], [R2,-t]. The function checks the shape of the input tensor and raises an AssertionError if it does not meet the required shape. It returns the four possible solutions in the form of two tensors: Rs with shape (*, 4, 3, 3) and Ts with shape (*, 4, 3, 1).
+
+ ground Truth:kornia/geometry/epipolar/essential.py
+
+ repo:kornia
+
+ function:motion_from_essential
+ 
+ test_cases:tests/geometry/epipolar/test_essential.py::TestMotionFromEssential

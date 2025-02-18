@@ -1,0 +1,24 @@
+stage: 
+task: 
+data: pre-post process
+
+prompt:
+Generate function compute_matrix for following class that returns the canonical matrix representation of a Hermitian matrix.
+
+
+class THermitian(Hermitian):
+    _num_basis_states = 3
+    _eigs = {}
+
+    @staticmethod
+    def compute_matrix(A):
+
+ ground Truth:pennylane/ops/qutrit/observables.py
+
+ repo:pennylane
+
+ function:compute_matrix
+ 
+ test_cases:tests/ops/qutrit/test_qutrit_observables.py 
+ 
+ class:THermitian

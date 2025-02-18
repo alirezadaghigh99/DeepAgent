@@ -1,0 +1,343 @@
+output file:
+processed_pytorch3dsymeig3x338.json
+function:
+symeig3x3
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_gpu FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_gpu', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_cpu', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_cpu FAILED'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 13 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_eigenvalues_cpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_eigenvalues_gpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_inputs_cpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_inputs_gpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_eigenvectors_are_orthonormal_cpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_eigenvectors_are_orthonormal_gpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_cpu FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_gpu FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_eigen_cpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_eigen_gpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_not_nan_or_inf_cpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_not_nan_or_inf_gpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_more_dimensions PASSED
+
+=================================== FAILURES ===================================
+_______________________ TestSymEig3x3.test_gradients_cpu _______________________
+
+self = <tests.test_symeig3x3.TestSymEig3x3 testMethod=test_gradients_cpu>
+
+    def test_gradients_cpu(self):
+>       self._test_gradients(self._cpu)
+
+/local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:134: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:161: in _test_gradients
+    torch.autograd.gradcheck(
+/local/data0/moved_data/pytorch3d/venv/lib/python3.8/site-packages/torch/autograd/gradcheck.py:2053: in gradcheck
+    return _gradcheck_helper(**args)
+/local/data0/moved_data/pytorch3d/venv/lib/python3.8/site-packages/torch/autograd/gradcheck.py:2082: in _gradcheck_helper
+    _gradcheck_real_imag(
+/local/data0/moved_data/pytorch3d/venv/lib/python3.8/site-packages/torch/autograd/gradcheck.py:1492: in _gradcheck_real_imag
+    gradcheck_fn(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+func = <function symeig3x3 at 0x7b3774fc0dc0>
+func_out = (tensor([[-2.4242e+00,  1.3176e+00,  5.8455e+00],
+        [-1.2044e+00,  9.9014e-01,  3.2710e+00],
+        [-2.1277e+0... -0.0045,  0.7504],
+         [-0.0968, -0.9921,  0.0793]]], dtype=torch.float64,
+       grad_fn=<LinalgEighBackward0>))
+tupled_inputs = (tensor([[[ 3.7130e+00, -3.1315e+00, -3.8792e-02],
+         [-3.1315e+00,  4.6025e-01,  1.9810e+00],
+         [-3.8792...5773e-01],
+         [ 1.9179e-02,  2.5773e-01,  4.0553e-01]]], dtype=torch.float64,
+       grad_fn=<ToCopyBackward0>),)
+outputs = (tensor([[-2.4242e+00,  1.3176e+00,  5.8455e+00],
+        [-1.2044e+00,  9.9014e-01,  3.2710e+00],
+        [-2.1277e+0... -0.0045,  0.7504],
+         [-0.0968, -0.9921,  0.0793]]], dtype=torch.float64,
+       grad_fn=<LinalgEighBackward0>))
+eps = 1e-06, rtol = 0.01, atol = 0.01, check_grad_dtypes = False
+nondet_tol = 0.0
+
+    def _slow_gradcheck(
+        func,
+        func_out,
+        tupled_inputs,
+        outputs,
+        eps,
+        rtol,
+        atol,
+        check_grad_dtypes,
+        nondet_tol,
+        *,
+        use_forward_ad=False,
+        complex_indices=None,
+        test_imag=False,
+        masked=False,
+    ):
+        func_out = _as_tuple(func_out)
+        if not outputs:
+            return _check_no_differentiable_outputs(
+                func, tupled_inputs, func_out, eps=eps, is_forward_ad=use_forward_ad
+            )
+        tupled_inputs_numerical = tupled_inputs if masked else _densify(tupled_inputs)
+    
+        numerical = _transpose(
+            _get_numerical_jacobian(
+                func,
+                tupled_inputs_numerical,
+                func_out,
+                eps=eps,
+                is_forward_ad=use_forward_ad,
+            )
+        )
+        # Note: [numerical vs analytical output length]
+        # The numerical path returns jacobian quantity for all outputs, even if requires_grad of that
+        # output is False. This behavior is necessary for _check_no_differentiable_outputs to work.
+        numerical = [nj for o, nj in zip(func_out, numerical) if o.requires_grad]
+        if use_forward_ad:
+            analytical_forward = _get_analytical_jacobian_forward_ad(
+                func, tupled_inputs, func_out, check_grad_dtypes=check_grad_dtypes
+            )
+    
+            for i, n_per_out in enumerate(numerical):
+                for j, n in enumerate(n_per_out):
+                    a = analytical_forward[j][i]
+                    if not _allclose_with_type_promotion(a, n.to(a.device), rtol, atol):
+                        raise GradcheckError(
+                            _get_notallclose_msg(
+                                a, n, i, j, complex_indices, test_imag, is_forward_ad=True
+                            )
+                        )
+        else:
+            for i, o in enumerate(outputs):
+                analytical = _check_analytical_jacobian_attributes(
+                    tupled_inputs, o, nondet_tol, check_grad_dtypes
+                )
+    
+                for j, (a, n) in enumerate(zip(analytical, numerical[i])):
+                    if not _allclose_with_type_promotion(a, n.to(a.device), rtol, atol):
+>                       raise GradcheckError(
+                            _get_notallclose_msg(a, n, i, j, complex_indices, test_imag)
+                        )
+E                       torch.autograd.gradcheck.GradcheckError: Jacobian mismatch for output 0 with respect to input 0,
+E                       numerical:tensor([[ 0.1519,  0.1936,  0.6545,  ...,  0.0000,  0.0000,  0.0000],
+E                               [ 0.0000,  0.0000,  0.0000,  ...,  0.0000,  0.0000,  0.0000],
+E                               [ 0.0000,  0.0000,  0.0000,  ...,  0.0000,  0.0000,  0.0000],
+E                               ...,
+E                               [ 0.0000,  0.0000,  0.0000,  ..., -0.1441,  0.2481, -0.1040],
+E                               [ 0.0000,  0.0000,  0.0000,  ..., -0.1280,  0.0090,  0.1190],
+E                               [ 0.0000,  0.0000,  0.0000,  ...,  0.0094,  0.9843,  0.0063]],
+E                              dtype=torch.float64)
+E                       analytical:tensor([[ 0.1519,  0.1936,  0.6545,  ...,  0.0000,  0.0000,  0.0000],
+E                               [ 0.3001,  0.1435, -0.4436,  ...,  0.0000,  0.0000,  0.0000],
+E                               [-0.1969,  0.3681, -0.1713,  ...,  0.0000,  0.0000,  0.0000],
+E                               ...,
+E                               [ 0.0000,  0.0000,  0.0000,  ..., -0.0720,  0.1241, -0.0520],
+E                               [ 0.0000,  0.0000,  0.0000,  ..., -0.0640,  0.0045,  0.0595],
+E                               [ 0.0000,  0.0000,  0.0000,  ...,  0.0094,  0.9843,  0.0063]],
+E                              dtype=torch.float64)
+
+/local/data0/moved_data/pytorch3d/venv/lib/python3.8/site-packages/torch/autograd/gradcheck.py:1633: GradcheckError
+_______________________ TestSymEig3x3.test_gradients_gpu _______________________
+
+self = <tests.test_symeig3x3.TestSymEig3x3 testMethod=test_gradients_gpu>
+
+    def test_gradients_gpu(self):
+>       self._test_gradients(self._gpu)
+
+/local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:137: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:161: in _test_gradients
+    torch.autograd.gradcheck(
+/local/data0/moved_data/pytorch3d/venv/lib/python3.8/site-packages/torch/autograd/gradcheck.py:2053: in gradcheck
+    return _gradcheck_helper(**args)
+/local/data0/moved_data/pytorch3d/venv/lib/python3.8/site-packages/torch/autograd/gradcheck.py:2082: in _gradcheck_helper
+    _gradcheck_real_imag(
+/local/data0/moved_data/pytorch3d/venv/lib/python3.8/site-packages/torch/autograd/gradcheck.py:1492: in _gradcheck_real_imag
+    gradcheck_fn(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+func = <function symeig3x3 at 0x7b3774fc0dc0>
+func_out = (tensor([[-0.8130,  0.3205,  4.5122],
+        [-0.6698,  0.9357,  1.8738],
+        [-0.4386,  0.6072,  6.0776],
+      ...],
+         [-0.0873,  0.9956,  0.0346]]], device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgEighBackward0>))
+tupled_inputs = (tensor([[[ 3.7643e-02,  1.8351e+00,  1.1174e-01],
+         [ 1.8351e+00,  3.7033e+00, -5.3383e-01],
+         [ 1.1174...   [-2.6407e-01,  4.6411e-01,  4.1128e+00]]], device='cuda:0',
+       dtype=torch.float64, grad_fn=<ToCopyBackward0>),)
+outputs = (tensor([[-0.8130,  0.3205,  4.5122],
+        [-0.6698,  0.9357,  1.8738],
+        [-0.4386,  0.6072,  6.0776],
+      ...],
+         [-0.0873,  0.9956,  0.0346]]], device='cuda:0', dtype=torch.float64,
+       grad_fn=<LinalgEighBackward0>))
+eps = 1e-06, rtol = 0.01, atol = 0.01, check_grad_dtypes = False
+nondet_tol = 0.0
+
+    def _slow_gradcheck(
+        func,
+        func_out,
+        tupled_inputs,
+        outputs,
+        eps,
+        rtol,
+        atol,
+        check_grad_dtypes,
+        nondet_tol,
+        *,
+        use_forward_ad=False,
+        complex_indices=None,
+        test_imag=False,
+        masked=False,
+    ):
+        func_out = _as_tuple(func_out)
+        if not outputs:
+            return _check_no_differentiable_outputs(
+                func, tupled_inputs, func_out, eps=eps, is_forward_ad=use_forward_ad
+            )
+        tupled_inputs_numerical = tupled_inputs if masked else _densify(tupled_inputs)
+    
+        numerical = _transpose(
+            _get_numerical_jacobian(
+                func,
+                tupled_inputs_numerical,
+                func_out,
+                eps=eps,
+                is_forward_ad=use_forward_ad,
+            )
+        )
+        # Note: [numerical vs analytical output length]
+        # The numerical path returns jacobian quantity for all outputs, even if requires_grad of that
+        # output is False. This behavior is necessary for _check_no_differentiable_outputs to work.
+        numerical = [nj for o, nj in zip(func_out, numerical) if o.requires_grad]
+        if use_forward_ad:
+            analytical_forward = _get_analytical_jacobian_forward_ad(
+                func, tupled_inputs, func_out, check_grad_dtypes=check_grad_dtypes
+            )
+    
+            for i, n_per_out in enumerate(numerical):
+                for j, n in enumerate(n_per_out):
+                    a = analytical_forward[j][i]
+                    if not _allclose_with_type_promotion(a, n.to(a.device), rtol, atol):
+                        raise GradcheckError(
+                            _get_notallclose_msg(
+                                a, n, i, j, complex_indices, test_imag, is_forward_ad=True
+                            )
+                        )
+        else:
+            for i, o in enumerate(outputs):
+                analytical = _check_analytical_jacobian_attributes(
+                    tupled_inputs, o, nondet_tol, check_grad_dtypes
+                )
+    
+                for j, (a, n) in enumerate(zip(analytical, numerical[i])):
+                    if not _allclose_with_type_promotion(a, n.to(a.device), rtol, atol):
+>                       raise GradcheckError(
+                            _get_notallclose_msg(a, n, i, j, complex_indices, test_imag)
+                        )
+E                       torch.autograd.gradcheck.GradcheckError: Jacobian mismatch for output 0 with respect to input 0,
+E                       numerical:tensor([[ 0.7696,  0.0897,  0.1406,  ...,  0.0000,  0.0000,  0.0000],
+E                               [ 0.0000,  0.0000,  0.0000,  ...,  0.0000,  0.0000,  0.0000],
+E                               [ 0.0000,  0.0000,  0.0000,  ...,  0.0000,  0.0000,  0.0000],
+E                               ...,
+E                               [ 0.0000,  0.0000,  0.0000,  ...,  0.0938, -0.1520,  0.0582],
+E                               [ 0.0000,  0.0000,  0.0000,  ..., -0.1465,  0.1090,  0.0375],
+E                               [ 0.0000,  0.0000,  0.0000,  ...,  0.0076,  0.9912,  0.0012]],
+E                              device='cuda:0', dtype=torch.float64)
+E                       analytical:tensor([[ 0.7696,  0.0897,  0.1406,  ...,  0.0000,  0.0000,  0.0000],
+E                               [-0.3418, -0.0036,  0.3454,  ...,  0.0000,  0.0000,  0.0000],
+E                               [-0.2459,  0.2857, -0.0398,  ...,  0.0000,  0.0000,  0.0000],
+E                               ...,
+E                               [ 0.0000,  0.0000,  0.0000,  ...,  0.0469, -0.0760,  0.0291],
+E                               [ 0.0000,  0.0000,  0.0000,  ..., -0.0732,  0.0545,  0.0188],
+E                               [ 0.0000,  0.0000,  0.0000,  ...,  0.0076,  0.9912,  0.0012]],
+E                              device='cuda:0', dtype=torch.float64)
+
+/local/data0/moved_data/pytorch3d/venv/lib/python3.8/site-packages/torch/autograd/gradcheck.py:1633: GradcheckError
+=============================== warnings summary ===============================
+tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_cpu
+tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_gpu
+  /local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:153: UserWarning: Anomaly Detection has been enabled. This mode will increase the runtime and should only be enabled for debugging.
+    with torch.autograd.detect_anomaly():
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_cpu
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_gpu
+=================== 2 failed, 11 passed, 2 warnings in 1.90s ===================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 13 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_eigenvalues_cpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_eigenvalues_gpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_inputs_cpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_inputs_gpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_eigenvectors_are_orthonormal_cpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_eigenvectors_are_orthonormal_gpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_cpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_gpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_eigen_cpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_eigen_gpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_not_nan_or_inf_cpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_not_nan_or_inf_gpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_more_dimensions PASSED
+
+=============================== warnings summary ===============================
+tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_cpu
+tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_gpu
+  /local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:153: UserWarning: Anomaly Detection has been enabled. This mode will increase the runtime and should only be enabled for debugging.
+    with torch.autograd.detect_anomaly():
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 13 passed, 2 warnings in 4.26s ========================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 13 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_eigenvalues_cpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_eigenvalues_gpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_inputs_cpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_degenerate_inputs_gpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_eigenvectors_are_orthonormal_cpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_eigenvectors_are_orthonormal_gpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_cpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_gpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_eigen_cpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_eigen_gpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_not_nan_or_inf_cpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_is_not_nan_or_inf_gpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py::TestSymEig3x3::test_more_dimensions PASSED
+
+=============================== warnings summary ===============================
+tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_cpu
+tests/test_symeig3x3.py::TestSymEig3x3::test_gradients_gpu
+  /local/data0/moved_data/pytorch3d/tests/test_symeig3x3.py:153: UserWarning: Anomaly Detection has been enabled. This mode will increase the runtime and should only be enabled for debugging.
+    with torch.autograd.detect_anomaly():
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 13 passed, 2 warnings in 5.57s ========================

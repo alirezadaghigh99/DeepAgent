@@ -1,0 +1,20 @@
+stage: Model Construction
+task: 
+data: Table
+
+prompt:
+Create a Python function called _find_binning_thresholds that extracts quantiles from a continuous feature. The function takes two parameters: col_data, an array-like object representing the continuous feature to bin, and max_bins, an integer indicating the maximum number of bins to use for non-missing values. 
+
+The function ignores missing values when finding the thresholds and returns an ndarray of shape (min(max_bins, n_unique_values) - 1) containing increasing numeric values that can be used to separate the bins. A value x will be mapped into bin value i if binning_thresholds[i - 1] < x <= binning_thresholds[i].
+
+The function first removes missing values from col_data, sorts the data, and identifies distinct values. If the number of distinct values is less than or equal to max_bins, it calculates midpoints between consecutive distinct values. Otherwise, it computes approximate midpoint percentiles using the percentile function.
+
+The function ensures that there are no +inf thresholds and returns the calculated midpoints as the output.
+
+ ground Truth:sklearn/ensemble/_hist_gradient_boosting/binning.py
+
+ repo:scikit-learn
+
+ function:_find_binning_thresholds
+ 
+ test_cases:sklearn/ensemble/_hist_gradient_boosting/tests/test_binning.py

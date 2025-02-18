@@ -1,0 +1,25 @@
+stage: Image
+task: 
+data: pre-post process
+
+prompt:
+Generate the rt_matrix function that Return the 3x4 rotation-translation matrix  for following class.
+
+        Returns:
+            tensor of shape :math:`(B, 3, 4)`.     ```python
+class PinholeCamera:
+    def __init__(self, intrinsics: Tensor, extrinsics: Tensor, height: Tensor, width: Tensor) -> None:
+        self.height: Tensor = height
+        self.width: Tensor = width
+        self._intrinsics: Tensor = intrinsics
+        se
+
+ ground Truth:kornia/geometry/camera/pinhole.py
+
+ repo:kornia
+
+ function:rotation
+ 
+ class:PinholeCamera
+ 
+ test_cases:tests/geometry/camera/test_pinhole.py

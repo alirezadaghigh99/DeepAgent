@@ -1,0 +1,21 @@
+stage: 
+task: Classification
+data: Training
+
+prompt:
+Generate a Python function called `_compute_tf_loss` that calculates the sigmoid cross entropy loss between output logits and labels using TensorFlow. The inputs are tensors of logits and labels with shapes `(batch_size)` or `(batch_size, tasks)`, and the output is a tensor of loss values.
+
+```python
+class SigmoidCrossEntropy(Loss):
+    def _compute_tf_loss(self, output, labels):
+```
+
+ ground Truth:deepchem/models/losses.py
+
+ repo:deepchem
+
+ function:_compute_tf_loss
+ 
+ test_cases: deepchem/model/tests/test_losses.py
+ 
+ class:SigmoidCrossEntropy

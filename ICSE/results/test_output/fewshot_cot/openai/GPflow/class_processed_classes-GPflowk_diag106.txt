@@ -1,0 +1,677 @@
+output file:
+processed_classes-GPflowk_diag106.json
+function:
+K_diag
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel15] FAILED [ 55%]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel16]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel10]', '../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel10] FAILED [ 52%]', '../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel16] FAILED [ 55%]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel14]', '../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel14] FAILED [ 54%]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel15]'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/GPflow/GPflow/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/GPflow/GPflow
+collecting ... collected 177 items
+
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_rbf_1d[2.3-1.4] PASSED [  0%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_rq_1d[2.3-1.4] PASSED [  1%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_arccosine_1d_and_3d[3-0.6-2.3-1-1.7-0] PASSED [  1%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_arccosine_1d_and_3d[3-0.6-2.3-1-1.7-1] PASSED [  2%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_arccosine_1d_and_3d[3-0.6-2.3-1-1.7-2] PASSED [  2%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_arccosine_1d_and_3d[3-0.6-2.3-3-1.7-0] PASSED [  3%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_arccosine_1d_and_3d[3-0.6-2.3-3-1.7-1] PASSED [  3%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_arccosine_1d_and_3d[3-0.6-2.3-3-1.7-2] PASSED [  4%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_arccosine_1d_and_3d[3-0.6-2.3-3-weight_variances2-0] PASSED [  5%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_arccosine_1d_and_3d[3-0.6-2.3-3-weight_variances2-1] PASSED [  5%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_arccosine_1d_and_3d[3-0.6-2.3-3-weight_variances2-2] PASSED [  6%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_arccosine_non_implemented_order[42] PASSED [  6%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_arccosine_nan_gradient[1-4] PASSED [  7%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-1-2.0-3.0-SquaredExponential] PASSED [  7%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-1-2.0-3.0-Matern12] PASSED [  8%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-1-2.0-3.0-Matern32] PASSED [  9%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-1-2.0-3.0-Matern52] PASSED [  9%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-11.5-3.0-SquaredExponential] PASSED [ 10%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-11.5-3.0-Matern12] PASSED [ 10%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-11.5-3.0-Matern32] PASSED [ 11%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-11.5-3.0-Matern52] PASSED [ 11%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-11.5-period2-SquaredExponential] PASSED [ 12%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-11.5-period2-Matern12] PASSED [ 12%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-11.5-period2-Matern32] PASSED [ 13%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-11.5-period2-Matern52] PASSED [ 14%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-lengthscales3-3.0-SquaredExponential] PASSED [ 14%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-lengthscales3-3.0-Matern12] PASSED [ 15%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-lengthscales3-3.0-Matern32] PASSED [ 15%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-lengthscales3-3.0-Matern52] PASSED [ 16%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-lengthscales4-period4-SquaredExponential] PASSED [ 16%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-lengthscales4-period4-Matern12] PASSED [ 17%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-lengthscales4-period4-Matern32] PASSED [ 18%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-lengthscales4-period4-Matern52] PASSED [ 18%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-1-2.0-3.0-SquaredExponential] PASSED [ 19%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-1-2.0-3.0-Matern12] PASSED [ 19%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-1-2.0-3.0-Matern32] PASSED [ 20%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-1-2.0-3.0-Matern52] PASSED [ 20%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-11.5-3.0-SquaredExponential] PASSED [ 21%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-11.5-3.0-Matern12] PASSED [ 22%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-11.5-3.0-Matern32] PASSED [ 22%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-11.5-3.0-Matern52] PASSED [ 23%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-11.5-period2-SquaredExponential] PASSED [ 23%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-11.5-period2-Matern12] PASSED [ 24%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-11.5-period2-Matern32] PASSED [ 24%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-11.5-period2-Matern52] PASSED [ 25%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-lengthscales3-3.0-SquaredExponential] PASSED [ 25%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-lengthscales3-3.0-Matern12] PASSED [ 26%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-lengthscales3-3.0-Matern32] PASSED [ 27%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-lengthscales3-3.0-Matern52] PASSED [ 27%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-lengthscales4-period4-SquaredExponential] PASSED [ 28%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-lengthscales4-period4-Matern12] PASSED [ 28%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-lengthscales4-period4-Matern32] PASSED [ 29%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-lengthscales4-period4-Matern52] PASSED [ 29%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic_diag[SquaredExponential] PASSED [ 30%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic_diag[Matern12] PASSED [ 31%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic_non_stationary_base_kernel PASSED [ 31%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic_bad_ard_period PASSED [ 32%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel0-1] PASSED [ 32%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel0-5] PASSED [ 33%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel1-1] PASSED [ 33%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel1-5] PASSED [ 34%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel2-1] PASSED [ 35%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel2-5] PASSED [ 35%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel3-1] PASSED [ 36%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel3-5] PASSED [ 36%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel4-1] PASSED [ 37%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel4-5] PASSED [ 37%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel5-1] PASSED [ 38%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel5-5] PASSED [ 38%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel6-1] PASSED [ 39%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel6-5] PASSED [ 40%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel7-1] PASSED [ 40%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel7-5] PASSED [ 41%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel8-1] PASSED [ 41%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel8-5] PASSED [ 42%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel9-1] PASSED [ 42%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel9-5] PASSED [ 43%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel10-1] PASSED [ 44%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel10-5] PASSED [ 44%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_coregion_shape[10-12-1-3-2] PASSED [ 45%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_coregion_diag[10-1-3-2] PASSED [ 45%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_coregion_slice[10-1-3-2] PASSED [ 46%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel0] PASSED [ 46%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel1] PASSED [ 47%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel2] PASSED [ 48%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel3] PASSED [ 48%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel4] PASSED [ 49%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel5] PASSED [ 49%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel6] PASSED [ 50%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel7] PASSED [ 50%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel8] PASSED [ 51%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel9] PASSED [ 51%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel10] FAILED [ 52%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel11] PASSED [ 53%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel12] PASSED [ 53%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel13] PASSED [ 54%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel14] FAILED [ 54%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel15] FAILED [ 55%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel16] FAILED [ 55%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_conv_diag PASSED [ 56%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_add_symmetric[10-1] PASSED [ 57%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_add_asymmetric[10-12-1] PASSED [ 57%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_white[10-1] PASSED [ 58%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_symmetric[20-2-kernel_triple0] PASSED [ 58%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_symmetric[20-2-kernel_triple1] PASSED [ 59%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_symmetric[20-2-kernel_triple2] PASSED [ 59%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_symmetric[20-2-kernel_triple3] PASSED [ 60%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_symmetric[20-2-kernel_triple4] PASSED [ 61%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_symmetric[20-2-kernel_triple5] PASSED [ 61%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_symmetric[20-2-kernel_triple6] PASSED [ 62%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_symmetric[20-2-kernel_triple7] PASSED [ 62%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_symmetric[20-2-kernel_triple8] PASSED [ 63%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_symmetric[20-2-kernel_triple9] PASSED [ 63%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_asymmetric[10-12-2-kernel_triple0] PASSED [ 64%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_asymmetric[10-12-2-kernel_triple1] PASSED [ 64%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_asymmetric[10-12-2-kernel_triple2] PASSED [ 65%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_asymmetric[10-12-2-kernel_triple3] PASSED [ 66%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_asymmetric[10-12-2-kernel_triple4] PASSED [ 66%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_asymmetric[10-12-2-kernel_triple5] PASSED [ 67%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_asymmetric[10-12-2-kernel_triple6] PASSED [ 67%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_asymmetric[10-12-2-kernel_triple7] PASSED [ 68%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_asymmetric[10-12-2-kernel_triple8] PASSED [ 68%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_asymmetric[10-12-2-kernel_triple9] PASSED [ 69%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_product[30-2] PASSED [ 70%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_active_product[30-4] PASSED [ 70%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_active_product[10-7] PASSED [ 71%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_init_scalar[4] PASSED [ 71%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_init_scalar[7] PASSED [ 72%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_invalid_active_dims PASSED [ 72%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[1.0-False-SquaredExponential-lengthscales] PASSED [ 73%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[1.0-False-Linear-variance] PASSED [ 74%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[1.0-False-ArcCosine-weight_variances] PASSED [ 74%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[1.0-False-Cosine-lengthscales] PASSED [ 75%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[param_value1-True-SquaredExponential-lengthscales] PASSED [ 75%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[param_value1-True-Linear-variance] PASSED [ 76%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[param_value1-True-ArcCosine-weight_variances] PASSED [ 76%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[param_value1-True-Cosine-lengthscales] PASSED [ 77%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[param_value2-True-SquaredExponential-lengthscales] PASSED [ 77%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[param_value2-True-Linear-variance] PASSED [ 78%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[param_value2-True-ArcCosine-weight_variances] PASSED [ 79%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[param_value2-True-Cosine-lengthscales] PASSED [ 79%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_changepoints_init_fail[locations0-1.0-Number of kernels \\(3\\) must be one more than the number of changepoint locations \\(1\\)] PASSED [ 80%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_changepoints_init_fail[locations1-steepness1-Dimension of steepness \\(1\\) does not match number of changepoint locations \\(2\\)] PASSED [ 80%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_changepoints[kernels0-locations0-5.0-2] PASSED [ 81%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_changepoints[kernels0-locations0-5.0-10] PASSED [ 81%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_changepoints[kernels1-locations1-5.0-2] PASSED [ 82%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_changepoints[kernels1-locations1-5.0-10] PASSED [ 83%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_changepoints[kernels2-locations2-steepness2-2] PASSED [ 83%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_changepoints[kernels2-locations2-steepness2-10] PASSED [ 84%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_changepoints[kernels3-locations3-5.0-2] PASSED [ 84%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_changepoints[kernels3-locations3-5.0-10] PASSED [ 85%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_on_separate_dims[active_dims_10-None-False] PASSED [ 85%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_on_separate_dims[None-active_dims_21-False] PASSED [ 86%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_on_separate_dims[None-None-False] PASSED [ 87%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_on_separate_dims[active_dims_13-active_dims_23-False] PASSED [ 87%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_on_separate_dims[active_dims_14-active_dims_24-True] PASSED [ 88%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel0] PASSED [ 88%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel1] PASSED [ 89%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel2] PASSED [ 89%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel3] PASSED [ 90%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel4] PASSED [ 90%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel5] PASSED [ 91%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel6] PASSED [ 92%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel7] PASSED [ 92%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel8] PASSED [ 93%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel9] PASSED [ 93%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel10] PASSED [ 94%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel11] PASSED [ 94%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel12] PASSED [ 95%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel13] PASSED [ 96%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel14] PASSED [ 96%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel15] PASSED [ 97%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel16] PASSED [ 97%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic_active_dims_matches PASSED [ 98%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_latent_kernels PASSED [ 98%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_combination_LMC_kernels PASSED [ 99%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_concat_inputs_with_latents PASSED [100%]
+
+=================================== FAILURES ===================================
+__________________________ test_diags[30-3-kernel10] ___________________________
+
+kernel = <gpflow.kernels.misc.ArcCosine object at 0x7fbbc5277550>, N = 30
+dim = 3
+
+    @pytest.mark.parametrize("kernel", kernel_setups_extended)
+    @pytest.mark.parametrize("N, dim", [[30, _dim]])
+    def test_diags(kernel: Kernel, N: int, dim: int) -> None:
+        X = np.random.randn(N, dim)
+        kernel1 = tf.linalg.diag_part(kernel(X, full_cov=True))
+        kernel2 = kernel(X, full_cov=False)
+>       assert np.allclose(kernel1, kernel2)
+E       assert False
+E        +  where False = <function allclose at 0x7fbc5ff09bb0>(<tf.Tensor: shape=(30,), dtype=float64, numpy=\narray([0.99999998, 0.99999999, 0.99999999, 0.99999999, 0.99999999,\n       0.99999999, 0.99999999, 0.99999999, 0.99999999, 0.99999999,\n       0.99999999, 0.99999998, 0.99999999, 0.99999999, 0.99999999,\n       0.99999999, 0.99999999, 0.99999999, 0.99999999, 0.99999999,\n       0.99999999, 0.99999999, 0.99999999, 0.99999999, 0.99999999,\n       0.99999999, 0.99999999, 0.99999999, 0.99999999, 0.99999999])>, <tf.Tensor: shape=(30,), dtype=float64, numpy=\narray([  1.72152474,  -0.90296147, -11.03829847,  -1.22953876,\n        -3.40759415,  -6.14471638,   0.29842333,   1.29857303,\n        -0.13488746,   0.5612711 ,  -1.15351693,   1.93247303,\n         0.18112392,   1.08455804,   0.23671064,  -0.31949734,\n         0.99820549,  -1.71357912,   0.02818247,  -2.3970871 ,\n        -2.55560482,  -7.56226738,  -1.04661849,  -0.12978205,\n         0.50654585,   1.01084595,   1.21647383,  -0.10963623,\n        -5.96583096,  -3.95972406])>)
+E        +    where <function allclose at 0x7fbc5ff09bb0> = np.allclose
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py:326: AssertionError
+__________________________ test_diags[30-3-kernel14] ___________________________
+
+kernel = <gpflow.kernels.misc.ArcCosine object at 0x7fbbbf54c310>, N = 30
+dim = 3
+
+    @pytest.mark.parametrize("kernel", kernel_setups_extended)
+    @pytest.mark.parametrize("N, dim", [[30, _dim]])
+    def test_diags(kernel: Kernel, N: int, dim: int) -> None:
+        X = np.random.randn(N, dim)
+        kernel1 = tf.linalg.diag_part(kernel(X, full_cov=True))
+        kernel2 = kernel(X, full_cov=False)
+>       assert np.allclose(kernel1, kernel2)
+E       assert False
+E        +  where False = <function allclose at 0x7fbc5ff09bb0>(<tf.Tensor: shape=(30,), dtype=float64, numpy=\narray([0.99999999, 0.99999999, 0.99999999, 0.99999999, 0.99999999,\n       0.99999999, 0.99999998, 0.99999999, 0.99999999, 0.99999998,\n       0.99999999, 0.99999999, 0.99999999, 0.99999999, 0.99999999,\n       0.99999999, 0.99999999, 0.99999999, 0.99999998, 0.99999998,\n       0.99999999, 0.99999999, 0.99999999, 0.99999999, 0.99999998,\n       0.99999998, 0.99999998, 0.99999998, 0.99999999, 0.99999998])>, <tf.Tensor: shape=(30,), dtype=float64, numpy=\narray([-0.42464223,  0.44626906, -0.07344612,  0.54258179,  1.33199102,\n       -3.55713136,  1.81337455, -3.86269736,  1.53045049, -2.90806651,\n        0.77979756,  0.34105639, -1.05494677, -1.15842449, -0.3792924 ,\n        1.38677056, -0.96985627,  0.52891163, -1.56607033, -1.22645668,\n        0.93082227,  0.15559626,  1.13613107, -1.60382455,  0.10997592,\n       -0.93989838,  1.68266089, -3.69240895,  0.84037686, -2.17258641])>)
+E        +    where <function allclose at 0x7fbc5ff09bb0> = np.allclose
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py:326: AssertionError
+__________________________ test_diags[30-3-kernel15] ___________________________
+
+kernel = <gpflow.kernels.misc.ArcCosine object at 0x7fbbbf5b1490>, N = 30
+dim = 3
+
+    @pytest.mark.parametrize("kernel", kernel_setups_extended)
+    @pytest.mark.parametrize("N, dim", [[30, _dim]])
+    def test_diags(kernel: Kernel, N: int, dim: int) -> None:
+        X = np.random.randn(N, dim)
+        kernel1 = tf.linalg.diag_part(kernel(X, full_cov=True))
+        kernel2 = kernel(X, full_cov=False)
+>       assert np.allclose(kernel1, kernel2)
+E       assert False
+E        +  where False = <function allclose at 0x7fbc5ff09bb0>(<tf.Tensor: shape=(30,), dtype=float64, numpy=\narray([11.98165801,  2.81913646,  7.12094315,  3.55536533,  4.14458635,\n        9.16116494,  2.47621626,  5.44747375, 13.63766295,  8.13592532,\n        2.85946469,  3.01095063,  4.22095493,  2.37155166,  2.10283233,\n        3.88788415,  4.92842914, 10.23657208,  3.93156296,  3.34976095,\n        4.17375366,  2.15828407,  3.89398036,  3.22111317,  6.17589045,\n        3.87645718,  4.08319583,  3.45162589,  1.77303862,  9.2768213 ])>, <tf.Tensor: shape=(30,), dtype=float64, numpy=\narray([-7.92343169e+00,  1.10603405e-02, -1.91956110e+00, -2.32118858e-02,\n       -3.03693985e-01,  6.07219563e+00,  9.39140015e-02, -2.28821315e+00,\n       -4.14969450e+00,  2.35005525e+00,  7.42602469e-03,  7.41969530e-04,\n       -3.72316018e-01,  1.43365997e-01,  3.34824363e-01, -1.30984667e-01,\n       -1.35978651e+00,  4.15722667e+00, -1.54298810e-01, -2.99391443e-03,\n       -3.28947024e-01,  2.87315622e-01, -1.34096281e-01, -1.67510330e-04,\n       -3.12393795e+00, -1.25274789e-01, -2.54376085e-01, -9.83837333e-03,\n        7.04722076e-01,  6.21561481e+00])>)
+E        +    where <function allclose at 0x7fbc5ff09bb0> = np.allclose
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py:326: AssertionError
+__________________________ test_diags[30-3-kernel16] ___________________________
+
+kernel = <gpflow.kernels.misc.ArcCosine object at 0x7fbbc53aded0>, N = 30
+dim = 3
+
+    @pytest.mark.parametrize("kernel", kernel_setups_extended)
+    @pytest.mark.parametrize("N, dim", [[30, _dim]])
+    def test_diags(kernel: Kernel, N: int, dim: int) -> None:
+        X = np.random.randn(N, dim)
+        kernel1 = tf.linalg.diag_part(kernel(X, full_cov=True))
+        kernel2 = kernel(X, full_cov=False)
+>       assert np.allclose(kernel1, kernel2)
+E       assert False
+E        +  where False = <function allclose at 0x7fbc5ff09bb0>(<tf.Tensor: shape=(30,), dtype=float64, numpy=\narray([ 12.72105473,  43.70125428,  18.91878458,   4.05661547,\n        86.74002965,  68.50194019,  46.67032878,  12.38697987,\n         6.15905721,  44.53508353,   5.73246866,   3.43151273,\n       154.97377268,  27.08237275, 277.53005214,  10.83405313,\n         9.81385914,  49.71753827,  79.34463798,  40.27116191,\n         5.03245531,  33.0474526 , 481.32365048,  23.61305674,\n        24.865474  ,  15.17117223,   7.3431253 ,   9.19896402,\n        93.91791704,  92.92229673])>, <tf.Tensor: shape=(30,), dtype=float64, numpy=\narray([ 3.15914072e-01, -3.42670975e-02,  2.45982082e-02,  3.69416077e+00,\n       -5.39324865e+00, -1.84891297e+00, -7.84877812e-02,  3.53523123e-01,\n        2.18203994e+00, -4.40776200e-02,  2.43489656e+00,  4.29343415e+00,\n       -5.68167136e+00,  1.28331462e-05, -1.83852666e+01,  5.82605840e-01,\n        7.93938969e-01, -1.56550006e-01, -3.83545671e+00, -9.83360216e-03,\n        2.90552396e+00, -4.65935910e-05, -2.80858364e+01,  1.11864333e-03,\n        3.28765750e-04,  1.29768939e-01,  1.59604397e+00,  9.50686166e-01,\n       -6.85367733e+00, -6.66093173e+00])>)
+E        +    where <function allclose at 0x7fbc5ff09bb0> = np.allclose
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py:326: AssertionError
+=============================== warnings summary ===============================
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:57
+  /local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:57: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    if (distutils.version.LooseVersion(tf.__version__) <
+
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:58
+  /local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:58: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    distutils.version.LooseVersion(required_tensorflow_version)):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel10]
+FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel14]
+FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel15]
+FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel16]
+================== 4 failed, 173 passed, 2 warnings in 5.19s ===================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/GPflow/GPflow/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/GPflow/GPflow
+collecting ... collected 177 items
+
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_rbf_1d[2.3-1.4] PASSED [  0%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_rq_1d[2.3-1.4] PASSED [  1%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_arccosine_1d_and_3d[3-0.6-2.3-1-1.7-0] PASSED [  1%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_arccosine_1d_and_3d[3-0.6-2.3-1-1.7-1] PASSED [  2%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_arccosine_1d_and_3d[3-0.6-2.3-1-1.7-2] PASSED [  2%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_arccosine_1d_and_3d[3-0.6-2.3-3-1.7-0] PASSED [  3%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_arccosine_1d_and_3d[3-0.6-2.3-3-1.7-1] PASSED [  3%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_arccosine_1d_and_3d[3-0.6-2.3-3-1.7-2] PASSED [  4%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_arccosine_1d_and_3d[3-0.6-2.3-3-weight_variances2-0] PASSED [  5%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_arccosine_1d_and_3d[3-0.6-2.3-3-weight_variances2-1] PASSED [  5%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_arccosine_1d_and_3d[3-0.6-2.3-3-weight_variances2-2] PASSED [  6%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_arccosine_non_implemented_order[42] PASSED [  6%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_arccosine_nan_gradient[1-4] PASSED [  7%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-1-2.0-3.0-SquaredExponential] PASSED [  7%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-1-2.0-3.0-Matern12] PASSED [  8%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-1-2.0-3.0-Matern32] PASSED [  9%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-1-2.0-3.0-Matern52] PASSED [  9%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-11.5-3.0-SquaredExponential] PASSED [ 10%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-11.5-3.0-Matern12] PASSED [ 10%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-11.5-3.0-Matern32] PASSED [ 11%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-11.5-3.0-Matern52] PASSED [ 11%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-11.5-period2-SquaredExponential] PASSED [ 12%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-11.5-period2-Matern12] PASSED [ 12%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-11.5-period2-Matern32] PASSED [ 13%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-11.5-period2-Matern52] PASSED [ 14%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-lengthscales3-3.0-SquaredExponential] PASSED [ 14%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-lengthscales3-3.0-Matern12] PASSED [ 15%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-lengthscales3-3.0-Matern32] PASSED [ 15%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-lengthscales3-3.0-Matern52] PASSED [ 16%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-lengthscales4-period4-SquaredExponential] PASSED [ 16%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-lengthscales4-period4-Matern12] PASSED [ 17%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-lengthscales4-period4-Matern32] PASSED [ 18%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-lengthscales4-period4-Matern52] PASSED [ 18%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-1-2.0-3.0-SquaredExponential] PASSED [ 19%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-1-2.0-3.0-Matern12] PASSED [ 19%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-1-2.0-3.0-Matern32] PASSED [ 20%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-1-2.0-3.0-Matern52] PASSED [ 20%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-11.5-3.0-SquaredExponential] PASSED [ 21%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-11.5-3.0-Matern12] PASSED [ 22%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-11.5-3.0-Matern32] PASSED [ 22%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-11.5-3.0-Matern52] PASSED [ 23%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-11.5-period2-SquaredExponential] PASSED [ 23%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-11.5-period2-Matern12] PASSED [ 24%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-11.5-period2-Matern32] PASSED [ 24%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-11.5-period2-Matern52] PASSED [ 25%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-lengthscales3-3.0-SquaredExponential] PASSED [ 25%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-lengthscales3-3.0-Matern12] PASSED [ 26%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-lengthscales3-3.0-Matern32] PASSED [ 27%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-lengthscales3-3.0-Matern52] PASSED [ 27%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-lengthscales4-period4-SquaredExponential] PASSED [ 28%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-lengthscales4-period4-Matern12] PASSED [ 28%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-lengthscales4-period4-Matern32] PASSED [ 29%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-lengthscales4-period4-Matern52] PASSED [ 29%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic_diag[SquaredExponential] PASSED [ 30%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic_diag[Matern12] PASSED [ 31%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic_non_stationary_base_kernel PASSED [ 31%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic_bad_ard_period PASSED [ 32%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel0-1] PASSED [ 32%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel0-5] PASSED [ 33%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel1-1] PASSED [ 33%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel1-5] PASSED [ 34%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel2-1] PASSED [ 35%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel2-5] PASSED [ 35%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel3-1] PASSED [ 36%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel3-5] PASSED [ 36%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel4-1] PASSED [ 37%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel4-5] PASSED [ 37%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel5-1] PASSED [ 38%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel5-5] PASSED [ 38%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel6-1] PASSED [ 39%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel6-5] PASSED [ 40%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel7-1] PASSED [ 40%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel7-5] PASSED [ 41%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel8-1] PASSED [ 41%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel8-5] PASSED [ 42%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel9-1] PASSED [ 42%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel9-5] PASSED [ 43%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel10-1] PASSED [ 44%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel10-5] PASSED [ 44%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_coregion_shape[10-12-1-3-2] PASSED [ 45%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_coregion_diag[10-1-3-2] PASSED [ 45%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_coregion_slice[10-1-3-2] PASSED [ 46%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel0] PASSED [ 46%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel1] PASSED [ 47%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel2] PASSED [ 48%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel3] PASSED [ 48%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel4] PASSED [ 49%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel5] PASSED [ 49%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel6] PASSED [ 50%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel7] PASSED [ 50%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel8] PASSED [ 51%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel9] PASSED [ 51%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel10] PASSED [ 52%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel11] PASSED [ 53%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel12] PASSED [ 53%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel13] PASSED [ 54%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel14] PASSED [ 54%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel15] PASSED [ 55%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel16] PASSED [ 55%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_conv_diag PASSED [ 56%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_add_symmetric[10-1] PASSED [ 57%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_add_asymmetric[10-12-1] PASSED [ 57%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_white[10-1] PASSED [ 58%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_symmetric[20-2-kernel_triple0] PASSED [ 58%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_symmetric[20-2-kernel_triple1] PASSED [ 59%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_symmetric[20-2-kernel_triple2] PASSED [ 59%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_symmetric[20-2-kernel_triple3] PASSED [ 60%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_symmetric[20-2-kernel_triple4] PASSED [ 61%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_symmetric[20-2-kernel_triple5] PASSED [ 61%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_symmetric[20-2-kernel_triple6] PASSED [ 62%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_symmetric[20-2-kernel_triple7] PASSED [ 62%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_symmetric[20-2-kernel_triple8] PASSED [ 63%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_symmetric[20-2-kernel_triple9] PASSED [ 63%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_asymmetric[10-12-2-kernel_triple0] PASSED [ 64%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_asymmetric[10-12-2-kernel_triple1] PASSED [ 64%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_asymmetric[10-12-2-kernel_triple2] PASSED [ 65%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_asymmetric[10-12-2-kernel_triple3] PASSED [ 66%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_asymmetric[10-12-2-kernel_triple4] PASSED [ 66%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_asymmetric[10-12-2-kernel_triple5] PASSED [ 67%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_asymmetric[10-12-2-kernel_triple6] PASSED [ 67%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_asymmetric[10-12-2-kernel_triple7] PASSED [ 68%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_asymmetric[10-12-2-kernel_triple8] PASSED [ 68%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_asymmetric[10-12-2-kernel_triple9] PASSED [ 69%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_product[30-2] PASSED [ 70%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_active_product[30-4] PASSED [ 70%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_active_product[10-7] PASSED [ 71%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_init_scalar[4] PASSED [ 71%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_init_scalar[7] PASSED [ 72%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_invalid_active_dims PASSED [ 72%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[1.0-False-SquaredExponential-lengthscales] PASSED [ 73%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[1.0-False-Linear-variance] PASSED [ 74%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[1.0-False-ArcCosine-weight_variances] PASSED [ 74%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[1.0-False-Cosine-lengthscales] PASSED [ 75%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[param_value1-True-SquaredExponential-lengthscales] PASSED [ 75%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[param_value1-True-Linear-variance] PASSED [ 76%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[param_value1-True-ArcCosine-weight_variances] PASSED [ 76%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[param_value1-True-Cosine-lengthscales] PASSED [ 77%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[param_value2-True-SquaredExponential-lengthscales] PASSED [ 77%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[param_value2-True-Linear-variance] PASSED [ 78%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[param_value2-True-ArcCosine-weight_variances] PASSED [ 79%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[param_value2-True-Cosine-lengthscales] PASSED [ 79%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_changepoints_init_fail[locations0-1.0-Number of kernels \\(3\\) must be one more than the number of changepoint locations \\(1\\)] PASSED [ 80%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_changepoints_init_fail[locations1-steepness1-Dimension of steepness \\(1\\) does not match number of changepoint locations \\(2\\)] PASSED [ 80%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_changepoints[kernels0-locations0-5.0-2] PASSED [ 81%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_changepoints[kernels0-locations0-5.0-10] PASSED [ 81%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_changepoints[kernels1-locations1-5.0-2] PASSED [ 82%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_changepoints[kernels1-locations1-5.0-10] PASSED [ 83%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_changepoints[kernels2-locations2-steepness2-2] PASSED [ 83%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_changepoints[kernels2-locations2-steepness2-10] PASSED [ 84%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_changepoints[kernels3-locations3-5.0-2] PASSED [ 84%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_changepoints[kernels3-locations3-5.0-10] PASSED [ 85%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_on_separate_dims[active_dims_10-None-False] PASSED [ 85%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_on_separate_dims[None-active_dims_21-False] PASSED [ 86%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_on_separate_dims[None-None-False] PASSED [ 87%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_on_separate_dims[active_dims_13-active_dims_23-False] PASSED [ 87%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_on_separate_dims[active_dims_14-active_dims_24-True] PASSED [ 88%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel0] PASSED [ 88%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel1] PASSED [ 89%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel2] PASSED [ 89%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel3] PASSED [ 90%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel4] PASSED [ 90%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel5] PASSED [ 91%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel6] PASSED [ 92%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel7] PASSED [ 92%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel8] PASSED [ 93%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel9] PASSED [ 93%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel10] PASSED [ 94%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel11] PASSED [ 94%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel12] PASSED [ 95%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel13] PASSED [ 96%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel14] PASSED [ 96%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel15] PASSED [ 97%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel16] PASSED [ 97%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic_active_dims_matches PASSED [ 98%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_latent_kernels PASSED [ 98%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_combination_LMC_kernels PASSED [ 99%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_concat_inputs_with_latents PASSED [100%]
+
+=============================== warnings summary ===============================
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:57
+  /local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:57: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    if (distutils.version.LooseVersion(tf.__version__) <
+
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:58
+  /local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:58: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    distutils.version.LooseVersion(required_tensorflow_version)):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================= 177 passed, 2 warnings in 5.59s ========================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/GPflow/GPflow/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/GPflow/GPflow
+collecting ... collected 177 items
+
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_rbf_1d[2.3-1.4] PASSED [  0%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_rq_1d[2.3-1.4] PASSED [  1%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_arccosine_1d_and_3d[3-0.6-2.3-1-1.7-0] PASSED [  1%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_arccosine_1d_and_3d[3-0.6-2.3-1-1.7-1] PASSED [  2%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_arccosine_1d_and_3d[3-0.6-2.3-1-1.7-2] PASSED [  2%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_arccosine_1d_and_3d[3-0.6-2.3-3-1.7-0] PASSED [  3%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_arccosine_1d_and_3d[3-0.6-2.3-3-1.7-1] PASSED [  3%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_arccosine_1d_and_3d[3-0.6-2.3-3-1.7-2] PASSED [  4%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_arccosine_1d_and_3d[3-0.6-2.3-3-weight_variances2-0] PASSED [  5%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_arccosine_1d_and_3d[3-0.6-2.3-3-weight_variances2-1] PASSED [  5%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_arccosine_1d_and_3d[3-0.6-2.3-3-weight_variances2-2] PASSED [  6%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_arccosine_non_implemented_order[42] PASSED [  6%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_arccosine_nan_gradient[1-4] PASSED [  7%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-1-2.0-3.0-SquaredExponential] PASSED [  7%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-1-2.0-3.0-Matern12] PASSED [  8%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-1-2.0-3.0-Matern32] PASSED [  9%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-1-2.0-3.0-Matern52] PASSED [  9%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-11.5-3.0-SquaredExponential] PASSED [ 10%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-11.5-3.0-Matern12] PASSED [ 10%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-11.5-3.0-Matern32] PASSED [ 11%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-11.5-3.0-Matern52] PASSED [ 11%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-11.5-period2-SquaredExponential] PASSED [ 12%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-11.5-period2-Matern12] PASSED [ 12%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-11.5-period2-Matern32] PASSED [ 13%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-11.5-period2-Matern52] PASSED [ 14%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-lengthscales3-3.0-SquaredExponential] PASSED [ 14%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-lengthscales3-3.0-Matern12] PASSED [ 15%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-lengthscales3-3.0-Matern32] PASSED [ 15%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-lengthscales3-3.0-Matern52] PASSED [ 16%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-lengthscales4-period4-SquaredExponential] PASSED [ 16%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-lengthscales4-period4-Matern12] PASSED [ 17%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-lengthscales4-period4-Matern32] PASSED [ 18%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[3-2.3-2-lengthscales4-period4-Matern52] PASSED [ 18%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-1-2.0-3.0-SquaredExponential] PASSED [ 19%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-1-2.0-3.0-Matern12] PASSED [ 19%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-1-2.0-3.0-Matern32] PASSED [ 20%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-1-2.0-3.0-Matern52] PASSED [ 20%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-11.5-3.0-SquaredExponential] PASSED [ 21%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-11.5-3.0-Matern12] PASSED [ 22%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-11.5-3.0-Matern32] PASSED [ 22%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-11.5-3.0-Matern52] PASSED [ 23%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-11.5-period2-SquaredExponential] PASSED [ 23%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-11.5-period2-Matern12] PASSED [ 24%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-11.5-period2-Matern32] PASSED [ 24%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-11.5-period2-Matern52] PASSED [ 25%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-lengthscales3-3.0-SquaredExponential] PASSED [ 25%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-lengthscales3-3.0-Matern12] PASSED [ 26%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-lengthscales3-3.0-Matern32] PASSED [ 27%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-lengthscales3-3.0-Matern52] PASSED [ 27%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-lengthscales4-period4-SquaredExponential] PASSED [ 28%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-lengthscales4-period4-Matern12] PASSED [ 28%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-lengthscales4-period4-Matern32] PASSED [ 29%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic[5-1.3-2-lengthscales4-period4-Matern52] PASSED [ 29%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic_diag[SquaredExponential] PASSED [ 30%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic_diag[Matern12] PASSED [ 31%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic_non_stationary_base_kernel PASSED [ 31%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic_bad_ard_period PASSED [ 32%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel0-1] PASSED [ 32%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel0-5] PASSED [ 33%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel1-1] PASSED [ 33%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel1-5] PASSED [ 34%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel2-1] PASSED [ 35%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel2-5] PASSED [ 35%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel3-1] PASSED [ 36%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel3-5] PASSED [ 36%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel4-1] PASSED [ 37%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel4-5] PASSED [ 37%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel5-1] PASSED [ 38%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel5-5] PASSED [ 38%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel6-1] PASSED [ 39%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel6-5] PASSED [ 40%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel7-1] PASSED [ 40%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel7-5] PASSED [ 41%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel8-1] PASSED [ 41%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel8-5] PASSED [ 42%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel9-1] PASSED [ 42%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel9-5] PASSED [ 43%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel10-1] PASSED [ 44%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_symmetry_1d_and_5d[10-kernel10-5] PASSED [ 44%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_coregion_shape[10-12-1-3-2] PASSED [ 45%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_coregion_diag[10-1-3-2] PASSED [ 45%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_coregion_slice[10-1-3-2] PASSED [ 46%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel0] PASSED [ 46%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel1] PASSED [ 47%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel2] PASSED [ 48%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel3] PASSED [ 48%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel4] PASSED [ 49%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel5] PASSED [ 49%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel6] PASSED [ 50%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel7] PASSED [ 50%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel8] PASSED [ 51%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel9] PASSED [ 51%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel10] PASSED [ 52%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel11] PASSED [ 53%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel12] PASSED [ 53%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel13] PASSED [ 54%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel14] PASSED [ 54%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel15] PASSED [ 55%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_diags[30-3-kernel16] PASSED [ 55%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_conv_diag PASSED [ 56%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_add_symmetric[10-1] PASSED [ 57%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_add_asymmetric[10-12-1] PASSED [ 57%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_white[10-1] PASSED [ 58%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_symmetric[20-2-kernel_triple0] PASSED [ 58%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_symmetric[20-2-kernel_triple1] PASSED [ 59%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_symmetric[20-2-kernel_triple2] PASSED [ 59%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_symmetric[20-2-kernel_triple3] PASSED [ 60%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_symmetric[20-2-kernel_triple4] PASSED [ 61%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_symmetric[20-2-kernel_triple5] PASSED [ 61%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_symmetric[20-2-kernel_triple6] PASSED [ 62%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_symmetric[20-2-kernel_triple7] PASSED [ 62%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_symmetric[20-2-kernel_triple8] PASSED [ 63%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_symmetric[20-2-kernel_triple9] PASSED [ 63%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_asymmetric[10-12-2-kernel_triple0] PASSED [ 64%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_asymmetric[10-12-2-kernel_triple1] PASSED [ 64%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_asymmetric[10-12-2-kernel_triple2] PASSED [ 65%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_asymmetric[10-12-2-kernel_triple3] PASSED [ 66%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_asymmetric[10-12-2-kernel_triple4] PASSED [ 66%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_asymmetric[10-12-2-kernel_triple5] PASSED [ 67%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_asymmetric[10-12-2-kernel_triple6] PASSED [ 67%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_asymmetric[10-12-2-kernel_triple7] PASSED [ 68%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_asymmetric[10-12-2-kernel_triple8] PASSED [ 68%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_slice_asymmetric[10-12-2-kernel_triple9] PASSED [ 69%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_product[30-2] PASSED [ 70%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_active_product[30-4] PASSED [ 70%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_active_product[10-7] PASSED [ 71%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_init_scalar[4] PASSED [ 71%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_init_scalar[7] PASSED [ 72%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_invalid_active_dims PASSED [ 72%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[1.0-False-SquaredExponential-lengthscales] PASSED [ 73%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[1.0-False-Linear-variance] PASSED [ 74%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[1.0-False-ArcCosine-weight_variances] PASSED [ 74%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[1.0-False-Cosine-lengthscales] PASSED [ 75%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[param_value1-True-SquaredExponential-lengthscales] PASSED [ 75%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[param_value1-True-Linear-variance] PASSED [ 76%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[param_value1-True-ArcCosine-weight_variances] PASSED [ 76%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[param_value1-True-Cosine-lengthscales] PASSED [ 77%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[param_value2-True-SquaredExponential-lengthscales] PASSED [ 77%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[param_value2-True-Linear-variance] PASSED [ 78%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[param_value2-True-ArcCosine-weight_variances] PASSED [ 79%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_ard_property[param_value2-True-Cosine-lengthscales] PASSED [ 79%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_changepoints_init_fail[locations0-1.0-Number of kernels \\(3\\) must be one more than the number of changepoint locations \\(1\\)] PASSED [ 80%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_changepoints_init_fail[locations1-steepness1-Dimension of steepness \\(1\\) does not match number of changepoint locations \\(2\\)] PASSED [ 80%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_changepoints[kernels0-locations0-5.0-2] PASSED [ 81%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_changepoints[kernels0-locations0-5.0-10] PASSED [ 81%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_changepoints[kernels1-locations1-5.0-2] PASSED [ 82%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_changepoints[kernels1-locations1-5.0-10] PASSED [ 83%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_changepoints[kernels2-locations2-steepness2-2] PASSED [ 83%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_changepoints[kernels2-locations2-steepness2-10] PASSED [ 84%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_changepoints[kernels3-locations3-5.0-2] PASSED [ 84%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_changepoints[kernels3-locations3-5.0-10] PASSED [ 85%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_on_separate_dims[active_dims_10-None-False] PASSED [ 85%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_on_separate_dims[None-active_dims_21-False] PASSED [ 86%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_on_separate_dims[None-None-False] PASSED [ 87%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_on_separate_dims[active_dims_13-active_dims_23-False] PASSED [ 87%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_on_separate_dims[active_dims_14-active_dims_24-True] PASSED [ 88%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel0] PASSED [ 88%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel1] PASSED [ 89%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel2] PASSED [ 89%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel3] PASSED [ 90%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel4] PASSED [ 90%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel5] PASSED [ 91%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel6] PASSED [ 92%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel7] PASSED [ 92%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel8] PASSED [ 93%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel9] PASSED [ 93%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel10] PASSED [ 94%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel11] PASSED [ 94%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel12] PASSED [ 95%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel13] PASSED [ 96%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel14] PASSED [ 96%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel15] PASSED [ 97%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_kernel_call_diag_and_X2_errors[kernel16] PASSED [ 97%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_periodic_active_dims_matches PASSED [ 98%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_latent_kernels PASSED [ 98%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_combination_LMC_kernels PASSED [ 99%]
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/kernels/test_kernels.py::test_concat_inputs_with_latents PASSED [100%]
+
+=============================== warnings summary ===============================
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:57
+  /local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:57: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    if (distutils.version.LooseVersion(tf.__version__) <
+
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:58
+  /local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:58: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    distutils.version.LooseVersion(required_tensorflow_version)):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================= 177 passed, 2 warnings in 8.06s ========================

@@ -1,0 +1,14 @@
+stage: Inference
+task: prediction
+data: 
+
+prompt:
+Create a Python function `_walsh_hadamard_transform` that computes the Walsh-Hadamard Transform for a one-dimensional tensor or array `D`, where the length of `D` must be a power of two. The function should optionally take an integer `n`, representing the number of qubits or the size of the transform, and default to calculating it based on the shape of `D`. The function should efficiently reshape `D`, apply the Hadamard transform using tensor operations, and then return the transformed tensor with the same shape as the input. The approach should use tensor multiplications that are compatible with autodifferentiation frameworks, making it suitable for use in quantum computing or other advanced mathematical contexts.
+
+ ground Truth:pennylane/ops/qubit/matrix_ops.py#L36
+
+ repo:pennylane
+
+ function:_walsh_hadamard_transform
+ 
+ test_cases:tests/ops/qubit/test_matrix_ops.py::TestWalshHadamardTransform

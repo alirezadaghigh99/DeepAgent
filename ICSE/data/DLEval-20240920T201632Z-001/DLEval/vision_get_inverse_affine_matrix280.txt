@@ -1,0 +1,29 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Create a Python function _get_inverse_affine_matrix that computes the inverse matrix for an affine transformation used in image processing. The function should take in parameters including the center of rotation, the angle of rotation, translation values, scale, shear angles, and a boolean to indicate whether the matrix should be inverted. The function computes the affine transformation matrix by considering rotation, scaling, shearing, and translation, and then returns the inverse of this matrix if the inverted flag is set to True. Ensure to handle errors such as invalid input types or values.
+
+Inputs:
+
+center (List[float]): The center of the rotation, given as [cx, cy].
+angle (float): The angle of rotation in degrees.
+translate (List[float]): The translation values [tx, ty].
+scale (float): The scaling factor.
+shear (List[float]): The shear angles [sx, sy].
+inverted (bool): Flag indicating whether to return the inverted matrix.
+Outputs:
+
+Returns a list of 6 float values representing the computed affine transformation matrix.
+Error Handling:
+
+Ensure the function properly handles cases where input lists do not have the expected lengths or when invalid data types are provided.
+
+ ground Truth:torchvision/transforms/functional.py
+
+ repo:vision
+
+ function:_get_inverse_affine_matrix
+ 
+ test_cases: test/test_transforms.py::TestAffine::test_transformation_range

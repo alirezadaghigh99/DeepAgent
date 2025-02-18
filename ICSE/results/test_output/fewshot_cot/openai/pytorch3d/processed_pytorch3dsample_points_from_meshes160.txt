@@ -1,0 +1,352 @@
+output file:
+processed_pytorch3dsample_points_from_meshes160.json
+function:
+sample_points_from_meshes
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_texture_sampling FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_texture_sampling', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_outputs', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_sampling_output FAILED', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_outputs FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_all_empty_meshes', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_texture_sampling_cow FAILED', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_verts_nan FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_sampling_output', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_texture_sampling_cow', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_all_empty_meshes FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_verts_nan'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 8 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_all_empty_meshes FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_multinomial PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_multinomial_weights PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_outputs FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_sampling_output FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_texture_sampling FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_texture_sampling_cow FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_verts_nan FAILED
+
+=================================== FAILURES ===================================
+____________________ TestSamplePoints.test_all_empty_meshes ____________________
+
+self = <tests.test_sample_points_from_meshes.TestSamplePoints testMethod=test_all_empty_meshes>
+
+    def test_all_empty_meshes(self):
+        """
+        Check sample_points_from_meshes raises an exception if all meshes are
+        invalid.
+        """
+        device = get_random_cuda_device()
+        verts1 = torch.tensor([], dtype=torch.float32, device=device)
+        faces1 = torch.tensor([], dtype=torch.int64, device=device)
+        meshes = Meshes(verts=[verts1, verts1, verts1], faces=[faces1, faces1, faces1])
+        with self.assertRaises(ValueError) as err:
+>           sample_points_from_meshes(meshes, num_samples=100, return_normals=True)
+
+/local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py:86: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/pytorch3d/ops/sample_points_from_meshes.py:13: in sample_points_from_meshes
+    from .temp import sample_points_from_meshes
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    import sys
+    from typing import Tuple, Union
+    import torch
+    from pytorch3d.ops.mesh_face_areas_normals import mesh_face_areas_normals
+    from pytorch3d.ops.packed_to_padded import packed_to_padded
+    from pytorch3d.renderer.mesh.rasterizer import Fragments as MeshFragments
+    import torch
+    from pytorch3d.structures import Meshes
+>   from pytorch3d.ops import sample_points_from_meshes1 as sample_points
+E   ImportError: cannot import name 'sample_points_from_meshes1' from 'pytorch3d.ops' (/local/data0/moved_data/pytorch3d/pytorch3d/ops/__init__.py)
+
+/local/data0/moved_data/pytorch3d/pytorch3d/ops/temp.py:9: ImportError
+________________________ TestSamplePoints.test_outputs _________________________
+
+self = <tests.test_sample_points_from_meshes.TestSamplePoints testMethod=test_outputs>
+
+    def test_outputs(self):
+    
+        for add_texture in (True, False):
+            meshes = init_meshes(device=torch.device("cuda:0"), add_texture=add_texture)
+>           out1 = sample_points_from_meshes(meshes, num_samples=100)
+
+/local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py:307: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/pytorch3d/ops/sample_points_from_meshes.py:13: in sample_points_from_meshes
+    from .temp import sample_points_from_meshes
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    import sys
+    from typing import Tuple, Union
+    import torch
+    from pytorch3d.ops.mesh_face_areas_normals import mesh_face_areas_normals
+    from pytorch3d.ops.packed_to_padded import packed_to_padded
+    from pytorch3d.renderer.mesh.rasterizer import Fragments as MeshFragments
+    import torch
+    from pytorch3d.structures import Meshes
+>   from pytorch3d.ops import sample_points_from_meshes1 as sample_points
+E   ImportError: cannot import name 'sample_points_from_meshes1' from 'pytorch3d.ops' (/local/data0/moved_data/pytorch3d/pytorch3d/ops/__init__.py)
+
+/local/data0/moved_data/pytorch3d/pytorch3d/ops/temp.py:9: ImportError
+____________________ TestSamplePoints.test_sampling_output _____________________
+
+self = <tests.test_sample_points_from_meshes.TestSamplePoints testMethod=test_sampling_output>
+
+    def test_sampling_output(self):
+        """
+        Check outputs of sampling are correct for different meshes.
+        For an ico_sphere, the sampled vertices should lie on a unit sphere.
+        For an empty mesh, the samples and normals should be 0.
+        """
+        device = get_random_cuda_device()
+    
+        # Unit simplex.
+        verts_pyramid = torch.tensor(
+            [[0.0, 0.0, 0.0], [1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.0, 0.0, 1.0]],
+            dtype=torch.float32,
+            device=device,
+        )
+        faces_pyramid = torch.tensor(
+            [[0, 1, 2], [0, 2, 3], [0, 1, 3], [1, 2, 3]],
+            dtype=torch.int64,
+            device=device,
+        )
+        sphere_mesh = ico_sphere(9, device)
+        verts_sphere, faces_sphere = sphere_mesh.get_mesh_verts_faces(0)
+        verts_empty = torch.tensor([], dtype=torch.float32, device=device)
+        faces_empty = torch.tensor([], dtype=torch.int64, device=device)
+        num_samples = 10
+        meshes = Meshes(
+            verts=[verts_empty, verts_sphere, verts_pyramid],
+            faces=[faces_empty, faces_sphere, faces_pyramid],
+        )
+>       samples, normals = sample_points_from_meshes(
+            meshes, num_samples=num_samples, return_normals=True
+        )
+
+/local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/pytorch3d/ops/sample_points_from_meshes.py:13: in sample_points_from_meshes
+    from .temp import sample_points_from_meshes
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    import sys
+    from typing import Tuple, Union
+    import torch
+    from pytorch3d.ops.mesh_face_areas_normals import mesh_face_areas_normals
+    from pytorch3d.ops.packed_to_padded import packed_to_padded
+    from pytorch3d.renderer.mesh.rasterizer import Fragments as MeshFragments
+    import torch
+    from pytorch3d.structures import Meshes
+>   from pytorch3d.ops import sample_points_from_meshes1 as sample_points
+E   ImportError: cannot import name 'sample_points_from_meshes1' from 'pytorch3d.ops' (/local/data0/moved_data/pytorch3d/pytorch3d/ops/__init__.py)
+
+/local/data0/moved_data/pytorch3d/pytorch3d/ops/temp.py:9: ImportError
+____________________ TestSamplePoints.test_texture_sampling ____________________
+
+self = <tests.test_sample_points_from_meshes.TestSamplePoints testMethod=test_texture_sampling>
+
+    def test_texture_sampling(self):
+        device = torch.device("cuda:0")
+        batch_size = 6
+        # verts
+        verts = torch.rand((batch_size, 6, 3), device=device, dtype=torch.float32)
+        verts[:, :3, 2] = 1.0
+        verts[:, 3:, 2] = -1.0
+        # textures
+        texts = torch.rand((batch_size, 6, 3), device=device, dtype=torch.float32)
+        # faces
+        faces = torch.tensor([[0, 1, 2], [3, 4, 5]], device=device, dtype=torch.int64)
+        faces = faces.view(1, 2, 3).expand(batch_size, -1, -1)
+    
+        meshes = Meshes(verts=verts, faces=faces, textures=TexturesVertex(texts))
+    
+        num_samples = 24
+>       samples, normals, textures = sample_points_from_meshes(
+            meshes, num_samples=num_samples, return_normals=True, return_textures=True
+        )
+
+/local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py:359: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/pytorch3d/ops/sample_points_from_meshes.py:13: in sample_points_from_meshes
+    from .temp import sample_points_from_meshes
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    import sys
+    from typing import Tuple, Union
+    import torch
+    from pytorch3d.ops.mesh_face_areas_normals import mesh_face_areas_normals
+    from pytorch3d.ops.packed_to_padded import packed_to_padded
+    from pytorch3d.renderer.mesh.rasterizer import Fragments as MeshFragments
+    import torch
+    from pytorch3d.structures import Meshes
+>   from pytorch3d.ops import sample_points_from_meshes1 as sample_points
+E   ImportError: cannot import name 'sample_points_from_meshes1' from 'pytorch3d.ops' (/local/data0/moved_data/pytorch3d/pytorch3d/ops/__init__.py)
+
+/local/data0/moved_data/pytorch3d/pytorch3d/ops/temp.py:9: ImportError
+__________________ TestSamplePoints.test_texture_sampling_cow __________________
+
+self = <tests.test_sample_points_from_meshes.TestSamplePoints testMethod=test_texture_sampling_cow>
+
+    def test_texture_sampling_cow(self):
+        # test texture sampling for the cow example by converting
+        # the cow mesh and its texture uv to a pointcloud with texture
+    
+        device = torch.device("cuda:0")
+        obj_dir = get_pytorch3d_dir() / "docs/tutorials/data"
+        obj_filename = obj_dir / "cow_mesh/cow.obj"
+    
+        for text_type in ("uv", "atlas"):
+            # Load mesh + texture
+            if text_type == "uv":
+                mesh = load_objs_as_meshes(
+                    [obj_filename], device=device, load_textures=True, texture_wrap=None
+                )
+            elif text_type == "atlas":
+                mesh = load_objs_as_meshes(
+                    [obj_filename],
+                    device=device,
+                    load_textures=True,
+                    create_texture_atlas=True,
+                    texture_atlas_size=8,
+                    texture_wrap=None,
+                )
+    
+>           points, normals, textures = sample_points_from_meshes(
+                mesh, num_samples=50000, return_normals=True, return_textures=True
+            )
+
+/local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py:407: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/pytorch3d/ops/sample_points_from_meshes.py:13: in sample_points_from_meshes
+    from .temp import sample_points_from_meshes
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    import sys
+    from typing import Tuple, Union
+    import torch
+    from pytorch3d.ops.mesh_face_areas_normals import mesh_face_areas_normals
+    from pytorch3d.ops.packed_to_padded import packed_to_padded
+    from pytorch3d.renderer.mesh.rasterizer import Fragments as MeshFragments
+    import torch
+    from pytorch3d.structures import Meshes
+>   from pytorch3d.ops import sample_points_from_meshes1 as sample_points
+E   ImportError: cannot import name 'sample_points_from_meshes1' from 'pytorch3d.ops' (/local/data0/moved_data/pytorch3d/pytorch3d/ops/__init__.py)
+
+/local/data0/moved_data/pytorch3d/pytorch3d/ops/temp.py:9: ImportError
+_______________________ TestSamplePoints.test_verts_nan ________________________
+
+self = <tests.test_sample_points_from_meshes.TestSamplePoints testMethod=test_verts_nan>
+
+    def test_verts_nan(self):
+        num_verts = 30
+        num_faces = 50
+        for device in ["cpu", "cuda:0"]:
+            for invalid in ["nan", "inf"]:
+                verts = torch.rand((num_verts, 3), dtype=torch.float32, device=device)
+                # randomly assign an invalid type
+                verts[torch.randperm(num_verts)[:10]] = float(invalid)
+                faces = torch.randint(
+                    num_verts, size=(num_faces, 3), dtype=torch.int64, device=device
+                )
+                meshes = Meshes(verts=[verts], faces=[faces])
+    
+                with self.assertRaisesRegex(ValueError, "Meshes contain nan or inf."):
+>                   sample_points_from_meshes(
+                        meshes, num_samples=100, return_normals=True
+                    )
+
+/local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py:299: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/pytorch3d/ops/sample_points_from_meshes.py:13: in sample_points_from_meshes
+    from .temp import sample_points_from_meshes
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    import sys
+    from typing import Tuple, Union
+    import torch
+    from pytorch3d.ops.mesh_face_areas_normals import mesh_face_areas_normals
+    from pytorch3d.ops.packed_to_padded import packed_to_padded
+    from pytorch3d.renderer.mesh.rasterizer import Fragments as MeshFragments
+    import torch
+    from pytorch3d.structures import Meshes
+>   from pytorch3d.ops import sample_points_from_meshes1 as sample_points
+E   ImportError: cannot import name 'sample_points_from_meshes1' from 'pytorch3d.ops' (/local/data0/moved_data/pytorch3d/pytorch3d/ops/__init__.py)
+
+/local/data0/moved_data/pytorch3d/pytorch3d/ops/temp.py:9: ImportError
+=============================== warnings summary ===============================
+tests/test_sample_points_from_meshes.py::TestSamplePoints::test_multinomial
+  /local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py:199: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at ../torch/csrc/tensor/python_tensor.cpp:78.)
+    freqs = torch.cuda.FloatTensor(
+
+tests/test_sample_points_from_meshes.py::TestSamplePoints::test_multinomial_weights
+  /local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py:273: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+    weights = torch.load(get_tests_dir() / "weights.pt")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_all_empty_meshes
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_outputs
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_sampling_output
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_texture_sampling
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_texture_sampling_cow
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_verts_nan
+=================== 6 failed, 2 passed, 2 warnings in 1.66s ====================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 8 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_all_empty_meshes PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_multinomial PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_multinomial_weights PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_outputs PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_sampling_output PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_texture_sampling PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_texture_sampling_cow PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_verts_nan PASSED
+
+=============================== warnings summary ===============================
+tests/test_sample_points_from_meshes.py::TestSamplePoints::test_multinomial
+  /local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py:199: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at ../torch/csrc/tensor/python_tensor.cpp:78.)
+    freqs = torch.cuda.FloatTensor(
+
+tests/test_sample_points_from_meshes.py::TestSamplePoints::test_multinomial_weights
+  /local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py:273: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+    weights = torch.load(get_tests_dir() / "weights.pt")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 8 passed, 2 warnings in 1.85s =========================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 8 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_all_empty_meshes PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_multinomial PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_multinomial_weights PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_outputs PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_sampling_output PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_texture_sampling PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_texture_sampling_cow PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py::TestSamplePoints::test_verts_nan PASSED
+
+=============================== warnings summary ===============================
+tests/test_sample_points_from_meshes.py::TestSamplePoints::test_multinomial
+  /local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py:199: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at ../torch/csrc/tensor/python_tensor.cpp:78.)
+    freqs = torch.cuda.FloatTensor(
+
+tests/test_sample_points_from_meshes.py::TestSamplePoints::test_multinomial_weights
+  /local/data0/moved_data/pytorch3d/tests/test_sample_points_from_meshes.py:273: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+    weights = torch.load(get_tests_dir() / "weights.pt")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 8 passed, 2 warnings in 2.24s =========================

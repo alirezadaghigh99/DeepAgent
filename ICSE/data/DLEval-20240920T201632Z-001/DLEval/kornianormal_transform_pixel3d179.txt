@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Generate a Python function called normal_transform_pixel3d that computes the normalization matrix from image size in pixels to the range [-1, 1]. The function takes in the image depth, height, width, epsilon value (eps), device, and data type (dtype) as inputs. It returns a normalized transform matrix with a shape of (1, 4, 4). The function first creates a 4x4 tensor matrix and then adjusts the values based on the image dimensions to prevent divide-by-zero errors. Finally, it returns the normalized transform matrix with a shape of 1x4x4.
+
+ ground Truth:kornia/geometry/conversions.py
+
+ repo:kornia
+
+ function:normal_transform_pixel3d
+ 
+ test_cases:tests/geometry/transform/test_homography_warper.py::TestHomographyNormalTransform::test_divide_by_zero3d

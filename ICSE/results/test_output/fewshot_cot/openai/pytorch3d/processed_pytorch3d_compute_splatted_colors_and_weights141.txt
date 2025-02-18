@@ -1,0 +1,179 @@
+output file:
+processed_pytorch3d_compute_splatted_colors_and_weights141.json
+function:
+_compute_splatted_colors_and_weights
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeSplattedColorsAndWeights::test_accumulation_foreground FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeSplattedColorsAndWeights::test_accumulation_foreground', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeSplattedColorsAndWeights::test_accumulation_background FAILED', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeSplattedColorsAndWeights::test_accumulation_middle FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeSplattedColorsAndWeights::test_accumulation_middle', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeSplattedColorsAndWeights::test_accumulation_background'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 19 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestPrecompute::test_crops_h PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestPrecompute::test_crops_w PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestPrecompute::test_offsets PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestPreparPixelsAndColors::test_background_alpha PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestPreparPixelsAndColors::test_background_z PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestGetSplatKernelNormalization::test_splat_kernel_normalization PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeOcclusionLayers::test_all_equal PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeOcclusionLayers::test_mid_to_top_level_splatting PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeOcclusionLayers::test_single_layer PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeSplattingColorsAndWeights::test_all_equal PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeSplattingColorsAndWeights::test_random_inputs PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeSplattingColorsAndWeights::test_zero_alpha_zero_weight PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestOffsetSplats::test_offset PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeSplattedColorsAndWeights::test_accumulation_background FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeSplattedColorsAndWeights::test_accumulation_foreground FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeSplattedColorsAndWeights::test_accumulation_middle FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestNormalizeAndComposeAllLayers::test_background_color PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestNormalizeAndComposeAllLayers::test_compositing_opaque PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestNormalizeAndComposeAllLayers::test_compositing_transparencies PASSED
+
+=================================== FAILURES ===================================
+_______ TestComputeSplattedColorsAndWeights.test_accumulation_background _______
+
+self = <tests.test_splatter_blend.TestComputeSplattedColorsAndWeights testMethod=test_accumulation_background>
+
+    def test_accumulation_background(self):
+        # Set occlusion_layers to all -1, so all splats are background splats.
+        splat_colors_and_weights = torch.rand((1, 1, 1, 3, 9, 5))
+        occlusion_layers = torch.zeros((1, 1, 1, 9)) - 1
+        splatted_colors, splatted_weights = _compute_splatted_colors_and_weights(
+            occlusion_layers, splat_colors_and_weights
+        )
+    
+        # Foreground splats (there are none).
+>       self.assertClose(
+            splatted_colors[0, 0, 0, :, 0],
+            torch.zeros((4)),
+            atol=0.001,
+        )
+
+/local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py:492: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/tests/common_testing.py:209: in assertClose
+    self.fail(err)
+E   AssertionError: Not close. Max diff 0.9753983020782471. Shape (4,). At (1,).
+_______ TestComputeSplattedColorsAndWeights.test_accumulation_foreground _______
+
+self = <tests.test_splatter_blend.TestComputeSplattedColorsAndWeights testMethod=test_accumulation_foreground>
+
+    def test_accumulation_foreground(self):
+        # Set occlusion_layers to all 1. Then the top splatter is a foreground
+        # splatter, mid splatter is surface, and bottom splatter is background.
+        splat_colors_and_weights = torch.rand((1, 1, 1, 3, 9, 5))
+        occlusion_layers = torch.zeros((1, 1, 1, 9)) + 1
+        splatted_colors, splatted_weights = _compute_splatted_colors_and_weights(
+            occlusion_layers, splat_colors_and_weights
+        )
+    
+        # Foreground splats
+>       self.assertClose(
+            splatted_colors[0, 0, 0, :, 0],
+            splat_colors_and_weights[0, 0, 0, 0:1, :, :4].sum(dim=0).sum(dim=0),
+            atol=0.001,
+        )
+
+/local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py:553: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/tests/common_testing.py:209: in assertClose
+    self.fail(err)
+E   AssertionError: Not close. Max diff 5.830204963684082. Max relative diff 1.0 Shape (4,). At (3,).
+_________ TestComputeSplattedColorsAndWeights.test_accumulation_middle _________
+
+self = <tests.test_splatter_blend.TestComputeSplattedColorsAndWeights testMethod=test_accumulation_middle>
+
+    def test_accumulation_middle(self):
+        # Set occlusion_layers to all 0, so top splats are co-surface with splatted
+        # pixels. Thus, the top splatting layer should be accumulated to surface, and
+        # all other layers to background.
+        splat_colors_and_weights = torch.rand((1, 1, 1, 3, 9, 5))
+        occlusion_layers = torch.zeros((1, 1, 1, 9))
+        splatted_colors, splatted_weights = _compute_splatted_colors_and_weights(
+            occlusion_layers, splat_colors_and_weights
+        )
+    
+        # Foreground splats (there are none).
+>       self.assertClose(
+            splatted_colors[0, 0, 0, :, 0],
+            torch.zeros((4)),
+            atol=0.001,
+        )
+
+/local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py:523: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/tests/common_testing.py:209: in assertClose
+    self.fail(err)
+E   AssertionError: Not close. Max diff 0.865565299987793. Shape (4,). At (0,).
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeSplattedColorsAndWeights::test_accumulation_background
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeSplattedColorsAndWeights::test_accumulation_foreground
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeSplattedColorsAndWeights::test_accumulation_middle
+========================= 3 failed, 16 passed in 1.30s =========================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 19 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestPrecompute::test_crops_h PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestPrecompute::test_crops_w PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestPrecompute::test_offsets PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestPreparPixelsAndColors::test_background_alpha PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestPreparPixelsAndColors::test_background_z PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestGetSplatKernelNormalization::test_splat_kernel_normalization PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeOcclusionLayers::test_all_equal PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeOcclusionLayers::test_mid_to_top_level_splatting PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeOcclusionLayers::test_single_layer PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeSplattingColorsAndWeights::test_all_equal PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeSplattingColorsAndWeights::test_random_inputs PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeSplattingColorsAndWeights::test_zero_alpha_zero_weight PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestOffsetSplats::test_offset PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeSplattedColorsAndWeights::test_accumulation_background PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeSplattedColorsAndWeights::test_accumulation_foreground PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeSplattedColorsAndWeights::test_accumulation_middle PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestNormalizeAndComposeAllLayers::test_background_color PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestNormalizeAndComposeAllLayers::test_compositing_opaque PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestNormalizeAndComposeAllLayers::test_compositing_transparencies PASSED
+
+============================== 19 passed in 1.22s ==============================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 19 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestPrecompute::test_crops_h PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestPrecompute::test_crops_w PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestPrecompute::test_offsets PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestPreparPixelsAndColors::test_background_alpha PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestPreparPixelsAndColors::test_background_z PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestGetSplatKernelNormalization::test_splat_kernel_normalization PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeOcclusionLayers::test_all_equal PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeOcclusionLayers::test_mid_to_top_level_splatting PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeOcclusionLayers::test_single_layer PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeSplattingColorsAndWeights::test_all_equal PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeSplattingColorsAndWeights::test_random_inputs PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeSplattingColorsAndWeights::test_zero_alpha_zero_weight PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestOffsetSplats::test_offset PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeSplattedColorsAndWeights::test_accumulation_background PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeSplattedColorsAndWeights::test_accumulation_foreground PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestComputeSplattedColorsAndWeights::test_accumulation_middle PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestNormalizeAndComposeAllLayers::test_background_color PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestNormalizeAndComposeAllLayers::test_compositing_opaque PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_splatter_blend.py::TestNormalizeAndComposeAllLayers::test_compositing_transparencies PASSED
+
+============================== 19 passed in 1.22s ==============================

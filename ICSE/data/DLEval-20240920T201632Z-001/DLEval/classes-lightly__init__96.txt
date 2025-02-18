@@ -1,0 +1,43 @@
+stage: Image
+task: 
+data: Model construction
+
+prompt:
+Generate a Python function __init__ for the DINOCollateFunction class that initializes the global and local view augmentations for the DINO method. The function sets up various augmentation parameters and transformations including global and local crops, horizontal and vertical flips, random rotations, color jittering, grayscale conversion, Gaussian blur, solarization, and normalization. The input types are the various augmentation parameters specified in the class definition. The output is the initialized DINOCollateFunction object with the specified transformations.
+
+python
+class DINOCollateFunction(MultiViewCollateFunction):
+    def __init__(
+        self,
+        global_crop_size=224,
+        global_crop_scale=(0.4, 1.0),
+        local_crop_size=96,
+        local_crop_scale=(0.05, 0.4),
+        n_local_views=6,
+        hf_prob=0.5,
+        vf_prob=0,
+        rr_prob=0,
+        rr_degrees: Optional[Union[float, Tuple[float, float]]] = None,
+        cj_prob=0.8,
+        cj_bright=0.4,
+        cj_contrast=0.4,
+        cj_sat=0.2,
+        cj_hue=0.1,
+        random_gray_scale=0.2,
+        gaussian_blur=(1.0, 0.1, 0.5),
+        kernel_size: Optional[float] = None,
+        kernel_scale: Optional[float] = None,
+        sigmas: Tuple[float, float] = (0.1, 2),
+        solarization_prob=0.2,
+        normalize=imagenet_normalize,
+    ):
+
+ ground Truth:lightly/data/collate.py
+
+ repo:lightly
+
+ function:__init__
+ 
+ test_cases:tests/utils/test_debug.py
+ 
+ class:DINOCollateFunction

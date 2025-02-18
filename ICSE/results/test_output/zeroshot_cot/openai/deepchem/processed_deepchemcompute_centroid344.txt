@@ -1,0 +1,140 @@
+output file:
+processed_deepchemcompute_centroid344.json
+function:
+compute_centroid
+Error Cases:
+2025-02-14 03:52:35.004956: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739523155.015934 2200252 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1739523155.019302 2200252 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-02-14 03:52:35.031541: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_geometry_utils.py::TestGeometryUtils::test_subract_centroid', '../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_geometry_utils.py::TestGeometryUtils::test_compute_centroid FAILED', '../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_geometry_utils.py::TestGeometryUtils::test_subract_centroid FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_geometry_utils.py::TestGeometryUtils::test_compute_centroid'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/deepchem/deepchem/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/deepchem/deepchem
+configfile: setup.cfg
+plugins: flaky-3.8.1
+collecting ... collected 8 items
+
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_geometry_utils.py::TestGeometryUtils::test_angle_between PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_geometry_utils.py::TestGeometryUtils::test_compute_centroid FAILED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_geometry_utils.py::TestGeometryUtils::test_compute_pairwise_distances PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_geometry_utils.py::TestGeometryUtils::test_generate_random_rotation_matrix PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_geometry_utils.py::TestGeometryUtils::test_generate_random_unit_vector PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_geometry_utils.py::TestGeometryUtils::test_is_angle_within_cutoff PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_geometry_utils.py::TestGeometryUtils::test_subract_centroid FAILED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_geometry_utils.py::TestGeometryUtils::test_unit_vector PASSED
+
+=================================== FAILURES ===================================
+___________________ TestGeometryUtils.test_compute_centroid ____________________
+
+self = <deepchem.utils.test.test_geometry_utils.TestGeometryUtils testMethod=test_compute_centroid>
+
+    def test_compute_centroid(self):
+        N = 10
+        coords = np.random.rand(N, 3)
+>       centroid = geometry_utils.compute_centroid(coords)
+
+/local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_geometry_utils.py:70: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+coordinates = array([[0.47623258, 0.4681551 , 0.67454844],
+       [0.53891907, 0.15371729, 0.47137675],
+       [0.93993115, 0.802824...49, 0.33132422, 0.86783644],
+       [0.29923747, 0.44086484, 0.21083068],
+       [0.05425432, 0.44793698, 0.99710732]])
+
+    def compute_centroid(coordinates: np.ndarray) -> np.ndarray:
+>       from .temp import compute_centroid
+E       ImportError: cannot import name 'compute_centroid' from 'deepchem.utils.temp' (/local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/temp.py)
+
+/local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/geometry_utils.py:160: ImportError
+___________________ TestGeometryUtils.test_subract_centroid ____________________
+
+self = <deepchem.utils.test.test_geometry_utils.TestGeometryUtils testMethod=test_subract_centroid>
+
+    def test_subract_centroid(self):
+        N = 10
+        coords = np.random.rand(N, 3)
+>       centroid = geometry_utils.compute_centroid(coords)
+
+/local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_geometry_utils.py:76: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+coordinates = array([[0.65865554, 0.59503896, 0.99901362],
+       [0.2801057 , 0.00440265, 0.24584272],
+       [0.96830979, 0.794671...78, 0.55312816, 0.89172119],
+       [0.48462481, 0.91622304, 0.06396432],
+       [0.66878518, 0.94491707, 0.37501954]])
+
+    def compute_centroid(coordinates: np.ndarray) -> np.ndarray:
+>       from .temp import compute_centroid
+E       ImportError: cannot import name 'compute_centroid' from 'deepchem.utils.temp' (/local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/temp.py)
+
+/local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/geometry_utils.py:160: ImportError
+=============================== warnings summary ===============================
+deepchem/utils/test/test_geometry_utils.py::TestGeometryUtils::test_angle_between
+  /local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/geometry_utils.py:52: RuntimeWarning: invalid value encountered in arccos
+    angle = np.arccos(np.dot(vector_i_u, vector_j_u))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_geometry_utils.py::TestGeometryUtils::test_compute_centroid
+FAILED ../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_geometry_utils.py::TestGeometryUtils::test_subract_centroid
+==================== 2 failed, 6 passed, 1 warning in 4.00s ====================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/deepchem/deepchem/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/deepchem/deepchem
+configfile: setup.cfg
+plugins: flaky-3.8.1
+collecting ... collected 8 items
+
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_geometry_utils.py::TestGeometryUtils::test_angle_between PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_geometry_utils.py::TestGeometryUtils::test_compute_centroid PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_geometry_utils.py::TestGeometryUtils::test_compute_pairwise_distances PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_geometry_utils.py::TestGeometryUtils::test_generate_random_rotation_matrix PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_geometry_utils.py::TestGeometryUtils::test_generate_random_unit_vector PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_geometry_utils.py::TestGeometryUtils::test_is_angle_within_cutoff PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_geometry_utils.py::TestGeometryUtils::test_subract_centroid PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_geometry_utils.py::TestGeometryUtils::test_unit_vector PASSED
+
+============================== 8 passed in 3.91s ===============================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/deepchem/deepchem/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/deepchem/deepchem
+configfile: setup.cfg
+plugins: flaky-3.8.1
+collecting ... collected 8 items
+
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_geometry_utils.py::TestGeometryUtils::test_angle_between PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_geometry_utils.py::TestGeometryUtils::test_compute_centroid PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_geometry_utils.py::TestGeometryUtils::test_compute_pairwise_distances PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_geometry_utils.py::TestGeometryUtils::test_generate_random_rotation_matrix PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_geometry_utils.py::TestGeometryUtils::test_generate_random_unit_vector PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_geometry_utils.py::TestGeometryUtils::test_is_angle_within_cutoff PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_geometry_utils.py::TestGeometryUtils::test_subract_centroid PASSED
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/test/test_geometry_utils.py::TestGeometryUtils::test_unit_vector PASSED
+
+=============================== warnings summary ===============================
+deepchem/utils/test/test_geometry_utils.py::TestGeometryUtils::test_angle_between
+  /local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/utils/geometry_utils.py:54: RuntimeWarning: invalid value encountered in arccos
+    angle = np.arccos(np.dot(vector_i_u, vector_j_u))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+========================= 8 passed, 1 warning in 3.98s =========================

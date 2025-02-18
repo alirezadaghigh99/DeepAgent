@@ -1,0 +1,23 @@
+stage: Pre-Post processing
+task: 
+data: tabular
+
+prompt:
+Complete the following function:
+def block_diag_embed(mat):
+    """
+    Takes a tensor of shape (..., B, M, N) and returns a block diagonal tensor
+    of shape (..., B x M, B x N).
+
+    :param torch.Tensor mat: an input tensor with 3 or more dimensions
+    :returns torch.Tensor: a block diagonal tensor with dimension `m.dim() - 1`
+    """
+
+ ground Truth:pyro/ops/tensor_utils.py
+
+ repo:pyro
+
+ function:block_diag_embed
+ 
+ test_cases:tests/ops/test_tensor_utils.py::test_block_diag
+

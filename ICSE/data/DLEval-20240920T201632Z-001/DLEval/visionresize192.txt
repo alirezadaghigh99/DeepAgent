@@ -1,0 +1,21 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:Create a Python function `resize` that resizes an input image (either a Tensor or a PIL Image) to a specified size. The function accepts the following parameters: `img` (the image to be resized), `size` (the desired output size), `interpolation` (the method for resizing), `max_size` (optional, to limit the size of the longer edge), and `antialias` (optional, to apply antialiasing for certain modes).
+
+Error handling includes:
+- Raising a `TypeError` if `interpolation` is not an `InterpolationMode` or a corresponding Pillow integer constant.
+- Raising a `ValueError` if `size` is not an integer or a list/tuple of length 1 or 2, or if `max_size` is provided when `size` is not a single integer.
+- Warning the user if `antialias` is set to `False` but the input is a PIL Image, as antialiasing is always applied in that case.
+
+The function returns the resized image, maintaining the aspect ratio if necessary and handling both PIL Images and Tensors appropriately.
+
+ ground Truth:torchvision/transforms/functional.py
+
+ repo:vision
+
+ function:resize
+ 
+ test_cases:test/test_transforms.py::test_resize
+

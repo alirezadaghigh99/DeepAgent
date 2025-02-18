@@ -1,0 +1,14 @@
+stage: Model Construction
+task: 
+data: Image
+
+prompt:
+Create a Python function `encode_jpeg` that encodes an input tensor or list of tensors representing images into JPEG format. The function accepts images in CHW layout and a quality parameter between 1 and 100 to control the output JPEG quality. The output is a tensor or list of tensors containing the raw bytes of the JPEG file(s). The function raises a `ValueError` if the quality is not between 1 and 100 or if an empty list is passed as input.
+
+ ground Truth:torchvision/io/image.py
+
+ repo:vision
+
+ function:encode_jpeg
+ 
+ test_cases:test/test_image.py

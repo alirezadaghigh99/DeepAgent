@@ -1,0 +1,191 @@
+output file:
+processed_classes-lightlyforward59.json
+function:
+forward
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/publishablew/lightly/lightly/tests/loss/test_VICRegLoss.py::TestVICRegLossUnitTest::test_forward__compare', 'FAILED ../../../../../../local/data0/moved_data/publishablew/lightly/lightly/tests/loss/test_VICRegLoss.py::TestVICRegLossUnitTest::test_forward_pass__error_different_shapes', '../../../../../../local/data0/moved_data/publishablew/lightly/lightly/tests/loss/test_VICRegLoss.py::TestVICRegLossUnitTest::test_forward_pass__error_different_shapes FAILED [ 83%]', '../../../../../../local/data0/moved_data/publishablew/lightly/lightly/tests/loss/test_VICRegLoss.py::TestVICRegLossUnitTest::test_forward_pass__error_batch_size_1 FAILED [ 66%]', '../../../../../../local/data0/moved_data/publishablew/lightly/lightly/tests/loss/test_VICRegLoss.py::TestVICRegLossUnitTest::test_forward__compare_vicregl FAILED [ 33%]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/lightly/lightly/tests/loss/test_VICRegLoss.py::TestVICRegLossUnitTest::test_forward__compare_vicregl', '../../../../../../local/data0/moved_data/publishablew/lightly/lightly/tests/loss/test_VICRegLoss.py::TestVICRegLossUnitTest::test_forward__compare FAILED [ 16%]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/lightly/lightly/tests/loss/test_VICRegLoss.py::TestVICRegLossUnitTest::test_forward_pass__error_batch_size_1'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/lightly/lightly/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/lightly/lightly
+configfile: pyproject.toml
+plugins: hydra-core-1.3.2, mock-3.14.0
+collecting ... collected 6 items
+
+../../../../../../local/data0/moved_data/publishablew/lightly/lightly/tests/loss/test_VICRegLoss.py::TestVICRegLossUnitTest::test_forward__compare FAILED [ 16%]
+../../../../../../local/data0/moved_data/publishablew/lightly/lightly/tests/loss/test_VICRegLoss.py::TestVICRegLossUnitTest::test_forward__compare_vicregl FAILED [ 33%]
+../../../../../../local/data0/moved_data/publishablew/lightly/lightly/tests/loss/test_VICRegLoss.py::TestVICRegLossUnitTest::test_forward_pass PASSED [ 50%]
+../../../../../../local/data0/moved_data/publishablew/lightly/lightly/tests/loss/test_VICRegLoss.py::TestVICRegLossUnitTest::test_forward_pass__error_batch_size_1 FAILED [ 66%]
+../../../../../../local/data0/moved_data/publishablew/lightly/lightly/tests/loss/test_VICRegLoss.py::TestVICRegLossUnitTest::test_forward_pass__error_different_shapes FAILED [ 83%]
+../../../../../../local/data0/moved_data/publishablew/lightly/lightly/tests/loss/test_VICRegLoss.py::TestVICRegLossUnitTest::test_forward_pass_cuda PASSED [100%]
+
+=================================== FAILURES ===================================
+_________________ TestVICRegLossUnitTest.test_forward__compare _________________
+
+self = <test_VICRegLoss.TestVICRegLossUnitTest testMethod=test_forward__compare>
+
+    def test_forward__compare(self) -> None:
+        # Compare against original implementation.
+        loss = VICRegLoss()
+        x0 = torch.randn((2, 32))
+        x1 = torch.randn((2, 32))
+>       assert loss(x0, x1).item() == _reference_vicreg_loss(x0, x1).item()
+E       assert 87.27484893798828 == 124.90980529785156
+E        +  where 87.27484893798828 = <built-in method item of Tensor object at 0x79f8f55f66f0>()
+E        +    where <built-in method item of Tensor object at 0x79f8f55f66f0> = tensor(87.2748).item
+E        +      where tensor(87.2748) = VICRegLoss()(tensor([[ 0.2571,  0.2945,  0.2587,  2.3779, -0.7955, -2.1229,  0.5067,  0.8829,\n          0.4256, -0.5165,  0.9536, -1.9456, -0.6883,  0.4132, -0.1594,  0.2938,\n          1.3017, -1.5732, -0.0979,  0.5022, -0.5229, -2.0552, -1.8294,  0.1292,\n         -1.3136,  1.0223,  0.3927,  1.4043, -0.1349, -1.8793,  0.0948, -1.9772],\n        [-0.2362, -0.6946,  0.0489, -2.4861,  0.6313,  0.6997, -1.6431, -1.2859,\n         -0.6746,  0.4964,  0.9173, -0.6475, -0.6185,  0.3755,  0.2748,  0.1089,\n         -1.0304,  1.7581, -1.3699,  0.4271,  1.1228, -0.5978,  0.6010, -1.4486,\n         -0.0302, -0.7931,  0.5210,  0.4427,  0.6014, -0.9216, -0.2829,  0.6598]]), tensor([[-0.2829, -0.6137,  0.4246,  0.1630, -0.0651,  0.9186, -0.2119,  0.3866,\n         -0.2686, -1.0293, -2.2269, -0.6118, -2.1857,  1.0852, -0.0379,  0.2684,\n         -0.3570, -1.4157, -1.7532, -0.7087,  0.0944, -1.0160, -1.6776, -0.7520,\n         -0.5353, -0.2248,  0.0354, -0.5513,  1.5464, -1.2072, -0.9997,  0.6478],\n        [ 0.0088, -0.4463, -0.6378,  0.2304,  0.9358, -0.8353,  0.5141, -0.4972,\n         -0.8119, -0.4291, -1.2516,  1.0667,  0.0340, -0.6130, -0.1755, -0.6463,\n         -0.3743, -0.6405, -0.8574, -0.0565,  0.4765, -0.6471,  0.6156, -0.1817,\n          0.7216, -2.2239,  1.1251,  0.3609, -0.2894,  0.1591, -2.4604,  0.0346]]))
+E        +  and   124.90980529785156 = <built-in method item of Tensor object at 0x79f8f55f6750>()
+E        +    where <built-in method item of Tensor object at 0x79f8f55f6750> = tensor(124.9098).item
+E        +      where tensor(124.9098) = _reference_vicreg_loss(tensor([[ 0.2571,  0.2945,  0.2587,  2.3779, -0.7955, -2.1229,  0.5067,  0.8829,\n          0.4256, -0.5165,  0.9536, -1.9456, -0.6883,  0.4132, -0.1594,  0.2938,\n          1.3017, -1.5732, -0.0979,  0.5022, -0.5229, -2.0552, -1.8294,  0.1292,\n         -1.3136,  1.0223,  0.3927,  1.4043, -0.1349, -1.8793,  0.0948, -1.9772],\n        [-0.2362, -0.6946,  0.0489, -2.4861,  0.6313,  0.6997, -1.6431, -1.2859,\n         -0.6746,  0.4964,  0.9173, -0.6475, -0.6185,  0.3755,  0.2748,  0.1089,\n         -1.0304,  1.7581, -1.3699,  0.4271,  1.1228, -0.5978,  0.6010, -1.4486,\n         -0.0302, -0.7931,  0.5210,  0.4427,  0.6014, -0.9216, -0.2829,  0.6598]]), tensor([[-0.2829, -0.6137,  0.4246,  0.1630, -0.0651,  0.9186, -0.2119,  0.3866,\n         -0.2686, -1.0293, -2.2269, -0.6118, -2.1857,  1.0852, -0.0379,  0.2684,\n         -0.3570, -1.4157, -1.7532, -0.7087,  0.0944, -1.0160, -1.6776, -0.7520,\n         -0.5353, -0.2248,  0.0354, -0.5513,  1.5464, -1.2072, -0.9997,  0.6478],\n        [ 0.0088, -0.4463, -0.6378,  0.2304,  0.9358, -0.8353,  0.5141, -0.4972,\n         -0.8119, -0.4291, -1.2516,  1.0667,  0.0340, -0.6130, -0.1755, -0.6463,\n         -0.3743, -0.6405, -0.8574, -0.0565,  0.4765, -0.6471,  0.6156, -0.1817,\n          0.7216, -2.2239,  1.1251,  0.3609, -0.2894,  0.1591, -2.4604,  0.0346]]))
+
+/local/data0/moved_data/publishablew/lightly/lightly/tests/loss/test_VICRegLoss.py:74: AssertionError
+_____________ TestVICRegLossUnitTest.test_forward__compare_vicregl _____________
+
+self = <test_VICRegLoss.TestVICRegLossUnitTest testMethod=test_forward__compare_vicregl>
+
+    def test_forward__compare_vicregl(self) -> None:
+        # Compare against implementation in VICRegL.
+        # Note: nu_param is set to 0.5 because our loss implementation follows the
+        # original VICReg implementation and there is a slight difference between the
+        # implementations in VICReg and VICRegL.
+        loss = VICRegLoss(nu_param=0.5)
+        x0 = torch.randn((2, 10, 32))
+        x1 = torch.randn((2, 10, 32))
+>       torch.testing.assert_close(loss(x0, x1), _reference_vicregl_vicreg_loss(x0, x1))
+E       AssertionError: Scalars are not close!
+E       
+E       Expected 93.62523651123047 but got 77.8812255859375.
+E       Absolute difference: 15.744010925292969 (up to 1e-05 allowed)
+E       Relative difference: 0.16815990551227558 (up to 1.3e-06 allowed)
+
+/local/data0/moved_data/publishablew/lightly/lightly/tests/loss/test_VICRegLoss.py:84: AssertionError
+_________ TestVICRegLossUnitTest.test_forward_pass__error_batch_size_1 _________
+
+self = <test_VICRegLoss.TestVICRegLossUnitTest testMethod=test_forward_pass__error_batch_size_1>
+
+    def test_forward_pass__error_batch_size_1(self):
+        loss = VICRegLoss()
+        x0 = torch.randn((1, 32))
+        x1 = torch.randn((1, 32))
+>       with self.assertRaises(AssertionError):
+E       AssertionError: AssertionError not raised
+
+/local/data0/moved_data/publishablew/lightly/lightly/tests/loss/test_VICRegLoss.py:59: AssertionError
+_______ TestVICRegLossUnitTest.test_forward_pass__error_different_shapes _______
+
+self = <test_VICRegLoss.TestVICRegLossUnitTest testMethod=test_forward_pass__error_different_shapes>
+
+    def test_forward_pass__error_different_shapes(self):
+        loss = VICRegLoss()
+        x0 = torch.randn((2, 32))
+        x1 = torch.randn((2, 16))
+        with self.assertRaises(AssertionError):
+>           loss(x0, x1)
+
+/local/data0/moved_data/publishablew/lightly/lightly/tests/loss/test_VICRegLoss.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/lightly/lightly/venv/lib/python3.11/site-packages/torch/nn/modules/module.py:1736: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+/local/data0/moved_data/publishablew/lightly/lightly/venv/lib/python3.11/site-packages/torch/nn/modules/module.py:1747: in _call_impl
+    return forward_call(*args, **kwargs)
+/local/data0/moved_data/publishablew/lightly/lightly/lightly/loss/vicreg_loss.py:62: in forward
+    invariance = invariance_loss(z_a, z_b)
+/local/data0/moved_data/publishablew/lightly/lightly/lightly/loss/vicreg_loss.py:84: in invariance_loss
+    return F.mse_loss(x, y)
+/local/data0/moved_data/publishablew/lightly/lightly/venv/lib/python3.11/site-packages/torch/nn/functional.py:3791: in mse_loss
+    expanded_input, expanded_target = torch.broadcast_tensors(input, target)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def broadcast_tensors(*tensors):
+        r"""broadcast_tensors(*tensors) -> List of Tensors
+    
+        Broadcasts the given tensors according to :ref:`broadcasting-semantics`.
+    
+        Args:
+            *tensors: any number of tensors of the same type
+    
+        .. warning::
+    
+            More than one element of a broadcasted tensor may refer to a single
+            memory location. As a result, in-place operations (especially ones that
+            are vectorized) may result in incorrect behavior. If you need to write
+            to the tensors, please clone them first.
+    
+        Example::
+    
+            >>> x = torch.arange(3).view(1, 3)
+            >>> y = torch.arange(2).view(2, 1)
+            >>> a, b = torch.broadcast_tensors(x, y)
+            >>> a.size()
+            torch.Size([2, 3])
+            >>> a
+            tensor([[0, 1, 2],
+                    [0, 1, 2]])
+        """
+        # This wrapper exists to support variadic args.
+        if has_torch_function(tensors):
+            return handle_torch_function(broadcast_tensors, tensors, *tensors)
+>       return _VF.broadcast_tensors(tensors)  # type: ignore[attr-defined]
+E       RuntimeError: The size of tensor a (32) must match the size of tensor b (16) at non-singleton dimension 1
+
+/local/data0/moved_data/publishablew/lightly/lightly/venv/lib/python3.11/site-packages/torch/functional.py:76: RuntimeError
+=============================== warnings summary ===============================
+tests/loss/test_VICRegLoss.py::TestVICRegLossUnitTest::test_forward_pass__error_batch_size_1
+  /local/data0/moved_data/publishablew/lightly/lightly/lightly/loss/vicreg_loss.py:98: UserWarning: var(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at ../aten/src/ATen/native/ReduceOps.cpp:1823.)
+    std = torch.sqrt(x.var(dim=0) + eps)
+
+tests/loss/test_VICRegLoss.py::TestVICRegLossUnitTest::test_forward_pass__error_different_shapes
+  /local/data0/moved_data/publishablew/lightly/lightly/lightly/loss/vicreg_loss.py:84: UserWarning: Using a target size (torch.Size([2, 16])) that is different to the input size (torch.Size([2, 32])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+    return F.mse_loss(x, y)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/lightly/lightly/tests/loss/test_VICRegLoss.py::TestVICRegLossUnitTest::test_forward__compare
+FAILED ../../../../../../local/data0/moved_data/publishablew/lightly/lightly/tests/loss/test_VICRegLoss.py::TestVICRegLossUnitTest::test_forward__compare_vicregl
+FAILED ../../../../../../local/data0/moved_data/publishablew/lightly/lightly/tests/loss/test_VICRegLoss.py::TestVICRegLossUnitTest::test_forward_pass__error_batch_size_1
+FAILED ../../../../../../local/data0/moved_data/publishablew/lightly/lightly/tests/loss/test_VICRegLoss.py::TestVICRegLossUnitTest::test_forward_pass__error_different_shapes
+=================== 4 failed, 2 passed, 2 warnings in 2.84s ====================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/lightly/lightly/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/lightly/lightly
+configfile: pyproject.toml
+plugins: hydra-core-1.3.2, mock-3.14.0
+collecting ... collected 6 items
+
+../../../../../../local/data0/moved_data/publishablew/lightly/lightly/tests/loss/test_VICRegLoss.py::TestVICRegLossUnitTest::test_forward__compare PASSED [ 16%]
+../../../../../../local/data0/moved_data/publishablew/lightly/lightly/tests/loss/test_VICRegLoss.py::TestVICRegLossUnitTest::test_forward__compare_vicregl PASSED [ 33%]
+../../../../../../local/data0/moved_data/publishablew/lightly/lightly/tests/loss/test_VICRegLoss.py::TestVICRegLossUnitTest::test_forward_pass PASSED [ 50%]
+../../../../../../local/data0/moved_data/publishablew/lightly/lightly/tests/loss/test_VICRegLoss.py::TestVICRegLossUnitTest::test_forward_pass__error_batch_size_1 PASSED [ 66%]
+../../../../../../local/data0/moved_data/publishablew/lightly/lightly/tests/loss/test_VICRegLoss.py::TestVICRegLossUnitTest::test_forward_pass__error_different_shapes PASSED [ 83%]
+../../../../../../local/data0/moved_data/publishablew/lightly/lightly/tests/loss/test_VICRegLoss.py::TestVICRegLossUnitTest::test_forward_pass_cuda PASSED [100%]
+
+============================== 6 passed in 2.58s ===============================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/lightly/lightly/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/lightly/lightly
+configfile: pyproject.toml
+plugins: hydra-core-1.3.2, mock-3.14.0
+collecting ... collected 6 items
+
+../../../../../../local/data0/moved_data/publishablew/lightly/lightly/tests/loss/test_VICRegLoss.py::TestVICRegLossUnitTest::test_forward__compare PASSED [ 16%]
+../../../../../../local/data0/moved_data/publishablew/lightly/lightly/tests/loss/test_VICRegLoss.py::TestVICRegLossUnitTest::test_forward__compare_vicregl PASSED [ 33%]
+../../../../../../local/data0/moved_data/publishablew/lightly/lightly/tests/loss/test_VICRegLoss.py::TestVICRegLossUnitTest::test_forward_pass PASSED [ 50%]
+../../../../../../local/data0/moved_data/publishablew/lightly/lightly/tests/loss/test_VICRegLoss.py::TestVICRegLossUnitTest::test_forward_pass__error_batch_size_1 PASSED [ 66%]
+../../../../../../local/data0/moved_data/publishablew/lightly/lightly/tests/loss/test_VICRegLoss.py::TestVICRegLossUnitTest::test_forward_pass__error_different_shapes PASSED [ 83%]
+../../../../../../local/data0/moved_data/publishablew/lightly/lightly/tests/loss/test_VICRegLoss.py::TestVICRegLossUnitTest::test_forward_pass_cuda PASSED [100%]
+
+============================== 6 passed in 2.66s ===============================

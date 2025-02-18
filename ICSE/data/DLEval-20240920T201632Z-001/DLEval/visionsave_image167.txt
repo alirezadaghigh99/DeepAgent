@@ -1,0 +1,13 @@
+stage: Inference
+task: 
+data: Image
+
+prompt:Implement a function named `save_image` that saves a PyTorch tensor or a list of tensors as an image file. The function takes the following inputs: `tensor`, which can be either a single PyTorch tensor or a list of tensors representing images; `fp`, which can be a string, `pathlib.Path`, or a file-like object specifying the file path or object to save the image; and an optional `format` string to specify the image format. If no format is provided, it will be inferred from the file extension unless a file object is used, in which case the format must be specified. Additional keyword arguments are passed to `make_grid`, which arranges the tensor into a grid if it represents a mini-batch. The function converts the tensor to a NumPy array after normalizing and clamping it to the [0, 255] range, then saves the resulting image using the PIL library. The function does not return anything (`None`).
+
+ ground Truth:torchvision/utils.py
+
+ repo:vision
+
+ function:save_image
+ 
+ test_cases:test/test_utils.py

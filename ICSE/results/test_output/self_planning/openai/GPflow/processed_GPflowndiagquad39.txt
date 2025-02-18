@@ -1,0 +1,874 @@
+output file:
+processed_GPflowndiagquad39.json
+function:
+ndiagquad
+Error Cases:
+2025-02-14 01:44:08.481642: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739515448.493110 1850547 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1739515448.496748 1850547 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-02-14 01:44:08.509664: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1739515451.015519 1850547 gpu_device.cc:2022] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 9449 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3060, pci bus id: 0000:06:00.0, compute capability: 8.6
+2025-02-14 01:44:21.148874: W external/local_xla/xla/tsl/framework/bfc_allocator.cc:497] Allocator (GPU_0_bfc) ran out of memory trying to allocate 6.25GiB (rounded to 6710886400)requested by op Pack
+If the cause is memory fragmentation maybe the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' will improve the situation. 
+Current allocation summary follows.
+Current allocation summary follows.
+2025-02-14 01:44:21.148923: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1053] BFCAllocator dump for GPU_0_bfc
+2025-02-14 01:44:21.148939: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (256): 	Total Chunks: 5, Chunks in use: 5. 1.2KiB allocated for chunks. 1.2KiB in use in bin. 72B client-requested in use in bin.
+2025-02-14 01:44:21.148970: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (512): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:21.148981: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (1024): 	Total Chunks: 1, Chunks in use: 1. 1.2KiB allocated for chunks. 1.2KiB in use in bin. 1.0KiB client-requested in use in bin.
+2025-02-14 01:44:21.148991: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (2048): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:21.149000: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (4096): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:21.149010: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (8192): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:21.149019: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (16384): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:21.149029: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (32768): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:21.149038: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (65536): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:21.149048: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (131072): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:21.149056: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (262144): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:21.149066: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (524288): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:21.149075: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (1048576): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:21.149085: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (2097152): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:21.149094: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (4194304): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:21.149104: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (8388608): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:21.149113: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (16777216): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:21.149123: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (33554432): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:21.149132: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (67108864): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:21.149142: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (134217728): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:21.149152: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (268435456): 	Total Chunks: 27, Chunks in use: 25. 9.23GiB allocated for chunks. 6.25GiB in use in bin. 6.25GiB client-requested in use in bin.
+2025-02-14 01:44:21.149164: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1076] Bin for 6.25GiB was 256.00MiB, Chunk State: 
+2025-02-14 01:44:21.149181: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1082]   Size: 256.00MiB | Requested Size: 256.00MiB | in_use: 0 | bin_num: 20, prev:   Size: 256B | Requested Size: 8B | in_use: 1 | bin_num: -1, next:   Size: 256.00MiB | Requested Size: 256.00MiB | in_use: 1 | bin_num: -1
+2025-02-14 01:44:21.149193: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1082]   Size: 2.73GiB | Requested Size: 0B | in_use: 0 | bin_num: 20, prev:   Size: 256.00MiB | Requested Size: 256.00MiB | in_use: 1 | bin_num: -1
+2025-02-14 01:44:21.149204: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1089] Next region of size 9908322304
+2025-02-14 01:44:21.149214: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000000 of size 256 next 1
+2025-02-14 01:44:21.149224: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000100 of size 1280 next 2
+2025-02-14 01:44:21.149233: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000600 of size 256 next 3
+2025-02-14 01:44:21.149241: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000700 of size 256 next 4
+2025-02-14 01:44:21.149250: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000800 of size 256 next 5
+2025-02-14 01:44:21.149259: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000900 of size 256 next 6
+2025-02-14 01:44:21.149263: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] Free  at 78ed82000a00 of size 268435456 next 7
+2025-02-14 01:44:21.149268: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed92000a00 of size 268435456 next 8
+2025-02-14 01:44:21.149272: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78eda2000a00 of size 268435456 next 9
+2025-02-14 01:44:21.149276: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78edb2000a00 of size 268435456 next 10
+2025-02-14 01:44:21.149280: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78edc2000a00 of size 268435456 next 11
+2025-02-14 01:44:21.149285: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78edd2000a00 of size 268435456 next 12
+2025-02-14 01:44:21.149289: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ede2000a00 of size 268435456 next 13
+2025-02-14 01:44:21.149293: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78edf2000a00 of size 268435456 next 14
+2025-02-14 01:44:21.149297: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee02000a00 of size 268435456 next 15
+2025-02-14 01:44:21.149302: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee12000a00 of size 268435456 next 16
+2025-02-14 01:44:21.149306: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee22000a00 of size 268435456 next 17
+2025-02-14 01:44:21.149310: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee32000a00 of size 268435456 next 18
+2025-02-14 01:44:21.149314: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee42000a00 of size 268435456 next 19
+2025-02-14 01:44:21.149318: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee52000a00 of size 268435456 next 20
+2025-02-14 01:44:21.149322: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee62000a00 of size 268435456 next 21
+2025-02-14 01:44:21.149326: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee72000a00 of size 268435456 next 22
+2025-02-14 01:44:21.149330: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee82000a00 of size 268435456 next 23
+2025-02-14 01:44:21.149334: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee92000a00 of size 268435456 next 24
+2025-02-14 01:44:21.149338: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78eea2000a00 of size 268435456 next 25
+2025-02-14 01:44:21.149342: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78eeb2000a00 of size 268435456 next 26
+2025-02-14 01:44:21.149346: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78eec2000a00 of size 268435456 next 27
+2025-02-14 01:44:21.149350: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78eed2000a00 of size 268435456 next 28
+2025-02-14 01:44:21.149354: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78eee2000a00 of size 268435456 next 29
+2025-02-14 01:44:21.149358: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78eef2000a00 of size 268435456 next 30
+2025-02-14 01:44:21.149362: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ef02000a00 of size 268435456 next 31
+2025-02-14 01:44:21.149367: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ef12000a00 of size 268435456 next 32
+2025-02-14 01:44:21.149371: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] Free  at 78ef22000a00 of size 2928997888 next 18446744073709551615
+2025-02-14 01:44:21.149375: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1114]      Summary of in-use Chunks by size: 
+2025-02-14 01:44:21.149380: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1117] 5 Chunks of size 256 totalling 1.2KiB
+2025-02-14 01:44:21.149385: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1117] 1 Chunks of size 1280 totalling 1.2KiB
+2025-02-14 01:44:21.149389: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1117] 25 Chunks of size 268435456 totalling 6.25GiB
+2025-02-14 01:44:21.149394: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1121] Sum Total of in-use chunks: 6.25GiB
+2025-02-14 01:44:21.149398: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1123] Total bytes in pool: 9908322304 memory_limit_: 9908322304 available bytes: 0 curr_region_allocation_bytes_: 19816644608
+2025-02-14 01:44:21.149405: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1128] Stats: 
+Limit:                      9908322304
+InUse:                      6710888960
+MaxInUse:                   6979324416
+NumAllocs:                          32
+MaxAllocSize:                268435456
+Reserved:                            0
+PeakReserved:                        0
+LargestFreeBlock:                    0
+
+2025-02-14 01:44:21.149410: W external/local_xla/xla/tsl/framework/bfc_allocator.cc:508] *_*********************************************************************_____________________________
+2025-02-14 01:44:21.149429: W tensorflow/core/framework/op_kernel.cc:1841] OP_REQUIRES failed at pack_op.cc:81 : RESOURCE_EXHAUSTED: OOM when allocating tensor with shape[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,25] and type double on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc
+2025-02-14 01:44:21.149453: I tensorflow/core/framework/local_rendezvous.cc:405] Local rendezvous is aborting with status: RESOURCE_EXHAUSTED: OOM when allocating tensor with shape[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,25] and type double on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc
+2025-02-14 01:44:31.435182: W external/local_xla/xla/tsl/framework/bfc_allocator.cc:497] Allocator (GPU_0_bfc) ran out of memory trying to allocate 256.00GiB (rounded to 274877906944)requested by op Fill
+If the cause is memory fragmentation maybe the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' will improve the situation. 
+Current allocation summary follows.
+Current allocation summary follows.
+2025-02-14 01:44:31.435230: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1053] BFCAllocator dump for GPU_0_bfc
+2025-02-14 01:44:31.435246: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (256): 	Total Chunks: 11, Chunks in use: 11. 2.8KiB allocated for chunks. 2.8KiB in use in bin. 168B client-requested in use in bin.
+2025-02-14 01:44:31.435257: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (512): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:31.435267: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (1024): 	Total Chunks: 1, Chunks in use: 1. 1.2KiB allocated for chunks. 1.2KiB in use in bin. 1.0KiB client-requested in use in bin.
+2025-02-14 01:44:31.435276: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (2048): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:31.435285: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (4096): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:31.435295: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (8192): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:31.435304: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (16384): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:31.435313: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (32768): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:31.435322: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (65536): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:31.435332: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (131072): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:31.435341: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (262144): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:31.435351: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (524288): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:31.435360: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (1048576): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:31.435370: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (2097152): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:31.435379: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (4194304): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:31.435389: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (8388608): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:31.435399: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (16777216): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:31.435411: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (33554432): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:31.435420: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (67108864): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:31.435431: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (134217728): 	Total Chunks: 1, Chunks in use: 0. 256.00MiB allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:31.435441: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (268435456): 	Total Chunks: 26, Chunks in use: 25. 8.98GiB allocated for chunks. 6.25GiB in use in bin. 6.25GiB client-requested in use in bin.
+2025-02-14 01:44:31.435452: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1076] Bin for 256.00GiB was 256.00MiB, Chunk State: 
+2025-02-14 01:44:31.435467: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1082]   Size: 2.73GiB | Requested Size: 0B | in_use: 0 | bin_num: 20, prev:   Size: 256.00MiB | Requested Size: 256.00MiB | in_use: 1 | bin_num: -1
+2025-02-14 01:44:31.435477: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1089] Next region of size 9908322304
+2025-02-14 01:44:31.435488: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000000 of size 256 next 1
+2025-02-14 01:44:31.435497: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000100 of size 1280 next 2
+2025-02-14 01:44:31.435508: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000600 of size 256 next 3
+2025-02-14 01:44:31.435516: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000700 of size 256 next 4
+2025-02-14 01:44:31.435525: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000800 of size 256 next 5
+2025-02-14 01:44:31.435533: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000900 of size 256 next 6
+2025-02-14 01:44:31.435542: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000a00 of size 256 next 33
+2025-02-14 01:44:31.435550: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000b00 of size 256 next 34
+2025-02-14 01:44:31.435559: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000c00 of size 256 next 35
+2025-02-14 01:44:31.435567: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000d00 of size 256 next 36
+2025-02-14 01:44:31.435576: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000e00 of size 256 next 37
+2025-02-14 01:44:31.435585: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000f00 of size 256 next 38
+2025-02-14 01:44:31.435594: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] Free  at 78ed82001000 of size 268433920 next 7
+2025-02-14 01:44:31.435605: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed92000a00 of size 268435456 next 8
+2025-02-14 01:44:31.435614: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78eda2000a00 of size 268435456 next 9
+2025-02-14 01:44:31.435622: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78edb2000a00 of size 268435456 next 10
+2025-02-14 01:44:31.435631: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78edc2000a00 of size 268435456 next 11
+2025-02-14 01:44:31.435640: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78edd2000a00 of size 268435456 next 12
+2025-02-14 01:44:31.435648: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ede2000a00 of size 268435456 next 13
+2025-02-14 01:44:31.435656: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78edf2000a00 of size 268435456 next 14
+2025-02-14 01:44:31.435665: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee02000a00 of size 268435456 next 15
+2025-02-14 01:44:31.435674: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee12000a00 of size 268435456 next 16
+2025-02-14 01:44:31.435682: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee22000a00 of size 268435456 next 17
+2025-02-14 01:44:31.435693: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee32000a00 of size 268435456 next 18
+2025-02-14 01:44:31.435702: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee42000a00 of size 268435456 next 19
+2025-02-14 01:44:31.435710: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee52000a00 of size 268435456 next 20
+2025-02-14 01:44:31.435719: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee62000a00 of size 268435456 next 21
+2025-02-14 01:44:31.435729: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee72000a00 of size 268435456 next 22
+2025-02-14 01:44:31.435740: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee82000a00 of size 268435456 next 23
+2025-02-14 01:44:31.435750: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee92000a00 of size 268435456 next 24
+2025-02-14 01:44:31.435761: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78eea2000a00 of size 268435456 next 25
+2025-02-14 01:44:31.435771: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78eeb2000a00 of size 268435456 next 26
+2025-02-14 01:44:31.435782: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78eec2000a00 of size 268435456 next 27
+2025-02-14 01:44:31.435792: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78eed2000a00 of size 268435456 next 28
+2025-02-14 01:44:31.435801: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78eee2000a00 of size 268435456 next 29
+2025-02-14 01:44:31.435809: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78eef2000a00 of size 268435456 next 30
+2025-02-14 01:44:31.435818: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ef02000a00 of size 268435456 next 31
+2025-02-14 01:44:31.435829: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ef12000a00 of size 268435456 next 32
+2025-02-14 01:44:31.435837: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] Free  at 78ef22000a00 of size 2928997888 next 18446744073709551615
+2025-02-14 01:44:31.435846: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1114]      Summary of in-use Chunks by size: 
+2025-02-14 01:44:31.435852: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1117] 11 Chunks of size 256 totalling 2.8KiB
+2025-02-14 01:44:31.435856: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1117] 1 Chunks of size 1280 totalling 1.2KiB
+2025-02-14 01:44:31.435861: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1117] 25 Chunks of size 268435456 totalling 6.25GiB
+2025-02-14 01:44:31.435865: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1121] Sum Total of in-use chunks: 6.25GiB
+2025-02-14 01:44:31.435870: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1123] Total bytes in pool: 9908322304 memory_limit_: 9908322304 available bytes: 0 curr_region_allocation_bytes_: 19816644608
+2025-02-14 01:44:31.435877: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1128] Stats: 
+Limit:                      9908322304
+InUse:                      6710890496
+MaxInUse:                   6979324416
+NumAllocs:                          38
+MaxAllocSize:                268435456
+Reserved:                            0
+PeakReserved:                        0
+LargestFreeBlock:                    0
+
+2025-02-14 01:44:31.435882: W external/local_xla/xla/tsl/framework/bfc_allocator.cc:508] *_*********************************************************************_____________________________
+2025-02-14 01:44:31.435900: W tensorflow/core/framework/op_kernel.cc:1841] OP_REQUIRES failed at constant_op.cc:176 : RESOURCE_EXHAUSTED: OOM when allocating tensor with shape[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2] and type double on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc
+2025-02-14 01:44:31.435913: I tensorflow/core/framework/local_rendezvous.cc:405] Local rendezvous is aborting with status: RESOURCE_EXHAUSTED: OOM when allocating tensor with shape[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2] and type double on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc
+2025-02-14 01:44:41.452723: W external/local_xla/xla/tsl/framework/bfc_allocator.cc:497] Allocator (GPU_0_bfc) ran out of memory trying to allocate 256.00MiB (rounded to 268435456)requested by op Mul
+If the cause is memory fragmentation maybe the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' will improve the situation. 
+Current allocation summary follows.
+Current allocation summary follows.
+2025-02-14 01:44:41.452772: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1053] BFCAllocator dump for GPU_0_bfc
+2025-02-14 01:44:41.452788: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (256): 	Total Chunks: 17, Chunks in use: 17. 4.2KiB allocated for chunks. 4.2KiB in use in bin. 264B client-requested in use in bin.
+2025-02-14 01:44:41.452800: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (512): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:41.452810: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (1024): 	Total Chunks: 1, Chunks in use: 1. 1.2KiB allocated for chunks. 1.2KiB in use in bin. 1.0KiB client-requested in use in bin.
+2025-02-14 01:44:41.452819: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (2048): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:41.452828: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (4096): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:41.452837: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (8192): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:41.452846: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (16384): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:41.452856: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (32768): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:41.452865: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (65536): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:41.452875: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (131072): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:41.452884: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (262144): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:41.452894: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (524288): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:41.452903: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (1048576): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:41.452913: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (2097152): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:41.452922: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (4194304): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:41.452932: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (8388608): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:41.452961: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (16777216): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:41.452972: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (33554432): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:41.452981: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (67108864): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:41.452992: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (134217728): 	Total Chunks: 2, Chunks in use: 0. 489.31MiB allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:41.453004: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (268435456): 	Total Chunks: 35, Chunks in use: 35. 8.75GiB allocated for chunks. 8.75GiB in use in bin. 8.75GiB client-requested in use in bin.
+2025-02-14 01:44:41.453014: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1076] Bin for 256.00MiB was 256.00MiB, Chunk State: 
+2025-02-14 01:44:41.453022: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1089] Next region of size 9908322304
+2025-02-14 01:44:41.453033: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000000 of size 256 next 1
+2025-02-14 01:44:41.453042: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000100 of size 1280 next 2
+2025-02-14 01:44:41.453050: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000600 of size 256 next 3
+2025-02-14 01:44:41.453058: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000700 of size 256 next 4
+2025-02-14 01:44:41.453064: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000800 of size 256 next 5
+2025-02-14 01:44:41.453073: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000900 of size 256 next 6
+2025-02-14 01:44:41.453080: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000a00 of size 256 next 33
+2025-02-14 01:44:41.453088: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000b00 of size 256 next 34
+2025-02-14 01:44:41.453095: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000c00 of size 256 next 35
+2025-02-14 01:44:41.453101: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000d00 of size 256 next 36
+2025-02-14 01:44:41.453108: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000e00 of size 256 next 37
+2025-02-14 01:44:41.453115: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000f00 of size 256 next 38
+2025-02-14 01:44:41.453121: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82001000 of size 256 next 39
+2025-02-14 01:44:41.453128: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82001100 of size 256 next 40
+2025-02-14 01:44:41.453135: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82001200 of size 256 next 41
+2025-02-14 01:44:41.453142: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82001300 of size 256 next 42
+2025-02-14 01:44:41.453148: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82001400 of size 256 next 43
+2025-02-14 01:44:41.453155: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82001500 of size 256 next 44
+2025-02-14 01:44:41.453162: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] Free  at 78ed82001600 of size 268432384 next 7
+2025-02-14 01:44:41.453169: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed92000a00 of size 268435456 next 8
+2025-02-14 01:44:41.453176: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78eda2000a00 of size 268435456 next 9
+2025-02-14 01:44:41.453183: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78edb2000a00 of size 268435456 next 10
+2025-02-14 01:44:41.453190: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78edc2000a00 of size 268435456 next 11
+2025-02-14 01:44:41.453197: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78edd2000a00 of size 268435456 next 12
+2025-02-14 01:44:41.453204: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ede2000a00 of size 268435456 next 13
+2025-02-14 01:44:41.453211: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78edf2000a00 of size 268435456 next 14
+2025-02-14 01:44:41.453217: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee02000a00 of size 268435456 next 15
+2025-02-14 01:44:41.453224: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee12000a00 of size 268435456 next 16
+2025-02-14 01:44:41.453231: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee22000a00 of size 268435456 next 17
+2025-02-14 01:44:41.453238: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee32000a00 of size 268435456 next 18
+2025-02-14 01:44:41.453244: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee42000a00 of size 268435456 next 19
+2025-02-14 01:44:41.453251: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee52000a00 of size 268435456 next 20
+2025-02-14 01:44:41.453258: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee62000a00 of size 268435456 next 21
+2025-02-14 01:44:41.453265: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee72000a00 of size 268435456 next 22
+2025-02-14 01:44:41.453271: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee82000a00 of size 268435456 next 23
+2025-02-14 01:44:41.453278: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee92000a00 of size 268435456 next 24
+2025-02-14 01:44:41.453285: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78eea2000a00 of size 268435456 next 25
+2025-02-14 01:44:41.453292: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78eeb2000a00 of size 268435456 next 26
+2025-02-14 01:44:41.453298: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78eec2000a00 of size 268435456 next 27
+2025-02-14 01:44:41.453305: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78eed2000a00 of size 268435456 next 28
+2025-02-14 01:44:41.453312: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78eee2000a00 of size 268435456 next 29
+2025-02-14 01:44:41.453319: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78eef2000a00 of size 268435456 next 30
+2025-02-14 01:44:41.453325: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ef02000a00 of size 268435456 next 31
+2025-02-14 01:44:41.453334: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ef12000a00 of size 268435456 next 32
+2025-02-14 01:44:41.453340: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ef22000a00 of size 268435456 next 45
+2025-02-14 01:44:41.453347: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ef32000a00 of size 268435456 next 46
+2025-02-14 01:44:41.453354: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ef42000a00 of size 268435456 next 47
+2025-02-14 01:44:41.453361: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ef52000a00 of size 268435456 next 48
+2025-02-14 01:44:41.453367: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ef62000a00 of size 268435456 next 49
+2025-02-14 01:44:41.453374: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ef72000a00 of size 268435456 next 50
+2025-02-14 01:44:41.453380: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ef82000a00 of size 268435456 next 51
+2025-02-14 01:44:41.453387: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ef92000a00 of size 268435456 next 52
+2025-02-14 01:44:41.453394: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78efa2000a00 of size 268435456 next 53
+2025-02-14 01:44:41.453401: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78efb2000a00 of size 268435456 next 54
+2025-02-14 01:44:41.453408: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] Free  at 78efc2000a00 of size 244643328 next 18446744073709551615
+2025-02-14 01:44:41.453415: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1114]      Summary of in-use Chunks by size: 
+2025-02-14 01:44:41.453423: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1117] 17 Chunks of size 256 totalling 4.2KiB
+2025-02-14 01:44:41.453431: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1117] 1 Chunks of size 1280 totalling 1.2KiB
+2025-02-14 01:44:41.453438: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1117] 35 Chunks of size 268435456 totalling 8.75GiB
+2025-02-14 01:44:41.453445: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1121] Sum Total of in-use chunks: 8.75GiB
+2025-02-14 01:44:41.453453: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1123] Total bytes in pool: 9908322304 memory_limit_: 9908322304 available bytes: 0 curr_region_allocation_bytes_: 19816644608
+2025-02-14 01:44:41.453464: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1128] Stats: 
+Limit:                      9908322304
+InUse:                      9395246592
+MaxInUse:                   9395246592
+NumAllocs:                          54
+MaxAllocSize:                268435456
+Reserved:                            0
+PeakReserved:                        0
+LargestFreeBlock:                    0
+
+2025-02-14 01:44:41.453473: W external/local_xla/xla/tsl/framework/bfc_allocator.cc:508] *_************************************************************************************************__
+2025-02-14 01:44:41.453487: W tensorflow/core/framework/op_kernel.cc:1829] RESOURCE_EXHAUSTED: failed to allocate memory
+2025-02-14 01:44:51.607277: W external/local_xla/xla/tsl/framework/bfc_allocator.cc:497] Allocator (GPU_0_bfc) ran out of memory trying to allocate 6.25GiB (rounded to 6710886400)requested by op Pack
+If the cause is memory fragmentation maybe the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' will improve the situation. 
+Current allocation summary follows.
+Current allocation summary follows.
+2025-02-14 01:44:51.607326: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1053] BFCAllocator dump for GPU_0_bfc
+2025-02-14 01:44:51.607342: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (256): 	Total Chunks: 11, Chunks in use: 11. 2.8KiB allocated for chunks. 2.8KiB in use in bin. 168B client-requested in use in bin.
+2025-02-14 01:44:51.607353: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (512): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:51.607364: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (1024): 	Total Chunks: 2, Chunks in use: 1. 2.8KiB allocated for chunks. 1.2KiB in use in bin. 1.0KiB client-requested in use in bin.
+2025-02-14 01:44:51.607373: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (2048): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:51.607382: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (4096): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:51.607391: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (8192): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:51.607402: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (16384): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:51.607411: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (32768): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:51.607420: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (65536): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:51.607430: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (131072): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:51.607439: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (262144): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:51.607448: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (524288): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:51.607458: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (1048576): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:51.607467: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (2097152): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:51.607477: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (4194304): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:51.607486: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (8388608): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:51.607496: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (16777216): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:51.607505: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (33554432): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:51.607514: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (67108864): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:51.607528: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (134217728): 	Total Chunks: 1, Chunks in use: 0. 233.31MiB allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-02-14 01:44:51.607539: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1060] Bin (268435456): 	Total Chunks: 28, Chunks in use: 26. 9.00GiB allocated for chunks. 6.50GiB in use in bin. 6.50GiB client-requested in use in bin.
+2025-02-14 01:44:51.607550: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1076] Bin for 6.25GiB was 256.00MiB, Chunk State: 
+2025-02-14 01:44:51.607566: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1082]   Size: 256.00MiB | Requested Size: 256.00MiB | in_use: 0 | bin_num: 20, prev:   Size: 256.00MiB | Requested Size: 256.00MiB | in_use: 1 | bin_num: -1, next:   Size: 256.00MiB | Requested Size: 256.00MiB | in_use: 1 | bin_num: -1
+2025-02-14 01:44:51.607579: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1082]   Size: 2.25GiB | Requested Size: 256.00MiB | in_use: 0 | bin_num: 20, prev:   Size: 256.00MiB | Requested Size: 256.00MiB | in_use: 1 | bin_num: -1, next:   Size: 256.00MiB | Requested Size: 256.00MiB | in_use: 1 | bin_num: -1
+2025-02-14 01:44:51.607585: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1089] Next region of size 9908322304
+2025-02-14 01:44:51.607593: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000000 of size 256 next 1
+2025-02-14 01:44:51.607600: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000100 of size 1280 next 2
+2025-02-14 01:44:51.607607: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000600 of size 256 next 34
+2025-02-14 01:44:51.607612: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000700 of size 256 next 35
+2025-02-14 01:44:51.607618: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000800 of size 256 next 5
+2025-02-14 01:44:51.607623: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82000900 of size 256 next 6
+2025-02-14 01:44:51.607628: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] Free  at 78ed82000a00 of size 1536 next 38
+2025-02-14 01:44:51.607633: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82001000 of size 256 next 39
+2025-02-14 01:44:51.607639: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82001100 of size 256 next 40
+2025-02-14 01:44:51.607644: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82001200 of size 256 next 41
+2025-02-14 01:44:51.607649: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82001300 of size 256 next 42
+2025-02-14 01:44:51.607654: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82001400 of size 256 next 43
+2025-02-14 01:44:51.607660: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82001500 of size 256 next 44
+2025-02-14 01:44:51.607665: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed82001600 of size 268435456 next 11
+2025-02-14 01:44:51.607671: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ed92001600 of size 268435456 next 12
+2025-02-14 01:44:51.607676: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78eda2001600 of size 268435456 next 13
+2025-02-14 01:44:51.607681: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78edb2001600 of size 268435456 next 14
+2025-02-14 01:44:51.607686: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78edc2001600 of size 268435456 next 15
+2025-02-14 01:44:51.607692: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78edd2001600 of size 268435456 next 16
+2025-02-14 01:44:51.607697: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ede2001600 of size 268435456 next 17
+2025-02-14 01:44:51.607702: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78edf2001600 of size 268435456 next 18
+2025-02-14 01:44:51.607707: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee02001600 of size 268435456 next 19
+2025-02-14 01:44:51.607713: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee12001600 of size 268435456 next 20
+2025-02-14 01:44:51.607718: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee22001600 of size 268435456 next 21
+2025-02-14 01:44:51.607723: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee32001600 of size 268435456 next 22
+2025-02-14 01:44:51.607728: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee42001600 of size 268435456 next 23
+2025-02-14 01:44:51.607734: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee52001600 of size 268435456 next 24
+2025-02-14 01:44:51.607739: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee62001600 of size 268435456 next 25
+2025-02-14 01:44:51.607744: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee72001600 of size 268435456 next 26
+2025-02-14 01:44:51.607750: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ee82001600 of size 268435456 next 27
+2025-02-14 01:44:51.607755: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] Free  at 78ee92001600 of size 2415916032 next 32
+2025-02-14 01:44:51.607760: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ef22000a00 of size 268435456 next 45
+2025-02-14 01:44:51.607765: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] Free  at 78ef32000a00 of size 268435456 next 36
+2025-02-14 01:44:51.607771: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ef42000a00 of size 268435456 next 33
+2025-02-14 01:44:51.607776: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ef52000a00 of size 268435456 next 37
+2025-02-14 01:44:51.607781: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ef62000a00 of size 268435456 next 3
+2025-02-14 01:44:51.607787: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ef72000a00 of size 268435456 next 4
+2025-02-14 01:44:51.607792: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ef82000a00 of size 268435456 next 7
+2025-02-14 01:44:51.607797: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78ef92000a00 of size 268435456 next 8
+2025-02-14 01:44:51.607802: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78efa2000a00 of size 268435456 next 9
+2025-02-14 01:44:51.607807: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] InUse at 78efb2000a00 of size 268435456 next 10
+2025-02-14 01:44:51.607813: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1109] Free  at 78efc2000a00 of size 244643328 next 18446744073709551615
+2025-02-14 01:44:51.607818: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1114]      Summary of in-use Chunks by size: 
+2025-02-14 01:44:51.607825: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1117] 11 Chunks of size 256 totalling 2.8KiB
+2025-02-14 01:44:51.607831: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1117] 1 Chunks of size 1280 totalling 1.2KiB
+2025-02-14 01:44:51.607837: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1117] 26 Chunks of size 268435456 totalling 6.50GiB
+2025-02-14 01:44:51.607842: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1121] Sum Total of in-use chunks: 6.50GiB
+2025-02-14 01:44:51.607848: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1123] Total bytes in pool: 9908322304 memory_limit_: 9908322304 available bytes: 0 curr_region_allocation_bytes_: 19816644608
+2025-02-14 01:44:51.607857: I external/local_xla/xla/tsl/framework/bfc_allocator.cc:1128] Stats: 
+Limit:                      9908322304
+InUse:                      6979325952
+MaxInUse:                   9395246592
+NumAllocs:                          84
+MaxAllocSize:                268435456
+Reserved:                            0
+PeakReserved:                        0
+LargestFreeBlock:                    0
+
+2025-02-14 01:44:51.607864: W external/local_xla/xla/tsl/framework/bfc_allocator.cc:508] ***********************************************_______________________****_***********************__
+2025-02-14 01:44:51.607883: W tensorflow/core/framework/op_kernel.cc:1841] OP_REQUIRES failed at pack_op.cc:81 : RESOURCE_EXHAUSTED: OOM when allocating tensor with shape[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,25] and type double on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc
+2025-02-14 01:44:51.607912: I tensorflow/core/framework/local_rendezvous.cc:405] Local rendezvous is aborting with status: RESOURCE_EXHAUSTED: OOM when allocating tensor with shape[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,25] and type double on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_quadrature_autograph FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_diagquad_2d[var20-mu20-var10-mu10]', '../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_diagquad_with_kwarg[var10-mu10] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_diagquad_logspace[var20-mu20-var10-mu10]', '../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_ndiagquad_does_not_throw_error FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_ndiagquad_does_not_throw_error', 'FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_diagquad_with_kwarg[var10-mu10]', '../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_diagquad_logspace[var20-mu20-var10-mu10] FAILED', '../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_diagquad_1d[var0-mu0] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_diagquad_1d[var0-mu0]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_quadrature_autograph', '../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_diagquad_2d[var20-mu20-var10-mu10] FAILED'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/GPflow/GPflow/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/GPflow/GPflow
+collecting ... collected 6 items
+
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_diagquad_1d[var0-mu0] FAILED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_diagquad_2d[var20-mu20-var10-mu10] FAILED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_diagquad_logspace[var20-mu20-var10-mu10] FAILED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_diagquad_with_kwarg[var10-mu10] FAILED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_ndiagquad_does_not_throw_error FAILED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_quadrature_autograph FAILED
+
+=================================== FAILURES ===================================
+__________________________ test_diagquad_1d[var0-mu0] __________________________
+
+mu = array([1. , 1.3]), var = array([3. , 3.5])
+
+    @pytest.mark.parametrize("mu", [np.array([1.0, 1.3])])
+    @pytest.mark.parametrize("var", [np.array([3.0, 3.5])])
+    def test_diagquad_1d(mu: TensorType, var: TensorType) -> None:
+        num_gauss_hermite_points = 25
+>       quad = quadrature.ndiagquad([lambda *X: tf.exp(X[0])], num_gauss_hermite_points, [mu], [var])
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/quadrature/deprecated.py:72: in ndiagquad
+    return ndiagquad(funcs, H, Fmu, Fvar, logspace)
+/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/quadrature/temp.py:29: in ndiagquad
+    quadrature = NDiagGHQuadrature(H, input_dim)
+/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/quadrature/gauss_hermite.py:121: in __init__
+    Z, dZ = ndgh_points_and_weights(self.dim, self.n_gh)
+/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/quadrature/gauss_hermite.py:109: in ndgh_points_and_weights
+    return reshape_Z_dZ(zs, dzs)
+/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/quadrature/gauss_hermite.py:77: in reshape_Z_dZ
+    Z = list_to_flat_grid(zs)
+/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/quadrature/gauss_hermite.py:59: in list_to_flat_grid
+    return tf.reshape(tf.stack(tf.meshgrid(*xs), axis=-1), (-1, len(xs)))
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow/python/util/traceback_utils.py:153: in error_handler
+    raise e.with_traceback(filtered_tb) from None
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+e = _NotOkStatusException(), name = 'stack'
+
+    def raise_from_not_ok_status(e, name) -> NoReturn:
+      e.message += (" name: " + str(name if name is not None else ""))
+>     raise core._status_to_exception(e) from None  # pylint: disable=protected-access
+E     tensorflow.python.framework.errors_impl.ResourceExhaustedError: {{function_node __wrapped__Pack_N_25_device_/job:localhost/replica:0/task:0/device:GPU:0}} OOM when allocating tensor with shape[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,25] and type double on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc [Op:Pack] name: stack
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow/python/framework/ops.py:6002: ResourceExhaustedError
+___________________ test_diagquad_2d[var20-mu20-var10-mu10] ____________________
+
+mu1 = array([1. , 1.3]), var1 = array([3. , 3.5]), mu2 = array([-2. ,  0.3])
+var2 = array([4. , 4.2])
+
+    @pytest.mark.parametrize("mu1", [np.array([1.0, 1.3])])
+    @pytest.mark.parametrize("var1", [np.array([3.0, 3.5])])
+    @pytest.mark.parametrize("mu2", [np.array([-2.0, 0.3])])
+    @pytest.mark.parametrize("var2", [np.array([4.0, 4.2])])
+    def test_diagquad_2d(mu1: TensorType, var1: TensorType, mu2: TensorType, var2: TensorType) -> None:
+        alpha = 2.5
+        # using logspace=True we can reduce this, see test_diagquad_logspace
+        num_gauss_hermite_points = 35
+>       quad = quadrature.ndiagquad(
+            lambda *X: tf.exp(X[0] + alpha * X[1]),
+            num_gauss_hermite_points,
+            [mu1, mu2],
+            [var1, var2],
+        )
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py:43: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/quadrature/deprecated.py:72: in ndiagquad
+    return ndiagquad(funcs, H, Fmu, Fvar, logspace)
+/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/quadrature/temp.py:29: in ndiagquad
+    quadrature = NDiagGHQuadrature(H, input_dim)
+/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/quadrature/gauss_hermite.py:121: in __init__
+    Z, dZ = ndgh_points_and_weights(self.dim, self.n_gh)
+/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/quadrature/gauss_hermite.py:109: in ndgh_points_and_weights
+    return reshape_Z_dZ(zs, dzs)
+/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/quadrature/gauss_hermite.py:77: in reshape_Z_dZ
+    Z = list_to_flat_grid(zs)
+/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/quadrature/gauss_hermite.py:59: in list_to_flat_grid
+    return tf.reshape(tf.stack(tf.meshgrid(*xs), axis=-1), (-1, len(xs)))
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow/python/util/traceback_utils.py:153: in error_handler
+    raise e.with_traceback(filtered_tb) from None
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+fn = <function fill at 0x78f19a300720>, layout = None, args = ()
+kwargs = {'dims': <tf.Tensor: shape=(35,), dtype=int32, numpy=
+array([2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, ..., 2, 2, 2, 2, 2, 2, 2, 2, 2, 2], dtype=int32)>, 'name': None, 'value': <tf.Tensor: shape=(), dtype=float64, numpy=1.0>}
+
+    @tf_export("experimental.dtensor.call_with_layout", v1=[])
+    def call_with_layout(fn: Callable[...,
+                                      Any], layout: Optional[layout_lib.Layout],
+                         *args, **kwargs) -> Any:
+      """Calls a function in the DTensor device scope if `layout` is not None.
+    
+      If `layout` is not None, `fn` consumes DTensor(s) as input and produces a
+      DTensor as output; a DTensor is a tf.Tensor with layout-related attributes.
+    
+      If `layout` is None, `fn` consumes and produces regular tf.Tensors.
+    
+      Args:
+        fn: A supported TF API function such as tf.zeros.
+        layout: Optional, the layout of the output DTensor.
+        *args:  Arguments given to `fn`.
+        **kwargs: Keyword arguments given to `fn`.
+    
+      Returns:
+        The return value of `fn` transformed to a DTensor if requested.
+      """
+      if layout is not None:
+        if context.executing_eagerly():
+          with default_mesh(layout.mesh):
+            with _dtensor_device()._default_layout(layout):  # pylint: disable=protected-access
+              return fn(*args, **kwargs)
+        else:
+          return relayout(fn(*args, **kwargs), layout)
+>     return fn(*args, **kwargs)
+E     tensorflow.python.framework.errors_impl.ResourceExhaustedError: {{function_node __wrapped__Fill_device_/job:localhost/replica:0/task:0/device:GPU:0}} OOM when allocating tensor with shape[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2] and type double on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc [Op:Fill] name:
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow/dtensor/python/api.py:64: ResourceExhaustedError
+________________ test_diagquad_logspace[var20-mu20-var10-mu10] _________________
+
+mu1 = array([1. , 1.3]), var1 = array([3. , 3.5]), mu2 = array([-2. ,  0.3])
+var2 = array([4. , 4.2])
+
+    @pytest.mark.parametrize("mu1", [np.array([1.0, 1.3])])
+    @pytest.mark.parametrize("var1", [np.array([3.0, 3.5])])
+    @pytest.mark.parametrize("mu2", [np.array([-2.0, 0.3])])
+    @pytest.mark.parametrize("var2", [np.array([4.0, 4.2])])
+    def test_diagquad_logspace(
+        mu1: TensorType, var1: TensorType, mu2: TensorType, var2: TensorType
+    ) -> None:
+        alpha = 2.5
+        num_gauss_hermite_points = 25
+>       quad = quadrature.ndiagquad(
+            lambda *X: (X[0] + alpha * X[1]),
+            num_gauss_hermite_points,
+            [mu1, mu2],
+            [var1, var2],
+            logspace=True,
+        )
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py:62: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/quadrature/deprecated.py:72: in ndiagquad
+    return ndiagquad(funcs, H, Fmu, Fvar, logspace)
+/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/quadrature/temp.py:29: in ndiagquad
+    quadrature = NDiagGHQuadrature(H, input_dim)
+/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/quadrature/gauss_hermite.py:121: in __init__
+    Z, dZ = ndgh_points_and_weights(self.dim, self.n_gh)
+/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/quadrature/gauss_hermite.py:109: in ndgh_points_and_weights
+    return reshape_Z_dZ(zs, dzs)
+/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/quadrature/gauss_hermite.py:77: in reshape_Z_dZ
+    Z = list_to_flat_grid(zs)
+/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/quadrature/gauss_hermite.py:59: in list_to_flat_grid
+    return tf.reshape(tf.stack(tf.meshgrid(*xs), axis=-1), (-1, len(xs)))
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow/python/util/traceback_utils.py:153: in error_handler
+    raise e.with_traceback(filtered_tb) from None
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+e = _NotOkStatusException(), name = None
+
+    def raise_from_not_ok_status(e, name) -> NoReturn:
+      e.message += (" name: " + str(name if name is not None else ""))
+>     raise core._status_to_exception(e) from None  # pylint: disable=protected-access
+E     tensorflow.python.framework.errors_impl.ResourceExhaustedError: {{function_node __wrapped__Mul_device_/job:localhost/replica:0/task:0/device:GPU:0}} failed to allocate memory [Op:Mul] name:
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow/python/framework/ops.py:6002: ResourceExhaustedError
+_____________________ test_diagquad_with_kwarg[var10-mu10] _____________________
+
+mu1 = array([1. , 1.3]), var1 = array([3. , 3.5])
+
+    @pytest.mark.parametrize("mu1", [np.array([1.0, 1.3])])
+    @pytest.mark.parametrize("var1", [np.array([3.0, 3.5])])
+    def test_diagquad_with_kwarg(mu1: TensorType, var1: TensorType) -> None:
+        alpha: AnyNDArray = np.array([2.5, -1.3])
+        num_gauss_hermite_points = 25
+>       quad = quadrature.ndiagquad(
+            lambda X, Y: tf.exp(X * Y), num_gauss_hermite_points, mu1, var1, Y=alpha
+        )
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py:78: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/quadrature/deprecated.py:72: in ndiagquad
+    return ndiagquad(funcs, H, Fmu, Fvar, logspace)
+/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/quadrature/temp.py:29: in ndiagquad
+    quadrature = NDiagGHQuadrature(H, input_dim)
+/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/quadrature/gauss_hermite.py:121: in __init__
+    Z, dZ = ndgh_points_and_weights(self.dim, self.n_gh)
+/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/quadrature/gauss_hermite.py:109: in ndgh_points_and_weights
+    return reshape_Z_dZ(zs, dzs)
+/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/quadrature/gauss_hermite.py:77: in reshape_Z_dZ
+    Z = list_to_flat_grid(zs)
+/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/quadrature/gauss_hermite.py:59: in list_to_flat_grid
+    return tf.reshape(tf.stack(tf.meshgrid(*xs), axis=-1), (-1, len(xs)))
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow/python/util/traceback_utils.py:153: in error_handler
+    raise e.with_traceback(filtered_tb) from None
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+e = _NotOkStatusException(), name = 'stack'
+
+    def raise_from_not_ok_status(e, name) -> NoReturn:
+      e.message += (" name: " + str(name if name is not None else ""))
+>     raise core._status_to_exception(e) from None  # pylint: disable=protected-access
+E     tensorflow.python.framework.errors_impl.ResourceExhaustedError: {{function_node __wrapped__Pack_N_25_device_/job:localhost/replica:0/task:0/device:GPU:0}} OOM when allocating tensor with shape[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,25] and type double on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc [Op:Pack] name: stack
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow/python/framework/ops.py:6002: ResourceExhaustedError
+_____________________ test_ndiagquad_does_not_throw_error ______________________
+
+    def test_ndiagquad_does_not_throw_error() -> None:
+        """
+        Check that the autograph=False for quadrature.ndiagquad does not throw an error.
+        Regression test for https://github.com/GPflow/GPflow/issues/1547.
+        """
+    
+        @tf.function(autograph=False)
+        def func_ndiagquad_autograph_false() -> tf.Tensor:
+            mu: AnyNDArray = np.array([1.0, 1.3])
+            var: AnyNDArray = np.array([3.0, 3.5])
+            num_gauss_hermite_points = 25
+            return quadrature.ndiagquad(
+                [lambda *X: tf.exp(X[0])], num_gauss_hermite_points, [mu], [var]
+            )
+    
+>       func_ndiagquad_autograph_false()
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py:100: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow/python/util/traceback_utils.py:153: in error_handler
+    raise e.with_traceback(filtered_tb) from None
+/local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py:96: in func_ndiagquad_autograph_false
+    return quadrature.ndiagquad(
+/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/quadrature/deprecated.py:72: in ndiagquad
+    return ndiagquad(funcs, H, Fmu, Fvar, logspace)
+/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/quadrature/temp.py:33: in ndiagquad
+    result = quadrature(funcs, Fmu, Fvar, **Ys)
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/check_shapes/integration/tf.py:76: in wrapped_method
+    return wrapped_function(self, *args, **kwargs)
+/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/quadrature/base.py:80: in __call__
+    X, W = self._build_X_W(mean, var)
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/check_shapes/integration/tf.py:76: in wrapped_method
+    return wrapped_function(self, *args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <gpflow.quadrature.gauss_hermite.NDiagGHQuadrature object at 0x78f12cdccd10>
+mean = <tf.Tensor 'ExpandDims:0' shape=(1, 1, 2) dtype=float64>
+var = [<tf.Tensor 'Const_1:0' shape=(2,) dtype=float64>]
+
+    @inherit_check_shapes
+    def _build_X_W(self, mean: TensorType, var: TensorType) -> Tuple[tf.Tensor, tf.Tensor]:
+        """
+        :param mean: Array/Tensor with shape [b1, b2, ..., bX, dim], usually [N, dim],
+            representing the mean of a dim-Variate Gaussian distribution
+        :param var: Array/Tensor with shape b1, b2, ..., bX, dim], usually [N, dim],
+            representing the variance of a dim-Variate Gaussian distribution
+        :return: points X, Tensor with shape [n_gh_total, b1, b2, ..., bX, dim],
+            usually [n_gh_total, N, dim],
+            and weights W, a Tensor with shape [n_gh_total, b1, b2, ..., bX, 1],
+            usually [n_gh_total, N, 1]
+        """
+    
+        batch_shape_broadcast = tf.ones(tf.rank(mean) - 1, dtype=tf.int32)
+        shape_aux = tf.concat([[self.n_gh_total], batch_shape_broadcast], axis=0)
+    
+        # mean, var: [b1, b2, ..., bX, dim], usually [N, dim]
+        mean = tf.expand_dims(mean, 0)
+        stddev = tf.expand_dims(tf.sqrt(var), 0)
+        # mean, stddev: [1, b1, b2, ..., bX, dim], usually [1, N, dim]
+    
+        Z = tf.cast(tf.reshape(self.Z, tf.concat([shape_aux, [self.dim]], axis=0)), mean.dtype)
+        dZ = tf.cast(tf.reshape(self.dZ, tf.concat([shape_aux, [1]], axis=0)), mean.dtype)
+    
+>       X = mean + stddev * Z
+E       ValueError: Dimensions must be equal, but are 2 and 25 for '{{node mul}} = Mul[T=DT_DOUBLE](ExpandDims_1, Reshape_2)' with input shapes: [1,1,2], [33554432,1,25].
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/quadrature/gauss_hermite.py:149: ValueError
+__________________________ test_quadrature_autograph ___________________________
+
+    def test_quadrature_autograph() -> None:
+        """
+        Check that the return value is equal with and without Autograph
+        Regression test for https://github.com/GPflow/GPflow/issues/1547.
+        """
+    
+        def compute(autograph: bool) -> AnyNDArray:
+            @tf.function(autograph=autograph)
+            def func() -> tf.Tensor:
+                mu: AnyNDArray = np.array([1.0, 1.3])
+                var: AnyNDArray = np.array([3.0, 3.5])
+                num_gauss_hermite_points = 25
+                return quadrature.ndiagquad(
+                    [lambda *X: tf.exp(X[0])], num_gauss_hermite_points, [mu], [var]
+                )
+    
+            (result,) = func()
+            return cast(AnyNDArray, result.numpy())
+    
+        np.testing.assert_equal(
+>           compute(autograph=True),
+            compute(autograph=False),
+        )
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py:123: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py:119: in compute
+    (result,) = func()
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow/python/util/traceback_utils.py:153: in error_handler
+    raise e.with_traceback(filtered_tb) from None
+/tmp/__autograph_generated_filer9u660dh.py:15: in tf__func
+    retval_ = ag__.converted_call(ag__.ld(quadrature).ndiagquad, ([ag__.autograph_artifact(lambda *X: ag__.converted_call(ag__.ld(tf).exp, (ag__.ld(X)[0],), None, fscope))], ag__.ld(num_gauss_hermite_points), [ag__.ld(mu)], [ag__.ld(var)]), None, fscope)
+/tmp/__autograph_generated_filedi5upayl.py:198: in tf__wrapped_function
+    ag__.if_stmt(ag__.not_(do_return), if_body_5, else_body_5, get_state_8, set_state_8, ('arg_map', 'arg_map[RESULT_TOKEN]', 'checker', 'do_return', 'retval_'), 5)
+/tmp/__autograph_generated_file13o0jbkn.py:13: in tf__ndiagquad
+    retval_ = ag__.converted_call(ag__.ld(ndiagquad), (ag__.ld(funcs), ag__.ld(H), ag__.ld(Fmu), ag__.ld(Fvar), ag__.ld(logspace)), None, fscope)
+/tmp/__autograph_generated_filev94px0ba.py:79: in tf__ndiagquad
+    ag__.if_stmt(ag__.ld(logspace), if_body_3, else_body_3, get_state_3, set_state_3, ('result',), 1)
+/tmp/__autograph_generated_filev94px0ba.py:77: in else_body_3
+    result = ag__.converted_call(ag__.ld(quadrature), (ag__.ld(funcs), ag__.ld(Fmu), ag__.ld(Fvar)), dict(**ag__.ld(Ys)), fscope)
+/tmp/__autograph_generated_file_zttc3eg.py:13: in tf__wrapped_method
+    retval_ = ag__.converted_call(ag__.ld(wrapped_function), (ag__.ld(self),) + tuple(ag__.ld(args)), dict(**ag__.ld(kwargs)), fscope)
+/tmp/__autograph_generated_filedi5upayl.py:198: in tf__wrapped_function
+    ag__.if_stmt(ag__.not_(do_return), if_body_5, else_body_5, get_state_8, set_state_8, ('arg_map', 'arg_map[RESULT_TOKEN]', 'checker', 'do_return', 'retval_'), 5)
+/tmp/__autograph_generated_fileir42lx8z.py:35: in tf____call__
+    X, W = ag__.converted_call(ag__.ld(self)._build_X_W, (ag__.ld(mean), ag__.ld(var)), None, fscope)
+/tmp/__autograph_generated_file_zttc3eg.py:13: in tf__wrapped_method
+    retval_ = ag__.converted_call(ag__.ld(wrapped_function), (ag__.ld(self),) + tuple(ag__.ld(args)), dict(**ag__.ld(kwargs)), fscope)
+/tmp/__autograph_generated_filedi5upayl.py:198: in tf__wrapped_function
+    ag__.if_stmt(ag__.not_(do_return), if_body_5, else_body_5, get_state_8, set_state_8, ('arg_map', 'arg_map[RESULT_TOKEN]', 'checker', 'do_return', 'retval_'), 5)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <gpflow.quadrature.gauss_hermite.NDiagGHQuadrature object at 0x78f12f75ecd0>
+mean = <tf.Tensor 'ExpandDims:0' shape=(1, 1, 2) dtype=float64>
+var = [<tf.Tensor 'Const_1:0' shape=(2,) dtype=float64>]
+
+    def tf___build_X_W(self, mean: TensorType, var: TensorType) -> Tuple[tf.Tensor, tf.Tensor]:
+        """
+    :param mean: Array/Tensor with shape [b1, b2, ..., bX, dim], usually [N, dim],
+        representing the mean of a dim-Variate Gaussian distribution
+    :param var: Array/Tensor with shape b1, b2, ..., bX, dim], usually [N, dim],
+        representing the variance of a dim-Variate Gaussian distribution
+    :return: points X, Tensor with shape [n_gh_total, b1, b2, ..., bX, dim],
+        usually [n_gh_total, N, dim],
+        and weights W, a Tensor with shape [n_gh_total, b1, b2, ..., bX, 1],
+        usually [n_gh_total, N, 1]
+    """
+        with ag__.FunctionScope('_build_X_W', 'fscope', ag__.STD) as fscope:
+            do_return = False
+            retval_ = ag__.UndefinedReturnValue()
+            batch_shape_broadcast = ag__.converted_call(ag__.ld(tf).ones, (ag__.converted_call(ag__.ld(tf).rank, (ag__.ld(mean),), None, fscope) - 1,), dict(dtype=ag__.ld(tf).int32), fscope)
+            shape_aux = ag__.converted_call(ag__.ld(tf).concat, ([[ag__.ld(self).n_gh_total], ag__.ld(batch_shape_broadcast)],), dict(axis=0), fscope)
+            mean = ag__.converted_call(ag__.ld(tf).expand_dims, (ag__.ld(mean), 0), None, fscope)
+            stddev = ag__.converted_call(ag__.ld(tf).expand_dims, (ag__.converted_call(ag__.ld(tf).sqrt, (ag__.ld(var),), None, fscope), 0), None, fscope)
+            Z = ag__.converted_call(ag__.ld(tf).cast, (ag__.converted_call(ag__.ld(tf).reshape, (ag__.ld(self).Z, ag__.converted_call(ag__.ld(tf).concat, ([ag__.ld(shape_aux), [ag__.ld(self).dim]],), dict(axis=0), fscope)), None, fscope), ag__.ld(mean).dtype), None, fscope)
+            dZ = ag__.converted_call(ag__.ld(tf).cast, (ag__.converted_call(ag__.ld(tf).reshape, (ag__.ld(self).dZ, ag__.converted_call(ag__.ld(tf).concat, ([ag__.ld(shape_aux), [1]],), dict(axis=0), fscope)), None, fscope), ag__.ld(mean).dtype), None, fscope)
+>           X = ag__.ld(mean) + ag__.ld(stddev) * ag__.ld(Z)
+E           ValueError: in user code:
+E           
+E               File "/local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py", line 116, in func  *
+E                   [lambda *X: tf.exp(X[0])], num_gauss_hermite_points, [mu], [var]
+E               File "/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/check_shapes/decorator.py", line 69, in wrapped_function  *
+E                   def wrapped_function(*args: Any, **kwargs: Any) -> Any:
+E               File "/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/quadrature/deprecated.py", line 72, in ndiagquad  *
+E                   return ndiagquad(funcs, H, Fmu, Fvar, logspace)
+E               File "/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/quadrature/temp.py", line 33, in ndiagquad  *
+E                   result = quadrature(funcs, Fmu, Fvar, **Ys)
+E               File "/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/check_shapes/integration/tf.py", line 42, in wrapped_method  *
+E                   return wrapped_function(self, *args, **kwargs)
+E               File "/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/check_shapes/decorator.py", line 69, in wrapped_function  *
+E                   def wrapped_function(*args: Any, **kwargs: Any) -> Any:
+E               File "/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/quadrature/base.py", line 80, in __call__  *
+E                   X, W = self._build_X_W(mean, var)
+E               File "/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/check_shapes/integration/tf.py", line 42, in wrapped_method  *
+E                   return wrapped_function(self, *args, **kwargs)
+E               File "/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/check_shapes/decorator.py", line 69, in wrapped_function  *
+E                   def wrapped_function(*args: Any, **kwargs: Any) -> Any:
+E               File "/local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/quadrature/gauss_hermite.py", line 149, in _build_X_W  *
+E                   X = mean + stddev * Z
+E           
+E               ValueError: Dimensions must be equal, but are 2 and 25 for '{{node mul}} = Mul[T=DT_DOUBLE](ExpandDims_1, Reshape_2)' with input shapes: [1,1,2], [33554432,1,25].
+
+/tmp/__autograph_generated_file2wa_bptu.py:26: ValueError
+=============================== warnings summary ===============================
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:57
+  /local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:57: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    if (distutils.version.LooseVersion(tf.__version__) <
+
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:58
+  /local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:58: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    distutils.version.LooseVersion(required_tensorflow_version)):
+
+tests/gpflow/quadrature/test_quadrature.py::test_diagquad_1d[var0-mu0]
+tests/gpflow/quadrature/test_quadrature.py::test_diagquad_2d[var20-mu20-var10-mu10]
+tests/gpflow/quadrature/test_quadrature.py::test_diagquad_logspace[var20-mu20-var10-mu10]
+tests/gpflow/quadrature/test_quadrature.py::test_diagquad_with_kwarg[var10-mu10]
+tests/gpflow/quadrature/test_quadrature.py::test_ndiagquad_does_not_throw_error
+  /local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/quadrature/temp.py:19: DeprecationWarning: The ndiagquad function is deprecated. Please use gpflow.quadrature.NDiagGHQuadrature instead.
+    warnings.warn('The ndiagquad function is deprecated. Please use gpflow.quadrature.NDiagGHQuadrature instead.', DeprecationWarning)
+
+tests/gpflow/quadrature/test_quadrature.py::test_quadrature_autograph
+  /local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow/python/autograph/impl/api.py:371: DeprecationWarning: The ndiagquad function is deprecated. Please use gpflow.quadrature.NDiagGHQuadrature instead.
+    return py_builtins.overload_of(f)(*args)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_diagquad_1d[var0-mu0]
+FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_diagquad_2d[var20-mu20-var10-mu10]
+FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_diagquad_logspace[var20-mu20-var10-mu10]
+FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_diagquad_with_kwarg[var10-mu10]
+FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_ndiagquad_does_not_throw_error
+FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_quadrature_autograph
+======================== 6 failed, 8 warnings in 42.95s ========================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/GPflow/GPflow/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/GPflow/GPflow
+collecting ... collected 6 items
+
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_diagquad_1d[var0-mu0] PASSED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_diagquad_2d[var20-mu20-var10-mu10] PASSED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_diagquad_logspace[var20-mu20-var10-mu10] PASSED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_diagquad_with_kwarg[var10-mu10] PASSED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_ndiagquad_does_not_throw_error PASSED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_quadrature_autograph PASSED
+
+=============================== warnings summary ===============================
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:57
+  /local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:57: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    if (distutils.version.LooseVersion(tf.__version__) <
+
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:58
+  /local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:58: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    distutils.version.LooseVersion(required_tensorflow_version)):
+
+tests/gpflow/quadrature/test_quadrature.py::test_diagquad_1d[var0-mu0]
+tests/gpflow/quadrature/test_quadrature.py::test_diagquad_2d[var20-mu20-var10-mu10]
+tests/gpflow/quadrature/test_quadrature.py::test_diagquad_logspace[var20-mu20-var10-mu10]
+tests/gpflow/quadrature/test_quadrature.py::test_diagquad_with_kwarg[var10-mu10]
+tests/gpflow/quadrature/test_quadrature.py::test_ndiagquad_does_not_throw_error
+tests/gpflow/quadrature/test_quadrature.py::test_quadrature_autograph
+  /local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/quadrature/deprecated.py:165: DeprecationWarning: Please use gpflow.quadrature.NDiagGHQuadrature instead (note the changed convention of how multi-dimensional quadrature is handled)
+    warnings.warn(
+
+tests/gpflow/quadrature/test_quadrature.py::test_quadrature_autograph
+  /local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow/python/autograph/impl/api.py:371: DeprecationWarning: Please use gpflow.quadrature.NDiagGHQuadrature instead (note the changed convention of how multi-dimensional quadrature is handled)
+    return py_builtins.overload_of(f)(*args)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 6 passed, 9 warnings in 2.60s =========================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/GPflow/GPflow/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/GPflow/GPflow
+collecting ... collected 6 items
+
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_diagquad_1d[var0-mu0] PASSED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_diagquad_2d[var20-mu20-var10-mu10] PASSED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_diagquad_logspace[var20-mu20-var10-mu10] PASSED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_diagquad_with_kwarg[var10-mu10] PASSED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_ndiagquad_does_not_throw_error PASSED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/quadrature/test_quadrature.py::test_quadrature_autograph PASSED
+
+=============================== warnings summary ===============================
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:57
+  /local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:57: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    if (distutils.version.LooseVersion(tf.__version__) <
+
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:58
+  /local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:58: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    distutils.version.LooseVersion(required_tensorflow_version)):
+
+tests/gpflow/quadrature/test_quadrature.py::test_diagquad_1d[var0-mu0]
+tests/gpflow/quadrature/test_quadrature.py::test_diagquad_2d[var20-mu20-var10-mu10]
+tests/gpflow/quadrature/test_quadrature.py::test_diagquad_logspace[var20-mu20-var10-mu10]
+tests/gpflow/quadrature/test_quadrature.py::test_diagquad_with_kwarg[var10-mu10]
+tests/gpflow/quadrature/test_quadrature.py::test_ndiagquad_does_not_throw_error
+tests/gpflow/quadrature/test_quadrature.py::test_quadrature_autograph
+  /local/data0/moved_data/publishablew/GPflow/GPflow/gpflow/quadrature/deprecated.py:165: DeprecationWarning: Please use gpflow.quadrature.NDiagGHQuadrature instead (note the changed convention of how multi-dimensional quadrature is handled)
+    warnings.warn(
+
+tests/gpflow/quadrature/test_quadrature.py::test_quadrature_autograph
+  /local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow/python/autograph/impl/api.py:371: DeprecationWarning: Please use gpflow.quadrature.NDiagGHQuadrature instead (note the changed convention of how multi-dimensional quadrature is handled)
+    return py_builtins.overload_of(f)(*args)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 6 passed, 9 warnings in 2.66s =========================

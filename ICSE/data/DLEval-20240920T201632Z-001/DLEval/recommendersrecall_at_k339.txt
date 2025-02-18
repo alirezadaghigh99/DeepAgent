@@ -1,0 +1,16 @@
+stage: Evaluating&Metrics
+task: Recommendation
+data: Table
+
+prompt:
+Generate a Python function called recall_at_k that calculates the recall at K for a recommendation system. The function takes in the following parameters: rating_true (a pandas DataFrame representing true ratings), rating_pred (a pandas DataFrame representing predicted ratings), col_user (a string representing the column name for user), col_item (a string representing the column name for item), col_prediction (a string representing the column name for prediction), relevancy_method (a string representing the method for determining relevancy), k (an integer representing the number of top K items per user), threshold (a float representing the threshold of top items per user).
+
+The function returns a float value representing the recall at K (with a minimum value of 0 and a maximum value of 1). The maximum value is 1 even when fewer than K items exist for a user in rating_true. The function internally calls the merge_ranking_true_pred function to calculate the recall at K. If there are no hits in the data, the function returns 0.0.
+
+ ground Truth:recommenders/evaluation/python_evaluation.py
+
+ repo:recommenders
+
+ function:recall_at_k
+ 
+ test_cases:tests/unit/recommenders/evaluation/test_python_evaluation.py

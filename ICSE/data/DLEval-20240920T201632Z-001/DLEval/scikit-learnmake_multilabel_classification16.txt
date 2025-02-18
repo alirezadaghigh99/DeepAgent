@@ -1,0 +1,14 @@
+stage: Model Construction
+task: Classification
+data: 
+
+prompt:
+Generate a Python function called make_multilabel_classification that generates a random multilabel classification problem. The function takes in parameters such as the number of samples, number of features, number of classes, number of labels, document length, and other optional parameters. It returns generated samples X as an ndarray of shape (n_samples, n_features), label sets Y as an ndarray or sparse matrix of shape (n_samples, n_classes), and optionally prior class probability p_c and conditional probabilities of features given classes p_w_c. The function utilizes rejection sampling to ensure valid sample generation. Refer to the User Guide for more information.
+
+ ground Truth:sklearn/datasets/_samples_generator.py
+
+ repo:scikit-learn
+
+ function:make_multilabel_classification
+ 
+ test_cases:sklearn/datasets/tests/test_samples_generator.py

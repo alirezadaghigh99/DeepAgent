@@ -1,0 +1,34 @@
+stage: Training
+task: 
+data: Image
+
+prompt:
+Generate a python function called  projection_from_KRt Get the projection matrix P from K, R and t.
+
+    This function estimate the projection matrix by solving the following equation: :math:`P = K * [R|t]`.
+
+    Args:
+       K: the camera matrix with the intrinsics with shape :math:`(B, 3, 3)`.
+       R: The rotation matrix with shape :math:`(B, 3, 3)`.
+       t: The translation vector with shape :math:`(B, 3, 1)`.
+
+    Returns:
+       The projection matrix P with shape :math:`(B, 4, 4)`.
+    if K.shape[-2:] != (3, 3):
+        raise AssertionError(K.shape)
+    if R.shape[-2:] != (3, 3):
+        raise AssertionError(R.shape)
+    if t.shape[-2:] != (3, 1):
+        raise AssertionError(t.shape)
+    if not len(K.shape) == len(R.shape) == len(t.shape):
+        raise AssertionError
+def projection_from_KRt(K: Tensor, R: Tensor, t: Tensor) -> Tensor:
+#complete
+
+ ground Truth:kornia/geometry/epipolar/projection.py#L81
+
+ repo:kornia
+
+ function:projection_from_KRt
+ 
+ test_cases:tests/geometry/epipolar/test_projection.py::TestProjectionFromKRt

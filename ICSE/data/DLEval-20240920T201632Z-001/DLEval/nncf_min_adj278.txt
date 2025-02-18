@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: 
+
+prompt:
+Generate a Python function called _min_adj that calculates the minimum adjustment value based on the input parameters. The function takes in the number of bits (bits), the lower bound (low), the length of the range (range_len), and a boolean value indicating whether the range is narrow (narrow_range). The function calculates the number of quantization levels (quants_count), and then returns the result
+
+ ground Truth:nncf/tensorflow/quantization/quantizers.py
+
+ repo:nncf
+
+ function:_min_adj
+ 
+ test_cases:tests/tensorflow/quantization/test_overflow_issue.py

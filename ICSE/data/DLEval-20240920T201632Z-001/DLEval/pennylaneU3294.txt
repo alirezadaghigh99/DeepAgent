@@ -1,0 +1,19 @@
+stage: Pre-Post processing
+task: 
+data: 
+
+prompt:
+Define a Python function called U3 that represents an arbitrary single qubit unitary operation. The function takes three input parameters: theta (a float representing the polar angle), phi (a float representing the azimuthal angle), and delta (a float representing the quantum phase). The function returns a 2x2 matrix representing the unitary operation defined by the formula:
+
+U3(theta, phi, delta) = [[cos(theta/2), -exp(i*delta)*sin(theta/2)],
+                         [exp(i*phi)*sin(theta/2), exp(i*(phi+delta))*cos(theta/2)]]
+
+The output of the function is a 2x2 numpy array representing the unitary matrix.
+
+ ground Truth:tests/gate_data.py
+
+ repo:pennylane
+
+ function:U3
+ 
+ test_cases:tests/ops/qubit/test_parametric_ops.py::TestOperations

@@ -1,0 +1,117 @@
+output file:
+processed_classes-pfrlexperience36.json
+function:
+experience
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/nn_tests/test_empirical_normalization.py::TestEmpiricalNormalization::test_large FAILED [ 40%]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/nn_tests/test_empirical_normalization.py::TestEmpiricalNormalization::test_large'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/pfrl/pfrl/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/pfrl/pfrl
+configfile: pytest.ini
+collecting ... collected 5 items
+
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/nn_tests/test_empirical_normalization.py::TestEmpiricalNormalization::test_batch_axis PASSED [ 20%]
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/nn_tests/test_empirical_normalization.py::TestEmpiricalNormalization::test_large FAILED [ 40%]
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/nn_tests/test_empirical_normalization.py::TestEmpiricalNormalization::test_small_cpu PASSED [ 60%]
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/nn_tests/test_empirical_normalization.py::TestEmpiricalNormalization::test_small_gpu PASSED [ 80%]
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/nn_tests/test_empirical_normalization.py::TestEmpiricalNormalization::test_until PASSED [100%]
+
+=================================== FAILURES ===================================
+____________________ TestEmpiricalNormalization.test_large _____________________
+
+self = <test_empirical_normalization.TestEmpiricalNormalization testMethod=test_large>
+
+    @pytest.mark.slow
+    def test_large(self):
+        en = empirical_normalization.EmpiricalNormalization(10)
+        for _ in range(10000):
+            x = np.random.normal(loc=4, scale=2, size=(7, 10))
+            en(torch.tensor(x))
+        x = 2 * np.random.normal(loc=4, scale=2, size=(1, 10))
+        enx = en(torch.tensor(x), update=False)
+    
+        np.testing.assert_allclose(en.mean.cpu().numpy(), 4, rtol=1e-1)
+        np.testing.assert_allclose(en.std.cpu().numpy(), 2, rtol=1e-1)
+    
+        # Compare with the ground-truth normalization
+>       np.testing.assert_allclose((x - 4) / 2, enx, rtol=1e-1)
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/nn_tests/test_empirical_normalization.py:50: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (<function assert_allclose.<locals>.compare at 0x7fb8236777e0>, array([[ 5.2684888 ,  0.49262236,  3.77892409,  1.9333...941,  3.26471707,  1.88281444,  2.21527298,
+         0.7982217 ,  0.44828299,  0.28957649, -0.66684666,  2.94176979]]))
+kwds = {'equal_nan': True, 'err_msg': '', 'header': 'Not equal to tolerance rtol=0.1, atol=0', 'strict': False, ...}
+
+    @wraps(func)
+    def inner(*args, **kwds):
+        with self._recreate_cm():
+>           return func(*args, **kwds)
+E           AssertionError: 
+E           Not equal to tolerance rtol=0.1, atol=0
+E           
+E           Mismatched elements: 9 / 10 (90%)
+E           Max absolute difference among violations: 1.26017385
+E           Max relative difference among violations: 0.49933669
+E            ACTUAL: array([[ 5.268489,  0.492622,  3.778924,  1.933329,  2.544213,  0.8981  ,
+E                    0.511732,  0.189622, -0.527933,  1.681596]])
+E            DESIRED: array([[ 4.637898,  0.983939,  3.264717,  1.882814,  2.215273,  0.798222,
+E                    0.448283,  0.289576, -0.666847,  2.94177 ]])
+
+/usr/lib/python3.11/contextlib.py:81: AssertionError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/nn_tests/test_empirical_normalization.py::TestEmpiricalNormalization::test_large
+========================= 1 failed, 4 passed in 1.95s ==========================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/pfrl/pfrl/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/pfrl/pfrl
+configfile: pytest.ini
+collecting ... collected 5 items
+
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/nn_tests/test_empirical_normalization.py::TestEmpiricalNormalization::test_batch_axis PASSED [ 20%]
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/nn_tests/test_empirical_normalization.py::TestEmpiricalNormalization::test_large PASSED [ 40%]
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/nn_tests/test_empirical_normalization.py::TestEmpiricalNormalization::test_small_cpu PASSED [ 60%]
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/nn_tests/test_empirical_normalization.py::TestEmpiricalNormalization::test_small_gpu PASSED [ 80%]
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/nn_tests/test_empirical_normalization.py::TestEmpiricalNormalization::test_until PASSED [100%]
+
+=============================== warnings summary ===============================
+tests/nn_tests/test_empirical_normalization.py::TestEmpiricalNormalization::test_large
+  /local/data0/moved_data/publishablew/pfrl/pfrl/tests/nn_tests/test_empirical_normalization.py:53: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+    np.testing.assert_allclose(x, en.inverse(torch.tensor(enx)), rtol=1e-4)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+========================= 5 passed, 1 warning in 2.85s =========================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/pfrl/pfrl/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/pfrl/pfrl
+configfile: pytest.ini
+collecting ... collected 5 items
+
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/nn_tests/test_empirical_normalization.py::TestEmpiricalNormalization::test_batch_axis PASSED [ 20%]
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/nn_tests/test_empirical_normalization.py::TestEmpiricalNormalization::test_large PASSED [ 40%]
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/nn_tests/test_empirical_normalization.py::TestEmpiricalNormalization::test_small_cpu PASSED [ 60%]
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/nn_tests/test_empirical_normalization.py::TestEmpiricalNormalization::test_small_gpu PASSED [ 80%]
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/nn_tests/test_empirical_normalization.py::TestEmpiricalNormalization::test_until PASSED [100%]
+
+=============================== warnings summary ===============================
+tests/nn_tests/test_empirical_normalization.py::TestEmpiricalNormalization::test_large
+  /local/data0/moved_data/publishablew/pfrl/pfrl/tests/nn_tests/test_empirical_normalization.py:53: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+    np.testing.assert_allclose(x, en.inverse(torch.tensor(enx)), rtol=1e-4)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+========================= 5 passed, 1 warning in 2.87s =========================

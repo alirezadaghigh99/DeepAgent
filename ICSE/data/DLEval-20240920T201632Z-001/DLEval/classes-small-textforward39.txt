@@ -1,0 +1,74 @@
+stage: Text
+task: Classification
+data: Inference
+
+prompt:
+```python
+Generate a Python method `forward` for the `KimCNN` class that performs a forward pass through the convolutional neural network designed for text classification. The method should take as input a tensor of word indices (`x`) representing a batch of padded sequences and return the output logits for each class. The method should include embedding the input sequences, applying convolutional and max-pooling layers, concatenating the resulting feature maps, and passing the final pooled features through a dropout layer and a fully connected layer for classification.
+
+Class structure:
+
+```python
+class KimCNN(nn.Module):
+    def __init__(self, vocabulary_size, max_seq_length, num_classes=2, out_channels=100,
+                 embed_dim=300, padding_idx=0, kernel_heights=[3, 4, 5], dropout=0.5,
+                 embedding_matrix=None, freeze_embedding_layer=False):
+        super().__init__()
+
+        self.out_channels = out_channels
+        self.in_channels = 1
+        self.num_kernels = len(kernel_heights)
+        self.pool_sizes = [(max_seq_length - k, 1) for k in kernel_heights]
+        self.max_seq_length = max_seq_length
+        self.num_classes = num_classes
+
+        # Assumes vocab size is same as embedding matrix size. Therefore should
+        # contain special tokens e.g. <pad>
+        self.embedding = nn.Embedding(
+            vocabulary_size, embed_dim, padding_idx=padding_idx
+        )
+
+        if embedding_matrix is not None:
+            # Load pre-trained weights. Should be torch FloatTensor
+            self.embedding = self.embedding.from_pretrained(embedding_matrix.float(),
+                                                            padding_idx=padding_idx)
+
+        self.embedding.weight.requires_grad = not freeze_embedding_layer
+
+        self.convs = nn.ModuleList(
+            [
+                nn.Conv2d(
+                    self.in_channels,
+                    self.out_channels,
+                    kernel_size=(k, embed_dim)
+                )
+                for k in kernel_heights
+            ]
+        )
+        self.pools = nn.ModuleList(
+            [
+                nn.MaxPool2d(kernel_size=pool_size)
+                for pool_size in self.pool_sizes
+            ]
+        )
+
+        self.dropout = nn.Dropout(dropout)
+        self.fc = nn.Linear(self.out_channels * self.num_kernels, self.num_classes).
+
+    def forward(self, x):
+        # Embedding the input sequences
+        # Apply convolutional layers followed by max-pooling
+        # Concatenate pooled features from different kernels
+        # Apply dropout and pass through the fully connected layer
+        return logits
+```
+
+ ground Truth:small_text/integrations/pytorch/models/kimcnn.py
+
+ repo:small-text
+
+ function:forward
+ 
+ class:KimCNN
+ 
+ test_cases:tests/integration/small_text/integrations/pytorch/classifiers/test_kimcnn_embeddings.py

@@ -1,0 +1,38 @@
+stage: Pre-Post processing
+task: Detection
+data: Image
+
+prompt:
+Generate a python function called unproject_points that Unproject a 2d point in 3d.
+
+    Transform coordinates in the pixel frame to the camera frame.
+
+    Args:
+        point2d: tensor containing the 2d to be projected to
+            world coordinates. The shape of the tensor can be :math:`(*, 2)`.
+        depth: tensor containing the depth value of each 2d
+            points. The tensor shape must be equal to point2d :math:`(*, 1)`.
+        camera_matrix: tensor containing the intrinsics camera
+            matrix. The tensor shape must be :math:`(*, 3, 3)`.
+        normalize: whether to normalize the pointcloud. This
+            must be set to `True` when the depth is represented as the Euclidean
+            ray length from the camera position.
+
+    Returns:
+        tensor of (x, y, z) world coordinates with shape :math:`(*, 3)`.
+
+    Example:
+        >>> _ = torch.manual_seed(0)
+        >>> x = torch.rand(1, 2)
+        >>> depth = torch.ones(1, 1)
+        >>> K = torch.eye(3)[None]
+        >>> unproject_points(x, depth, K)
+        tensor([[0.4963, 0.7682, 1.0000]])
+
+ ground Truth:kornia/geometry/camera/perspective.py#L39
+
+ repo:kornia
+
+ function:unproject_points
+ 
+ test_cases:tests/geometry/camera/test_perspective.py

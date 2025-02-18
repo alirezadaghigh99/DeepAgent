@@ -1,0 +1,14 @@
+stage: Model Construction
+task: Classification
+data: Table
+
+prompt:
+Generate a Python function called make_hastie_10_2 that generates data for binary classification as used in Hastie et al. 2009, Example 10.2. The function takes in the number of samples (n_samples) and a random state for reproducibility. It returns two arrays: X, which contains input samples of shape (n_samples, 10) with standard independent Gaussian features, and y, which contains output values of shape (n_samples,) defined by a specific condition. The target y[i] is set to 1 if the sum of X[i] squared is greater than 9.34, otherwise -1. The function utilizes numpy for array operations and includes references to related dataset approaches and literature. An example usage is provided to demonstrate the function's output shapes and initial values.
+
+ ground Truth:sklearn/datasets/_samples_generator.py
+
+ repo:scikit-learn
+
+ function:make_hastie_10_2
+ 
+ test_cases:sklearn/datasets/tests/test_samples_generator.py

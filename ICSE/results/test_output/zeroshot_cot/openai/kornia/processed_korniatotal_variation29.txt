@@ -1,0 +1,941 @@
+output file:
+processed_korniatotal_variation29.json
+function:
+total_variation
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_3d[cpu-float32-pred1-expected1]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_dynamo[cpu-float32-inductor] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_constant_int[cpu-pred1-expected1] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_constant[cpu-float32-pred1-expected1] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_4d[cpu-float32-pred1-expected1] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_constant[cpu-float32-pred1-expected1]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_constant[cpu-float32-pred0-expected0] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_constant[cpu-float32-pred0-expected0]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_dynamo[cpu-float32-inductor]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_shapes[cpu-float32-pred1]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_shapes[cpu-float32-pred0] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_gradcheck[cpu] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_3d[cpu-float32-pred0-expected0]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_shapes[cpu-float32-pred2]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_constant_int[cpu-pred0-expected0] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_reduction[cpu-float32-sum-expected0]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_shapes[cpu-float32-pred1] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_3d[cpu-float32-pred1-expected1] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_reduction[cpu-float32-mean-expected1]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_4d[cpu-float32-pred1-expected1]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_4d[cpu-float32-pred0-expected0]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_constant_int[cpu-pred0-expected0]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_shapes[cpu-float32-pred2] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_constant_int[cpu-pred1-expected1]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_3d[cpu-float32-pred0-expected0] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_module[cpu-float32]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_shapes[cpu-float32-pred0]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_reduction[cpu-float32-sum-expected0] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_gradcheck[cpu]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_module[cpu-float32] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_reduction[cpu-float32-mean-expected1] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_4d[cpu-float32-pred0-expected0] FAILED'}
+
+All Test Cases On Generated code:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'jit', 'openxla', 'tvm', 'onnxrt', 'cudagraphs', 'inductor', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 18 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_constant[cpu-float32-pred0-expected0] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_constant[cpu-float32-pred1-expected1] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_constant_int[cpu-pred0-expected0] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_constant_int[cpu-pred1-expected1] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_3d[cpu-float32-pred0-expected0] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_3d[cpu-float32-pred1-expected1] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_4d[cpu-float32-pred0-expected0] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_4d[cpu-float32-pred1-expected1] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_shapes[cpu-float32-pred0] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_shapes[cpu-float32-pred1] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_shapes[cpu-float32-pred2] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_reduction[cpu-float32-sum-expected0] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_reduction[cpu-float32-mean-expected1] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_invalid_types[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_invalid_types[cpu-float32-pred1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_dynamo[cpu-float32-inductor] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_module[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_gradcheck[cpu] FAILED
+
+=================================== FAILURES ===================================
+_____ TestTotalVariation.test_tv_on_constant[cpu-float32-pred0-expected0] ______
+
+self = <test_total_variation.TestTotalVariation object at 0x7dbd0133d810>
+device = device(type='cpu'), dtype = torch.float32
+pred = tensor([[[1., 1., 1., 1., 1.],
+         [1., 1., 1., 1., 1.],
+         [1., 1., 1., 1., 1.],
+         [1., 1., 1., 1.,...  [[1., 1., 1., 1., 1.],
+         [1., 1., 1., 1., 1.],
+         [1., 1., 1., 1., 1.],
+         [1., 1., 1., 1., 1.]]])
+expected = tensor([0., 0., 0.])
+
+    @pytest.mark.parametrize(
+        "pred, expected",
+        [
+            (torch.ones(3, 4, 5), torch.tensor([0.0, 0.0, 0.0])),
+            (2 * torch.ones(2, 3, 4, 5), torch.tensor([[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]])),
+        ],
+    )
+    def test_tv_on_constant(self, device, dtype, pred, expected):
+        actual = kornia.losses.total_variation(pred.to(device, dtype))
+>       self.assert_close(actual, expected.to(device, dtype))
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:106: in assert_close
+    return assert_close(actual, expected, rtol=rtol, atol=atol)
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:35: in assert_close
+    rtol, atol = _default_tolerances(actual, expected)
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:23: in _default_tolerances
+    rtols, atols = zip(*[_DTYPE_PRECISIONS.get(torch.as_tensor(input_).dtype, (0.0, 0.0)) for input_ in inputs])
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <tuple_iterator object at 0x7dbd0133fa60>
+
+>   rtols, atols = zip(*[_DTYPE_PRECISIONS.get(torch.as_tensor(input_).dtype, (0.0, 0.0)) for input_ in inputs])
+E   RuntimeError: Could not infer dtype of NoneType
+
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:23: RuntimeError
+_____ TestTotalVariation.test_tv_on_constant[cpu-float32-pred1-expected1] ______
+
+self = <test_total_variation.TestTotalVariation object at 0x7dbd0133d780>
+device = device(type='cpu'), dtype = torch.float32
+pred = tensor([[[[2., 2., 2., 2., 2.],
+          [2., 2., 2., 2., 2.],
+          [2., 2., 2., 2., 2.],
+          [2., 2., 2.,...2., 2., 2., 2., 2.],
+          [2., 2., 2., 2., 2.],
+          [2., 2., 2., 2., 2.],
+          [2., 2., 2., 2., 2.]]]])
+expected = tensor([[0., 0., 0.],
+        [0., 0., 0.]])
+
+    @pytest.mark.parametrize(
+        "pred, expected",
+        [
+            (torch.ones(3, 4, 5), torch.tensor([0.0, 0.0, 0.0])),
+            (2 * torch.ones(2, 3, 4, 5), torch.tensor([[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]])),
+        ],
+    )
+    def test_tv_on_constant(self, device, dtype, pred, expected):
+        actual = kornia.losses.total_variation(pred.to(device, dtype))
+>       self.assert_close(actual, expected.to(device, dtype))
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:106: in assert_close
+    return assert_close(actual, expected, rtol=rtol, atol=atol)
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:35: in assert_close
+    rtol, atol = _default_tolerances(actual, expected)
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:23: in _default_tolerances
+    rtols, atols = zip(*[_DTYPE_PRECISIONS.get(torch.as_tensor(input_).dtype, (0.0, 0.0)) for input_ in inputs])
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <tuple_iterator object at 0x7dbd013ac550>
+
+>   rtols, atols = zip(*[_DTYPE_PRECISIONS.get(torch.as_tensor(input_).dtype, (0.0, 0.0)) for input_ in inputs])
+E   RuntimeError: Could not infer dtype of NoneType
+
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:23: RuntimeError
+_______ TestTotalVariation.test_tv_on_constant_int[cpu-pred0-expected0] ________
+
+self = <test_total_variation.TestTotalVariation object at 0x7dbd0133dc60>
+device = device(type='cpu')
+pred = tensor([[[1., 1., 1., 1., 1.],
+         [1., 1., 1., 1., 1.],
+         [1., 1., 1., 1., 1.],
+         [1., 1., 1., 1.,...  [[1., 1., 1., 1., 1.],
+         [1., 1., 1., 1., 1.],
+         [1., 1., 1., 1., 1.],
+         [1., 1., 1., 1., 1.]]])
+expected = tensor([0., 0., 0.])
+
+    @pytest.mark.parametrize(
+        "pred, expected",
+        [
+            (torch.ones(3, 4, 5), torch.tensor([0.0, 0.0, 0.0])),
+            (2 * torch.ones(2, 3, 4, 5), torch.tensor([[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]])),
+        ],
+    )
+    def test_tv_on_constant_int(self, device, pred, expected):
+        actual = kornia.losses.total_variation(pred.to(device, dtype=torch.int32), reduction="mean")
+>       self.assert_close(actual, expected.to(device))
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:106: in assert_close
+    return assert_close(actual, expected, rtol=rtol, atol=atol)
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:35: in assert_close
+    rtol, atol = _default_tolerances(actual, expected)
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:23: in _default_tolerances
+    rtols, atols = zip(*[_DTYPE_PRECISIONS.get(torch.as_tensor(input_).dtype, (0.0, 0.0)) for input_ in inputs])
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <tuple_iterator object at 0x7dbd0133c490>
+
+>   rtols, atols = zip(*[_DTYPE_PRECISIONS.get(torch.as_tensor(input_).dtype, (0.0, 0.0)) for input_ in inputs])
+E   RuntimeError: Could not infer dtype of NoneType
+
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:23: RuntimeError
+_______ TestTotalVariation.test_tv_on_constant_int[cpu-pred1-expected1] ________
+
+self = <test_total_variation.TestTotalVariation object at 0x7dbd0133dbd0>
+device = device(type='cpu')
+pred = tensor([[[[2., 2., 2., 2., 2.],
+          [2., 2., 2., 2., 2.],
+          [2., 2., 2., 2., 2.],
+          [2., 2., 2.,...2., 2., 2., 2., 2.],
+          [2., 2., 2., 2., 2.],
+          [2., 2., 2., 2., 2.],
+          [2., 2., 2., 2., 2.]]]])
+expected = tensor([[0., 0., 0.],
+        [0., 0., 0.]])
+
+    @pytest.mark.parametrize(
+        "pred, expected",
+        [
+            (torch.ones(3, 4, 5), torch.tensor([0.0, 0.0, 0.0])),
+            (2 * torch.ones(2, 3, 4, 5), torch.tensor([[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]])),
+        ],
+    )
+    def test_tv_on_constant_int(self, device, pred, expected):
+        actual = kornia.losses.total_variation(pred.to(device, dtype=torch.int32), reduction="mean")
+>       self.assert_close(actual, expected.to(device))
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:106: in assert_close
+    return assert_close(actual, expected, rtol=rtol, atol=atol)
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:35: in assert_close
+    rtol, atol = _default_tolerances(actual, expected)
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:23: in _default_tolerances
+    rtols, atols = zip(*[_DTYPE_PRECISIONS.get(torch.as_tensor(input_).dtype, (0.0, 0.0)) for input_ in inputs])
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <tuple_iterator object at 0x7dbd013b4b50>
+
+>   rtols, atols = zip(*[_DTYPE_PRECISIONS.get(torch.as_tensor(input_).dtype, (0.0, 0.0)) for input_ in inputs])
+E   RuntimeError: Could not infer dtype of NoneType
+
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:23: RuntimeError
+________ TestTotalVariation.test_tv_on_3d[cpu-float32-pred0-expected0] _________
+
+self = <test_total_variation.TestTotalVariation object at 0x7dbd0133e170>
+device = device(type='cpu'), dtype = torch.float32
+pred = tensor([[[0.1175, 0.5718, 0.8922, 0.2929, 0.6356],
+         [0.5371, 0.1342, 0.7783, 0.2139, 0.1757],
+         [0.6236....1769, 0.2626],
+         [0.2052, 0.1452, 0.8602, 0.0259, 0.7383],
+         [0.7194, 0.9625, 0.4229, 0.0798, 0.9150]]])
+expected = tensor([12.6647,  7.9527, 12.3838])
+
+    @pytest.mark.parametrize(
+        "pred, expected",
+        [
+            (
+                torch.tensor(
+                    [
+                        [
+                            [0.11747694, 0.5717714, 0.89223915, 0.2929412, 0.63556224],
+                            [0.5371079, 0.13416398, 0.7782737, 0.21392655, 0.1757018],
+                            [0.62360305, 0.8563448, 0.25304103, 0.68539226, 0.6956515],
+                            [0.9350611, 0.01694632, 0.78724295, 0.4760313, 0.73099905],
+                        ],
+                        [
+                            [0.4788819, 0.45253807, 0.932798, 0.5721999, 0.7612051],
+                            [0.5455887, 0.8836531, 0.79551977, 0.6677338, 0.74293613],
+                            [0.4830376, 0.16420758, 0.15784949, 0.21445751, 0.34168917],
+                            [0.8675162, 0.5468113, 0.6117004, 0.01305223, 0.17554593],
+                        ],
+                        [
+                            [0.6423703, 0.5561105, 0.54304767, 0.20339686, 0.8553698],
+                            [0.98024786, 0.31562763, 0.10122144, 0.17686582, 0.26260805],
+                            [0.20522952, 0.14523649, 0.8601968, 0.02593213, 0.7382898],
+                            [0.71935296, 0.9625162, 0.42287344, 0.07979459, 0.9149871],
+                        ],
+                    ]
+                ),
+                torch.tensor([12.6647, 7.9527, 12.3838]),
+            ),
+            (
+                torch.tensor([[[0.09094203, 0.32630223, 0.8066123], [0.10921168, 0.09534764, 0.48588026]]]),
+                torch.tensor([1.6900]),
+            ),
+        ],
+    )
+    def test_tv_on_3d(self, device, dtype, pred, expected):
+        actual = kornia.losses.total_variation(pred.to(device, dtype))
+>       self.assert_close(actual, expected.to(device, dtype), rtol=1e-3, atol=1e-3)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py:72: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:106: in assert_close
+    return assert_close(actual, expected, rtol=rtol, atol=atol)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+actual = None, expected = tensor([12.6647,  7.9527, 12.3838]), rtol = 0.001
+atol = 0.001, kwargs = {}
+
+    def assert_close(
+        actual: Tensor, expected: Tensor, *, rtol: Optional[float] = None, atol: Optional[float] = None, **kwargs: Any
+    ) -> None:
+        if rtol is None and atol is None:
+            # `torch.testing.assert_close` used different default tolerances than `torch.testing.assert_allclose`.
+            # TODO: remove this special handling as soon as https://github.com/kornia/kornia/issues/1134 is resolved
+            #  Basically, this whole wrapper function can be removed and `torch.testing.assert_close` can be used
+            #  directly.
+            rtol, atol = _default_tolerances(actual, expected)
+    
+>       return _assert_close(
+            actual,
+            expected,
+            rtol=rtol,
+            atol=atol,
+            # this is the default value for torch>=1.10, but not for torch==1.9
+            # TODO: remove this if kornia relies on torch>=1.10
+            check_stride=False,
+            equal_nan=False,
+            **kwargs,
+        )
+E       AssertionError: None mismatch: None is not tensor([12.6647,  7.9527, 12.3838])
+
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:37: AssertionError
+________ TestTotalVariation.test_tv_on_3d[cpu-float32-pred1-expected1] _________
+
+self = <test_total_variation.TestTotalVariation object at 0x7dbd0133e0b0>
+device = device(type='cpu'), dtype = torch.float32
+pred = tensor([[[0.0909, 0.3263, 0.8066],
+         [0.1092, 0.0953, 0.4859]]])
+expected = tensor([1.6900])
+
+    @pytest.mark.parametrize(
+        "pred, expected",
+        [
+            (
+                torch.tensor(
+                    [
+                        [
+                            [0.11747694, 0.5717714, 0.89223915, 0.2929412, 0.63556224],
+                            [0.5371079, 0.13416398, 0.7782737, 0.21392655, 0.1757018],
+                            [0.62360305, 0.8563448, 0.25304103, 0.68539226, 0.6956515],
+                            [0.9350611, 0.01694632, 0.78724295, 0.4760313, 0.73099905],
+                        ],
+                        [
+                            [0.4788819, 0.45253807, 0.932798, 0.5721999, 0.7612051],
+                            [0.5455887, 0.8836531, 0.79551977, 0.6677338, 0.74293613],
+                            [0.4830376, 0.16420758, 0.15784949, 0.21445751, 0.34168917],
+                            [0.8675162, 0.5468113, 0.6117004, 0.01305223, 0.17554593],
+                        ],
+                        [
+                            [0.6423703, 0.5561105, 0.54304767, 0.20339686, 0.8553698],
+                            [0.98024786, 0.31562763, 0.10122144, 0.17686582, 0.26260805],
+                            [0.20522952, 0.14523649, 0.8601968, 0.02593213, 0.7382898],
+                            [0.71935296, 0.9625162, 0.42287344, 0.07979459, 0.9149871],
+                        ],
+                    ]
+                ),
+                torch.tensor([12.6647, 7.9527, 12.3838]),
+            ),
+            (
+                torch.tensor([[[0.09094203, 0.32630223, 0.8066123], [0.10921168, 0.09534764, 0.48588026]]]),
+                torch.tensor([1.6900]),
+            ),
+        ],
+    )
+    def test_tv_on_3d(self, device, dtype, pred, expected):
+        actual = kornia.losses.total_variation(pred.to(device, dtype))
+>       self.assert_close(actual, expected.to(device, dtype), rtol=1e-3, atol=1e-3)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py:72: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:106: in assert_close
+    return assert_close(actual, expected, rtol=rtol, atol=atol)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+actual = None, expected = tensor([1.6900]), rtol = 0.001, atol = 0.001
+kwargs = {}
+
+    def assert_close(
+        actual: Tensor, expected: Tensor, *, rtol: Optional[float] = None, atol: Optional[float] = None, **kwargs: Any
+    ) -> None:
+        if rtol is None and atol is None:
+            # `torch.testing.assert_close` used different default tolerances than `torch.testing.assert_allclose`.
+            # TODO: remove this special handling as soon as https://github.com/kornia/kornia/issues/1134 is resolved
+            #  Basically, this whole wrapper function can be removed and `torch.testing.assert_close` can be used
+            #  directly.
+            rtol, atol = _default_tolerances(actual, expected)
+    
+>       return _assert_close(
+            actual,
+            expected,
+            rtol=rtol,
+            atol=atol,
+            # this is the default value for torch>=1.10, but not for torch==1.9
+            # TODO: remove this if kornia relies on torch>=1.10
+            check_stride=False,
+            equal_nan=False,
+            **kwargs,
+        )
+E       AssertionError: None mismatch: None is not tensor([1.6900])
+
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:37: AssertionError
+________ TestTotalVariation.test_tv_on_4d[cpu-float32-pred0-expected0] _________
+
+self = <test_total_variation.TestTotalVariation object at 0x7dbd0133e680>
+device = device(type='cpu'), dtype = torch.float32
+pred = tensor([[[[0.8756, 0.0920],
+          [0.8034, 0.3107]],
+
+         [[0.3069, 0.2981],
+          [0.9399, 0.7944]],
+
+  ...,
+
+         [[0.4107, 0.4387],
+          [0.2742, 0.0095]],
+
+         [[0.7064, 0.3674],
+          [0.6139, 0.2487]]]])
+expected = tensor([[1.5672, 1.2836, 2.1544],
+        [1.4134, 0.8584, 0.9154]])
+
+    @pytest.mark.parametrize(
+        "pred, expected",
+        [
+            (
+                torch.tensor(
+                    [
+                        [
+                            [[0.8756, 0.0920], [0.8034, 0.3107]],
+                            [[0.3069, 0.2981], [0.9399, 0.7944]],
+                            [[0.6269, 0.1494], [0.2493, 0.8490]],
+                        ],
+                        [
+                            [[0.3256, 0.9923], [0.2856, 0.9104]],
+                            [[0.4107, 0.4387], [0.2742, 0.0095]],
+                            [[0.7064, 0.3674], [0.6139, 0.2487]],
+                        ],
+                    ]
+                ),
+                torch.tensor([[1.5672, 1.2836, 2.1544], [1.4134, 0.8584, 0.9154]]),
+            ),
+            (
+                torch.tensor(
+                    [
+                        [[[0.1104, 0.2284, 0.4371], [0.4569, 0.1906, 0.8035]]],
+                        [[[0.0552, 0.6831, 0.8310], [0.3589, 0.5044, 0.0802]]],
+                        [[[0.5078, 0.5703, 0.9110], [0.4765, 0.8401, 0.2754]]],
+                    ]
+                ),
+                torch.tensor([[1.9566], [2.5787], [2.2682]]),
+            ),
+        ],
+    )
+    def test_tv_on_4d(self, device, dtype, pred, expected):
+        actual = kornia.losses.total_variation(pred.to(device, dtype))
+>       self.assert_close(actual, expected.to(device, dtype), rtol=1e-3, atol=1e-3)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:106: in assert_close
+    return assert_close(actual, expected, rtol=rtol, atol=atol)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+actual = None
+expected = tensor([[1.5672, 1.2836, 2.1544],
+        [1.4134, 0.8584, 0.9154]])
+rtol = 0.001, atol = 0.001, kwargs = {}
+
+    def assert_close(
+        actual: Tensor, expected: Tensor, *, rtol: Optional[float] = None, atol: Optional[float] = None, **kwargs: Any
+    ) -> None:
+        if rtol is None and atol is None:
+            # `torch.testing.assert_close` used different default tolerances than `torch.testing.assert_allclose`.
+            # TODO: remove this special handling as soon as https://github.com/kornia/kornia/issues/1134 is resolved
+            #  Basically, this whole wrapper function can be removed and `torch.testing.assert_close` can be used
+            #  directly.
+            rtol, atol = _default_tolerances(actual, expected)
+    
+>       return _assert_close(
+            actual,
+            expected,
+            rtol=rtol,
+            atol=atol,
+            # this is the default value for torch>=1.10, but not for torch==1.9
+            # TODO: remove this if kornia relies on torch>=1.10
+            check_stride=False,
+            equal_nan=False,
+            **kwargs,
+        )
+E       AssertionError: None mismatch: None is not tensor([[1.5672, 1.2836, 2.1544],
+E               [1.4134, 0.8584, 0.9154]])
+
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:37: AssertionError
+________ TestTotalVariation.test_tv_on_4d[cpu-float32-pred1-expected1] _________
+
+self = <test_total_variation.TestTotalVariation object at 0x7dbd0133e5c0>
+device = device(type='cpu'), dtype = torch.float32
+pred = tensor([[[[0.1104, 0.2284, 0.4371],
+          [0.4569, 0.1906, 0.8035]]],
+
+
+        [[[0.0552, 0.6831, 0.8310],
+          [0.3589, 0.5044, 0.0802]]],
+
+
+        [[[0.5078, 0.5703, 0.9110],
+          [0.4765, 0.8401, 0.2754]]]])
+expected = tensor([[1.9566],
+        [2.5787],
+        [2.2682]])
+
+    @pytest.mark.parametrize(
+        "pred, expected",
+        [
+            (
+                torch.tensor(
+                    [
+                        [
+                            [[0.8756, 0.0920], [0.8034, 0.3107]],
+                            [[0.3069, 0.2981], [0.9399, 0.7944]],
+                            [[0.6269, 0.1494], [0.2493, 0.8490]],
+                        ],
+                        [
+                            [[0.3256, 0.9923], [0.2856, 0.9104]],
+                            [[0.4107, 0.4387], [0.2742, 0.0095]],
+                            [[0.7064, 0.3674], [0.6139, 0.2487]],
+                        ],
+                    ]
+                ),
+                torch.tensor([[1.5672, 1.2836, 2.1544], [1.4134, 0.8584, 0.9154]]),
+            ),
+            (
+                torch.tensor(
+                    [
+                        [[[0.1104, 0.2284, 0.4371], [0.4569, 0.1906, 0.8035]]],
+                        [[[0.0552, 0.6831, 0.8310], [0.3589, 0.5044, 0.0802]]],
+                        [[[0.5078, 0.5703, 0.9110], [0.4765, 0.8401, 0.2754]]],
+                    ]
+                ),
+                torch.tensor([[1.9566], [2.5787], [2.2682]]),
+            ),
+        ],
+    )
+    def test_tv_on_4d(self, device, dtype, pred, expected):
+        actual = kornia.losses.total_variation(pred.to(device, dtype))
+>       self.assert_close(actual, expected.to(device, dtype), rtol=1e-3, atol=1e-3)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:106: in assert_close
+    return assert_close(actual, expected, rtol=rtol, atol=atol)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+actual = None, expected = tensor([[1.9566],
+        [2.5787],
+        [2.2682]])
+rtol = 0.001, atol = 0.001, kwargs = {}
+
+    def assert_close(
+        actual: Tensor, expected: Tensor, *, rtol: Optional[float] = None, atol: Optional[float] = None, **kwargs: Any
+    ) -> None:
+        if rtol is None and atol is None:
+            # `torch.testing.assert_close` used different default tolerances than `torch.testing.assert_allclose`.
+            # TODO: remove this special handling as soon as https://github.com/kornia/kornia/issues/1134 is resolved
+            #  Basically, this whole wrapper function can be removed and `torch.testing.assert_close` can be used
+            #  directly.
+            rtol, atol = _default_tolerances(actual, expected)
+    
+>       return _assert_close(
+            actual,
+            expected,
+            rtol=rtol,
+            atol=atol,
+            # this is the default value for torch>=1.10, but not for torch==1.9
+            # TODO: remove this if kornia relies on torch>=1.10
+            check_stride=False,
+            equal_nan=False,
+            **kwargs,
+        )
+E       AssertionError: None mismatch: None is not tensor([[1.9566],
+E               [2.5787],
+E               [2.2682]])
+
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:37: AssertionError
+_____________ TestTotalVariation.test_tv_shapes[cpu-float32-pred0] _____________
+
+self = <test_total_variation.TestTotalVariation object at 0x7dbd0133da80>
+device = device(type='cpu'), dtype = torch.float32
+pred = tensor([[[0.2031, 0.3817, 0.6982, 0.7947, 0.8186],
+         [0.7748, 0.3937, 0.7289, 0.4404, 0.3981],
+         [0.8829....8408, 0.2367],
+         [0.6315, 0.0559, 0.7366, 0.8504, 0.2688],
+         [0.6606, 0.7765, 0.9238, 0.1099, 0.6912]]])
+
+    @pytest.mark.parametrize("pred", [torch.rand(3, 5, 5), torch.rand(4, 3, 5, 5), torch.rand(4, 2, 3, 5, 5)])
+    def test_tv_shapes(self, device, dtype, pred):
+        pred = pred.to(device, dtype)
+        actual_lesser_dims = []
+        for slice in torch.unbind(pred, dim=0):
+            slice_tv = kornia.losses.total_variation(slice)
+            actual_lesser_dims.append(slice_tv)
+>       actual_lesser_dims = torch.stack(actual_lesser_dims, dim=0)
+E       TypeError: expected Tensor as element 0 in argument 0, but got NoneType
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py:118: TypeError
+_____________ TestTotalVariation.test_tv_shapes[cpu-float32-pred1] _____________
+
+self = <test_total_variation.TestTotalVariation object at 0x7dbd0133e3b0>
+device = device(type='cpu'), dtype = torch.float32
+pred = tensor([[[[0.5242, 0.1365, 0.8400, 0.7574, 0.6788],
+          [0.8445, 0.2680, 0.9466, 0.1076, 0.1523],
+          [0.4...92, 0.1589],
+          [0.6197, 0.7230, 0.1042, 0.6362, 0.8731],
+          [0.8085, 0.0989, 0.6779, 0.1663, 0.1745]]]])
+
+    @pytest.mark.parametrize("pred", [torch.rand(3, 5, 5), torch.rand(4, 3, 5, 5), torch.rand(4, 2, 3, 5, 5)])
+    def test_tv_shapes(self, device, dtype, pred):
+        pred = pred.to(device, dtype)
+        actual_lesser_dims = []
+        for slice in torch.unbind(pred, dim=0):
+            slice_tv = kornia.losses.total_variation(slice)
+            actual_lesser_dims.append(slice_tv)
+>       actual_lesser_dims = torch.stack(actual_lesser_dims, dim=0)
+E       TypeError: expected Tensor as element 0 in argument 0, but got NoneType
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py:118: TypeError
+_____________ TestTotalVariation.test_tv_shapes[cpu-float32-pred2] _____________
+
+self = <test_total_variation.TestTotalVariation object at 0x7dbd0133ebf0>
+device = device(type='cpu'), dtype = torch.float32
+pred = tensor([[[[[0.3885, 0.0073, 0.0530, 0.3192, 0.2836],
+           [0.2479, 0.5748, 0.6978, 0.5867, 0.1015],
+           [... 0.6959],
+           [0.1092, 0.5454, 0.2376, 0.9998, 0.0670],
+           [0.7268, 0.0090, 0.9495, 0.2606, 0.5598]]]]])
+
+    @pytest.mark.parametrize("pred", [torch.rand(3, 5, 5), torch.rand(4, 3, 5, 5), torch.rand(4, 2, 3, 5, 5)])
+    def test_tv_shapes(self, device, dtype, pred):
+        pred = pred.to(device, dtype)
+        actual_lesser_dims = []
+        for slice in torch.unbind(pred, dim=0):
+            slice_tv = kornia.losses.total_variation(slice)
+            actual_lesser_dims.append(slice_tv)
+>       actual_lesser_dims = torch.stack(actual_lesser_dims, dim=0)
+E       TypeError: expected Tensor as element 0 in argument 0, but got NoneType
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py:118: TypeError
+_______ TestTotalVariation.test_tv_reduction[cpu-float32-sum-expected0] ________
+
+self = <test_total_variation.TestTotalVariation object at 0x7dbd0133ef80>
+device = device(type='cpu'), dtype = torch.float32, reduction = 'sum'
+expected = tensor(20)
+
+    @pytest.mark.parametrize("reduction, expected", [("sum", torch.tensor(20)), ("mean", torch.tensor(1))])
+    def test_tv_reduction(self, device, dtype, reduction, expected):
+        pred, _ = torch_meshgrid([torch.arange(5), torch.arange(5)], "ij")
+        pred = pred.to(device, dtype)
+        actual = kornia.losses.total_variation(pred, reduction=reduction)
+>       self.assert_close(actual, expected.to(device, dtype), rtol=1e-3, atol=1e-3)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py:127: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:106: in assert_close
+    return assert_close(actual, expected, rtol=rtol, atol=atol)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+actual = None, expected = tensor(20.), rtol = 0.001, atol = 0.001, kwargs = {}
+
+    def assert_close(
+        actual: Tensor, expected: Tensor, *, rtol: Optional[float] = None, atol: Optional[float] = None, **kwargs: Any
+    ) -> None:
+        if rtol is None and atol is None:
+            # `torch.testing.assert_close` used different default tolerances than `torch.testing.assert_allclose`.
+            # TODO: remove this special handling as soon as https://github.com/kornia/kornia/issues/1134 is resolved
+            #  Basically, this whole wrapper function can be removed and `torch.testing.assert_close` can be used
+            #  directly.
+            rtol, atol = _default_tolerances(actual, expected)
+    
+>       return _assert_close(
+            actual,
+            expected,
+            rtol=rtol,
+            atol=atol,
+            # this is the default value for torch>=1.10, but not for torch==1.9
+            # TODO: remove this if kornia relies on torch>=1.10
+            check_stride=False,
+            equal_nan=False,
+            **kwargs,
+        )
+E       AssertionError: None mismatch: None is not 20.0
+
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:37: AssertionError
+_______ TestTotalVariation.test_tv_reduction[cpu-float32-mean-expected1] _______
+
+self = <test_total_variation.TestTotalVariation object at 0x7dbd0133eec0>
+device = device(type='cpu'), dtype = torch.float32, reduction = 'mean'
+expected = tensor(1)
+
+    @pytest.mark.parametrize("reduction, expected", [("sum", torch.tensor(20)), ("mean", torch.tensor(1))])
+    def test_tv_reduction(self, device, dtype, reduction, expected):
+        pred, _ = torch_meshgrid([torch.arange(5), torch.arange(5)], "ij")
+        pred = pred.to(device, dtype)
+        actual = kornia.losses.total_variation(pred, reduction=reduction)
+>       self.assert_close(actual, expected.to(device, dtype), rtol=1e-3, atol=1e-3)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py:127: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:106: in assert_close
+    return assert_close(actual, expected, rtol=rtol, atol=atol)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+actual = None, expected = tensor(1.), rtol = 0.001, atol = 0.001, kwargs = {}
+
+    def assert_close(
+        actual: Tensor, expected: Tensor, *, rtol: Optional[float] = None, atol: Optional[float] = None, **kwargs: Any
+    ) -> None:
+        if rtol is None and atol is None:
+            # `torch.testing.assert_close` used different default tolerances than `torch.testing.assert_allclose`.
+            # TODO: remove this special handling as soon as https://github.com/kornia/kornia/issues/1134 is resolved
+            #  Basically, this whole wrapper function can be removed and `torch.testing.assert_close` can be used
+            #  directly.
+            rtol, atol = _default_tolerances(actual, expected)
+    
+>       return _assert_close(
+            actual,
+            expected,
+            rtol=rtol,
+            atol=atol,
+            # this is the default value for torch>=1.10, but not for torch==1.9
+            # TODO: remove this if kornia relies on torch>=1.10
+            check_stride=False,
+            equal_nan=False,
+            **kwargs,
+        )
+E       AssertionError: None mismatch: None is not 1.0
+
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:37: AssertionError
+_____________ TestTotalVariation.test_dynamo[cpu-float32-inductor] _____________
+
+self = <test_total_variation.TestTotalVariation object at 0x7dbd0133f940>
+device = device(type='cpu'), dtype = torch.float32
+torch_optimizer = functools.partial(<function compile at 0x7dbdd672f370>, backend='inductor')
+
+    def test_dynamo(self, device, dtype, torch_optimizer):
+        image = torch.rand(1, 2, 3, 4, device=device, dtype=dtype)
+    
+        op = kornia.losses.total_variation
+        op_optimized = torch_optimizer(op)
+    
+>       self.assert_close(op(image), op_optimized(image))
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py:141: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:106: in assert_close
+    return assert_close(actual, expected, rtol=rtol, atol=atol)
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:35: in assert_close
+    rtol, atol = _default_tolerances(actual, expected)
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:23: in _default_tolerances
+    rtols, atols = zip(*[_DTYPE_PRECISIONS.get(torch.as_tensor(input_).dtype, (0.0, 0.0)) for input_ in inputs])
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <tuple_iterator object at 0x7dbd8972b2b0>
+
+>   rtols, atols = zip(*[_DTYPE_PRECISIONS.get(torch.as_tensor(input_).dtype, (0.0, 0.0)) for input_ in inputs])
+E   RuntimeError: Could not infer dtype of NoneType
+
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:23: RuntimeError
+_________________ TestTotalVariation.test_module[cpu-float32] __________________
+
+self = <test_total_variation.TestTotalVariation object at 0x7dbd0133fc40>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_module(self, device, dtype):
+        image = torch.rand(1, 2, 3, 4, device=device, dtype=dtype)
+    
+        op = kornia.losses.total_variation
+        op_module = kornia.losses.TotalVariation()
+    
+>       self.assert_close(op(image), op_module(image))
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py:149: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:106: in assert_close
+    return assert_close(actual, expected, rtol=rtol, atol=atol)
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:35: in assert_close
+    rtol, atol = _default_tolerances(actual, expected)
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:23: in _default_tolerances
+    rtols, atols = zip(*[_DTYPE_PRECISIONS.get(torch.as_tensor(input_).dtype, (0.0, 0.0)) for input_ in inputs])
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <tuple_iterator object at 0x7dbd013b2800>
+
+>   rtols, atols = zip(*[_DTYPE_PRECISIONS.get(torch.as_tensor(input_).dtype, (0.0, 0.0)) for input_ in inputs])
+E   RuntimeError: Could not infer dtype of NoneType
+
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:23: RuntimeError
+____________________ TestTotalVariation.test_gradcheck[cpu] ____________________
+
+self = <test_total_variation.TestTotalVariation object at 0x7dbd0133ff10>
+device = device(type='cpu')
+
+    def test_gradcheck(self, device):
+        dtype = torch.float64
+        image = torch.rand(1, 2, 3, 4, device=device, dtype=dtype)
+>       self.gradcheck(kornia.losses.total_variation, (image,))
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py:154: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:143: in gradcheck
+    return gradcheck(func, inputs, raise_exception=raise_exception, fast_mode=fast_mode, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2052: in gradcheck
+    return _gradcheck_helper(**args)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2075: in _gradcheck_helper
+    outputs = _differentiable_outputs(func_out)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:1369: in _differentiable_outputs
+    return tuple(o for o in _as_tuple(x) if o.requires_grad)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <tuple_iterator object at 0x7dbd013dcc10>
+
+>   return tuple(o for o in _as_tuple(x) if o.requires_grad)
+E   AttributeError: 'NoneType' object has no attribute 'requires_grad'
+
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:1369: AttributeError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_constant[cpu-float32-pred0-expected0]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_constant[cpu-float32-pred1-expected1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_constant_int[cpu-pred0-expected0]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_constant_int[cpu-pred1-expected1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_3d[cpu-float32-pred0-expected0]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_3d[cpu-float32-pred1-expected1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_4d[cpu-float32-pred0-expected0]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_4d[cpu-float32-pred1-expected1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_shapes[cpu-float32-pred0]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_shapes[cpu-float32-pred1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_shapes[cpu-float32-pred2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_reduction[cpu-float32-sum-expected0]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_reduction[cpu-float32-mean-expected1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_dynamo[cpu-float32-inductor]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_module[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_gradcheck[cpu]
+========================= 16 failed, 2 passed in 0.44s =========================
+
+
+Final Test Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'onnxrt', 'openxla', 'tvm', 'inductor', 'jit', 'cudagraphs', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 18 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_constant[cpu-float32-pred0-expected0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_constant[cpu-float32-pred1-expected1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_constant_int[cpu-pred0-expected0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_constant_int[cpu-pred1-expected1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_3d[cpu-float32-pred0-expected0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_3d[cpu-float32-pred1-expected1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_4d[cpu-float32-pred0-expected0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_4d[cpu-float32-pred1-expected1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_shapes[cpu-float32-pred0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_shapes[cpu-float32-pred1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_shapes[cpu-float32-pred2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_reduction[cpu-float32-sum-expected0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_reduction[cpu-float32-mean-expected1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_invalid_types[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_invalid_types[cpu-float32-pred1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_dynamo[cpu-float32-inductor] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_module[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_gradcheck[cpu] PASSED
+
+============================== 18 passed in 1.96s ==============================
+
+
+Initial Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'jit', 'cudagraphs', 'onnxrt', 'openxla', 'inductor', 'tvm', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 18 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_constant[cpu-float32-pred0-expected0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_constant[cpu-float32-pred1-expected1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_constant_int[cpu-pred0-expected0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_constant_int[cpu-pred1-expected1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_3d[cpu-float32-pred0-expected0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_3d[cpu-float32-pred1-expected1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_4d[cpu-float32-pred0-expected0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_4d[cpu-float32-pred1-expected1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_shapes[cpu-float32-pred0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_shapes[cpu-float32-pred1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_shapes[cpu-float32-pred2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_reduction[cpu-float32-sum-expected0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_reduction[cpu-float32-mean-expected1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_invalid_types[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_tv_on_invalid_types[cpu-float32-pred1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_dynamo[cpu-float32-inductor] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_module[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_total_variation.py::TestTotalVariation::test_gradcheck[cpu] PASSED
+
+============================== 18 passed in 1.98s ==============================

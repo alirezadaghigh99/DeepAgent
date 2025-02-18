@@ -1,0 +1,47 @@
+stage: Image
+task: 
+data: pre-post process
+
+prompt:
+Generate a Python function `apply_transform` for the class `RandomErasing` that erases a random rectangle in a tensor image according to specified parameters. The function should:
+
+1. Extract the dimensions of the input tensor.
+2. Generate a tensor of values to fill the erased area, repeating it to match the input shape.
+3. Generate bounding boxes using the specified parameters.
+4. Create a mask from the bounding boxes, transforming it to match the input dimensions.
+5. Apply the mask to the input tensor, replacing the masked area with the generated values.
+
+Output format: Tensor
+
+```python
+class RandomErasing(IntensityAugmentationBase2D):
+    def __init__(
+        self,
+        scale: Union[Tensor, Tuple[float, float]] = (0.02, 0.33),
+        ratio: Union[Tensor, Tuple[float, float]] = (0.3, 3.3),
+        value: float = 0.0,
+        same_on_batch: bool = False,
+        p: float = 0.5,
+        keepdim: bool = False,
+    ) -> None:
+        super().__init__(p=p, same_on_batch=same_on_batch, keepdim=keepdim)
+        self.scale = scale
+        self.ratio = ratio
+        self.value = value
+        self._param_generator = rg.RectangleEraseGenerator(scale, ratio, value)
+
+    def apply_transform(
+        self, input: Tensor, params: Dict[str, Tensor], flags: Dict[str, Any], transform: Optional[Tensor] = None
+    ) -> Tensor:
+    # params have : params["xs"], params["ys"], params["widths"], params["heights"]
+```
+
+ ground Truth:kornia/augmentation/_2d/intensity/erasing.py
+
+ repo:kornia
+
+ function:apply_transform
+ 
+ test_cases:tests/augmentation/test_augmentation.py::TestRectangleRandomErasing
+ 
+ class:RandomErasing

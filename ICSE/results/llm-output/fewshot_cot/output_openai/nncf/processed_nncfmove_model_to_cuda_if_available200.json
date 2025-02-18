@@ -1,0 +1,11 @@
+{
+    "result": "To create the `move_model_to_cuda_if_available` function, we can follow a step-by-step approach similar to the examples provided. Here's how you can implement this function:\n\n```python\nimport torch\n\ndef move_model_to_cuda_if_available(model):\n    \"\"\"\n    Moves the model to a CUDA device if available and returns the device of the first parameter.\n\n    Args:\n        model: The PyTorch model to be moved to CUDA if available.\n\n    Returns:\n        The device of the first parameter of the model.\n    \"\"\"\n    # 1. Check if CUDA is available\n    if torch.cuda.is_available():\n        # 2. Move the model to the CUDA device\n        model = model.cuda()\n\n    # 3. Retrieve the device of the first parameter of the model\n    #    Use next() to get the first parameter and .device to get its device\n    device = next(model.parameters()).device\n\n    # 4. Return the device\n    return device\n```\n\n### Explanation:\n\n1. **Check for CUDA Availability**: We use `torch.cuda.is_available()` to determine if a CUDA device is available on the system.\n\n2. **Move Model to CUDA**: If a CUDA device is available, we move the model to the CUDA device using `model.cuda()`.\n\n3. **Retrieve Device of First Parameter**: We use `next(model.parameters())` to access the first parameter of the model and `.device` to get the device on which this parameter is located.\n\n4. **Return the Device**: Finally, we return the device of the first parameter, which indicates where the model is currently located (either on a CUDA device or the CPU).",
+    "prompt": "Create a Python function called move_model_to_cuda_if_available that takes in a model as input. If the torch library detects that a CUDA device is available, the function will move the model to the CUDA device using the model.cuda() method. The function will then return the device of the first parameter of the model using next().",
+    "function_name": "move_model_to_cuda_if_available",
+    "ground_truth": "tests/torch/nas/helpers.py",
+    "test": "tests/torch/nas/test_elastic_depth.py",
+    "class": "",
+    "stage": "Inference",
+    "task": "",
+    "data": ""
+}

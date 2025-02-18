@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Generate a Python function `zca_mean` that computes the ZCA whitening matrix and mean vector for a given input tensor. The function should take as input a tensor `inp`, the dimension `dim` along which the samples are located, a boolean `unbiased` to decide whether to use the unbiased estimate of the covariance matrix, a small value `eps` for numerical stability, and a boolean `return_inverse` to decide whether to return the inverse ZCA transform. The function should return a tuple containing the ZCA matrix, the mean vector, and optionally the inverse ZCA matrix. The tensor shapes should be validated, and appropriate exceptions should be raised if inputs are of incorrect types or dimensions. Include the necessary imports and tensor operations to perform the ZCA whitening process.
+
+ ground Truth:kornia/enhance/zca.py
+
+ repo:kornia
+
+ function:zca_mean
+ 
+ test_cases:tests/enhance/test_zca.py::TestZCA

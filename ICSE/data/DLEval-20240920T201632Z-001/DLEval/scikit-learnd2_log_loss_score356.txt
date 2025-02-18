@@ -1,0 +1,25 @@
+stage: Evaluating&Metrics
+task: Classification
+data: Table
+
+prompt:
+Generate a Python function called d2_log_loss_score that calculates the D^2 score, which is the fraction of log loss explained. The function takes in the following parameters:
+
+- y_true: array-like or label indicator matrix, representing the actual labels for the samples.
+- y_pred: array-like of shape (n_samples, n_classes) or (n_samples,), representing the predicted probabilities from a classifier.
+- sample_weight: array-like of shape (n_samples,), representing sample weights.
+- labels: array-like, representing the labels. If not provided, they will be inferred from y_true.
+
+The function returns the D^2 score as a float or ndarray of floats. It may be negative and is not well-defined for a single sample. The best possible score is 1.0, and a model that always predicts the per-class proportions of y_true gets a score of 0.0. The function also handles cases where the number of samples is less than two, returning a NaN value in such cases.if _num_samples(y_pred) < 2:
+        msg = "D^2 score is not well-defined with less than two samples."
+        warnings.warn(msg, UndefinedMetricWarning)
+        return float("nan")
+
+
+ ground Truth:sklearn/metrics/_classification.py
+
+ repo:scikit-learn
+
+ function:d2_log_loss_score
+ 
+ test_cases:sklearn/metrics/tests/test_classification.py

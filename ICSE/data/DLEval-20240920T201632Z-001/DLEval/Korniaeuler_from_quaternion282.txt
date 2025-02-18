@@ -1,0 +1,32 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Generate a python function called euler_from_quaternion Convert a quaternion coefficients to Euler angles.
+
+    Returned angles are in radians in XYZ convention.
+
+    Args:
+        w: quaternion :math:`q_w` coefficient.
+        x: quaternion :math:`q_x` coefficient.
+        y: quaternion :math:`q_y` coefficient.
+        z: quaternion :math:`q_z` coefficient.
+
+    Return:
+        A tuple with euler angles`roll`, `pitch`, `yaw`."
+      
+    def euler_from_quaternion(w: Tensor, x: Tensor, y: Tensor, z: Tensor) -> tuple[Tensor, Tensor, Tensor]:
+    
+      KORNIA_CHECK(w.shape == x.shape)
+      KORNIA_CHECK(x.shape == y.shape)
+      KORNIA_CHECK(y.shape == z.shape)
+      ## complete
+
+ ground Truth:kornia/geometry/conversions.py#L767C5-L767C26
+
+ repo:kornia
+
+ function:euler_from_quaternion
+ 
+ test_cases:tests/geometry/test_conversions.py::TestEulerFromQuaternion

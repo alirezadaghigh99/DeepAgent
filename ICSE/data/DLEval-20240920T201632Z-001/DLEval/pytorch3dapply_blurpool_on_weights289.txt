@@ -1,0 +1,14 @@
+stage: Training
+task: 
+data: 
+
+prompt:
+Generate a Python function called apply_blurpool_on_weights that filters weights with a 2-tap max filter followed by a 2-tap blur filter, producing a wide and smooth upper envelope on the weights. The input is a tensor called weights of shape `(..., dim)` and the output is a tensor called blured_weights of the same shape `(..., dim)`. The function pads the weights, applies max pooling, and then performs linear interpolation to create the blurred weights.
+
+ ground Truth:pytorch3d/implicitron/models/renderer/ray_point_refiner.py
+
+ repo:pytorch3d
+
+ function:apply_blurpool_on_weights
+ 
+ test_cases:tests/implicitron/test_ray_point_refiner.py

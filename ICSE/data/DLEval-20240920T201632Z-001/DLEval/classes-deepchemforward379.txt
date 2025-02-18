@@ -1,0 +1,58 @@
+stage: Training
+task: classification
+data: 
+
+prompt:
+complete the forward function for following class
+class MultilayerPerceptron(nn.Module):
+    """A simple fully connected feed-forward network, otherwise known as a multilayer perceptron (MLP)
+
+    def __init__(self,
+                 d_input: int,
+                 d_output: int,
+                 d_hidden: Optional[tuple] = None,
+                 dropout: float = 0.0,
+                 batch_norm: bool = False,
+                 batch_norm_momentum: float = 0.1,
+                 activation_fn: Union[Callable, str] = 'relu',
+                 skip_connection: bool = False,
+                 weighted_skip: bool = True):
+      
+        super(MultilayerPerceptron, self).__init__()
+        self.d_input = d_input
+        self.d_hidden = d_hidden
+        self.d_output = d_output
+        self.dropout = nn.Dropout(dropout)
+        self.batch_norm = batch_norm
+        self.batch_norm_momentum = batch_norm_momentum
+        self.activation_fn = get_activation(activation_fn)
+        self.model = nn.Sequential(*self.build_layers())
+        self.skip = nn.Linear(d_input, d_output) if skip_connection else None
+        self.weighted_skip = weighted_skip
+
+    def build_layers(self):
+
+        layer_list = []
+        layer_dim = self.d_input
+        if self.d_hidden is not None:
+            for d in self.d_hidden:
+                layer_list.append(nn.Linear(layer_dim, d))
+                layer_list.append(self.dropout)
+                if self.batch_norm:
+                    layer_list.append(
+                        nn.BatchNorm1d(d, momentum=self.batch_norm_momentum))
+                layer_dim = d
+        layer_list.append(nn.Linear(layer_dim, self.d_output))
+        return layer_list
+
+    def forward(self, x: Tensor) -> Tensor:
+
+ ground Truth:deepchem/models/torch_models/torch_model.py
+
+ repo:deepchem
+
+ function:forward
+ 
+ class:MultilayerPerceptron
+ 
+ test_cases:deepchem/models/tests/test_layers.py::test_multilayer_perceptron

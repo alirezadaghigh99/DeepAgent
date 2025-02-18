@@ -1,0 +1,30 @@
+stage: Image
+task: 
+data: Training
+
+prompt:
+
+**Task:** Write the `forward` method for the `Translate` class. This method should translate the input tensor by a specified number of pixels in the x and y directions.
+
+**Class Context:**
+```python
+class Translate(nn.Module):
+    def forward(self, input: torch.Tensor) -> torch.Tensor:
+        # Implement this function
+```
+
+**Requirements:**
+- The method should take the input tensor and translate it according to the specified translation values.
+- The translation values should be applied separately for the x and y directions, as provided in the `translation` tensor.
+- Use the specified interpolation mode (`'bilinear'` or `'nearest'`), padding mode (`'zeros'`, `'border'`, or `'reflection'`), and alignment flag (`align_corners`).
+
+
+ ground Truth:kornia/geometry/transform/affwarp.py
+
+ repo:kornia
+
+ function:forward
+ 
+ class:Translate
+ 
+ test_cases:tests/geometry/transform/test_affine.py::TestTranslate

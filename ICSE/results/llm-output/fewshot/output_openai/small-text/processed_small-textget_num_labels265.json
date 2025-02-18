@@ -1,0 +1,11 @@
+{
+    "result": "Certainly! Below is the Python function `get_num_labels` that implements the specified behavior:\n\n```python\nimport numpy as np\nfrom scipy.sparse import csr_matrix\n\ndef get_num_labels(y):\n    \"\"\"\n    Determine the number of labels in the input y.\n\n    Args:\n        y: Input data which can be a dense array or a sparse matrix.\n\n    Returns:\n        int: The number of labels, calculated as the maximum value in y plus 1.\n\n    Raises:\n        ValueError: If the shape of y is 0, indicating no labels are present.\n    \"\"\"\n    if y.shape[0] == 0:\n        raise ValueError('Invalid labeling: Cannot contain 0 labels')\n\n    if isinstance(y, csr_matrix):\n        return y.indices.max() + 1\n    else:\n        return np.max(y) + 1\n```\n\n### Explanation:\n- **Input Check**: The function first checks if the shape of `y` is 0. If so, it raises a `ValueError` with the specified message.\n- **Sparse Matrix Handling**: If `y` is an instance of `csr_matrix`, it calculates the number of labels by finding the maximum value in `y.indices` and adds 1.\n- **Dense Array Handling**: If `y` is not a sparse matrix, it assumes `y` is a dense array and calculates the number of labels by finding the maximum value in `y` and adds 1.",
+    "prompt": "Generate a Python function called get_num_labels that takes in a parameter y. If the shape of y is 0, it will raise a ValueError with the message 'Invalid labeling: Cannot contain 0 labels'. If y is an instance of csr_matrix, the function will return the maximum value of y's indices plus 1. Otherwise, it will return the maximum value of y plus 1.",
+    "function_name": "get_num_labels",
+    "ground_truth": "small_text/utils/labels.py",
+    "test": "tests/unit/small_text/utils/test_labels.py::LabelUtilsTest",
+    "class": "",
+    "stage": "Pre-Post processing",
+    "task": "Classification",
+    "data": "Text"
+}

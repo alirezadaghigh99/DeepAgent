@@ -1,0 +1,20 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Create a Python function get_projective_transform that calculates the projection matrix for a 3D rotation given the center, rotation angles, and scales. The function takes the following parameters:
+
+center: A tensor of shape (B, 3) representing the center of the rotation in the source coordinates (x, y, z).
+angles: A tensor of shape (B, 3) containing the rotation angles in degrees for the x, y, and z axes.
+scales: A tensor of shape (B, 3) representing the scale factors for the x, y, and z directions.
+The function returns a tensor of shape (B, 3, 4) representing the projection matrix for the 3D rotation.Raise an AssertionError if center or angles do not have the expected shape.
+Raise an AssertionError if center and angles do not share the same device and dtype.
+
+ ground Truth:kornia/geometry/transform/imgwarp.py
+
+ repo:kornia
+
+ function:get_projective_transform
+ 
+ test_cases:tests/geometry/transform/test_imgwarp3d.py::TestGetRotationMatrix3d

@@ -1,0 +1,11 @@
+{
+    "result": "Error",
+    "prompt": "Generate a Python function called bytes_to_pillow_image that takes a bytes object called payload as input and returns a Pillow Image object. The function reads the bytes data using BytesIO, attempts to open it as an image using Image.open, and raises an EncodingError with the message \"Could not encode bytes to PIL image.\" if the image format is not recognized.",
+    "function_name": "bytes_to_pillow_image",
+    "ground_truth": "inference_sdk/http/utils/encoding.py",
+    "test": "tests/inference_sdk/unit_tests/http/utils/test_encoding.py::test_bytes_to_pillow_image_when_bytes_represent_image",
+    "class": "",
+    "stage": "Pre-Post processing",
+    "task": "",
+    "data": "Image"
+}

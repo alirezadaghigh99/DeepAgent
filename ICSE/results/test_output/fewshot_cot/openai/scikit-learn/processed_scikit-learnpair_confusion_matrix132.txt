@@ -1,0 +1,911 @@
+output file:
+processed_scikit-learnpair_confusion_matrix132.json
+function:
+pair_confusion_matrix
+Error Cases:
+
+Pass or Failed: 1
+
+Related Failed Test Cases:
+set()
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.9.0, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/scikit-learn/scikit-learn
+configfile: setup.cfg
+plugins: cov-6.0.0
+collecting ... collected 44 items
+
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_error_messages_on_wrong_input I: Seeding RNGs with 1883837094
+FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_generalized_average PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_perfect_matches PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_homogeneous_but_not_complete_labeling PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_complete_but_not_homogeneous_labeling PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_not_complete_and_not_homogeneous_labeling PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_beta_parameter PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_non_consecutive_labels PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_adjustment_for_chance PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_adjusted_mutual_info_score PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_expected_mutual_info_overflow PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_int_overflow_mutual_info_fowlkes_mallows_score PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_entropy PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_entropy_array_api[numpy-None-None] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_entropy_array_api[array_api_strict-None-None] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_entropy_array_api[cupy-None-None] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_entropy_array_api[torch-cpu-float64] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_entropy_array_api[torch-cpu-float32] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_entropy_array_api[torch-cuda-float64] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_entropy_array_api[torch-cuda-float32] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_entropy_array_api[torch-mps-float32] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_contingency_matrix PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_contingency_matrix_sparse PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_exactly_zero_info_score PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_v_measure_and_mutual_information PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_fowlkes_mallows_score PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_fowlkes_mallows_score_properties PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_mutual_info_score_positive_constant_label[labels_true0-labels_pred0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_mutual_info_score_positive_constant_label[labels_true1-labels_pred1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_mutual_info_score_positive_constant_label[labels_true2-labels_pred2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_mutual_info_score_positive_constant_label[labels_true3-labels_pred3] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_mutual_info_score_positive_constant_label[labels_true4-labels_pred4] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_check_clustering_error PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_pair_confusion_matrix_fully_dispersed FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_pair_confusion_matrix_single_cluster FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_pair_confusion_matrix FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_rand_score_edge_cases[clustering10-clustering20] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_rand_score_edge_cases[clustering11-clustering21] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_rand_score PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_adjusted_rand_score_overflow PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_normalized_mutual_info_score_bounded[min] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_normalized_mutual_info_score_bounded[arithmetic] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_normalized_mutual_info_score_bounded[geometric] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_normalized_mutual_info_score_bounded[max] PASSED
+
+=================================== FAILURES ===================================
+______________________ test_error_messages_on_wrong_input ______________________
+
+    def test_error_messages_on_wrong_input():
+        for score_func in score_funcs:
+            expected = (
+                r"Found input variables with inconsistent numbers " r"of samples: \[2, 3\]"
+            )
+            with pytest.raises(ValueError, match=expected):
+                score_func([0, 1], [1, 1, 1])
+    
+            expected = r"labels_true must be 1D: shape is \(2"
+            with pytest.raises(ValueError, match=expected):
+>               score_func([[0, 1], [1, 0]], [1, 1, 1])
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py:50: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:366: in adjusted_rand_score
+    (tn, fp), (fn, tp) = pair_confusion_matrix(labels_true, labels_pred)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:189: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:122: in pair_confusion_matrix
+    return pair_confusion_matrix(labels_true, labels_pred)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/temp.py:27: in pair_confusion_matrix
+    contingency = confusion_matrix(labels_true, labels_pred)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:189: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/_classification.py:334: in confusion_matrix
+    y_type, y_true, y_pred = _check_targets(y_true, y_pred)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/_classification.py:92: in _check_targets
+    check_consistent_length(y_true, y_pred)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+arrays = (array([[0, 1],
+       [1, 0]]), array([1, 1, 1])), lengths = [2, 3]
+uniques = array([2, 3])
+
+    def check_consistent_length(*arrays):
+        """Check that all arrays have consistent first dimensions.
+    
+        Checks whether all objects in arrays have the same shape or length.
+    
+        Parameters
+        ----------
+        *arrays : list or tuple of input objects.
+            Objects that will be checked for consistent length.
+    
+        Examples
+        --------
+        >>> from sklearn.utils.validation import check_consistent_length
+        >>> a = [1, 2, 3]
+        >>> b = [2, 3, 4]
+        >>> check_consistent_length(a, b)
+        """
+    
+        lengths = [_num_samples(X) for X in arrays if X is not None]
+        uniques = np.unique(lengths)
+        if len(uniques) > 1:
+>           raise ValueError(
+                "Found input variables with inconsistent numbers of samples: %r"
+                % [int(l) for l in lengths]
+            )
+E           ValueError: Found input variables with inconsistent numbers of samples: [2, 3]
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/validation.py:474: ValueError
+
+During handling of the above exception, another exception occurred:
+
+    def test_error_messages_on_wrong_input():
+        for score_func in score_funcs:
+            expected = (
+                r"Found input variables with inconsistent numbers " r"of samples: \[2, 3\]"
+            )
+            with pytest.raises(ValueError, match=expected):
+                score_func([0, 1], [1, 1, 1])
+    
+            expected = r"labels_true must be 1D: shape is \(2"
+            with pytest.raises(ValueError, match=expected):
+>               score_func([[0, 1], [1, 0]], [1, 1, 1])
+E               AssertionError: Regex pattern did not match.
+E                Regex: 'labels_true must be 1D: shape is \\(2'
+E                Input: 'Found input variables with inconsistent numbers of samples: [2, 3]'
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py:50: AssertionError
+__________________ test_pair_confusion_matrix_fully_dispersed __________________
+
+    def test_pair_confusion_matrix_fully_dispersed():
+        # edge case: every element is its own cluster
+        N = 100
+        clustering1 = list(range(N))
+        clustering2 = clustering1
+        expected = np.array([[N * (N - 1), 0], [0, 0]])
+>       assert_array_equal(pair_confusion_matrix(clustering1, clustering2), expected)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py:411: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/lib/python3.9/site-packages/numpy/_utils/__init__.py:85: in wrapper
+    return fun(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (<built-in function eq>, array([[   0,    0],
+       [   0, 4950]]), array([[9900,    0],
+       [   0,    0]]))
+kwds = {'err_msg': '', 'header': 'Arrays are not equal', 'strict': False, 'verbose': True}
+
+    @wraps(func)
+    def inner(*args, **kwds):
+        with self._recreate_cm():
+>           return func(*args, **kwds)
+E           AssertionError: 
+E           Arrays are not equal
+E           
+E           Mismatched elements: 2 / 4 (50%)
+E           Max absolute difference among violations: 9900
+E           Max relative difference among violations: 1.
+E            ACTUAL: array([[   0,    0],
+E                  [   0, 4950]])
+E            DESIRED: array([[9900,    0],
+E                  [   0,    0]])
+
+/usr/local/lib/python3.9/contextlib.py:79: AssertionError
+__________________ test_pair_confusion_matrix_single_cluster ___________________
+
+    def test_pair_confusion_matrix_single_cluster():
+        # edge case: only one cluster
+        N = 100
+        clustering1 = np.zeros((N,))
+        clustering2 = clustering1
+        expected = np.array([[0, 0], [0, N * (N - 1)]])
+>       assert_array_equal(pair_confusion_matrix(clustering1, clustering2), expected)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py:420: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/lib/python3.9/site-packages/numpy/_utils/__init__.py:85: in wrapper
+    return fun(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (<built-in function eq>, array([[4950,    0],
+       [   0,    0]]), array([[   0,    0],
+       [   0, 9900]]))
+kwds = {'err_msg': '', 'header': 'Arrays are not equal', 'strict': False, 'verbose': True}
+
+    @wraps(func)
+    def inner(*args, **kwds):
+        with self._recreate_cm():
+>           return func(*args, **kwds)
+E           AssertionError: 
+E           Arrays are not equal
+E           
+E           Mismatched elements: 2 / 4 (50%)
+E           Max absolute difference among violations: 9900
+E           Max relative difference among violations: 1.
+E            ACTUAL: array([[4950,    0],
+E                  [   0,    0]])
+E            DESIRED: array([[   0,    0],
+E                  [   0, 9900]])
+
+/usr/local/lib/python3.9/contextlib.py:79: AssertionError
+__________________________ test_pair_confusion_matrix __________________________
+
+    def test_pair_confusion_matrix():
+        # regular case: different non-trivial clusterings
+        n = 10
+        N = n**2
+        clustering1 = np.hstack([[i + 1] * n for i in range(n)])
+        clustering2 = np.hstack([[i + 1] * (n + 1) for i in range(n)])[:N]
+        # basic quadratic implementation
+        expected = np.zeros(shape=(2, 2), dtype=np.int64)
+        for i in range(len(clustering1)):
+            for j in range(len(clustering2)):
+                if i != j:
+                    same_cluster_1 = int(clustering1[i] == clustering1[j])
+                    same_cluster_2 = int(clustering2[i] == clustering2[j])
+                    expected[same_cluster_1, same_cluster_2] += 1
+>       assert_array_equal(pair_confusion_matrix(clustering1, clustering2), expected)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py:437: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/lib/python3.9/site-packages/numpy/_utils/__init__.py:85: in wrapper
+    return fun(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (<built-in function eq>, array([[ 285,  210],
+       [ 165, 4290]]), array([[8580,  420],
+       [ 330,  570]]))
+kwds = {'err_msg': '', 'header': 'Arrays are not equal', 'strict': False, 'verbose': True}
+
+    @wraps(func)
+    def inner(*args, **kwds):
+        with self._recreate_cm():
+>           return func(*args, **kwds)
+E           AssertionError: 
+E           Arrays are not equal
+E           
+E           Mismatched elements: 4 / 4 (100%)
+E           Max absolute difference among violations: 8295
+E           Max relative difference among violations: 6.52631579
+E            ACTUAL: array([[ 285,  210],
+E                  [ 165, 4290]])
+E            DESIRED: array([[8580,  420],
+E                  [ 330,  570]])
+
+/usr/local/lib/python3.9/contextlib.py:79: AssertionError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_error_messages_on_wrong_input
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_pair_confusion_matrix_fully_dispersed
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_pair_confusion_matrix_single_cluster
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_pair_confusion_matrix
+============= 4 failed, 32 passed, 8 skipped, 4 warnings in 0.50s ==============
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.9.0, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/scikit-learn/scikit-learn
+configfile: setup.cfg
+plugins: cov-6.0.0
+collecting ... collected 44 items
+
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_error_messages_on_wrong_input I: Seeding RNGs with 155350649
+FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_generalized_average PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_perfect_matches PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_homogeneous_but_not_complete_labeling PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_complete_but_not_homogeneous_labeling PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_not_complete_and_not_homogeneous_labeling PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_beta_parameter PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_non_consecutive_labels PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_adjustment_for_chance PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_adjusted_mutual_info_score PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_expected_mutual_info_overflow PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_int_overflow_mutual_info_fowlkes_mallows_score PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_entropy PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_entropy_array_api[numpy-None-None] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_entropy_array_api[array_api_strict-None-None] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_entropy_array_api[cupy-None-None] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_entropy_array_api[torch-cpu-float64] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_entropy_array_api[torch-cpu-float32] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_entropy_array_api[torch-cuda-float64] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_entropy_array_api[torch-cuda-float32] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_entropy_array_api[torch-mps-float32] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_contingency_matrix PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_contingency_matrix_sparse PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_exactly_zero_info_score PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_v_measure_and_mutual_information PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_fowlkes_mallows_score PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_fowlkes_mallows_score_properties PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_mutual_info_score_positive_constant_label[labels_true0-labels_pred0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_mutual_info_score_positive_constant_label[labels_true1-labels_pred1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_mutual_info_score_positive_constant_label[labels_true2-labels_pred2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_mutual_info_score_positive_constant_label[labels_true3-labels_pred3] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_mutual_info_score_positive_constant_label[labels_true4-labels_pred4] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_check_clustering_error PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_pair_confusion_matrix_fully_dispersed FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_pair_confusion_matrix_single_cluster FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_pair_confusion_matrix FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_rand_score_edge_cases[clustering10-clustering20] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_rand_score_edge_cases[clustering11-clustering21] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_rand_score PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_adjusted_rand_score_overflow PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_normalized_mutual_info_score_bounded[min] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_normalized_mutual_info_score_bounded[arithmetic] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_normalized_mutual_info_score_bounded[geometric] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_normalized_mutual_info_score_bounded[max] PASSED
+
+=================================== FAILURES ===================================
+______________________ test_error_messages_on_wrong_input ______________________
+
+    def test_error_messages_on_wrong_input():
+        for score_func in score_funcs:
+            expected = (
+                r"Found input variables with inconsistent numbers " r"of samples: \[2, 3\]"
+            )
+            with pytest.raises(ValueError, match=expected):
+                score_func([0, 1], [1, 1, 1])
+    
+            expected = r"labels_true must be 1D: shape is \(2"
+            with pytest.raises(ValueError, match=expected):
+>               score_func([[0, 1], [1, 0]], [1, 1, 1])
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py:50: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:361: in adjusted_rand_score
+    ((tn, fp), (fn, tp)) = pair_confusion_matrix(labels_true, labels_pred)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:189: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:122: in pair_confusion_matrix
+    return pair_confusion_matrix(labels_true, labels_pred)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/temp.py:27: in pair_confusion_matrix
+    contingency = confusion_matrix(labels_true, labels_pred)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:189: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/_classification.py:334: in confusion_matrix
+    y_type, y_true, y_pred = _check_targets(y_true, y_pred)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/_classification.py:92: in _check_targets
+    check_consistent_length(y_true, y_pred)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+arrays = (array([[0, 1],
+       [1, 0]]), array([1, 1, 1])), lengths = [2, 3]
+uniques = array([2, 3])
+
+    def check_consistent_length(*arrays):
+        """Check that all arrays have consistent first dimensions.
+    
+        Checks whether all objects in arrays have the same shape or length.
+    
+        Parameters
+        ----------
+        *arrays : list or tuple of input objects.
+            Objects that will be checked for consistent length.
+    
+        Examples
+        --------
+        >>> from sklearn.utils.validation import check_consistent_length
+        >>> a = [1, 2, 3]
+        >>> b = [2, 3, 4]
+        >>> check_consistent_length(a, b)
+        """
+    
+        lengths = [_num_samples(X) for X in arrays if X is not None]
+        uniques = np.unique(lengths)
+        if len(uniques) > 1:
+>           raise ValueError(
+                "Found input variables with inconsistent numbers of samples: %r"
+                % [int(l) for l in lengths]
+            )
+E           ValueError: Found input variables with inconsistent numbers of samples: [2, 3]
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/validation.py:474: ValueError
+
+During handling of the above exception, another exception occurred:
+
+    def test_error_messages_on_wrong_input():
+        for score_func in score_funcs:
+            expected = (
+                r"Found input variables with inconsistent numbers " r"of samples: \[2, 3\]"
+            )
+            with pytest.raises(ValueError, match=expected):
+                score_func([0, 1], [1, 1, 1])
+    
+            expected = r"labels_true must be 1D: shape is \(2"
+            with pytest.raises(ValueError, match=expected):
+>               score_func([[0, 1], [1, 0]], [1, 1, 1])
+E               AssertionError: Regex pattern did not match.
+E                Regex: 'labels_true must be 1D: shape is \\(2'
+E                Input: 'Found input variables with inconsistent numbers of samples: [2, 3]'
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py:50: AssertionError
+__________________ test_pair_confusion_matrix_fully_dispersed __________________
+
+    def test_pair_confusion_matrix_fully_dispersed():
+        # edge case: every element is its own cluster
+        N = 100
+        clustering1 = list(range(N))
+        clustering2 = clustering1
+        expected = np.array([[N * (N - 1), 0], [0, 0]])
+>       assert_array_equal(pair_confusion_matrix(clustering1, clustering2), expected)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py:411: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/lib/python3.9/site-packages/numpy/_utils/__init__.py:85: in wrapper
+    return fun(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (<built-in function eq>, array([[   0,    0],
+       [   0, 4950]]), array([[9900,    0],
+       [   0,    0]]))
+kwds = {'err_msg': '', 'header': 'Arrays are not equal', 'strict': False, 'verbose': True}
+
+    @wraps(func)
+    def inner(*args, **kwds):
+        with self._recreate_cm():
+>           return func(*args, **kwds)
+E           AssertionError: 
+E           Arrays are not equal
+E           
+E           Mismatched elements: 2 / 4 (50%)
+E           Max absolute difference among violations: 9900
+E           Max relative difference among violations: 1.
+E            ACTUAL: array([[   0,    0],
+E                  [   0, 4950]])
+E            DESIRED: array([[9900,    0],
+E                  [   0,    0]])
+
+/usr/local/lib/python3.9/contextlib.py:79: AssertionError
+__________________ test_pair_confusion_matrix_single_cluster ___________________
+
+    def test_pair_confusion_matrix_single_cluster():
+        # edge case: only one cluster
+        N = 100
+        clustering1 = np.zeros((N,))
+        clustering2 = clustering1
+        expected = np.array([[0, 0], [0, N * (N - 1)]])
+>       assert_array_equal(pair_confusion_matrix(clustering1, clustering2), expected)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py:420: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/lib/python3.9/site-packages/numpy/_utils/__init__.py:85: in wrapper
+    return fun(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (<built-in function eq>, array([[4950,    0],
+       [   0,    0]]), array([[   0,    0],
+       [   0, 9900]]))
+kwds = {'err_msg': '', 'header': 'Arrays are not equal', 'strict': False, 'verbose': True}
+
+    @wraps(func)
+    def inner(*args, **kwds):
+        with self._recreate_cm():
+>           return func(*args, **kwds)
+E           AssertionError: 
+E           Arrays are not equal
+E           
+E           Mismatched elements: 2 / 4 (50%)
+E           Max absolute difference among violations: 9900
+E           Max relative difference among violations: 1.
+E            ACTUAL: array([[4950,    0],
+E                  [   0,    0]])
+E            DESIRED: array([[   0,    0],
+E                  [   0, 9900]])
+
+/usr/local/lib/python3.9/contextlib.py:79: AssertionError
+__________________________ test_pair_confusion_matrix __________________________
+
+    def test_pair_confusion_matrix():
+        # regular case: different non-trivial clusterings
+        n = 10
+        N = n**2
+        clustering1 = np.hstack([[i + 1] * n for i in range(n)])
+        clustering2 = np.hstack([[i + 1] * (n + 1) for i in range(n)])[:N]
+        # basic quadratic implementation
+        expected = np.zeros(shape=(2, 2), dtype=np.int64)
+        for i in range(len(clustering1)):
+            for j in range(len(clustering2)):
+                if i != j:
+                    same_cluster_1 = int(clustering1[i] == clustering1[j])
+                    same_cluster_2 = int(clustering2[i] == clustering2[j])
+                    expected[same_cluster_1, same_cluster_2] += 1
+>       assert_array_equal(pair_confusion_matrix(clustering1, clustering2), expected)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py:437: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/lib/python3.9/site-packages/numpy/_utils/__init__.py:85: in wrapper
+    return fun(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (<built-in function eq>, array([[ 285,  210],
+       [ 165, 4290]]), array([[8580,  420],
+       [ 330,  570]]))
+kwds = {'err_msg': '', 'header': 'Arrays are not equal', 'strict': False, 'verbose': True}
+
+    @wraps(func)
+    def inner(*args, **kwds):
+        with self._recreate_cm():
+>           return func(*args, **kwds)
+E           AssertionError: 
+E           Arrays are not equal
+E           
+E           Mismatched elements: 4 / 4 (100%)
+E           Max absolute difference among violations: 8295
+E           Max relative difference among violations: 6.52631579
+E            ACTUAL: array([[ 285,  210],
+E                  [ 165, 4290]])
+E            DESIRED: array([[8580,  420],
+E                  [ 330,  570]])
+
+/usr/local/lib/python3.9/contextlib.py:79: AssertionError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_error_messages_on_wrong_input
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_pair_confusion_matrix_fully_dispersed
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_pair_confusion_matrix_single_cluster
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_pair_confusion_matrix
+============= 4 failed, 32 passed, 8 skipped, 4 warnings in 0.50s ==============
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.9.0, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/scikit-learn/scikit-learn
+configfile: setup.cfg
+plugins: cov-6.0.0
+collecting ... collected 44 items
+
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_error_messages_on_wrong_input I: Seeding RNGs with 276053969
+FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_generalized_average PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_perfect_matches FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_homogeneous_but_not_complete_labeling PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_complete_but_not_homogeneous_labeling PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_not_complete_and_not_homogeneous_labeling PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_beta_parameter PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_non_consecutive_labels FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_adjustment_for_chance FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_adjusted_mutual_info_score PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_expected_mutual_info_overflow PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_int_overflow_mutual_info_fowlkes_mallows_score PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_entropy PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_entropy_array_api[numpy-None-None] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_entropy_array_api[array_api_strict-None-None] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_entropy_array_api[cupy-None-None] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_entropy_array_api[torch-cpu-float64] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_entropy_array_api[torch-cpu-float32] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_entropy_array_api[torch-cuda-float64] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_entropy_array_api[torch-cuda-float32] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_entropy_array_api[torch-mps-float32] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_contingency_matrix PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_contingency_matrix_sparse PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_exactly_zero_info_score PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_v_measure_and_mutual_information PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_fowlkes_mallows_score PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_fowlkes_mallows_score_properties PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_mutual_info_score_positive_constant_label[labels_true0-labels_pred0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_mutual_info_score_positive_constant_label[labels_true1-labels_pred1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_mutual_info_score_positive_constant_label[labels_true2-labels_pred2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_mutual_info_score_positive_constant_label[labels_true3-labels_pred3] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_mutual_info_score_positive_constant_label[labels_true4-labels_pred4] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_check_clustering_error PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_pair_confusion_matrix_fully_dispersed FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_pair_confusion_matrix_single_cluster FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_pair_confusion_matrix FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_rand_score_edge_cases[clustering10-clustering20] FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_rand_score_edge_cases[clustering11-clustering21] FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_rand_score FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_adjusted_rand_score_overflow FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_normalized_mutual_info_score_bounded[min] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_normalized_mutual_info_score_bounded[arithmetic] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_normalized_mutual_info_score_bounded[geometric] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_normalized_mutual_info_score_bounded[max] PASSED
+
+=================================== FAILURES ===================================
+______________________ test_error_messages_on_wrong_input ______________________
+
+    def test_error_messages_on_wrong_input():
+        for score_func in score_funcs:
+            expected = (
+                r"Found input variables with inconsistent numbers " r"of samples: \[2, 3\]"
+            )
+            with pytest.raises(ValueError, match=expected):
+>               score_func([0, 1], [1, 1, 1])
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py:46: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:361: in adjusted_rand_score
+    ((tn, fp), (fn, tp)) = pair_confusion_matrix(labels_true, labels_pred)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:189: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:122: in pair_confusion_matrix
+    return pair_confusion_matrix(labels_true, labels_pred)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:189: in wrapper
+    return func(*args, **kwargs)
+E   RecursionError: maximum recursion depth exceeded while calling a Python object
+!!! Recursion detected (same locals & position)
+_____________________________ test_perfect_matches _____________________________
+
+    def test_perfect_matches():
+        for score_func in score_funcs:
+>           assert score_func([], []) == pytest.approx(1.0)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py:69: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:361: in adjusted_rand_score
+    ((tn, fp), (fn, tp)) = pair_confusion_matrix(labels_true, labels_pred)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:189: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:122: in pair_confusion_matrix
+    return pair_confusion_matrix(labels_true, labels_pred)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:189: in wrapper
+    return func(*args, **kwargs)
+E   RecursionError: maximum recursion depth exceeded while calling a Python object
+!!! Recursion detected (same locals & position)
+_________________________ test_non_consecutive_labels __________________________
+
+    def test_non_consecutive_labels():
+        # regression tests for labels with gaps
+        h, c, v = homogeneity_completeness_v_measure([0, 0, 0, 2, 2, 2], [0, 1, 0, 1, 2, 2])
+        assert_almost_equal(h, 0.67, 2)
+        assert_almost_equal(c, 0.42, 2)
+        assert_almost_equal(v, 0.52, 2)
+    
+        h, c, v = homogeneity_completeness_v_measure([0, 0, 0, 1, 1, 1], [0, 4, 0, 4, 2, 2])
+        assert_almost_equal(h, 0.67, 2)
+        assert_almost_equal(c, 0.42, 2)
+        assert_almost_equal(v, 0.52, 2)
+    
+>       ari_1 = adjusted_rand_score([0, 0, 0, 1, 1, 1], [0, 1, 0, 1, 2, 2])
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py:158: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:361: in adjusted_rand_score
+    ((tn, fp), (fn, tp)) = pair_confusion_matrix(labels_true, labels_pred)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:189: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:122: in pair_confusion_matrix
+    return pair_confusion_matrix(labels_true, labels_pred)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:189: in wrapper
+    return func(*args, **kwargs)
+E   RecursionError: maximum recursion depth exceeded while calling a Python object
+!!! Recursion detected (same locals & position)
+__________________________ test_adjustment_for_chance __________________________
+
+    def test_adjustment_for_chance():
+        # Check that adjusted scores are almost zero on random labels
+        n_clusters_range = [2, 10, 50, 90]
+        n_samples = 100
+        n_runs = 10
+    
+>       scores = uniform_labelings_scores(
+            adjusted_rand_score, n_samples, n_clusters_range, n_runs
+        )
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py:187: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py:177: in uniform_labelings_scores
+    scores[i, j] = score_func(labels_a, labels_b)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:361: in adjusted_rand_score
+    ((tn, fp), (fn, tp)) = pair_confusion_matrix(labels_true, labels_pred)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:189: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:122: in pair_confusion_matrix
+    return pair_confusion_matrix(labels_true, labels_pred)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:189: in wrapper
+    return func(*args, **kwargs)
+E   RecursionError: maximum recursion depth exceeded in comparison
+!!! Recursion detected (same locals & position)
+__________________ test_pair_confusion_matrix_fully_dispersed __________________
+
+    def test_pair_confusion_matrix_fully_dispersed():
+        # edge case: every element is its own cluster
+        N = 100
+        clustering1 = list(range(N))
+        clustering2 = clustering1
+        expected = np.array([[N * (N - 1), 0], [0, 0]])
+>       assert_array_equal(pair_confusion_matrix(clustering1, clustering2), expected)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py:411: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:122: in pair_confusion_matrix
+    return pair_confusion_matrix(labels_true, labels_pred)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:189: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:122: in pair_confusion_matrix
+    return pair_confusion_matrix(labels_true, labels_pred)
+E   RecursionError: maximum recursion depth exceeded while calling a Python object
+!!! Recursion detected (same locals & position)
+__________________ test_pair_confusion_matrix_single_cluster ___________________
+
+    def test_pair_confusion_matrix_single_cluster():
+        # edge case: only one cluster
+        N = 100
+        clustering1 = np.zeros((N,))
+        clustering2 = clustering1
+        expected = np.array([[0, 0], [0, N * (N - 1)]])
+>       assert_array_equal(pair_confusion_matrix(clustering1, clustering2), expected)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py:420: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:122: in pair_confusion_matrix
+    return pair_confusion_matrix(labels_true, labels_pred)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:189: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:122: in pair_confusion_matrix
+    return pair_confusion_matrix(labels_true, labels_pred)
+E   RecursionError: maximum recursion depth exceeded while calling a Python object
+!!! Recursion detected (same locals & position)
+__________________________ test_pair_confusion_matrix __________________________
+
+    def test_pair_confusion_matrix():
+        # regular case: different non-trivial clusterings
+        n = 10
+        N = n**2
+        clustering1 = np.hstack([[i + 1] * n for i in range(n)])
+        clustering2 = np.hstack([[i + 1] * (n + 1) for i in range(n)])[:N]
+        # basic quadratic implementation
+        expected = np.zeros(shape=(2, 2), dtype=np.int64)
+        for i in range(len(clustering1)):
+            for j in range(len(clustering2)):
+                if i != j:
+                    same_cluster_1 = int(clustering1[i] == clustering1[j])
+                    same_cluster_2 = int(clustering2[i] == clustering2[j])
+                    expected[same_cluster_1, same_cluster_2] += 1
+>       assert_array_equal(pair_confusion_matrix(clustering1, clustering2), expected)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py:437: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:122: in pair_confusion_matrix
+    return pair_confusion_matrix(labels_true, labels_pred)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:189: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:122: in pair_confusion_matrix
+    return pair_confusion_matrix(labels_true, labels_pred)
+E   RecursionError: maximum recursion depth exceeded while calling a Python object
+!!! Recursion detected (same locals & position)
+____________ test_rand_score_edge_cases[clustering10-clustering20] _____________
+
+clustering1 = [0, 1, 2, 3, 4, 5, ...], clustering2 = [0, 1, 2, 3, 4, 5, ...]
+
+    @pytest.mark.parametrize(
+        "clustering1, clustering2",
+        [(list(range(100)), list(range(100))), (np.zeros((100,)), np.zeros((100,)))],
+    )
+    def test_rand_score_edge_cases(clustering1, clustering2):
+        # edge case 1: every element is its own cluster
+        # edge case 2: only one cluster
+>       assert_allclose(rand_score(clustering1, clustering2), 1.0)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py:447: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:259: in rand_score
+    contingency = pair_confusion_matrix(labels_true, labels_pred)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:189: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:122: in pair_confusion_matrix
+    return pair_confusion_matrix(labels_true, labels_pred)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:189: in wrapper
+    return func(*args, **kwargs)
+E   RecursionError: maximum recursion depth exceeded while calling a Python object
+!!! Recursion detected (same locals & position)
+____________ test_rand_score_edge_cases[clustering11-clustering21] _____________
+
+clustering1 = array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+       0., 0., 0., 0., 0., 0., 0., 0., 0., ...0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+       0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
+clustering2 = array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+       0., 0., 0., 0., 0., 0., 0., 0., 0., ...0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+       0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
+
+    @pytest.mark.parametrize(
+        "clustering1, clustering2",
+        [(list(range(100)), list(range(100))), (np.zeros((100,)), np.zeros((100,)))],
+    )
+    def test_rand_score_edge_cases(clustering1, clustering2):
+        # edge case 1: every element is its own cluster
+        # edge case 2: only one cluster
+>       assert_allclose(rand_score(clustering1, clustering2), 1.0)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py:447: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:259: in rand_score
+    contingency = pair_confusion_matrix(labels_true, labels_pred)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:189: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:122: in pair_confusion_matrix
+    return pair_confusion_matrix(labels_true, labels_pred)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:189: in wrapper
+    return func(*args, **kwargs)
+E   RecursionError: maximum recursion depth exceeded while calling a Python object
+!!! Recursion detected (same locals & position)
+_______________________________ test_rand_score ________________________________
+
+    def test_rand_score():
+        # regular case: different non-trivial clusterings
+        clustering1 = [0, 0, 0, 1, 1, 1]
+        clustering2 = [0, 1, 0, 1, 2, 2]
+        # pair confusion matrix
+        D11 = 2 * 2  # ordered pairs (1, 3), (5, 6)
+        D10 = 2 * 4  # ordered pairs (1, 2), (2, 3), (4, 5), (4, 6)
+        D01 = 2 * 1  # ordered pair (2, 4)
+        D00 = 5 * 6 - D11 - D01 - D10  # the remaining pairs
+        # rand score
+        expected_numerator = D00 + D11
+        expected_denominator = D00 + D01 + D10 + D11
+        expected = expected_numerator / expected_denominator
+>       assert_allclose(rand_score(clustering1, clustering2), expected)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py:463: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:259: in rand_score
+    contingency = pair_confusion_matrix(labels_true, labels_pred)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:189: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:122: in pair_confusion_matrix
+    return pair_confusion_matrix(labels_true, labels_pred)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:189: in wrapper
+    return func(*args, **kwargs)
+E   RecursionError: maximum recursion depth exceeded while calling a Python object
+!!! Recursion detected (same locals & position)
+______________________ test_adjusted_rand_score_overflow _______________________
+
+    def test_adjusted_rand_score_overflow():
+        """Check that large amount of data will not lead to overflow in
+        `adjusted_rand_score`.
+        Non-regression test for:
+        https://github.com/scikit-learn/scikit-learn/issues/20305
+        """
+        rng = np.random.RandomState(0)
+        y_true = rng.randint(0, 2, 100_000, dtype=np.int8)
+        y_pred = rng.randint(0, 2, 100_000, dtype=np.int8)
+        with warnings.catch_warnings():
+            warnings.simplefilter("error", RuntimeWarning)
+>           adjusted_rand_score(y_true, y_pred)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py:477: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:361: in adjusted_rand_score
+    ((tn, fp), (fn, tp)) = pair_confusion_matrix(labels_true, labels_pred)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:189: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:122: in pair_confusion_matrix
+    return pair_confusion_matrix(labels_true, labels_pred)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:189: in wrapper
+    return func(*args, **kwargs)
+E   RecursionError: maximum recursion depth exceeded while calling a Python object
+!!! Recursion detected (same locals & position)
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_error_messages_on_wrong_input
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_perfect_matches
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_non_consecutive_labels
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_adjustment_for_chance
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_pair_confusion_matrix_fully_dispersed
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_pair_confusion_matrix_single_cluster
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_pair_confusion_matrix
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_rand_score_edge_cases[clustering10-clustering20]
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_rand_score_edge_cases[clustering11-clustering21]
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_rand_score
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/tests/test_supervised.py::test_adjusted_rand_score_overflow
+=================== 11 failed, 25 passed, 8 skipped in 0.64s ===================

@@ -1,0 +1,11 @@
+{
+    "result": "Certainly! Below is a Python function named `convert_gray_image_to_bgr` that takes a grayscale image as a NumPy array and converts it to a BGR image using OpenCV's `cv2.cvtColor` function. The function first checks if the input image is indeed grayscale before performing the conversion.\n\n```python\nimport cv2\nimport numpy as np\n\ndef convert_gray_image_to_bgr(gray_image: np.ndarray) -> np.ndarray:\n    \"\"\"\n    Convert a grayscale image to BGR format.\n\n    Args:\n        gray_image (np.ndarray): Input image in grayscale format.\n\n    Returns:\n        np.ndarray: Image converted to BGR format.\n    \"\"\"\n    # Check if the input image is a 2D array (grayscale)\n    if len(gray_image.shape) != 2:\n        raise ValueError(\"Input image is not a grayscale image. It should be a 2D array.\")\n\n    # Convert the grayscale image to BGR format\n    bgr_image = cv2.cvtColor(gray_image, cv2.COLOR_GRAY2BGR)\n\n    return bgr_image\n```\n\n### Explanation:\n- **Input Check**: The function first checks if the input image is a 2D array, which is typical for grayscale images. If not, it raises a `ValueError`.\n- **Conversion**: If the input is a valid grayscale image, it uses `cv2.cvtColor` with the `cv2.COLOR_GRAY2BGR` flag to convert the image to BGR format.\n- **Return**: The function returns the converted BGR image as a NumPy array.",
+    "prompt": "Generate a python function called convert_gray_image_to_bgr that takes in a numpy array grayscale image as input and returns a numpy array BGR image. The function checks if the input image is grayscale and converts it to BGR format using OpenCV's cv2.cvtColor function if necessary. The output is the converted BGR image.",
+    "function_name": "convert_gray_image_to_bgr",
+    "ground_truth": "inference/core/utils/image_utils.py",
+    "test": "tests/inference/unit_tests/core/utils/test_image_utils.py",
+    "class": "",
+    "stage": "Pre-Post processing",
+    "task": "",
+    "data": "Image"
+}

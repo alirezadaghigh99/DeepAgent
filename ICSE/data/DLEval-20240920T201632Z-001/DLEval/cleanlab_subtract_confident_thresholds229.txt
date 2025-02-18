@@ -1,0 +1,14 @@
+stage: Inference
+task: 
+data: Table
+
+prompt:
+You need to implement a function named `_subtract_confident_thresholds` that adjusts predicted probabilities by subtracting class-specific confidence thresholds and then re-normalizing the probabilities. This adjustment aims to handle class imbalance in classification tasks. The function accepts labels, predicted probabilities, an optional flag for multi-label settings, and pre-calculated confidence thresholds. If confidence thresholds are not provided, they will be calculated from the labels and predicted probabilities using the `get_confident_thresholds` method. After subtracting the thresholds, the function ensures no negative values by shifting and then re-normalizing the probabilities. The function returns the adjusted predicted probabilities as a NumPy array. If neither labels nor pre-calculated thresholds are provided, a `ValueError` is raised.
+
+ ground Truth:cleanlab/internal/label_quality_utils.py#L26
+
+ repo:cleanlab
+
+ function:_subtract_confident_thresholds
+ 
+ test_cases:tests/test_rank.py

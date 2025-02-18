@@ -1,0 +1,15 @@
+stage: Pre-Post processing
+task: Detection
+data: Image
+
+prompt:Generate a Python function called nms that performs non-maximum suppression (NMS) on a set of bounding boxes based on their intersection-over-union (IoU) values. The function takes three inputs: boxes (a Tensor of shape [N, 4] representing bounding box coordinates in (x1, y1, x2, y2) format), scores (a Tensor of shape [N] containing scores for each box), and iou_threshold (a float value specifying the IoU threshold for suppression).
+
+The function iteratively removes lower scoring boxes that have an IoU greater than the specified threshold with another higher scoring box. The output is an int64 Tensor containing the indices of the boxes that have been kept after NMS, sorted in decreasing order of scores. Additionally, the function logs API usage and ensures that necessary operations are available before performing NMS using PyTorch's torchvision library.
+
+ ground Truth:torchvision/ops/boxes.py
+
+ repo:vision
+
+ function:nms
+ 
+ test_cases:test/test_ops.py::TestNMS

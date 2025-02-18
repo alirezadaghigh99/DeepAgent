@@ -1,0 +1,14 @@
+stage: Model Construction
+task: 
+data: Table
+
+prompt:
+Generate a Python function called pairwise_distances_chunked that generates a distance matrix chunk by chunk with optional reduction. The function takes in parameters X, Y, reduce_func, metric, n_jobs, working_memory, and additional keyword parameters. It calculates pairwise distances in working_memory-sized chunks and applies reduce_func on each chunk if provided. The function yields a contiguous slice of the distance matrix, optionally processed by reduce_func. The function also includes examples of usage without reduce_func and with reduce_func for retrieving neighbors and average distance within a radius.
+
+ ground Truth:sklearn/metrics/pairwise.py
+
+ repo:scikit-learn
+
+ function:pairwise_distances_chunked
+ 
+ test_cases:sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid

@@ -1,0 +1,1047 @@
+output file:
+processed_kornia_compute_luts365.json
+function:
+_compute_luts
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_he[cpu-float32] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_optional_params[cpu-float32-None-grid1] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_optional_params[cpu-float32-0.0-None]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_cardinality[cpu-float32-4-3] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_cardinality[cpu-float32-4-1]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_gradcheck[cpu]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_gradcheck[cpu] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_cardinality[cpu-float32-4-3]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_smoke[cpu-float32]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_ahe[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_clahe[cpu-float32] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_cardinality[cpu-float32-4-1] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_he[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_optional_params[cpu-float32-2.0-grid2] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_cardinality[cpu-float32-None-3] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_optional_params[cpu-float32-2.0-grid2]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_optional_params[cpu-float32-None-grid1]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_cardinality[cpu-float32-None-3]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_clahe[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_ahe[cpu-float32] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_optional_params[cpu-float32-0.0-None] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_cardinality[cpu-float32-None-1]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_cardinality[cpu-float32-None-1] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_smoke[cpu-float32] FAILED'}
+
+All Test Cases On Generated code:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'cudagraphs', 'openxla', 'inductor', 'onnxrt', 'tvm', 'jit', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 25 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_smoke[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_cardinality[cpu-float32-None-1] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_cardinality[cpu-float32-None-3] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_cardinality[cpu-float32-1-1] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_cardinality[cpu-float32-1-3] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_cardinality[cpu-float32-4-1] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_cardinality[cpu-float32-4-3] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_optional_params[cpu-float32-0.0-None] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_optional_params[cpu-float32-None-grid1] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_optional_params[cpu-float32-2.0-grid2] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_exception[0-1.0-grid0-ValueError-Invalid input tensor, it is empty.] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_exception[1-1-grid1-TypeError-Input clip_limit type is not float. Got] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_exception[1-2.0-2-TypeError-Input grid_size type is not Tuple. Got] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_exception[1-2.0-grid3-TypeError-Input grid_size is not a Tuple with 2 elements. Got 3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_exception[1-2.0-grid4-TypeError-Input grid_size type is not valid, must be a Tuple[int, int]] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_exception[1-2.0-grid5-ValueError-Input grid_size elements must be positive. Got] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_exception_tensor_dims[dims0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_exception_tensor_dims[dims1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_exception_tensor_type PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_gradcheck[cpu] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_jit[cpu-float32] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_module PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_he[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_ahe[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_clahe[cpu-float32] FAILED
+
+=================================== FAILURES ===================================
+___________________ TestEqualization.test_smoke[cpu-float32] ___________________
+
+self = <test_equalization.TestEqualization object at 0x7b76d33316f0>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_smoke(self, device, dtype):
+        C, H, W = 1, 10, 20
+        img = torch.rand(C, H, W, device=device, dtype=dtype)
+>       res = enhance.equalize_clahe(img)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/equalization.py:249: in equalize_clahe
+    equalized_tiles: torch.Tensor = _compute_equalized_tiles(interp_tiles, luts)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+interp_tiles = tensor([[[[[[0.1621, 0.5682]]],
+
+
+          [[[0.4028, 0.6035]]],
+
+
+          [[[0.8645, 0.3069]]],
+
+
+          [[[0.9...14, 0.1816]]],
+
+
+          [[[0.2005, 0.5299]]],
+
+
+          [[[0.9130, 0.4236]]],
+
+
+          [[[0.6379, 0.8854]]]]]])
+luts = array([[[[[  0.,   0.,   0., ...,   0.,   0.,   0.]],
+
+         [[  0.,   0.,   0., ...,   0.,   0.,   0.]],
+
+        ...  [[  0.,   0.,   0., ...,   0.,   0.,   0.]],
+
+         [[  0.,   0.,   0., ...,   0.,   0.,   0.]]]]], dtype=float32)
+
+    def _compute_equalized_tiles(interp_tiles: torch.Tensor, luts: torch.Tensor) -> torch.Tensor:
+        """Equalize the tiles.
+    
+        Args:
+            interp_tiles: set of interpolation tiles, values must be in the range [0, 1].
+              (B, 2GH, 2GW, C, TH/2, TW/2)
+            luts: luts for each one of the original tiles. (B, GH, GW, C, 256)
+    
+        Returns:
+            equalized tiles (B, 2GH, 2GW, C, TH/2, TW/2)
+        """
+        if interp_tiles.dim() != 6:
+            raise AssertionError('interp_tiles tensor must be 6D.')
+>       if luts.dim() != 5:
+E       AttributeError: 'numpy.ndarray' object has no attribute 'dim'. Did you mean: 'ndim'?
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/equalization.py:177: AttributeError
+____________ TestEqualization.test_cardinality[cpu-float32-None-1] _____________
+
+self = <test_equalization.TestEqualization object at 0x7b76d3331ba0>, B = None
+C = 1, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("B, C", [(None, 1), (None, 3), (1, 1), (1, 3), (4, 1), (4, 3)])
+    def test_cardinality(self, B, C, device, dtype):
+        H, W = 10, 20
+        if B is None:
+            img = torch.rand(C, H, W, device=device, dtype=dtype)
+        else:
+            img = torch.rand(B, C, H, W, device=device, dtype=dtype)
+>       res = enhance.equalize_clahe(img)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py:29: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/equalization.py:249: in equalize_clahe
+    equalized_tiles: torch.Tensor = _compute_equalized_tiles(interp_tiles, luts)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+interp_tiles = tensor([[[[[[0.7311, 0.9092]]],
+
+
+          [[[0.5434, 0.5096]]],
+
+
+          [[[0.1183, 0.7515]]],
+
+
+          [[[0.4...17, 0.2708]]],
+
+
+          [[[0.1036, 0.7769]]],
+
+
+          [[[0.6136, 0.5758]]],
+
+
+          [[[0.8304, 0.9620]]]]]])
+luts = array([[[[[0., 0., 0., ..., 0., 0., 0.]],
+
+         [[0., 0., 0., ..., 0., 0., 0.]],
+
+         [[0., 0., 0., ..., 0., ..., 0., 0., 0.]],
+
+         [[0., 0., 0., ..., 0., 0., 0.]],
+
+         [[0., 0., 0., ..., 0., 0., 0.]]]]], dtype=float32)
+
+    def _compute_equalized_tiles(interp_tiles: torch.Tensor, luts: torch.Tensor) -> torch.Tensor:
+        """Equalize the tiles.
+    
+        Args:
+            interp_tiles: set of interpolation tiles, values must be in the range [0, 1].
+              (B, 2GH, 2GW, C, TH/2, TW/2)
+            luts: luts for each one of the original tiles. (B, GH, GW, C, 256)
+    
+        Returns:
+            equalized tiles (B, 2GH, 2GW, C, TH/2, TW/2)
+        """
+        if interp_tiles.dim() != 6:
+            raise AssertionError('interp_tiles tensor must be 6D.')
+>       if luts.dim() != 5:
+E       AttributeError: 'numpy.ndarray' object has no attribute 'dim'. Did you mean: 'ndim'?
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/equalization.py:177: AttributeError
+____________ TestEqualization.test_cardinality[cpu-float32-None-3] _____________
+
+self = <test_equalization.TestEqualization object at 0x7b76d3331ae0>, B = None
+C = 3, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("B, C", [(None, 1), (None, 3), (1, 1), (1, 3), (4, 1), (4, 3)])
+    def test_cardinality(self, B, C, device, dtype):
+        H, W = 10, 20
+        if B is None:
+            img = torch.rand(C, H, W, device=device, dtype=dtype)
+        else:
+            img = torch.rand(B, C, H, W, device=device, dtype=dtype)
+>       res = enhance.equalize_clahe(img)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py:29: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/equalization.py:249: in equalize_clahe
+    equalized_tiles: torch.Tensor = _compute_equalized_tiles(interp_tiles, luts)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+interp_tiles = tensor([[[[[[0.4552, 0.8496]],
+
+           [[0.2757, 0.0681]],
+
+           [[0.4260, 0.3990]]],
+
+
+          [[[0.3687,...0.8720, 0.0865]]],
+
+
+          [[[0.6371, 0.0049]],
+
+           [[0.8871, 0.9381]],
+
+           [[0.1000, 0.7924]]]]]])
+luts = array([[[[[  0.,   0.,   0., ...,   0.,   0.,   0.],
+          [  0.,   0.,   0., ...,   0.,   0.,   0.],
+          [ ...     [  0.,   0.,   0., ...,   0.,   0.,   0.],
+          [  0.,   0.,   0., ...,   0.,   0.,   0.]]]]], dtype=float32)
+
+    def _compute_equalized_tiles(interp_tiles: torch.Tensor, luts: torch.Tensor) -> torch.Tensor:
+        """Equalize the tiles.
+    
+        Args:
+            interp_tiles: set of interpolation tiles, values must be in the range [0, 1].
+              (B, 2GH, 2GW, C, TH/2, TW/2)
+            luts: luts for each one of the original tiles. (B, GH, GW, C, 256)
+    
+        Returns:
+            equalized tiles (B, 2GH, 2GW, C, TH/2, TW/2)
+        """
+        if interp_tiles.dim() != 6:
+            raise AssertionError('interp_tiles tensor must be 6D.')
+>       if luts.dim() != 5:
+E       AttributeError: 'numpy.ndarray' object has no attribute 'dim'. Did you mean: 'ndim'?
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/equalization.py:177: AttributeError
+______________ TestEqualization.test_cardinality[cpu-float32-1-1] ______________
+
+self = <test_equalization.TestEqualization object at 0x7b76d3331f60>, B = 1
+C = 1, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("B, C", [(None, 1), (None, 3), (1, 1), (1, 3), (4, 1), (4, 3)])
+    def test_cardinality(self, B, C, device, dtype):
+        H, W = 10, 20
+        if B is None:
+            img = torch.rand(C, H, W, device=device, dtype=dtype)
+        else:
+            img = torch.rand(B, C, H, W, device=device, dtype=dtype)
+>       res = enhance.equalize_clahe(img)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py:29: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/equalization.py:249: in equalize_clahe
+    equalized_tiles: torch.Tensor = _compute_equalized_tiles(interp_tiles, luts)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+interp_tiles = tensor([[[[[[0.1543, 0.5423]]],
+
+
+          [[[0.1623, 0.4418]]],
+
+
+          [[[0.3752, 0.1768]]],
+
+
+          [[[0.5...09, 0.0962]]],
+
+
+          [[[0.9944, 0.1274]]],
+
+
+          [[[0.2697, 0.6438]]],
+
+
+          [[[0.6672, 0.6799]]]]]])
+luts = array([[[[[  0.,   0.,   0., ...,   0.,   0.,   0.]],
+
+         [[  0.,   0.,   0., ...,   0.,   0.,   0.]],
+
+        ...  [[  0.,   0.,   0., ...,   0.,   0.,   0.]],
+
+         [[  0.,   0.,   0., ...,   0.,   0.,   0.]]]]], dtype=float32)
+
+    def _compute_equalized_tiles(interp_tiles: torch.Tensor, luts: torch.Tensor) -> torch.Tensor:
+        """Equalize the tiles.
+    
+        Args:
+            interp_tiles: set of interpolation tiles, values must be in the range [0, 1].
+              (B, 2GH, 2GW, C, TH/2, TW/2)
+            luts: luts for each one of the original tiles. (B, GH, GW, C, 256)
+    
+        Returns:
+            equalized tiles (B, 2GH, 2GW, C, TH/2, TW/2)
+        """
+        if interp_tiles.dim() != 6:
+            raise AssertionError('interp_tiles tensor must be 6D.')
+>       if luts.dim() != 5:
+E       AttributeError: 'numpy.ndarray' object has no attribute 'dim'. Did you mean: 'ndim'?
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/equalization.py:177: AttributeError
+______________ TestEqualization.test_cardinality[cpu-float32-1-3] ______________
+
+self = <test_equalization.TestEqualization object at 0x7b76d3332020>, B = 1
+C = 3, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("B, C", [(None, 1), (None, 3), (1, 1), (1, 3), (4, 1), (4, 3)])
+    def test_cardinality(self, B, C, device, dtype):
+        H, W = 10, 20
+        if B is None:
+            img = torch.rand(C, H, W, device=device, dtype=dtype)
+        else:
+            img = torch.rand(B, C, H, W, device=device, dtype=dtype)
+>       res = enhance.equalize_clahe(img)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py:29: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/equalization.py:249: in equalize_clahe
+    equalized_tiles: torch.Tensor = _compute_equalized_tiles(interp_tiles, luts)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+interp_tiles = tensor([[[[[[0.7019, 0.5911]],
+
+           [[0.8328, 0.9635]],
+
+           [[0.8493, 0.1728]]],
+
+
+          [[[0.5982,...0.3755, 0.5049]]],
+
+
+          [[[0.3297, 0.7561]],
+
+           [[0.2233, 0.3739]],
+
+           [[0.3080, 0.5203]]]]]])
+luts = array([[[[[  0.,   0.,   0., ...,   0.,   0.,   0.],
+          [  0.,   0.,   0., ...,   0.,   0.,   0.],
+          [ ...     [  0.,   0.,   0., ...,   0.,   0.,   0.],
+          [  0.,   0.,   0., ...,   0.,   0.,   0.]]]]], dtype=float32)
+
+    def _compute_equalized_tiles(interp_tiles: torch.Tensor, luts: torch.Tensor) -> torch.Tensor:
+        """Equalize the tiles.
+    
+        Args:
+            interp_tiles: set of interpolation tiles, values must be in the range [0, 1].
+              (B, 2GH, 2GW, C, TH/2, TW/2)
+            luts: luts for each one of the original tiles. (B, GH, GW, C, 256)
+    
+        Returns:
+            equalized tiles (B, 2GH, 2GW, C, TH/2, TW/2)
+        """
+        if interp_tiles.dim() != 6:
+            raise AssertionError('interp_tiles tensor must be 6D.')
+>       if luts.dim() != 5:
+E       AttributeError: 'numpy.ndarray' object has no attribute 'dim'. Did you mean: 'ndim'?
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/equalization.py:177: AttributeError
+______________ TestEqualization.test_cardinality[cpu-float32-4-1] ______________
+
+self = <test_equalization.TestEqualization object at 0x7b76d33320e0>, B = 4
+C = 1, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("B, C", [(None, 1), (None, 3), (1, 1), (1, 3), (4, 1), (4, 3)])
+    def test_cardinality(self, B, C, device, dtype):
+        H, W = 10, 20
+        if B is None:
+            img = torch.rand(C, H, W, device=device, dtype=dtype)
+        else:
+            img = torch.rand(B, C, H, W, device=device, dtype=dtype)
+>       res = enhance.equalize_clahe(img)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py:29: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/equalization.py:249: in equalize_clahe
+    equalized_tiles: torch.Tensor = _compute_equalized_tiles(interp_tiles, luts)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+interp_tiles = tensor([[[[[[0.4079, 0.0834]]],
+
+
+          [[[0.9208, 0.2659]]],
+
+
+          [[[0.6361, 0.6807]]],
+
+
+          ...,
+
+...          ...,
+
+
+          [[[0.2273, 0.0108]]],
+
+
+          [[[0.1435, 0.3847]]],
+
+
+          [[[0.3822, 0.7074]]]]]])
+luts = array([[[[[  0.,   0.,   0., ...,   0.,   0.,   0.]],
+
+         [[  0.,   0.,   0., ...,   0.,   0.,   0.]],
+
+        ...  [[  0.,   0.,   0., ...,   0.,   0.,   0.]],
+
+         [[  0.,   0.,   0., ...,   0.,   0.,   0.]]]]], dtype=float32)
+
+    def _compute_equalized_tiles(interp_tiles: torch.Tensor, luts: torch.Tensor) -> torch.Tensor:
+        """Equalize the tiles.
+    
+        Args:
+            interp_tiles: set of interpolation tiles, values must be in the range [0, 1].
+              (B, 2GH, 2GW, C, TH/2, TW/2)
+            luts: luts for each one of the original tiles. (B, GH, GW, C, 256)
+    
+        Returns:
+            equalized tiles (B, 2GH, 2GW, C, TH/2, TW/2)
+        """
+        if interp_tiles.dim() != 6:
+            raise AssertionError('interp_tiles tensor must be 6D.')
+>       if luts.dim() != 5:
+E       AttributeError: 'numpy.ndarray' object has no attribute 'dim'. Did you mean: 'ndim'?
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/equalization.py:177: AttributeError
+______________ TestEqualization.test_cardinality[cpu-float32-4-3] ______________
+
+self = <test_equalization.TestEqualization object at 0x7b76d33321a0>, B = 4
+C = 3, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("B, C", [(None, 1), (None, 3), (1, 1), (1, 3), (4, 1), (4, 3)])
+    def test_cardinality(self, B, C, device, dtype):
+        H, W = 10, 20
+        if B is None:
+            img = torch.rand(C, H, W, device=device, dtype=dtype)
+        else:
+            img = torch.rand(B, C, H, W, device=device, dtype=dtype)
+>       res = enhance.equalize_clahe(img)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py:29: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/equalization.py:249: in equalize_clahe
+    equalized_tiles: torch.Tensor = _compute_equalized_tiles(interp_tiles, luts)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+interp_tiles = tensor([[[[[[0.6620, 0.8456]],
+
+           [[0.9874, 0.3703]],
+
+           [[0.7955, 0.1483]]],
+
+
+          [[[0.1735,...0.1632, 0.4742]]],
+
+
+          [[[0.9596, 0.1350]],
+
+           [[0.8472, 0.2411]],
+
+           [[0.2335, 0.7739]]]]]])
+luts = array([[[[[  0.,   0.,   0., ...,   0.,   0.,   0.],
+          [  0.,   0.,   0., ...,   0.,   0.,   0.],
+          [ ...     [  0.,   0.,   0., ...,   0.,   0.,   0.],
+          [  0.,   0.,   0., ...,   0.,   0.,   0.]]]]], dtype=float32)
+
+    def _compute_equalized_tiles(interp_tiles: torch.Tensor, luts: torch.Tensor) -> torch.Tensor:
+        """Equalize the tiles.
+    
+        Args:
+            interp_tiles: set of interpolation tiles, values must be in the range [0, 1].
+              (B, 2GH, 2GW, C, TH/2, TW/2)
+            luts: luts for each one of the original tiles. (B, GH, GW, C, 256)
+    
+        Returns:
+            equalized tiles (B, 2GH, 2GW, C, TH/2, TW/2)
+        """
+        if interp_tiles.dim() != 6:
+            raise AssertionError('interp_tiles tensor must be 6D.')
+>       if luts.dim() != 5:
+E       AttributeError: 'numpy.ndarray' object has no attribute 'dim'. Did you mean: 'ndim'?
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/equalization.py:177: AttributeError
+_________ TestEqualization.test_optional_params[cpu-float32-0.0-None] __________
+
+self = <test_equalization.TestEqualization object at 0x7b76d3332530>, clip = 0.0
+grid = None, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("clip, grid", [(0.0, None), (None, (2, 2)), (2.0, (2, 2))])
+    def test_optional_params(self, clip, grid, device, dtype):
+        C, H, W = 1, 10, 20
+        img = torch.rand(C, H, W, device=device, dtype=dtype)
+        if clip is None:
+            res = enhance.equalize_clahe(img, grid_size=grid)
+        elif grid is None:
+>           res = enhance.equalize_clahe(img, clip_limit=clip)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/equalization.py:249: in equalize_clahe
+    equalized_tiles: torch.Tensor = _compute_equalized_tiles(interp_tiles, luts)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+interp_tiles = tensor([[[[[[0.3545, 0.0721]]],
+
+
+          [[[0.2223, 0.4983]]],
+
+
+          [[[0.3936, 0.1967]]],
+
+
+          [[[0.7...85, 0.4397]]],
+
+
+          [[[0.4840, 0.3559]]],
+
+
+          [[[0.9434, 0.8578]]],
+
+
+          [[[0.5772, 0.8519]]]]]])
+luts = array([[[[[0., 0., 0., ..., 0., 0., 0.]],
+
+         [[0., 0., 0., ..., 0., 0., 0.]],
+
+         [[0., 0., 0., ..., 0., ..., 0., 0., 0.]],
+
+         [[0., 0., 0., ..., 0., 0., 0.]],
+
+         [[0., 0., 0., ..., 0., 0., 0.]]]]], dtype=float32)
+
+    def _compute_equalized_tiles(interp_tiles: torch.Tensor, luts: torch.Tensor) -> torch.Tensor:
+        """Equalize the tiles.
+    
+        Args:
+            interp_tiles: set of interpolation tiles, values must be in the range [0, 1].
+              (B, 2GH, 2GW, C, TH/2, TW/2)
+            luts: luts for each one of the original tiles. (B, GH, GW, C, 256)
+    
+        Returns:
+            equalized tiles (B, 2GH, 2GW, C, TH/2, TW/2)
+        """
+        if interp_tiles.dim() != 6:
+            raise AssertionError('interp_tiles tensor must be 6D.')
+>       if luts.dim() != 5:
+E       AttributeError: 'numpy.ndarray' object has no attribute 'dim'. Did you mean: 'ndim'?
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/equalization.py:177: AttributeError
+________ TestEqualization.test_optional_params[cpu-float32-None-grid1] _________
+
+self = <test_equalization.TestEqualization object at 0x7b76d3332470>
+clip = None, grid = (2, 2), device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("clip, grid", [(0.0, None), (None, (2, 2)), (2.0, (2, 2))])
+    def test_optional_params(self, clip, grid, device, dtype):
+        C, H, W = 1, 10, 20
+        img = torch.rand(C, H, W, device=device, dtype=dtype)
+        if clip is None:
+>           res = enhance.equalize_clahe(img, grid_size=grid)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/equalization.py:249: in equalize_clahe
+    equalized_tiles: torch.Tensor = _compute_equalized_tiles(interp_tiles, luts)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+interp_tiles = tensor([[[[[[0.2210, 0.2903, 0.3159, 0.9443, 0.4745],
+            [0.5273, 0.7293, 0.7713, 0.9095, 0.3067],
+          ...1371],
+            [0.4892, 0.3748, 0.8688, 0.2419, 0.5329],
+            [0.1721, 0.0202, 0.9770, 0.9337, 0.6931]]]]]])
+luts = array([[[[[  0.,   0.,   0., ...,   0.,   0.,   0.]],
+
+         [[  0.,   0.,   0., ...,   0.,   0.,   0.]]],
+
+
+        [[[  0., 255., 255., ..., 255., 255., 255.]],
+
+         [[  0., 255., 255., ..., 255., 255., 255.]]]]], dtype=float32)
+
+    def _compute_equalized_tiles(interp_tiles: torch.Tensor, luts: torch.Tensor) -> torch.Tensor:
+        """Equalize the tiles.
+    
+        Args:
+            interp_tiles: set of interpolation tiles, values must be in the range [0, 1].
+              (B, 2GH, 2GW, C, TH/2, TW/2)
+            luts: luts for each one of the original tiles. (B, GH, GW, C, 256)
+    
+        Returns:
+            equalized tiles (B, 2GH, 2GW, C, TH/2, TW/2)
+        """
+        if interp_tiles.dim() != 6:
+            raise AssertionError('interp_tiles tensor must be 6D.')
+>       if luts.dim() != 5:
+E       AttributeError: 'numpy.ndarray' object has no attribute 'dim'. Did you mean: 'ndim'?
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/equalization.py:177: AttributeError
+_________ TestEqualization.test_optional_params[cpu-float32-2.0-grid2] _________
+
+self = <test_equalization.TestEqualization object at 0x7b76d33327d0>, clip = 2.0
+grid = (2, 2), device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("clip, grid", [(0.0, None), (None, (2, 2)), (2.0, (2, 2))])
+    def test_optional_params(self, clip, grid, device, dtype):
+        C, H, W = 1, 10, 20
+        img = torch.rand(C, H, W, device=device, dtype=dtype)
+        if clip is None:
+            res = enhance.equalize_clahe(img, grid_size=grid)
+        elif grid is None:
+            res = enhance.equalize_clahe(img, clip_limit=clip)
+        else:
+>           res = enhance.equalize_clahe(img, clip, grid)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py:41: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/equalization.py:249: in equalize_clahe
+    equalized_tiles: torch.Tensor = _compute_equalized_tiles(interp_tiles, luts)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+interp_tiles = tensor([[[[[[0.5900, 0.1195, 0.7883, 0.9692, 0.6578],
+            [0.2723, 0.5737, 0.6896, 0.2642, 0.1935],
+          ...7082],
+            [0.7306, 0.0026, 0.5728, 0.6217, 0.7674],
+            [0.6329, 0.0055, 0.5356, 0.2600, 0.9941]]]]]])
+luts = array([[[[[  0.,   0.,   0., ...,   0.,   0.,   0.]],
+
+         [[  0., 255., 255., ..., 255., 255., 255.]]],
+
+
+        [[[  0., 255., 255., ..., 255., 255., 255.]],
+
+         [[  0.,   0.,   0., ...,   0.,   0.,   0.]]]]], dtype=float32)
+
+    def _compute_equalized_tiles(interp_tiles: torch.Tensor, luts: torch.Tensor) -> torch.Tensor:
+        """Equalize the tiles.
+    
+        Args:
+            interp_tiles: set of interpolation tiles, values must be in the range [0, 1].
+              (B, 2GH, 2GW, C, TH/2, TW/2)
+            luts: luts for each one of the original tiles. (B, GH, GW, C, 256)
+    
+        Returns:
+            equalized tiles (B, 2GH, 2GW, C, TH/2, TW/2)
+        """
+        if interp_tiles.dim() != 6:
+            raise AssertionError('interp_tiles tensor must be 6D.')
+>       if luts.dim() != 5:
+E       AttributeError: 'numpy.ndarray' object has no attribute 'dim'. Did you mean: 'ndim'?
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/equalization.py:177: AttributeError
+_____________________ TestEqualization.test_gradcheck[cpu] _____________________
+
+self = <test_equalization.TestEqualization object at 0x7b76d3333790>
+device = device(type='cpu')
+
+    def test_gradcheck(self, device):
+        torch.random.manual_seed(4)
+        bs, channels, height, width = 1, 1, 11, 11
+        inputs = torch.rand(bs, channels, height, width, device=device, dtype=torch.float64)
+    
+        def grad_rot(data, a, b, c):
+            rot = rotate(data, torch.tensor(30.0, dtype=data.dtype, device=device))
+            return enhance.equalize_clahe(rot, a, b, c)
+    
+>       self.gradcheck(grad_rot, (inputs, 40.0, (2, 2), True), nondet_tol=1e-4)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py:82: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:143: in gradcheck
+    return gradcheck(func, inputs, raise_exception=raise_exception, fast_mode=fast_mode, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2052: in gradcheck
+    return _gradcheck_helper(**args)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2074: in _gradcheck_helper
+    func_out = func(*tupled_inputs)
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py:80: in grad_rot
+    return enhance.equalize_clahe(rot, a, b, c)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/equalization.py:248: in equalize_clahe
+    luts: torch.Tensor = _compute_luts(hist_tiles, clip=clip_limit, diff=slow_and_differentiable)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/equalization.py:82: in _compute_luts
+    return _compute_luts(tiles_x_im, num_bins, clip, diff)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:30: in _compute_luts
+    hist, _ = np.histogram(tile, bins=num_bins, range=(0, num_bins - 1))
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/numpy/lib/histograms.py:778: in histogram
+    a, weights = _ravel_and_check_weights(a, weights)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/numpy/lib/histograms.py:285: in _ravel_and_check_weights
+    a = np.asarray(a)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = tensor([[0.0000, 0.0000, 0.1003, 0.2967, 0.6151, 0.3659],
+        [0.0234, 0.5070, 0.7737, 0.4968, 0.6719, 0.4683],
+  ...552],
+        [0.2220, 0.3274, 0.5645, 0.4216, 0.3973, 0.7592]], dtype=torch.float64,
+       grad_fn=<SelectBackward0>)
+dtype = None
+
+    def __array__(self, dtype=None):
+        if has_torch_function_unary(self):
+            return handle_torch_function(Tensor.__array__, (self,), self, dtype=dtype)
+        if dtype is None:
+>           return self.numpy()
+E           RuntimeError: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/_tensor.py:1149: RuntimeError
+____________________ TestEqualization.test_he[cpu-float32] _____________________
+
+self = <test_equalization.TestEqualization object at 0x7b76d3333f10>
+img = tensor([[[[0.0000, 0.0526, 0.1053, 0.1579, 0.2105, 0.2632, 0.3158, 0.3684,
+           0.4211, 0.4737, 0.5263, 0.5789, ...         0.4211, 0.4737, 0.5263, 0.5789, 0.6316, 0.6842, 0.7368, 0.7895,
+           0.8421, 0.8947, 0.9474, 1.0000]]]])
+
+    def test_he(self, img):
+        # should be similar to enhance.equalize but slower. Similar because the lut is computed in a different way.
+        clip_limit: float = 0.0
+        grid_size: Tuple = (1, 1)
+>       res = enhance.equalize_clahe(img, clip_limit=clip_limit, grid_size=grid_size)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py:107: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/equalization.py:249: in equalize_clahe
+    equalized_tiles: torch.Tensor = _compute_equalized_tiles(interp_tiles, luts)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+interp_tiles = tensor([[[[[[0.0000, 0.0526, 0.1053, 0.1579, 0.2105, 0.2632, 0.3158, 0.3684,
+             0.4211, 0.4737],
+           ....0000],
+            [0.5263, 0.5789, 0.6316, 0.6842, 0.7368, 0.7895, 0.8421, 0.8947,
+             0.9474, 1.0000]]]]]])
+luts = array([[[[[  0., 255., 255., 255., 255., 255., 255., 255., 255., 255.,
+           255., 255., 255., 255., 255., 255., ...55., 255., 255., 255., 255., 255., 255., 255., 255.,
+           255., 255., 255., 255., 255., 255.]]]]], dtype=float32)
+
+    def _compute_equalized_tiles(interp_tiles: torch.Tensor, luts: torch.Tensor) -> torch.Tensor:
+        """Equalize the tiles.
+    
+        Args:
+            interp_tiles: set of interpolation tiles, values must be in the range [0, 1].
+              (B, 2GH, 2GW, C, TH/2, TW/2)
+            luts: luts for each one of the original tiles. (B, GH, GW, C, 256)
+    
+        Returns:
+            equalized tiles (B, 2GH, 2GW, C, TH/2, TW/2)
+        """
+        if interp_tiles.dim() != 6:
+            raise AssertionError('interp_tiles tensor must be 6D.')
+>       if luts.dim() != 5:
+E       AttributeError: 'numpy.ndarray' object has no attribute 'dim'. Did you mean: 'ndim'?
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/equalization.py:177: AttributeError
+____________________ TestEqualization.test_ahe[cpu-float32] ____________________
+
+self = <test_equalization.TestEqualization object at 0x7b76d3358370>
+img = tensor([[[[0.0000, 0.0526, 0.1053, 0.1579, 0.2105, 0.2632, 0.3158, 0.3684,
+           0.4211, 0.4737, 0.5263, 0.5789, ...         0.4211, 0.4737, 0.5263, 0.5789, 0.6316, 0.6842, 0.7368, 0.7895,
+           0.8421, 0.8947, 0.9474, 1.0000]]]])
+
+    def test_ahe(self, img):
+        clip_limit: float = 0.0
+        grid_size: Tuple = (8, 8)
+>       res = enhance.equalize_clahe(img, clip_limit=clip_limit, grid_size=grid_size)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py:148: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/equalization.py:249: in equalize_clahe
+    equalized_tiles: torch.Tensor = _compute_equalized_tiles(interp_tiles, luts)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+interp_tiles = tensor([[[[[[0.0000, 0.0526],
+            [0.0000, 0.0526]]],
+
+
+          [[[0.1053, 0.1579],
+            [0.1053, 0.1... [[[0.5263, 0.4737],
+            [0.5263, 0.4737]]],
+
+
+          [[[0.4211, 0.3684],
+            [0.4211, 0.3684]]]]]])
+luts = array([[[[[0., 0., 0., ..., 0., 0., 0.]],
+
+         [[0., 0., 0., ..., 0., 0., 0.]],
+
+         [[0., 0., 0., ..., 0., ..., 0., 0., 0.]],
+
+         [[0., 0., 0., ..., 0., 0., 0.]],
+
+         [[0., 0., 0., ..., 0., 0., 0.]]]]], dtype=float32)
+
+    def _compute_equalized_tiles(interp_tiles: torch.Tensor, luts: torch.Tensor) -> torch.Tensor:
+        """Equalize the tiles.
+    
+        Args:
+            interp_tiles: set of interpolation tiles, values must be in the range [0, 1].
+              (B, 2GH, 2GW, C, TH/2, TW/2)
+            luts: luts for each one of the original tiles. (B, GH, GW, C, 256)
+    
+        Returns:
+            equalized tiles (B, 2GH, 2GW, C, TH/2, TW/2)
+        """
+        if interp_tiles.dim() != 6:
+            raise AssertionError('interp_tiles tensor must be 6D.')
+>       if luts.dim() != 5:
+E       AttributeError: 'numpy.ndarray' object has no attribute 'dim'. Did you mean: 'ndim'?
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/equalization.py:177: AttributeError
+___________________ TestEqualization.test_clahe[cpu-float32] ___________________
+
+self = <test_equalization.TestEqualization object at 0x7b76d33586d0>
+img = tensor([[[[0.0000, 0.0526, 0.1053, 0.1579, 0.2105, 0.2632, 0.3158, 0.3684,
+           0.4211, 0.4737, 0.5263, 0.5789, ...         0.4211, 0.4737, 0.5263, 0.5789, 0.6316, 0.6842, 0.7368, 0.7895,
+           0.8421, 0.8947, 0.9474, 1.0000]]]])
+
+    def test_clahe(self, img):
+        clip_limit: float = 2.0
+        grid_size: Tuple = (8, 8)
+>       res = enhance.equalize_clahe(img, clip_limit=clip_limit, grid_size=grid_size)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py:189: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/equalization.py:249: in equalize_clahe
+    equalized_tiles: torch.Tensor = _compute_equalized_tiles(interp_tiles, luts)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+interp_tiles = tensor([[[[[[0.0000, 0.0526],
+            [0.0000, 0.0526]]],
+
+
+          [[[0.1053, 0.1579],
+            [0.1053, 0.1... [[[0.5263, 0.4737],
+            [0.5263, 0.4737]]],
+
+
+          [[[0.4211, 0.3684],
+            [0.4211, 0.3684]]]]]])
+luts = array([[[[[0., 0., 0., ..., 0., 0., 0.]],
+
+         [[0., 0., 0., ..., 0., 0., 0.]],
+
+         [[0., 0., 0., ..., 0., ..., 0., 0., 0.]],
+
+         [[0., 0., 0., ..., 0., 0., 0.]],
+
+         [[0., 0., 0., ..., 0., 0., 0.]]]]], dtype=float32)
+
+    def _compute_equalized_tiles(interp_tiles: torch.Tensor, luts: torch.Tensor) -> torch.Tensor:
+        """Equalize the tiles.
+    
+        Args:
+            interp_tiles: set of interpolation tiles, values must be in the range [0, 1].
+              (B, 2GH, 2GW, C, TH/2, TW/2)
+            luts: luts for each one of the original tiles. (B, GH, GW, C, 256)
+    
+        Returns:
+            equalized tiles (B, 2GH, 2GW, C, TH/2, TW/2)
+        """
+        if interp_tiles.dim() != 6:
+            raise AssertionError('interp_tiles tensor must be 6D.')
+>       if luts.dim() != 5:
+E       AttributeError: 'numpy.ndarray' object has no attribute 'dim'. Did you mean: 'ndim'?
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/equalization.py:177: AttributeError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_smoke[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_cardinality[cpu-float32-None-1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_cardinality[cpu-float32-None-3]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_cardinality[cpu-float32-1-1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_cardinality[cpu-float32-1-3]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_cardinality[cpu-float32-4-1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_cardinality[cpu-float32-4-3]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_optional_params[cpu-float32-0.0-None]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_optional_params[cpu-float32-None-grid1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_optional_params[cpu-float32-2.0-grid2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_gradcheck[cpu]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_he[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_ahe[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_clahe[cpu-float32]
+=================== 14 failed, 10 passed, 1 skipped in 0.70s ===================
+
+
+Final Test Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'inductor', 'onnxrt', 'openxla', 'cudagraphs', 'jit', 'tvm', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 25 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_smoke[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_cardinality[cpu-float32-None-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_cardinality[cpu-float32-None-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_cardinality[cpu-float32-1-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_cardinality[cpu-float32-1-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_cardinality[cpu-float32-4-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_cardinality[cpu-float32-4-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_optional_params[cpu-float32-0.0-None] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_optional_params[cpu-float32-None-grid1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_optional_params[cpu-float32-2.0-grid2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_exception[0-1.0-grid0-ValueError-Invalid input tensor, it is empty.] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_exception[1-1-grid1-TypeError-Input clip_limit type is not float. Got] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_exception[1-2.0-2-TypeError-Input grid_size type is not Tuple. Got] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_exception[1-2.0-grid3-TypeError-Input grid_size is not a Tuple with 2 elements. Got 3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_exception[1-2.0-grid4-TypeError-Input grid_size type is not valid, must be a Tuple[int, int]] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_exception[1-2.0-grid5-ValueError-Input grid_size elements must be positive. Got] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_exception_tensor_dims[dims0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_exception_tensor_dims[dims1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_exception_tensor_type PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_gradcheck[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_jit[cpu-float32] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_module PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_he[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_ahe[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_clahe[cpu-float32] PASSED
+
+======================== 24 passed, 1 skipped in 0.23s =========================
+
+
+Initial Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'cudagraphs', 'openxla', 'jit', 'inductor', 'onnxrt', 'tvm', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 25 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_smoke[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_cardinality[cpu-float32-None-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_cardinality[cpu-float32-None-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_cardinality[cpu-float32-1-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_cardinality[cpu-float32-1-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_cardinality[cpu-float32-4-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_cardinality[cpu-float32-4-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_optional_params[cpu-float32-0.0-None] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_optional_params[cpu-float32-None-grid1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_optional_params[cpu-float32-2.0-grid2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_exception[0-1.0-grid0-ValueError-Invalid input tensor, it is empty.] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_exception[1-1-grid1-TypeError-Input clip_limit type is not float. Got] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_exception[1-2.0-2-TypeError-Input grid_size type is not Tuple. Got] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_exception[1-2.0-grid3-TypeError-Input grid_size is not a Tuple with 2 elements. Got 3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_exception[1-2.0-grid4-TypeError-Input grid_size type is not valid, must be a Tuple[int, int]] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_exception[1-2.0-grid5-ValueError-Input grid_size elements must be positive. Got] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_exception_tensor_dims[dims0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_exception_tensor_dims[dims1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_exception_tensor_type PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_gradcheck[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_jit[cpu-float32] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_module PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_he[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_ahe[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_equalization.py::TestEqualization::test_clahe[cpu-float32] PASSED
+
+======================== 24 passed, 1 skipped in 0.24s =========================

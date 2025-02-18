@@ -1,0 +1,21 @@
+stage: 
+task: Classification
+data: pre-post process
+
+prompt:
+Generate a Python function called `get_norm` that retrieves the scaling parameters for multiple groups based on the input DataFrame `X`. The input is a pandas DataFrame `X` with group columns, and the output is a DataFrame containing the scaling parameters where each row corresponds to the input DataFrame.
+
+```python
+class GroupNormalizer(TorchNormalizer):
+    def get_norm(self, X: pd.DataFrame) -> pd.DataFrame:
+```
+
+ ground Truth:pytorch_forecasting/data/encoders.py
+
+ repo:pytorch-forecasting
+
+ function:get_norm
+ 
+ test_cases:tests/test_data/test_encoders.py
+ 
+ class:GroupNormalizer

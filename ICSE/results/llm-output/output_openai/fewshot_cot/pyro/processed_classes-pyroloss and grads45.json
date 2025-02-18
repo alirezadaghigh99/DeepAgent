@@ -1,0 +1,11 @@
+{
+    "result": "Error",
+    "prompt": "Generate a Python method `loss_and_grads` for the `ReweightedWakeSleep` class. This method should compute the Reweighted Wake-Sleep (RWS) estimators for the model (`wake-theta`) and the guide (`wake-phi`), and perform backpropagation to update both sets of parameters. It should leverage the `_loss` method to calculate the losses and then execute the gradient update.\n\nClass structure:\n\n```python\nclass ReweightedWakeSleep(ELBO):\n    def __init__(self, num_particles=2, insomnia=1.0, model_has_params=True, num_sleep_particles=None, vectorize_particles=True, max_plate_nesting=float(\"inf\"), strict_enumeration_warning=True):\n        # Initialization code\n\n    def _get_trace(self, model, guide, args, kwargs):\n        # Returns a single trace from the guide, and the model that is run against it\n\n    def _loss(self, model, guide, args, kwargs):\n        # Returns the computed model loss (wake_theta_loss) and guide loss (phi_loss)\n\n    def loss(self, model, guide, *args, **kwargs):\n        # Calls _loss method and returns the model loss and guide loss\n\n    def loss_and_grads(self, model, guide, *args, **kwargs):\n        # Method to implement\n```",
+    "function_name": "loss_and_grads",
+    "ground_truth": "pyro/infer/rws.py",
+    "test": "tests/infer/test_inference.py",
+    "class": "ReweightedWakeSleep",
+    "stage": "",
+    "task": "",
+    "data": "Inference"
+}

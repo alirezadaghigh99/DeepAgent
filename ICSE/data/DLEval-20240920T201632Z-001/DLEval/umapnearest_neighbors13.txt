@@ -1,0 +1,16 @@
+stage: Model Construction
+task: Classification
+data: Table
+
+prompt:
+Generate a Python function called nearest_neighbors that computes the n_neighbors nearest points for each data point in X under a specified metric. The function takes in parameters such as the input data X, the number of nearest neighbors to compute, the metric to use, any arguments for the metric computation function, whether to use angular rp trees in nearest neighbor approximation, a random state for approximate computations, and optional parameters like low_memory and verbose. 
+
+The function returns three outputs: knn_indices, an array of shape (n_samples, n_neighbors) containing the indices of the n_neighbors closest points in the dataset; knn_dists, an array of shape (n_samples, n_neighbors) containing the distances to the n_neighbors closest points in the dataset; and rp_forest, a list of trees representing the random projection forest used for searching (or None if not used). If verbose is set to True, the function will print status data during the computation.
+
+ ground Truth:umap/umap_.py
+
+ repo:umap
+
+ function:nearest_neighbors
+ 
+ test_cases:umap/tests/test_umap_nn.py

@@ -1,0 +1,29 @@
+stage: Model Construction
+task: Prediction
+data: tabular
+
+prompt:
+"Write the multivariate_normal function as follow :
+@check_shapes(
+    "x: [D, broadcast N]",
+    "mu: [D, broadcast N]",
+    "L: [D, D]",
+    "return: [N]",
+)
+def multivariate_normal(x: TensorType, mu: TensorType, L: TensorType) -> tf.Tensor:
+    """
+    Computes the log-density of a multivariate normal.
+
+    :param x: sample(s) for which we want the density
+    :param mu: mean(s) of the normal distribution
+    :param L: Cholesky decomposition of the covariance matrix
+    :return: log densities
+    """
+
+ ground Truth:gpflow/logdensities.py
+
+ repo:GPflow
+
+ function:multivariate_normal
+ 
+ test_cases:tests/gpflow/test_logdensities.py::test_multivariate_normal

@@ -1,0 +1,11 @@
+{
+    "result": "Certainly! Below is a Python function named `_box_xyxy_to_cxcywh` that converts bounding boxes from the (x1, y1, x2, y2) format to the (cx, cy, w, h) format. This function uses PyTorch to handle tensor operations:\n\n```python\nimport torch\n\ndef _box_xyxy_to_cxcywh(boxes: torch.Tensor) -> torch.Tensor:\n    \"\"\"\n    Convert bounding boxes from (x1, y1, x2, y2) format to (cx, cy, w, h) format.\n\n    Args:\n        boxes (Tensor): A tensor of shape (N, 4) where N is the number of boxes.\n                        Each box is represented as (x1, y1, x2, y2).\n\n    Returns:\n        Tensor: A tensor of shape (N, 4) with boxes in (cx, cy, w, h) format.\n    \"\"\"\n    x1, y1, x2, y2 = boxes.unbind(-1)\n    cx = (x1 + x2) / 2\n    cy = (y1 + y2) / 2\n    w = x2 - x1\n    h = y2 - y1\n    return torch.stack((cx, cy, w, h), dim=-1)\n```\n\n### Explanation:\n- **Input**: The function takes a tensor `boxes` of shape (N, 4), where N is the number of bounding boxes. Each box is represented by its top-left (x1, y1) and bottom-right (x2, y2) corners.\n- **Output**: The function returns a tensor of the same shape (N, 4), but with each box represented by its center (cx, cy) and dimensions (w, h).\n- **Operations**:\n  - `unbind(-1)`: Splits the last dimension of the tensor into separate tensors for x1, y1, x2, and y2.\n  - The center coordinates (cx, cy) are calculated as the midpoint between the respective corners.\n  - The width (w) and height (h) are calculated as the difference between the x and y coordinates, respectively.\n  - `torch.stack`: Combines the calculated cx, cy, w, and h into a single tensor.",
+    "prompt": "Write a Python function _box_xyxy_to_cxcywh that converts bounding boxes from the (x1, y1, x2, y2) format, where (x1, y1) and (x2, y2) represent the top-left and bottom-right corners, to the (cx, cy, w, h) format, where (cx, cy) represents the center and (w, h) represents the width and height. The function should return a tensor with the converted bounding boxes.",
+    "function_name": "_box_xyxy_to_cxcywh",
+    "ground_truth": "torchvision/ops/_box_convert.py",
+    "test": "test/test_ops.py::TestBoxConvert",
+    "class": "",
+    "stage": "Pre-Post processing",
+    "task": "",
+    "data": "Image"
+}

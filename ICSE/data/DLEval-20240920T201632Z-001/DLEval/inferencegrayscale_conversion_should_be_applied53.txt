@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Create a Python function called grayscale_conversion_should_be_applied that takes in two parameters: preprocessing_config (a dictionary) and disable_preproc_grayscale (a boolean). The function should return a boolean value. The function should check if the key 'GRAYSCALE' is present in the preprocessing_config dictionary, if DISABLE_PREPROC_GRAYSCALE is not True, if disable_preproc_grayscale is not True, and if the value of preprocessing_config['GRAYSCALE'][ENABLED] is True. If all conditions are met, the function should return True, otherwise it should return False.
+
+ ground Truth:inference/core/utils/preprocess.py
+
+ repo:inference
+
+ function:grayscale_conversion_should_be_applied
+ 
+ test_cases:tests/inference/unit_tests/core/utils/test_preprocess.py

@@ -1,0 +1,23 @@
+stage: 
+task: Regression
+data: Training
+
+prompt:
+Generate a Python function `_create_pytorch_loss` for the class `L2Loss` that creates a PyTorch loss function to calculate the mean squared error (MSE) loss. Ensure the shapes of `output` and `labels` are consistent, then compute the MSE loss without reduction.
+
+Output format:
+
+```python
+class L2Loss(Loss):
+    def _create_pytorch_loss(self):
+```
+
+ ground Truth:deepchem/models/losses.py
+
+ repo:deepchem
+
+ function:_create_pytorch_loss
+ 
+ test_cases:deepchem/models/tests/test_losses.py
+ 
+ class:L2Loss

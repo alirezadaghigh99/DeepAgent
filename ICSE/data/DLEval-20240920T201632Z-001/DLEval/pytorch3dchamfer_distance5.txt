@@ -1,0 +1,14 @@
+stage: Model Construction
+task: 
+data: Image
+
+prompt:
+Generate a Python function called chamfer_distance that calculates the Chamfer distance between two point clouds x and y. The function takes in various optional parameters such as x_lengths, y_lengths, x_normals, y_normals, weights, batch_reduction, point_reduction, norm, single_directional, and abs_cosine. The function returns a tuple containing the reduced distance between the point clouds in x and y, as well as the reduced cosine distance of normals between the point clouds in x and y.
+
+ ground Truth:pytorch3d/loss/chamfer.py
+
+ repo:pytorch3d
+
+ function:chamfer_distance
+ 
+ test_cases:tests/test_chamfer.py::TestChamfer

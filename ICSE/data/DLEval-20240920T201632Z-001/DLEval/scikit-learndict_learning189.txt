@@ -1,0 +1,37 @@
+stage: Model Construction
+task: Prediction
+data: 
+
+prompt:
+Define a Python function called dict_learning that solves a dictionary learning matrix factorization problem. The function takes in the following parameters:
+
+- X: Data matrix of shape (n_samples, n_features)
+- n_components: Number of dictionary atoms to extract
+- alpha: Sparsity controlling parameter
+- max_iter: Maximum number of iterations to perform (default=100)
+- tol: Tolerance for the stopping condition (default=1e-8)
+- method: Method used for solving the problem (default='lars')
+- n_jobs: Number of parallel jobs to run (default=None)
+- dict_init: Initial value for the dictionary for warm restart scenarios (default=None)
+- code_init: Initial value for the sparse code for warm restart scenarios (default=None)
+- callback: Callable that gets invoked every five iterations (default=None)
+- verbose: Verbosity of the procedure (default=False)
+- random_state: Used for randomly initializing the dictionary (default=None)
+- return_n_iter: Whether or not to return the number of iterations (default=False)
+- positive_dict: Whether to enforce positivity when finding the dictionary (default=False)
+- positive_code: Whether to enforce positivity when finding the code (default=False)
+- method_max_iter: Maximum number of iterations to perform (default=1000)
+
+The function returns the following outputs:
+
+- code: Sparse code factor in the matrix factorization
+- dictionary: Dictionary factor in the matrix factorization
+- errors: Vector of errors at each iteration
+
+ ground Truth:sklearn/decomposition/_dict_learning.py
+
+ repo:scikit-learn
+
+ function:dict_learning
+ 
+ test_cases:sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match

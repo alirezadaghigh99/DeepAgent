@@ -1,0 +1,453 @@
+output file:
+processed_scikit-learndict_learning189.json
+function:
+dict_learning
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[float32-float32-cd] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[float64-float64-cd]', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[int32-float64-cd] FAILED', 'FAILED', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[int64-float64-cd] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[int32-float64-cd]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[float64-float64-lars]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[int64-float64-lars]', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[float64-float64-lars] FAILED', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[int32-float64-lars] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[float32-float32-lars]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[float32-float32-cd]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[int64-float64-cd]', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[int64-float64-lars] FAILED', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[float64-float64-cd] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[int32-float64-lars]'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.9.0, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/scikit-learn/scikit-learn
+configfile: setup.cfg
+plugins: cov-6.0.0
+collecting ... collected 8 items
+
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[float32-float32-lars] I: Seeding RNGs with 1153885565
+FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[float32-float32-cd] FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[float64-float64-lars] FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[float64-float64-cd] FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[int32-float64-lars] FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[int32-float64-cd] FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[int64-float64-lars] FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[int64-float64-cd] FAILED
+
+=================================== FAILURES ===================================
+_____________ test_dict_learning_dtype_match[float32-float32-lars] _____________
+
+data_type = <class 'numpy.float32'>, expected_type = <class 'numpy.float32'>
+method = 'lars'
+
+    @pytest.mark.parametrize("method", ("lars", "cd"))
+    @pytest.mark.parametrize(
+        "data_type, expected_type",
+        (
+            (np.float32, np.float32),
+            (np.float64, np.float64),
+            (np.int32, np.float64),
+            (np.int64, np.float64),
+        ),
+    )
+    def test_dict_learning_dtype_match(data_type, expected_type, method):
+        # Verify output matrix dtype
+        rng = np.random.RandomState(0)
+        n_components = 8
+>       code, dictionary, _ = dict_learning(
+            X.astype(data_type),
+            n_components=n_components,
+            alpha=1,
+            random_state=rng,
+            method=method,
+        )
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py:815: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+X = array([[ 1.7640524 ,  0.4001572 ,  0.978738  ,  2.2408931 ,  1.867558  ,
+        -0.9772779 ,  0.95008844, -0.1513572 ...7 , -1.2348258 ,  0.40234163, -0.6848101 , -0.87079716,
+        -0.5788497 , -0.31155252,  0.05616534]], dtype=float32)
+n_components = 8
+
+    @validate_params({'X': ['array-like'], 'method': [StrOptions({'lars', 'cd'})], 'return_n_iter': ['boolean'], 'method_max_iter': [Interval(Integral, 0, None, closed='left')]}, prefer_skip_nested_validation=False)
+    def dict_learning(X, n_components, *, alpha, max_iter=100, tol=1e-08, method='lars', n_jobs=None, dict_init=None, code_init=None, callback=None, verbose=False, random_state=None, return_n_iter=False, positive_dict=False, positive_code=False, method_max_iter=1000):
+        from .temp import dict_learning
+>       return dict_learning(X, n_components)
+E       TypeError: dict_learning() missing 1 required positional argument: 'alpha'
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/_dict_learning.py:559: TypeError
+______________ test_dict_learning_dtype_match[float32-float32-cd] ______________
+
+data_type = <class 'numpy.float32'>, expected_type = <class 'numpy.float32'>
+method = 'cd'
+
+    @pytest.mark.parametrize("method", ("lars", "cd"))
+    @pytest.mark.parametrize(
+        "data_type, expected_type",
+        (
+            (np.float32, np.float32),
+            (np.float64, np.float64),
+            (np.int32, np.float64),
+            (np.int64, np.float64),
+        ),
+    )
+    def test_dict_learning_dtype_match(data_type, expected_type, method):
+        # Verify output matrix dtype
+        rng = np.random.RandomState(0)
+        n_components = 8
+>       code, dictionary, _ = dict_learning(
+            X.astype(data_type),
+            n_components=n_components,
+            alpha=1,
+            random_state=rng,
+            method=method,
+        )
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py:815: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+X = array([[ 1.7640524 ,  0.4001572 ,  0.978738  ,  2.2408931 ,  1.867558  ,
+        -0.9772779 ,  0.95008844, -0.1513572 ...7 , -1.2348258 ,  0.40234163, -0.6848101 , -0.87079716,
+        -0.5788497 , -0.31155252,  0.05616534]], dtype=float32)
+n_components = 8
+
+    @validate_params({'X': ['array-like'], 'method': [StrOptions({'lars', 'cd'})], 'return_n_iter': ['boolean'], 'method_max_iter': [Interval(Integral, 0, None, closed='left')]}, prefer_skip_nested_validation=False)
+    def dict_learning(X, n_components, *, alpha, max_iter=100, tol=1e-08, method='lars', n_jobs=None, dict_init=None, code_init=None, callback=None, verbose=False, random_state=None, return_n_iter=False, positive_dict=False, positive_code=False, method_max_iter=1000):
+        from .temp import dict_learning
+>       return dict_learning(X, n_components)
+E       TypeError: dict_learning() missing 1 required positional argument: 'alpha'
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/_dict_learning.py:559: TypeError
+_____________ test_dict_learning_dtype_match[float64-float64-lars] _____________
+
+data_type = <class 'numpy.float64'>, expected_type = <class 'numpy.float64'>
+method = 'lars'
+
+    @pytest.mark.parametrize("method", ("lars", "cd"))
+    @pytest.mark.parametrize(
+        "data_type, expected_type",
+        (
+            (np.float32, np.float32),
+            (np.float64, np.float64),
+            (np.int32, np.float64),
+            (np.int64, np.float64),
+        ),
+    )
+    def test_dict_learning_dtype_match(data_type, expected_type, method):
+        # Verify output matrix dtype
+        rng = np.random.RandomState(0)
+        n_components = 8
+>       code, dictionary, _ = dict_learning(
+            X.astype(data_type),
+            n_components=n_components,
+            alpha=1,
+            random_state=rng,
+            method=method,
+        )
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py:815: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+X = array([[ 1.76405235,  0.40015721,  0.97873798,  2.2408932 ,  1.86755799,
+        -0.97727788,  0.95008842, -0.15135721...     [ 1.13940068, -1.23482582,  0.40234164, -0.68481009, -0.87079715,
+        -0.57884966, -0.31155253,  0.05616534]])
+n_components = 8
+
+    @validate_params({'X': ['array-like'], 'method': [StrOptions({'lars', 'cd'})], 'return_n_iter': ['boolean'], 'method_max_iter': [Interval(Integral, 0, None, closed='left')]}, prefer_skip_nested_validation=False)
+    def dict_learning(X, n_components, *, alpha, max_iter=100, tol=1e-08, method='lars', n_jobs=None, dict_init=None, code_init=None, callback=None, verbose=False, random_state=None, return_n_iter=False, positive_dict=False, positive_code=False, method_max_iter=1000):
+        from .temp import dict_learning
+>       return dict_learning(X, n_components)
+E       TypeError: dict_learning() missing 1 required positional argument: 'alpha'
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/_dict_learning.py:559: TypeError
+______________ test_dict_learning_dtype_match[float64-float64-cd] ______________
+
+data_type = <class 'numpy.float64'>, expected_type = <class 'numpy.float64'>
+method = 'cd'
+
+    @pytest.mark.parametrize("method", ("lars", "cd"))
+    @pytest.mark.parametrize(
+        "data_type, expected_type",
+        (
+            (np.float32, np.float32),
+            (np.float64, np.float64),
+            (np.int32, np.float64),
+            (np.int64, np.float64),
+        ),
+    )
+    def test_dict_learning_dtype_match(data_type, expected_type, method):
+        # Verify output matrix dtype
+        rng = np.random.RandomState(0)
+        n_components = 8
+>       code, dictionary, _ = dict_learning(
+            X.astype(data_type),
+            n_components=n_components,
+            alpha=1,
+            random_state=rng,
+            method=method,
+        )
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py:815: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+X = array([[ 1.76405235,  0.40015721,  0.97873798,  2.2408932 ,  1.86755799,
+        -0.97727788,  0.95008842, -0.15135721...     [ 1.13940068, -1.23482582,  0.40234164, -0.68481009, -0.87079715,
+        -0.57884966, -0.31155253,  0.05616534]])
+n_components = 8
+
+    @validate_params({'X': ['array-like'], 'method': [StrOptions({'lars', 'cd'})], 'return_n_iter': ['boolean'], 'method_max_iter': [Interval(Integral, 0, None, closed='left')]}, prefer_skip_nested_validation=False)
+    def dict_learning(X, n_components, *, alpha, max_iter=100, tol=1e-08, method='lars', n_jobs=None, dict_init=None, code_init=None, callback=None, verbose=False, random_state=None, return_n_iter=False, positive_dict=False, positive_code=False, method_max_iter=1000):
+        from .temp import dict_learning
+>       return dict_learning(X, n_components)
+E       TypeError: dict_learning() missing 1 required positional argument: 'alpha'
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/_dict_learning.py:559: TypeError
+______________ test_dict_learning_dtype_match[int32-float64-lars] ______________
+
+data_type = <class 'numpy.int32'>, expected_type = <class 'numpy.float64'>
+method = 'lars'
+
+    @pytest.mark.parametrize("method", ("lars", "cd"))
+    @pytest.mark.parametrize(
+        "data_type, expected_type",
+        (
+            (np.float32, np.float32),
+            (np.float64, np.float64),
+            (np.int32, np.float64),
+            (np.int64, np.float64),
+        ),
+    )
+    def test_dict_learning_dtype_match(data_type, expected_type, method):
+        # Verify output matrix dtype
+        rng = np.random.RandomState(0)
+        n_components = 8
+>       code, dictionary, _ = dict_learning(
+            X.astype(data_type),
+            n_components=n_components,
+            alpha=1,
+            random_state=rng,
+            method=method,
+        )
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py:815: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+X = array([[ 1,  0,  0,  2,  1,  0,  0,  0],
+       [ 0,  0,  0,  1,  0,  0,  0,  0],
+       [ 1,  0,  0,  0, -2,  0,  0, ...0,  0,  0,  0,  0, -1],
+       [ 0,  0, -1,  0,  0,  0,  0,  0],
+       [ 1, -1,  0,  0,  0,  0,  0,  0]], dtype=int32)
+n_components = 8
+
+    @validate_params({'X': ['array-like'], 'method': [StrOptions({'lars', 'cd'})], 'return_n_iter': ['boolean'], 'method_max_iter': [Interval(Integral, 0, None, closed='left')]}, prefer_skip_nested_validation=False)
+    def dict_learning(X, n_components, *, alpha, max_iter=100, tol=1e-08, method='lars', n_jobs=None, dict_init=None, code_init=None, callback=None, verbose=False, random_state=None, return_n_iter=False, positive_dict=False, positive_code=False, method_max_iter=1000):
+        from .temp import dict_learning
+>       return dict_learning(X, n_components)
+E       TypeError: dict_learning() missing 1 required positional argument: 'alpha'
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/_dict_learning.py:559: TypeError
+_______________ test_dict_learning_dtype_match[int32-float64-cd] _______________
+
+data_type = <class 'numpy.int32'>, expected_type = <class 'numpy.float64'>
+method = 'cd'
+
+    @pytest.mark.parametrize("method", ("lars", "cd"))
+    @pytest.mark.parametrize(
+        "data_type, expected_type",
+        (
+            (np.float32, np.float32),
+            (np.float64, np.float64),
+            (np.int32, np.float64),
+            (np.int64, np.float64),
+        ),
+    )
+    def test_dict_learning_dtype_match(data_type, expected_type, method):
+        # Verify output matrix dtype
+        rng = np.random.RandomState(0)
+        n_components = 8
+>       code, dictionary, _ = dict_learning(
+            X.astype(data_type),
+            n_components=n_components,
+            alpha=1,
+            random_state=rng,
+            method=method,
+        )
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py:815: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+X = array([[ 1,  0,  0,  2,  1,  0,  0,  0],
+       [ 0,  0,  0,  1,  0,  0,  0,  0],
+       [ 1,  0,  0,  0, -2,  0,  0, ...0,  0,  0,  0,  0, -1],
+       [ 0,  0, -1,  0,  0,  0,  0,  0],
+       [ 1, -1,  0,  0,  0,  0,  0,  0]], dtype=int32)
+n_components = 8
+
+    @validate_params({'X': ['array-like'], 'method': [StrOptions({'lars', 'cd'})], 'return_n_iter': ['boolean'], 'method_max_iter': [Interval(Integral, 0, None, closed='left')]}, prefer_skip_nested_validation=False)
+    def dict_learning(X, n_components, *, alpha, max_iter=100, tol=1e-08, method='lars', n_jobs=None, dict_init=None, code_init=None, callback=None, verbose=False, random_state=None, return_n_iter=False, positive_dict=False, positive_code=False, method_max_iter=1000):
+        from .temp import dict_learning
+>       return dict_learning(X, n_components)
+E       TypeError: dict_learning() missing 1 required positional argument: 'alpha'
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/_dict_learning.py:559: TypeError
+______________ test_dict_learning_dtype_match[int64-float64-lars] ______________
+
+data_type = <class 'numpy.int64'>, expected_type = <class 'numpy.float64'>
+method = 'lars'
+
+    @pytest.mark.parametrize("method", ("lars", "cd"))
+    @pytest.mark.parametrize(
+        "data_type, expected_type",
+        (
+            (np.float32, np.float32),
+            (np.float64, np.float64),
+            (np.int32, np.float64),
+            (np.int64, np.float64),
+        ),
+    )
+    def test_dict_learning_dtype_match(data_type, expected_type, method):
+        # Verify output matrix dtype
+        rng = np.random.RandomState(0)
+        n_components = 8
+>       code, dictionary, _ = dict_learning(
+            X.astype(data_type),
+            n_components=n_components,
+            alpha=1,
+            random_state=rng,
+            method=method,
+        )
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py:815: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+X = array([[ 1,  0,  0,  2,  1,  0,  0,  0],
+       [ 0,  0,  0,  1,  0,  0,  0,  0],
+       [ 1,  0,  0,  0, -2,  0,  0, ...   [ 0,  0,  0,  0,  0,  0,  0, -1],
+       [ 0,  0, -1,  0,  0,  0,  0,  0],
+       [ 1, -1,  0,  0,  0,  0,  0,  0]])
+n_components = 8
+
+    @validate_params({'X': ['array-like'], 'method': [StrOptions({'lars', 'cd'})], 'return_n_iter': ['boolean'], 'method_max_iter': [Interval(Integral, 0, None, closed='left')]}, prefer_skip_nested_validation=False)
+    def dict_learning(X, n_components, *, alpha, max_iter=100, tol=1e-08, method='lars', n_jobs=None, dict_init=None, code_init=None, callback=None, verbose=False, random_state=None, return_n_iter=False, positive_dict=False, positive_code=False, method_max_iter=1000):
+        from .temp import dict_learning
+>       return dict_learning(X, n_components)
+E       TypeError: dict_learning() missing 1 required positional argument: 'alpha'
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/_dict_learning.py:559: TypeError
+_______________ test_dict_learning_dtype_match[int64-float64-cd] _______________
+
+data_type = <class 'numpy.int64'>, expected_type = <class 'numpy.float64'>
+method = 'cd'
+
+    @pytest.mark.parametrize("method", ("lars", "cd"))
+    @pytest.mark.parametrize(
+        "data_type, expected_type",
+        (
+            (np.float32, np.float32),
+            (np.float64, np.float64),
+            (np.int32, np.float64),
+            (np.int64, np.float64),
+        ),
+    )
+    def test_dict_learning_dtype_match(data_type, expected_type, method):
+        # Verify output matrix dtype
+        rng = np.random.RandomState(0)
+        n_components = 8
+>       code, dictionary, _ = dict_learning(
+            X.astype(data_type),
+            n_components=n_components,
+            alpha=1,
+            random_state=rng,
+            method=method,
+        )
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py:815: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+X = array([[ 1,  0,  0,  2,  1,  0,  0,  0],
+       [ 0,  0,  0,  1,  0,  0,  0,  0],
+       [ 1,  0,  0,  0, -2,  0,  0, ...   [ 0,  0,  0,  0,  0,  0,  0, -1],
+       [ 0,  0, -1,  0,  0,  0,  0,  0],
+       [ 1, -1,  0,  0,  0,  0,  0,  0]])
+n_components = 8
+
+    @validate_params({'X': ['array-like'], 'method': [StrOptions({'lars', 'cd'})], 'return_n_iter': ['boolean'], 'method_max_iter': [Interval(Integral, 0, None, closed='left')]}, prefer_skip_nested_validation=False)
+    def dict_learning(X, n_components, *, alpha, max_iter=100, tol=1e-08, method='lars', n_jobs=None, dict_init=None, code_init=None, callback=None, verbose=False, random_state=None, return_n_iter=False, positive_dict=False, positive_code=False, method_max_iter=1000):
+        from .temp import dict_learning
+>       return dict_learning(X, n_components)
+E       TypeError: dict_learning() missing 1 required positional argument: 'alpha'
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/_dict_learning.py:559: TypeError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[float32-float32-lars]
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[float32-float32-cd]
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[float64-float64-lars]
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[float64-float64-cd]
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[int32-float64-lars]
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[int32-float64-cd]
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[int64-float64-lars]
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[int64-float64-cd]
+============================== 8 failed in 0.73s ===============================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.9.0, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/scikit-learn/scikit-learn
+configfile: setup.cfg
+plugins: cov-6.0.0
+collecting ... collected 8 items
+
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[float32-float32-lars] I: Seeding RNGs with 2033247554
+PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[float32-float32-cd] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[float64-float64-lars] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[float64-float64-cd] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[int32-float64-lars] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[int32-float64-cd] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[int64-float64-lars] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[int64-float64-cd] PASSED
+
+============================== 8 passed in 0.50s ===============================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.9.0, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/scikit-learn/scikit-learn
+configfile: setup.cfg
+plugins: cov-6.0.0
+collecting ... collected 8 items
+
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[float32-float32-lars] I: Seeding RNGs with 1754773589
+PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[float32-float32-cd] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[float64-float64-lars] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[float64-float64-cd] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[int32-float64-lars] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[int32-float64-cd] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[int64-float64-lars] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/decomposition/tests/test_dict_learning.py::test_dict_learning_dtype_match[int64-float64-cd] PASSED
+
+============================== 8 passed in 0.50s ===============================

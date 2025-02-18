@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: Detection
+data: Image
+
+prompt:
+Create a function `rotate_laf` that applies an additional rotation to a Local Affine Frame (LAF). The function takes in a tensor `LAF` of shape `(B, N, 2, 3)` and a tensor `angles_degrees` of shape `(B, N, 1)` representing rotation angles in degrees. It returns the rotated LAF with the same shape. The function raises an error if the input LAF is not properly structured.
+
+ ground Truth:kornia/feature/laf.py#L70
+
+ repo:kornia
+
+ function:rotate_laf
+ 
+ test_cases:tests/feature/test_laf.py

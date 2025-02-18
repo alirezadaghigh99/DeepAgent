@@ -1,0 +1,584 @@
+output file:
+processed_kornianormal_transform_pixel176.json
+function:
+normal_transform_pixel
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_normalize_homography_general[cpu-float32-3]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_consistency[cpu-float32-3] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_denormalize_homography_identity[cpu-float32-3] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_denormalize_homography_general[cpu-float32-3] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_normalize_homography_general[cpu-float32-3] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_denormalize_homography_identity[cpu-float32-3]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_normalize_homography_identity[cpu-float32-3]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_denormalize_homography_general[cpu-float32-3]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_consistency[cpu-float32-3]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_normalize_homography_identity[cpu-float32-3] FAILED'}
+
+All Test Cases On Generated code:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'jit', 'openxla', 'onnxrt', 'cudagraphs', 'inductor', 'tvm', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 51 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_identity[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_normalize_homography_identity[cpu-float32-1] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_normalize_homography_identity[cpu-float32-3] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_denormalize_homography_identity[cpu-float32-1] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_denormalize_homography_identity[cpu-float32-3] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_normalize_homography_general[cpu-float32-1] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_normalize_homography_general[cpu-float32-3] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_denormalize_homography_general[cpu-float32-1] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_denormalize_homography_general[cpu-float32-3] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_consistency[cpu-float32-1] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_consistency[cpu-float32-3] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape0-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape0-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape0-7] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape1-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape1-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape1-7] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape2-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape2-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape2-7] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape3-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape3-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape3-7] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_identity_resize[cpu-float32-batch_shape0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_identity_resize[cpu-float32-batch_shape1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_identity_resize[cpu-float32-batch_shape2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_translation[cpu-float32-shape0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_translation[cpu-float32-shape1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_translation[cpu-float32-shape2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_translation[cpu-float32-shape3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_rotation[cpu-float32-batch_shape0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_rotation[cpu-float32-batch_shape1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_rotation[cpu-float32-batch_shape2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_homography_warper[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_homography_warper[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_homography_warper[cpu-float32-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_gradcheck[cpu-batch_shape0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_gradcheck[cpu-batch_shape1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_gradcheck[cpu-batch_shape2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-True-True-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-True-True-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-True-True-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-True-False-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-True-False-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-True-False-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-False-True-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-False-True-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-False-True-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-False-False-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-False-False-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-False-False-3] PASSED
+
+=================================== FAILURES ===================================
+____ TestHomographyWarper.test_normalize_homography_identity[cpu-float32-1] ____
+
+self = <test_homography_warper.TestHomographyWarper object at 0x7280bcf37400>
+batch_size = 1, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 3])
+    def test_normalize_homography_identity(self, batch_size, device, dtype):
+        # create input data
+        height, width = 2, 5
+        res = torch.tensor([[[0.5, 0.0, -1.0], [0.0, 2.0, -1.0], [0.0, 0.0, 1.0]]], device=device, dtype=dtype)
+        dst_homo_src = eye_like(3, res.expand(batch_size, -1, -1, -1))
+    
+        self.assert_close(
+>           kornia.geometry.conversions.normal_transform_pixel(height, width, device=device, dtype=dtype), res
+        )
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+height = 2, width = 5, eps = 1e-14, device = device(type='cpu')
+dtype = torch.float32
+
+    def normal_transform_pixel(height: int, width: int, eps: float=1e-14, device: Optional[torch.device]=None, dtype: Optional[torch.dtype]=None) -> Tensor:
+>       from .temp import normal_transform_pixel
+E       ImportError: cannot import name 'normal_transform_pixel' from 'kornia.geometry.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/conversions.py:779: ImportError
+____ TestHomographyWarper.test_normalize_homography_identity[cpu-float32-3] ____
+
+self = <test_homography_warper.TestHomographyWarper object at 0x7280bcf37340>
+batch_size = 3, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 3])
+    def test_normalize_homography_identity(self, batch_size, device, dtype):
+        # create input data
+        height, width = 2, 5
+        res = torch.tensor([[[0.5, 0.0, -1.0], [0.0, 2.0, -1.0], [0.0, 0.0, 1.0]]], device=device, dtype=dtype)
+        dst_homo_src = eye_like(3, res.expand(batch_size, -1, -1, -1))
+    
+        self.assert_close(
+>           kornia.geometry.conversions.normal_transform_pixel(height, width, device=device, dtype=dtype), res
+        )
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+height = 2, width = 5, eps = 1e-14, device = device(type='cpu')
+dtype = torch.float32
+
+    def normal_transform_pixel(height: int, width: int, eps: float=1e-14, device: Optional[torch.device]=None, dtype: Optional[torch.dtype]=None) -> Tensor:
+>       from .temp import normal_transform_pixel
+E       ImportError: cannot import name 'normal_transform_pixel' from 'kornia.geometry.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/conversions.py:779: ImportError
+___ TestHomographyWarper.test_denormalize_homography_identity[cpu-float32-1] ___
+
+self = <test_homography_warper.TestHomographyWarper object at 0x7280bcf378b0>
+batch_size = 1, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 3])
+    def test_denormalize_homography_identity(self, batch_size, device, dtype):
+        # create input data
+        height, width = 2, 5
+    
+        res = torch.tensor([[[0.5, 0.0, -1.0], [0.0, 2.0, -1.0], [0.0, 0.0, 1.0]]], device=device, dtype=dtype)
+        dst_homo_src = eye_like(3, res.expand(batch_size, -1, -1, -1))
+    
+        self.assert_close(
+>           kornia.geometry.conversions.normal_transform_pixel(height, width, device=device, dtype=dtype), res
+        )
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py:61: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+height = 2, width = 5, eps = 1e-14, device = device(type='cpu')
+dtype = torch.float32
+
+    def normal_transform_pixel(height: int, width: int, eps: float=1e-14, device: Optional[torch.device]=None, dtype: Optional[torch.dtype]=None) -> Tensor:
+>       from .temp import normal_transform_pixel
+E       ImportError: cannot import name 'normal_transform_pixel' from 'kornia.geometry.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/conversions.py:779: ImportError
+___ TestHomographyWarper.test_denormalize_homography_identity[cpu-float32-3] ___
+
+self = <test_homography_warper.TestHomographyWarper object at 0x7280bcf377f0>
+batch_size = 3, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 3])
+    def test_denormalize_homography_identity(self, batch_size, device, dtype):
+        # create input data
+        height, width = 2, 5
+    
+        res = torch.tensor([[[0.5, 0.0, -1.0], [0.0, 2.0, -1.0], [0.0, 0.0, 1.0]]], device=device, dtype=dtype)
+        dst_homo_src = eye_like(3, res.expand(batch_size, -1, -1, -1))
+    
+        self.assert_close(
+>           kornia.geometry.conversions.normal_transform_pixel(height, width, device=device, dtype=dtype), res
+        )
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py:61: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+height = 2, width = 5, eps = 1e-14, device = device(type='cpu')
+dtype = torch.float32
+
+    def normal_transform_pixel(height: int, width: int, eps: float=1e-14, device: Optional[torch.device]=None, dtype: Optional[torch.dtype]=None) -> Tensor:
+>       from .temp import normal_transform_pixel
+E       ImportError: cannot import name 'normal_transform_pixel' from 'kornia.geometry.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/conversions.py:779: ImportError
+____ TestHomographyWarper.test_normalize_homography_general[cpu-float32-1] _____
+
+self = <test_homography_warper.TestHomographyWarper object at 0x7280bcf37d60>
+batch_size = 1, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 3])
+    def test_normalize_homography_general(self, batch_size, device, dtype):
+        # create input data
+        height, width = 2, 5
+        dst_homo_src = torch.eye(3, device=device, dtype=dtype)
+        dst_homo_src[..., 0, 0] = 0.5
+        dst_homo_src[..., 1, 1] = 2.0
+        dst_homo_src[..., 0, 2] = 1.0
+        dst_homo_src[..., 1, 2] = 2.0
+        dst_homo_src = dst_homo_src.expand(batch_size, -1, -1)
+    
+>       norm_homo = kornia.geometry.conversions.normalize_homography(dst_homo_src, (height, width), (height, width))
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py:87: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/conversions.py:772: in normalize_homography
+    src_norm_trans_src_pix: Tensor = normal_transform_pixel(src_h, src_w).to(dst_pix_trans_src_pix)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+height = 2, width = 5, eps = 1e-14, device = None, dtype = None
+
+    def normal_transform_pixel(height: int, width: int, eps: float=1e-14, device: Optional[torch.device]=None, dtype: Optional[torch.dtype]=None) -> Tensor:
+>       from .temp import normal_transform_pixel
+E       ImportError: cannot import name 'normal_transform_pixel' from 'kornia.geometry.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/conversions.py:779: ImportError
+____ TestHomographyWarper.test_normalize_homography_general[cpu-float32-3] _____
+
+self = <test_homography_warper.TestHomographyWarper object at 0x7280bcf37ca0>
+batch_size = 3, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 3])
+    def test_normalize_homography_general(self, batch_size, device, dtype):
+        # create input data
+        height, width = 2, 5
+        dst_homo_src = torch.eye(3, device=device, dtype=dtype)
+        dst_homo_src[..., 0, 0] = 0.5
+        dst_homo_src[..., 1, 1] = 2.0
+        dst_homo_src[..., 0, 2] = 1.0
+        dst_homo_src[..., 1, 2] = 2.0
+        dst_homo_src = dst_homo_src.expand(batch_size, -1, -1)
+    
+>       norm_homo = kornia.geometry.conversions.normalize_homography(dst_homo_src, (height, width), (height, width))
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py:87: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/conversions.py:772: in normalize_homography
+    src_norm_trans_src_pix: Tensor = normal_transform_pixel(src_h, src_w).to(dst_pix_trans_src_pix)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+height = 2, width = 5, eps = 1e-14, device = None, dtype = None
+
+    def normal_transform_pixel(height: int, width: int, eps: float=1e-14, device: Optional[torch.device]=None, dtype: Optional[torch.dtype]=None) -> Tensor:
+>       from .temp import normal_transform_pixel
+E       ImportError: cannot import name 'normal_transform_pixel' from 'kornia.geometry.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/conversions.py:779: ImportError
+___ TestHomographyWarper.test_denormalize_homography_general[cpu-float32-1] ____
+
+self = <test_homography_warper.TestHomographyWarper object at 0x7280bcf68250>
+batch_size = 1, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 3])
+    def test_denormalize_homography_general(self, batch_size, device, dtype):
+        # create input data
+        height, width = 2, 5
+        dst_homo_src = torch.eye(3, device=device, dtype=dtype)
+        dst_homo_src[..., 0, 0] = 0.5
+        dst_homo_src[..., 1, 1] = 2.0
+        dst_homo_src[..., 0, 2] = 1.0
+        dst_homo_src[..., 1, 2] = 2.0
+        dst_homo_src = dst_homo_src.expand(batch_size, -1, -1)
+    
+>       denorm_homo = kornia.geometry.conversions.denormalize_homography(dst_homo_src, (height, width), (height, width))
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py:104: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/conversions.py:839: in denormalize_homography
+    src_norm_trans_src_pix: Tensor = normal_transform_pixel(src_h, src_w).to(dst_pix_trans_src_pix)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+height = 2, width = 5, eps = 1e-14, device = None, dtype = None
+
+    def normal_transform_pixel(height: int, width: int, eps: float=1e-14, device: Optional[torch.device]=None, dtype: Optional[torch.dtype]=None) -> Tensor:
+>       from .temp import normal_transform_pixel
+E       ImportError: cannot import name 'normal_transform_pixel' from 'kornia.geometry.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/conversions.py:779: ImportError
+___ TestHomographyWarper.test_denormalize_homography_general[cpu-float32-3] ____
+
+self = <test_homography_warper.TestHomographyWarper object at 0x7280bcf68190>
+batch_size = 3, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 3])
+    def test_denormalize_homography_general(self, batch_size, device, dtype):
+        # create input data
+        height, width = 2, 5
+        dst_homo_src = torch.eye(3, device=device, dtype=dtype)
+        dst_homo_src[..., 0, 0] = 0.5
+        dst_homo_src[..., 1, 1] = 2.0
+        dst_homo_src[..., 0, 2] = 1.0
+        dst_homo_src[..., 1, 2] = 2.0
+        dst_homo_src = dst_homo_src.expand(batch_size, -1, -1)
+    
+>       denorm_homo = kornia.geometry.conversions.denormalize_homography(dst_homo_src, (height, width), (height, width))
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py:104: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/conversions.py:839: in denormalize_homography
+    src_norm_trans_src_pix: Tensor = normal_transform_pixel(src_h, src_w).to(dst_pix_trans_src_pix)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+height = 2, width = 5, eps = 1e-14, device = None, dtype = None
+
+    def normal_transform_pixel(height: int, width: int, eps: float=1e-14, device: Optional[torch.device]=None, dtype: Optional[torch.dtype]=None) -> Tensor:
+>       from .temp import normal_transform_pixel
+E       ImportError: cannot import name 'normal_transform_pixel' from 'kornia.geometry.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/conversions.py:779: ImportError
+_____________ TestHomographyWarper.test_consistency[cpu-float32-1] _____________
+
+self = <test_homography_warper.TestHomographyWarper object at 0x7280bcf68700>
+batch_size = 1, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 3])
+    def test_consistency(self, batch_size, device, dtype):
+        # create input data
+        height, width = 2, 5
+        dst_homo_src = torch.eye(3, device=device, dtype=dtype)
+        dst_homo_src[..., 0, 0] = 0.5
+        dst_homo_src[..., 1, 1] = 2.0
+        dst_homo_src[..., 0, 2] = 1.0
+        dst_homo_src[..., 1, 2] = 2.0
+        dst_homo_src = dst_homo_src.expand(batch_size, -1, -1)
+    
+>       denorm_homo = kornia.geometry.conversions.denormalize_homography(dst_homo_src, (height, width), (height, width))
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py:121: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/conversions.py:839: in denormalize_homography
+    src_norm_trans_src_pix: Tensor = normal_transform_pixel(src_h, src_w).to(dst_pix_trans_src_pix)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+height = 2, width = 5, eps = 1e-14, device = None, dtype = None
+
+    def normal_transform_pixel(height: int, width: int, eps: float=1e-14, device: Optional[torch.device]=None, dtype: Optional[torch.dtype]=None) -> Tensor:
+>       from .temp import normal_transform_pixel
+E       ImportError: cannot import name 'normal_transform_pixel' from 'kornia.geometry.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/conversions.py:779: ImportError
+_____________ TestHomographyWarper.test_consistency[cpu-float32-3] _____________
+
+self = <test_homography_warper.TestHomographyWarper object at 0x7280bcf68640>
+batch_size = 3, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 3])
+    def test_consistency(self, batch_size, device, dtype):
+        # create input data
+        height, width = 2, 5
+        dst_homo_src = torch.eye(3, device=device, dtype=dtype)
+        dst_homo_src[..., 0, 0] = 0.5
+        dst_homo_src[..., 1, 1] = 2.0
+        dst_homo_src[..., 0, 2] = 1.0
+        dst_homo_src[..., 1, 2] = 2.0
+        dst_homo_src = dst_homo_src.expand(batch_size, -1, -1)
+    
+>       denorm_homo = kornia.geometry.conversions.denormalize_homography(dst_homo_src, (height, width), (height, width))
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py:121: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/conversions.py:839: in denormalize_homography
+    src_norm_trans_src_pix: Tensor = normal_transform_pixel(src_h, src_w).to(dst_pix_trans_src_pix)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+height = 2, width = 5, eps = 1e-14, device = None, dtype = None
+
+    def normal_transform_pixel(height: int, width: int, eps: float=1e-14, device: Optional[torch.device]=None, dtype: Optional[torch.dtype]=None) -> Tensor:
+>       from .temp import normal_transform_pixel
+E       ImportError: cannot import name 'normal_transform_pixel' from 'kornia.geometry.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/conversions.py:779: ImportError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_normalize_homography_identity[cpu-float32-1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_normalize_homography_identity[cpu-float32-3]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_denormalize_homography_identity[cpu-float32-1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_denormalize_homography_identity[cpu-float32-3]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_normalize_homography_general[cpu-float32-1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_normalize_homography_general[cpu-float32-3]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_denormalize_homography_general[cpu-float32-1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_denormalize_homography_general[cpu-float32-3]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_consistency[cpu-float32-1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_consistency[cpu-float32-3]
+======================== 10 failed, 41 passed in 4.42s =========================
+
+
+Final Test Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'tvm', 'openxla', 'inductor', 'onnxrt', 'jit', None, 'cudagraphs'}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 51 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_identity[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_normalize_homography_identity[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_normalize_homography_identity[cpu-float32-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_denormalize_homography_identity[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_denormalize_homography_identity[cpu-float32-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_normalize_homography_general[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_normalize_homography_general[cpu-float32-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_denormalize_homography_general[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_denormalize_homography_general[cpu-float32-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_consistency[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_consistency[cpu-float32-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape0-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape0-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape0-7] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape1-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape1-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape1-7] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape2-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape2-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape2-7] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape3-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape3-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape3-7] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_identity_resize[cpu-float32-batch_shape0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_identity_resize[cpu-float32-batch_shape1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_identity_resize[cpu-float32-batch_shape2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_translation[cpu-float32-shape0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_translation[cpu-float32-shape1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_translation[cpu-float32-shape2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_translation[cpu-float32-shape3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_rotation[cpu-float32-batch_shape0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_rotation[cpu-float32-batch_shape1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_rotation[cpu-float32-batch_shape2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_homography_warper[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_homography_warper[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_homography_warper[cpu-float32-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_gradcheck[cpu-batch_shape0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_gradcheck[cpu-batch_shape1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_gradcheck[cpu-batch_shape2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-True-True-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-True-True-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-True-True-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-True-False-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-True-False-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-True-False-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-False-True-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-False-True-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-False-True-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-False-False-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-False-False-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-False-False-3] PASSED
+
+============================== 51 passed in 4.11s ==============================
+
+
+Initial Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'tvm', 'cudagraphs', None, 'openxla', 'onnxrt', 'jit', 'inductor'}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 51 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_identity[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_normalize_homography_identity[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_normalize_homography_identity[cpu-float32-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_denormalize_homography_identity[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_denormalize_homography_identity[cpu-float32-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_normalize_homography_general[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_normalize_homography_general[cpu-float32-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_denormalize_homography_general[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_denormalize_homography_general[cpu-float32-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_consistency[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_consistency[cpu-float32-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape0-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape0-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape0-7] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape1-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape1-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape1-7] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape2-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape2-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape2-7] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape3-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape3-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_warp_grid_translation[cpu-float32-shape3-7] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_identity_resize[cpu-float32-batch_shape0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_identity_resize[cpu-float32-batch_shape1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_identity_resize[cpu-float32-batch_shape2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_translation[cpu-float32-shape0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_translation[cpu-float32-shape1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_translation[cpu-float32-shape2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_translation[cpu-float32-shape3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_rotation[cpu-float32-batch_shape0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_rotation[cpu-float32-batch_shape1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_rotation[cpu-float32-batch_shape2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_homography_warper[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_homography_warper[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_homography_warper[cpu-float32-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_gradcheck[cpu-batch_shape0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_gradcheck[cpu-batch_shape1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_gradcheck[cpu-batch_shape2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-True-True-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-True-True-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-True-True-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-True-False-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-True-False-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-True-False-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-False-True-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-False-True-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-False-True-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-False-False-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-False-False-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_homography_warper.py::TestHomographyWarper::test_dynamo[cpu-float32-inductor-False-False-3] PASSED
+
+============================== 51 passed in 4.31s ==============================

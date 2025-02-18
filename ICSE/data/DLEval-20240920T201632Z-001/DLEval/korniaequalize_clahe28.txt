@@ -1,0 +1,27 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Create a Python function `equalize_clahe` that applies Contrast Limited Adaptive Histogram Equalization (CLAHE) to an input image tensor. The function should accept the following parameters:
+- `input`: A tensor representing one or more images, with values in the range [0, 1] and shape \((*, C, H, W)\), where \(*\) can include any number of batch dimensions.
+- `clip_limit`: A float that sets the threshold for contrast limiting. If set to 0, clipping is disabled.
+- `grid_size`: A tuple of two integers specifying the number of tiles to divide the image into in each direction.
+- `slow_and_differentiable`: A boolean flag to select an implementation that is slow but differentiable.
+
+The function returns an image tensor with the same shape as the input after applying CLAHE.
+
+### Error Handling:
+- Raise a `TypeError` if `clip_limit` is not a float.
+- Raise a `TypeError` if `grid_size` is not a tuple of two integers.
+- Raise a `ValueError` if any element of `grid_size` is non-positive.
+
+The function divides the input image into tiles, computes histograms for each tile, applies CLAHE using lookup tables (LUTs), and then reconstructs the equalized image by interpolating between the tiles. The function should handle batch processing and ensure the output is correctly shaped, even if the input was not in batch form. This function is useful in image processing tasks where enhancing the contrast of images is necessary, particularly in fields like computer vision or medical imaging.
+
+ ground Truth:kornia/enhance/equalization.py
+
+ repo:kornia
+
+ function:equalize_clahe
+ 
+ test_cases:tests/enhance/test_equalization.py 

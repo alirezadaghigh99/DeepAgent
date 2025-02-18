@@ -1,0 +1,27 @@
+stage: Inference
+task: Detection
+data: Image
+
+prompt:
+Create a Python function `_cdist` that:
+
+- Takes two parameters:
+  - `d1`: A tensor.
+  - `d2`: Another tensor.
+- The function calculates the pairwise Euclidean distance between `d1` and `d2` similar to `torch.cdist`.
+- If both tensors are not safe for Metal Performance Shaders (MPS), the function will use `torch.cdist` directly.
+- Otherwise, the function manually computes the Euclidean distances using matrix operations:
+  - Computes the squared distance for each tensor.
+  - Repeats the squared distances and performs matrix multiplication.
+  - Clamps the result to a minimum of 0.0 and takes the square root to get the final distances.
+- Returns the computed distance matrix.
+
+
+
+ ground Truth:kornia/feature/matching.py
+
+ repo:kornia
+
+ function:_cdist
+ 
+ test_cases:tests/feature/test_matching.py::TestMatchSMNN

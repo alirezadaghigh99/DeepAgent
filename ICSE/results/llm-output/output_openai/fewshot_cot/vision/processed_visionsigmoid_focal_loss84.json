@@ -1,0 +1,11 @@
+{
+    "result": "Error",
+    "prompt": "Generate a Python function called sigmoid_focal_loss that calculates the focal loss used in RetinaNet for dense detection. The function takes in four parameters: inputs (a float tensor of arbitrary shape representing predictions), targets (a float tensor with the same shape as inputs representing binary classification labels), alpha (a float weighting factor to balance positive vs negative examples), gamma (a float exponent to balance easy vs hard examples), and reduction (a string specifying the reduction option for the output). The function returns a loss tensor with the specified reduction option applied. The function implements the focal loss formula and handles different reduction options such as 'none', 'mean', or 'sum'.",
+    "function_name": "sigmoid_focal_loss",
+    "ground_truth": "torchvision/ops/focal_loss.py",
+    "test": "test/test_ops.py::TestFocalLoss::test_correct_ratio",
+    "class": "",
+    "stage": "Training",
+    "task": "Detection",
+    "data": "Image"
+}

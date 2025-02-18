@@ -1,0 +1,42 @@
+stage: 
+task: 
+data: Training
+
+prompt:
+Generate a Python method `forward` for the `VICRegLoss` class that computes the VICReg loss based on the given input tensors. The method should calculate the invariance, variance, and covariance terms of the loss and combine them using the provided scaling coefficients (`lambda_param`, `mu_param`, and `nu_param`). The method should also handle distributed training by gathering all batches from multiple GPUs if `gather_distributed` is set to `True`.
+
+Class structure:
+
+```python
+class VICRegLoss(torch.nn.Module):
+    def __init__(
+        self,
+        lambda_param: float = 25.0,
+        mu_param: float = 25.0,
+        nu_param: float = 1.0,
+        gather_distributed: bool = False,
+        eps=0.0001,
+    ):
+        # Initialization code...
+
+    def forward(self, z_a: torch.Tensor, z_b: torch.Tensor) -> torch.Tensor:
+        # Implement the function as described in the prompt
+
+def invariance_loss(s x: torch.Tensor, y: torch.Tensor) -> torch.Tensor:
+        # Returns: Invariance term of the loss
+
+def variance_loss( x: torch.Tensor, eps: float) -> torch.Tensor:
+        # Returns: Variance term of the loss
+def covariance_loss(x: torch.Tensor) -> torch.Tensor:
+        # Returns: Covariance term of the loss
+```
+
+ ground Truth:lightly/loss/vicreg_loss.py
+
+ repo:lightly
+
+ function:forward
+ 
+ test_cases:tests/loss/test_VICRegLoss.py::TestVICRegLossUnitTest
+ 
+ class:VICRegLoss

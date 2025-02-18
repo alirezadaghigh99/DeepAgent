@@ -1,0 +1,16 @@
+stage: Pre-Post processing
+task: 
+data: Table
+
+prompt:
+Write a Python function `cot_laplacian` that computes the Laplacian matrix with cotangent weights and the inverse of the face areas for a given mesh. The function should take a tensor of vertices (`verts`) and a tensor of faces (`faces`) as inputs, and return a tuple containing the sparse Laplacian matrix and a tensor of inverse face areas. The Laplacian matrix should be constructed using cotangent weights for each edge, and the inverse face areas should be calculated by summing the areas of all triangles containing each vertex. Ensure that the function handles potential numerical issues, such as small or near-zero areas, by clamping values to avoid NaNs.def cot_laplacian(
+    verts: torch.Tensor, faces: torch.Tensor, eps: float = 1e-12
+) -> Tuple[torch.Tensor, torch.Tensor]:
+
+ ground Truth:pytorch3d/ops/laplacian_matrices.py
+
+ repo:pytorch3d
+
+ function:cot_laplacian
+ 
+ test_cases:tests/test_mesh_laplacian_smoothing.py

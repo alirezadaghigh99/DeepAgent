@@ -1,0 +1,33 @@
+stage: 
+task: Recommendation
+data: Inference
+
+prompt:
+Generate a Python function `predict` for the class `RBM` that returns the inferred ratings for a given input user/affinity matrix `x`. The function should use the model to sample new ratings from the learned joint distribution. The input `x` must have the same number of columns as the training data but can have an arbitrary number of rows (users). The function should return a matrix of inferred ratings (`vp`) and the elapsed time for prediction. It achieves this by using the `eval_out` method to evaluate the ratings and their associated probabilities, then running the TensorFlow session (`self.sess`) to obtain the final predicted ratings.
+
+Class structure:
+
+```python
+class RBM:
+    def __init__(self, possible_ratings, visible_units, hidden_units=500, keep_prob=0.7, init_stdv=0.1, learning_rate=0.004, minibatch_size=100, training_epoch=20, display_epoch=10, sampling_protocol=[50, 70, 80, 90, 100], debug=False, with_metrics=False, seed=42):
+        self.vu = None  # visible units input placeholder
+        self.sess = None  # TensorFlow session
+        pass
+
+    def eval_out(self):
+        # Outputs the sampled visible units and the conditional probability of the visible units
+        pass
+
+    def predict(self, x):
+        # Implement the function as described in the prompt
+```
+
+ ground Truth:recommenders/models/rbm/rbm.py
+
+ repo:recommenders
+
+ function:predict
+ 
+ class:RBM
+ 
+  test_cases:tests/unit/recommenders/models/test_rbm.py

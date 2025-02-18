@@ -1,0 +1,34 @@
+stage: 
+task: Recommendation
+data: Inference
+
+prompt:
+Generate a Python function `sample_hidden_units` for the class `RBM` that samples hidden units based on the visible units (`vv`). This function should return two tensors: the activation probability of the hidden units (`phv`) and the sampled hidden units (`h_`). The sampling process involves using the weights (`self.w`), biases (`self.bh`), and dropout regularization (`self.keep`). The function relies on `binomial_sampling`, which outputs a tensor where each element is `1` if the corresponding activation probability exceeds a randomly sampled threshold, and `0` otherwise.You should use tf for this.
+
+Class structure:
+
+```python
+class RBM:
+    def __init__(self, possible_ratings, visible_units, hidden_units=500, keep_prob=0.7, init_stdv=0.1, learning_rate=0.004, minibatch_size=100, training_epoch=20, display_epoch=10, sampling_protocol=[50, 70, 80, 90, 100], debug=False, with_metrics=False, seed=42):
+        self.w = None  # weights between visible and hidden units
+        self.bh = None  # biases of the hidden units
+        self.keep = keep_prob  # dropout keep probability
+        pass
+
+    def binomial_sampling(self, pr):
+        # Outputs a tensor of the same shape as pr, where each element is 1 if the corresponding
+        # probability is greater than a sampled uniform random value, and 0 otherwise.
+        pass
+
+    def sample_hidden_units(self, vv):
+        # Implement the function as described in the prompt
+
+ ground Truth:recommenders/models/rbm/rbm.py
+
+ repo:recommenders
+
+ function:sample_hidden_units
+ 
+ class:RBM
+ 
+  test_cases:tests/unit/recommenders/models/test_rbm.py

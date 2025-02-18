@@ -1,0 +1,612 @@
+output file:
+processed_cleanlabvalue_counts345.json
+function:
+value_counts
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_value_counts_fill_missing_classes[multilabel_strings]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_value_counts_fill_missing_classes[strings]', '../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_value_counts_fill_missing_classes[strings] FAILED', '../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_value_counts_fill_missing_classes[multilabel_integers] FAILED', '../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_value_counts_str FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_value_counts_str', '../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_value_counts_fill_missing_classes[multilabel_strings] FAILED', '../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_value_counts_fill_missing_classes[integers] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_value_counts_fill_missing_classes[integers]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_value_counts_fill_missing_classes[multilabel_integers]'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/bin/python
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/aliredaq/Desktop/ICSE/src/tester/.hypothesis/examples'))
+rootdir: /local/data0/moved_data/publishablew/cleanlab/cleanlab
+configfile: pyproject.toml
+plugins: hypothesis-6.124.1
+collecting ... collected 21 items
+
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_print_inm 
+ Inverse Noise Matrix P(true_label|given_label) of shape (3, 3)
+ p(y|s)	s=0	s=1	s=2
+	---	---	---
+y=0 |	1.0	0.0	0.2
+y=1 |	0.0	0.7	0.2
+y=2 |	0.0	0.3	0.6
+	Trace(matrix) = 2.3
+
+
+ Inverse Noise Matrix P(true_label|given_label) of shape (2, 2)
+ p(y|s)	s=0	s=1
+	---	---
+y=0 |	1.0	0.3
+y=1 |	0.0	0.7
+	Trace(matrix) = 1.7
+
+
+ Inverse Noise Matrix P(true_label|given_label) of shape (1, 1)
+ p(y|s)	s=0
+	---
+y=0 |	1
+	Trace(matrix) = 1
+
+PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_print_joint 
+ Joint Label Noise Distribution Matrix P(given_label, true_label) of shape (3, 3)
+ p(s,y)	y=0	y=1	y=2
+	---	---	---
+s=0 |	0.1	0.0	0.1
+s=1 |	0.1	0.1	0.1
+s=2 |	0.2	0.1	0.2
+	Trace(matrix) = 0.4
+
+
+ Joint Label Noise Distribution Matrix P(given_label, true_label) of shape (2, 2)
+ p(s,y)	y=0	y=1
+	---	---
+s=0 |	0.2	0.3
+s=1 |	0.4	0.1
+	Trace(matrix) = 0.3
+
+
+ Joint Label Noise Distribution Matrix P(given_label, true_label) of shape (1, 1)
+ p(s,y)	y=0
+	---
+s=0 |	1
+	Trace(matrix) = 1
+
+PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_print_square 
+ A square matrix of shape (3, 3)
+ s,y	y=0	y=1	y=2
+	---	---	---
+s=0 |	1.0	0.0	0.2
+s=1 |	0.0	0.7	0.2
+s=2 |	0.0	0.3	0.6
+	Trace(matrix) = 2.3
+
+
+ A square matrix of shape (3, 3)
+ s,y	y=0	y=1	y=2
+	---	---	---
+s=0 |	1.0	0.0	0.2
+s=1 |	0.0	0.7	0.2
+s=2 |	0.0	0.3	0.6
+	Trace(matrix) = 2.3
+
+
+ A square matrix of shape (3, 3)
+ s,y	y=0	y=1	y=2
+	---	---	---
+s=0 |	1.0	0.0	0.2
+s=1 |	0.0	0.7	0.2
+s=2 |	0.0	0.3	0.6
+	Trace(matrix) = 2.3
+
+PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_print_noise_matrix 
+ Noise Matrix (aka Noisy Channel) P(given_label|true_label) of shape (3, 3)
+ p(s|y)	y=0	y=1	y=2
+	---	---	---
+s=0 |	1.0	0.0	0.2
+s=1 |	0.0	0.7	0.2
+s=2 |	0.0	0.3	0.6
+	Trace(matrix) = 2.3
+
+
+ Noise Matrix (aka Noisy Channel) P(given_label|true_label) of shape (3, 3)
+ p(s|y)	y=0	y=1	y=2
+	---	---	---
+s=0 |	1.0	0.0	0.2
+s=1 |	0.0	0.7	0.2
+s=2 |	0.0	0.3	0.6
+	Trace(matrix) = 2.3
+
+
+ Noise Matrix (aka Noisy Channel) P(given_label|true_label) of shape (3, 3)
+ p(s|y)	y=0	y=1	y=2
+	---	---	---
+s=0 |	1.0	0.0	0.2
+s=1 |	0.0	0.7	0.2
+s=2 |	0.0	0.3	0.6
+	Trace(matrix) = 2.3
+
+PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_pu_f1 PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_value_counts_str FAILED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_value_counts_fill_missing_classes[integers] FAILED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_value_counts_fill_missing_classes[strings] FAILED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_value_counts_fill_missing_classes[multilabel_integers] FAILED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_value_counts_fill_missing_classes[multilabel_strings] FAILED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_pu_remove_noise PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_round_preserving_sum PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_one_hot PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_num_unique PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_missing_classes PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_round_preserving_row_totals PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_confusion_matrix PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_confusion_matrix_nonconsecutive PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_format_labels PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_normalized_entropy PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_force_two_dimensions PASSED
+
+=================================== FAILURES ===================================
+____________________________ test_value_counts_str _____________________________
+
+    def test_value_counts_str():
+        r = util.value_counts(["a", "b", "a"])
+>       assert all(np.array([2, 1]) - r < 1e-4)
+E       ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py:63: ValueError
+_______________ test_value_counts_fill_missing_classes[integers] _______________
+
+test_case = TestCase(labels=[0, 1, 0, 2], id='integers')
+
+    @pytest.mark.parametrize(
+        "test_case",
+        value_counts_missing_classes_test_cases,
+        ids=lambda x: str(x.id),
+    )
+    def test_value_counts_fill_missing_classes(test_case):
+        labels = test_case.labels
+        is_multi_label = isinstance(labels[0], list)
+        r = util.value_counts_fill_missing_classes(labels, num_classes=4, multi_label=is_multi_label)
+>       assert np.array_equal(r, [2, 1, 1, 0])
+E       assert False
+E        +  where False = <function array_equal at 0x71c258fd6130>(array([[2],\n       [1],\n       [1]]), [2, 1, 1, 0])
+E        +    where <function array_equal at 0x71c258fd6130> = np.array_equal
+
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py:85: AssertionError
+_______________ test_value_counts_fill_missing_classes[strings] ________________
+
+test_case = TestCase(labels=['a', 'b', 'a', 'c'], id='strings')
+
+    @pytest.mark.parametrize(
+        "test_case",
+        value_counts_missing_classes_test_cases,
+        ids=lambda x: str(x.id),
+    )
+    def test_value_counts_fill_missing_classes(test_case):
+        labels = test_case.labels
+        is_multi_label = isinstance(labels[0], list)
+        r = util.value_counts_fill_missing_classes(labels, num_classes=4, multi_label=is_multi_label)
+>       assert np.array_equal(r, [2, 1, 1, 0])
+E       assert False
+E        +  where False = <function array_equal at 0x71c258fd6130>(array([[2],\n       [1],\n       [1]]), [2, 1, 1, 0])
+E        +    where <function array_equal at 0x71c258fd6130> = np.array_equal
+
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py:85: AssertionError
+_________ test_value_counts_fill_missing_classes[multilabel_integers] __________
+
+test_case = TestCase(labels=[[0], [0, 1], [2]], id='multilabel_integers')
+
+    @pytest.mark.parametrize(
+        "test_case",
+        value_counts_missing_classes_test_cases,
+        ids=lambda x: str(x.id),
+    )
+    def test_value_counts_fill_missing_classes(test_case):
+        labels = test_case.labels
+        is_multi_label = isinstance(labels[0], list)
+>       r = util.value_counts_fill_missing_classes(labels, num_classes=4, multi_label=is_multi_label)
+
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py:84: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/internal/util.py:138: in value_counts_fill_missing_classes
+    return value_counts(x, num_classes=num_classes, multi_label=multi_label)
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/internal/util.py:88: in value_counts
+    return value_counts(x)
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/internal/temp.py:26: in value_counts
+    counter = Counter(x)
+/usr/lib/python3.11/collections/__init__.py:599: in __init__
+    self.update(iterable, **kwds)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = Counter(), iterable = [[0], [0, 1], [2]], kwds = {}
+
+    def update(self, iterable=None, /, **kwds):
+        '''Like dict.update() but add counts instead of replacing them.
+    
+        Source can be an iterable, a dictionary, or another Counter instance.
+    
+        >>> c = Counter('which')
+        >>> c.update('witch')           # add elements from another iterable
+        >>> d = Counter('watch')
+        >>> c.update(d)                 # add elements from another counter
+        >>> c['h']                      # four 'h' in which, witch, and watch
+        4
+    
+        '''
+        # The regular dict.update() operation makes no sense here because the
+        # replace behavior results in some of the original untouched counts
+        # being mixed-in with all of the other counts for a mismash that
+        # doesn't have a straight-forward interpretation in most counting
+        # contexts.  Instead, we implement straight-addition.  Both the inputs
+        # and outputs are allowed to contain zero and negative counts.
+    
+        if iterable is not None:
+            if isinstance(iterable, _collections_abc.Mapping):
+                if self:
+                    self_get = self.get
+                    for elem, count in iterable.items():
+                        self[elem] = count + self_get(elem, 0)
+                else:
+                    # fast path when counter is empty
+                    super().update(iterable)
+            else:
+>               _count_elements(self, iterable)
+E               TypeError: unhashable type: 'list'
+
+/usr/lib/python3.11/collections/__init__.py:690: TypeError
+__________ test_value_counts_fill_missing_classes[multilabel_strings] __________
+
+test_case = TestCase(labels=[['c'], ['a', 'b'], ['a']], id='multilabel_strings')
+
+    @pytest.mark.parametrize(
+        "test_case",
+        value_counts_missing_classes_test_cases,
+        ids=lambda x: str(x.id),
+    )
+    def test_value_counts_fill_missing_classes(test_case):
+        labels = test_case.labels
+        is_multi_label = isinstance(labels[0], list)
+>       r = util.value_counts_fill_missing_classes(labels, num_classes=4, multi_label=is_multi_label)
+
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py:84: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/internal/util.py:138: in value_counts_fill_missing_classes
+    return value_counts(x, num_classes=num_classes, multi_label=multi_label)
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/internal/util.py:88: in value_counts
+    return value_counts(x)
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/internal/temp.py:26: in value_counts
+    counter = Counter(x)
+/usr/lib/python3.11/collections/__init__.py:599: in __init__
+    self.update(iterable, **kwds)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = Counter(), iterable = [['c'], ['a', 'b'], ['a']], kwds = {}
+
+    def update(self, iterable=None, /, **kwds):
+        '''Like dict.update() but add counts instead of replacing them.
+    
+        Source can be an iterable, a dictionary, or another Counter instance.
+    
+        >>> c = Counter('which')
+        >>> c.update('witch')           # add elements from another iterable
+        >>> d = Counter('watch')
+        >>> c.update(d)                 # add elements from another counter
+        >>> c['h']                      # four 'h' in which, witch, and watch
+        4
+    
+        '''
+        # The regular dict.update() operation makes no sense here because the
+        # replace behavior results in some of the original untouched counts
+        # being mixed-in with all of the other counts for a mismash that
+        # doesn't have a straight-forward interpretation in most counting
+        # contexts.  Instead, we implement straight-addition.  Both the inputs
+        # and outputs are allowed to contain zero and negative counts.
+    
+        if iterable is not None:
+            if isinstance(iterable, _collections_abc.Mapping):
+                if self:
+                    self_get = self.get
+                    for elem, count in iterable.items():
+                        self[elem] = count + self_get(elem, 0)
+                else:
+                    # fast path when counter is empty
+                    super().update(iterable)
+            else:
+>               _count_elements(self, iterable)
+E               TypeError: unhashable type: 'list'
+
+/usr/lib/python3.11/collections/__init__.py:690: TypeError
+=============================== warnings summary ===============================
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py:0
+  /local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py:0: PytestCollectionWarning: cannot collect test class 'TestCase' because it has a __new__ constructor (from: tests/test_util.py)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_value_counts_str
+FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_value_counts_fill_missing_classes[integers]
+FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_value_counts_fill_missing_classes[strings]
+FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_value_counts_fill_missing_classes[multilabel_integers]
+FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_value_counts_fill_missing_classes[multilabel_strings]
+=================== 5 failed, 16 passed, 1 warning in 0.72s ====================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/bin/python
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/aliredaq/Desktop/ICSE/src/tester/.hypothesis/examples'))
+rootdir: /local/data0/moved_data/publishablew/cleanlab/cleanlab
+configfile: pyproject.toml
+plugins: hypothesis-6.124.1
+collecting ... collected 21 items
+
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_print_inm 
+ Inverse Noise Matrix P(true_label|given_label) of shape (3, 3)
+ p(y|s)	s=0	s=1	s=2
+	---	---	---
+y=0 |	1.0	0.0	0.2
+y=1 |	0.0	0.7	0.2
+y=2 |	0.0	0.3	0.6
+	Trace(matrix) = 2.3
+
+
+ Inverse Noise Matrix P(true_label|given_label) of shape (2, 2)
+ p(y|s)	s=0	s=1
+	---	---
+y=0 |	1.0	0.3
+y=1 |	0.0	0.7
+	Trace(matrix) = 1.7
+
+
+ Inverse Noise Matrix P(true_label|given_label) of shape (1, 1)
+ p(y|s)	s=0
+	---
+y=0 |	1
+	Trace(matrix) = 1
+
+PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_print_joint 
+ Joint Label Noise Distribution Matrix P(given_label, true_label) of shape (3, 3)
+ p(s,y)	y=0	y=1	y=2
+	---	---	---
+s=0 |	0.1	0.0	0.1
+s=1 |	0.1	0.1	0.1
+s=2 |	0.2	0.1	0.2
+	Trace(matrix) = 0.4
+
+
+ Joint Label Noise Distribution Matrix P(given_label, true_label) of shape (2, 2)
+ p(s,y)	y=0	y=1
+	---	---
+s=0 |	0.2	0.3
+s=1 |	0.4	0.1
+	Trace(matrix) = 0.3
+
+
+ Joint Label Noise Distribution Matrix P(given_label, true_label) of shape (1, 1)
+ p(s,y)	y=0
+	---
+s=0 |	1
+	Trace(matrix) = 1
+
+PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_print_square 
+ A square matrix of shape (3, 3)
+ s,y	y=0	y=1	y=2
+	---	---	---
+s=0 |	1.0	0.0	0.2
+s=1 |	0.0	0.7	0.2
+s=2 |	0.0	0.3	0.6
+	Trace(matrix) = 2.3
+
+
+ A square matrix of shape (3, 3)
+ s,y	y=0	y=1	y=2
+	---	---	---
+s=0 |	1.0	0.0	0.2
+s=1 |	0.0	0.7	0.2
+s=2 |	0.0	0.3	0.6
+	Trace(matrix) = 2.3
+
+
+ A square matrix of shape (3, 3)
+ s,y	y=0	y=1	y=2
+	---	---	---
+s=0 |	1.0	0.0	0.2
+s=1 |	0.0	0.7	0.2
+s=2 |	0.0	0.3	0.6
+	Trace(matrix) = 2.3
+
+PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_print_noise_matrix 
+ Noise Matrix (aka Noisy Channel) P(given_label|true_label) of shape (3, 3)
+ p(s|y)	y=0	y=1	y=2
+	---	---	---
+s=0 |	1.0	0.0	0.2
+s=1 |	0.0	0.7	0.2
+s=2 |	0.0	0.3	0.6
+	Trace(matrix) = 2.3
+
+
+ Noise Matrix (aka Noisy Channel) P(given_label|true_label) of shape (3, 3)
+ p(s|y)	y=0	y=1	y=2
+	---	---	---
+s=0 |	1.0	0.0	0.2
+s=1 |	0.0	0.7	0.2
+s=2 |	0.0	0.3	0.6
+	Trace(matrix) = 2.3
+
+
+ Noise Matrix (aka Noisy Channel) P(given_label|true_label) of shape (3, 3)
+ p(s|y)	y=0	y=1	y=2
+	---	---	---
+s=0 |	1.0	0.0	0.2
+s=1 |	0.0	0.7	0.2
+s=2 |	0.0	0.3	0.6
+	Trace(matrix) = 2.3
+
+PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_pu_f1 PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_value_counts_str PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_value_counts_fill_missing_classes[integers] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_value_counts_fill_missing_classes[strings] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_value_counts_fill_missing_classes[multilabel_integers] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_value_counts_fill_missing_classes[multilabel_strings] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_pu_remove_noise PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_round_preserving_sum PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_one_hot PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_num_unique PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_missing_classes PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_round_preserving_row_totals PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_confusion_matrix PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_confusion_matrix_nonconsecutive PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_format_labels PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_normalized_entropy PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_force_two_dimensions PASSED
+
+=============================== warnings summary ===============================
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py:0
+  /local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py:0: PytestCollectionWarning: cannot collect test class 'TestCase' because it has a __new__ constructor (from: tests/test_util.py)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 21 passed, 1 warning in 0.56s =========================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/bin/python
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/aliredaq/Desktop/ICSE/src/tester/.hypothesis/examples'))
+rootdir: /local/data0/moved_data/publishablew/cleanlab/cleanlab
+configfile: pyproject.toml
+plugins: hypothesis-6.124.1
+collecting ... collected 21 items
+
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_print_inm 
+ Inverse Noise Matrix P(true_label|given_label) of shape (3, 3)
+ p(y|s)	s=0	s=1	s=2
+	---	---	---
+y=0 |	1.0	0.0	0.2
+y=1 |	0.0	0.7	0.2
+y=2 |	0.0	0.3	0.6
+	Trace(matrix) = 2.3
+
+
+ Inverse Noise Matrix P(true_label|given_label) of shape (2, 2)
+ p(y|s)	s=0	s=1
+	---	---
+y=0 |	1.0	0.3
+y=1 |	0.0	0.7
+	Trace(matrix) = 1.7
+
+
+ Inverse Noise Matrix P(true_label|given_label) of shape (1, 1)
+ p(y|s)	s=0
+	---
+y=0 |	1
+	Trace(matrix) = 1
+
+PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_print_joint 
+ Joint Label Noise Distribution Matrix P(given_label, true_label) of shape (3, 3)
+ p(s,y)	y=0	y=1	y=2
+	---	---	---
+s=0 |	0.1	0.0	0.1
+s=1 |	0.1	0.1	0.1
+s=2 |	0.2	0.1	0.2
+	Trace(matrix) = 0.4
+
+
+ Joint Label Noise Distribution Matrix P(given_label, true_label) of shape (2, 2)
+ p(s,y)	y=0	y=1
+	---	---
+s=0 |	0.2	0.3
+s=1 |	0.4	0.1
+	Trace(matrix) = 0.3
+
+
+ Joint Label Noise Distribution Matrix P(given_label, true_label) of shape (1, 1)
+ p(s,y)	y=0
+	---
+s=0 |	1
+	Trace(matrix) = 1
+
+PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_print_square 
+ A square matrix of shape (3, 3)
+ s,y	y=0	y=1	y=2
+	---	---	---
+s=0 |	1.0	0.0	0.2
+s=1 |	0.0	0.7	0.2
+s=2 |	0.0	0.3	0.6
+	Trace(matrix) = 2.3
+
+
+ A square matrix of shape (3, 3)
+ s,y	y=0	y=1	y=2
+	---	---	---
+s=0 |	1.0	0.0	0.2
+s=1 |	0.0	0.7	0.2
+s=2 |	0.0	0.3	0.6
+	Trace(matrix) = 2.3
+
+
+ A square matrix of shape (3, 3)
+ s,y	y=0	y=1	y=2
+	---	---	---
+s=0 |	1.0	0.0	0.2
+s=1 |	0.0	0.7	0.2
+s=2 |	0.0	0.3	0.6
+	Trace(matrix) = 2.3
+
+PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_print_noise_matrix 
+ Noise Matrix (aka Noisy Channel) P(given_label|true_label) of shape (3, 3)
+ p(s|y)	y=0	y=1	y=2
+	---	---	---
+s=0 |	1.0	0.0	0.2
+s=1 |	0.0	0.7	0.2
+s=2 |	0.0	0.3	0.6
+	Trace(matrix) = 2.3
+
+
+ Noise Matrix (aka Noisy Channel) P(given_label|true_label) of shape (3, 3)
+ p(s|y)	y=0	y=1	y=2
+	---	---	---
+s=0 |	1.0	0.0	0.2
+s=1 |	0.0	0.7	0.2
+s=2 |	0.0	0.3	0.6
+	Trace(matrix) = 2.3
+
+
+ Noise Matrix (aka Noisy Channel) P(given_label|true_label) of shape (3, 3)
+ p(s|y)	y=0	y=1	y=2
+	---	---	---
+s=0 |	1.0	0.0	0.2
+s=1 |	0.0	0.7	0.2
+s=2 |	0.0	0.3	0.6
+	Trace(matrix) = 2.3
+
+PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_pu_f1 PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_value_counts_str PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_value_counts_fill_missing_classes[integers] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_value_counts_fill_missing_classes[strings] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_value_counts_fill_missing_classes[multilabel_integers] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_value_counts_fill_missing_classes[multilabel_strings] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_pu_remove_noise PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_round_preserving_sum PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_one_hot PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_num_unique PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_missing_classes PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_round_preserving_row_totals PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_confusion_matrix PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_confusion_matrix_nonconsecutive PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_format_labels PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_normalized_entropy PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py::test_force_two_dimensions PASSED
+
+=============================== warnings summary ===============================
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py:0
+  /local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_util.py:0: PytestCollectionWarning: cannot collect test class 'TestCase' because it has a __new__ constructor (from: tests/test_util.py)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 21 passed, 1 warning in 0.58s =========================

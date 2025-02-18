@@ -1,0 +1,14 @@
+stage: Evaluating&Metrics
+task: 
+data: Table
+
+prompt:
+Generate a Python function called make_scorer that creates a scorer from a performance metric or loss function. The function takes in parameters such as score_func, response_method, greater_is_better, needs_proba, needs_threshold, and additional keyword arguments. It returns a callable object that computes a scalar score, with greater values indicating better performance. The function also provides examples of how to use it with different scoring functions and estimators.
+
+ ground Truth:sklearn/metrics/_scorer.py
+
+ repo:scikit-learn
+
+ function:make_scorer
+ 
+ test_cases:sklearn/metrics/tests/test_score_objects.py

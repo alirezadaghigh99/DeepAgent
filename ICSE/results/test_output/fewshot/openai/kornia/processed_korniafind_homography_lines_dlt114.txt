@@ -1,0 +1,558 @@
+output file:
+processed_korniafind_homography_lines_dlt114.json
+function:
+find_homography_lines_dlt
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_smoke2[cpu-float32] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_nocrash[cpu-float32] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_gradcheck[cpu]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_smoke2[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_gradcheck[cpu] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_nocrash[cpu-float32]'}
+
+All Test Cases On Generated code:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', None, 'cudagraphs', 'openxla', 'inductor', 'onnxrt', 'tvm', 'jit'}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 19 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_smoke[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_smoke2[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_nocrash[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape[cpu-float32-1-4] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape[cpu-float32-2-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape[cpu-float32-3-6] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape_noweights[cpu-float32-1-4] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape_noweights[cpu-float32-2-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape_noweights[cpu-float32-3-6] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_points_noweights[cpu-float32-1-4] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_points_noweights[cpu-float32-2-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_points_noweights[cpu-float32-3-6] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points[cpu-float32-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points_iter[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points_iter[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points_iter[cpu-float32-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_gradcheck[cpu] FAILED
+
+=================================== FAILURES ===================================
+___________ TestFindHomographyFromLinesDLT.test_smoke2[cpu-float32] ____________
+
+self = <tests.geometry.test_homography.TestFindHomographyFromLinesDLT object at 0x7cb34093ed10>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_smoke2(self, device, dtype):
+        points1st = torch.rand(4, 2, device=device, dtype=dtype)
+        points1end = torch.rand(4, 2, device=device, dtype=dtype)
+        points2st = torch.rand(4, 2, device=device, dtype=dtype)
+        points2end = torch.rand(4, 2, device=device, dtype=dtype)
+        ls1 = torch.stack([points1st, points1end], dim=1)
+        ls2 = torch.stack([points2st, points2end], dim=1)
+>       H = find_homography_lines_dlt(ls1, ls2, None)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py:270: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/homography.py:211: in find_homography_lines_dlt
+    return find_homography_lines_dlt(ls1, ls2, weights)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ls1 = tensor([[[0.0730, 0.2442],
+         [0.1007, 0.6430]],
+
+        [[0.7202, 0.4229],
+         [0.4183, 0.1855]],
+
+        [[0.2135, 0.7787],
+         [0.9078, 0.5738]],
+
+        [[0.8460, 0.3526],
+         [0.9030, 0.8988]]])
+ls2 = tensor([[[0.2100, 0.4125],
+         [0.3874, 0.3321]],
+
+        [[0.9259, 0.0427],
+         [0.3534, 0.2411]],
+
+        [[0.0260, 0.4584],
+         [0.4803, 0.0073]],
+
+        [[0.6070, 0.0804],
+         [0.2857, 0.3107]]])
+weights = None
+
+    def find_homography_lines_dlt(ls1: torch.Tensor, ls2: torch.Tensor, weights: Optional[torch.Tensor]=None) -> torch.Tensor:
+        """
+        Computes the homography matrix using the DLT formulation for line correspondences.
+    
+        Args:
+            ls1 (torch.Tensor): Tensor of shape (B, N, 2, 2) representing the first set of line segments.
+            ls2 (torch.Tensor): Tensor of shape (B, N, 2, 2) representing the second set of line segments.
+            weights (torch.Tensor, optional): Tensor of shape (B, N) representing weights for each line correspondence.
+    
+        Returns:
+            torch.Tensor: Tensor of shape (B, 3, 3) representing the computed homography matrices.
+        """
+>       B, N, _, _ = ls1.shape
+E       ValueError: not enough values to unpack (expected 4, got 3)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/temp.py:25: ValueError
+___________ TestFindHomographyFromLinesDLT.test_nocrash[cpu-float32] ___________
+
+self = <tests.geometry.test_homography.TestFindHomographyFromLinesDLT object at 0x7cb34093f040>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_nocrash(self, device, dtype):
+        points1st = torch.rand(1, 4, 2, device=device, dtype=dtype)
+        points1end = torch.rand(1, 4, 2, device=device, dtype=dtype)
+        points2st = torch.rand(1, 4, 2, device=device, dtype=dtype)
+        points2end = torch.rand(1, 4, 2, device=device, dtype=dtype)
+        weights = torch.ones(1, 4, device=device, dtype=dtype)
+        points1st[0, 0, 0] = float("nan")
+        ls1 = torch.stack([points1st, points1end], dim=2)
+        ls2 = torch.stack([points2st, points2end], dim=2)
+>       H = find_homography_lines_dlt(ls1, ls2, weights)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py:282: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/homography.py:211: in find_homography_lines_dlt
+    return find_homography_lines_dlt(ls1, ls2, weights)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+ls1 = tensor([[[[   nan, 0.0961],
+          [0.2700, 0.2640]],
+
+         [[0.1863, 0.4468],
+          [0.6776, 0.0990]],
+
+         [[0.8031, 0.4320],
+          [0.3478, 0.1602]],
+
+         [[0.7662, 0.3922],
+          [0.3155, 0.0807]]]])
+ls2 = tensor([[[[0.8609, 0.6506],
+          [0.0495, 0.8160]],
+
+         [[0.1973, 0.3518],
+          [0.7118, 0.0763]],
+
+         [[0.0423, 0.0326],
+          [0.0606, 0.2634]],
+
+         [[0.6577, 0.2091],
+          [0.0784, 0.5032]]]])
+weights = tensor([[1., 1., 1., 1.]])
+
+    def find_homography_lines_dlt(ls1: torch.Tensor, ls2: torch.Tensor, weights: Optional[torch.Tensor]=None) -> torch.Tensor:
+        """
+        Computes the homography matrix using the DLT formulation for line correspondences.
+    
+        Args:
+            ls1 (torch.Tensor): Tensor of shape (B, N, 2, 2) representing the first set of line segments.
+            ls2 (torch.Tensor): Tensor of shape (B, N, 2, 2) representing the second set of line segments.
+            weights (torch.Tensor, optional): Tensor of shape (B, N) representing weights for each line correspondence.
+    
+        Returns:
+            torch.Tensor: Tensor of shape (B, 3, 3) representing the computed homography matrices.
+        """
+        B, N, _, _ = ls1.shape
+        if weights is None:
+            weights = torch.ones((B, N), dtype=ls1.dtype, device=ls1.device)
+        homographies = torch.zeros((B, 3, 3), dtype=ls1.dtype, device=ls1.device)
+        for b in range(B):
+            A = []
+            for n in range(N):
+                x1, y1 = ls1[b, n, 0]
+                x2, y2 = ls1[b, n, 1]
+                x1_prime, y1_prime = ls2[b, n, 0]
+                x2_prime, y2_prime = ls2[b, n, 1]
+                weight = weights[b, n]
+                A.append(weight * torch.tensor([[x1, y1, 1, 0, 0, 0, -x1_prime * x1, -x1_prime * y1, -x1_prime], [0, 0, 0, x1, y1, 1, -y1_prime * x1, -y1_prime * y1, -y1_prime], [x2, y2, 1, 0, 0, 0, -x2_prime * x2, -x2_prime * y2, -x2_prime], [0, 0, 0, x2, y2, 1, -y2_prime * x2, -y2_prime * y2, -y2_prime]], dtype=ls1.dtype, device=ls1.device))
+            A = torch.cat(A, dim=0)
+>           _, _, V = torch.linalg.svd(A)
+E           torch._C._LinAlgError: linalg.svd: The algorithm failed to converge because the input matrix contained non-finite values.
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/temp.py:39: _LinAlgError
+______________ TestFindHomographyFromLinesDLT.test_gradcheck[cpu] ______________
+
+self = <tests.geometry.test_homography.TestFindHomographyFromLinesDLT object at 0x7cb34093ee30>
+device = device(type='cpu')
+
+    @pytest.mark.grad()
+    def test_gradcheck(self, device):
+        points_src_st = torch.rand(1, 10, 2, device=device, dtype=torch.float64, requires_grad=True)
+        points_src_end = torch.rand(1, 10, 2, device=device, dtype=torch.float64, requires_grad=True)
+    
+        points_dst_st = torch.rand_like(points_src_st)
+        points_dst_end = torch.rand_like(points_src_end)
+        weights = torch.ones_like(points_src_st)[..., 0]
+        ls1 = torch.stack([points_src_st, points_src_end], axis=2)
+        ls2 = torch.stack([points_dst_st, points_dst_end], axis=2)
+    
+>       self.gradcheck(find_homography_lines_dlt, (ls1, ls2, weights), rtol=1e-6, atol=1e-6)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py:387: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:143: in gradcheck
+    return gradcheck(func, inputs, raise_exception=raise_exception, fast_mode=fast_mode, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2052: in gradcheck
+    return _gradcheck_helper(**args)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2081: in _gradcheck_helper
+    _gradcheck_real_imag(
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:1491: in _gradcheck_real_imag
+    gradcheck_fn(
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:1925: in _fast_gradcheck
+    _check_analytical_numerical_equal(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+all_analytical = [[tensor(0., dtype=torch.float64), tensor(0., dtype=torch.float64), tensor(-0.0042, dtype=torch.float64)]]
+all_numerical = [[tensor(-0.1319, dtype=torch.float64)], [tensor(-0.0016, dtype=torch.float64)], [tensor(-0.0042, dtype=torch.float64)]]
+complex_indices = None
+tupled_inputs = (tensor([[[[0.4626, 0.5863],
+          [0.8704, 0.2641]],
+
+         [[0.8242, 0.7709],
+          [0.2367, 0.3396]],
+
+ ...equires_grad=True), tensor([[1., 1., 1., 1., 1., 1., 1., 1., 1., 1.]], dtype=torch.float64,
+       requires_grad=True))
+outputs = (tensor([[[ 0.1252,  0.2769, -0.2243],
+         [ 0.1168,  0.3131, -0.2333],
+         [ 0.3027,  0.6091, -0.4781]]], dtype=torch.float64,
+       grad_fn=<CopySlices>),)
+func = <function find_homography_lines_dlt at 0x7cb3b7c19360>
+all_v = [tensor([0.1221, 0.2567, 0.2039, 0.3529, 0.3928, 0.4205, 0.4353, 0.3401, 0.3420],
+       dtype=torch.float64)]
+all_u = [tensor([0.0748, 0.2441, 0.0938, 0.1128, 0.2202, 0.1280, 0.0201, 0.2718, 0.2000,
+        0.1196, 0.0237, 0.1372, 0.046... tensor([0.4585, 0.1582, 0.0953, 0.2457, 0.4603, 0.2261, 0.2524, 0.0384, 0.6044,
+        0.0423], dtype=torch.float64)]
+rtol = 1e-06, atol = 1e-06, eps = 1e-06, test_imag = False
+
+    def _check_analytical_numerical_equal(
+        all_analytical,
+        all_numerical,
+        complex_indices,
+        tupled_inputs,
+        outputs,
+        func,
+        all_v,
+        all_u,
+        rtol,
+        atol,
+        eps,
+        test_imag,
+        *,
+        is_forward_ad=False,
+    ):
+        for i, all_numerical_for_input_i in enumerate(all_numerical):
+            for j, n in enumerate(all_numerical_for_input_i):
+                # Forward AD generates the transpose of what this function expects
+                if is_forward_ad:
+                    a = all_analytical[i][j]
+                else:
+                    a = all_analytical[j][i]
+                n = n.to(device=a.device)
+                updated_atol = _adjusted_atol(atol, all_u[i], all_v[j] if all_v else None)
+                if not _allclose_with_type_promotion(a, n.to(a.device), rtol, updated_atol):
+                    jacobians_str = _run_slow_mode_and_get_error(
+                        func, tupled_inputs, outputs, i, j, rtol, atol, eps, is_forward_ad
+                    )
+>                   raise GradcheckError(
+                        _get_notallclose_msg(
+                            a, n, j, i, complex_indices, test_imag, is_forward_ad
+                        )
+                        + jacobians_str
+                    )
+E                   torch.autograd.gradcheck.GradcheckError: Jacobian mismatch for output 0 with respect to input 0,
+E                   numerical:tensor(-0.1319, dtype=torch.float64)
+E                   analytical:tensor(0., dtype=torch.float64)
+E                   
+E                   The above quantities relating the numerical and analytical jacobians are computed 
+E                   in fast mode. See: https://github.com/pytorch/pytorch/issues/53876 for more background 
+E                   about fast mode. Below, we recompute numerical and analytical jacobians in slow mode:
+E                   
+E                   Numerical:
+E                    tensor([[ 7.6931e-05,  3.0059e-02, -2.3388e-02, -1.7686e-02,  1.1211e-02,
+E                            -1.3989e-02, -4.4320e-02, -1.1276e-02, -4.1734e-03],
+E                           [ 2.5696e-02,  3.6470e-02, -4.2390e-02,  4.0502e-02, -3.6072e-02,
+E                            -3.4836e-02,  4.4208e-02, -8.8878e-02, -3.4237e-02],
+E                           [-8.1133e-02,  5.1350e-02, -9.8318e-03, -1.2180e-01,  7.8620e-02,
+E                             5.3184e-04, -2.5717e-01,  1.1630e-01,  1.9937e-02],
+E                           [-1.3785e-01,  8.6988e-02, -1.5310e-02, -2.2138e-01,  1.4410e-01,
+E                             1.9644e-03, -4.5424e-01,  2.0824e-01,  3.8536e-02],
+E                           [-2.4693e-01,  1.2735e-01, -2.5286e-04, -4.0968e-01,  1.6629e-01,
+E                             6.1625e-02, -4.7631e-01,  2.6584e-01,  2.5102e-02],
+E                           [-6.4223e-02,  5.4055e-04, -2.2945e-02, -1.3236e-01, -1.2856e-01,
+E                             6.4620e-02, -2.4698e-02,  5.2940e-02, -1.0199e-01],
+E                           [ 1.0935e-01, -2.5401e-03, -4.9026e-02,  2.3897e-03, -1.1563e-01,
+E                             6.6754e-02,  1.4255e-01, -5.5994e-02, -3.8633e-02],
+E                           [ 3.1175e-02,  1.0055e-01, -8.8107e-02, -8.3590e-02, -1.1875e-01,
+E                             9.7064e-02, -1.5545e-02,  1.6283e-02, -2.6907e-02],
+E                           [ 1.4938e-03, -2.5356e-03, -8.0795e-03,  2.9782e-03, -2.4441e-02,
+E                             2.1750e-03,  2.3379e-02, -2.4605e-02, -3.0174e-02],
+E                           [-1.1455e-02,  3.7349e-03, -1.1525e-02, -6.1669e-03, -2.9971e-02,
+E                             2.0741e-03,  1.9800e-03, -2.1120e-02, -4.3231e-02],
+E                           [ 7.3670e-02, -2.0384e-01,  9.8291e-02,  3.8669e-01, -1.4617e-01,
+E                            -9.9525e-02,  4.6896e-01, -2.2833e-01, -9.1593e-02],
+E                           [-1.9790e-01, -1.6436e-01,  1.7477e-01, -5.0808e-02,  2.6132e-01,
+E                            -1.3652e-01, -2.0063e-01,  1.1451e-01,  1.5195e-02],
+E                           [ 1.9276e-02,  8.8118e-04, -8.8157e-03,  3.1902e-02, -1.2407e-02,
+E                            -4.6638e-03,  1.0388e-02, -1.2654e-02,  2.0943e-03],
+E                           [-5.5888e-03,  2.2529e-02, -1.3973e-02,  8.7506e-03,  4.6040e-03,
+E                            -7.4561e-03, -1.4115e-02, -1.0142e-02,  5.0745e-03],
+E                           [ 9.5062e-02, -4.0568e-02, -2.6971e-02,  8.7271e-02, -6.9235e-02,
+E                            -8.6481e-03,  1.3286e-01, -8.1816e-02, -2.5871e-02],
+E                           [ 2.0378e-01, -9.2026e-02, -5.8645e-02,  2.4795e-01, -1.8051e-01,
+E                            -3.8751e-02,  3.2941e-01, -2.0866e-01, -6.8442e-02],
+E                           [-7.0360e-03,  2.1937e-02, -1.4577e-02,  1.7281e-02,  3.5649e-02,
+E                            -2.8165e-02, -8.0199e-02,  9.6897e-03,  2.0586e-02],
+E                           [-1.2081e-02,  3.1981e-02, -2.0937e-02,  2.1204e-02,  5.0241e-02,
+E                            -4.0714e-02, -7.0367e-02, -1.4653e-02,  1.9914e-02],
+E                           [ 1.0844e-02, -8.3631e-04, -5.2382e-03,  3.2622e-02, -2.5439e-02,
+E                            -1.1698e-02,  5.0045e-02, -4.2718e-02, -2.0912e-02],
+E                           [ 3.0609e-02, -9.4904e-03, -1.0055e-02,  9.5751e-02, -7.0699e-02,
+E                            -3.0426e-02,  1.3820e-01, -1.0586e-01, -4.8206e-02],
+E                           [ 5.7787e-02, -4.5881e-02, -1.7656e-02,  6.2685e-02, -2.0929e-02,
+E                            -2.6575e-02,  1.2509e-01, -1.0084e-01, -3.7865e-02],
+E                           [ 1.6411e-01, -1.2143e-01, -3.3562e-02,  1.6105e-01, -7.5831e-02,
+E                            -4.6091e-02,  3.2258e-01, -2.2452e-01, -8.1250e-02],
+E                           [ 9.2729e-03,  5.2499e-03, -8.1501e-03,  7.9346e-03, -5.9405e-03,
+E                            -8.9536e-03,  3.1005e-03, -1.4277e-02, -4.5167e-03],
+E                           [ 2.8686e-03,  1.6445e-02, -1.8266e-02,  1.2411e-02, -1.5337e-02,
+E                            -2.4318e-02,  8.4682e-03, -3.5987e-02, -1.6788e-02],
+E                           [ 6.5093e-03, -2.9526e-03,  1.2987e-03,  9.3823e-03, -3.7563e-03,
+E                            -1.0598e-03,  8.9507e-03, -5.6802e-03, -1.8359e-03],
+E                           [ 1.6520e-03, -4.0528e-04,  2.0597e-03,  7.4587e-03,  1.2758e-03,
+E                            -7.1218e-03,  7.0569e-03, -9.6833e-03, -2.5054e-03],
+E                           [ 5.6417e-02,  2.0501e-02, -3.9380e-02, -1.5132e-02, -8.3026e-02,
+E                             5.5740e-02,  5.0092e-02, -1.0118e-02, -2.1318e-02],
+E                           [-2.9456e-02,  1.1915e-01, -7.0096e-02, -8.1502e-02, -8.6729e-02,
+E                             7.7736e-02, -8.8919e-02,  5.1373e-02, -1.1296e-02],
+E                           [ 3.3895e-02,  4.4783e-04, -1.9179e-02,  3.5131e-02, -1.5212e-02,
+E                            -1.1085e-02,  2.9108e-02, -3.2208e-02, -4.4191e-04],
+E                           [-5.1041e-02,  6.6641e-02, -3.6912e-02, -7.5704e-02,  6.3943e-02,
+E                            -2.2648e-02, -1.3648e-01,  2.2935e-02,  1.9796e-02],
+E                           [ 4.2610e-02, -1.2438e-02, -1.4082e-02, -1.1405e-02, -4.4224e-02,
+E                             3.2496e-02,  8.2429e-02, -3.3057e-02, -2.6973e-02],
+E                           [ 3.7205e-02,  3.5201e-03, -2.5109e-02, -2.3773e-02, -6.0625e-02,
+E                             4.6456e-02,  6.5439e-02, -2.1627e-02, -3.0740e-02],
+E                           [-6.0377e-02, -2.3036e-02,  3.4022e-02,  1.8905e-02,  4.7073e-02,
+E                            -3.5448e-02, -3.2502e-02,  1.1919e-02,  2.2331e-03],
+E                           [-5.3771e-02, -8.4430e-02,  6.3091e-02,  8.4892e-03,  5.5900e-02,
+E                            -3.3572e-02, -9.1423e-03,  2.6066e-02, -1.0100e-02],
+E                           [-5.5552e-03, -4.7131e-03, -9.4270e-05, -2.3613e-02, -1.9374e-03,
+E                             8.1865e-03, -1.2865e-02,  1.3873e-02, -5.6412e-03],
+E                           [ 8.5035e-02, -6.6782e-02, -7.7632e-03,  1.1957e-01, -1.1672e-01,
+E                            -2.6242e-03,  1.7385e-01, -7.6632e-02, -4.6282e-02],
+E                           [-1.5914e-02, -4.6921e-02,  3.5851e-02,  2.1817e-02, -2.5954e-03,
+E                            -1.1664e-02,  1.3588e-02,  8.8854e-03, -1.8921e-02],
+E                           [-1.0856e-01, -3.3585e-02,  6.2726e-02, -1.8236e-01,  1.5134e-01,
+E                            -8.3966e-03, -2.8288e-01,  1.7253e-01,  2.2065e-02],
+E                           [-2.3312e-02,  1.2252e-02, -8.7705e-03,  1.0764e-02,  6.6824e-02,
+E                            -4.7048e-02, -6.6645e-02, -1.4050e-02,  1.4362e-02],
+E                           [-3.1194e-03, -9.5597e-03, -1.1038e-02,  2.8057e-02,  9.0523e-02,
+E                            -6.9949e-02, -1.2233e-02, -6.6917e-02,  6.0914e-03]],
+E                          dtype=torch.float64)
+E                   Analytical:
+E                   tensor([[0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.],
+E                           [0., 0., 0., 0., 0., 0., 0., 0., 0.]], dtype=torch.float64)
+E                   
+E                   The max per-element difference (slow mode) is: 0.47630793656439074.
+
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:1854: GradcheckError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_smoke2[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_nocrash[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_gradcheck[cpu]
+========================= 3 failed, 16 passed in 0.72s =========================
+
+
+Final Test Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'jit', 'onnxrt', 'inductor', 'openxla', 'tvm', 'cudagraphs', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 19 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_smoke[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_smoke2[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_nocrash[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape[cpu-float32-1-4] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape[cpu-float32-2-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape[cpu-float32-3-6] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape_noweights[cpu-float32-1-4] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape_noweights[cpu-float32-2-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape_noweights[cpu-float32-3-6] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_points_noweights[cpu-float32-1-4] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_points_noweights[cpu-float32-2-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_points_noweights[cpu-float32-3-6] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points[cpu-float32-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points_iter[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points_iter[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points_iter[cpu-float32-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_gradcheck[cpu] PASSED
+
+=============================== warnings summary ===============================
+tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_nocrash[cpu-float32]
+  /local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/homography.py:309: RuntimeWarning: SVD did not converge
+    warnings.warn("SVD did not converge", RuntimeWarning)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 19 passed, 1 warning in 0.25s =========================
+
+
+Initial Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'openxla', 'jit', 'cudagraphs', 'onnxrt', 'tvm', 'inductor', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 19 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_smoke[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_smoke2[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_nocrash[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape[cpu-float32-1-4] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape[cpu-float32-2-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape[cpu-float32-3-6] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape_noweights[cpu-float32-1-4] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape_noweights[cpu-float32-2-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape_noweights[cpu-float32-3-6] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_points_noweights[cpu-float32-1-4] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_points_noweights[cpu-float32-2-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_points_noweights[cpu-float32-3-6] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points[cpu-float32-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points_iter[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points_iter[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points_iter[cpu-float32-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_gradcheck[cpu] PASSED
+
+=============================== warnings summary ===============================
+tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_nocrash[cpu-float32]
+  /local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/homography.py:309: RuntimeWarning: SVD did not converge
+    warnings.warn("SVD did not converge", RuntimeWarning)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 19 passed, 1 warning in 0.24s =========================

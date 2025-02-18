@@ -1,0 +1,882 @@
+output file:
+processed_kornia_torch_svd_cast116.json
+function:
+_torch_svd_cast
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape[cpu-float32-2-5] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points_iter[cpu-float32-2] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points_iter[cpu-float32-5]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_gradcheck[cpu] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape_noweights[cpu-float32-2-5] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_smoke[cpu-float32] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_smoke2[cpu-float32] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points[cpu-float32-5] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_smoke2[cpu-float32]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape[cpu-float32-2-5]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape_noweights[cpu-float32-2-5]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_gradcheck[cpu]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_points_noweights[cpu-float32-2-5]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points[cpu-float32-2]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points_iter[cpu-float32-2]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape_noweights[cpu-float32-3-6] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_nocrash[cpu-float32] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_nocrash[cpu-float32]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape_noweights[cpu-float32-3-6]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points_iter[cpu-float32-5] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_points_noweights[cpu-float32-3-6]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_points_noweights[cpu-float32-3-6] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points[cpu-float32-5]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_smoke[cpu-float32]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape[cpu-float32-3-6]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points[cpu-float32-2] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape[cpu-float32-3-6] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_points_noweights[cpu-float32-2-5] FAILED'}
+
+All Test Cases On Generated code:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', None, 'openxla', 'onnxrt', 'tvm', 'jit', 'cudagraphs', 'inductor'}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 19 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_smoke[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_smoke2[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_nocrash[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape[cpu-float32-1-4] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape[cpu-float32-2-5] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape[cpu-float32-3-6] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape_noweights[cpu-float32-1-4] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape_noweights[cpu-float32-2-5] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape_noweights[cpu-float32-3-6] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_points_noweights[cpu-float32-1-4] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_points_noweights[cpu-float32-2-5] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_points_noweights[cpu-float32-3-6] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points[cpu-float32-1] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points[cpu-float32-2] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points[cpu-float32-5] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points_iter[cpu-float32-1] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points_iter[cpu-float32-2] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points_iter[cpu-float32-5] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_gradcheck[cpu] FAILED
+
+=================================== FAILURES ===================================
+____________ TestFindHomographyFromLinesDLT.test_smoke[cpu-float32] ____________
+
+self = <tests.geometry.test_homography.TestFindHomographyFromLinesDLT object at 0x758b6553a890>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_smoke(self, device, dtype):
+        points1st = torch.rand(1, 4, 2, device=device, dtype=dtype)
+        points1end = torch.rand(1, 4, 2, device=device, dtype=dtype)
+        points2st = torch.rand(1, 4, 2, device=device, dtype=dtype)
+        points2end = torch.rand(1, 4, 2, device=device, dtype=dtype)
+        weights = torch.ones(1, 4, device=device, dtype=dtype)
+        ls1 = torch.stack([points1st, points1end], dim=2)
+        ls2 = torch.stack([points2st, points2end], dim=2)
+>       H = find_homography_lines_dlt(ls1, ls2, weights)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py:260: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/homography.py:307: in find_homography_lines_dlt
+    _, _, V = _torch_svd_cast(A)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = tensor([[[ 29.8143, -44.9086,  14.7075, -13.7458,  12.2445,   3.7522,  29.4349,
+          -42.5420,  10.3883],
+       ...6562],
+         [ 10.3883, -19.2013,  21.2786,   7.5910,   3.1933, -11.6905,   5.8265,
+          -17.6562,  21.9934]]])
+
+    def _torch_svd_cast(input: Tensor) -> Tuple[Tensor, Tensor, Tensor]:
+>       from .temp import _torch_svd_cast
+E       ImportError: cannot import name '_torch_svd_cast' from 'kornia.utils.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/helpers.py:147: ImportError
+___________ TestFindHomographyFromLinesDLT.test_smoke2[cpu-float32] ____________
+
+self = <tests.geometry.test_homography.TestFindHomographyFromLinesDLT object at 0x758b6553ac80>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_smoke2(self, device, dtype):
+        points1st = torch.rand(4, 2, device=device, dtype=dtype)
+        points1end = torch.rand(4, 2, device=device, dtype=dtype)
+        points2st = torch.rand(4, 2, device=device, dtype=dtype)
+        points2end = torch.rand(4, 2, device=device, dtype=dtype)
+        ls1 = torch.stack([points1st, points1end], dim=1)
+        ls2 = torch.stack([points2st, points2end], dim=1)
+>       H = find_homography_lines_dlt(ls1, ls2, None)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py:270: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/homography.py:307: in find_homography_lines_dlt
+    _, _, V = _torch_svd_cast(A)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = tensor([[[ 2.7043e+01, -1.2124e+01,  4.7999e+00,  4.5536e+00, -5.0027e+00,
+          -4.1824e-01, -5.7466e+00, -4.4387...0, -1.1007e+01,  3.0097e+01,  4.3654e-01,  7.2960e+00,
+          -3.0912e+01,  5.0193e-01, -9.8831e+00,  4.3371e+01]]])
+
+    def _torch_svd_cast(input: Tensor) -> Tuple[Tensor, Tensor, Tensor]:
+>       from .temp import _torch_svd_cast
+E       ImportError: cannot import name '_torch_svd_cast' from 'kornia.utils.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/helpers.py:147: ImportError
+___________ TestFindHomographyFromLinesDLT.test_nocrash[cpu-float32] ___________
+
+self = <tests.geometry.test_homography.TestFindHomographyFromLinesDLT object at 0x758b6553afb0>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_nocrash(self, device, dtype):
+        points1st = torch.rand(1, 4, 2, device=device, dtype=dtype)
+        points1end = torch.rand(1, 4, 2, device=device, dtype=dtype)
+        points2st = torch.rand(1, 4, 2, device=device, dtype=dtype)
+        points2end = torch.rand(1, 4, 2, device=device, dtype=dtype)
+        weights = torch.ones(1, 4, device=device, dtype=dtype)
+        points1st[0, 0, 0] = float("nan")
+        ls1 = torch.stack([points1st, points1end], dim=2)
+        ls2 = torch.stack([points2st, points2end], dim=2)
+>       H = find_homography_lines_dlt(ls1, ls2, weights)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py:282: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/homography.py:307: in find_homography_lines_dlt
+    _, _, V = _torch_svd_cast(A)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = tensor([[[    nan,     nan,     nan,     nan,     nan,     nan,     nan,
+              nan,     nan],
+         [    na... nan,     nan],
+         [    nan,     nan, -7.5155,     nan,     nan, -0.1809,     nan,
+              nan, 23.7751]]])
+
+    def _torch_svd_cast(input: Tensor) -> Tuple[Tensor, Tensor, Tensor]:
+>       from .temp import _torch_svd_cast
+E       ImportError: cannot import name '_torch_svd_cast' from 'kornia.utils.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/helpers.py:147: ImportError
+__________ TestFindHomographyFromLinesDLT.test_shape[cpu-float32-1-4] __________
+
+self = <tests.geometry.test_homography.TestFindHomographyFromLinesDLT object at 0x758b6553b3a0>
+batch_size = 1, num_points = 4, device = device(type='cpu')
+dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size, num_points", [(1, 4), (2, 5), (3, 6)])
+    def test_shape(self, batch_size, num_points, device, dtype):
+        B, N = batch_size, num_points
+        points1st = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points1end = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points2st = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points2end = torch.rand(B, N, 2, device=device, dtype=dtype)
+        weights = torch.ones(B, N, device=device, dtype=dtype)
+        ls1 = torch.stack([points1st, points1end], dim=2)
+        ls2 = torch.stack([points2st, points2end], dim=2)
+>       H = find_homography_lines_dlt(ls1, ls2, weights)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py:295: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/homography.py:307: in find_homography_lines_dlt
+    _, _, V = _torch_svd_cast(A)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = tensor([[[ 16.2250,   6.4649,   0.9283,  18.0321,   2.1267,   1.5918,   5.8235,
+          -10.6950,   1.3566],
+       ...4262],
+         [  1.3566,  -6.1989,   4.8897,   1.7796, -15.4152,   9.9604,   7.9903,
+          -19.4262,  35.5989]]])
+
+    def _torch_svd_cast(input: Tensor) -> Tuple[Tensor, Tensor, Tensor]:
+>       from .temp import _torch_svd_cast
+E       ImportError: cannot import name '_torch_svd_cast' from 'kornia.utils.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/helpers.py:147: ImportError
+__________ TestFindHomographyFromLinesDLT.test_shape[cpu-float32-2-5] __________
+
+self = <tests.geometry.test_homography.TestFindHomographyFromLinesDLT object at 0x758b6553b2e0>
+batch_size = 2, num_points = 5, device = device(type='cpu')
+dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size, num_points", [(1, 4), (2, 5), (3, 6)])
+    def test_shape(self, batch_size, num_points, device, dtype):
+        B, N = batch_size, num_points
+        points1st = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points1end = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points2st = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points2end = torch.rand(B, N, 2, device=device, dtype=dtype)
+        weights = torch.ones(B, N, device=device, dtype=dtype)
+        ls1 = torch.stack([points1st, points1end], dim=2)
+        ls2 = torch.stack([points2st, points2end], dim=2)
+>       H = find_homography_lines_dlt(ls1, ls2, weights)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py:295: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/homography.py:307: in find_homography_lines_dlt
+    _, _, V = _torch_svd_cast(A)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = tensor([[[ 2.1031e+01, -3.5939e+00, -1.3903e+01, -1.0810e+01,  4.5810e+00,
+           6.4810e+00, -2.1405e+01,  3.7558...0, -1.0675e+01,  2.3611e+01,  1.4314e+00, -1.6984e-01,
+           2.6629e-01,  5.6468e+00, -5.7911e+00,  4.4638e+01]]])
+
+    def _torch_svd_cast(input: Tensor) -> Tuple[Tensor, Tensor, Tensor]:
+>       from .temp import _torch_svd_cast
+E       ImportError: cannot import name '_torch_svd_cast' from 'kornia.utils.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/helpers.py:147: ImportError
+__________ TestFindHomographyFromLinesDLT.test_shape[cpu-float32-3-6] __________
+
+self = <tests.geometry.test_homography.TestFindHomographyFromLinesDLT object at 0x758b6553b640>
+batch_size = 3, num_points = 6, device = device(type='cpu')
+dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size, num_points", [(1, 4), (2, 5), (3, 6)])
+    def test_shape(self, batch_size, num_points, device, dtype):
+        B, N = batch_size, num_points
+        points1st = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points1end = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points2st = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points2end = torch.rand(B, N, 2, device=device, dtype=dtype)
+        weights = torch.ones(B, N, device=device, dtype=dtype)
+        ls1 = torch.stack([points1st, points1end], dim=2)
+        ls2 = torch.stack([points2st, points2end], dim=2)
+>       H = find_homography_lines_dlt(ls1, ls2, weights)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py:295: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/homography.py:307: in find_homography_lines_dlt
+    _, _, V = _torch_svd_cast(A)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = tensor([[[ 23.9315,   4.0587,   6.3615,   3.3625,  -0.3672,  -1.5064,  -5.5520,
+           -6.1367,   6.6172],
+       ...9474],
+         [  4.0272,  -3.9926,   6.5171,   1.2256,   0.2337,   0.2722,   5.1094,
+            2.9474,  11.8494]]])
+
+    def _torch_svd_cast(input: Tensor) -> Tuple[Tensor, Tensor, Tensor]:
+>       from .temp import _torch_svd_cast
+E       ImportError: cannot import name '_torch_svd_cast' from 'kornia.utils.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/helpers.py:147: ImportError
+_____ TestFindHomographyFromLinesDLT.test_shape_noweights[cpu-float32-1-4] _____
+
+self = <tests.geometry.test_homography.TestFindHomographyFromLinesDLT object at 0x758b6553b9d0>
+batch_size = 1, num_points = 4, device = device(type='cpu')
+dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size, num_points", [(1, 4), (2, 5), (3, 6)])
+    def test_shape_noweights(self, batch_size, num_points, device, dtype):
+        B, N = batch_size, num_points
+        points1st = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points1end = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points2st = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points2end = torch.rand(B, N, 2, device=device, dtype=dtype)
+        ls1 = torch.stack([points1st, points1end], dim=2)
+        ls2 = torch.stack([points2st, points2end], dim=2)
+>       H = find_homography_lines_dlt(ls1, ls2, None)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py:307: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/homography.py:307: in find_homography_lines_dlt
+    _, _, V = _torch_svd_cast(A)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = tensor([[[ 2.2422e+00, -4.4220e+00,  2.5956e+00, -3.8051e+00,  3.8820e+00,
+          -4.0795e-01,  2.8957e+00, -2.1985...0,  1.3697e+01, -1.4967e+01,  2.6087e+00, -1.2308e+01,
+          -5.7749e+00,  1.4698e+00, -2.1749e+00,  2.9136e+01]]])
+
+    def _torch_svd_cast(input: Tensor) -> Tuple[Tensor, Tensor, Tensor]:
+>       from .temp import _torch_svd_cast
+E       ImportError: cannot import name '_torch_svd_cast' from 'kornia.utils.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/helpers.py:147: ImportError
+_____ TestFindHomographyFromLinesDLT.test_shape_noweights[cpu-float32-2-5] _____
+
+self = <tests.geometry.test_homography.TestFindHomographyFromLinesDLT object at 0x758b6553b910>
+batch_size = 2, num_points = 5, device = device(type='cpu')
+dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size, num_points", [(1, 4), (2, 5), (3, 6)])
+    def test_shape_noweights(self, batch_size, num_points, device, dtype):
+        B, N = batch_size, num_points
+        points1st = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points1end = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points2st = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points2end = torch.rand(B, N, 2, device=device, dtype=dtype)
+        ls1 = torch.stack([points1st, points1end], dim=2)
+        ls2 = torch.stack([points2st, points2end], dim=2)
+>       H = find_homography_lines_dlt(ls1, ls2, None)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py:307: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/homography.py:307: in find_homography_lines_dlt
+    _, _, V = _torch_svd_cast(A)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = tensor([[[  6.9649,   4.4571,  -1.8310,   1.6983,   6.8070,  -3.8113,   3.5246,
+           -1.5793,   0.8457],
+       ...3116],
+         [ -2.7810,   6.8229,   6.1879,   2.5949,   5.7346,  -2.8442,  -3.2537,
+            2.3116,   7.3677]]])
+
+    def _torch_svd_cast(input: Tensor) -> Tuple[Tensor, Tensor, Tensor]:
+>       from .temp import _torch_svd_cast
+E       ImportError: cannot import name '_torch_svd_cast' from 'kornia.utils.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/helpers.py:147: ImportError
+_____ TestFindHomographyFromLinesDLT.test_shape_noweights[cpu-float32-3-6] _____
+
+self = <tests.geometry.test_homography.TestFindHomographyFromLinesDLT object at 0x758b6553bc70>
+batch_size = 3, num_points = 6, device = device(type='cpu')
+dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size, num_points", [(1, 4), (2, 5), (3, 6)])
+    def test_shape_noweights(self, batch_size, num_points, device, dtype):
+        B, N = batch_size, num_points
+        points1st = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points1end = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points2st = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points2end = torch.rand(B, N, 2, device=device, dtype=dtype)
+        ls1 = torch.stack([points1st, points1end], dim=2)
+        ls2 = torch.stack([points2st, points2end], dim=2)
+>       H = find_homography_lines_dlt(ls1, ls2, None)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py:307: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/homography.py:307: in find_homography_lines_dlt
+    _, _, V = _torch_svd_cast(A)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = tensor([[[ 29.2112, -19.6508, -10.2971,   8.8357, -16.6847,  -3.4159, -19.0315,
+            2.0033,  -3.0801],
+       ...3051],
+         [-14.7074, -13.7567,  15.3851,  10.0480,  -3.9435,  -7.6439, -19.0332,
+           -3.3051,  30.3046]]])
+
+    def _torch_svd_cast(input: Tensor) -> Tuple[Tensor, Tensor, Tensor]:
+>       from .temp import _torch_svd_cast
+E       ImportError: cannot import name '_torch_svd_cast' from 'kornia.utils.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/helpers.py:147: ImportError
+____ TestFindHomographyFromLinesDLT.test_points_noweights[cpu-float32-1-4] _____
+
+self = <tests.geometry.test_homography.TestFindHomographyFromLinesDLT object at 0x758b6553bfa0>
+batch_size = 1, num_points = 4, device = device(type='cpu')
+dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size, num_points", [(1, 4), (2, 5), (3, 6)])
+    def test_points_noweights(self, batch_size, num_points, device, dtype):
+        B, N = batch_size, num_points
+        points1st = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points1end = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points2st = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points2end = torch.rand(B, N, 2, device=device, dtype=dtype)
+        weights = torch.ones(B, N, device=device, dtype=dtype)
+        ls1 = torch.stack([points1st, points1end], dim=2)
+        ls2 = torch.stack([points2st, points2end], dim=2)
+>       H_noweights = find_homography_lines_dlt(ls1, ls2, None)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py:320: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/homography.py:307: in find_homography_lines_dlt
+    _, _, V = _torch_svd_cast(A)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = tensor([[[ 13.0334, -18.4567,   8.6060,  -4.3722,   5.3119,  -2.5562,   4.6837,
+           -5.8610,   3.2829],
+       ...2571],
+         [  3.2829,  -0.4501,   8.9234,   4.3912,   8.7179,  -3.3540,  -4.3769,
+           -1.2571,  13.0026]]])
+
+    def _torch_svd_cast(input: Tensor) -> Tuple[Tensor, Tensor, Tensor]:
+>       from .temp import _torch_svd_cast
+E       ImportError: cannot import name '_torch_svd_cast' from 'kornia.utils.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/helpers.py:147: ImportError
+____ TestFindHomographyFromLinesDLT.test_points_noweights[cpu-float32-2-5] _____
+
+self = <tests.geometry.test_homography.TestFindHomographyFromLinesDLT object at 0x758b6556c0a0>
+batch_size = 2, num_points = 5, device = device(type='cpu')
+dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size, num_points", [(1, 4), (2, 5), (3, 6)])
+    def test_points_noweights(self, batch_size, num_points, device, dtype):
+        B, N = batch_size, num_points
+        points1st = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points1end = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points2st = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points2end = torch.rand(B, N, 2, device=device, dtype=dtype)
+        weights = torch.ones(B, N, device=device, dtype=dtype)
+        ls1 = torch.stack([points1st, points1end], dim=2)
+        ls2 = torch.stack([points2st, points2end], dim=2)
+>       H_noweights = find_homography_lines_dlt(ls1, ls2, None)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py:320: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/homography.py:307: in find_homography_lines_dlt
+    _, _, V = _torch_svd_cast(A)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = tensor([[[ 6.8261e+00, -1.4481e+00, -3.1423e+00, -1.7069e+00, -1.3392e+00,
+          -6.1174e-01,  5.3985e+00,  2.8136...1,  1.5407e+00, -3.7574e+00, -3.7746e+00,  2.2959e+00,
+           1.8962e+00, -3.3784e+00, -2.6932e+00,  2.9417e+01]]])
+
+    def _torch_svd_cast(input: Tensor) -> Tuple[Tensor, Tensor, Tensor]:
+>       from .temp import _torch_svd_cast
+E       ImportError: cannot import name '_torch_svd_cast' from 'kornia.utils.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/helpers.py:147: ImportError
+____ TestFindHomographyFromLinesDLT.test_points_noweights[cpu-float32-3-6] _____
+
+self = <tests.geometry.test_homography.TestFindHomographyFromLinesDLT object at 0x758b6556c2e0>
+batch_size = 3, num_points = 6, device = device(type='cpu')
+dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size, num_points", [(1, 4), (2, 5), (3, 6)])
+    def test_points_noweights(self, batch_size, num_points, device, dtype):
+        B, N = batch_size, num_points
+        points1st = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points1end = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points2st = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points2end = torch.rand(B, N, 2, device=device, dtype=dtype)
+        weights = torch.ones(B, N, device=device, dtype=dtype)
+        ls1 = torch.stack([points1st, points1end], dim=2)
+        ls2 = torch.stack([points2st, points2end], dim=2)
+>       H_noweights = find_homography_lines_dlt(ls1, ls2, None)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py:320: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/homography.py:307: in find_homography_lines_dlt
+    _, _, V = _torch_svd_cast(A)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = tensor([[[ 3.9290e+01, -2.1291e+00,  1.6663e+01,  7.6769e-01,  1.7761e+01,
+           1.3323e+01,  2.5116e+01, -1.2637...1,  8.9299e+00,  6.4912e+00,  1.2461e+01,  1.4725e+01,
+          -4.3444e+00, -8.2586e+00, -4.7838e+00,  4.0518e+01]]])
+
+    def _torch_svd_cast(input: Tensor) -> Tuple[Tensor, Tensor, Tensor]:
+>       from .temp import _torch_svd_cast
+E       ImportError: cannot import name '_torch_svd_cast' from 'kornia.utils.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/helpers.py:147: ImportError
+_______ TestFindHomographyFromLinesDLT.test_clean_points[cpu-float32-1] ________
+
+self = <tests.geometry.test_homography.TestFindHomographyFromLinesDLT object at 0x758b6556c670>
+batch_size = 1, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 5])
+    def test_clean_points(self, batch_size, device, dtype):
+        # generate input data
+        points_src_st = torch.rand(batch_size, 10, 2, device=device, dtype=dtype)
+        points_src_end = torch.rand(batch_size, 10, 2, device=device, dtype=dtype)
+    
+        H = kornia.eye_like(3, points_src_st)
+        H = H * 0.3 * torch.rand_like(H)
+        H = H / H[:, 2:3, 2:3]
+        points_dst_st = kornia.geometry.transform_points(H, points_src_st)
+        points_dst_end = kornia.geometry.transform_points(H, points_src_end)
+    
+        ls1 = torch.stack([points_src_st, points_src_end], axis=2)
+        ls2 = torch.stack([points_dst_st, points_dst_end], axis=2)
+        # compute transform from source to target
+>       dst_homo_src = find_homography_lines_dlt(ls1, ls2, None)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py:341: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/homography.py:307: in find_homography_lines_dlt
+    _, _, V = _torch_svd_cast(A)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = tensor([[[ 9.8996e+01,  1.6055e+00, -3.5724e+01,  7.1463e-01, -7.2135e+00,
+          -1.8111e+00,  5.0134e+01,  6.6887...1,  1.5858e+00,  2.3946e+01, -7.3200e-01, -3.2784e+00,
+          -4.0003e-01, -2.9660e+01, -2.9041e-01,  3.5640e+01]]])
+
+    def _torch_svd_cast(input: Tensor) -> Tuple[Tensor, Tensor, Tensor]:
+>       from .temp import _torch_svd_cast
+E       ImportError: cannot import name '_torch_svd_cast' from 'kornia.utils.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/helpers.py:147: ImportError
+_______ TestFindHomographyFromLinesDLT.test_clean_points[cpu-float32-2] ________
+
+self = <tests.geometry.test_homography.TestFindHomographyFromLinesDLT object at 0x758b6556c5b0>
+batch_size = 2, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 5])
+    def test_clean_points(self, batch_size, device, dtype):
+        # generate input data
+        points_src_st = torch.rand(batch_size, 10, 2, device=device, dtype=dtype)
+        points_src_end = torch.rand(batch_size, 10, 2, device=device, dtype=dtype)
+    
+        H = kornia.eye_like(3, points_src_st)
+        H = H * 0.3 * torch.rand_like(H)
+        H = H / H[:, 2:3, 2:3]
+        points_dst_st = kornia.geometry.transform_points(H, points_src_st)
+        points_dst_end = kornia.geometry.transform_points(H, points_src_end)
+    
+        ls1 = torch.stack([points_src_st, points_src_end], axis=2)
+        ls2 = torch.stack([points_dst_st, points_dst_end], axis=2)
+        # compute transform from source to target
+>       dst_homo_src = find_homography_lines_dlt(ls1, ls2, None)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py:341: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/homography.py:307: in find_homography_lines_dlt
+    _, _, V = _torch_svd_cast(A)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = tensor([[[ 9.3325e+01,  2.8651e+01, -3.5445e+01,  3.2704e+00, -4.0993e+00,
+           1.4135e+00, -4.6408e+00,  5.7628...1, -8.7207e+00,  1.2270e+01,  1.2457e+00, -5.3080e+00,
+           4.1583e+00, -2.9226e+00, -3.5781e+00,  2.2836e+01]]])
+
+    def _torch_svd_cast(input: Tensor) -> Tuple[Tensor, Tensor, Tensor]:
+>       from .temp import _torch_svd_cast
+E       ImportError: cannot import name '_torch_svd_cast' from 'kornia.utils.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/helpers.py:147: ImportError
+_______ TestFindHomographyFromLinesDLT.test_clean_points[cpu-float32-5] ________
+
+self = <tests.geometry.test_homography.TestFindHomographyFromLinesDLT object at 0x758b6556c8b0>
+batch_size = 5, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 5])
+    def test_clean_points(self, batch_size, device, dtype):
+        # generate input data
+        points_src_st = torch.rand(batch_size, 10, 2, device=device, dtype=dtype)
+        points_src_end = torch.rand(batch_size, 10, 2, device=device, dtype=dtype)
+    
+        H = kornia.eye_like(3, points_src_st)
+        H = H * 0.3 * torch.rand_like(H)
+        H = H / H[:, 2:3, 2:3]
+        points_dst_st = kornia.geometry.transform_points(H, points_src_st)
+        points_dst_end = kornia.geometry.transform_points(H, points_src_end)
+    
+        ls1 = torch.stack([points_src_st, points_src_end], axis=2)
+        ls2 = torch.stack([points_dst_st, points_dst_end], axis=2)
+        # compute transform from source to target
+>       dst_homo_src = find_homography_lines_dlt(ls1, ls2, None)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py:341: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/homography.py:307: in find_homography_lines_dlt
+    _, _, V = _torch_svd_cast(A)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = tensor([[[ 8.4422e+01,  5.6171e+01,  1.6835e+01, -5.0496e+01, -4.1783e+01,
+          -1.1872e+01, -2.8243e+01, -4.5425...0,  5.8006e-01,  1.1344e+00,  2.9358e-01, -1.4253e-01,
+           6.8088e-02, -9.8821e-02, -4.5531e-02,  8.7372e-01]]])
+
+    def _torch_svd_cast(input: Tensor) -> Tuple[Tensor, Tensor, Tensor]:
+>       from .temp import _torch_svd_cast
+E       ImportError: cannot import name '_torch_svd_cast' from 'kornia.utils.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/helpers.py:147: ImportError
+_____ TestFindHomographyFromLinesDLT.test_clean_points_iter[cpu-float32-1] _____
+
+self = <tests.geometry.test_homography.TestFindHomographyFromLinesDLT object at 0x758b6556cc40>
+batch_size = 1, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 5])
+    def test_clean_points_iter(self, batch_size, device, dtype):
+        # generate input data
+        points_src_st = torch.rand(batch_size, 10, 2, device=device, dtype=dtype)
+        points_src_end = torch.rand(batch_size, 10, 2, device=device, dtype=dtype)
+    
+        H = kornia.eye_like(3, points_src_st)
+        H = H * 0.3 * torch.rand_like(H)
+        H = H / H[:, 2:3, 2:3]
+        points_dst_st = kornia.geometry.transform_points(H, points_src_st)
+        points_dst_end = kornia.geometry.transform_points(H, points_src_end)
+    
+        ls1 = torch.stack([points_src_st, points_src_end], axis=2)
+        ls2 = torch.stack([points_dst_st, points_dst_end], axis=2)
+        # compute transform from source to target
+>       dst_homo_src = find_homography_lines_dlt_iterated(ls1, ls2, None, 5)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py:366: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/homography.py:335: in find_homography_lines_dlt_iterated
+    H: Tensor = find_homography_lines_dlt(ls1, ls2, weights)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/homography.py:307: in find_homography_lines_dlt
+    _, _, V = _torch_svd_cast(A)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = tensor([[[ 99.3670, -32.1769, -11.4473,   9.9269,  -3.8325,  -3.3620,   7.0798,
+          -10.8076, -20.2524],
+       ...2259],
+         [-20.2524,  -9.4952,   3.3296,  -2.1301,  -1.7473,   1.1422,  -0.2433,
+            1.2259,   8.1007]]])
+
+    def _torch_svd_cast(input: Tensor) -> Tuple[Tensor, Tensor, Tensor]:
+>       from .temp import _torch_svd_cast
+E       ImportError: cannot import name '_torch_svd_cast' from 'kornia.utils.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/helpers.py:147: ImportError
+_____ TestFindHomographyFromLinesDLT.test_clean_points_iter[cpu-float32-2] _____
+
+self = <tests.geometry.test_homography.TestFindHomographyFromLinesDLT object at 0x758b6556cb80>
+batch_size = 2, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 5])
+    def test_clean_points_iter(self, batch_size, device, dtype):
+        # generate input data
+        points_src_st = torch.rand(batch_size, 10, 2, device=device, dtype=dtype)
+        points_src_end = torch.rand(batch_size, 10, 2, device=device, dtype=dtype)
+    
+        H = kornia.eye_like(3, points_src_st)
+        H = H * 0.3 * torch.rand_like(H)
+        H = H / H[:, 2:3, 2:3]
+        points_dst_st = kornia.geometry.transform_points(H, points_src_st)
+        points_dst_end = kornia.geometry.transform_points(H, points_src_end)
+    
+        ls1 = torch.stack([points_src_st, points_src_end], axis=2)
+        ls2 = torch.stack([points_dst_st, points_dst_end], axis=2)
+        # compute transform from source to target
+>       dst_homo_src = find_homography_lines_dlt_iterated(ls1, ls2, None, 5)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py:366: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/homography.py:335: in find_homography_lines_dlt_iterated
+    H: Tensor = find_homography_lines_dlt(ls1, ls2, weights)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/homography.py:307: in find_homography_lines_dlt
+    _, _, V = _torch_svd_cast(A)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = tensor([[[ 1.4803e+02,  1.2026e+02,  1.9352e+00, -3.5229e+01, -5.7353e+01,
+           9.3843e-01, -3.1893e+01, -2.8620...1,  2.9946e+00,  2.0827e+00,  7.6703e-01, -2.1192e+00,
+           2.2480e-01,  3.0591e+00, -5.1864e+00,  1.0388e+01]]])
+
+    def _torch_svd_cast(input: Tensor) -> Tuple[Tensor, Tensor, Tensor]:
+>       from .temp import _torch_svd_cast
+E       ImportError: cannot import name '_torch_svd_cast' from 'kornia.utils.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/helpers.py:147: ImportError
+_____ TestFindHomographyFromLinesDLT.test_clean_points_iter[cpu-float32-5] _____
+
+self = <tests.geometry.test_homography.TestFindHomographyFromLinesDLT object at 0x758b6556ce80>
+batch_size = 5, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 5])
+    def test_clean_points_iter(self, batch_size, device, dtype):
+        # generate input data
+        points_src_st = torch.rand(batch_size, 10, 2, device=device, dtype=dtype)
+        points_src_end = torch.rand(batch_size, 10, 2, device=device, dtype=dtype)
+    
+        H = kornia.eye_like(3, points_src_st)
+        H = H * 0.3 * torch.rand_like(H)
+        H = H / H[:, 2:3, 2:3]
+        points_dst_st = kornia.geometry.transform_points(H, points_src_st)
+        points_dst_end = kornia.geometry.transform_points(H, points_src_end)
+    
+        ls1 = torch.stack([points_src_st, points_src_end], axis=2)
+        ls2 = torch.stack([points_dst_st, points_dst_end], axis=2)
+        # compute transform from source to target
+>       dst_homo_src = find_homography_lines_dlt_iterated(ls1, ls2, None, 5)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py:366: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/homography.py:335: in find_homography_lines_dlt_iterated
+    H: Tensor = find_homography_lines_dlt(ls1, ls2, weights)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/homography.py:307: in find_homography_lines_dlt
+    _, _, V = _torch_svd_cast(A)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = tensor([[[ 1.7634e+02, -5.5445e+01, -1.3373e+01,  5.4807e+00, -6.6002e+00,
+           3.3505e-01,  1.2528e+00, -6.0538...1,  1.4772e+00, -2.9659e+01,  9.4288e+00, -1.5199e+01,
+           1.9470e+01,  2.0708e+01, -2.3625e+01,  5.4816e+01]]])
+
+    def _torch_svd_cast(input: Tensor) -> Tuple[Tensor, Tensor, Tensor]:
+>       from .temp import _torch_svd_cast
+E       ImportError: cannot import name '_torch_svd_cast' from 'kornia.utils.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/helpers.py:147: ImportError
+______________ TestFindHomographyFromLinesDLT.test_gradcheck[cpu] ______________
+
+self = <tests.geometry.test_homography.TestFindHomographyFromLinesDLT object at 0x758b6553ada0>
+device = device(type='cpu')
+
+    @pytest.mark.grad()
+    def test_gradcheck(self, device):
+        points_src_st = torch.rand(1, 10, 2, device=device, dtype=torch.float64, requires_grad=True)
+        points_src_end = torch.rand(1, 10, 2, device=device, dtype=torch.float64, requires_grad=True)
+    
+        points_dst_st = torch.rand_like(points_src_st)
+        points_dst_end = torch.rand_like(points_src_end)
+        weights = torch.ones_like(points_src_st)[..., 0]
+        ls1 = torch.stack([points_src_st, points_src_end], axis=2)
+        ls2 = torch.stack([points_dst_st, points_dst_end], axis=2)
+    
+>       self.gradcheck(find_homography_lines_dlt, (ls1, ls2, weights), rtol=1e-6, atol=1e-6)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py:387: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:143: in gradcheck
+    return gradcheck(func, inputs, raise_exception=raise_exception, fast_mode=fast_mode, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2052: in gradcheck
+    return _gradcheck_helper(**args)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2074: in _gradcheck_helper
+    func_out = func(*tupled_inputs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/homography.py:307: in find_homography_lines_dlt
+    _, _, V = _torch_svd_cast(A)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = tensor([[[ 35.3204,   9.9268,  -1.8914,  18.6379,   6.2919,   5.3429, -21.9904,
+            6.9890,   1.5924],
+       ...1.0547, -16.8760,   3.5143,
+           15.8886,  49.7971]]], dtype=torch.float64,
+       grad_fn=<UnsafeViewBackward0>)
+
+    def _torch_svd_cast(input: Tensor) -> Tuple[Tensor, Tensor, Tensor]:
+>       from .temp import _torch_svd_cast
+E       ImportError: cannot import name '_torch_svd_cast' from 'kornia.utils.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/helpers.py:147: ImportError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_smoke[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_smoke2[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_nocrash[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape[cpu-float32-1-4]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape[cpu-float32-2-5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape[cpu-float32-3-6]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape_noweights[cpu-float32-1-4]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape_noweights[cpu-float32-2-5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape_noweights[cpu-float32-3-6]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_points_noweights[cpu-float32-1-4]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_points_noweights[cpu-float32-2-5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_points_noweights[cpu-float32-3-6]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points[cpu-float32-1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points[cpu-float32-2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points[cpu-float32-5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points_iter[cpu-float32-1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points_iter[cpu-float32-2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points_iter[cpu-float32-5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_gradcheck[cpu]
+============================== 19 failed in 0.69s ==============================
+
+
+Final Test Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'cudagraphs', 'jit', 'openxla', 'tvm', 'onnxrt', None, 'inductor'}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 19 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_smoke[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_smoke2[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_nocrash[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape[cpu-float32-1-4] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape[cpu-float32-2-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape[cpu-float32-3-6] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape_noweights[cpu-float32-1-4] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape_noweights[cpu-float32-2-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape_noweights[cpu-float32-3-6] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_points_noweights[cpu-float32-1-4] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_points_noweights[cpu-float32-2-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_points_noweights[cpu-float32-3-6] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points[cpu-float32-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points_iter[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points_iter[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points_iter[cpu-float32-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_gradcheck[cpu] PASSED
+
+=============================== warnings summary ===============================
+tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_nocrash[cpu-float32]
+  /local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/homography.py:309: RuntimeWarning: SVD did not converge
+    warnings.warn("SVD did not converge", RuntimeWarning)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 19 passed, 1 warning in 0.21s =========================
+
+
+Initial Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'onnxrt', 'inductor', 'jit', 'tvm', 'cudagraphs', None, 'openxla'}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 19 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_smoke[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_smoke2[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_nocrash[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape[cpu-float32-1-4] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape[cpu-float32-2-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape[cpu-float32-3-6] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape_noweights[cpu-float32-1-4] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape_noweights[cpu-float32-2-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_shape_noweights[cpu-float32-3-6] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_points_noweights[cpu-float32-1-4] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_points_noweights[cpu-float32-2-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_points_noweights[cpu-float32-3-6] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points[cpu-float32-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points_iter[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points_iter[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_clean_points_iter[cpu-float32-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_gradcheck[cpu] PASSED
+
+=============================== warnings summary ===============================
+tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT::test_nocrash[cpu-float32]
+  /local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/homography.py:309: RuntimeWarning: SVD did not converge
+    warnings.warn("SVD did not converge", RuntimeWarning)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 19 passed, 1 warning in 0.21s =========================

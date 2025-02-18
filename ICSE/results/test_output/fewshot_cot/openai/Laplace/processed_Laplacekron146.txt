@@ -1,0 +1,161 @@
+output file:
+processed_Laplacekron146.json
+function:
+kron
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/tests/test_matrix.py::test_matrix_consistent', 'FAILED ../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/tests/test_matrix.py::test_bmm_dense', '../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/tests/test_matrix.py::test_matrix_consistent FAILED', '../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/tests/test_matrix.py::test_bmm_dense FAILED'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/Laplace/Laplace/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/Laplace/Laplace
+configfile: pyproject.toml
+plugins: mock-3.14.0, cov-6.0.0
+collecting ... collected 9 items
+
+../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/tests/test_matrix.py::test_init_from_model PASSED
+../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/tests/test_matrix.py::test_init_from_iterable PASSED
+../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/tests/test_matrix.py::test_addition PASSED
+../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/tests/test_matrix.py::test_multiplication PASSED
+../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/tests/test_matrix.py::test_decompose PASSED
+../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/tests/test_matrix.py::test_logdet_consistent PASSED
+../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/tests/test_matrix.py::test_bmm_dense FAILED
+../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/tests/test_matrix.py::test_bmm_diag SKIPPED
+../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/tests/test_matrix.py::test_matrix_consistent FAILED
+
+=================================== FAILURES ===================================
+________________________________ test_bmm_dense ________________________________
+
+small_model = Sequential(
+  (0): Linear(in_features=3, out_features=5, bias=True)
+  (1): Tanh()
+  (2): Linear(in_features=5, out_features=2, bias=True)
+)
+
+    def test_bmm_dense(small_model):
+        model = small_model
+        # model = single_output_model
+        X = torch.randn(5, 3)
+        y = torch.randn(5, 2)
+    
+        # Dense Kronecker factors.
+        backend = BackPackGGN(model, "regression", stochastic=False)
+        _, kron = backend.kron(X, y, N=5)
+        kron_decomp = kron.decompose()
+        Js, _ = jacobians_naive(model, X)
+        blocks = list()
+        for F in kron.kfacs:
+            if len(F) == 1:
+                blocks.append(F[0])
+            else:
+                blocks.append(kron_prod(*F))
+        S = block_diag(blocks)
+>       assert torch.allclose(S, S.T)
+E       assert False
+E        +  where False = <built-in method allclose of type object at 0x7ccc460d0240>(tensor([[ 0.2781, -0.0067, -0.0898,  ...,  0.0000,  0.0000,  0.0000],\n        [-0.0817, -0.0521,  0.1470,  ...,  0.0000,  0.0000,  0.0000],\n        [-0.0063,  0.1203, -0.0541,  ...,  0.0000,  0.0000,  0.0000],\n        ...,\n        [ 0.0000,  0.0000,  0.0000,  ...,  1.0161,  0.0000,  0.0000],\n        [ 0.0000,  0.0000,  0.0000,  ...,  0.0000,  5.0000,  0.0000],\n        [ 0.0000,  0.0000,  0.0000,  ...,  0.0000,  0.0000,  5.0000]]), tensor([[ 0.2781, -0.0817, -0.0063,  ...,  0.0000,  0.0000,  0.0000],\n        [-0.0067, -0.0521,  0.1203,  ...,  0.0000,  0.0000,  0.0000],\n        [-0.0898,  0.1470, -0.0541,  ...,  0.0000,  0.0000,  0.0000],\n        ...,\n        [ 0.0000,  0.0000,  0.0000,  ...,  1.0161,  0.0000,  0.0000],\n        [ 0.0000,  0.0000,  0.0000,  ...,  0.0000,  5.0000,  0.0000],\n        [ 0.0000,  0.0000,  0.0000,  ...,  0.0000,  0.0000,  5.0000]]))
+E        +    where <built-in method allclose of type object at 0x7ccc460d0240> = torch.allclose
+E        +    and   tensor([[ 0.2781, -0.0817, -0.0063,  ...,  0.0000,  0.0000,  0.0000],\n        [-0.0067, -0.0521,  0.1203,  ...,  0.0000,  0.0000,  0.0000],\n        [-0.0898,  0.1470, -0.0541,  ...,  0.0000,  0.0000,  0.0000],\n        ...,\n        [ 0.0000,  0.0000,  0.0000,  ...,  1.0161,  0.0000,  0.0000],\n        [ 0.0000,  0.0000,  0.0000,  ...,  0.0000,  5.0000,  0.0000],\n        [ 0.0000,  0.0000,  0.0000,  ...,  0.0000,  0.0000,  5.0000]]) = tensor([[ 0.2781, -0.0067, -0.0898,  ...,  0.0000,  0.0000,  0.0000],\n        [-0.0817, -0.0521,  0.1470,  ...,  0.0000,  0.0000,  0.0000],\n        [-0.0063,  0.1203, -0.0541,  ...,  0.0000,  0.0000,  0.0000],\n        ...,\n        [ 0.0000,  0.0000,  0.0000,  ...,  1.0161,  0.0000,  0.0000],\n        [ 0.0000,  0.0000,  0.0000,  ...,  0.0000,  5.0000,  0.0000],\n        [ 0.0000,  0.0000,  0.0000,  ...,  0.0000,  0.0000,  5.0000]]).T
+
+/local/data0/moved_data/publishablew/Laplace/Laplace/tests/test_matrix.py:155: AssertionError
+____________________________ test_matrix_consistent ____________________________
+
+    def test_matrix_consistent():
+        expected_sizes = [[20, 3], [20], [2, 20], [2]]
+        torch.manual_seed(7171)
+        # Dense Kronecker factors.
+        kfacs = [[get_psd_matrix(i) for i in sizes] for sizes in expected_sizes]
+        kron = Kron(kfacs)
+        kron_decomp = kron.decompose()
+>       assert torch.allclose(kron.to_matrix(), kron_decomp.to_matrix(exponent=1))
+E       assert False
+E        +  where False = <built-in method allclose of type object at 0x7ccc460d0240>(tensor([[1.3281e+00, 4.5464e-01, 7.8916e-01,  ..., 0.0000e+00, 0.0000e+00,\n         0.0000e+00],\n        [5.7242e-02, 7.7728e-03, 7.3344e-02,  ..., 0.0000e+00, 0.0000e+00,\n         0.0000e+00],\n        [2.7589e-03, 6.3045e-03, 6.5026e-04,  ..., 0.0000e+00, 0.0000e+00,\n         0.0000e+00],\n        ...,\n        [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 2.0778e-01, 0.0000e+00,\n         0.0000e+00],\n        [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00, 4.6633e-01,\n         1.8143e-02],\n        [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00, 1.8143e-02,\n         3.8394e-01]]), tensor([[ 0.9518, -0.2191, -0.0282,  ...,  0.0000,  0.0000,  0.0000],\n        [-0.2191,  1.4450, -0.1213,  ...,  0.0000,  0.0000,  0.0000],\n        [-0.0282, -0.1213,  1.1037,  ...,  0.0000,  0.0000,  0.0000],\n        ...,\n        [ 0.0000,  0.0000,  0.0000,  ...,  0.0309,  0.0000,  0.0000],\n        [ 0.0000,  0.0000,  0.0000,  ...,  0.0000,  0.4663,  0.0181],\n        [ 0.0000,  0.0000,  0.0000,  ...,  0.0000,  0.0181,  0.3839]]))
+E        +    where <built-in method allclose of type object at 0x7ccc460d0240> = torch.allclose
+E        +    and   tensor([[1.3281e+00, 4.5464e-01, 7.8916e-01,  ..., 0.0000e+00, 0.0000e+00,\n         0.0000e+00],\n        [5.7242e-02, 7.7728e-03, 7.3344e-02,  ..., 0.0000e+00, 0.0000e+00,\n         0.0000e+00],\n        [2.7589e-03, 6.3045e-03, 6.5026e-04,  ..., 0.0000e+00, 0.0000e+00,\n         0.0000e+00],\n        ...,\n        [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 2.0778e-01, 0.0000e+00,\n         0.0000e+00],\n        [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00, 4.6633e-01,\n         1.8143e-02],\n        [0.0000e+00, 0.0000e+00, 0.0000e+00,  ..., 0.0000e+00, 1.8143e-02,\n         3.8394e-01]]) = to_matrix()
+E        +      where to_matrix = <laplace.utils.matrix.Kron object at 0x7ccb5ed81d90>.to_matrix
+E        +    and   tensor([[ 0.9518, -0.2191, -0.0282,  ...,  0.0000,  0.0000,  0.0000],\n        [-0.2191,  1.4450, -0.1213,  ...,  0.0000,  0.0000,  0.0000],\n        [-0.0282, -0.1213,  1.1037,  ...,  0.0000,  0.0000,  0.0000],\n        ...,\n        [ 0.0000,  0.0000,  0.0000,  ...,  0.0309,  0.0000,  0.0000],\n        [ 0.0000,  0.0000,  0.0000,  ...,  0.0000,  0.4663,  0.0181],\n        [ 0.0000,  0.0000,  0.0000,  ...,  0.0000,  0.0181,  0.3839]]) = to_matrix(exponent=1)
+E        +      where to_matrix = <laplace.utils.matrix.KronDecomposed object at 0x7ccb5ed81d10>.to_matrix
+
+/local/data0/moved_data/publishablew/Laplace/Laplace/tests/test_matrix.py:277: AssertionError
+=============================== warnings summary ===============================
+../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/venv/lib/python3.11/site-packages/unfoldNd/utils.py:18
+  /local/data0/moved_data/publishablew/Laplace/Laplace/venv/lib/python3.11/site-packages/unfoldNd/utils.py:18: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    TORCH_VERSION = LooseVersion(version("torch"))
+
+../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/venv/lib/python3.11/site-packages/unfoldNd/utils.py:19
+  /local/data0/moved_data/publishablew/Laplace/Laplace/venv/lib/python3.11/site-packages/unfoldNd/utils.py:19: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    TORCH_VERSION_AT_LEAST_1_12_0 = TORCH_VERSION >= LooseVersion("1.12.0")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/tests/test_matrix.py::test_bmm_dense
+FAILED ../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/tests/test_matrix.py::test_matrix_consistent
+============== 2 failed, 6 passed, 1 skipped, 2 warnings in 1.61s ==============
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/Laplace/Laplace/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/Laplace/Laplace
+configfile: pyproject.toml
+plugins: mock-3.14.0, cov-6.0.0
+collecting ... collected 9 items
+
+../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/tests/test_matrix.py::test_init_from_model PASSED
+../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/tests/test_matrix.py::test_init_from_iterable PASSED
+../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/tests/test_matrix.py::test_addition PASSED
+../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/tests/test_matrix.py::test_multiplication PASSED
+../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/tests/test_matrix.py::test_decompose PASSED
+../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/tests/test_matrix.py::test_logdet_consistent PASSED
+../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/tests/test_matrix.py::test_bmm_dense PASSED
+../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/tests/test_matrix.py::test_bmm_diag SKIPPED
+../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/tests/test_matrix.py::test_matrix_consistent PASSED
+
+=============================== warnings summary ===============================
+../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/venv/lib/python3.11/site-packages/unfoldNd/utils.py:18
+  /local/data0/moved_data/publishablew/Laplace/Laplace/venv/lib/python3.11/site-packages/unfoldNd/utils.py:18: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    TORCH_VERSION = LooseVersion(version("torch"))
+
+../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/venv/lib/python3.11/site-packages/unfoldNd/utils.py:19
+  /local/data0/moved_data/publishablew/Laplace/Laplace/venv/lib/python3.11/site-packages/unfoldNd/utils.py:19: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    TORCH_VERSION_AT_LEAST_1_12_0 = TORCH_VERSION >= LooseVersion("1.12.0")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=================== 8 passed, 1 skipped, 2 warnings in 1.52s ===================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/Laplace/Laplace/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/Laplace/Laplace
+configfile: pyproject.toml
+plugins: mock-3.14.0, cov-6.0.0
+collecting ... collected 9 items
+
+../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/tests/test_matrix.py::test_init_from_model PASSED
+../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/tests/test_matrix.py::test_init_from_iterable PASSED
+../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/tests/test_matrix.py::test_addition PASSED
+../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/tests/test_matrix.py::test_multiplication PASSED
+../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/tests/test_matrix.py::test_decompose PASSED
+../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/tests/test_matrix.py::test_logdet_consistent PASSED
+../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/tests/test_matrix.py::test_bmm_dense PASSED
+../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/tests/test_matrix.py::test_bmm_diag SKIPPED
+../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/tests/test_matrix.py::test_matrix_consistent PASSED
+
+=============================== warnings summary ===============================
+../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/venv/lib/python3.11/site-packages/unfoldNd/utils.py:18
+  /local/data0/moved_data/publishablew/Laplace/Laplace/venv/lib/python3.11/site-packages/unfoldNd/utils.py:18: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    TORCH_VERSION = LooseVersion(version("torch"))
+
+../../../../../../local/data0/moved_data/publishablew/Laplace/Laplace/venv/lib/python3.11/site-packages/unfoldNd/utils.py:19
+  /local/data0/moved_data/publishablew/Laplace/Laplace/venv/lib/python3.11/site-packages/unfoldNd/utils.py:19: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    TORCH_VERSION_AT_LEAST_1_12_0 = TORCH_VERSION >= LooseVersion("1.12.0")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================== 8 passed, 1 skipped, 2 warnings in 14.76s ===================

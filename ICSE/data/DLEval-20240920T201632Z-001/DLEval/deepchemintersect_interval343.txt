@@ -1,0 +1,28 @@
+stage: Model Construction
+task: 
+data: 
+
+prompt:
+Generate a Python function called intersect_interavl that Computes the intersection of two intervals.
+
+    Parameters
+    ----------
+    interval1: Tuple[float, float]
+        Should be `(x1_min, x1_max)`
+    interval2: Tuple[float, float]
+        Should be `(x2_min, x2_max)`
+
+    Returns
+    -------
+    x_intersect: Tuple[float, float]
+        Should be the intersection. If the intersection is empty returns
+        `(0, 0)` to represent the empty set. Otherwise is `(max(x1_min,
+        x2_min), min(x1_max, x2_max))`.
+
+ ground Truth:deepchem/utils/coordinate_box_utils.py#L235
+
+ repo:deepchem
+
+ function:intersect_interval
+ 
+ test_cases:deepchem/utils/test/test_coordinate_box_utils.py::TestCoordinateBoxUtils

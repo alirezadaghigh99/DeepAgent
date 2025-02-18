@@ -1,0 +1,39 @@
+stage: Image
+task: 
+data: Training
+
+prompt:
+Generate a Python function `forward` for the class `ZCAWhitening` that applies the whitening transform to the input data tensor `x`. The function should check if the `include_fit` parameter is `True`, and if so, it should call the `fit` method on the input data `x`. If the class has not been fitted (`self.fitted` is `False`), the function should raise a `RuntimeError`. Once fitted, the function should apply a `linear_transform` to the input data `x` using the transformation matrix `self.transform_matrix`, the mean vector `self.mean_vector`, and the dimension `self.dim`. The function should then return the transformed data.
+
+```python
+class ZCAWhitening(Module):
+    def __init__(
+        self,
+        dim: int = 0,
+        eps: float = 1e-6,
+        unbiased: bool = True,
+        detach_transforms: bool = True,
+        compute_inv: bool = False,
+    ) -> None:
+        super().__init__()
+        self.dim = dim
+        self.eps = eps
+        self.unbiased = unbiased
+        self.detach_transforms = detach_transforms
+        self.compute_inv = compute_inv
+        self.fitted = False
+
+        self.mean_vector: Tensor
+        self.transform_matrix: Tensor
+        self.transform_inv: Optional[Tensor]
+```
+
+ ground Truth:kornia/enhance/zca.py
+
+ repo:kornia
+
+ function:forward
+ 
+ test_cases:tests/enhance/test_zca.py
+ 
+ class:ZCAWhitening

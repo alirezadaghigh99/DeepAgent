@@ -1,0 +1,1597 @@
+output file:
+processed_pfrlcompute_policy_gradient_loss259.json
+function:
+compute_policy_gradient_loss
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-False-False-Gaussian]', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-True-True-Gaussian] FAILED', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-False-True-Gaussian] FAILED', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-False-True-Gaussian] FAILED', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-True-True-Softmax] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-False-True-Gaussian]', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-False-False-Gaussian] FAILED', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-False-False-Gaussian] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-False-True-Gaussian]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-False-True-Softmax]', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-False-False-Gaussian] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-False-False-Softmax]', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-True-False-Gaussian] FAILED', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-False-True-Softmax] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-False-False-Softmax]', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-False-False-Softmax] FAILED', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-False-True-Gaussian] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-False-False-Gaussian]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-True-True-Gaussian]', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-True-True-Gaussian] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-False-True-Softmax]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-True-True-Gaussian]', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-True-False-Gaussian] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-True-False-Gaussian]', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-True-True-Softmax] FAILED', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-True-True-Gaussian] FAILED', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-True-True-Gaussian] FAILED', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-True-True-Softmax] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-True-True-Softmax]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-True-False-Gaussian]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-True-True-Gaussian]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-False-False-Gaussian]', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-False-True-Gaussian] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-True-False-Softmax]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-False-True-Gaussian]', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-False-True-Softmax] FAILED', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-False-False-Softmax] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-False-False-Softmax]', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-False-False-Softmax] FAILED', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-False-False-Gaussian] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-False-True-Softmax]', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-False-True-Softmax] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-True-False-Softmax]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-False-True-Softmax]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-True-True-Softmax]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-False-True-Gaussian]', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-True-False-Softmax] FAILED', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-True-False-Softmax] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-False-False-Softmax]', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-True-False-Gaussian] FAILED', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-True-True-Softmax] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-True-False-Softmax]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-True-True-Gaussian]', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-False-True-Softmax] FAILED', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-True-False-Softmax] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-True-False-Gaussian]', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-True-False-Gaussian] FAILED', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-False-False-Softmax] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-True-True-Softmax]', '../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-True-False-Softmax] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-False-False-Gaussian]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-True-False-Softmax]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-True-True-Softmax]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-True-False-Gaussian]'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/pfrl/pfrl/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/pfrl/pfrl
+configfile: pytest.ini
+collecting ... collected 32 items
+
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-True-True-Gaussian] FAILED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-True-True-Softmax] FAILED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-True-False-Gaussian] FAILED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-True-False-Softmax] FAILED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-False-True-Gaussian] FAILED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-False-True-Softmax] FAILED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-False-False-Gaussian] FAILED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-False-False-Softmax] FAILED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-True-True-Gaussian] FAILED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-True-True-Softmax] FAILED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-True-False-Gaussian] FAILED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-True-False-Softmax] FAILED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-False-True-Gaussian] FAILED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-False-True-Softmax] FAILED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-False-False-Gaussian] FAILED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-False-False-Softmax] FAILED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-True-True-Gaussian] FAILED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-True-True-Softmax] FAILED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-True-False-Gaussian] FAILED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-True-False-Softmax] FAILED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-False-True-Gaussian] FAILED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-False-True-Softmax] FAILED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-False-False-Gaussian] FAILED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-False-False-Softmax] FAILED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-True-True-Gaussian] FAILED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-True-True-Softmax] FAILED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-True-False-Gaussian] FAILED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-True-False-Softmax] FAILED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-False-True-Gaussian] FAILED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-False-True-Softmax] FAILED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-False-False-Gaussian] FAILED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-False-False-Softmax] FAILED
+
+=================================== FAILURES ===================================
+____ TestDegenerateDistribution.test_policy_gradient[0-True-True-Gaussian] _____
+
+self = <test_acer.TestDegenerateDistribution object at 0x7c7fc0d13990>
+
+    def test_policy_gradient(self):
+        action = self.mu.sample()
+>       pg = acer.compute_policy_gradient_loss(
+            action, 1, self.pi, self.mu, self.action_value, 0, self.truncation_threshold
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/acer.py:53: in compute_policy_gradient_loss
+    return compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+action = tensor([[0.5308, 0.3500]]), advantage = 1
+action_distrib = Independent(Normal(loc: torch.Size([1, 2]), scale: torch.Size([1, 2])), 1)
+action_distrib_mu = Independent(Normal(loc: torch.Size([1, 2]), scale: torch.Size([1, 2])), 1)
+action_value = SingleActionValue, v = 0, truncation_threshold = 0
+
+    def compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold=None):
+        """
+        Compute the policy gradient loss with off-policy bias correction.
+    
+        Parameters:
+        - action: The action taken.
+        - advantage: The advantage of taking that action.
+        - action_distrib: The distribution of actions from the current policy.
+        - action_distrib_mu: The distribution of actions from the behavior policy.
+        - action_value: The value of the action taken.
+        - v: The value function.
+        - truncation_threshold: Optional threshold for truncating the off-policy policy gradient term.
+    
+        Returns:
+        - The policy gradient loss as a scalar value.
+        """
+>       pi = action_distrib[action]
+E       TypeError: 'Independent' object is not subscriptable
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/temp.py:30: TypeError
+_____ TestDegenerateDistribution.test_policy_gradient[0-True-True-Softmax] _____
+
+self = <test_acer.TestDegenerateDistribution object at 0x7c7fc0d13c50>
+
+    def test_policy_gradient(self):
+        action = self.mu.sample()
+>       pg = acer.compute_policy_gradient_loss(
+            action, 1, self.pi, self.mu, self.action_value, 0, self.truncation_threshold
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/acer.py:53: in compute_policy_gradient_loss
+    return compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+action = tensor([0]), advantage = 1
+action_distrib = Categorical(probs: torch.Size([1, 2]))
+action_distrib_mu = Categorical(probs: torch.Size([1, 2]))
+action_value = DiscreteActionValue greedy_actions:[1] q_values:[[1. 3.]], v = 0
+truncation_threshold = 0
+
+    def compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold=None):
+        """
+        Compute the policy gradient loss with off-policy bias correction.
+    
+        Parameters:
+        - action: The action taken.
+        - advantage: The advantage of taking that action.
+        - action_distrib: The distribution of actions from the current policy.
+        - action_distrib_mu: The distribution of actions from the behavior policy.
+        - action_value: The value of the action taken.
+        - v: The value function.
+        - truncation_threshold: Optional threshold for truncating the off-policy policy gradient term.
+    
+        Returns:
+        - The policy gradient loss as a scalar value.
+        """
+>       pi = action_distrib[action]
+E       TypeError: 'Categorical' object is not subscriptable
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/temp.py:30: TypeError
+____ TestDegenerateDistribution.test_policy_gradient[0-True-False-Gaussian] ____
+
+self = <test_acer.TestDegenerateDistribution object at 0x7c7fc0d13f50>
+
+    def test_policy_gradient(self):
+        action = self.mu.sample()
+>       pg = acer.compute_policy_gradient_loss(
+            action, 1, self.pi, self.mu, self.action_value, 0, self.truncation_threshold
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/acer.py:53: in compute_policy_gradient_loss
+    return compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+action = tensor([[0.6353, 0.1352]]), advantage = 1
+action_distrib = Independent(Normal(loc: torch.Size([1, 2]), scale: torch.Size([1, 2])), 1)
+action_distrib_mu = Independent(Normal(loc: torch.Size([1, 2]), scale: torch.Size([1, 2])), 1)
+action_value = SingleActionValue, v = 0, truncation_threshold = 0
+
+    def compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold=None):
+        """
+        Compute the policy gradient loss with off-policy bias correction.
+    
+        Parameters:
+        - action: The action taken.
+        - advantage: The advantage of taking that action.
+        - action_distrib: The distribution of actions from the current policy.
+        - action_distrib_mu: The distribution of actions from the behavior policy.
+        - action_value: The value of the action taken.
+        - v: The value function.
+        - truncation_threshold: Optional threshold for truncating the off-policy policy gradient term.
+    
+        Returns:
+        - The policy gradient loss as a scalar value.
+        """
+>       pi = action_distrib[action]
+E       TypeError: 'Independent' object is not subscriptable
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/temp.py:30: TypeError
+____ TestDegenerateDistribution.test_policy_gradient[0-True-False-Softmax] _____
+
+self = <test_acer.TestDegenerateDistribution object at 0x7c7fc0d15310>
+
+    def test_policy_gradient(self):
+        action = self.mu.sample()
+>       pg = acer.compute_policy_gradient_loss(
+            action, 1, self.pi, self.mu, self.action_value, 0, self.truncation_threshold
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/acer.py:53: in compute_policy_gradient_loss
+    return compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+action = tensor([0]), advantage = 1
+action_distrib = Categorical(logits: torch.Size([1, 2]))
+action_distrib_mu = Categorical(probs: torch.Size([1, 2]))
+action_value = DiscreteActionValue greedy_actions:[1] q_values:[[1. 3.]], v = 0
+truncation_threshold = 0
+
+    def compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold=None):
+        """
+        Compute the policy gradient loss with off-policy bias correction.
+    
+        Parameters:
+        - action: The action taken.
+        - advantage: The advantage of taking that action.
+        - action_distrib: The distribution of actions from the current policy.
+        - action_distrib_mu: The distribution of actions from the behavior policy.
+        - action_value: The value of the action taken.
+        - v: The value function.
+        - truncation_threshold: Optional threshold for truncating the off-policy policy gradient term.
+    
+        Returns:
+        - The policy gradient loss as a scalar value.
+        """
+>       pi = action_distrib[action]
+E       TypeError: 'Categorical' object is not subscriptable
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/temp.py:30: TypeError
+____ TestDegenerateDistribution.test_policy_gradient[0-False-True-Gaussian] ____
+
+self = <test_acer.TestDegenerateDistribution object at 0x7c7fc0d14310>
+
+    def test_policy_gradient(self):
+        action = self.mu.sample()
+>       pg = acer.compute_policy_gradient_loss(
+            action, 1, self.pi, self.mu, self.action_value, 0, self.truncation_threshold
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/acer.py:53: in compute_policy_gradient_loss
+    return compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+action = tensor([[-0.8457, -0.4662]]), advantage = 1
+action_distrib = Independent(Normal(loc: torch.Size([1, 2]), scale: torch.Size([1, 2])), 1)
+action_distrib_mu = Independent(Normal(loc: torch.Size([1, 2]), scale: torch.Size([1, 2])), 1)
+action_value = SingleActionValue, v = 0, truncation_threshold = 0
+
+    def compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold=None):
+        """
+        Compute the policy gradient loss with off-policy bias correction.
+    
+        Parameters:
+        - action: The action taken.
+        - advantage: The advantage of taking that action.
+        - action_distrib: The distribution of actions from the current policy.
+        - action_distrib_mu: The distribution of actions from the behavior policy.
+        - action_value: The value of the action taken.
+        - v: The value function.
+        - truncation_threshold: Optional threshold for truncating the off-policy policy gradient term.
+    
+        Returns:
+        - The policy gradient loss as a scalar value.
+        """
+>       pi = action_distrib[action]
+E       TypeError: 'Independent' object is not subscriptable
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/temp.py:30: TypeError
+____ TestDegenerateDistribution.test_policy_gradient[0-False-True-Softmax] _____
+
+self = <test_acer.TestDegenerateDistribution object at 0x7c7fc0d14450>
+
+    def test_policy_gradient(self):
+        action = self.mu.sample()
+>       pg = acer.compute_policy_gradient_loss(
+            action, 1, self.pi, self.mu, self.action_value, 0, self.truncation_threshold
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/acer.py:53: in compute_policy_gradient_loss
+    return compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+action = tensor([1]), advantage = 1
+action_distrib = Categorical(probs: torch.Size([1, 2]))
+action_distrib_mu = Categorical(probs: torch.Size([1, 2]), logits: torch.Size([1, 2]))
+action_value = DiscreteActionValue greedy_actions:[1] q_values:[[1. 3.]], v = 0
+truncation_threshold = 0
+
+    def compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold=None):
+        """
+        Compute the policy gradient loss with off-policy bias correction.
+    
+        Parameters:
+        - action: The action taken.
+        - advantage: The advantage of taking that action.
+        - action_distrib: The distribution of actions from the current policy.
+        - action_distrib_mu: The distribution of actions from the behavior policy.
+        - action_value: The value of the action taken.
+        - v: The value function.
+        - truncation_threshold: Optional threshold for truncating the off-policy policy gradient term.
+    
+        Returns:
+        - The policy gradient loss as a scalar value.
+        """
+>       pi = action_distrib[action]
+E       TypeError: 'Categorical' object is not subscriptable
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/temp.py:30: TypeError
+___ TestDegenerateDistribution.test_policy_gradient[0-False-False-Gaussian] ____
+
+self = <test_acer.TestDegenerateDistribution object at 0x7c7fc0d14910>
+
+    def test_policy_gradient(self):
+        action = self.mu.sample()
+>       pg = acer.compute_policy_gradient_loss(
+            action, 1, self.pi, self.mu, self.action_value, 0, self.truncation_threshold
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/acer.py:53: in compute_policy_gradient_loss
+    return compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+action = tensor([[ 1.3217, -0.4708]]), advantage = 1
+action_distrib = Independent(Normal(loc: torch.Size([1, 2]), scale: torch.Size([1, 2])), 1)
+action_distrib_mu = Independent(Normal(loc: torch.Size([1, 2]), scale: torch.Size([1, 2])), 1)
+action_value = SingleActionValue, v = 0, truncation_threshold = 0
+
+    def compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold=None):
+        """
+        Compute the policy gradient loss with off-policy bias correction.
+    
+        Parameters:
+        - action: The action taken.
+        - advantage: The advantage of taking that action.
+        - action_distrib: The distribution of actions from the current policy.
+        - action_distrib_mu: The distribution of actions from the behavior policy.
+        - action_value: The value of the action taken.
+        - v: The value function.
+        - truncation_threshold: Optional threshold for truncating the off-policy policy gradient term.
+    
+        Returns:
+        - The policy gradient loss as a scalar value.
+        """
+>       pi = action_distrib[action]
+E       TypeError: 'Independent' object is not subscriptable
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/temp.py:30: TypeError
+____ TestDegenerateDistribution.test_policy_gradient[0-False-False-Softmax] ____
+
+self = <test_acer.TestDegenerateDistribution object at 0x7c7fc0d14cd0>
+
+    def test_policy_gradient(self):
+        action = self.mu.sample()
+>       pg = acer.compute_policy_gradient_loss(
+            action, 1, self.pi, self.mu, self.action_value, 0, self.truncation_threshold
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/acer.py:53: in compute_policy_gradient_loss
+    return compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+action = tensor([0]), advantage = 1
+action_distrib = Categorical(probs: torch.Size([1, 2]), logits: torch.Size([1, 2]))
+action_distrib_mu = Categorical(probs: torch.Size([1, 2]), logits: torch.Size([1, 2]))
+action_value = DiscreteActionValue greedy_actions:[1] q_values:[[1. 3.]], v = 0
+truncation_threshold = 0
+
+    def compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold=None):
+        """
+        Compute the policy gradient loss with off-policy bias correction.
+    
+        Parameters:
+        - action: The action taken.
+        - advantage: The advantage of taking that action.
+        - action_distrib: The distribution of actions from the current policy.
+        - action_distrib_mu: The distribution of actions from the behavior policy.
+        - action_value: The value of the action taken.
+        - v: The value function.
+        - truncation_threshold: Optional threshold for truncating the off-policy policy gradient term.
+    
+        Returns:
+        - The policy gradient loss as a scalar value.
+        """
+>       pi = action_distrib[action]
+E       TypeError: 'Categorical' object is not subscriptable
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/temp.py:30: TypeError
+____ TestDegenerateDistribution.test_policy_gradient[1-True-True-Gaussian] _____
+
+self = <test_acer.TestDegenerateDistribution object at 0x7c7fc0d14e10>
+
+    def test_policy_gradient(self):
+        action = self.mu.sample()
+>       pg = acer.compute_policy_gradient_loss(
+            action, 1, self.pi, self.mu, self.action_value, 0, self.truncation_threshold
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/acer.py:53: in compute_policy_gradient_loss
+    return compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+action = tensor([[0.1953, 0.6313]]), advantage = 1
+action_distrib = Independent(Normal(loc: torch.Size([1, 2]), scale: torch.Size([1, 2])), 1)
+action_distrib_mu = Independent(Normal(loc: torch.Size([1, 2]), scale: torch.Size([1, 2])), 1)
+action_value = SingleActionValue, v = 0, truncation_threshold = 1
+
+    def compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold=None):
+        """
+        Compute the policy gradient loss with off-policy bias correction.
+    
+        Parameters:
+        - action: The action taken.
+        - advantage: The advantage of taking that action.
+        - action_distrib: The distribution of actions from the current policy.
+        - action_distrib_mu: The distribution of actions from the behavior policy.
+        - action_value: The value of the action taken.
+        - v: The value function.
+        - truncation_threshold: Optional threshold for truncating the off-policy policy gradient term.
+    
+        Returns:
+        - The policy gradient loss as a scalar value.
+        """
+>       pi = action_distrib[action]
+E       TypeError: 'Independent' object is not subscriptable
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/temp.py:30: TypeError
+_____ TestDegenerateDistribution.test_policy_gradient[1-True-True-Softmax] _____
+
+self = <test_acer.TestDegenerateDistribution object at 0x7c7fc0d17f10>
+
+    def test_policy_gradient(self):
+        action = self.mu.sample()
+>       pg = acer.compute_policy_gradient_loss(
+            action, 1, self.pi, self.mu, self.action_value, 0, self.truncation_threshold
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/acer.py:53: in compute_policy_gradient_loss
+    return compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+action = tensor([0]), advantage = 1
+action_distrib = Categorical(probs: torch.Size([1, 2]))
+action_distrib_mu = Categorical(probs: torch.Size([1, 2]))
+action_value = DiscreteActionValue greedy_actions:[1] q_values:[[1. 3.]], v = 0
+truncation_threshold = 1
+
+    def compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold=None):
+        """
+        Compute the policy gradient loss with off-policy bias correction.
+    
+        Parameters:
+        - action: The action taken.
+        - advantage: The advantage of taking that action.
+        - action_distrib: The distribution of actions from the current policy.
+        - action_distrib_mu: The distribution of actions from the behavior policy.
+        - action_value: The value of the action taken.
+        - v: The value function.
+        - truncation_threshold: Optional threshold for truncating the off-policy policy gradient term.
+    
+        Returns:
+        - The policy gradient loss as a scalar value.
+        """
+>       pi = action_distrib[action]
+E       TypeError: 'Categorical' object is not subscriptable
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/temp.py:30: TypeError
+____ TestDegenerateDistribution.test_policy_gradient[1-True-False-Gaussian] ____
+
+self = <test_acer.TestDegenerateDistribution object at 0x7c7fc0d201d0>
+
+    def test_policy_gradient(self):
+        action = self.mu.sample()
+>       pg = acer.compute_policy_gradient_loss(
+            action, 1, self.pi, self.mu, self.action_value, 0, self.truncation_threshold
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/acer.py:53: in compute_policy_gradient_loss
+    return compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+action = tensor([[0.5244, 0.4013]]), advantage = 1
+action_distrib = Independent(Normal(loc: torch.Size([1, 2]), scale: torch.Size([1, 2])), 1)
+action_distrib_mu = Independent(Normal(loc: torch.Size([1, 2]), scale: torch.Size([1, 2])), 1)
+action_value = SingleActionValue, v = 0, truncation_threshold = 1
+
+    def compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold=None):
+        """
+        Compute the policy gradient loss with off-policy bias correction.
+    
+        Parameters:
+        - action: The action taken.
+        - advantage: The advantage of taking that action.
+        - action_distrib: The distribution of actions from the current policy.
+        - action_distrib_mu: The distribution of actions from the behavior policy.
+        - action_value: The value of the action taken.
+        - v: The value function.
+        - truncation_threshold: Optional threshold for truncating the off-policy policy gradient term.
+    
+        Returns:
+        - The policy gradient loss as a scalar value.
+        """
+>       pi = action_distrib[action]
+E       TypeError: 'Independent' object is not subscriptable
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/temp.py:30: TypeError
+____ TestDegenerateDistribution.test_policy_gradient[1-True-False-Softmax] _____
+
+self = <test_acer.TestDegenerateDistribution object at 0x7c7fc0d20450>
+
+    def test_policy_gradient(self):
+        action = self.mu.sample()
+>       pg = acer.compute_policy_gradient_loss(
+            action, 1, self.pi, self.mu, self.action_value, 0, self.truncation_threshold
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/acer.py:53: in compute_policy_gradient_loss
+    return compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+action = tensor([0]), advantage = 1
+action_distrib = Categorical(logits: torch.Size([1, 2]))
+action_distrib_mu = Categorical(probs: torch.Size([1, 2]))
+action_value = DiscreteActionValue greedy_actions:[1] q_values:[[1. 3.]], v = 0
+truncation_threshold = 1
+
+    def compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold=None):
+        """
+        Compute the policy gradient loss with off-policy bias correction.
+    
+        Parameters:
+        - action: The action taken.
+        - advantage: The advantage of taking that action.
+        - action_distrib: The distribution of actions from the current policy.
+        - action_distrib_mu: The distribution of actions from the behavior policy.
+        - action_value: The value of the action taken.
+        - v: The value function.
+        - truncation_threshold: Optional threshold for truncating the off-policy policy gradient term.
+    
+        Returns:
+        - The policy gradient loss as a scalar value.
+        """
+>       pi = action_distrib[action]
+E       TypeError: 'Categorical' object is not subscriptable
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/temp.py:30: TypeError
+____ TestDegenerateDistribution.test_policy_gradient[1-False-True-Gaussian] ____
+
+self = <test_acer.TestDegenerateDistribution object at 0x7c7fc0d206d0>
+
+    def test_policy_gradient(self):
+        action = self.mu.sample()
+>       pg = acer.compute_policy_gradient_loss(
+            action, 1, self.pi, self.mu, self.action_value, 0, self.truncation_threshold
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/acer.py:53: in compute_policy_gradient_loss
+    return compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+action = tensor([[1.8613, 0.7382]]), advantage = 1
+action_distrib = Independent(Normal(loc: torch.Size([1, 2]), scale: torch.Size([1, 2])), 1)
+action_distrib_mu = Independent(Normal(loc: torch.Size([1, 2]), scale: torch.Size([1, 2])), 1)
+action_value = SingleActionValue, v = 0, truncation_threshold = 1
+
+    def compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold=None):
+        """
+        Compute the policy gradient loss with off-policy bias correction.
+    
+        Parameters:
+        - action: The action taken.
+        - advantage: The advantage of taking that action.
+        - action_distrib: The distribution of actions from the current policy.
+        - action_distrib_mu: The distribution of actions from the behavior policy.
+        - action_value: The value of the action taken.
+        - v: The value function.
+        - truncation_threshold: Optional threshold for truncating the off-policy policy gradient term.
+    
+        Returns:
+        - The policy gradient loss as a scalar value.
+        """
+>       pi = action_distrib[action]
+E       TypeError: 'Independent' object is not subscriptable
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/temp.py:30: TypeError
+____ TestDegenerateDistribution.test_policy_gradient[1-False-True-Softmax] _____
+
+self = <test_acer.TestDegenerateDistribution object at 0x7c7fc0d20950>
+
+    def test_policy_gradient(self):
+        action = self.mu.sample()
+>       pg = acer.compute_policy_gradient_loss(
+            action, 1, self.pi, self.mu, self.action_value, 0, self.truncation_threshold
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/acer.py:53: in compute_policy_gradient_loss
+    return compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+action = tensor([0]), advantage = 1
+action_distrib = Categorical(probs: torch.Size([1, 2]))
+action_distrib_mu = Categorical(probs: torch.Size([1, 2]), logits: torch.Size([1, 2]))
+action_value = DiscreteActionValue greedy_actions:[1] q_values:[[1. 3.]], v = 0
+truncation_threshold = 1
+
+    def compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold=None):
+        """
+        Compute the policy gradient loss with off-policy bias correction.
+    
+        Parameters:
+        - action: The action taken.
+        - advantage: The advantage of taking that action.
+        - action_distrib: The distribution of actions from the current policy.
+        - action_distrib_mu: The distribution of actions from the behavior policy.
+        - action_value: The value of the action taken.
+        - v: The value function.
+        - truncation_threshold: Optional threshold for truncating the off-policy policy gradient term.
+    
+        Returns:
+        - The policy gradient loss as a scalar value.
+        """
+>       pi = action_distrib[action]
+E       TypeError: 'Categorical' object is not subscriptable
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/temp.py:30: TypeError
+___ TestDegenerateDistribution.test_policy_gradient[1-False-False-Gaussian] ____
+
+self = <test_acer.TestDegenerateDistribution object at 0x7c7fc0d20bd0>
+
+    def test_policy_gradient(self):
+        action = self.mu.sample()
+>       pg = acer.compute_policy_gradient_loss(
+            action, 1, self.pi, self.mu, self.action_value, 0, self.truncation_threshold
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/acer.py:53: in compute_policy_gradient_loss
+    return compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+action = tensor([[ 0.7178, -0.0317]]), advantage = 1
+action_distrib = Independent(Normal(loc: torch.Size([1, 2]), scale: torch.Size([1, 2])), 1)
+action_distrib_mu = Independent(Normal(loc: torch.Size([1, 2]), scale: torch.Size([1, 2])), 1)
+action_value = SingleActionValue, v = 0, truncation_threshold = 1
+
+    def compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold=None):
+        """
+        Compute the policy gradient loss with off-policy bias correction.
+    
+        Parameters:
+        - action: The action taken.
+        - advantage: The advantage of taking that action.
+        - action_distrib: The distribution of actions from the current policy.
+        - action_distrib_mu: The distribution of actions from the behavior policy.
+        - action_value: The value of the action taken.
+        - v: The value function.
+        - truncation_threshold: Optional threshold for truncating the off-policy policy gradient term.
+    
+        Returns:
+        - The policy gradient loss as a scalar value.
+        """
+>       pi = action_distrib[action]
+E       TypeError: 'Independent' object is not subscriptable
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/temp.py:30: TypeError
+____ TestDegenerateDistribution.test_policy_gradient[1-False-False-Softmax] ____
+
+self = <test_acer.TestDegenerateDistribution object at 0x7c7fc0d20e50>
+
+    def test_policy_gradient(self):
+        action = self.mu.sample()
+>       pg = acer.compute_policy_gradient_loss(
+            action, 1, self.pi, self.mu, self.action_value, 0, self.truncation_threshold
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/acer.py:53: in compute_policy_gradient_loss
+    return compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+action = tensor([0]), advantage = 1
+action_distrib = Categorical(probs: torch.Size([1, 2]), logits: torch.Size([1, 2]))
+action_distrib_mu = Categorical(probs: torch.Size([1, 2]), logits: torch.Size([1, 2]))
+action_value = DiscreteActionValue greedy_actions:[1] q_values:[[1. 3.]], v = 0
+truncation_threshold = 1
+
+    def compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold=None):
+        """
+        Compute the policy gradient loss with off-policy bias correction.
+    
+        Parameters:
+        - action: The action taken.
+        - advantage: The advantage of taking that action.
+        - action_distrib: The distribution of actions from the current policy.
+        - action_distrib_mu: The distribution of actions from the behavior policy.
+        - action_value: The value of the action taken.
+        - v: The value function.
+        - truncation_threshold: Optional threshold for truncating the off-policy policy gradient term.
+    
+        Returns:
+        - The policy gradient loss as a scalar value.
+        """
+>       pi = action_distrib[action]
+E       TypeError: 'Categorical' object is not subscriptable
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/temp.py:30: TypeError
+____ TestDegenerateDistribution.test_policy_gradient[10-True-True-Gaussian] ____
+
+self = <test_acer.TestDegenerateDistribution object at 0x7c7fc0d210d0>
+
+    def test_policy_gradient(self):
+        action = self.mu.sample()
+>       pg = acer.compute_policy_gradient_loss(
+            action, 1, self.pi, self.mu, self.action_value, 0, self.truncation_threshold
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/acer.py:53: in compute_policy_gradient_loss
+    return compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+action = tensor([[0.0501, 0.9898]]), advantage = 1
+action_distrib = Independent(Normal(loc: torch.Size([1, 2]), scale: torch.Size([1, 2])), 1)
+action_distrib_mu = Independent(Normal(loc: torch.Size([1, 2]), scale: torch.Size([1, 2])), 1)
+action_value = SingleActionValue, v = 0, truncation_threshold = 10
+
+    def compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold=None):
+        """
+        Compute the policy gradient loss with off-policy bias correction.
+    
+        Parameters:
+        - action: The action taken.
+        - advantage: The advantage of taking that action.
+        - action_distrib: The distribution of actions from the current policy.
+        - action_distrib_mu: The distribution of actions from the behavior policy.
+        - action_value: The value of the action taken.
+        - v: The value function.
+        - truncation_threshold: Optional threshold for truncating the off-policy policy gradient term.
+    
+        Returns:
+        - The policy gradient loss as a scalar value.
+        """
+>       pi = action_distrib[action]
+E       TypeError: 'Independent' object is not subscriptable
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/temp.py:30: TypeError
+____ TestDegenerateDistribution.test_policy_gradient[10-True-True-Softmax] _____
+
+self = <test_acer.TestDegenerateDistribution object at 0x7c7fc0d21350>
+
+    def test_policy_gradient(self):
+        action = self.mu.sample()
+>       pg = acer.compute_policy_gradient_loss(
+            action, 1, self.pi, self.mu, self.action_value, 0, self.truncation_threshold
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/acer.py:53: in compute_policy_gradient_loss
+    return compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+action = tensor([0]), advantage = 1
+action_distrib = Categorical(probs: torch.Size([1, 2]))
+action_distrib_mu = Categorical(probs: torch.Size([1, 2]))
+action_value = DiscreteActionValue greedy_actions:[1] q_values:[[1. 3.]], v = 0
+truncation_threshold = 10
+
+    def compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold=None):
+        """
+        Compute the policy gradient loss with off-policy bias correction.
+    
+        Parameters:
+        - action: The action taken.
+        - advantage: The advantage of taking that action.
+        - action_distrib: The distribution of actions from the current policy.
+        - action_distrib_mu: The distribution of actions from the behavior policy.
+        - action_value: The value of the action taken.
+        - v: The value function.
+        - truncation_threshold: Optional threshold for truncating the off-policy policy gradient term.
+    
+        Returns:
+        - The policy gradient loss as a scalar value.
+        """
+>       pi = action_distrib[action]
+E       TypeError: 'Categorical' object is not subscriptable
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/temp.py:30: TypeError
+___ TestDegenerateDistribution.test_policy_gradient[10-True-False-Gaussian] ____
+
+self = <test_acer.TestDegenerateDistribution object at 0x7c7fc0d215d0>
+
+    def test_policy_gradient(self):
+        action = self.mu.sample()
+>       pg = acer.compute_policy_gradient_loss(
+            action, 1, self.pi, self.mu, self.action_value, 0, self.truncation_threshold
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/acer.py:53: in compute_policy_gradient_loss
+    return compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+action = tensor([[0.3882, 0.8488]]), advantage = 1
+action_distrib = Independent(Normal(loc: torch.Size([1, 2]), scale: torch.Size([1, 2])), 1)
+action_distrib_mu = Independent(Normal(loc: torch.Size([1, 2]), scale: torch.Size([1, 2])), 1)
+action_value = SingleActionValue, v = 0, truncation_threshold = 10
+
+    def compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold=None):
+        """
+        Compute the policy gradient loss with off-policy bias correction.
+    
+        Parameters:
+        - action: The action taken.
+        - advantage: The advantage of taking that action.
+        - action_distrib: The distribution of actions from the current policy.
+        - action_distrib_mu: The distribution of actions from the behavior policy.
+        - action_value: The value of the action taken.
+        - v: The value function.
+        - truncation_threshold: Optional threshold for truncating the off-policy policy gradient term.
+    
+        Returns:
+        - The policy gradient loss as a scalar value.
+        """
+>       pi = action_distrib[action]
+E       TypeError: 'Independent' object is not subscriptable
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/temp.py:30: TypeError
+____ TestDegenerateDistribution.test_policy_gradient[10-True-False-Softmax] ____
+
+self = <test_acer.TestDegenerateDistribution object at 0x7c7fc0d21890>
+
+    def test_policy_gradient(self):
+        action = self.mu.sample()
+>       pg = acer.compute_policy_gradient_loss(
+            action, 1, self.pi, self.mu, self.action_value, 0, self.truncation_threshold
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/acer.py:53: in compute_policy_gradient_loss
+    return compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+action = tensor([0]), advantage = 1
+action_distrib = Categorical(logits: torch.Size([1, 2]))
+action_distrib_mu = Categorical(probs: torch.Size([1, 2]))
+action_value = DiscreteActionValue greedy_actions:[1] q_values:[[1. 3.]], v = 0
+truncation_threshold = 10
+
+    def compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold=None):
+        """
+        Compute the policy gradient loss with off-policy bias correction.
+    
+        Parameters:
+        - action: The action taken.
+        - advantage: The advantage of taking that action.
+        - action_distrib: The distribution of actions from the current policy.
+        - action_distrib_mu: The distribution of actions from the behavior policy.
+        - action_value: The value of the action taken.
+        - v: The value function.
+        - truncation_threshold: Optional threshold for truncating the off-policy policy gradient term.
+    
+        Returns:
+        - The policy gradient loss as a scalar value.
+        """
+>       pi = action_distrib[action]
+E       TypeError: 'Categorical' object is not subscriptable
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/temp.py:30: TypeError
+___ TestDegenerateDistribution.test_policy_gradient[10-False-True-Gaussian] ____
+
+self = <test_acer.TestDegenerateDistribution object at 0x7c7fc0d21b90>
+
+    def test_policy_gradient(self):
+        action = self.mu.sample()
+>       pg = acer.compute_policy_gradient_loss(
+            action, 1, self.pi, self.mu, self.action_value, 0, self.truncation_threshold
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/acer.py:53: in compute_policy_gradient_loss
+    return compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+action = tensor([[0.1195, 0.3959]]), advantage = 1
+action_distrib = Independent(Normal(loc: torch.Size([1, 2]), scale: torch.Size([1, 2])), 1)
+action_distrib_mu = Independent(Normal(loc: torch.Size([1, 2]), scale: torch.Size([1, 2])), 1)
+action_value = SingleActionValue, v = 0, truncation_threshold = 10
+
+    def compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold=None):
+        """
+        Compute the policy gradient loss with off-policy bias correction.
+    
+        Parameters:
+        - action: The action taken.
+        - advantage: The advantage of taking that action.
+        - action_distrib: The distribution of actions from the current policy.
+        - action_distrib_mu: The distribution of actions from the behavior policy.
+        - action_value: The value of the action taken.
+        - v: The value function.
+        - truncation_threshold: Optional threshold for truncating the off-policy policy gradient term.
+    
+        Returns:
+        - The policy gradient loss as a scalar value.
+        """
+>       pi = action_distrib[action]
+E       TypeError: 'Independent' object is not subscriptable
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/temp.py:30: TypeError
+____ TestDegenerateDistribution.test_policy_gradient[10-False-True-Softmax] ____
+
+self = <test_acer.TestDegenerateDistribution object at 0x7c7fc0d21e90>
+
+    def test_policy_gradient(self):
+        action = self.mu.sample()
+>       pg = acer.compute_policy_gradient_loss(
+            action, 1, self.pi, self.mu, self.action_value, 0, self.truncation_threshold
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/acer.py:53: in compute_policy_gradient_loss
+    return compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+action = tensor([0]), advantage = 1
+action_distrib = Categorical(probs: torch.Size([1, 2]))
+action_distrib_mu = Categorical(probs: torch.Size([1, 2]), logits: torch.Size([1, 2]))
+action_value = DiscreteActionValue greedy_actions:[1] q_values:[[1. 3.]], v = 0
+truncation_threshold = 10
+
+    def compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold=None):
+        """
+        Compute the policy gradient loss with off-policy bias correction.
+    
+        Parameters:
+        - action: The action taken.
+        - advantage: The advantage of taking that action.
+        - action_distrib: The distribution of actions from the current policy.
+        - action_distrib_mu: The distribution of actions from the behavior policy.
+        - action_value: The value of the action taken.
+        - v: The value function.
+        - truncation_threshold: Optional threshold for truncating the off-policy policy gradient term.
+    
+        Returns:
+        - The policy gradient loss as a scalar value.
+        """
+>       pi = action_distrib[action]
+E       TypeError: 'Categorical' object is not subscriptable
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/temp.py:30: TypeError
+___ TestDegenerateDistribution.test_policy_gradient[10-False-False-Gaussian] ___
+
+self = <test_acer.TestDegenerateDistribution object at 0x7c7fc0d22190>
+
+    def test_policy_gradient(self):
+        action = self.mu.sample()
+>       pg = acer.compute_policy_gradient_loss(
+            action, 1, self.pi, self.mu, self.action_value, 0, self.truncation_threshold
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/acer.py:53: in compute_policy_gradient_loss
+    return compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+action = tensor([[0.0608, 1.4956]]), advantage = 1
+action_distrib = Independent(Normal(loc: torch.Size([1, 2]), scale: torch.Size([1, 2])), 1)
+action_distrib_mu = Independent(Normal(loc: torch.Size([1, 2]), scale: torch.Size([1, 2])), 1)
+action_value = SingleActionValue, v = 0, truncation_threshold = 10
+
+    def compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold=None):
+        """
+        Compute the policy gradient loss with off-policy bias correction.
+    
+        Parameters:
+        - action: The action taken.
+        - advantage: The advantage of taking that action.
+        - action_distrib: The distribution of actions from the current policy.
+        - action_distrib_mu: The distribution of actions from the behavior policy.
+        - action_value: The value of the action taken.
+        - v: The value function.
+        - truncation_threshold: Optional threshold for truncating the off-policy policy gradient term.
+    
+        Returns:
+        - The policy gradient loss as a scalar value.
+        """
+>       pi = action_distrib[action]
+E       TypeError: 'Independent' object is not subscriptable
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/temp.py:30: TypeError
+___ TestDegenerateDistribution.test_policy_gradient[10-False-False-Softmax] ____
+
+self = <test_acer.TestDegenerateDistribution object at 0x7c7fc0d22490>
+
+    def test_policy_gradient(self):
+        action = self.mu.sample()
+>       pg = acer.compute_policy_gradient_loss(
+            action, 1, self.pi, self.mu, self.action_value, 0, self.truncation_threshold
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/acer.py:53: in compute_policy_gradient_loss
+    return compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+action = tensor([1]), advantage = 1
+action_distrib = Categorical(probs: torch.Size([1, 2]), logits: torch.Size([1, 2]))
+action_distrib_mu = Categorical(probs: torch.Size([1, 2]), logits: torch.Size([1, 2]))
+action_value = DiscreteActionValue greedy_actions:[1] q_values:[[1. 3.]], v = 0
+truncation_threshold = 10
+
+    def compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold=None):
+        """
+        Compute the policy gradient loss with off-policy bias correction.
+    
+        Parameters:
+        - action: The action taken.
+        - advantage: The advantage of taking that action.
+        - action_distrib: The distribution of actions from the current policy.
+        - action_distrib_mu: The distribution of actions from the behavior policy.
+        - action_value: The value of the action taken.
+        - v: The value function.
+        - truncation_threshold: Optional threshold for truncating the off-policy policy gradient term.
+    
+        Returns:
+        - The policy gradient loss as a scalar value.
+        """
+>       pi = action_distrib[action]
+E       TypeError: 'Categorical' object is not subscriptable
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/temp.py:30: TypeError
+___ TestDegenerateDistribution.test_policy_gradient[None-True-True-Gaussian] ___
+
+self = <test_acer.TestDegenerateDistribution object at 0x7c7fc0d22790>
+
+    def test_policy_gradient(self):
+        action = self.mu.sample()
+>       pg = acer.compute_policy_gradient_loss(
+            action, 1, self.pi, self.mu, self.action_value, 0, self.truncation_threshold
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/acer.py:53: in compute_policy_gradient_loss
+    return compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+action = tensor([[0.0242, 0.4366]]), advantage = 1
+action_distrib = Independent(Normal(loc: torch.Size([1, 2]), scale: torch.Size([1, 2])), 1)
+action_distrib_mu = Independent(Normal(loc: torch.Size([1, 2]), scale: torch.Size([1, 2])), 1)
+action_value = SingleActionValue, v = 0, truncation_threshold = None
+
+    def compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold=None):
+        """
+        Compute the policy gradient loss with off-policy bias correction.
+    
+        Parameters:
+        - action: The action taken.
+        - advantage: The advantage of taking that action.
+        - action_distrib: The distribution of actions from the current policy.
+        - action_distrib_mu: The distribution of actions from the behavior policy.
+        - action_value: The value of the action taken.
+        - v: The value function.
+        - truncation_threshold: Optional threshold for truncating the off-policy policy gradient term.
+    
+        Returns:
+        - The policy gradient loss as a scalar value.
+        """
+>       pi = action_distrib[action]
+E       TypeError: 'Independent' object is not subscriptable
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/temp.py:30: TypeError
+___ TestDegenerateDistribution.test_policy_gradient[None-True-True-Softmax] ____
+
+self = <test_acer.TestDegenerateDistribution object at 0x7c7fc0d22a90>
+
+    def test_policy_gradient(self):
+        action = self.mu.sample()
+>       pg = acer.compute_policy_gradient_loss(
+            action, 1, self.pi, self.mu, self.action_value, 0, self.truncation_threshold
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/acer.py:53: in compute_policy_gradient_loss
+    return compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+action = tensor([0]), advantage = 1
+action_distrib = Categorical(probs: torch.Size([1, 2]))
+action_distrib_mu = Categorical(probs: torch.Size([1, 2]))
+action_value = DiscreteActionValue greedy_actions:[1] q_values:[[1. 3.]], v = 0
+truncation_threshold = None
+
+    def compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold=None):
+        """
+        Compute the policy gradient loss with off-policy bias correction.
+    
+        Parameters:
+        - action: The action taken.
+        - advantage: The advantage of taking that action.
+        - action_distrib: The distribution of actions from the current policy.
+        - action_distrib_mu: The distribution of actions from the behavior policy.
+        - action_value: The value of the action taken.
+        - v: The value function.
+        - truncation_threshold: Optional threshold for truncating the off-policy policy gradient term.
+    
+        Returns:
+        - The policy gradient loss as a scalar value.
+        """
+>       pi = action_distrib[action]
+E       TypeError: 'Categorical' object is not subscriptable
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/temp.py:30: TypeError
+__ TestDegenerateDistribution.test_policy_gradient[None-True-False-Gaussian] ___
+
+self = <test_acer.TestDegenerateDistribution object at 0x7c7fc0d22d90>
+
+    def test_policy_gradient(self):
+        action = self.mu.sample()
+>       pg = acer.compute_policy_gradient_loss(
+            action, 1, self.pi, self.mu, self.action_value, 0, self.truncation_threshold
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/acer.py:53: in compute_policy_gradient_loss
+    return compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+action = tensor([[0.2262, 0.5847]]), advantage = 1
+action_distrib = Independent(Normal(loc: torch.Size([1, 2]), scale: torch.Size([1, 2])), 1)
+action_distrib_mu = Independent(Normal(loc: torch.Size([1, 2]), scale: torch.Size([1, 2])), 1)
+action_value = SingleActionValue, v = 0, truncation_threshold = None
+
+    def compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold=None):
+        """
+        Compute the policy gradient loss with off-policy bias correction.
+    
+        Parameters:
+        - action: The action taken.
+        - advantage: The advantage of taking that action.
+        - action_distrib: The distribution of actions from the current policy.
+        - action_distrib_mu: The distribution of actions from the behavior policy.
+        - action_value: The value of the action taken.
+        - v: The value function.
+        - truncation_threshold: Optional threshold for truncating the off-policy policy gradient term.
+    
+        Returns:
+        - The policy gradient loss as a scalar value.
+        """
+>       pi = action_distrib[action]
+E       TypeError: 'Independent' object is not subscriptable
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/temp.py:30: TypeError
+___ TestDegenerateDistribution.test_policy_gradient[None-True-False-Softmax] ___
+
+self = <test_acer.TestDegenerateDistribution object at 0x7c7fc0d23090>
+
+    def test_policy_gradient(self):
+        action = self.mu.sample()
+>       pg = acer.compute_policy_gradient_loss(
+            action, 1, self.pi, self.mu, self.action_value, 0, self.truncation_threshold
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/acer.py:53: in compute_policy_gradient_loss
+    return compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+action = tensor([0]), advantage = 1
+action_distrib = Categorical(logits: torch.Size([1, 2]))
+action_distrib_mu = Categorical(probs: torch.Size([1, 2]))
+action_value = DiscreteActionValue greedy_actions:[1] q_values:[[1. 3.]], v = 0
+truncation_threshold = None
+
+    def compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold=None):
+        """
+        Compute the policy gradient loss with off-policy bias correction.
+    
+        Parameters:
+        - action: The action taken.
+        - advantage: The advantage of taking that action.
+        - action_distrib: The distribution of actions from the current policy.
+        - action_distrib_mu: The distribution of actions from the behavior policy.
+        - action_value: The value of the action taken.
+        - v: The value function.
+        - truncation_threshold: Optional threshold for truncating the off-policy policy gradient term.
+    
+        Returns:
+        - The policy gradient loss as a scalar value.
+        """
+>       pi = action_distrib[action]
+E       TypeError: 'Categorical' object is not subscriptable
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/temp.py:30: TypeError
+__ TestDegenerateDistribution.test_policy_gradient[None-False-True-Gaussian] ___
+
+self = <test_acer.TestDegenerateDistribution object at 0x7c7fc0d23390>
+
+    def test_policy_gradient(self):
+        action = self.mu.sample()
+>       pg = acer.compute_policy_gradient_loss(
+            action, 1, self.pi, self.mu, self.action_value, 0, self.truncation_threshold
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/acer.py:53: in compute_policy_gradient_loss
+    return compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+action = tensor([[-1.1785, -1.3103]]), advantage = 1
+action_distrib = Independent(Normal(loc: torch.Size([1, 2]), scale: torch.Size([1, 2])), 1)
+action_distrib_mu = Independent(Normal(loc: torch.Size([1, 2]), scale: torch.Size([1, 2])), 1)
+action_value = SingleActionValue, v = 0, truncation_threshold = None
+
+    def compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold=None):
+        """
+        Compute the policy gradient loss with off-policy bias correction.
+    
+        Parameters:
+        - action: The action taken.
+        - advantage: The advantage of taking that action.
+        - action_distrib: The distribution of actions from the current policy.
+        - action_distrib_mu: The distribution of actions from the behavior policy.
+        - action_value: The value of the action taken.
+        - v: The value function.
+        - truncation_threshold: Optional threshold for truncating the off-policy policy gradient term.
+    
+        Returns:
+        - The policy gradient loss as a scalar value.
+        """
+>       pi = action_distrib[action]
+E       TypeError: 'Independent' object is not subscriptable
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/temp.py:30: TypeError
+___ TestDegenerateDistribution.test_policy_gradient[None-False-True-Softmax] ___
+
+self = <test_acer.TestDegenerateDistribution object at 0x7c7fc0d23690>
+
+    def test_policy_gradient(self):
+        action = self.mu.sample()
+>       pg = acer.compute_policy_gradient_loss(
+            action, 1, self.pi, self.mu, self.action_value, 0, self.truncation_threshold
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/acer.py:53: in compute_policy_gradient_loss
+    return compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+action = tensor([1]), advantage = 1
+action_distrib = Categorical(probs: torch.Size([1, 2]))
+action_distrib_mu = Categorical(probs: torch.Size([1, 2]), logits: torch.Size([1, 2]))
+action_value = DiscreteActionValue greedy_actions:[1] q_values:[[1. 3.]], v = 0
+truncation_threshold = None
+
+    def compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold=None):
+        """
+        Compute the policy gradient loss with off-policy bias correction.
+    
+        Parameters:
+        - action: The action taken.
+        - advantage: The advantage of taking that action.
+        - action_distrib: The distribution of actions from the current policy.
+        - action_distrib_mu: The distribution of actions from the behavior policy.
+        - action_value: The value of the action taken.
+        - v: The value function.
+        - truncation_threshold: Optional threshold for truncating the off-policy policy gradient term.
+    
+        Returns:
+        - The policy gradient loss as a scalar value.
+        """
+>       pi = action_distrib[action]
+E       TypeError: 'Categorical' object is not subscriptable
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/temp.py:30: TypeError
+__ TestDegenerateDistribution.test_policy_gradient[None-False-False-Gaussian] __
+
+self = <test_acer.TestDegenerateDistribution object at 0x7c7fc0d23990>
+
+    def test_policy_gradient(self):
+        action = self.mu.sample()
+>       pg = acer.compute_policy_gradient_loss(
+            action, 1, self.pi, self.mu, self.action_value, 0, self.truncation_threshold
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/acer.py:53: in compute_policy_gradient_loss
+    return compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+action = tensor([[1.7497, 0.4393]]), advantage = 1
+action_distrib = Independent(Normal(loc: torch.Size([1, 2]), scale: torch.Size([1, 2])), 1)
+action_distrib_mu = Independent(Normal(loc: torch.Size([1, 2]), scale: torch.Size([1, 2])), 1)
+action_value = SingleActionValue, v = 0, truncation_threshold = None
+
+    def compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold=None):
+        """
+        Compute the policy gradient loss with off-policy bias correction.
+    
+        Parameters:
+        - action: The action taken.
+        - advantage: The advantage of taking that action.
+        - action_distrib: The distribution of actions from the current policy.
+        - action_distrib_mu: The distribution of actions from the behavior policy.
+        - action_value: The value of the action taken.
+        - v: The value function.
+        - truncation_threshold: Optional threshold for truncating the off-policy policy gradient term.
+    
+        Returns:
+        - The policy gradient loss as a scalar value.
+        """
+>       pi = action_distrib[action]
+E       TypeError: 'Independent' object is not subscriptable
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/temp.py:30: TypeError
+__ TestDegenerateDistribution.test_policy_gradient[None-False-False-Softmax] ___
+
+self = <test_acer.TestDegenerateDistribution object at 0x7c7fc0d23c90>
+
+    def test_policy_gradient(self):
+        action = self.mu.sample()
+>       pg = acer.compute_policy_gradient_loss(
+            action, 1, self.pi, self.mu, self.action_value, 0, self.truncation_threshold
+        )
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/acer.py:53: in compute_policy_gradient_loss
+    return compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+action = tensor([0]), advantage = 1
+action_distrib = Categorical(probs: torch.Size([1, 2]), logits: torch.Size([1, 2]))
+action_distrib_mu = Categorical(probs: torch.Size([1, 2]), logits: torch.Size([1, 2]))
+action_value = DiscreteActionValue greedy_actions:[1] q_values:[[1. 3.]], v = 0
+truncation_threshold = None
+
+    def compute_policy_gradient_loss(action, advantage, action_distrib, action_distrib_mu, action_value, v, truncation_threshold=None):
+        """
+        Compute the policy gradient loss with off-policy bias correction.
+    
+        Parameters:
+        - action: The action taken.
+        - advantage: The advantage of taking that action.
+        - action_distrib: The distribution of actions from the current policy.
+        - action_distrib_mu: The distribution of actions from the behavior policy.
+        - action_value: The value of the action taken.
+        - v: The value function.
+        - truncation_threshold: Optional threshold for truncating the off-policy policy gradient term.
+    
+        Returns:
+        - The policy gradient loss as a scalar value.
+        """
+>       pi = action_distrib[action]
+E       TypeError: 'Categorical' object is not subscriptable
+
+/local/data0/moved_data/publishablew/pfrl/pfrl/pfrl/agents/temp.py:30: TypeError
+=============================== warnings summary ===============================
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:326
+  /local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:326: PytestUnknownMarkWarning: Unknown pytest.mark.async_ - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.async_
+
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:333
+  /local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:333: PytestUnknownMarkWarning: Unknown pytest.mark.async_ - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.async_
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-True-True-Gaussian]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-True-True-Softmax]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-True-False-Gaussian]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-True-False-Softmax]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-False-True-Gaussian]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-False-True-Softmax]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-False-False-Gaussian]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-False-False-Softmax]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-True-True-Gaussian]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-True-True-Softmax]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-True-False-Gaussian]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-True-False-Softmax]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-False-True-Gaussian]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-False-True-Softmax]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-False-False-Gaussian]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-False-False-Softmax]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-True-True-Gaussian]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-True-True-Softmax]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-True-False-Gaussian]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-True-False-Softmax]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-False-True-Gaussian]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-False-True-Softmax]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-False-False-Gaussian]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-False-False-Softmax]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-True-True-Gaussian]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-True-True-Softmax]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-True-False-Gaussian]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-True-False-Softmax]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-False-True-Gaussian]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-False-True-Softmax]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-False-False-Gaussian]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-False-False-Softmax]
+======================== 32 failed, 2 warnings in 1.34s ========================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/pfrl/pfrl/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/pfrl/pfrl
+configfile: pytest.ini
+collecting ... collected 32 items
+
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-True-True-Gaussian] pg tensor([-7.6421])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-True-True-Softmax] pg tensor([1.1921e-07])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-True-False-Gaussian] pg tensor([3.9691])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-True-False-Softmax] pg tensor([1.3863])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-False-True-Gaussian] pg tensor([-9.3718])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-False-True-Softmax] pg tensor([1.1921e-07])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-False-False-Gaussian] pg tensor([-0.9336])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-False-False-Softmax] pg tensor([1.3863])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-True-True-Gaussian] pg tensor([-44.2138])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-True-True-Softmax] pg tensor([1.1921e-07])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-True-False-Gaussian] pg tensor([0.1361])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-True-False-Softmax] pg tensor([1.3863])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-False-True-Gaussian] pg tensor([-52.0456])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-False-True-Softmax] pg tensor([3.8606e-06])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-False-False-Gaussian] pg tensor([4.9131])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-False-False-Softmax] pg tensor([0.6931])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-True-True-Gaussian] pg tensor([-44.2138])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-True-True-Softmax] pg tensor([1.1921e-07])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-True-False-Gaussian] pg tensor([-1.0551])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-True-False-Softmax] pg tensor([1.3863])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-False-True-Gaussian] pg tensor([-30.6354])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-False-True-Softmax] pg tensor([2.3842e-07])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-False-False-Gaussian] pg tensor([3.7022])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-False-False-Softmax] pg tensor([0.6931])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-True-True-Gaussian] pg tensor([-44.2138])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-True-True-Softmax] pg tensor([1.1921e-07])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-True-False-Gaussian] pg tensor([1.5350e-20])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-True-False-Softmax] pg tensor([0.3466])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-False-True-Gaussian] pg tensor([0.])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-False-True-Softmax] pg tensor([2.3842e-07])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-False-False-Gaussian] pg tensor([2.7057])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-False-False-Softmax] pg tensor([0.6931])
+PASSED
+
+=============================== warnings summary ===============================
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:326
+  /local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:326: PytestUnknownMarkWarning: Unknown pytest.mark.async_ - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.async_
+
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:333
+  /local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:333: PytestUnknownMarkWarning: Unknown pytest.mark.async_ - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.async_
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 32 passed, 2 warnings in 0.97s ========================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/pfrl/pfrl/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/pfrl/pfrl
+configfile: pytest.ini
+collecting ... collected 32 items
+
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-True-True-Gaussian] pg tensor([-46.1573])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-True-True-Softmax] pg tensor([1.1921e-07])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-True-False-Gaussian] pg tensor([6.6333])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-True-False-Softmax] pg tensor([1.3863])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-False-True-Gaussian] pg tensor([-30.2839])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-False-True-Softmax] pg tensor([1.1921e-07])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-False-False-Gaussian] pg tensor([-0.0218])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[0-False-False-Softmax] pg tensor([1.3863])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-True-True-Gaussian] pg tensor([-44.2138])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-True-True-Softmax] pg tensor([1.1921e-07])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-True-False-Gaussian] pg tensor([0.5609])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-True-False-Softmax] pg tensor([1.3863])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-False-True-Gaussian] pg tensor([-1.7955])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-False-True-Softmax] pg tensor([1.7881e-07])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-False-False-Gaussian] pg tensor([1.9572])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[1-False-False-Softmax] pg tensor([0.6931])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-True-True-Gaussian] pg tensor([-44.2138])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-True-True-Softmax] pg tensor([1.1921e-07])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-True-False-Gaussian] pg tensor([0.3011])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-True-False-Softmax] pg tensor([1.3863])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-False-True-Gaussian] pg tensor([-6.1609])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-False-True-Softmax] pg tensor([3.8010e-06])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-False-False-Gaussian] pg tensor([3.4891])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[10-False-False-Softmax] pg tensor([0.6931])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-True-True-Gaussian] pg tensor([-44.2138])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-True-True-Softmax] pg tensor([1.1921e-07])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-True-False-Gaussian] pg tensor([1.6847e-20])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-True-False-Softmax] pg tensor([0.3466])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-False-True-Gaussian] pg tensor([0.])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-False-True-Softmax] pg tensor([3.8010e-06])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-False-False-Gaussian] pg tensor([2.6798])
+PASSED
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py::TestDegenerateDistribution::test_policy_gradient[None-False-False-Softmax] pg tensor([0.6931])
+PASSED
+
+=============================== warnings summary ===============================
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:326
+  /local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:326: PytestUnknownMarkWarning: Unknown pytest.mark.async_ - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.async_
+
+../../../../../../local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:333
+  /local/data0/moved_data/publishablew/pfrl/pfrl/tests/agents_tests/test_acer.py:333: PytestUnknownMarkWarning: Unknown pytest.mark.async_ - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.async_
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 32 passed, 2 warnings in 0.96s ========================

@@ -1,0 +1,608 @@
+output file:
+processed_korniaundistort_image210.json
+function:
+undistort_image
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py::TestUndistortImage::test_opencv[cpu-float32]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py::TestUndistortImage::test_gradcheck[cpu]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py::TestUndistortImage::test_opencv[cpu-float32] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py::TestUndistortImage::test_shape_minimum_dims[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py::TestUndistortImage::test_gradcheck[cpu] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py::TestUndistortImage::test_shape_minimum_dims[cpu-float32] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py::TestUndistortImage::test_shape_extra_dims[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py::TestUndistortImage::test_shape_extra_dims[cpu-float32] FAILED'}
+
+All Test Cases On Generated code:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'tvm', 'openxla', 'cudagraphs', 'inductor', 'onnxrt', 'jit', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 7 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py::TestUndistortImage::test_shape[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py::TestUndistortImage::test_shape_minimum_dims[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py::TestUndistortImage::test_shape_extra_dims[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py::TestUndistortImage::test_exception[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py::TestUndistortImage::test_opencv[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py::TestUndistortImage::test_gradcheck[cpu] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py::TestUndistortImage::test_dynamo[cpu-float32-inductor] XPASS
+
+=================================== FAILURES ===================================
+___________ TestUndistortImage.test_shape_minimum_dims[cpu-float32] ____________
+
+self = <test_undistort.TestUndistortImage object at 0x7146a9912110>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_shape_minimum_dims(self, device, dtype):
+        im = torch.rand(3, 5, 5, device=device, dtype=dtype)
+        K = torch.rand(3, 3, device=device, dtype=dtype)
+        distCoeff = torch.rand(4, device=device, dtype=dtype)
+    
+>       imu = undistort_image(im, K, distCoeff)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py:263: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/calibration/undistort.py:80: in undistort_image
+    return undistort_image(image, K, dist)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+image = tensor([[[0.9177, 0.5383, 0.4105, 0.3413, 0.1013],
+         [0.7729, 0.8789, 0.8968, 0.9566, 0.6470],
+         [0.2533....7478, 0.8563],
+         [0.0155, 0.6764, 0.4392, 0.8787, 0.9022],
+         [0.7292, 0.8432, 0.4070, 0.3239, 0.6613]]])
+K = tensor([[0.3994, 0.7279, 0.8912],
+        [0.5266, 0.2028, 0.4520],
+        [0.5184, 0.0188, 0.8899]])
+dist = tensor([0.4749, 0.0815, 0.2169, 0.7428])
+
+    def undistort_image(image: torch.Tensor, K: torch.Tensor, dist: torch.Tensor) -> torch.Tensor:
+        """
+        Compensates an image for lens distortion using the intrinsic camera matrix and distortion coefficients.
+    
+        Args:
+            image (torch.Tensor): Input image tensor with shape (*, C, H, W).
+            K (torch.Tensor): Intrinsic camera matrix with shape (*, 3, 3).
+            dist (torch.Tensor): Distortion coefficients with shape (*, n).
+    
+        Returns:
+            torch.Tensor: Undistorted image with the same shape as the input image (*, C, H, W).
+        """
+        assert image.dim() >= 3, 'Image tensor must have at least 3 dimensions (C, H, W).'
+        assert K.shape[-2:] == (3, 3), 'Intrinsic matrix K must have shape (*, 3, 3).'
+        assert dist.shape[-1] >= 4, 'Distortion coefficients must have at least 4 elements.'
+        *batch_dims, C, H, W = image.shape
+        y, x = torch.meshgrid(torch.arange(H, dtype=torch.float32), torch.arange(W, dtype=torch.float32))
+        x, y = (x.to(image.device), y.to(image.device))
+        fx, fy = (K[..., 0, 0], K[..., 1, 1])
+        cx, cy = (K[..., 0, 2], K[..., 1, 2])
+        x_normalized = (x - cx) / fx
+        y_normalized = (y - cy) / fy
+        r2 = x_normalized ** 2 + y_normalized ** 2
+        k1, k2, p1, p2 = (dist[..., 0], dist[..., 1], dist[..., 2], dist[..., 3])
+        radial_distortion = 1 + k1 * r2 + k2 * r2 ** 2
+        x_distorted = x_normalized * radial_distortion + 2 * p1 * x_normalized * y_normalized + p2 * (r2 + 2 * x_normalized ** 2)
+        y_distorted = y_normalized * radial_distortion + p1 * (r2 + 2 * y_normalized ** 2) + 2 * p2 * x_normalized * y_normalized
+        x_undistorted = x_distorted * fx + cx
+        y_undistorted = y_distorted * fy + cy
+        grid = torch.stack((x_undistorted, y_undistorted), dim=-1)
+>       grid = grid.unsqueeze(0).expand(*batch_dims, H, W, 2)
+E       RuntimeError: expand(torch.FloatTensor{[1, 5, 5, 2]}, size=[5, 5, 2]): the number of sizes provided (3) must be greater or equal to the number of dimensions in the tensor (4)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/calibration/temp.py:43: RuntimeError
+____________ TestUndistortImage.test_shape_extra_dims[cpu-float32] _____________
+
+self = <test_undistort.TestUndistortImage object at 0x7146a9912440>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_shape_extra_dims(self, device, dtype):
+        im = torch.rand(1, 1, 3, 5, 5, device=device, dtype=dtype).tile(3, 2, 1, 1, 1)
+        K = torch.rand(1, 1, 3, 3, device=device, dtype=dtype).tile(3, 2, 1, 1)
+        distCoeff = torch.rand(1, 1, 4, device=device, dtype=dtype).tile(3, 2, 1)
+    
+>       imu = undistort_image(im, K, distCoeff)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py:271: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/calibration/undistort.py:80: in undistort_image
+    return undistort_image(image, K, dist)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+image = tensor([[[[[7.5805e-01, 3.3252e-01, 3.9689e-01, 3.3555e-01, 8.9220e-01],
+           [5.8385e-01, 3.5866e-01, 1.5398e-0...e-01, 6.2351e-01, 4.4651e-01, 2.0468e-01],
+           [4.3877e-01, 1.2668e-01, 8.4369e-01, 7.3910e-01, 4.5866e-01]]]]])
+K = tensor([[[[0.5230, 0.4479, 0.7773],
+          [0.2096, 0.0775, 0.0760],
+          [0.0770, 0.2605, 0.9672]],
+
+        ...9672]],
+
+         [[0.5230, 0.4479, 0.7773],
+          [0.2096, 0.0775, 0.0760],
+          [0.0770, 0.2605, 0.9672]]]])
+dist = tensor([[[0.8807, 0.7340, 0.6869, 0.1674],
+         [0.8807, 0.7340, 0.6869, 0.1674]],
+
+        [[0.8807, 0.7340, 0.68...807, 0.7340, 0.6869, 0.1674]],
+
+        [[0.8807, 0.7340, 0.6869, 0.1674],
+         [0.8807, 0.7340, 0.6869, 0.1674]]])
+
+    def undistort_image(image: torch.Tensor, K: torch.Tensor, dist: torch.Tensor) -> torch.Tensor:
+        """
+        Compensates an image for lens distortion using the intrinsic camera matrix and distortion coefficients.
+    
+        Args:
+            image (torch.Tensor): Input image tensor with shape (*, C, H, W).
+            K (torch.Tensor): Intrinsic camera matrix with shape (*, 3, 3).
+            dist (torch.Tensor): Distortion coefficients with shape (*, n).
+    
+        Returns:
+            torch.Tensor: Undistorted image with the same shape as the input image (*, C, H, W).
+        """
+        assert image.dim() >= 3, 'Image tensor must have at least 3 dimensions (C, H, W).'
+        assert K.shape[-2:] == (3, 3), 'Intrinsic matrix K must have shape (*, 3, 3).'
+        assert dist.shape[-1] >= 4, 'Distortion coefficients must have at least 4 elements.'
+        *batch_dims, C, H, W = image.shape
+        y, x = torch.meshgrid(torch.arange(H, dtype=torch.float32), torch.arange(W, dtype=torch.float32))
+        x, y = (x.to(image.device), y.to(image.device))
+        fx, fy = (K[..., 0, 0], K[..., 1, 1])
+        cx, cy = (K[..., 0, 2], K[..., 1, 2])
+>       x_normalized = (x - cx) / fx
+E       RuntimeError: The size of tensor a (5) must match the size of tensor b (2) at non-singleton dimension 1
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/calibration/temp.py:33: RuntimeError
+________________ TestUndistortImage.test_exception[cpu-float32] ________________
+
+self = <test_undistort.TestUndistortImage object at 0x7146a9912770>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_exception(self, device, dtype):
+        with pytest.raises(ValueError):
+            im = torch.rand(5, 5, device=device, dtype=dtype)
+            K = torch.rand(3, 3, device=device, dtype=dtype)
+            distCoeff = torch.rand(4, device=device, dtype=dtype)
+>           undistort_image(im, K, distCoeff)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py:280: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/calibration/undistort.py:80: in undistort_image
+    return undistort_image(image, K, dist)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+image = tensor([[0.4219, 0.4435, 0.5602, 0.7854, 0.0606],
+        [0.2816, 0.6953, 0.7586, 0.1877, 0.2429],
+        [0.1894, 0..., 0.0344, 0.9278],
+        [0.2726, 0.3945, 0.7248, 0.8611, 0.4028],
+        [0.5207, 0.8171, 0.3605, 0.8641, 0.8488]])
+K = tensor([[0.1064, 0.4202, 0.6377],
+        [0.8687, 0.3891, 0.3558],
+        [0.8863, 0.9424, 0.3846]])
+dist = tensor([0.9405, 0.4776, 0.6036, 0.5254])
+
+    def undistort_image(image: torch.Tensor, K: torch.Tensor, dist: torch.Tensor) -> torch.Tensor:
+        """
+        Compensates an image for lens distortion using the intrinsic camera matrix and distortion coefficients.
+    
+        Args:
+            image (torch.Tensor): Input image tensor with shape (*, C, H, W).
+            K (torch.Tensor): Intrinsic camera matrix with shape (*, 3, 3).
+            dist (torch.Tensor): Distortion coefficients with shape (*, n).
+    
+        Returns:
+            torch.Tensor: Undistorted image with the same shape as the input image (*, C, H, W).
+        """
+>       assert image.dim() >= 3, 'Image tensor must have at least 3 dimensions (C, H, W).'
+E       AssertionError: Image tensor must have at least 3 dimensions (C, H, W).
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/calibration/temp.py:25: AssertionError
+_________________ TestUndistortImage.test_opencv[cpu-float32] __________________
+
+self = <test_undistort.TestUndistortImage object at 0x7146a9912aa0>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_opencv(self, device, dtype):
+        im = torch.tensor(
+            [
+                [
+                    [
+                        [116, 75, 230, 5, 32],
+                        [9, 182, 97, 213, 3],
+                        [91, 10, 33, 141, 230],
+                        [229, 63, 221, 244, 61],
+                        [19, 137, 23, 59, 227],
+                    ]
+                ]
+            ],
+            device=device,
+            dtype=dtype,
+        )
+    
+        K = torch.tensor([[2, 0, 2], [0, 2, 2], [0, 0, 1]], device=device, dtype=dtype)
+    
+        dist = torch.tensor([0.2290, 0.9565, 0.0083, 0.0475], device=device, dtype=dtype)
+    
+        # Expected output generated with OpenCV:
+        # import cv2
+        # imu_expected = cv2.undistort(np.uint8(im[0,0].numpy()), K.numpy(), dist.numpy())
+        imu_expected = torch.tensor(
+            [[[[0, 0, 0, 0, 0], [0, 124, 112, 82, 0], [0, 13, 33, 158, 0], [0, 108, 197, 150, 0], [0, 0, 0, 0, 0]]]],
+            device=device,
+            dtype=dtype,
+        )
+    
+        imu = undistort_image(im / 255.0, K, dist)
+>       self.assert_close(imu, imu_expected / 255.0, rtol=1e-2, atol=1e-2)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py:337: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:106: in assert_close
+    return assert_close(actual, expected, rtol=rtol, atol=atol)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+actual = tensor([[[[0.0000, 0.0000, 0.0000, 0.0000, 0.0000],
+          [0.0000, 0.5824, 0.0000, 0.0000, 0.0000],
+          [0.0...00, 0.0000],
+          [0.0000, 0.0000, 0.0000, 0.0000, 0.0000],
+          [0.0000, 0.0000, 0.0000, 0.0000, 0.0000]]]])
+expected = tensor([[[[0.0000, 0.0000, 0.0000, 0.0000, 0.0000],
+          [0.0000, 0.4863, 0.4392, 0.3216, 0.0000],
+          [0.0...96, 0.0000],
+          [0.0000, 0.4235, 0.7725, 0.5882, 0.0000],
+          [0.0000, 0.0000, 0.0000, 0.0000, 0.0000]]]])
+rtol = 0.01, atol = 0.01, kwargs = {}
+
+    def assert_close(
+        actual: Tensor, expected: Tensor, *, rtol: Optional[float] = None, atol: Optional[float] = None, **kwargs: Any
+    ) -> None:
+        if rtol is None and atol is None:
+            # `torch.testing.assert_close` used different default tolerances than `torch.testing.assert_allclose`.
+            # TODO: remove this special handling as soon as https://github.com/kornia/kornia/issues/1134 is resolved
+            #  Basically, this whole wrapper function can be removed and `torch.testing.assert_close` can be used
+            #  directly.
+            rtol, atol = _default_tolerances(actual, expected)
+    
+>       return _assert_close(
+            actual,
+            expected,
+            rtol=rtol,
+            atol=atol,
+            # this is the default value for torch>=1.10, but not for torch==1.9
+            # TODO: remove this if kornia relies on torch>=1.10
+            check_stride=False,
+            equal_nan=False,
+            **kwargs,
+        )
+E       AssertionError: Tensor-likes are not close!
+E       
+E       Mismatched elements: 9 / 25 (36.0%)
+E       Greatest absolute difference: 0.772549033164978 at index (0, 0, 3, 2) (up to 0.01 allowed)
+E       Greatest relative difference: 1.0 at index (0, 0, 1, 2) (up to 0.01 allowed)
+
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:37: AssertionError
+____________________ TestUndistortImage.test_gradcheck[cpu] ____________________
+
+self = <test_undistort.TestUndistortImage object at 0x7146a99128c0>
+device = device(type='cpu')
+
+    def test_gradcheck(self, device):
+        im = torch.rand(1, 1, 15, 15, device=device, dtype=torch.float64, requires_grad=True)
+        K = torch.rand(3, 3, device=device, dtype=torch.float64)
+        distCoeff = torch.rand(4, device=device, dtype=torch.float64)
+    
+>       self.gradcheck(undistort_image, (im, K, distCoeff), requires_grad=(True, False, False))
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py:344: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:143: in gradcheck
+    return gradcheck(func, inputs, raise_exception=raise_exception, fast_mode=fast_mode, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2052: in gradcheck
+    return _gradcheck_helper(**args)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2074: in _gradcheck_helper
+    func_out = func(*tupled_inputs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/calibration/undistort.py:80: in undistort_image
+    return undistort_image(image, K, dist)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/calibration/temp.py:44: in undistort_image
+    undistorted_image = F.grid_sample(image, grid, align_corners=True)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = tensor([[[[0.4180, 0.4629, 0.4829, 0.4767, 0.2538, 0.1660, 0.7931, 0.3474,
+           0.5833, 0.4265, 0.0788, 0.2416, ...
+           0.2215, 0.7679, 0.1947, 0.0965, 0.4498, 0.5527, 0.7170]]]],
+       dtype=torch.float64, requires_grad=True)
+grid = tensor([[[[ 1.4568e+00,  1.3189e+00],
+          [ 1.3483e+00,  8.3370e-01],
+          [ 1.2232e+01, -6.6456e-01],
+    ...],
+          [ 4.7991e+06,  5.6918e+06],
+          [ 5.4928e+06,  5.9913e+06],
+          [ 6.2641e+06,  6.3244e+06]]]])
+mode = 'bilinear', padding_mode = 'zeros', align_corners = True
+
+    def grid_sample(
+        input: Tensor,
+        grid: Tensor,
+        mode: str = "bilinear",
+        padding_mode: str = "zeros",
+        align_corners: Optional[bool] = None,
+    ) -> Tensor:
+        r"""Compute grid sample.
+    
+        Given an :attr:`input` and a flow-field :attr:`grid`, computes the
+        ``output`` using :attr:`input` values and pixel locations from :attr:`grid`.
+    
+        Currently, only spatial (4-D) and volumetric (5-D) :attr:`input` are
+        supported.
+    
+        In the spatial (4-D) case, for :attr:`input` with shape
+        :math:`(N, C, H_\text{in}, W_\text{in})` and :attr:`grid` with shape
+        :math:`(N, H_\text{out}, W_\text{out}, 2)`, the output will have shape
+        :math:`(N, C, H_\text{out}, W_\text{out})`.
+    
+        For each output location ``output[n, :, h, w]``, the size-2 vector
+        ``grid[n, h, w]`` specifies :attr:`input` pixel locations ``x`` and ``y``,
+        which are used to interpolate the output value ``output[n, :, h, w]``.
+        In the case of 5D inputs, ``grid[n, d, h, w]`` specifies the
+        ``x``, ``y``, ``z`` pixel locations for interpolating
+        ``output[n, :, d, h, w]``. :attr:`mode` argument specifies ``nearest`` or
+        ``bilinear`` interpolation method to sample the input pixels.
+    
+        :attr:`grid` specifies the sampling pixel locations normalized by the
+        :attr:`input` spatial dimensions. Therefore, it should have most values in
+        the range of ``[-1, 1]``. For example, values ``x = -1, y = -1`` is the
+        left-top pixel of :attr:`input`, and values  ``x = 1, y = 1`` is the
+        right-bottom pixel of :attr:`input`.
+    
+        If :attr:`grid` has values outside the range of ``[-1, 1]``, the corresponding
+        outputs are handled as defined by :attr:`padding_mode`. Options are
+    
+            * ``padding_mode="zeros"``: use ``0`` for out-of-bound grid locations,
+            * ``padding_mode="border"``: use border values for out-of-bound grid locations,
+            * ``padding_mode="reflection"``: use values at locations reflected by
+              the border for out-of-bound grid locations. For location far away
+              from the border, it will keep being reflected until becoming in bound,
+              e.g., (normalized) pixel location ``x = -3.5`` reflects by border ``-1``
+              and becomes ``x' = 1.5``, then reflects by border ``1`` and becomes
+              ``x'' = -0.5``.
+    
+        Note:
+            This function is often used in conjunction with :func:`affine_grid`
+            to build `Spatial Transformer Networks`_ .
+    
+        Note:
+            When using the CUDA backend, this operation may induce nondeterministic
+            behaviour in its backward pass that is not easily switched off.
+            Please see the notes on :doc:`/notes/randomness` for background.
+    
+        Note:
+            NaN values in :attr:`grid` would be interpreted as ``-1``.
+    
+        Args:
+            input (Tensor): input of shape :math:`(N, C, H_\text{in}, W_\text{in})` (4-D case)
+                            or :math:`(N, C, D_\text{in}, H_\text{in}, W_\text{in})` (5-D case)
+            grid (Tensor): flow-field of shape :math:`(N, H_\text{out}, W_\text{out}, 2)` (4-D case)
+                           or :math:`(N, D_\text{out}, H_\text{out}, W_\text{out}, 3)` (5-D case)
+            mode (str): interpolation mode to calculate output values
+                ``'bilinear'`` | ``'nearest'`` | ``'bicubic'``. Default: ``'bilinear'``
+                Note: ``mode='bicubic'`` supports only 4-D input.
+                When ``mode='bilinear'`` and the input is 5-D, the interpolation mode
+                used internally will actually be trilinear. However, when the input is 4-D,
+                the interpolation mode will legitimately be bilinear.
+            padding_mode (str): padding mode for outside grid values
+                ``'zeros'`` | ``'border'`` | ``'reflection'``. Default: ``'zeros'``
+            align_corners (bool, optional): Geometrically, we consider the pixels of the
+                input  as squares rather than points.
+                If set to ``True``, the extrema (``-1`` and ``1``) are considered as referring
+                to the center points of the input's corner pixels. If set to ``False``, they
+                are instead considered as referring to the corner points of the input's corner
+                pixels, making the sampling more resolution agnostic.
+                This option parallels the ``align_corners`` option in
+                :func:`interpolate`, and so whichever option is used here
+                should also be used there to resize the input image before grid sampling.
+                Default: ``False``
+    
+        Returns:
+            output (Tensor): output Tensor
+    
+        .. _`Spatial Transformer Networks`:
+            https://arxiv.org/abs/1506.02025
+    
+        .. warning::
+            When ``align_corners = True``, the grid positions depend on the pixel
+            size relative to the input image size, and so the locations sampled by
+            :func:`grid_sample` will differ for the same input given at different
+            resolutions (that is, after being upsampled or downsampled).
+            The default behavior up to version 1.2.0 was ``align_corners = True``.
+            Since then, the default behavior has been changed to ``align_corners = False``,
+            in order to bring it in line with the default for :func:`interpolate`.
+    
+        .. note::
+            ``mode='bicubic'`` is implemented using the `cubic convolution algorithm`_ with :math:`\alpha=-0.75`.
+            The constant :math:`\alpha` might be different from packages to packages.
+            For example, `PIL`_ and `OpenCV`_ use -0.5 and -0.75 respectively.
+            This algorithm may "overshoot" the range of values it's interpolating.
+            For example, it may produce negative values or values greater than 255 when interpolating input in [0, 255].
+            Clamp the results with :func:`torch.clamp` to ensure they are within the valid range.
+        .. _`cubic convolution algorithm`: https://en.wikipedia.org/wiki/Bicubic_interpolation
+        .. _`PIL`: https://github.com/python-pillow/Pillow/blob/4634eafe3c695a014267eefdce830b4a825beed7/src/libImaging/Resample.c#L51
+        .. _`OpenCV`: https://github.com/opencv/opencv/blob/f345ed564a06178670750bad59526cfa4033be55/modules/imgproc/src/resize.cpp#L908
+        """
+        if has_torch_function_variadic(input, grid):
+            return handle_torch_function(
+                grid_sample,
+                (input, grid),
+                input,
+                grid,
+                mode=mode,
+                padding_mode=padding_mode,
+                align_corners=align_corners,
+            )
+        if mode != "bilinear" and mode != "nearest" and mode != "bicubic":
+            raise ValueError(
+                f"nn.functional.grid_sample(): expected mode to be 'bilinear', 'nearest' or 'bicubic', but got: '{mode}'"
+            )
+        if (
+            padding_mode != "zeros"
+            and padding_mode != "border"
+            and padding_mode != "reflection"
+        ):
+            raise ValueError(
+                "nn.functional.grid_sample(): expected padding_mode "
+                "to be 'zeros', 'border', or 'reflection', "
+                f"but got: '{padding_mode}'"
+            )
+    
+        if mode == "bilinear":
+            mode_enum = 0
+        elif mode == "nearest":
+            mode_enum = 1
+        else:  # mode == 'bicubic'
+            mode_enum = 2
+    
+        if padding_mode == "zeros":
+            padding_mode_enum = 0
+        elif padding_mode == "border":
+            padding_mode_enum = 1
+        else:  # padding_mode == 'reflection'
+            padding_mode_enum = 2
+    
+        if align_corners is None:
+            warnings.warn(
+                "Default grid_sample and affine_grid behavior has changed "
+                "to align_corners=False since 1.3.0. Please specify "
+                "align_corners=True if the old behavior is desired. "
+                "See the documentation of grid_sample for details."
+            )
+            align_corners = False
+    
+>       return torch.grid_sampler(input, grid, mode_enum, padding_mode_enum, align_corners)
+E       RuntimeError: expected scalar type Double but found Float
+
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/functional.py:4910: RuntimeError
+=============================== warnings summary ===============================
+tests/geometry/calibration/test_undistort.py::TestUndistortImage::test_shape[cpu-float32]
+  /local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/functional.py:534: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3595.)
+    return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py::TestUndistortImage::test_shape_minimum_dims[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py::TestUndistortImage::test_shape_extra_dims[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py::TestUndistortImage::test_exception[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py::TestUndistortImage::test_opencv[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py::TestUndistortImage::test_gradcheck[cpu]
+============== 5 failed, 1 passed, 1 xpassed, 1 warning in 3.78s ===============
+
+
+Final Test Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', None, 'openxla', 'tvm', 'jit', 'onnxrt', 'cudagraphs', 'inductor'}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 7 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py::TestUndistortImage::test_shape[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py::TestUndistortImage::test_shape_minimum_dims[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py::TestUndistortImage::test_shape_extra_dims[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py::TestUndistortImage::test_exception[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py::TestUndistortImage::test_opencv[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py::TestUndistortImage::test_gradcheck[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py::TestUndistortImage::test_dynamo[cpu-float32-inductor] XPASS
+
+========================= 6 passed, 1 xpassed in 2.48s =========================
+
+
+Initial Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'jit', 'cudagraphs', 'openxla', 'onnxrt', 'inductor', 'tvm', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 7 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py::TestUndistortImage::test_shape[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py::TestUndistortImage::test_shape_minimum_dims[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py::TestUndistortImage::test_shape_extra_dims[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py::TestUndistortImage::test_exception[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py::TestUndistortImage::test_opencv[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py::TestUndistortImage::test_gradcheck[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/calibration/test_undistort.py::TestUndistortImage::test_dynamo[cpu-float32-inductor] XPASS
+
+========================= 6 passed, 1 xpassed in 2.42s =========================

@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: Segmentation
+data: Image
+
+prompt:
+Generate a Python function called total_variation that computes the Total Variation of an input image tensor. The function takes in an image tensor with shape (*, H, W) and an optional reduction parameter that specifies whether to return the sum or mean of the output. The function returns a tensor with shape (*). The Total Variation is calculated by taking the absolute differences of neighboring pixels in the image tensor along the height and width dimensions. The output is then either summed or averaged based on the reduction parameter. The function includes error checking for input types and reduction options.
+
+ ground Truth:kornia/losses/total_variation.py
+
+ repo:kornia
+
+ function:total_variation
+ 
+ test_cases:tests/losses/test_total_variation.py

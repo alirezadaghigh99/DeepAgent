@@ -1,0 +1,20 @@
+stage: Model Construction
+task: 
+data: 
+
+prompt:
+Generate a Python function called generate_global_features that takes in a RDKit molecule (mol) and a list of feature generators (features_generators) as input. The function returns an array of global features as a numpy array.
+
+The function loops through the list of feature generators and checks if they are available in the GraphConvConstants.FEATURE_GENERATORS. If a generator is available, it featurizes the molecule using the generator and appends the features to the global_features list. If the molecule has no heavy atoms, it uses a dummy molecule (methane) to determine the length of the features.
+
+The function then converts the global_features list to a numpy array and replaces any NaN values with a specified replace_token value.
+
+The output of the function is the global_features_array, which is a numpy array containing the global features of the input molecule.
+
+ ground Truth:deepchem/feat/molecule_featurizers/dmpnn_featurizer.py
+
+ repo:deepchem
+
+ function:generate_global_features
+ 
+ test_cases:deepchem/feat/tests/test_global_feature_generator_dmpnn.py::TestGlobalFeatureGenerator

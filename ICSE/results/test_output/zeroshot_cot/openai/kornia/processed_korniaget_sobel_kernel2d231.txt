@@ -1,0 +1,744 @@
+output file:
+processed_korniaget_sobel_kernel2d231.json
+function:
+get_sobel_kernel2d
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_noncontiguous[cpu-float32] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-False-1-sobel-1] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-False-1-sobel-2] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-True-1-sobel-1]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_edges[cpu-float32]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_cardinality[cpu-float32-2]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_gradcheck[cpu]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-False-1-sobel-2]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_dynamo[cpu-float32-inductor-2-1-sobel]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-True-1-sobel-2]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-True-1-sobel-2] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_module[cpu-float32] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-True-1-sobel-1] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_dynamo[cpu-float32-inductor-1-1-sobel]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_noncontiguous[cpu-float32]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_edges_norm[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_dynamo[cpu-float32-inductor-2-1-sobel] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-False-1-sobel-1]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_gradcheck[cpu] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_dynamo[cpu-float32-inductor-1-1-sobel] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_edges_norm[cpu-float32] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_cardinality[cpu-float32-2] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_edges[cpu-float32] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_module[cpu-float32]'}
+
+All Test Cases On Generated code:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'cudagraphs', 'jit', 'tvm', 'onnxrt', 'openxla', 'inductor', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 34 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-True-1-sobel-1] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-True-1-sobel-2] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-True-1-diff-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-True-1-diff-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-True-2-sobel-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-True-2-sobel-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-True-2-diff-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-True-2-diff-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-False-1-sobel-1] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-False-1-sobel-2] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-False-1-diff-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-False-1-diff-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-False-2-sobel-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-False-2-sobel-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-False-2-diff-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-False-2-diff-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_cardinality[cpu-float32-1] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_cardinality[cpu-float32-2] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_exception PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_edges[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_edges_norm[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_edges_sep[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_edges_sep_norm[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_noncontiguous[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_gradcheck[cpu] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_module[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_dynamo[cpu-float32-inductor-1-1-sobel] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_dynamo[cpu-float32-inductor-1-1-diff] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_dynamo[cpu-float32-inductor-1-2-sobel] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_dynamo[cpu-float32-inductor-1-2-diff] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_dynamo[cpu-float32-inductor-2-1-sobel] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_dynamo[cpu-float32-inductor-2-1-diff] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_dynamo[cpu-float32-inductor-2-2-sobel] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_dynamo[cpu-float32-inductor-2-2-diff] PASSED
+
+=================================== FAILURES ===================================
+__________ TestSpatialGradient.test_smoke[cpu-float32-True-1-sobel-1] __________
+
+self = <test_sobel.TestSpatialGradient object at 0x70450391a9e0>, batch_size = 1
+mode = 'sobel', order = 1, normalized = True, device = device(type='cpu')
+dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2])
+    @pytest.mark.parametrize("mode", ["sobel", "diff"])
+    @pytest.mark.parametrize("order", [1, 2])
+    @pytest.mark.parametrize("normalized", [True, False])
+    def test_smoke(self, batch_size, mode, order, normalized, device, dtype):
+        data = torch.zeros(batch_size, 3, 4, 4, device=device, dtype=dtype)
+>       actual = SpatialGradient(mode, order, normalized)(data)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:274: in __call__
+    _output_image = decorated_forward(*inputs, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:63: in wrapper
+    tensor_outputs = func(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1736: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1747: in _call_impl
+    return forward_call(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/sobel.py:190: in forward
+    return spatial_gradient(input, self.mode, self.order, self.normalized)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/sobel.py:42: in spatial_gradient
+    kernel = get_spatial_gradient_kernel2d(mode, order, device=input.device, dtype=input.dtype)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/kernels.py:297: in get_spatial_gradient_kernel2d
+    kernel: Tensor = get_sobel_kernel2d(device=device, dtype=dtype)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def get_sobel_kernel2d(*, device: Optional[Device]=None, dtype: Optional[Dtype]=None) -> Tensor:
+>       from .temp import get_sobel_kernel2d
+E       ImportError: cannot import name 'get_sobel_kernel2d' from 'kornia.filters.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/kernels.py:264: ImportError
+__________ TestSpatialGradient.test_smoke[cpu-float32-True-1-sobel-2] __________
+
+self = <test_sobel.TestSpatialGradient object at 0x70450391a770>, batch_size = 2
+mode = 'sobel', order = 1, normalized = True, device = device(type='cpu')
+dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2])
+    @pytest.mark.parametrize("mode", ["sobel", "diff"])
+    @pytest.mark.parametrize("order", [1, 2])
+    @pytest.mark.parametrize("normalized", [True, False])
+    def test_smoke(self, batch_size, mode, order, normalized, device, dtype):
+        data = torch.zeros(batch_size, 3, 4, 4, device=device, dtype=dtype)
+>       actual = SpatialGradient(mode, order, normalized)(data)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:274: in __call__
+    _output_image = decorated_forward(*inputs, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:63: in wrapper
+    tensor_outputs = func(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1736: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1747: in _call_impl
+    return forward_call(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/sobel.py:190: in forward
+    return spatial_gradient(input, self.mode, self.order, self.normalized)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/sobel.py:42: in spatial_gradient
+    kernel = get_spatial_gradient_kernel2d(mode, order, device=input.device, dtype=input.dtype)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/kernels.py:297: in get_spatial_gradient_kernel2d
+    kernel: Tensor = get_sobel_kernel2d(device=device, dtype=dtype)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def get_sobel_kernel2d(*, device: Optional[Device]=None, dtype: Optional[Dtype]=None) -> Tensor:
+>       from .temp import get_sobel_kernel2d
+E       ImportError: cannot import name 'get_sobel_kernel2d' from 'kornia.filters.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/kernels.py:264: ImportError
+_________ TestSpatialGradient.test_smoke[cpu-float32-False-1-sobel-1] __________
+
+self = <test_sobel.TestSpatialGradient object at 0x70450391b160>, batch_size = 1
+mode = 'sobel', order = 1, normalized = False, device = device(type='cpu')
+dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2])
+    @pytest.mark.parametrize("mode", ["sobel", "diff"])
+    @pytest.mark.parametrize("order", [1, 2])
+    @pytest.mark.parametrize("normalized", [True, False])
+    def test_smoke(self, batch_size, mode, order, normalized, device, dtype):
+        data = torch.zeros(batch_size, 3, 4, 4, device=device, dtype=dtype)
+>       actual = SpatialGradient(mode, order, normalized)(data)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:274: in __call__
+    _output_image = decorated_forward(*inputs, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:63: in wrapper
+    tensor_outputs = func(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1736: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1747: in _call_impl
+    return forward_call(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/sobel.py:190: in forward
+    return spatial_gradient(input, self.mode, self.order, self.normalized)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/sobel.py:42: in spatial_gradient
+    kernel = get_spatial_gradient_kernel2d(mode, order, device=input.device, dtype=input.dtype)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/kernels.py:297: in get_spatial_gradient_kernel2d
+    kernel: Tensor = get_sobel_kernel2d(device=device, dtype=dtype)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def get_sobel_kernel2d(*, device: Optional[Device]=None, dtype: Optional[Dtype]=None) -> Tensor:
+>       from .temp import get_sobel_kernel2d
+E       ImportError: cannot import name 'get_sobel_kernel2d' from 'kornia.filters.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/kernels.py:264: ImportError
+_________ TestSpatialGradient.test_smoke[cpu-float32-False-1-sobel-2] __________
+
+self = <test_sobel.TestSpatialGradient object at 0x70450391b220>, batch_size = 2
+mode = 'sobel', order = 1, normalized = False, device = device(type='cpu')
+dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2])
+    @pytest.mark.parametrize("mode", ["sobel", "diff"])
+    @pytest.mark.parametrize("order", [1, 2])
+    @pytest.mark.parametrize("normalized", [True, False])
+    def test_smoke(self, batch_size, mode, order, normalized, device, dtype):
+        data = torch.zeros(batch_size, 3, 4, 4, device=device, dtype=dtype)
+>       actual = SpatialGradient(mode, order, normalized)(data)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:274: in __call__
+    _output_image = decorated_forward(*inputs, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:63: in wrapper
+    tensor_outputs = func(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1736: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1747: in _call_impl
+    return forward_call(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/sobel.py:190: in forward
+    return spatial_gradient(input, self.mode, self.order, self.normalized)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/sobel.py:42: in spatial_gradient
+    kernel = get_spatial_gradient_kernel2d(mode, order, device=input.device, dtype=input.dtype)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/kernels.py:297: in get_spatial_gradient_kernel2d
+    kernel: Tensor = get_sobel_kernel2d(device=device, dtype=dtype)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def get_sobel_kernel2d(*, device: Optional[Device]=None, dtype: Optional[Dtype]=None) -> Tensor:
+>       from .temp import get_sobel_kernel2d
+E       ImportError: cannot import name 'get_sobel_kernel2d' from 'kornia.filters.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/kernels.py:264: ImportError
+_____________ TestSpatialGradient.test_cardinality[cpu-float32-1] ______________
+
+self = <test_sobel.TestSpatialGradient object at 0x70450391ba30>, batch_size = 1
+device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2])
+    def test_cardinality(self, batch_size, device, dtype):
+        inp = torch.zeros(batch_size, 3, 4, 4, device=device, dtype=dtype)
+>       assert SpatialGradient()(inp).shape == (batch_size, 3, 2, 4, 4)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py:23: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:274: in __call__
+    _output_image = decorated_forward(*inputs, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:63: in wrapper
+    tensor_outputs = func(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1736: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1747: in _call_impl
+    return forward_call(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/sobel.py:190: in forward
+    return spatial_gradient(input, self.mode, self.order, self.normalized)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/sobel.py:42: in spatial_gradient
+    kernel = get_spatial_gradient_kernel2d(mode, order, device=input.device, dtype=input.dtype)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/kernels.py:297: in get_spatial_gradient_kernel2d
+    kernel: Tensor = get_sobel_kernel2d(device=device, dtype=dtype)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def get_sobel_kernel2d(*, device: Optional[Device]=None, dtype: Optional[Dtype]=None) -> Tensor:
+>       from .temp import get_sobel_kernel2d
+E       ImportError: cannot import name 'get_sobel_kernel2d' from 'kornia.filters.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/kernels.py:264: ImportError
+_____________ TestSpatialGradient.test_cardinality[cpu-float32-2] ______________
+
+self = <test_sobel.TestSpatialGradient object at 0x70450391b970>, batch_size = 2
+device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2])
+    def test_cardinality(self, batch_size, device, dtype):
+        inp = torch.zeros(batch_size, 3, 4, 4, device=device, dtype=dtype)
+>       assert SpatialGradient()(inp).shape == (batch_size, 3, 2, 4, 4)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py:23: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:274: in __call__
+    _output_image = decorated_forward(*inputs, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:63: in wrapper
+    tensor_outputs = func(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1736: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1747: in _call_impl
+    return forward_call(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/sobel.py:190: in forward
+    return spatial_gradient(input, self.mode, self.order, self.normalized)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/sobel.py:42: in spatial_gradient
+    kernel = get_spatial_gradient_kernel2d(mode, order, device=input.device, dtype=input.dtype)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/kernels.py:297: in get_spatial_gradient_kernel2d
+    kernel: Tensor = get_sobel_kernel2d(device=device, dtype=dtype)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def get_sobel_kernel2d(*, device: Optional[Device]=None, dtype: Optional[Dtype]=None) -> Tensor:
+>       from .temp import get_sobel_kernel2d
+E       ImportError: cannot import name 'get_sobel_kernel2d' from 'kornia.filters.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/kernels.py:264: ImportError
+_________________ TestSpatialGradient.test_edges[cpu-float32] __________________
+
+self = <test_sobel.TestSpatialGradient object at 0x704503944040>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_edges(self, device, dtype):
+        inp = torch.tensor(
+            [
+                [
+                    [
+                        [0.0, 0.0, 0.0, 0.0, 0.0],
+                        [0.0, 0.0, 1.0, 0.0, 0.0],
+                        [0.0, 1.0, 1.0, 1.0, 0.0],
+                        [0.0, 0.0, 1.0, 0.0, 0.0],
+                        [0.0, 0.0, 0.0, 0.0, 0.0],
+                    ]
+                ]
+            ],
+            device=device,
+            dtype=dtype,
+        )
+    
+        expected = torch.tensor(
+            [
+                [
+                    [
+                        [
+                            [0.0, 1.0, 0.0, -1.0, 0.0],
+                            [1.0, 3.0, 0.0, -3.0, -1.0],
+                            [2.0, 4.0, 0.0, -4.0, -2.0],
+                            [1.0, 3.0, 0.0, -3.0, -1.0],
+                            [0.0, 1.0, 0.0, -1.0, 0.0],
+                        ],
+                        [
+                            [0.0, 1.0, 2.0, 1.0, 0.0],
+                            [1.0, 3.0, 4.0, 3.0, 1.0],
+                            [0.0, 0.0, 0.0, 0.0, 0],
+                            [-1.0, -3.0, -4.0, -3.0, -1],
+                            [0.0, -1.0, -2.0, -1.0, 0.0],
+                        ],
+                    ]
+                ]
+            ],
+            device=device,
+            dtype=dtype,
+        )
+    
+>       edges = spatial_gradient(inp, normalized=False)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py:76: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/sobel.py:42: in spatial_gradient
+    kernel = get_spatial_gradient_kernel2d(mode, order, device=input.device, dtype=input.dtype)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/kernels.py:297: in get_spatial_gradient_kernel2d
+    kernel: Tensor = get_sobel_kernel2d(device=device, dtype=dtype)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def get_sobel_kernel2d(*, device: Optional[Device]=None, dtype: Optional[Dtype]=None) -> Tensor:
+>       from .temp import get_sobel_kernel2d
+E       ImportError: cannot import name 'get_sobel_kernel2d' from 'kornia.filters.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/kernels.py:264: ImportError
+_______________ TestSpatialGradient.test_edges_norm[cpu-float32] _______________
+
+self = <test_sobel.TestSpatialGradient object at 0x704503944370>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_edges_norm(self, device, dtype):
+        inp = torch.tensor(
+            [
+                [
+                    [
+                        [0.0, 0.0, 0.0, 0.0, 0.0],
+                        [0.0, 0.0, 1.0, 0.0, 0.0],
+                        [0.0, 1.0, 1.0, 1.0, 0.0],
+                        [0.0, 0.0, 1.0, 0.0, 0.0],
+                        [0.0, 0.0, 0.0, 0.0, 0.0],
+                    ]
+                ]
+            ],
+            device=device,
+            dtype=dtype,
+        )
+    
+        expected = (
+            torch.tensor(
+                [
+                    [
+                        [
+                            [
+                                [0.0, 1.0, 0.0, -1.0, 0.0],
+                                [1.0, 3.0, 0.0, -3.0, -1.0],
+                                [2.0, 4.0, 0.0, -4.0, -2.0],
+                                [1.0, 3.0, 0.0, -3.0, -1.0],
+                                [0.0, 1.0, 0.0, -1.0, 0.0],
+                            ],
+                            [
+                                [0.0, 1.0, 2.0, 1.0, 0.0],
+                                [1.0, 3.0, 4.0, 3.0, 1.0],
+                                [0.0, 0.0, 0.0, 0.0, 0],
+                                [-1.0, -3.0, -4.0, -3.0, -1],
+                                [0.0, -1.0, -2.0, -1.0, 0.0],
+                            ],
+                        ]
+                    ]
+                ],
+                device=device,
+                dtype=dtype,
+            )
+            / 8.0
+        )
+    
+>       edges = spatial_gradient(inp, normalized=True)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py:124: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/sobel.py:42: in spatial_gradient
+    kernel = get_spatial_gradient_kernel2d(mode, order, device=input.device, dtype=input.dtype)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/kernels.py:297: in get_spatial_gradient_kernel2d
+    kernel: Tensor = get_sobel_kernel2d(device=device, dtype=dtype)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def get_sobel_kernel2d(*, device: Optional[Device]=None, dtype: Optional[Dtype]=None) -> Tensor:
+>       from .temp import get_sobel_kernel2d
+E       ImportError: cannot import name 'get_sobel_kernel2d' from 'kornia.filters.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/kernels.py:264: ImportError
+_____________ TestSpatialGradient.test_noncontiguous[cpu-float32] ______________
+
+self = <test_sobel.TestSpatialGradient object at 0x704503944d00>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_noncontiguous(self, device, dtype):
+        batch_size = 3
+        inp = torch.rand(3, 5, 5, device=device, dtype=dtype).expand(batch_size, -1, -1, -1)
+    
+>       actual = spatial_gradient(inp)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py:224: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/sobel.py:42: in spatial_gradient
+    kernel = get_spatial_gradient_kernel2d(mode, order, device=input.device, dtype=input.dtype)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/kernels.py:297: in get_spatial_gradient_kernel2d
+    kernel: Tensor = get_sobel_kernel2d(device=device, dtype=dtype)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def get_sobel_kernel2d(*, device: Optional[Device]=None, dtype: Optional[Dtype]=None) -> Tensor:
+>       from .temp import get_sobel_kernel2d
+E       ImportError: cannot import name 'get_sobel_kernel2d' from 'kornia.filters.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/kernels.py:264: ImportError
+___________________ TestSpatialGradient.test_gradcheck[cpu] ____________________
+
+self = <test_sobel.TestSpatialGradient object at 0x704503944fd0>
+device = device(type='cpu')
+
+    def test_gradcheck(self, device):
+        batch_size, channels, height, width = 1, 1, 3, 4
+        img = torch.rand(batch_size, channels, height, width, device=device, dtype=torch.float64)
+>       self.gradcheck(spatial_gradient, (img,))
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py:233: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:143: in gradcheck
+    return gradcheck(func, inputs, raise_exception=raise_exception, fast_mode=fast_mode, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2052: in gradcheck
+    return _gradcheck_helper(**args)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2074: in _gradcheck_helper
+    func_out = func(*tupled_inputs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/sobel.py:42: in spatial_gradient
+    kernel = get_spatial_gradient_kernel2d(mode, order, device=input.device, dtype=input.dtype)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/kernels.py:297: in get_spatial_gradient_kernel2d
+    kernel: Tensor = get_sobel_kernel2d(device=device, dtype=dtype)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def get_sobel_kernel2d(*, device: Optional[Device]=None, dtype: Optional[Dtype]=None) -> Tensor:
+>       from .temp import get_sobel_kernel2d
+E       ImportError: cannot import name 'get_sobel_kernel2d' from 'kornia.filters.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/kernels.py:264: ImportError
+_________________ TestSpatialGradient.test_module[cpu-float32] _________________
+
+self = <test_sobel.TestSpatialGradient object at 0x70450391b8e0>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_module(self, device, dtype):
+        img = torch.rand(2, 3, 4, 5, device=device, dtype=dtype)
+        op = spatial_gradient
+        op_module = SpatialGradient()
+>       expected = op(img)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py:239: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/sobel.py:42: in spatial_gradient
+    kernel = get_spatial_gradient_kernel2d(mode, order, device=input.device, dtype=input.dtype)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/kernels.py:297: in get_spatial_gradient_kernel2d
+    kernel: Tensor = get_sobel_kernel2d(device=device, dtype=dtype)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def get_sobel_kernel2d(*, device: Optional[Device]=None, dtype: Optional[Dtype]=None) -> Tensor:
+>       from .temp import get_sobel_kernel2d
+E       ImportError: cannot import name 'get_sobel_kernel2d' from 'kornia.filters.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/kernels.py:264: ImportError
+_______ TestSpatialGradient.test_dynamo[cpu-float32-inductor-1-1-sobel] ________
+
+self = <test_sobel.TestSpatialGradient object at 0x704503945540>, batch_size = 1
+order = 1, mode = 'sobel', device = device(type='cpu'), dtype = torch.float32
+torch_optimizer = functools.partial(<function compile at 0x7045dd2131c0>, backend='inductor')
+
+    @pytest.mark.parametrize("mode", ["sobel", "diff"])
+    @pytest.mark.parametrize("order", [1, 2])
+    @pytest.mark.parametrize("batch_size", [1, 2])
+    @pytest.mark.xfail(torch_version() in {"2.0.1"}, reason="random failing")
+    def test_dynamo(self, batch_size, order, mode, device, dtype, torch_optimizer):
+        data = torch.ones(batch_size, 3, 10, 10, device=device, dtype=dtype)
+        if order == 1 and dtype == torch.float64:
+            # TODO: FIX order 1 spatial gradient with fp64 on dynamo
+            pytest.xfail(reason="Order 1 on spatial gradient may be wrong computed for float64 on dynamo")
+        op = SpatialGradient(mode, order)
+        op_optimized = torch_optimizer(op)
+    
+>       self.assert_close(op(data), op_optimized(data))
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py:255: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:274: in __call__
+    _output_image = decorated_forward(*inputs, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:63: in wrapper
+    tensor_outputs = func(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1736: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1747: in _call_impl
+    return forward_call(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/sobel.py:190: in forward
+    return spatial_gradient(input, self.mode, self.order, self.normalized)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/sobel.py:42: in spatial_gradient
+    kernel = get_spatial_gradient_kernel2d(mode, order, device=input.device, dtype=input.dtype)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/kernels.py:297: in get_spatial_gradient_kernel2d
+    kernel: Tensor = get_sobel_kernel2d(device=device, dtype=dtype)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def get_sobel_kernel2d(*, device: Optional[Device]=None, dtype: Optional[Dtype]=None) -> Tensor:
+>       from .temp import get_sobel_kernel2d
+E       ImportError: cannot import name 'get_sobel_kernel2d' from 'kornia.filters.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/kernels.py:264: ImportError
+_______ TestSpatialGradient.test_dynamo[cpu-float32-inductor-2-1-sobel] ________
+
+self = <test_sobel.TestSpatialGradient object at 0x704503945930>, batch_size = 2
+order = 1, mode = 'sobel', device = device(type='cpu'), dtype = torch.float32
+torch_optimizer = functools.partial(<function compile at 0x7045dd2131c0>, backend='inductor')
+
+    @pytest.mark.parametrize("mode", ["sobel", "diff"])
+    @pytest.mark.parametrize("order", [1, 2])
+    @pytest.mark.parametrize("batch_size", [1, 2])
+    @pytest.mark.xfail(torch_version() in {"2.0.1"}, reason="random failing")
+    def test_dynamo(self, batch_size, order, mode, device, dtype, torch_optimizer):
+        data = torch.ones(batch_size, 3, 10, 10, device=device, dtype=dtype)
+        if order == 1 and dtype == torch.float64:
+            # TODO: FIX order 1 spatial gradient with fp64 on dynamo
+            pytest.xfail(reason="Order 1 on spatial gradient may be wrong computed for float64 on dynamo")
+        op = SpatialGradient(mode, order)
+        op_optimized = torch_optimizer(op)
+    
+>       self.assert_close(op(data), op_optimized(data))
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py:255: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:274: in __call__
+    _output_image = decorated_forward(*inputs, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:63: in wrapper
+    tensor_outputs = func(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1736: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1747: in _call_impl
+    return forward_call(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/sobel.py:190: in forward
+    return spatial_gradient(input, self.mode, self.order, self.normalized)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/sobel.py:42: in spatial_gradient
+    kernel = get_spatial_gradient_kernel2d(mode, order, device=input.device, dtype=input.dtype)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/kernels.py:297: in get_spatial_gradient_kernel2d
+    kernel: Tensor = get_sobel_kernel2d(device=device, dtype=dtype)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def get_sobel_kernel2d(*, device: Optional[Device]=None, dtype: Optional[Dtype]=None) -> Tensor:
+>       from .temp import get_sobel_kernel2d
+E       ImportError: cannot import name 'get_sobel_kernel2d' from 'kornia.filters.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/filters/kernels.py:264: ImportError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-True-1-sobel-1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-True-1-sobel-2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-False-1-sobel-1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-False-1-sobel-2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_cardinality[cpu-float32-1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_cardinality[cpu-float32-2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_edges[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_edges_norm[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_noncontiguous[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_gradcheck[cpu]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_module[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_dynamo[cpu-float32-inductor-1-1-sobel]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_dynamo[cpu-float32-inductor-2-1-sobel]
+======================== 13 failed, 21 passed in 3.09s =========================
+
+
+Final Test Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'jit', 'onnxrt', 'openxla', 'cudagraphs', 'tvm', 'inductor', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 34 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-True-1-sobel-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-True-1-sobel-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-True-1-diff-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-True-1-diff-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-True-2-sobel-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-True-2-sobel-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-True-2-diff-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-True-2-diff-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-False-1-sobel-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-False-1-sobel-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-False-1-diff-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-False-1-diff-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-False-2-sobel-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-False-2-sobel-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-False-2-diff-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-False-2-diff-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_cardinality[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_cardinality[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_exception PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_edges[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_edges_norm[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_edges_sep[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_edges_sep_norm[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_noncontiguous[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_gradcheck[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_module[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_dynamo[cpu-float32-inductor-1-1-sobel] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_dynamo[cpu-float32-inductor-1-1-diff] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_dynamo[cpu-float32-inductor-1-2-sobel] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_dynamo[cpu-float32-inductor-1-2-diff] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_dynamo[cpu-float32-inductor-2-1-sobel] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_dynamo[cpu-float32-inductor-2-1-diff] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_dynamo[cpu-float32-inductor-2-2-sobel] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_dynamo[cpu-float32-inductor-2-2-diff] PASSED
+
+============================== 34 passed in 2.58s ==============================
+
+
+Initial Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'onnxrt', 'inductor', 'cudagraphs', 'jit', 'tvm', 'openxla', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 34 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-True-1-sobel-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-True-1-sobel-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-True-1-diff-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-True-1-diff-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-True-2-sobel-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-True-2-sobel-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-True-2-diff-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-True-2-diff-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-False-1-sobel-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-False-1-sobel-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-False-1-diff-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-False-1-diff-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-False-2-sobel-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-False-2-sobel-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-False-2-diff-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_smoke[cpu-float32-False-2-diff-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_cardinality[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_cardinality[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_exception PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_edges[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_edges_norm[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_edges_sep[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_edges_sep_norm[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_noncontiguous[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_gradcheck[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_module[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_dynamo[cpu-float32-inductor-1-1-sobel] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_dynamo[cpu-float32-inductor-1-1-diff] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_dynamo[cpu-float32-inductor-1-2-sobel] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_dynamo[cpu-float32-inductor-1-2-diff] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_dynamo[cpu-float32-inductor-2-1-sobel] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_dynamo[cpu-float32-inductor-2-1-diff] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_dynamo[cpu-float32-inductor-2-2-sobel] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/filters/test_sobel.py::TestSpatialGradient::test_dynamo[cpu-float32-inductor-2-2-diff] PASSED
+
+============================== 34 passed in 2.59s ==============================

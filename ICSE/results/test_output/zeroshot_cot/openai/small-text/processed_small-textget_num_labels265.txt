@@ -1,0 +1,135 @@
+output file:
+processed_small-textget_num_labels265.json
+function:
+get_num_labels
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_get_num_labels_sparse FAILED', '../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_get_num_labels_dense FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_get_num_labels_sparse', 'FAILED ../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_get_num_labels_dense'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/small-text/small-text/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/small-text/small-text
+configfile: pytest.ini
+plugins: srcpaths-1.2.1, cov-6.0.0, approvaltests-14.2.0, approvaltests-0.2.4
+collecting ... collected 14 items
+
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_concatenate_dense PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_concatenate_sparse PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_csr_to_list PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_get_ignored_labels_mask_dense PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_get_ignored_labels_mask_sparse PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_get_num_labels_dense FAILED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_get_num_labels_sparse FAILED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_list_to_csr PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_list_to_csr_all_empty PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_list_to_csr_float PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_remove_by_index_dense PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_remove_by_index_list_dense PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_remove_by_index_list_sparse PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_remove_by_index_sparse PASSED
+
+=================================== FAILURES ===================================
+___________________ LabelUtilsTest.test_get_num_labels_dense ___________________
+
+self = <tests.unit.small_text.utils.test_labels.LabelUtilsTest testMethod=test_get_num_labels_dense>
+
+    def test_get_num_labels_dense(self):
+>       self.assertEqual(4, get_num_labels(np.array([3, 2, 1, 0])))
+
+/local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py:23: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+y = array([3, 2, 1, 0])
+
+    def get_num_labels(y):
+>       from .temp import get_num_labels
+E       ImportError: cannot import name 'get_num_labels' from 'small_text.utils.temp' (/local/data0/moved_data/publishablew/small-text/small-text/small_text/utils/temp.py)
+
+/local/data0/moved_data/publishablew/small-text/small-text/small_text/utils/labels.py:8: ImportError
+__________________ LabelUtilsTest.test_get_num_labels_sparse ___________________
+
+self = <tests.unit.small_text.utils.test_labels.LabelUtilsTest testMethod=test_get_num_labels_sparse>
+
+    def test_get_num_labels_sparse(self):
+        mat = csr_matrix(np.array([
+            [1, 1],
+            [0, 1],
+            [1, 0],
+            [0, 0]
+        ]))
+>       self.assertEqual(2, get_num_labels(mat))
+
+/local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py:35: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+y = <4x2 sparse matrix of type '<class 'numpy.int64'>'
+	with 4 stored elements in Compressed Sparse Row format>
+
+    def get_num_labels(y):
+>       from .temp import get_num_labels
+E       ImportError: cannot import name 'get_num_labels' from 'small_text.utils.temp' (/local/data0/moved_data/publishablew/small-text/small-text/small_text/utils/temp.py)
+
+/local/data0/moved_data/publishablew/small-text/small-text/small_text/utils/labels.py:8: ImportError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_get_num_labels_dense
+FAILED ../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_get_num_labels_sparse
+========================= 2 failed, 12 passed in 1.43s =========================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/small-text/small-text/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/small-text/small-text
+configfile: pytest.ini
+plugins: srcpaths-1.2.1, cov-6.0.0, approvaltests-14.2.0, approvaltests-0.2.4
+collecting ... collected 14 items
+
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_concatenate_dense PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_concatenate_sparse PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_csr_to_list PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_get_ignored_labels_mask_dense PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_get_ignored_labels_mask_sparse PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_get_num_labels_dense PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_get_num_labels_sparse PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_list_to_csr PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_list_to_csr_all_empty PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_list_to_csr_float PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_remove_by_index_dense PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_remove_by_index_list_dense PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_remove_by_index_list_sparse PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_remove_by_index_sparse PASSED
+
+============================== 14 passed in 1.41s ==============================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/small-text/small-text/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/small-text/small-text
+configfile: pytest.ini
+plugins: srcpaths-1.2.1, cov-6.0.0, approvaltests-14.2.0, approvaltests-0.2.4
+collecting ... collected 14 items
+
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_concatenate_dense PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_concatenate_sparse PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_csr_to_list PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_get_ignored_labels_mask_dense PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_get_ignored_labels_mask_sparse PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_get_num_labels_dense PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_get_num_labels_sparse PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_list_to_csr PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_list_to_csr_all_empty PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_list_to_csr_float PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_remove_by_index_dense PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_remove_by_index_list_dense PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_remove_by_index_list_sparse PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/utils/test_labels.py::LabelUtilsTest::test_remove_by_index_sparse PASSED
+
+============================== 14 passed in 1.42s ==============================

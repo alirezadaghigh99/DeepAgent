@@ -1,0 +1,69 @@
+stage: Image
+task: 
+data: pre-post process
+
+prompt:
+
+Implement the `_compute_projection` method for the `DepthWarper` class. This method calculates the projected x and y coordinates of a point from the source to the destination camera frame using a precomputed projection matrix. It takes the x and y coordinates and the inverse depth as input and returns a tensor containing the projected coordinates. Ensure that the method checks if the projection matrix and source pinhole camera are initialized; otherwise, it should raise a `ValueError`. Use the provided projection matrix to perform the transformation and normalization.
+
+Inputs:
+- `x`: Float, x-coordinate in the source camera frame.
+- `y`: Float, y-coordinate in the source camera frame.
+- `invd`: Float, inverse depth value.  class DepthWarper(Module):
+    r"""Warp a patch by depth.
+
+    .. math::
+        P_{src}^{\{dst\}} = K_{dst} * T_{src}^{\{dst\}}
+
+        I_{src} = \\omega(I_{dst}, P_{src}^{\{dst\}}, D_{src})
+
+    Args:
+        pinholes_dst: the pinhole models for the destination frame.
+        height: the height of the image to warp.
+        width: the width of the image to warp.
+        mode: interpolation mode to calculate output values ``'bilinear'`` | ``'nearest'``.
+        padding_mode: padding mode for outside grid values ``'zeros'`` | ``'border'`` | ``'reflection'``.
+        align_corners: interpolation flag.
+    """
+
+    def __init__(
+        self,
+        pinhole_dst: PinholeCamera,
+        height: int,
+        width: int,
+        mode: str = "bilinear",
+        padding_mode: str = "zeros",
+        align_corners: bool = True,
+    ) -> None:
+        super().__init__()
+        # constructor members
+        self.width: int = width
+        self.height: int = height
+        self.mode: str = mode
+        self.padding_mode: str = padding_mode
+        self.eps = 1e-6
+        self.align_corners: bool = align_corners
+
+        # state members
+        self._pinhole_dst: PinholeCamera = pinhole_dst
+        self._pinhole_src: None | PinholeCamera = None
+        self._dst_proj_src: None | Tensor = None
+
+        self.grid: Tensor = self._create_meshgrid(height, width)
+
+
+Output:
+- Tensor of shape `[1, 2]` containing the projected x and y coordinates.
+
+Errors:
+- Raises `ValueError` if `compute_projection_matrix` has not been called.
+
+ ground Truth:kornia/geometry/depth.py
+
+ repo:kornia
+
+ function:_compute_projection
+ 
+ test_cases:tests/geometry/test_depth_wrapper.py
+ 
+ class:DepthWarper

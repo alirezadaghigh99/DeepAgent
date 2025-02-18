@@ -1,0 +1,33 @@
+stage: 
+task: 
+data: pre-post process
+
+prompt:
+
+Generate a Python method `compose` for the `Transform3d` class that combines the current transform with any number of other `Transform3d` objects passed as arguments. The method should return a new `Transform3d` instance representing the composed transformation, which combines the internal transformation matrix of the current instance with those of the provided transforms. Ensure that the internal list of transformations (`self._transforms`) is updated accordingly. The method should also verify that all provided arguments are instances of `Transform3d`.
+
+Class structure:
+
+```python
+class Transform3d:
+    def __init__(self, dtype: torch.dtype = torch.float32, device: Device = "cpu", matrix: Optional[torch.Tensor] = None):
+        self._matrix = ...
+        self._transforms = []
+        self.device = ...
+        self.dtype = ...
+
+    def compose(self, *others: "Transform3d") -> "Transform3d":
+        # Implement the function as described in the prompt
+```
+
+
+
+ ground Truth:pytorch3d/transforms/transform3d.py
+
+ repo:pytorch3d
+
+ function:compose
+ 
+ class:Transform3d
+ 
+ test_cases:tests/test_transforms.py

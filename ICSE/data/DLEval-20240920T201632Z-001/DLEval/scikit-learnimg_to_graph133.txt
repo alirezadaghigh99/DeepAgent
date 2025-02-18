@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: Segmentation
+data: Image
+
+prompt:
+Create a Python function called img_to_graph that generates a graph of pixel-to-pixel gradient connections from a 2D or 3D image. The function takes in parameters img (array-like of shape (height, width) or (height, width, channel)), mask (optional mask of the image), return_as (class to build the adjacency matrix), and dtype (data type of the returned sparse matrix). The function returns a computed adjacency matrix as either an ndarray or a sparse matrix class. An example is provided using numpy and sklearn.feature_extraction.image to demonstrate how the function works.
+
+ ground Truth:sklearn/feature_extraction/image.py
+
+ repo:scikit-learn
+
+ function:img_to_graph
+ 
+ test_cases:sklearn/feature_extraction/tests/test_image.py

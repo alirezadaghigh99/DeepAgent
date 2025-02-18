@@ -1,0 +1,55 @@
+stage: Model Construction
+task: Detection
+data: 
+
+prompt:
+Generate a Python function called get_perspective_transform that Calculate a perspective transform from four pairs of the corresponding points.
+
+    The algorithm is a vanilla implementation of the Direct Linear transform (DLT).
+
+    The function calculates the matrix of a perspective transform that maps from
+    the source to destination points:
+
+    .. math::
+
+        \begin{bmatrix}
+        x^{'} \\
+        y^{'} \\
+        1 \\
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+        h_1 & h_2 & h_3 \\
+        h_4 & h_5 & h_6 \\
+        h_7 & h_8 & h_9 \\
+        \end{bmatrix}
+        \cdot
+        \begin{bmatrix}
+        x \\
+        y \\
+        1 \\
+        \end{bmatrix}
+
+    Args:
+        points_src: coordinates of quadrangle vertices in the source image with shape :math:`(B, 4, 2)`.
+        points_dst: coordinates of the corresponding quadrangle vertices in
+            the destination image with shape :math:`(B, 4, 2)`.
+
+    Returns:
+        the perspective transformation with shape :math:`(B, 3, 3)`.
+
+    .. note::
+        This function is often used in conjunction with :func:`warp_perspective`.
+
+    Example:
+        >>> x1 = torch.tensor([[[0., 0.], [1., 0.], [1., 1.], [0., 1.]]])
+        >>> x2 = torch.tensor([[[1., 0.], [0., 0.], [0., 1.], [1., 1.]]])
+        >>> x2_trans_x1 = get_perspective_transform(x1, x2)
+
+ ground Truth:kornia/geometry/transform/imgwarp.py
+
+ repo:kornia
+
+ function:get_perspective_transform
+ 
+ test_cases:tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform

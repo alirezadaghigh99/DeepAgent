@@ -1,0 +1,700 @@
+output file:
+processed_korniafundamental_from_projections331.json
+function:
+fundamental_from_projections
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_smoke[cpu-float32] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-2]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-2] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_batch_support_check[cpu-float32] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-4] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_from_to_projections[cpu-float32] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_batch_support_check[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape_large[cpu-float32] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_from_to_projections[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_gradcheck[cpu] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-7] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_gradcheck[cpu]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_smoke[cpu-float32]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape_large[cpu-float32]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-7]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-4]'}
+
+All Test Cases On Generated code:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'cudagraphs', 'jit', 'inductor', 'onnxrt', 'tvm', 'openxla', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 9 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_smoke[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-1] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-2] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-4] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-7] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape_large[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_from_to_projections[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_gradcheck[cpu] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_batch_support_check[cpu-float32] FAILED
+
+=================================== FAILURES ===================================
+____________ TestFundamentalFromProjections.test_smoke[cpu-float32] ____________
+
+self = <test_fundamental.TestFundamentalFromProjections object at 0x704943f2a950>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_smoke(self, device, dtype):
+        P1 = torch.rand(1, 3, 4, device=device, dtype=dtype)
+        P2 = torch.rand(1, 3, 4, device=device, dtype=dtype)
+>       F_mat = epi.fundamental_from_projections(P1, P2)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py:388: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:273: in fundamental_from_projections
+    return fundamental_from_projections(P1, P2)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+P1 = tensor([[[0.3585, 0.9437, 0.5291, 0.9332],
+         [0.6474, 0.2427, 0.3041, 0.1304],
+         [0.2520, 0.4648, 0.3579, 0.9546]]])
+P2 = tensor([[[0.4206, 0.6602, 0.7905, 0.9270],
+         [0.3847, 0.3876, 0.2339, 0.6446],
+         [0.2559, 0.9266, 0.2375, 0.4796]]])
+
+    def fundamental_from_projections(P1: torch.Tensor, P2: torch.Tensor) -> torch.Tensor:
+        """
+        Calculate the fundamental matrix from two projection matrices.
+    
+        Args:
+            P1 (Tensor): First projection matrix of shape (*, 3, 4).
+            P2 (Tensor): Second projection matrix of shape (*, 3, 4).
+    
+        Returns:
+            Tensor: Fundamental matrix of shape (*, 3, 3).
+        """
+        assert P1.shape[-2:] == (3, 4), 'P1 must have shape (*, 3, 4)'
+        assert P2.shape[-2:] == (3, 4), 'P2 must have shape (*, 3, 4)'
+        assert P1.shape[:-2] == P2.shape[:-2], 'P1 and P2 must have matching batch dimensions'
+        if P1.dtype not in (torch.float32, torch.float64):
+            P1 = P1.to(torch.float32)
+        if P2.dtype not in (torch.float32, torch.float64):
+            P2 = P2.to(torch.float32)
+        F = torch.zeros(P1.shape[:-1] + (3,), dtype=P1.dtype, device=P1.device)
+        for i in range(3):
+            for j in range(3):
+                P1_sub = torch.cat([P1[..., :i, :], P1[..., i + 1:, :]], dim=-2)
+                P2_sub = torch.cat([P2[..., :, :j], P2[..., :, j + 1:]], dim=-1)
+>               F[..., i, j] = torch.det(P1_sub @ P2_sub)
+E               RuntimeError: Expected size for first two dimensions of batch2 tensor to be: [1, 4] but got: [1, 3].
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:34: RuntimeError
+___________ TestFundamentalFromProjections.test_shape[cpu-float32-1] ___________
+
+self = <test_fundamental.TestFundamentalFromProjections object at 0x704943f2ae00>
+batch_size = 1, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 4, 7])
+    def test_shape(self, batch_size, device, dtype):
+        B: int = batch_size
+        P1 = torch.rand(B, 3, 4, device=device, dtype=dtype)
+        P2 = torch.rand(B, 3, 4, device=device, dtype=dtype)
+>       F_mat = epi.fundamental_from_projections(P1, P2)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py:396: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:273: in fundamental_from_projections
+    return fundamental_from_projections(P1, P2)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+P1 = tensor([[[0.3858, 0.6019, 0.6850, 0.2491],
+         [0.5075, 0.4876, 0.8827, 0.0276],
+         [0.9382, 0.7596, 0.1907, 0.2387]]])
+P2 = tensor([[[0.6203, 0.4791, 0.9819, 0.1941],
+         [0.9959, 0.1606, 0.8201, 0.5106],
+         [0.1075, 0.3396, 0.5088, 0.9474]]])
+
+    def fundamental_from_projections(P1: torch.Tensor, P2: torch.Tensor) -> torch.Tensor:
+        """
+        Calculate the fundamental matrix from two projection matrices.
+    
+        Args:
+            P1 (Tensor): First projection matrix of shape (*, 3, 4).
+            P2 (Tensor): Second projection matrix of shape (*, 3, 4).
+    
+        Returns:
+            Tensor: Fundamental matrix of shape (*, 3, 3).
+        """
+        assert P1.shape[-2:] == (3, 4), 'P1 must have shape (*, 3, 4)'
+        assert P2.shape[-2:] == (3, 4), 'P2 must have shape (*, 3, 4)'
+        assert P1.shape[:-2] == P2.shape[:-2], 'P1 and P2 must have matching batch dimensions'
+        if P1.dtype not in (torch.float32, torch.float64):
+            P1 = P1.to(torch.float32)
+        if P2.dtype not in (torch.float32, torch.float64):
+            P2 = P2.to(torch.float32)
+        F = torch.zeros(P1.shape[:-1] + (3,), dtype=P1.dtype, device=P1.device)
+        for i in range(3):
+            for j in range(3):
+                P1_sub = torch.cat([P1[..., :i, :], P1[..., i + 1:, :]], dim=-2)
+                P2_sub = torch.cat([P2[..., :, :j], P2[..., :, j + 1:]], dim=-1)
+>               F[..., i, j] = torch.det(P1_sub @ P2_sub)
+E               RuntimeError: Expected size for first two dimensions of batch2 tensor to be: [1, 4] but got: [1, 3].
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:34: RuntimeError
+___________ TestFundamentalFromProjections.test_shape[cpu-float32-2] ___________
+
+self = <test_fundamental.TestFundamentalFromProjections object at 0x704943f2ad40>
+batch_size = 2, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 4, 7])
+    def test_shape(self, batch_size, device, dtype):
+        B: int = batch_size
+        P1 = torch.rand(B, 3, 4, device=device, dtype=dtype)
+        P2 = torch.rand(B, 3, 4, device=device, dtype=dtype)
+>       F_mat = epi.fundamental_from_projections(P1, P2)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py:396: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:273: in fundamental_from_projections
+    return fundamental_from_projections(P1, P2)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+P1 = tensor([[[0.2840, 0.7820, 0.7122, 0.4179],
+         [0.3710, 0.0024, 0.0588, 0.2275],
+         [0.5355, 0.2623, 0.9067....5993, 0.9001, 0.1555, 0.6491],
+         [0.3908, 0.9827, 0.8252, 0.4409],
+         [0.0380, 0.7414, 0.2431, 0.5288]]])
+P2 = tensor([[[0.3439, 0.3261, 0.6208, 0.8902],
+         [0.4589, 0.7649, 0.0683, 0.3083],
+         [0.7299, 0.8764, 0.4596....7811, 0.7324, 0.7472, 0.1868],
+         [0.4521, 0.6477, 0.0647, 0.5652],
+         [0.9358, 0.7310, 0.1295, 0.0324]]])
+
+    def fundamental_from_projections(P1: torch.Tensor, P2: torch.Tensor) -> torch.Tensor:
+        """
+        Calculate the fundamental matrix from two projection matrices.
+    
+        Args:
+            P1 (Tensor): First projection matrix of shape (*, 3, 4).
+            P2 (Tensor): Second projection matrix of shape (*, 3, 4).
+    
+        Returns:
+            Tensor: Fundamental matrix of shape (*, 3, 3).
+        """
+        assert P1.shape[-2:] == (3, 4), 'P1 must have shape (*, 3, 4)'
+        assert P2.shape[-2:] == (3, 4), 'P2 must have shape (*, 3, 4)'
+        assert P1.shape[:-2] == P2.shape[:-2], 'P1 and P2 must have matching batch dimensions'
+        if P1.dtype not in (torch.float32, torch.float64):
+            P1 = P1.to(torch.float32)
+        if P2.dtype not in (torch.float32, torch.float64):
+            P2 = P2.to(torch.float32)
+        F = torch.zeros(P1.shape[:-1] + (3,), dtype=P1.dtype, device=P1.device)
+        for i in range(3):
+            for j in range(3):
+                P1_sub = torch.cat([P1[..., :i, :], P1[..., i + 1:, :]], dim=-2)
+                P2_sub = torch.cat([P2[..., :, :j], P2[..., :, j + 1:]], dim=-1)
+>               F[..., i, j] = torch.det(P1_sub @ P2_sub)
+E               RuntimeError: Expected size for first two dimensions of batch2 tensor to be: [2, 4] but got: [2, 3].
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:34: RuntimeError
+___________ TestFundamentalFromProjections.test_shape[cpu-float32-4] ___________
+
+self = <test_fundamental.TestFundamentalFromProjections object at 0x704943f2b0d0>
+batch_size = 4, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 4, 7])
+    def test_shape(self, batch_size, device, dtype):
+        B: int = batch_size
+        P1 = torch.rand(B, 3, 4, device=device, dtype=dtype)
+        P2 = torch.rand(B, 3, 4, device=device, dtype=dtype)
+>       F_mat = epi.fundamental_from_projections(P1, P2)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py:396: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:273: in fundamental_from_projections
+    return fundamental_from_projections(P1, P2)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+P1 = tensor([[[0.5111, 0.2258, 0.3583, 0.1637],
+         [0.3064, 0.3875, 0.8784, 0.1294],
+         [0.1740, 0.2261, 0.7397....5374, 0.5758, 0.1468, 0.1238],
+         [0.1542, 0.5076, 0.9009, 0.9853],
+         [0.5766, 0.7343, 0.8570, 0.3730]]])
+P2 = tensor([[[9.9189e-01, 9.8012e-01, 9.8495e-01, 5.3224e-02],
+         [6.9065e-01, 8.8531e-01, 7.5598e-02, 7.5366e-01],
+...         [8.4783e-01, 9.9203e-01, 3.7943e-01, 8.4428e-01],
+         [1.4652e-01, 9.1245e-01, 3.3713e-01, 5.4619e-01]]])
+
+    def fundamental_from_projections(P1: torch.Tensor, P2: torch.Tensor) -> torch.Tensor:
+        """
+        Calculate the fundamental matrix from two projection matrices.
+    
+        Args:
+            P1 (Tensor): First projection matrix of shape (*, 3, 4).
+            P2 (Tensor): Second projection matrix of shape (*, 3, 4).
+    
+        Returns:
+            Tensor: Fundamental matrix of shape (*, 3, 3).
+        """
+        assert P1.shape[-2:] == (3, 4), 'P1 must have shape (*, 3, 4)'
+        assert P2.shape[-2:] == (3, 4), 'P2 must have shape (*, 3, 4)'
+        assert P1.shape[:-2] == P2.shape[:-2], 'P1 and P2 must have matching batch dimensions'
+        if P1.dtype not in (torch.float32, torch.float64):
+            P1 = P1.to(torch.float32)
+        if P2.dtype not in (torch.float32, torch.float64):
+            P2 = P2.to(torch.float32)
+        F = torch.zeros(P1.shape[:-1] + (3,), dtype=P1.dtype, device=P1.device)
+        for i in range(3):
+            for j in range(3):
+                P1_sub = torch.cat([P1[..., :i, :], P1[..., i + 1:, :]], dim=-2)
+                P2_sub = torch.cat([P2[..., :, :j], P2[..., :, j + 1:]], dim=-1)
+>               F[..., i, j] = torch.det(P1_sub @ P2_sub)
+E               RuntimeError: Expected size for first two dimensions of batch2 tensor to be: [4, 4] but got: [4, 3].
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:34: RuntimeError
+___________ TestFundamentalFromProjections.test_shape[cpu-float32-7] ___________
+
+self = <test_fundamental.TestFundamentalFromProjections object at 0x704943f2b190>
+batch_size = 7, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 4, 7])
+    def test_shape(self, batch_size, device, dtype):
+        B: int = batch_size
+        P1 = torch.rand(B, 3, 4, device=device, dtype=dtype)
+        P2 = torch.rand(B, 3, 4, device=device, dtype=dtype)
+>       F_mat = epi.fundamental_from_projections(P1, P2)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py:396: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:273: in fundamental_from_projections
+    return fundamental_from_projections(P1, P2)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+P1 = tensor([[[0.8941, 0.8863, 0.7811, 0.5577],
+         [0.1312, 0.8509, 0.7866, 0.7262],
+         [0.5942, 0.1380, 0.7289....4108, 0.7732, 0.8363, 0.9316],
+         [0.3679, 0.1370, 0.6824, 0.2064],
+         [0.6248, 0.1933, 0.6805, 0.7064]]])
+P2 = tensor([[[0.6495, 0.4293, 0.9970, 0.8976],
+         [0.1960, 0.4373, 0.8757, 0.0439],
+         [0.7078, 0.8436, 0.5971....8819, 0.9065, 0.4292, 0.7440],
+         [0.6874, 0.8600, 0.5137, 0.9850],
+         [0.4103, 0.1464, 0.9134, 0.6236]]])
+
+    def fundamental_from_projections(P1: torch.Tensor, P2: torch.Tensor) -> torch.Tensor:
+        """
+        Calculate the fundamental matrix from two projection matrices.
+    
+        Args:
+            P1 (Tensor): First projection matrix of shape (*, 3, 4).
+            P2 (Tensor): Second projection matrix of shape (*, 3, 4).
+    
+        Returns:
+            Tensor: Fundamental matrix of shape (*, 3, 3).
+        """
+        assert P1.shape[-2:] == (3, 4), 'P1 must have shape (*, 3, 4)'
+        assert P2.shape[-2:] == (3, 4), 'P2 must have shape (*, 3, 4)'
+        assert P1.shape[:-2] == P2.shape[:-2], 'P1 and P2 must have matching batch dimensions'
+        if P1.dtype not in (torch.float32, torch.float64):
+            P1 = P1.to(torch.float32)
+        if P2.dtype not in (torch.float32, torch.float64):
+            P2 = P2.to(torch.float32)
+        F = torch.zeros(P1.shape[:-1] + (3,), dtype=P1.dtype, device=P1.device)
+        for i in range(3):
+            for j in range(3):
+                P1_sub = torch.cat([P1[..., :i, :], P1[..., i + 1:, :]], dim=-2)
+                P2_sub = torch.cat([P2[..., :, :j], P2[..., :, j + 1:]], dim=-1)
+>               F[..., i, j] = torch.det(P1_sub @ P2_sub)
+E               RuntimeError: Expected size for first two dimensions of batch2 tensor to be: [7, 4] but got: [7, 3].
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:34: RuntimeError
+_________ TestFundamentalFromProjections.test_shape_large[cpu-float32] _________
+
+self = <test_fundamental.TestFundamentalFromProjections object at 0x704943f2b460>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_shape_large(self, device, dtype):
+        P1 = torch.rand(1, 2, 3, 4, device=device, dtype=dtype)
+        P2 = torch.rand(1, 2, 3, 4, device=device, dtype=dtype)
+>       F_mat = epi.fundamental_from_projections(P1, P2)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py:402: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:273: in fundamental_from_projections
+    return fundamental_from_projections(P1, P2)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+P1 = tensor([[[[0.7283, 0.1519, 0.3741, 0.6198],
+          [0.3008, 0.8733, 0.2748, 0.3647],
+          [0.3971, 0.4785, 0.7...61, 0.0885, 0.4197, 0.6409],
+          [0.0653, 0.4919, 0.6097, 0.5400],
+          [0.4929, 0.1051, 0.5486, 0.0286]]]])
+P2 = tensor([[[[0.9723, 0.0990, 0.4956, 0.6766],
+          [0.1818, 0.9663, 0.0220, 0.3414],
+          [0.7871, 0.9827, 0.9...97, 0.4720, 0.0332, 0.7072],
+          [0.9055, 0.5701, 0.0326, 0.6505],
+          [0.0852, 0.4880, 0.7341, 0.6363]]]])
+
+    def fundamental_from_projections(P1: torch.Tensor, P2: torch.Tensor) -> torch.Tensor:
+        """
+        Calculate the fundamental matrix from two projection matrices.
+    
+        Args:
+            P1 (Tensor): First projection matrix of shape (*, 3, 4).
+            P2 (Tensor): Second projection matrix of shape (*, 3, 4).
+    
+        Returns:
+            Tensor: Fundamental matrix of shape (*, 3, 3).
+        """
+        assert P1.shape[-2:] == (3, 4), 'P1 must have shape (*, 3, 4)'
+        assert P2.shape[-2:] == (3, 4), 'P2 must have shape (*, 3, 4)'
+        assert P1.shape[:-2] == P2.shape[:-2], 'P1 and P2 must have matching batch dimensions'
+        if P1.dtype not in (torch.float32, torch.float64):
+            P1 = P1.to(torch.float32)
+        if P2.dtype not in (torch.float32, torch.float64):
+            P2 = P2.to(torch.float32)
+        F = torch.zeros(P1.shape[:-1] + (3,), dtype=P1.dtype, device=P1.device)
+        for i in range(3):
+            for j in range(3):
+                P1_sub = torch.cat([P1[..., :i, :], P1[..., i + 1:, :]], dim=-2)
+                P2_sub = torch.cat([P2[..., :, :j], P2[..., :, j + 1:]], dim=-1)
+>               F[..., i, j] = torch.det(P1_sub @ P2_sub)
+E               RuntimeError: Expected size for first two dimensions of batch2 tensor to be: [2, 4] but got: [2, 3].
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:34: RuntimeError
+_____ TestFundamentalFromProjections.test_from_to_projections[cpu-float32] _____
+
+self = <test_fundamental.TestFundamentalFromProjections object at 0x704943f2b790>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_from_to_projections(self, device, dtype):
+        P1 = torch.tensor(
+            [[[1.0, 0.0, 0.0, 0.0], [0.0, 1.0, 0.0, 0.0], [1.0, 0.0, 1.0, 0.0]]], device=device, dtype=dtype
+        )
+    
+        P2 = torch.tensor(
+            [[[1.0, 1.0, 1.0, 3.0], [0.0, 2.0, 0.0, 3.0], [0.0, 1.0, 1.0, 0.0]]], device=device, dtype=dtype
+        )
+    
+>       F_mat = epi.fundamental_from_projections(P1, P2)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py:414: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:273: in fundamental_from_projections
+    return fundamental_from_projections(P1, P2)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+P1 = tensor([[[1., 0., 0., 0.],
+         [0., 1., 0., 0.],
+         [1., 0., 1., 0.]]])
+P2 = tensor([[[1., 1., 1., 3.],
+         [0., 2., 0., 3.],
+         [0., 1., 1., 0.]]])
+
+    def fundamental_from_projections(P1: torch.Tensor, P2: torch.Tensor) -> torch.Tensor:
+        """
+        Calculate the fundamental matrix from two projection matrices.
+    
+        Args:
+            P1 (Tensor): First projection matrix of shape (*, 3, 4).
+            P2 (Tensor): Second projection matrix of shape (*, 3, 4).
+    
+        Returns:
+            Tensor: Fundamental matrix of shape (*, 3, 3).
+        """
+        assert P1.shape[-2:] == (3, 4), 'P1 must have shape (*, 3, 4)'
+        assert P2.shape[-2:] == (3, 4), 'P2 must have shape (*, 3, 4)'
+        assert P1.shape[:-2] == P2.shape[:-2], 'P1 and P2 must have matching batch dimensions'
+        if P1.dtype not in (torch.float32, torch.float64):
+            P1 = P1.to(torch.float32)
+        if P2.dtype not in (torch.float32, torch.float64):
+            P2 = P2.to(torch.float32)
+        F = torch.zeros(P1.shape[:-1] + (3,), dtype=P1.dtype, device=P1.device)
+        for i in range(3):
+            for j in range(3):
+                P1_sub = torch.cat([P1[..., :i, :], P1[..., i + 1:, :]], dim=-2)
+                P2_sub = torch.cat([P2[..., :, :j], P2[..., :, j + 1:]], dim=-1)
+>               F[..., i, j] = torch.det(P1_sub @ P2_sub)
+E               RuntimeError: Expected size for first two dimensions of batch2 tensor to be: [1, 4] but got: [1, 3].
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:34: RuntimeError
+______________ TestFundamentalFromProjections.test_gradcheck[cpu] ______________
+
+self = <test_fundamental.TestFundamentalFromProjections object at 0x704943f2ba60>
+device = device(type='cpu')
+
+    def test_gradcheck(self, device):
+        P1 = torch.rand(1, 3, 4, device=device, dtype=torch.float64, requires_grad=True)
+        P2 = torch.rand(1, 3, 4, device=device, dtype=torch.float64)
+>       self.gradcheck(epi.fundamental_from_projections, (P1, P2), requires_grad=(True, False))
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py:425: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:143: in gradcheck
+    return gradcheck(func, inputs, raise_exception=raise_exception, fast_mode=fast_mode, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2052: in gradcheck
+    return _gradcheck_helper(**args)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2074: in _gradcheck_helper
+    func_out = func(*tupled_inputs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:273: in fundamental_from_projections
+    return fundamental_from_projections(P1, P2)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+P1 = tensor([[[0.3491, 0.1165, 0.7423, 0.2110],
+         [0.3207, 0.9904, 0.9552, 0.6586],
+         [0.3690, 0.1303, 0.7298, 0.5355]]], dtype=torch.float64,
+       requires_grad=True)
+P2 = tensor([[[0.4660, 0.7505, 0.7452, 0.4394],
+         [0.8156, 0.9152, 0.2036, 0.4157],
+         [0.2789, 0.8093, 0.2044, 0.4330]]], dtype=torch.float64)
+
+    def fundamental_from_projections(P1: torch.Tensor, P2: torch.Tensor) -> torch.Tensor:
+        """
+        Calculate the fundamental matrix from two projection matrices.
+    
+        Args:
+            P1 (Tensor): First projection matrix of shape (*, 3, 4).
+            P2 (Tensor): Second projection matrix of shape (*, 3, 4).
+    
+        Returns:
+            Tensor: Fundamental matrix of shape (*, 3, 3).
+        """
+        assert P1.shape[-2:] == (3, 4), 'P1 must have shape (*, 3, 4)'
+        assert P2.shape[-2:] == (3, 4), 'P2 must have shape (*, 3, 4)'
+        assert P1.shape[:-2] == P2.shape[:-2], 'P1 and P2 must have matching batch dimensions'
+        if P1.dtype not in (torch.float32, torch.float64):
+            P1 = P1.to(torch.float32)
+        if P2.dtype not in (torch.float32, torch.float64):
+            P2 = P2.to(torch.float32)
+        F = torch.zeros(P1.shape[:-1] + (3,), dtype=P1.dtype, device=P1.device)
+        for i in range(3):
+            for j in range(3):
+                P1_sub = torch.cat([P1[..., :i, :], P1[..., i + 1:, :]], dim=-2)
+                P2_sub = torch.cat([P2[..., :, :j], P2[..., :, j + 1:]], dim=-1)
+>               F[..., i, j] = torch.det(P1_sub @ P2_sub)
+E               RuntimeError: Expected size for first two dimensions of batch2 tensor to be: [1, 4] but got: [1, 3].
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:34: RuntimeError
+_____ TestFundamentalFromProjections.test_batch_support_check[cpu-float32] _____
+
+self = <test_fundamental.TestFundamentalFromProjections object at 0x704943f2bd60>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_batch_support_check(self, device, dtype):
+        P1_batch = torch.tensor(
+            [
+                [
+                    [9.4692e02, -9.6658e02, 6.0862e02, -2.3076e05],
+                    [-2.1829e02, 5.4163e02, 1.3445e03, -6.4387e05],
+                    [-6.0675e-01, -6.9807e-01, 3.8021e-01, 3.8896e02],
+                ],
+                [
+                    [9.4692e02, -9.6658e02, 6.0862e02, -2.3076e05],
+                    [-2.1829e02, 5.4163e02, 1.3445e03, -6.4387e05],
+                    [-6.0675e-01, -6.9807e-01, 3.8021e-01, 3.8896e02],
+                ],
+            ],
+            device=device,
+            dtype=dtype,
+        )
+        P1 = torch.tensor(
+            [
+                [
+                    [9.4692e02, -9.6658e02, 6.0862e02, -2.3076e05],
+                    [-2.1829e02, 5.4163e02, 1.3445e03, -6.4387e05],
+                    [-6.0675e-01, -6.9807e-01, 3.8021e-01, 3.8896e02],
+                ]
+            ],
+            device=device,
+            dtype=dtype,
+        )
+        P2_batch = torch.tensor(
+            [
+                [
+                    [1.1518e03, -7.5822e02, 5.4764e02, -1.9764e05],
+                    [-2.1548e02, 5.3102e02, 1.3492e03, -6.4731e05],
+                    [-4.3727e-01, -7.8632e-01, 4.3646e-01, 3.4515e02],
+                ],
+                [
+                    [9.9595e02, -8.6464e02, 6.7959e02, -2.7517e05],
+                    [-8.1716e01, 7.7826e02, 1.2395e03, -5.8137e05],
+                    [-5.7090e-01, -6.0416e-01, 5.5594e-01, 2.8111e02],
+                ],
+            ],
+            device=device,
+            dtype=dtype,
+        )
+        P2 = torch.tensor(
+            [
+                [
+                    [1.1518e03, -7.5822e02, 5.4764e02, -1.9764e05],
+                    [-2.1548e02, 5.3102e02, 1.3492e03, -6.4731e05],
+                    [-4.3727e-01, -7.8632e-01, 4.3646e-01, 3.4515e02],
+                ]
+            ],
+            device=device,
+            dtype=dtype,
+        )
+    
+>       F_batch = epi.fundamental_from_projections(P1_batch, P2_batch)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py:483: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:273: in fundamental_from_projections
+    return fundamental_from_projections(P1, P2)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+P1 = tensor([[[ 9.4692e+02, -9.6658e+02,  6.0862e+02, -2.3076e+05],
+         [-2.1829e+02,  5.4163e+02,  1.3445e+03, -6.438... [-2.1829e+02,  5.4163e+02,  1.3445e+03, -6.4387e+05],
+         [-6.0675e-01, -6.9807e-01,  3.8021e-01,  3.8896e+02]]])
+P2 = tensor([[[ 1.1518e+03, -7.5822e+02,  5.4764e+02, -1.9764e+05],
+         [-2.1548e+02,  5.3102e+02,  1.3492e+03, -6.473... [-8.1716e+01,  7.7826e+02,  1.2395e+03, -5.8137e+05],
+         [-5.7090e-01, -6.0416e-01,  5.5594e-01,  2.8111e+02]]])
+
+    def fundamental_from_projections(P1: torch.Tensor, P2: torch.Tensor) -> torch.Tensor:
+        """
+        Calculate the fundamental matrix from two projection matrices.
+    
+        Args:
+            P1 (Tensor): First projection matrix of shape (*, 3, 4).
+            P2 (Tensor): Second projection matrix of shape (*, 3, 4).
+    
+        Returns:
+            Tensor: Fundamental matrix of shape (*, 3, 3).
+        """
+        assert P1.shape[-2:] == (3, 4), 'P1 must have shape (*, 3, 4)'
+        assert P2.shape[-2:] == (3, 4), 'P2 must have shape (*, 3, 4)'
+        assert P1.shape[:-2] == P2.shape[:-2], 'P1 and P2 must have matching batch dimensions'
+        if P1.dtype not in (torch.float32, torch.float64):
+            P1 = P1.to(torch.float32)
+        if P2.dtype not in (torch.float32, torch.float64):
+            P2 = P2.to(torch.float32)
+        F = torch.zeros(P1.shape[:-1] + (3,), dtype=P1.dtype, device=P1.device)
+        for i in range(3):
+            for j in range(3):
+                P1_sub = torch.cat([P1[..., :i, :], P1[..., i + 1:, :]], dim=-2)
+                P2_sub = torch.cat([P2[..., :, :j], P2[..., :, j + 1:]], dim=-1)
+>               F[..., i, j] = torch.det(P1_sub @ P2_sub)
+E               RuntimeError: Expected size for first two dimensions of batch2 tensor to be: [2, 4] but got: [2, 3].
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:34: RuntimeError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_smoke[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-4]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-7]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape_large[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_from_to_projections[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_gradcheck[cpu]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_batch_support_check[cpu-float32]
+============================== 9 failed in 0.43s ===============================
+
+
+Final Test Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'onnxrt', 'cudagraphs', 'jit', 'openxla', 'inductor', 'tvm', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 9 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_smoke[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-4] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-7] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape_large[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_from_to_projections[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_gradcheck[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_batch_support_check[cpu-float32] PASSED
+
+============================== 9 passed in 0.21s ===============================
+
+
+Initial Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'inductor', 'tvm', 'cudagraphs', 'openxla', 'onnxrt', 'jit', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 9 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_smoke[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-4] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-7] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape_large[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_from_to_projections[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_gradcheck[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_batch_support_check[cpu-float32] PASSED
+
+============================== 9 passed in 0.16s ===============================

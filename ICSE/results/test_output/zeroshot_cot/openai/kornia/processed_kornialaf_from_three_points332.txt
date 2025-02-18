@@ -1,0 +1,830 @@
+output file:
+processed_kornialaf_from_three_points332.json
+function:
+laf_from_three_points
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-3-1] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-2-5]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-5-1]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-2-2]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-3-5] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-5-5]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-5-1] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-2-5] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-2-1] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-5-2] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-3-2]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-5-5] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-2-2] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-3-2] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-3-5]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-2-1]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-3-1]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-5-2]'}
+
+All Test Cases On Generated code:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'tvm', 'onnxrt', 'openxla', 'cudagraphs', 'inductor', None, 'jit'}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 9 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-2-1] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-2-2] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-2-5] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-3-1] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-3-2] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-3-5] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-5-1] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-5-2] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-5-5] FAILED
+
+=================================== FAILURES ===================================
+___________ TestTransformLAFs.test_transform_points[cpu-float32-2-1] ___________
+
+self = <test_laf.TestTransformLAFs object at 0x70231732ffd0>, batch_size = 1
+num_points = 2, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 5])
+    @pytest.mark.parametrize("num_points", [2, 3, 5])
+    def test_transform_points(self, batch_size, num_points, device, dtype):
+        # generate input data
+        eye_size = 3
+        lafs_src = torch.rand(batch_size, num_points, 2, 3, device=device, dtype=dtype)
+    
+        dst_homo_src = create_random_homography(lafs_src, eye_size)
+        # transform the points from dst to ref
+        lafs_dst = kornia.feature.perspective_transform_lafs(dst_homo_src, lafs_src)
+    
+        # transform the points from ref to dst
+        src_homo_dst = torch.inverse(dst_homo_src)
+        lafs_dst_to_src = kornia.feature.perspective_transform_lafs(src_homo_dst, lafs_dst)
+    
+        # projected should be equal as initial
+>       self.assert_close(lafs_src, lafs_dst_to_src)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py:622: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:106: in assert_close
+    return assert_close(actual, expected, rtol=rtol, atol=atol)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+actual = tensor([[[[0.2271, 0.8072, 0.2157],
+          [0.8672, 0.0612, 0.0685]],
+
+         [[0.8942, 0.8161, 0.0572],
+          [0.3932, 0.0428, 0.0154]]]])
+expected = tensor([[[[-0.9832, -0.5841,  1.0273],
+          [-0.1827,  0.8117,  0.1236]],
+
+         [[-0.7724,  0.2176,  0.7336],
+          [ 0.6352,  0.9760, -0.5684]]]])
+rtol = 0.0001, atol = 1e-05, kwargs = {}
+
+    def assert_close(
+        actual: Tensor, expected: Tensor, *, rtol: Optional[float] = None, atol: Optional[float] = None, **kwargs: Any
+    ) -> None:
+        if rtol is None and atol is None:
+            # `torch.testing.assert_close` used different default tolerances than `torch.testing.assert_allclose`.
+            # TODO: remove this special handling as soon as https://github.com/kornia/kornia/issues/1134 is resolved
+            #  Basically, this whole wrapper function can be removed and `torch.testing.assert_close` can be used
+            #  directly.
+            rtol, atol = _default_tolerances(actual, expected)
+    
+>       return _assert_close(
+            actual,
+            expected,
+            rtol=rtol,
+            atol=atol,
+            # this is the default value for torch>=1.10, but not for torch==1.9
+            # TODO: remove this if kornia relies on torch>=1.10
+            check_stride=False,
+            equal_nan=False,
+            **kwargs,
+        )
+E       AssertionError: Tensor-likes are not close!
+E       
+E       Mismatched elements: 12 / 12 (100.0%)
+E       Greatest absolute difference: 1.6665596961975098 at index (0, 1, 0, 0) (up to 1e-05 allowed)
+E       Greatest relative difference: 5.746419906616211 at index (0, 0, 1, 0) (up to 0.0001 allowed)
+
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:37: AssertionError
+___________ TestTransformLAFs.test_transform_points[cpu-float32-2-2] ___________
+
+self = <test_laf.TestTransformLAFs object at 0x70231732feb0>, batch_size = 2
+num_points = 2, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 5])
+    @pytest.mark.parametrize("num_points", [2, 3, 5])
+    def test_transform_points(self, batch_size, num_points, device, dtype):
+        # generate input data
+        eye_size = 3
+        lafs_src = torch.rand(batch_size, num_points, 2, 3, device=device, dtype=dtype)
+    
+        dst_homo_src = create_random_homography(lafs_src, eye_size)
+        # transform the points from dst to ref
+        lafs_dst = kornia.feature.perspective_transform_lafs(dst_homo_src, lafs_src)
+    
+        # transform the points from ref to dst
+        src_homo_dst = torch.inverse(dst_homo_src)
+        lafs_dst_to_src = kornia.feature.perspective_transform_lafs(src_homo_dst, lafs_dst)
+    
+        # projected should be equal as initial
+>       self.assert_close(lafs_src, lafs_dst_to_src)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py:622: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:106: in assert_close
+    return assert_close(actual, expected, rtol=rtol, atol=atol)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+actual = tensor([[[[0.1036, 0.5896, 0.0181],
+          [0.8324, 0.3613, 0.3322]],
+
+         [[0.7944, 0.2034, 0.4557],
+        ...0921],
+          [0.0673, 0.4361, 0.1519]],
+
+         [[0.1263, 0.4597, 0.2998],
+          [0.8848, 0.3476, 0.9752]]]])
+expected = tensor([[[[-0.9430, -0.7181,  0.8390],
+          [-0.3327,  0.6960,  0.4693]],
+
+         [[-0.2142,  0.6948,  0.5561],...        [-0.7318, -0.4877,  0.7070]],
+
+         [[-0.9787, -0.5273,  0.9537],
+          [-0.2052,  0.8497,  1.0098]]]])
+rtol = 0.0001, atol = 1e-05, kwargs = {}
+
+    def assert_close(
+        actual: Tensor, expected: Tensor, *, rtol: Optional[float] = None, atol: Optional[float] = None, **kwargs: Any
+    ) -> None:
+        if rtol is None and atol is None:
+            # `torch.testing.assert_close` used different default tolerances than `torch.testing.assert_allclose`.
+            # TODO: remove this special handling as soon as https://github.com/kornia/kornia/issues/1134 is resolved
+            #  Basically, this whole wrapper function can be removed and `torch.testing.assert_close` can be used
+            #  directly.
+            rtol, atol = _default_tolerances(actual, expected)
+    
+>       return _assert_close(
+            actual,
+            expected,
+            rtol=rtol,
+            atol=atol,
+            # this is the default value for torch>=1.10, but not for torch==1.9
+            # TODO: remove this if kornia relies on torch>=1.10
+            check_stride=False,
+            equal_nan=False,
+            **kwargs,
+        )
+E       AssertionError: Tensor-likes are not close!
+E       
+E       Mismatched elements: 24 / 24 (100.0%)
+E       Greatest absolute difference: 1.6394531726837158 at index (0, 1, 1, 1) (up to 1e-05 allowed)
+E       Greatest relative difference: 5.311126708984375 at index (1, 1, 1, 0) (up to 0.0001 allowed)
+
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:37: AssertionError
+___________ TestTransformLAFs.test_transform_points[cpu-float32-2-5] ___________
+
+self = <test_laf.TestTransformLAFs object at 0x702317368070>, batch_size = 5
+num_points = 2, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 5])
+    @pytest.mark.parametrize("num_points", [2, 3, 5])
+    def test_transform_points(self, batch_size, num_points, device, dtype):
+        # generate input data
+        eye_size = 3
+        lafs_src = torch.rand(batch_size, num_points, 2, 3, device=device, dtype=dtype)
+    
+        dst_homo_src = create_random_homography(lafs_src, eye_size)
+        # transform the points from dst to ref
+        lafs_dst = kornia.feature.perspective_transform_lafs(dst_homo_src, lafs_src)
+    
+        # transform the points from ref to dst
+        src_homo_dst = torch.inverse(dst_homo_src)
+        lafs_dst_to_src = kornia.feature.perspective_transform_lafs(src_homo_dst, lafs_dst)
+    
+        # projected should be equal as initial
+>       self.assert_close(lafs_src, lafs_dst_to_src)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py:622: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:106: in assert_close
+    return assert_close(actual, expected, rtol=rtol, atol=atol)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+actual = tensor([[[[0.9457, 0.8272, 0.1078],
+          [0.6891, 0.2734, 0.7173]],
+
+         [[0.1239, 0.4992, 0.6765],
+        ...0212],
+          [0.6095, 0.9319, 0.0111]],
+
+         [[0.9747, 0.1946, 0.7795],
+          [0.8670, 0.7212, 0.6403]]]])
+expected = tensor([[[[-0.8202,  0.2743,  0.7788],
+          [ 0.5720,  0.9616,  0.4428]],
+
+         [[-0.9444, -0.7232,  1.5244],...        [-0.8858, -0.7612,  1.3807]],
+
+         [[ 0.4411,  0.9830,  0.7728],
+          [-0.8975,  0.1837,  1.3239]]]])
+rtol = 0.0001, atol = 1e-05, kwargs = {}
+
+    def assert_close(
+        actual: Tensor, expected: Tensor, *, rtol: Optional[float] = None, atol: Optional[float] = None, **kwargs: Any
+    ) -> None:
+        if rtol is None and atol is None:
+            # `torch.testing.assert_close` used different default tolerances than `torch.testing.assert_allclose`.
+            # TODO: remove this special handling as soon as https://github.com/kornia/kornia/issues/1134 is resolved
+            #  Basically, this whole wrapper function can be removed and `torch.testing.assert_close` can be used
+            #  directly.
+            rtol, atol = _default_tolerances(actual, expected)
+    
+>       return _assert_close(
+            actual,
+            expected,
+            rtol=rtol,
+            atol=atol,
+            # this is the default value for torch>=1.10, but not for torch==1.9
+            # TODO: remove this if kornia relies on torch>=1.10
+            check_stride=False,
+            equal_nan=False,
+            **kwargs,
+        )
+E       AssertionError: Tensor-likes are not close!
+E       
+E       Mismatched elements: 60 / 60 (100.0%)
+E       Greatest absolute difference: 1.7659883499145508 at index (0, 0, 0, 0) (up to 1e-05 allowed)
+E       Greatest relative difference: 6.584591865539551 at index (3, 1, 0, 1) (up to 0.0001 allowed)
+
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:37: AssertionError
+___________ TestTransformLAFs.test_transform_points[cpu-float32-3-1] ___________
+
+self = <test_laf.TestTransformLAFs object at 0x7023173684f0>, batch_size = 1
+num_points = 3, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 5])
+    @pytest.mark.parametrize("num_points", [2, 3, 5])
+    def test_transform_points(self, batch_size, num_points, device, dtype):
+        # generate input data
+        eye_size = 3
+        lafs_src = torch.rand(batch_size, num_points, 2, 3, device=device, dtype=dtype)
+    
+        dst_homo_src = create_random_homography(lafs_src, eye_size)
+        # transform the points from dst to ref
+        lafs_dst = kornia.feature.perspective_transform_lafs(dst_homo_src, lafs_src)
+    
+        # transform the points from ref to dst
+        src_homo_dst = torch.inverse(dst_homo_src)
+        lafs_dst_to_src = kornia.feature.perspective_transform_lafs(src_homo_dst, lafs_dst)
+    
+        # projected should be equal as initial
+>       self.assert_close(lafs_src, lafs_dst_to_src)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py:622: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:106: in assert_close
+    return assert_close(actual, expected, rtol=rtol, atol=atol)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+actual = tensor([[[[0.7642, 0.6260, 0.0522],
+          [0.6363, 0.2699, 0.9620]],
+
+         [[0.0117, 0.6076, 0.9233],
+          [0.1444, 0.0407, 0.8724]],
+
+         [[0.6483, 0.5363, 0.2280],
+          [0.3708, 0.1477, 0.5174]]]])
+expected = tensor([[[[-0.8155,  0.3527,  0.4640],
+          [ 0.5788,  0.9357,  0.6637]],
+
+         [[-0.7909, -0.9852,  1.9200],
+          [-0.6119,  0.1714,  0.8455]],
+
+         [[-0.7268,  0.4485,  0.4281],
+          [ 0.6868,  0.8938, -0.0051]]]])
+rtol = 0.0001, atol = 1e-05, kwargs = {}
+
+    def assert_close(
+        actual: Tensor, expected: Tensor, *, rtol: Optional[float] = None, atol: Optional[float] = None, **kwargs: Any
+    ) -> None:
+        if rtol is None and atol is None:
+            # `torch.testing.assert_close` used different default tolerances than `torch.testing.assert_allclose`.
+            # TODO: remove this special handling as soon as https://github.com/kornia/kornia/issues/1134 is resolved
+            #  Basically, this whole wrapper function can be removed and `torch.testing.assert_close` can be used
+            #  directly.
+            rtol, atol = _default_tolerances(actual, expected)
+    
+>       return _assert_close(
+            actual,
+            expected,
+            rtol=rtol,
+            atol=atol,
+            # this is the default value for torch>=1.10, but not for torch==1.9
+            # TODO: remove this if kornia relies on torch>=1.10
+            check_stride=False,
+            equal_nan=False,
+            **kwargs,
+        )
+E       AssertionError: Tensor-likes are not close!
+E       
+E       Mismatched elements: 18 / 18 (100.0%)
+E       Greatest absolute difference: 1.592785358428955 at index (0, 1, 0, 1) (up to 1e-05 allowed)
+E       Greatest relative difference: 102.10687255859375 at index (0, 2, 1, 2) (up to 0.0001 allowed)
+
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:37: AssertionError
+___________ TestTransformLAFs.test_transform_points[cpu-float32-3-2] ___________
+
+self = <test_laf.TestTransformLAFs object at 0x7023173685b0>, batch_size = 2
+num_points = 3, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 5])
+    @pytest.mark.parametrize("num_points", [2, 3, 5])
+    def test_transform_points(self, batch_size, num_points, device, dtype):
+        # generate input data
+        eye_size = 3
+        lafs_src = torch.rand(batch_size, num_points, 2, 3, device=device, dtype=dtype)
+    
+        dst_homo_src = create_random_homography(lafs_src, eye_size)
+        # transform the points from dst to ref
+        lafs_dst = kornia.feature.perspective_transform_lafs(dst_homo_src, lafs_src)
+    
+        # transform the points from ref to dst
+        src_homo_dst = torch.inverse(dst_homo_src)
+        lafs_dst_to_src = kornia.feature.perspective_transform_lafs(src_homo_dst, lafs_dst)
+    
+        # projected should be equal as initial
+>       self.assert_close(lafs_src, lafs_dst_to_src)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py:622: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:106: in assert_close
+    return assert_close(actual, expected, rtol=rtol, atol=atol)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+actual = tensor([[[[0.3192, 0.4877, 0.6427],
+          [0.5901, 0.1276, 0.5696]],
+
+         [[0.9885, 0.5253, 0.8294],
+        ...1402],
+          [0.2760, 0.4144, 0.3462]],
+
+         [[0.6791, 0.1136, 0.8870],
+          [0.8504, 0.0684, 0.0799]]]])
+expected = tensor([[[[-0.9975, -0.3424,  1.3039],
+          [ 0.0709,  0.9396,  0.2210]],
+
+         [[-0.6201,  0.7143,  1.1024],...        [-0.6716, -0.1591,  0.7812]],
+
+         [[-0.7962,  0.5859,  0.9809],
+          [ 0.6050,  0.8104,  0.1210]]]])
+rtol = 0.0001, atol = 1e-05, kwargs = {}
+
+    def assert_close(
+        actual: Tensor, expected: Tensor, *, rtol: Optional[float] = None, atol: Optional[float] = None, **kwargs: Any
+    ) -> None:
+        if rtol is None and atol is None:
+            # `torch.testing.assert_close` used different default tolerances than `torch.testing.assert_allclose`.
+            # TODO: remove this special handling as soon as https://github.com/kornia/kornia/issues/1134 is resolved
+            #  Basically, this whole wrapper function can be removed and `torch.testing.assert_close` can be used
+            #  directly.
+            rtol, atol = _default_tolerances(actual, expected)
+    
+>       return _assert_close(
+            actual,
+            expected,
+            rtol=rtol,
+            atol=atol,
+            # this is the default value for torch>=1.10, but not for torch==1.9
+            # TODO: remove this if kornia relies on torch>=1.10
+            check_stride=False,
+            equal_nan=False,
+            **kwargs,
+        )
+E       AssertionError: Tensor-likes are not close!
+E       
+E       Mismatched elements: 36 / 36 (100.0%)
+E       Greatest absolute difference: 1.9192724227905273 at index (1, 1, 0, 1) (up to 1e-05 allowed)
+E       Greatest relative difference: 7.323858737945557 at index (0, 0, 1, 0) (up to 0.0001 allowed)
+
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:37: AssertionError
+___________ TestTransformLAFs.test_transform_points[cpu-float32-3-5] ___________
+
+self = <test_laf.TestTransformLAFs object at 0x702317368670>, batch_size = 5
+num_points = 3, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 5])
+    @pytest.mark.parametrize("num_points", [2, 3, 5])
+    def test_transform_points(self, batch_size, num_points, device, dtype):
+        # generate input data
+        eye_size = 3
+        lafs_src = torch.rand(batch_size, num_points, 2, 3, device=device, dtype=dtype)
+    
+        dst_homo_src = create_random_homography(lafs_src, eye_size)
+        # transform the points from dst to ref
+        lafs_dst = kornia.feature.perspective_transform_lafs(dst_homo_src, lafs_src)
+    
+        # transform the points from ref to dst
+        src_homo_dst = torch.inverse(dst_homo_src)
+        lafs_dst_to_src = kornia.feature.perspective_transform_lafs(src_homo_dst, lafs_dst)
+    
+        # projected should be equal as initial
+>       self.assert_close(lafs_src, lafs_dst_to_src)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py:622: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:106: in assert_close
+    return assert_close(actual, expected, rtol=rtol, atol=atol)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+actual = tensor([[[[0.0729, 0.6356, 0.1753],
+          [0.6863, 0.1315, 0.5731]],
+
+         [[0.4720, 0.9749, 0.7866],
+        ...6602],
+          [0.8683, 0.2944, 0.3992]],
+
+         [[0.5100, 0.4301, 0.0585],
+          [0.6017, 0.3408, 0.5969]]]])
+expected = tensor([[[[-0.9413, -0.7121,  0.9609],
+          [-0.3376,  0.7021,  0.5567]],
+
+         [[-0.9958, -0.6414,  1.9001],...        [ 0.0661,  0.9994,  0.2695]],
+
+         [[-0.8778,  0.2926,  0.2763],
+          [ 0.4790,  0.9562,  0.2439]]]])
+rtol = 0.0001, atol = 1e-05, kwargs = {}
+
+    def assert_close(
+        actual: Tensor, expected: Tensor, *, rtol: Optional[float] = None, atol: Optional[float] = None, **kwargs: Any
+    ) -> None:
+        if rtol is None and atol is None:
+            # `torch.testing.assert_close` used different default tolerances than `torch.testing.assert_allclose`.
+            # TODO: remove this special handling as soon as https://github.com/kornia/kornia/issues/1134 is resolved
+            #  Basically, this whole wrapper function can be removed and `torch.testing.assert_close` can be used
+            #  directly.
+            rtol, atol = _default_tolerances(actual, expected)
+    
+>       return _assert_close(
+            actual,
+            expected,
+            rtol=rtol,
+            atol=atol,
+            # this is the default value for torch>=1.10, but not for torch==1.9
+            # TODO: remove this if kornia relies on torch>=1.10
+            check_stride=False,
+            equal_nan=False,
+            **kwargs,
+        )
+E       AssertionError: Tensor-likes are not close!
+E       
+E       Mismatched elements: 90 / 90 (100.0%)
+E       Greatest absolute difference: 1.9832077026367188 at index (2, 0, 0, 1) (up to 1e-05 allowed)
+E       Greatest relative difference: 31.470699310302734 at index (0, 2, 1, 1) (up to 0.0001 allowed)
+
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:37: AssertionError
+___________ TestTransformLAFs.test_transform_points[cpu-float32-5-1] ___________
+
+self = <test_laf.TestTransformLAFs object at 0x702317368730>, batch_size = 1
+num_points = 5, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 5])
+    @pytest.mark.parametrize("num_points", [2, 3, 5])
+    def test_transform_points(self, batch_size, num_points, device, dtype):
+        # generate input data
+        eye_size = 3
+        lafs_src = torch.rand(batch_size, num_points, 2, 3, device=device, dtype=dtype)
+    
+        dst_homo_src = create_random_homography(lafs_src, eye_size)
+        # transform the points from dst to ref
+        lafs_dst = kornia.feature.perspective_transform_lafs(dst_homo_src, lafs_src)
+    
+        # transform the points from ref to dst
+        src_homo_dst = torch.inverse(dst_homo_src)
+        lafs_dst_to_src = kornia.feature.perspective_transform_lafs(src_homo_dst, lafs_dst)
+    
+        # projected should be equal as initial
+>       self.assert_close(lafs_src, lafs_dst_to_src)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py:622: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:106: in assert_close
+    return assert_close(actual, expected, rtol=rtol, atol=atol)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+actual = tensor([[[[0.0639, 0.9068, 0.8086],
+          [0.4998, 0.6015, 0.1276]],
+
+         [[0.1804, 0.5068, 0.1445],
+        ...6484],
+          [0.0997, 0.2387, 0.3196]],
+
+         [[0.8963, 0.7213, 0.8806],
+          [0.2548, 0.4306, 0.4774]]]])
+expected = tensor([[[[-0.7089, -0.9928,  1.8625],
+          [-0.7053, -0.1198,  0.7469]],
+
+         [[-0.9773, -0.5924,  0.9168],...        [-0.8011, -0.9885,  1.4064]],
+
+         [[-0.2520,  0.7054,  1.0728],
+          [-0.9677, -0.7088,  1.4397]]]])
+rtol = 0.0001, atol = 1e-05, kwargs = {}
+
+    def assert_close(
+        actual: Tensor, expected: Tensor, *, rtol: Optional[float] = None, atol: Optional[float] = None, **kwargs: Any
+    ) -> None:
+        if rtol is None and atol is None:
+            # `torch.testing.assert_close` used different default tolerances than `torch.testing.assert_allclose`.
+            # TODO: remove this special handling as soon as https://github.com/kornia/kornia/issues/1134 is resolved
+            #  Basically, this whole wrapper function can be removed and `torch.testing.assert_close` can be used
+            #  directly.
+            rtol, atol = _default_tolerances(actual, expected)
+    
+>       return _assert_close(
+            actual,
+            expected,
+            rtol=rtol,
+            atol=atol,
+            # this is the default value for torch>=1.10, but not for torch==1.9
+            # TODO: remove this if kornia relies on torch>=1.10
+            check_stride=False,
+            equal_nan=False,
+            **kwargs,
+        )
+E       AssertionError: Tensor-likes are not close!
+E       
+E       Mismatched elements: 30 / 30 (100.0%)
+E       Greatest absolute difference: 1.8996230363845825 at index (0, 0, 0, 1) (up to 1e-05 allowed)
+E       Greatest relative difference: 6.020185947418213 at index (0, 0, 1, 1) (up to 0.0001 allowed)
+
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:37: AssertionError
+___________ TestTransformLAFs.test_transform_points[cpu-float32-5-2] ___________
+
+self = <test_laf.TestTransformLAFs object at 0x7023173687f0>, batch_size = 2
+num_points = 5, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 5])
+    @pytest.mark.parametrize("num_points", [2, 3, 5])
+    def test_transform_points(self, batch_size, num_points, device, dtype):
+        # generate input data
+        eye_size = 3
+        lafs_src = torch.rand(batch_size, num_points, 2, 3, device=device, dtype=dtype)
+    
+        dst_homo_src = create_random_homography(lafs_src, eye_size)
+        # transform the points from dst to ref
+        lafs_dst = kornia.feature.perspective_transform_lafs(dst_homo_src, lafs_src)
+    
+        # transform the points from ref to dst
+        src_homo_dst = torch.inverse(dst_homo_src)
+        lafs_dst_to_src = kornia.feature.perspective_transform_lafs(src_homo_dst, lafs_dst)
+    
+        # projected should be equal as initial
+>       self.assert_close(lafs_src, lafs_dst_to_src)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py:622: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:106: in assert_close
+    return assert_close(actual, expected, rtol=rtol, atol=atol)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+actual = tensor([[[[0.3886, 0.8796, 0.3475],
+          [0.3374, 0.4872, 0.7885]],
+
+         [[0.8586, 0.9379, 0.2887],
+        ...5809],
+          [0.7332, 0.6428, 0.1183]],
+
+         [[0.5049, 0.3829, 0.4337],
+          [0.5024, 0.3195, 0.4831]]]])
+expected = tensor([[[[-0.8750, -0.9565,  1.6932],
+          [-0.4841, -0.2917,  1.4178]],
+
+         [[-0.9515, -0.0876,  1.2349],...        [-0.3058,  0.4113,  0.4404]],
+
+         [[-0.7723,  0.5549,  0.3832],
+          [ 0.6352,  0.8319,  0.1529]]]])
+rtol = 0.0001, atol = 1e-05, kwargs = {}
+
+    def assert_close(
+        actual: Tensor, expected: Tensor, *, rtol: Optional[float] = None, atol: Optional[float] = None, **kwargs: Any
+    ) -> None:
+        if rtol is None and atol is None:
+            # `torch.testing.assert_close` used different default tolerances than `torch.testing.assert_allclose`.
+            # TODO: remove this special handling as soon as https://github.com/kornia/kornia/issues/1134 is resolved
+            #  Basically, this whole wrapper function can be removed and `torch.testing.assert_close` can be used
+            #  directly.
+            rtol, atol = _default_tolerances(actual, expected)
+    
+>       return _assert_close(
+            actual,
+            expected,
+            rtol=rtol,
+            atol=atol,
+            # this is the default value for torch>=1.10, but not for torch==1.9
+            # TODO: remove this if kornia relies on torch>=1.10
+            check_stride=False,
+            equal_nan=False,
+            **kwargs,
+        )
+E       AssertionError: Tensor-likes are not close!
+E       
+E       Mismatched elements: 60 / 60 (100.0%)
+E       Greatest absolute difference: 1.9421982765197754 at index (1, 2, 1, 1) (up to 1e-05 allowed)
+E       Greatest relative difference: 119.77532196044922 at index (1, 2, 0, 1) (up to 0.0001 allowed)
+
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:37: AssertionError
+___________ TestTransformLAFs.test_transform_points[cpu-float32-5-5] ___________
+
+self = <test_laf.TestTransformLAFs object at 0x7023173688b0>, batch_size = 5
+num_points = 5, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 5])
+    @pytest.mark.parametrize("num_points", [2, 3, 5])
+    def test_transform_points(self, batch_size, num_points, device, dtype):
+        # generate input data
+        eye_size = 3
+        lafs_src = torch.rand(batch_size, num_points, 2, 3, device=device, dtype=dtype)
+    
+        dst_homo_src = create_random_homography(lafs_src, eye_size)
+        # transform the points from dst to ref
+        lafs_dst = kornia.feature.perspective_transform_lafs(dst_homo_src, lafs_src)
+    
+        # transform the points from ref to dst
+        src_homo_dst = torch.inverse(dst_homo_src)
+        lafs_dst_to_src = kornia.feature.perspective_transform_lafs(src_homo_dst, lafs_dst)
+    
+        # projected should be equal as initial
+>       self.assert_close(lafs_src, lafs_dst_to_src)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py:622: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:106: in assert_close
+    return assert_close(actual, expected, rtol=rtol, atol=atol)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+actual = tensor([[[[0.4724, 0.6754, 0.0142],
+          [0.8178, 0.8883, 0.1404]],
+
+         [[0.2166, 0.7293, 0.8647],
+        ...9820],
+          [0.6052, 0.9523, 0.9515]],
+
+         [[0.4771, 0.3939, 0.6001],
+          [0.4698, 0.0318, 0.1823]]]])
+expected = tensor([[[[-0.7710, -0.9447,  1.4332],
+          [-0.6368, -0.3281,  1.2869]],
+
+         [[-0.9286, -0.8550,  1.9385],...        [-0.7383, -0.4188,  1.9754]],
+
+         [[-0.8821,  0.1866,  0.8907],
+          [ 0.4711,  0.9824, -0.3294]]]])
+rtol = 0.0001, atol = 1e-05, kwargs = {}
+
+    def assert_close(
+        actual: Tensor, expected: Tensor, *, rtol: Optional[float] = None, atol: Optional[float] = None, **kwargs: Any
+    ) -> None:
+        if rtol is None and atol is None:
+            # `torch.testing.assert_close` used different default tolerances than `torch.testing.assert_allclose`.
+            # TODO: remove this special handling as soon as https://github.com/kornia/kornia/issues/1134 is resolved
+            #  Basically, this whole wrapper function can be removed and `torch.testing.assert_close` can be used
+            #  directly.
+            rtol, atol = _default_tolerances(actual, expected)
+    
+>       return _assert_close(
+            actual,
+            expected,
+            rtol=rtol,
+            atol=atol,
+            # this is the default value for torch>=1.10, but not for torch==1.9
+            # TODO: remove this if kornia relies on torch>=1.10
+            check_stride=False,
+            equal_nan=False,
+            **kwargs,
+        )
+E       AssertionError: Tensor-likes are not close!
+E       
+E       Mismatched elements: 150 / 150 (100.0%)
+E       Greatest absolute difference: 1.875643253326416 at index (4, 3, 0, 1) (up to 1e-05 allowed)
+E       Greatest relative difference: 17.53429412841797 at index (2, 0, 0, 0) (up to 0.0001 allowed)
+
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:37: AssertionError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-2-1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-2-2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-2-5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-3-1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-3-2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-3-5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-5-1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-5-2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-5-5]
+============================== 9 failed in 0.42s ===============================
+
+
+Final Test Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'inductor', 'tvm', 'onnxrt', 'jit', 'cudagraphs', 'openxla', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 9 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-2-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-2-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-2-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-3-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-3-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-3-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-5-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-5-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-5-5] PASSED
+
+============================== 9 passed in 0.17s ===============================
+
+
+Initial Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'jit', 'tvm', 'cudagraphs', 'onnxrt', 'openxla', 'inductor', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 9 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-2-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-2-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-2-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-3-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-3-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-3-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-5-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-5-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestTransformLAFs::test_transform_points[cpu-float32-5-5] PASSED
+
+============================== 9 passed in 0.18s ===============================

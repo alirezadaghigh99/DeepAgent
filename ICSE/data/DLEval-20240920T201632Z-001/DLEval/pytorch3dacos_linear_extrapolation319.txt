@@ -1,0 +1,46 @@
+stage: Inference
+task: 
+data: 
+
+prompt:
+Create a Python function named acos_linear_extrapolation that computes the arccosine of a tensor, with linear extrapolation applied outside the domain 
+(
+−
+1
+,
+1
+)
+(−1,1) for stable backpropagation. The function should take a tensor x and a tuple bounds representing the lower and upper bounds for the extrapolation region. If the value of x is within the bounds, the function should return the standard arccos(x) value. If x is outside the bounds, it should apply a first-order Taylor approximation for extrapolation. The function should validate that the bounds are within the valid range 
+(
+−
+1
+,
+1
+)
+(−1,1) and that the lower bound is less than or equal to the upper bound. The function returns a tensor containing the computed values.
+
+Inputs:
+
+x (torch.Tensor): The input tensor for which to compute the arccosine.
+bounds (Tuple[float, float]): A tuple containing the lower and upper bounds for the linear extrapolation.
+Outputs:
+
+Returns a tensor containing the extrapolated arccos(x) values.
+Error Handling:
+
+Raise a ValueError if the bounds are outside the range 
+(
+−
+1
+,
+1
+)
+(−1,1) or if the lower bound is greater than the upper bound.
+
+ ground Truth:pytorch3d/transforms/math.py
+
+ repo:pytorch3d
+
+ function:acos_linear_extrapolation
+ 
+ test_cases:tests/test_acos_linear_extrapolation.py

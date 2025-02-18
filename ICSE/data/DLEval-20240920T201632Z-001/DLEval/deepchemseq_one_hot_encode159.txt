@@ -1,0 +1,34 @@
+stage: Pre-Post processing
+task: 
+data: Text
+
+prompt:
+Create a Python function called seq_one_hot_encode that One hot encodes list of genomic sequences.
+
+    Sequences encoded have shape (N_sequences, N_letters, sequence_length, 1).
+    These sequences will be processed as images with one color channel.
+
+    Parameters
+    ----------
+    sequences: np.ndarray or Iterator[Bio.SeqRecord]
+        Iterable object of genetic sequences
+    letters: str, optional (default "ATCGN")
+        String with the set of possible letters in the sequences.
+
+    Raises
+    ------
+    ValueError:
+        If sequences are of different lengths.
+
+    Returns
+    -------
+    np.ndarray
+        A numpy array of shape `(N_sequences, N_letters, sequence_length, 1)`.
+
+ ground Truth:deepchem/utils/genomics_utils.py
+
+ repo:deepchem
+
+ function:seq_one_hot_encode
+ 
+ test_cases:deepchem/utils/test/test_genomics_utils.py

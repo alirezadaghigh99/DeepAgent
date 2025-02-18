@@ -1,0 +1,72 @@
+stage: Image
+task: 
+data: pre-post process
+
+prompt:
+Complete the compute_projection_matrix function for DepthWarper class.It Computes the projection matrix from the source to destination frame.if not isinstance(self._pinhole_dst, PinholeCamera):
+            raise TypeError(
+                f"Member self._pinhole_dst expected to be of class PinholeCamera. Got {type(self._pinhole_dst)}"
+            )
+        if not isinstance(pinhole_src, PinholeCamera):
+            raise TypeError(f"Argument pinhole_src expected to be of class PinholeCamera. Got {type(pinhole_src)}")
+        
+class DepthWarper(Module):
+    r"""Warp a patch by depth.
+
+    .. math::
+        P_{src}^{\{dst\}} = K_{dst} * T_{src}^{\{dst\}}
+
+        I_{src} = \\omega(I_{dst}, P_{src}^{\{dst\}}, D_{src})
+
+    Args:
+        pinholes_dst: the pinhole models for the destination frame.
+        height: the height of the image to warp.
+        width: the width of the image to warp.
+        mode: interpolation mode to calculate output values ``'bilinear'`` | ``'nearest'``.
+        padding_mode: padding mode for outside grid values ``'zeros'`` | ``'border'`` | ``'reflection'``.
+        align_corners: interpolation flag.
+    """
+
+    def __init__(
+        self,
+        pinhole_dst: PinholeCamera,
+        height: int,
+        width: int,
+        mode: str = "bilinear",
+        padding_mode: str = "zeros",
+        align_corners: bool = True,
+    ) -> None:
+        super().__init__()
+        # constructor members
+        self.width: int = width
+        self.height: int = height
+        self.mode: str = mode
+        self.padding_mode: str = padding_mode
+        self.eps = 1e-6
+        self.align_corners: bool = align_corners
+
+        # state members
+        self._pinhole_dst: PinholeCamera = pinhole_dst
+        self._pinhole_src: None | PinholeCamera = None
+        self._dst_proj_src: None | Tensor = None
+
+        self.grid: Tensor = self._create_meshgrid(height, width)
+
+    @staticmethod
+    def _create_meshgrid(height: int, width: int) -> Tensor:
+        grid: Tensor = create_meshgrid(height, width, normalized_coordinates=False)  # 1xHxWx2
+        return convert_points_to_homogeneous(grid)  # append ones to last dim
+
+    def compute_projection_matrix(self, pinhole_src: PinholeCamera) -> DepthWarper:
+        r"""Compute the projection matrix from the source to destination frame."""
+
+ ground Truth:kornia/geometry/depth.py
+
+ repo:kornia
+
+ function:compute_projection_matrix
+ 
+ test_cases:tests/geometry/test_depth_wrapper.py
+ 
+ class:DepthWarper
+ 

@@ -1,0 +1,11 @@
+{
+    "result": "Here's a Python function called `get_available_cpu_count` that meets your requirements:\n\n```python\nimport os\nimport multiprocessing\n\ndef get_available_cpu_count(logical: bool = True) -> int:\n    \"\"\"\n    Returns the number of CPUs in the system.\n\n    Args:\n        logical (bool): If True, returns the number of logical cores.\n                        If False, returns the number of physical cores.\n\n    Returns:\n        int: Number of CPUs. Returns 1 if an exception occurs.\n    \"\"\"\n    try:\n        if logical:\n            return multiprocessing.cpu_count()\n        else:\n            # Attempt to get the number of physical cores\n            if hasattr(os, 'cpu_count'):\n                return os.cpu_count() // 2  # Assuming hyperthreading, divide by 2\n            else:\n                raise NotImplementedError(\"Physical core count not available on this platform.\")\n    except Exception as e:\n        print(f\"An error occurred: {e}\")\n        return 1\n```\n\n### Explanation:\n- **Logical Cores**: If `logical` is `True`, the function uses `multiprocessing.cpu_count()` to return the number of logical cores.\n- **Physical Cores**: If `logical` is `False`, the function attempts to calculate the number of physical cores by assuming hyperthreading (i.e., dividing the logical core count by 2). This is a simple heuristic and may not be accurate on all systems.\n- **Exception Handling**: If any exception occurs, the function prints an error message and returns `1` as a fallback.",
+    "prompt": "Generate a python function called get_available_cpu_count that returns the number of CPUs in the system. The input parameter is a boolean called logical, which determines whether to return the number of physical cores only (if False) or the number of logical cores (if True). The output is an integer representing the number of CPUs. If an exception occurs, the function will return 1. Default value of logical is True",
+    "function_name": "get_available_cpu_count",
+    "ground_truth": "nncf/common/utils/os.py",
+    "test": "tests/common/utils/test_os.py",
+    "class": "",
+    "stage": "Pre-Post processing",
+    "task": "",
+    "data": ""
+}

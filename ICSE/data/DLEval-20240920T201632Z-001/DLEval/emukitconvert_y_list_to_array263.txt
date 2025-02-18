@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: Prediction
+data: 
+
+prompt:
+Create a Python function called convert_y_list_to_array that takes in a list called y_list containing numpy arrays representing outputs. The function will convert the list representation of outputs to an array representation by concatenating all the arrays along axis 0. The output will be a single numpy array containing all the outputs. raise value error of All y arrays must have 2 dimensions
+
+ ground Truth:emukit/multi_fidelity/convert_lists_to_array.py
+
+ repo:emukit
+
+ function:convert_y_list_to_array
+ 
+ test_cases:tests/emukit/multi_fidelity/test_convert_list_to_array.py

@@ -1,0 +1,11 @@
+{
+    "result": "Here's the implementation of the `get_num_labels` function based on the steps you outlined:\n\n```python\nimport numpy as np\nfrom scipy.sparse import csr_matrix\n\ndef get_num_labels(y):\n    # Check if the shape of y is 0\n    if np.size(y) == 0:\n        raise ValueError(\"Invalid labeling: Cannot contain 0 labels\")\n    \n    # Check if y is an instance of csr_matrix\n    if isinstance(y, csr_matrix):\n        # Return the maximum index value plus 1\n        return y.indices.max() + 1\n    else:\n        # Return the maximum value in y plus 1\n        return np.max(y) + 1\n```\n\n### Explanation:\n\n1. **Check the Shape of `y`:**\n   - We use `np.size(y)` to determine if `y` is empty. If it is, a `ValueError` is raised.\n\n2. **Determine the Type of `y`:**\n   - We check if `y` is an instance of `csr_matrix` using `isinstance(y, csr_matrix)`.\n\n3. **Calculate the Number of Labels:**\n   - If `y` is a `csr_matrix`, we use `y.indices.max() + 1` to find the number of labels.\n   - If `y` is not a `csr_matrix`, we assume it is a dense array-like structure and use `np.max(y) + 1`.\n\n4. **Return the Result:**\n   - The function returns the calculated number of labels based on the type and content of `y`.\n\nThis function is designed to handle both sparse and dense data structures, ensuring it can compute the number of labels correctly in either case. If `y` is empty, it raises an appropriate error to prevent invalid operations.",
+    "prompt": "Generate a Python function called get_num_labels that takes in a parameter y. If the shape of y is 0, it will raise a ValueError with the message 'Invalid labeling: Cannot contain 0 labels'. If y is an instance of csr_matrix, the function will return the maximum value of y's indices plus 1. Otherwise, it will return the maximum value of y plus 1.",
+    "function_name": "get_num_labels",
+    "ground_truth": "small_text/utils/labels.py",
+    "test": "tests/unit/small_text/utils/test_labels.py::LabelUtilsTest",
+    "class": "",
+    "stage": "Pre-Post processing",
+    "task": "Classification",
+    "data": "Text"
+}

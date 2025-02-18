@@ -1,0 +1,409 @@
+output file:
+processed_neurodiffeqgrad378.json
+function:
+grad
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py::test_spherical_grad FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py::test_spherical_laplacian', 'FAILED ../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py::test_spherical_vector_laplacian', 'FAILED ../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py::test_spherical_grad', '../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py::test_spherical_vector_laplacian FAILED', '../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py::test_spherical_curl FAILED', '../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py::test_spherical_laplacian FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py::test_spherical_curl'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq
+collecting ... collected 7 items
+
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py::test_cartesian_to_spherical PASSED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py::test_spherical_to_cartesian PASSED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py::test_spherical_div PASSED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py::test_spherical_grad FAILED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py::test_spherical_curl FAILED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py::test_spherical_laplacian FAILED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py::test_spherical_vector_laplacian FAILED
+
+=================================== FAILURES ===================================
+_____________________________ test_spherical_grad ______________________________
+
+u = tensor([[-0.0316],
+        [ 0.3237],
+        [ 0.3707],
+        ...,
+        [ 0.0876],
+        [ 0.1346],
+        [-0.2396]], device='cuda:0', grad_fn=<SumBackward1>)
+x = [tensor([[8.6354],
+        [6.8025],
+        [7.9052],
+        ...,
+        [9.9504],
+        [6.5367],
+        [6.651...2.2253],
+        ...,
+        [1.0793],
+        [5.1581],
+        [0.5152]], device='cuda:0', grad_fn=<ViewBackward0>)]
+
+    def test_spherical_grad(u, x):
+>       out_r, out_theta, out_phi = spherical_grad(u, *x)
+
+/local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py:90: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+u = tensor([[-0.0316],
+        [ 0.3237],
+        [ 0.3707],
+        ...,
+        [ 0.0876],
+        [ 0.1346],
+        [-0.2396]], device='cuda:0', grad_fn=<SumBackward1>)
+r = tensor([[8.6354],
+        [6.8025],
+        [7.9052],
+        ...,
+        [9.9504],
+        [6.5367],
+        [6.6515]], device='cuda:0', grad_fn=<ViewBackward0>)
+theta = tensor([[0.8327],
+        [1.2507],
+        [1.1044],
+        ...,
+        [2.2792],
+        [2.2440],
+        [0.7296]], device='cuda:0', grad_fn=<ViewBackward0>)
+phi = tensor([[3.8376],
+        [1.9136],
+        [2.2253],
+        ...,
+        [1.0793],
+        [5.1581],
+        [0.5152]], device='cuda:0', grad_fn=<ViewBackward0>)
+
+    def spherical_grad(u, r, theta, phi):
+        """Derives and evaluates the spherical gradient of a spherical scalar field :math:`u`.
+    
+        :param u: A scalar field :math:`u`, must have shape (n_samples, 1).
+        :type u: `torch.Tensor`
+        :param r: A vector of :math:`r`-coordinate values, must have shape (n_samples, 1).
+        :type r: `torch.Tensor`
+        :param theta: A vector of :math:`\\theta`-coordinate values, must have shape (n_samples, 1).
+        :type theta: `torch.Tensor`
+        :param phi: A vector of :math:`\\phi`-coordinate values, must have shape (n_samples, 1).
+        :type phi: `torch.Tensor`
+        :return: The :math:`r`, :math:`\\theta`, and :math:`\\phi` components of the gradient, each with shape (n_samples, 1).
+        :rtype: tuple[`torch.Tensor`]
+        """
+>       u_dr, u_dth, u_dph = grad(u, r, theta, phi)
+E       ValueError: not enough values to unpack (expected 3, got 0)
+
+/local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/neurodiffeq/operators.py:154: ValueError
+_____________________________ test_spherical_curl ______________________________
+
+U = (tensor([[-0.0316],
+        [ 0.3237],
+        [ 0.3707],
+        ...,
+        [ 0.0876],
+        [ 0.1346],
+        [...[0.2008],
+        ...,
+        [0.0214],
+        [0.0573],
+        [0.1373]], device='cuda:0', grad_fn=<SumBackward1>))
+x = [tensor([[8.6354],
+        [6.8025],
+        [7.9052],
+        ...,
+        [9.9504],
+        [6.5367],
+        [6.651...2.2253],
+        ...,
+        [1.0793],
+        [5.1581],
+        [0.5152]], device='cuda:0', grad_fn=<ViewBackward0>)]
+
+    def test_spherical_curl(U, x):
+>       out_r, out_theta, out_phi = spherical_curl(*U, *x)
+
+/local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py:98: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+u_r = tensor([[-0.0316],
+        [ 0.3237],
+        [ 0.3707],
+        ...,
+        [ 0.0876],
+        [ 0.1346],
+        [-0.2396]], device='cuda:0', grad_fn=<SumBackward1>)
+u_theta = tensor([[ 0.6070],
+        [-0.1155],
+        [ 0.2308],
+        ...,
+        [ 0.2248],
+        [ 0.1242],
+        [ 0.4098]], device='cuda:0', grad_fn=<SumBackward1>)
+u_phi = tensor([[0.1762],
+        [0.1311],
+        [0.2008],
+        ...,
+        [0.0214],
+        [0.0573],
+        [0.1373]], device='cuda:0', grad_fn=<SumBackward1>)
+r = tensor([[8.6354],
+        [6.8025],
+        [7.9052],
+        ...,
+        [9.9504],
+        [6.5367],
+        [6.6515]], device='cuda:0', grad_fn=<ViewBackward0>)
+theta = tensor([[0.8327],
+        [1.2507],
+        [1.1044],
+        ...,
+        [2.2792],
+        [2.2440],
+        [0.7296]], device='cuda:0', grad_fn=<ViewBackward0>)
+phi = tensor([[3.8376],
+        [1.9136],
+        [2.2253],
+        ...,
+        [1.0793],
+        [5.1581],
+        [0.5152]], device='cuda:0', grad_fn=<ViewBackward0>)
+
+    def spherical_curl(u_r, u_theta, u_phi, r, theta, phi):
+        """Derives and evaluates the spherical curl of a spherical vector field :math:`u`.
+    
+        :param u_r: The :math:`r`-component of the vector field :math:`u`, must have shape (n_samples, 1).
+        :type u_r: `torch.Tensor`
+        :param u_theta: The :math:`\\theta`-component of the vector field :math:`u`, must have shape (n_samples, 1).
+        :type u_theta: `torch.Tensor`
+        :param u_phi: The :math:`\\phi`-component of the vector field :math:`u`, must have shape (n_samples, 1).
+        :type u_phi: `torch.Tensor`
+        :param r: A vector of :math:`r`-coordinate values, must have shape (n_samples, 1).
+        :type r: `torch.Tensor`
+        :param theta: A vector of :math:`\\theta`-coordinate values, must have shape (n_samples, 1).
+        :type theta: `torch.Tensor`
+        :param phi: A vector of :math:`\\phi`-coordinate values, must have shape (n_samples, 1).
+        :type phi: `torch.Tensor`
+        :return: The :math:`r`, :math:`\\theta`, and :math:`\\phi` components of the curl, each with shape (n_samples, 1).
+        :rtype: tuple[`torch.Tensor`]
+        """
+>       ur_dth, ur_dph = grad(u_r, theta, phi)
+E       ValueError: not enough values to unpack (expected 2, got 0)
+
+/local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/neurodiffeq/operators.py:130: ValueError
+___________________________ test_spherical_laplacian ___________________________
+
+u = tensor([[-0.0316],
+        [ 0.3237],
+        [ 0.3707],
+        ...,
+        [ 0.0876],
+        [ 0.1346],
+        [-0.2396]], device='cuda:0', grad_fn=<SumBackward1>)
+x = [tensor([[8.6354],
+        [6.8025],
+        [7.9052],
+        ...,
+        [9.9504],
+        [6.5367],
+        [6.651...2.2253],
+        ...,
+        [1.0793],
+        [5.1581],
+        [0.5152]], device='cuda:0', grad_fn=<ViewBackward0>)]
+
+    def test_spherical_laplacian(u, x):
+>       out = spherical_laplacian(u, *x)
+
+/local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py:107: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+u = tensor([[-0.0316],
+        [ 0.3237],
+        [ 0.3707],
+        ...,
+        [ 0.0876],
+        [ 0.1346],
+        [-0.2396]], device='cuda:0', grad_fn=<SumBackward1>)
+r = tensor([[8.6354],
+        [6.8025],
+        [7.9052],
+        ...,
+        [9.9504],
+        [6.5367],
+        [6.6515]], device='cuda:0', grad_fn=<ViewBackward0>)
+theta = tensor([[0.8327],
+        [1.2507],
+        [1.1044],
+        ...,
+        [2.2792],
+        [2.2440],
+        [0.7296]], device='cuda:0', grad_fn=<ViewBackward0>)
+phi = tensor([[3.8376],
+        [1.9136],
+        [2.2253],
+        ...,
+        [1.0793],
+        [5.1581],
+        [0.5152]], device='cuda:0', grad_fn=<ViewBackward0>)
+
+    def spherical_laplacian(u, r, theta, phi):
+        """Derives and evaluates the spherical laplacian of a spherical scalar field :math:`u`.
+    
+        :param u: A scalar field :math:`u`, must have shape (n_samples, 1).
+        :type u: `torch.Tensor`
+        :param r: A vector of :math:`r`-coordinate values, must have shape (n_samples, 1).
+        :type r: `torch.Tensor`
+        :param theta: A vector of :math:`\\theta`-coordinate values, must have shape (n_samples, 1).
+        :type theta: `torch.Tensor`
+        :param phi: A vector of :math:`\\phi`-coordinate values, must have shape (n_samples, 1).
+        :type phi: `torch.Tensor`
+        :return: The laplacian evaluated at :math:`(r, \\theta, \\phi)`, with shape (n_samples, 1).
+        :rtype: `torch.Tensor`
+        """
+>       u_dr, u_dth, u_dph = grad(u, r, theta, phi)
+E       ValueError: not enough values to unpack (expected 3, got 0)
+
+/local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/neurodiffeq/operators.py:193: ValueError
+_______________________ test_spherical_vector_laplacian ________________________
+
+U = (tensor([[-0.0316],
+        [ 0.3237],
+        [ 0.3707],
+        ...,
+        [ 0.0876],
+        [ 0.1346],
+        [...[0.2008],
+        ...,
+        [0.0214],
+        [0.0573],
+        [0.1373]], device='cuda:0', grad_fn=<SumBackward1>))
+x = [tensor([[8.6354],
+        [6.8025],
+        [7.9052],
+        ...,
+        [9.9504],
+        [6.5367],
+        [6.651...2.2253],
+        ...,
+        [1.0793],
+        [5.1581],
+        [0.5152]], device='cuda:0', grad_fn=<ViewBackward0>)]
+
+    def test_spherical_vector_laplacian(U, x):
+>       out_r, out_theta, out_phi = spherical_vector_laplacian(*U, *x)
+
+/local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py:118: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+u_r = tensor([[-0.0316],
+        [ 0.3237],
+        [ 0.3707],
+        ...,
+        [ 0.0876],
+        [ 0.1346],
+        [-0.2396]], device='cuda:0', grad_fn=<SumBackward1>)
+u_theta = tensor([[ 0.6070],
+        [-0.1155],
+        [ 0.2308],
+        ...,
+        [ 0.2248],
+        [ 0.1242],
+        [ 0.4098]], device='cuda:0', grad_fn=<SumBackward1>)
+u_phi = tensor([[0.1762],
+        [0.1311],
+        [0.2008],
+        ...,
+        [0.0214],
+        [0.0573],
+        [0.1373]], device='cuda:0', grad_fn=<SumBackward1>)
+r = tensor([[8.6354],
+        [6.8025],
+        [7.9052],
+        ...,
+        [9.9504],
+        [6.5367],
+        [6.6515]], device='cuda:0', grad_fn=<ViewBackward0>)
+theta = tensor([[0.8327],
+        [1.2507],
+        [1.1044],
+        ...,
+        [2.2792],
+        [2.2440],
+        [0.7296]], device='cuda:0', grad_fn=<ViewBackward0>)
+phi = tensor([[3.8376],
+        [1.9136],
+        [2.2253],
+        ...,
+        [1.0793],
+        [5.1581],
+        [0.5152]], device='cuda:0', grad_fn=<ViewBackward0>)
+
+    def spherical_vector_laplacian(u_r, u_theta, u_phi, r, theta, phi):
+        """Derives and evaluates the spherical laplacian of a spherical vector field :math:`u`.
+    
+        :param u_r: The :math:`r`-component of the vector field :math:`u`, must have shape (n_samples, 1).
+        :type u_r: `torch.Tensor`
+        :param u_theta: The :math:`\\theta`-component of the vector field :math:`u`, must have shape (n_samples, 1).
+        :type u_theta: `torch.Tensor`
+        :param u_phi: The :math:`\\phi`-component of the vector field :math:`u`, must have shape (n_samples, 1).
+        :type u_phi: `torch.Tensor`
+        :param r: A vector of :math:`r`-coordinate values, must have shape (n_samples, 1).
+        :type r: `torch.Tensor`
+        :param theta: A vector of :math:`\\theta`-coordinate values, must have shape (n_samples, 1).
+        :type theta: `torch.Tensor`
+        :param phi: A vector of :math:`\\phi`-coordinate values, must have shape (n_samples, 1).
+        :type phi: `torch.Tensor`
+        :return: The laplacian evaluated at :math:`(r, \\theta, \\phi)`, with shape (n_samples, 1).
+        :rtype: `torch.Tensor`
+        """
+>       ur_dr, ur_dth, ur_dph = grad(u_r, r, theta, phi)
+E       ValueError: not enough values to unpack (expected 3, got 0)
+
+/local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/neurodiffeq/operators.py:216: ValueError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py::test_spherical_grad
+FAILED ../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py::test_spherical_curl
+FAILED ../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py::test_spherical_laplacian
+FAILED ../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py::test_spherical_vector_laplacian
+========================= 4 failed, 3 passed in 2.69s ==========================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq
+collecting ... collected 7 items
+
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py::test_cartesian_to_spherical PASSED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py::test_spherical_to_cartesian PASSED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py::test_spherical_div PASSED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py::test_spherical_grad PASSED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py::test_spherical_curl PASSED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py::test_spherical_laplacian PASSED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py::test_spherical_vector_laplacian PASSED
+
+============================== 7 passed in 2.26s ===============================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq
+collecting ... collected 7 items
+
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py::test_cartesian_to_spherical PASSED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py::test_spherical_to_cartesian PASSED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py::test_spherical_div PASSED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py::test_spherical_grad PASSED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py::test_spherical_curl PASSED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py::test_spherical_laplacian PASSED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_operators_spherical.py::test_spherical_vector_laplacian PASSED
+
+============================== 7 passed in 16.68s ==============================

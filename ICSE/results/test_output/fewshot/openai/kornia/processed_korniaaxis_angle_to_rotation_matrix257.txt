@@ -1,0 +1,307 @@
+output file:
+processed_korniaaxis_angle_to_rotation_matrix257.json
+function:
+axis_angle_to_rotation_matrix
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestAngleAxisToRotationMatrix::test_axis_angle_to_rotation_matrix[cpu-float32] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestAngleAxisToRotationMatrix::test_rand_axis_angle_gradcheck[cpu-float32-2] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestAngleAxisToRotationMatrix::test_axis_angle_to_rotation_matrix[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestAngleAxisToRotationMatrix::test_rand_axis_angle_gradcheck[cpu-float32-5] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestAngleAxisToRotationMatrix::test_rand_axis_angle_gradcheck[cpu-float32-2]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestAngleAxisToRotationMatrix::test_rand_axis_angle_gradcheck[cpu-float32-5]'}
+
+All Test Cases On Generated code:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'openxla', 'tvm', 'jit', 'cudagraphs', 'onnxrt', 'inductor', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 4 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestAngleAxisToRotationMatrix::test_rand_axis_angle_gradcheck[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestAngleAxisToRotationMatrix::test_rand_axis_angle_gradcheck[cpu-float32-2] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestAngleAxisToRotationMatrix::test_rand_axis_angle_gradcheck[cpu-float32-5] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestAngleAxisToRotationMatrix::test_axis_angle_to_rotation_matrix[cpu-float32] FAILED
+
+=================================== FAILURES ===================================
+_ TestAngleAxisToRotationMatrix.test_rand_axis_angle_gradcheck[cpu-float32-2] __
+
+self = <tests.geometry.test_conversions.TestAngleAxisToRotationMatrix object at 0x7313f47589d0>
+batch_size = 2, device = device(type='cpu'), atol = 0.0001, rtol = 0.0001
+
+    @pytest.mark.parametrize("batch_size", (1, 2, 5))
+    def test_rand_axis_angle_gradcheck(self, batch_size, device, atol, rtol):
+        dtype = torch.float64
+        # generate input data
+        axis_angle = torch.rand(batch_size, 3, device=device, dtype=dtype)
+        eye_batch = eye_like(3, axis_angle)
+    
+        # apply transform
+>       rotation_matrix = kornia.geometry.conversions.axis_angle_to_rotation_matrix(axis_angle)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py:425: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/conversions.py:192: in axis_angle_to_rotation_matrix
+    return axis_angle_to_rotation_matrix(axis_angle)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+axis_angle = tensor([[0.1709, 0.4186, 0.8135],
+        [0.9336, 0.9829, 0.3725]], dtype=torch.float64)
+
+    def axis_angle_to_rotation_matrix(axis_angle: torch.Tensor) -> torch.Tensor:
+        """
+        Convert 3D vector of axis-angle rotation to 3x3 rotation matrix.
+    
+        Args:
+            axis_angle: Tensor of 3D vector of axis-angle rotations in radians with shape (N, 3).
+    
+        Returns:
+            Tensor of rotation matrices of shape (N, 3, 3).
+        """
+        if not isinstance(axis_angle, torch.Tensor):
+            raise TypeError('Input must be a torch.Tensor')
+        N = axis_angle.shape[0]
+        rotation_matrices = torch.zeros((N, 3, 3), dtype=axis_angle.dtype, device=axis_angle.device)
+        angles = torch.norm(axis_angle, dim=1, keepdim=True)
+        angles = torch.where(angles == 0, torch.ones_like(angles), angles)
+        axis = axis_angle / angles
+        cos_theta = torch.cos(angles)
+        sin_theta = torch.sin(angles)
+        one_minus_cos_theta = 1 - cos_theta
+        x, y, z = (axis[:, 0], axis[:, 1], axis[:, 2])
+>       rotation_matrices[:, 0, 0] = cos_theta + x * x * one_minus_cos_theta
+E       RuntimeError: expand(torch.DoubleTensor{[2, 2]}, size=[2]): the number of sizes provided (1) must be greater or equal to the number of dimensions in the tensor (2)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/temp.py:33: RuntimeError
+_ TestAngleAxisToRotationMatrix.test_rand_axis_angle_gradcheck[cpu-float32-5] __
+
+self = <tests.geometry.test_conversions.TestAngleAxisToRotationMatrix object at 0x7313f4758cd0>
+batch_size = 5, device = device(type='cpu'), atol = 0.0001, rtol = 0.0001
+
+    @pytest.mark.parametrize("batch_size", (1, 2, 5))
+    def test_rand_axis_angle_gradcheck(self, batch_size, device, atol, rtol):
+        dtype = torch.float64
+        # generate input data
+        axis_angle = torch.rand(batch_size, 3, device=device, dtype=dtype)
+        eye_batch = eye_like(3, axis_angle)
+    
+        # apply transform
+>       rotation_matrix = kornia.geometry.conversions.axis_angle_to_rotation_matrix(axis_angle)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py:425: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/conversions.py:192: in axis_angle_to_rotation_matrix
+    return axis_angle_to_rotation_matrix(axis_angle)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+axis_angle = tensor([[0.2414, 0.7734, 0.0325],
+        [0.1570, 0.2522, 0.1899],
+        [0.3931, 0.2160, 0.9919],
+        [0.2849, 0.8968, 0.0344],
+        [0.6236, 0.5337, 0.4131]], dtype=torch.float64)
+
+    def axis_angle_to_rotation_matrix(axis_angle: torch.Tensor) -> torch.Tensor:
+        """
+        Convert 3D vector of axis-angle rotation to 3x3 rotation matrix.
+    
+        Args:
+            axis_angle: Tensor of 3D vector of axis-angle rotations in radians with shape (N, 3).
+    
+        Returns:
+            Tensor of rotation matrices of shape (N, 3, 3).
+        """
+        if not isinstance(axis_angle, torch.Tensor):
+            raise TypeError('Input must be a torch.Tensor')
+        N = axis_angle.shape[0]
+        rotation_matrices = torch.zeros((N, 3, 3), dtype=axis_angle.dtype, device=axis_angle.device)
+        angles = torch.norm(axis_angle, dim=1, keepdim=True)
+        angles = torch.where(angles == 0, torch.ones_like(angles), angles)
+        axis = axis_angle / angles
+        cos_theta = torch.cos(angles)
+        sin_theta = torch.sin(angles)
+        one_minus_cos_theta = 1 - cos_theta
+        x, y, z = (axis[:, 0], axis[:, 1], axis[:, 2])
+>       rotation_matrices[:, 0, 0] = cos_theta + x * x * one_minus_cos_theta
+E       RuntimeError: expand(torch.DoubleTensor{[5, 5]}, size=[5]): the number of sizes provided (1) must be greater or equal to the number of dimensions in the tensor (2)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/temp.py:33: RuntimeError
+_ TestAngleAxisToRotationMatrix.test_axis_angle_to_rotation_matrix[cpu-float32] _
+
+self = <tests.geometry.test_conversions.TestAngleAxisToRotationMatrix object at 0x7313f4759000>
+device = device(type='cpu'), dtype = torch.float32, atol = 0.0001, rtol = 0.0001
+
+    def test_axis_angle_to_rotation_matrix(self, device, dtype, atol, rtol):
+        rmat_1 = torch.tensor(
+            (
+                (-0.30382753, -0.95095137, -0.05814062),
+                (-0.71581715, 0.26812278, -0.64476041),
+                (0.62872461, -0.15427791, -0.76217038),
+            ),
+            device=device,
+            dtype=dtype,
+        )
+        rvec_1 = torch.tensor((1.50485376, -2.10737739, 0.7214174), device=device, dtype=dtype)
+    
+        rmat_2 = torch.tensor(
+            (
+                (0.6027768, -0.79275544, -0.09054801),
+                (-0.67915707, -0.56931658, 0.46327563),
+                (-0.41881476, -0.21775548, -0.88157628),
+            ),
+            device=device,
+            dtype=dtype,
+        )
+        rvec_2 = torch.tensor((-2.44916812, 1.18053411, 0.4085298), device=device, dtype=dtype)
+        rmat = torch.stack((rmat_2, rmat_1), dim=0)
+        rvec = torch.stack((rvec_2, rvec_1), dim=0)
+    
+>       self.assert_close(kornia.geometry.conversions.axis_angle_to_rotation_matrix(rvec), rmat, atol=atol, rtol=rtol)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py:458: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/conversions.py:192: in axis_angle_to_rotation_matrix
+    return axis_angle_to_rotation_matrix(axis_angle)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+axis_angle = tensor([[-2.4492,  1.1805,  0.4085],
+        [ 1.5049, -2.1074,  0.7214]])
+
+    def axis_angle_to_rotation_matrix(axis_angle: torch.Tensor) -> torch.Tensor:
+        """
+        Convert 3D vector of axis-angle rotation to 3x3 rotation matrix.
+    
+        Args:
+            axis_angle: Tensor of 3D vector of axis-angle rotations in radians with shape (N, 3).
+    
+        Returns:
+            Tensor of rotation matrices of shape (N, 3, 3).
+        """
+        if not isinstance(axis_angle, torch.Tensor):
+            raise TypeError('Input must be a torch.Tensor')
+        N = axis_angle.shape[0]
+        rotation_matrices = torch.zeros((N, 3, 3), dtype=axis_angle.dtype, device=axis_angle.device)
+        angles = torch.norm(axis_angle, dim=1, keepdim=True)
+        angles = torch.where(angles == 0, torch.ones_like(angles), angles)
+        axis = axis_angle / angles
+        cos_theta = torch.cos(angles)
+        sin_theta = torch.sin(angles)
+        one_minus_cos_theta = 1 - cos_theta
+        x, y, z = (axis[:, 0], axis[:, 1], axis[:, 2])
+>       rotation_matrices[:, 0, 0] = cos_theta + x * x * one_minus_cos_theta
+E       RuntimeError: expand(torch.FloatTensor{[2, 2]}, size=[2]): the number of sizes provided (1) must be greater or equal to the number of dimensions in the tensor (2)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/temp.py:33: RuntimeError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestAngleAxisToRotationMatrix::test_rand_axis_angle_gradcheck[cpu-float32-2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestAngleAxisToRotationMatrix::test_rand_axis_angle_gradcheck[cpu-float32-5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestAngleAxisToRotationMatrix::test_axis_angle_to_rotation_matrix[cpu-float32]
+========================= 3 failed, 1 passed in 0.39s ==========================
+
+
+Final Test Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'jit', 'tvm', 'openxla', 'onnxrt', 'inductor', None, 'cudagraphs'}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 4 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestAngleAxisToRotationMatrix::test_rand_axis_angle_gradcheck[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestAngleAxisToRotationMatrix::test_rand_axis_angle_gradcheck[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestAngleAxisToRotationMatrix::test_rand_axis_angle_gradcheck[cpu-float32-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestAngleAxisToRotationMatrix::test_axis_angle_to_rotation_matrix[cpu-float32] PASSED
+
+============================== 4 passed in 0.17s ===============================
+
+
+Initial Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'inductor', 'tvm', 'onnxrt', 'cudagraphs', 'openxla', 'jit', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 4 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestAngleAxisToRotationMatrix::test_rand_axis_angle_gradcheck[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestAngleAxisToRotationMatrix::test_rand_axis_angle_gradcheck[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestAngleAxisToRotationMatrix::test_rand_axis_angle_gradcheck[cpu-float32-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/test_conversions.py::TestAngleAxisToRotationMatrix::test_axis_angle_to_rotation_matrix[cpu-float32] PASSED
+
+============================== 4 passed in 0.18s ===============================

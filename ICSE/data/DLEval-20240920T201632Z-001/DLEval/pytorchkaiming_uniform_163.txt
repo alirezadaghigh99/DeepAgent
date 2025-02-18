@@ -1,0 +1,14 @@
+stage: Model Construction
+task: 
+data: 
+
+prompt:
+Generate a Python function called kaiming_uniform_ that fills a given n-dimensional torch.Tensor with values sampled from a Kaiming uniform distribution. The function takes in the tensor, a negative slope parameter (a), a mode parameter (fan_in or fan_out), a nonlinearity parameter (relu or leaky_relu), and an optional torch Generator. The resulting tensor will have values sampled from a uniform distribution with bounds calculated based on the gain and fan mode.
+
+ ground Truth:torch/nn/init.py
+
+ repo:pytorch
+
+ function:kaiming_uniform_
+
+ test_cases:test/nn/test_init.py::TestNNInit

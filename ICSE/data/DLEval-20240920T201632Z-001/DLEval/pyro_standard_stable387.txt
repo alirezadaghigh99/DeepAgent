@@ -1,0 +1,15 @@
+stage: Pre-Post processing
+task: 
+data: Table
+
+prompt:
+
+Write a Python function `_standard_stable` that transforms two random variables `aux_uniform` (tensor) and `aux_exponential` (tensor) into a standard `Stable(alpha, beta)` random variable. The function takes `alpha` (float or tensor), `beta` (float or tensor), `aux_uniform` (tensor), `aux_exponential` (tensor), and `coords` (string). If `alpha` is near 1 (within a predefined `RADIUS`), interpolate between two points using a hole workaround, and if `coords == "S"`, return the result for `coords == "S0"` with a correction. Otherwise, directly call `_unsafe_standard_stable`. Raise errors if the `coords` is unknown, and return a tensor as the output.
+
+ ground Truth:pyro/distributions/stable.py
+
+ repo:pyro
+
+ function:_standard_stable
+ 
+ test_cases:tests/distributions/test_stable.py

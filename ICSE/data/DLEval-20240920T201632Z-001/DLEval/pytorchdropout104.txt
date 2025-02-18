@@ -1,0 +1,14 @@
+stage: Training
+task: 
+data: 
+
+prompt:
+Generate a Python function called dropout that applies dropout to a tensor during training. The function takes in an input tensor, a probability value p (default 0.5), a boolean value training (default True), and a boolean value inplace (default False). The function randomly zeroes some elements of the input tensor with the specified probability using samples from a Bernoulli distribution. If training is set to True, dropout is applied. If inplace is set to True, the operation is done in-place. The function returns the modified tensor after applying dropout. If the probability value p is not between 0 and 1, a ValueError is raised.
+
+ ground Truth:torch/nn/functional.py
+
+ repo:pytorch
+
+ function:dropout
+ 
+ test_cases:test/nn/test_dropout.py

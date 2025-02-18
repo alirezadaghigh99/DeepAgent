@@ -1,0 +1,29 @@
+stage: Image
+task: 
+data: Training
+
+prompt:
+Generate a Python method `forward` for the `DiceLoss` class that computes the Sørensen-Dice Coefficient loss for multi-class segmentation tasks. The method should take as input the predicted scores `pred` and the ground truth labels `target`, and return the computed Dice loss. The method should support two reduction methods: `'micro'` (calculates the loss across all classes) and `'macro'` (calculates the loss for each class separately and averages the loss across classes). The loss should also include options for numerical stability with `eps` and class weighting with `weight`.
+
+Class structure:
+
+```python
+class DiceLoss(nn.Module):
+    def __init__(self, average: str = "micro", eps: float = 1e-8, weight: Optional[Tensor] = None) -> None:
+        self.average = average
+        self.eps = eps
+        self.weight = weight
+
+    def forward(self, pred: Tensor, target: Tensor) -> Tensor:
+        # Implement the function as described in the prompt
+```
+
+ ground Truth:kornia/losses/dice.py
+
+ repo:kornia
+
+ function:forward
+ 
+ class:DiceLoss
+ 
+ test_cases:tests/losses/test_dice.py

@@ -1,0 +1,26 @@
+stage: Inference
+task: Prediction
+data: Image
+
+prompt:
+"Write a python function projections_from_fundamental that Get the projection matrices from the Fundamental Matrix.
+
+    Args:
+       F_mat: the fundamental matrix with the shape :math:`(B, 3, 3)`. -> Tensor
+
+    Returns:
+        The projection matrices with shape :math:`(B, 3, 4, 2)`. -> Tensor
+    if len(F_mat.shape) != 3:
+        raise AssertionError(F_mat.shape)
+    if F_mat.shape[-2:] != (3, 3):
+        raise AssertionError(F_mat.shape)
+"
+
+
+ ground Truth:kornia/geometry/epipolar/projection.py#L179
+
+ repo:kornia
+
+ function:projections_from_fundamental
+ 
+ test_cases:tests/geometry/epipolar/test_projection.py::TestProjectionsFromFundamental

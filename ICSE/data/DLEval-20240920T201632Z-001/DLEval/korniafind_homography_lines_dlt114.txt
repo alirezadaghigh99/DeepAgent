@@ -1,0 +1,14 @@
+stage: Model Construction
+task: 
+data: Image
+
+prompt:
+Generate a Python function called find_homography_lines_dlt that computes the homography matrix using the DLT formulation for line correspondences. The function takes in two sets of line segments ls1 and ls2 with tensor shapes (B, N, 2, 2), and an optional tensor of weights per point correspondence with shape (B, N). The function returns the computed homography matrix with shape (B, 3, 3) after solving the linear system using the Weighted Least Squares Solution for the 4 Line correspondences algorithm.
+
+ ground Truth:kornia/geometry/homography.py
+
+ repo:kornia
+
+ function:find_homography_lines_dlt
+ 
+ test_cases:tests/geometry/test_homography.py::TestFindHomographyFromLinesDLT

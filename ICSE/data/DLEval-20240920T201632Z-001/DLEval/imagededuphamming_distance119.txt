@@ -1,0 +1,14 @@
+stage: Model Construction
+task: 
+data: 
+
+prompt:
+Create a Python function called hamming_distance that calculates the Hamming distance between two hash strings. The function takes two input parameters, hash1 and hash2, both of type string. The function returns a float value representing the Hamming distance between the two hashes. If the length of the hashes is not 64 bits, the function pads the length to be 64 for each hash before calculating the Hamming distance. The output is the calculated Hamming distance between the two hashes.
+
+ ground Truth:imagededup/methods/hashing.py
+
+ repo:imagededup
+
+ function:hamming_distance
+ 
+ test_cases:tests/test_hashing.py

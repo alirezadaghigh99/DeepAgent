@@ -1,0 +1,11 @@
+{
+    "result": "Certainly! Below is a Python function called `box_area` that computes the area of a set of bounding boxes specified by their (x1, y1, x2, y2) coordinates. The function takes a tensor of shape (N, 4) as input and returns a tensor of shape (N) containing the area for each box.\n\n```python\nimport torch\n\ndef box_area(boxes: torch.Tensor) -> torch.Tensor:\n    \"\"\"\n    Computes the area of a set of bounding boxes.\n\n    Args:\n        boxes (Tensor): A tensor of shape (N, 4) where N is the number of boxes.\n                        Each box is represented by (x1, y1, x2, y2) coordinates.\n\n    Returns:\n        Tensor: A tensor of shape (N) containing the area for each box.\n    \"\"\"\n    # Ensure the input is a tensor\n    if not isinstance(boxes, torch.Tensor):\n        raise TypeError(\"Input boxes must be a torch.Tensor\")\n\n    # Check the shape of the input tensor\n    if boxes.ndim != 2 or boxes.shape[1] != 4:\n        raise ValueError(\"Input boxes must have shape (N, 4)\")\n\n    # Calculate the width and height of each box\n    widths = boxes[:, 2] - boxes[:, 0]\n    heights = boxes[:, 3] - boxes[:, 1]\n\n    # Calculate the area of each box\n    areas = widths * heights\n\n    return areas\n```\n\n### Explanation:\n- **Input Validation**: The function first checks if the input is a tensor and if it has the correct shape (N, 4).\n- **Width and Height Calculation**: The width of each box is calculated as `x2 - x1`, and the height is calculated as `y2 - y1`.\n- **Area Calculation**: The area of each box is computed as the product of its width and height.\n- **Return**: The function returns a tensor containing the area for each bounding box.",
+    "prompt": "Generate a Python function called box_area that computes the area of a set of bounding boxes specified by their (x1, y1, x2, y2) coordinates. The input is a tensor of shape (N, 4) called boxes, where N is the number of boxes. The boxes are expected to be in (x1, y1, x2, y2) format with 0 <= x1 < x2 and 0 <= y1 < y2. The function returns a tensor of shape (N) containing the area for each box.",
+    "function_name": "box_area",
+    "ground_truth": "torchvision/ops/boxes.py",
+    "test": "test/test_ops.py::TestRoIAlign",
+    "class": "",
+    "stage": "Inference",
+    "task": "Detection",
+    "data": "Image"
+}

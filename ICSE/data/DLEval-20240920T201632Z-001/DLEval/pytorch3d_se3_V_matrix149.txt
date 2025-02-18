@@ -1,0 +1,22 @@
+stage: Model Construction
+task: 
+data: 
+
+prompt:
+Create a Python function `_se3_V_matrix` that computes the "V" matrix used in SE(3) transformations. The function should accept:
+
+- `log_rotation` (torch.Tensor): The logarithm of the rotation matrix.
+- `log_rotation_hat` (torch.Tensor): The skew-symmetric matrix derived from `log_rotation`.
+- `log_rotation_hat_square` (torch.Tensor): The square of the skew-symmetric matrix.
+- `rotation_angles` (torch.Tensor): The angles of rotation.
+- `eps` (float, optional): A small value for numerical stability, defaulting to 1e-4.
+
+The function returns a tensor `V` calculated using the provided inputs. Handle tensor operations carefully to ensure compatibility with PyTorch, particularly when working with trigonometric functions and tensor dimensions.
+
+ ground Truth:pytorch3d/transforms/se3.py
+
+ repo:pytorch3d
+
+ function:_se3_V_matrix
+ 
+ test_cases:tests/test_se3.py

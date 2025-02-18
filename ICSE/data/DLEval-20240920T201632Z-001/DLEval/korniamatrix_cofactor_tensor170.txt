@@ -1,0 +1,22 @@
+stage: Model Construction
+task: 
+data: 
+
+prompt:
+Create a Python function `matrix_cofactor_tensor` that:
+
+- Computes the cofactor matrix for a given tensor of matrices with shape `(*, 3, 3)`.
+- Accepts a single parameter:
+  - `matrix`: A tensor of shape `(*, 3, 3)` representing the input matrices.
+- Returns a tensor containing the cofactor matrices of the input matrices.
+
+Errors:
+- Raises an `Exception` if all input matrices are singular (i.e., their determinants are zero).
+
+ ground Truth:kornia/geometry/epipolar/numeric.py#L31
+
+ repo:kornia
+
+ function:matrix_cofactor_tensor
+ 
+ test_cases:tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD

@@ -1,0 +1,190 @@
+output file:
+processed_korniaKORNIA_CHECK_LAF188.json
+function:
+KORNIA_CHECK_LAF
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/core/test_check.py::TestCheckLaf::test_invalid_raises_false FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/core/test_check.py::TestCheckLaf::test_invalid_raises_false', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/core/test_check.py::TestCheckLaf::test_valid FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/core/test_check.py::TestCheckLaf::test_valid'}
+
+All Test Cases On Generated code:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'tvm', 'inductor', 'openxla', 'onnxrt', 'jit', 'cudagraphs', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 3 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/core/test_check.py::TestCheckLaf::test_valid FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/core/test_check.py::TestCheckLaf::test_invalid PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/core/test_check.py::TestCheckLaf::test_invalid_raises_false FAILED
+
+=================================== FAILURES ===================================
+___________________________ TestCheckLaf.test_valid ____________________________
+
+self = <test_check.TestCheckLaf object at 0x74546ff1d9f0>
+
+    def test_valid(self):
+>       assert KORNIA_CHECK_LAF(torch.rand(4, 2, 2, 3)) is True
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/core/test_check.py:253: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+laf = tensor([[[[0.8546, 0.0641, 0.5962],
+          [0.7283, 0.1527, 0.7111]],
+
+         [[0.0096, 0.8357, 0.9887],
+        ...3146],
+          [0.2375, 0.3535, 0.4096]],
+
+         [[0.1289, 0.3255, 0.8206],
+          [0.5911, 0.3297, 0.8091]]]])
+raises = True
+
+    def KORNIA_CHECK_LAF(laf: Tensor, raises: bool=True) -> bool:
+>       from .temp import KORNIA_CHECK_LAF
+E       ImportError: cannot import name 'KORNIA_CHECK_LAF' from 'kornia.core.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/check.py:360: ImportError
+____________________ TestCheckLaf.test_invalid_raises_false ____________________
+
+self = <test_check.TestCheckLaf object at 0x74546ff1dd50>
+
+    def test_invalid_raises_false(self):
+>       assert KORNIA_CHECK_LAF(torch.rand(4, 2, 2), raises=False) is False
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/core/test_check.py:266: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+laf = tensor([[[0.4787, 0.2587],
+         [0.2920, 0.4966]],
+
+        [[0.6311, 0.8030],
+         [0.9614, 0.8089]],
+
+        [[0.7766, 0.4170],
+         [0.0378, 0.9757]],
+
+        [[0.6021, 0.5445],
+         [0.4983, 0.6608]]])
+raises = False
+
+    def KORNIA_CHECK_LAF(laf: Tensor, raises: bool=True) -> bool:
+>       from .temp import KORNIA_CHECK_LAF
+E       ImportError: cannot import name 'KORNIA_CHECK_LAF' from 'kornia.core.temp' (/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/temp.py)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/check.py:360: ImportError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/core/test_check.py::TestCheckLaf::test_valid
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/core/test_check.py::TestCheckLaf::test_invalid_raises_false
+========================= 2 failed, 1 passed in 0.38s ==========================
+
+
+Final Test Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'cudagraphs', 'openxla', 'tvm', 'jit', None, 'onnxrt', 'inductor'}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 3 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/core/test_check.py::TestCheckLaf::test_valid PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/core/test_check.py::TestCheckLaf::test_invalid PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/core/test_check.py::TestCheckLaf::test_invalid_raises_false PASSED
+
+============================== 3 passed in 0.16s ===============================
+
+
+Initial Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'openxla', 'cudagraphs', 'onnxrt', 'inductor', 'jit', 'tvm', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 3 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/core/test_check.py::TestCheckLaf::test_valid PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/core/test_check.py::TestCheckLaf::test_invalid PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/core/test_check.py::TestCheckLaf::test_invalid_raises_false PASSED
+
+============================== 3 passed in 0.17s ===============================

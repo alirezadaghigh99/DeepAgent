@@ -1,0 +1,21 @@
+stage: 
+task: Classification
+data: Training
+
+prompt:
+Generate a Python function called `_compute_pytorch_loss` that calculates the softmax cross entropy loss between output logits and labels using PyTorch. The inputs are tensors of logits and labels with shapes `(batch_size, classes)` or `(batch_size, tasks, classes)`, and the output is a tensor of loss values.
+
+```python
+class SoftmaxCrossEntropy(Loss):
+    def _compute_pytorch_loss(self, output, labels):
+```
+
+ ground Truth:deepchem/models/losses.py
+
+ repo:deepchem
+
+ function:_create_pytorch_loss
+ 
+ class:SoftmaxCrossEntropy
+ 
+ test_cases:deepchem/models/tests/test_losses.py::TestLosses

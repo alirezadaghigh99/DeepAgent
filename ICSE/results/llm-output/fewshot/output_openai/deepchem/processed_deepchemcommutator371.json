@@ -1,0 +1,11 @@
+{
+    "result": "Certainly! The commutator of two matrices \\( A \\) and \\( B \\) is defined as \\( [A, B] = AB - BA \\). Here's a Python function that computes the commutator of two matrices using PyTorch:\n\n```python\nimport torch\n\ndef commutator(A: torch.Tensor, B: torch.Tensor) -> torch.Tensor:\n    \"\"\"\n    Compute the commutator of two matrices.\n\n    Parameters\n    ----------\n    A : torch.Tensor\n        The first matrix.\n    B : torch.Tensor\n        The second matrix.\n\n    Returns\n    -------\n    torch.Tensor\n        The commutator of the two matrices.\n    \"\"\"\n    if A.shape != B.shape:\n        raise ValueError(\"Matrices A and B must have the same shape.\")\n    \n    return torch.matmul(A, B) - torch.matmul(B, A)\n\n# Example usage:\n# A = torch.tensor([[1, 2], [3, 4]])\n# B = torch.tensor([[5, 6], [7, 8]])\n# comm = commutator(A, B)\n# print(comm)\n```\n\nThis function first checks if the matrices \\( A \\) and \\( B \\) have the same shape, as the commutator is only defined for matrices of the same dimensions. It then computes the commutator by performing matrix multiplication and subtraction.",
+    "prompt": "Write a python function commutator Compute the commutator of two matrices.\n\n    Parameters\n    ----------\n    A : torch.Tensor\n        The first matrix.\n    B : torch.Tensor\n        The second matrix.\n\n    Returns\n    -------\n    torch.Tensor\n        The commutator of the two matrices.",
+    "function_name": "commutator",
+    "ground_truth": "deepchem/utils/equivariance_utils.py",
+    "test": "deepchem/utils/test/test_equivariance_utils.py",
+    "class": "",
+    "stage": "Pre-Post processing",
+    "task": "",
+    "data": ""
+}

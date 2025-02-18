@@ -1,0 +1,25 @@
+stage: Pre-Post processing
+task: Detection
+data: Image
+
+prompt:
+Create a Python function _resize_image_and_masks that resizes an image tensor and its corresponding masks, if provided. The function allows resizing to either a fixed size or a size determined by scaling factors, and it handles special cases for TorchScript and ONNX tracing.
+
+Parameters:
+image: A Tensor representing the image to be resized, with shape (C, H, W).
+self_min_size: An integer specifying the minimum size for the image's smaller dimension when resizing.
+self_max_size: An integer specifying the maximum size for the image's larger dimension when resizing.
+target: An optional dictionary containing additional data, such as masks, that should be resized alongside the image. The dictionary may contain a key "masks" with a tensor of shape (N, H, W).
+fixed_size: An optional tuple (height, width) specifying the fixed dimensions to which the image should be resized.
+Returns:
+A tuple containing:
+The resized image tensor.
+The resized target dictionary if it was provided, with resized masks if present.
+
+ ground Truth:torchvision/models/detection/transform.py
+
+ repo:vision
+
+ function:_resize_image_and_masks
+ 
+ test_cases:test/test_models_detection_negative_samples.py::TestModelsDetectionNegativeSamples

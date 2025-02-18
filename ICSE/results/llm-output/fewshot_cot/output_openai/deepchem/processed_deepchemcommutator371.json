@@ -1,0 +1,11 @@
+{
+    "result": "To compute the commutator of two matrices \\( A \\) and \\( B \\), you can use the formula:\n\n\\[ [A, B] = AB - BA \\]\n\nHere's a step-by-step implementation of the `commutator` function in Python using PyTorch:\n\n```python\nimport torch\n\ndef commutator(A: torch.Tensor, B: torch.Tensor) -> torch.Tensor:\n    \"\"\"\n    Compute the commutator of two matrices A and B.\n\n    The commutator is defined as [A, B] = AB - BA.\n\n    Parameters\n    ----------\n    A : torch.Tensor\n        The first matrix.\n    B : torch.Tensor\n        The second matrix.\n\n    Returns\n    -------\n    torch.Tensor\n        The commutator of the two matrices.\n    \"\"\"\n    # 1. Ensure that A and B are square matrices and have the same dimensions\n    if A.shape != B.shape or A.shape[0] != A.shape[1]:\n        raise ValueError(\"Matrices A and B must be square and of the same dimensions.\")\n\n    # 2. Compute the product AB\n    AB = torch.matmul(A, B)\n\n    # 3. Compute the product BA\n    BA = torch.matmul(B, A)\n\n    # 4. Compute the commutator [A, B] = AB - BA\n    commutator_result = AB - BA\n\n    # 5. Return the commutator\n    return commutator_result\n```\n\n### Explanation:\n\n1. **Input Validation**: The function first checks if the matrices \\( A \\) and \\( B \\) are square and of the same dimensions. This is necessary because the commutator is only defined for square matrices of the same size.\n\n2. **Matrix Multiplication**: It computes the matrix products \\( AB \\) and \\( BA \\) using `torch.matmul`.\n\n3. **Commutator Calculation**: The commutator is calculated as the difference between these two products: \\( AB - BA \\).\n\n4. **Return**: Finally, the function returns the resulting commutator matrix.",
+    "prompt": "Write a python function commutator Compute the commutator of two matrices.\n\n    Parameters\n    ----------\n    A : torch.Tensor\n        The first matrix.\n    B : torch.Tensor\n        The second matrix.\n\n    Returns\n    -------\n    torch.Tensor\n        The commutator of the two matrices.",
+    "function_name": "commutator",
+    "ground_truth": "deepchem/utils/equivariance_utils.py",
+    "test": "deepchem/utils/test/test_equivariance_utils.py",
+    "class": "",
+    "stage": "Pre-Post processing",
+    "task": "",
+    "data": ""
+}

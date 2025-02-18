@@ -1,0 +1,14 @@
+stage: Evaluating&Metrics
+task: 
+data: 
+
+prompt:
+Generate a Python function called allclose that compares two inputs for closeness. The inputs are expected and actual, and the function first unwraps any single-element lists or tuples. It then checks if both inputs are torch Tensors and returns True if they are close, using torch.allclose. If the inputs are lists or tuples, it checks if they have the same length and recursively compares each element using torch.allclose. If the inputs are not of the expected types, it raises a RuntimeError with the message "Unexpected types".
+
+ ground Truth:test/lazy/test_extract_compiled_graph.py
+
+ repo:pytorch
+
+ function:allclose
+ 
+ test_cases: test/lazy/test_extract_compiled_graph.py::OptimizeTest

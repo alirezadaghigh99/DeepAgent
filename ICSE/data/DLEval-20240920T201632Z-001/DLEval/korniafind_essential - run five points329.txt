@@ -1,0 +1,14 @@
+stage: Inference
+task: Detection
+data: Image
+
+prompt:
+Create a Python function called run_5point that computes the essential matrix using Nister's 5-point algorithm. The function should take two tensors of calibrated points from two images and an optional weights tensor. It should validate the input shapes, construct a linear system, apply weights if provided, and solve for the essential matrix, returning a (B, 3, 3) tensor for each batch
+
+ ground Truth:kornia/geometry/epipolar/essential.py
+
+ repo:kornia
+
+ function:run_5point
+ 
+ test_cases:tests/geometry/epipolar/test_fundamental.py::TestFindFundamental

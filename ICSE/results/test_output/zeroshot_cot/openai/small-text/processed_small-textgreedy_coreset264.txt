@@ -1,0 +1,348 @@
+output file:
+processed_small-textgreedy_coreset264.json
+function:
+greedy_coreset
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_query_takes_remaining_pool', '../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_query_takes_remaining_pool FAILED', '../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_default_query FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_simple_query', 'FAILED ../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_query_default', 'FAILED ../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_default_query', '../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_query_default FAILED', '../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_simple_query FAILED'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/small-text/small-text/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/small-text/small-text
+configfile: pytest.ini
+plugins: srcpaths-1.2.1, cov-6.0.0, approvaltests-14.2.0, approvaltests-0.2.4
+collecting ... collected 8 items
+
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_default_query FAILED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_init_with_invalid_distance_metric PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_query_default FAILED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_query_empty_pool PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_query_exhausts_pool PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_query_takes_remaining_pool FAILED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_simple_query FAILED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_str PASSED
+
+=================================== FAILURES ===================================
+________ GreedyCoresetSamplingStrategyNormalizedTest.test_default_query ________
+
+self = <tests.unit.small_text.query_strategies.test_coresets.GreedyCoresetSamplingStrategyNormalizedTest testMethod=test_default_query>
+embedding_dim = 100
+
+    def test_default_query(self, embedding_dim=100):
+        embeddings = np.random.rand(SamplingStrategiesTests.DEFAULT_NUM_SAMPLES, embedding_dim)
+>       indices = self._query(self._get_query_strategy(), num_samples=100, embeddings=embeddings)
+
+/local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py:102: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_strategies.py:144: in _query
+    return strategy.query(clf_mock, dataset, indices_unlabeled, indices_labeled, y, n=n,
+/local/data0/moved_data/publishablew/small-text/small-text/small_text/query_strategies/strategies.py:306: in query
+    sampled_indices = self.sample(clf, subset, subset_indices_unlabeled, subset_indices_labeled,
+/local/data0/moved_data/publishablew/small-text/small-text/small_text/query_strategies/coresets.py:114: in sample
+    return greedy_coreset(embeddings, indices_unlabeled, indices_labeled, n, distance_metric=self.distance_metric, normalized=self.normalize)
+/local/data0/moved_data/publishablew/small-text/small-text/small_text/query_strategies/coresets.py:22: in greedy_coreset
+    return greedy_coreset(x, indices_unlabeled, indices_labeled, n, distance_metric, batch_size, normalized)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+x = array([[0.16438783, 0.15873002, 0.03269173, ..., 0.08925295, 0.06999817,
+        0.05991809],
+       [0.05207314, 0.04...69,
+        0.15266753],
+       [0.01867643, 0.10869113, 0.03712488, ..., 0.14290202, 0.01697862,
+        0.06316691]])
+indices_unlabeled = array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16,
+       17, 18, 19, 20, 21, 22, 23, 24, 25, ... 64, 65, 66, 67,
+       68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84,
+       85, 86, 87, 88, 89])
+indices_labeled = array([90, 91, 92, 93, 94, 95, 96, 97, 98, 99]), n = 10
+distance_metric = 'euclidean', batch_size = 100, normalized = True
+
+    def greedy_coreset(x, indices_unlabeled, indices_labeled, n, distance_metric='euclidean', batch_size=1, normalized=False):
+        if normalized:
+            norms = np.linalg.norm(x, axis=1, keepdims=True)
+            x = x / norms
+        selected_indices = list(indices_labeled)
+        remaining_indices = list(indices_unlabeled)
+        if distance_metric == 'euclidean':
+            dist_func = 'euclidean'
+        elif distance_metric == 'cosine':
+            dist_func = 'cosine'
+        else:
+            raise ValueError("Unsupported distance metric. Use 'euclidean' or 'cosine'.")
+        distances = cdist(x[remaining_indices], x[selected_indices], metric=dist_func)
+        min_distances = np.min(distances, axis=1)
+        for _ in range(n):
+            max_index = np.argmax(min_distances)
+            selected_point = remaining_indices[max_index]
+            selected_indices.append(selected_point)
+            remaining_indices.remove(selected_point)
+            if len(remaining_indices) > 0:
+                new_distances = cdist(x[remaining_indices], x[[selected_point]], metric=dist_func).flatten()
+>               min_distances = np.minimum(min_distances, new_distances)
+E               ValueError: operands could not be broadcast together with shapes (90,) (89,)
+
+/local/data0/moved_data/publishablew/small-text/small-text/small_text/query_strategies/temp.py:28: ValueError
+________ GreedyCoresetSamplingStrategyNormalizedTest.test_query_default ________
+
+self = <tests.unit.small_text.query_strategies.test_coresets.GreedyCoresetSamplingStrategyNormalizedTest testMethod=test_query_default>
+
+    def test_query_default(self):
+>       indices = query_random_data(self._get_query_strategy(), use_embeddings=True)
+
+/local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py:121: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_strategies.py:53: in query_random_data
+    return strategy.query(clf,
+/local/data0/moved_data/publishablew/small-text/small-text/small_text/query_strategies/strategies.py:306: in query
+    sampled_indices = self.sample(clf, subset, subset_indices_unlabeled, subset_indices_labeled,
+/local/data0/moved_data/publishablew/small-text/small-text/small_text/query_strategies/coresets.py:114: in sample
+    return greedy_coreset(embeddings, indices_unlabeled, indices_labeled, n, distance_metric=self.distance_metric, normalized=self.normalize)
+/local/data0/moved_data/publishablew/small-text/small-text/small_text/query_strategies/coresets.py:22: in greedy_coreset
+    return greedy_coreset(x, indices_unlabeled, indices_labeled, n, distance_metric, batch_size, normalized)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+x = array([[0.04655915, 0.03452496, 0.03066027, ..., 0.10836121, 0.15756149,
+        0.13948968],
+       [0.17014916, 0.12...21,
+        0.12358381],
+       [0.03705417, 0.12303283, 0.16832657, ..., 0.16527411, 0.07426265,
+        0.03521686]])
+indices_unlabeled = array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16,
+       17, 18, 19, 20, 21, 22, 23, 24, 25, ... 64, 65, 66, 67,
+       68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84,
+       85, 86, 87, 88, 89])
+indices_labeled = array([90, 91, 92, 93, 94, 95, 96, 97, 98, 99]), n = 10
+distance_metric = 'euclidean', batch_size = 100, normalized = True
+
+    def greedy_coreset(x, indices_unlabeled, indices_labeled, n, distance_metric='euclidean', batch_size=1, normalized=False):
+        if normalized:
+            norms = np.linalg.norm(x, axis=1, keepdims=True)
+            x = x / norms
+        selected_indices = list(indices_labeled)
+        remaining_indices = list(indices_unlabeled)
+        if distance_metric == 'euclidean':
+            dist_func = 'euclidean'
+        elif distance_metric == 'cosine':
+            dist_func = 'cosine'
+        else:
+            raise ValueError("Unsupported distance metric. Use 'euclidean' or 'cosine'.")
+        distances = cdist(x[remaining_indices], x[selected_indices], metric=dist_func)
+        min_distances = np.min(distances, axis=1)
+        for _ in range(n):
+            max_index = np.argmax(min_distances)
+            selected_point = remaining_indices[max_index]
+            selected_indices.append(selected_point)
+            remaining_indices.remove(selected_point)
+            if len(remaining_indices) > 0:
+                new_distances = cdist(x[remaining_indices], x[[selected_point]], metric=dist_func).flatten()
+>               min_distances = np.minimum(min_distances, new_distances)
+E               ValueError: operands could not be broadcast together with shapes (90,) (89,)
+
+/local/data0/moved_data/publishablew/small-text/small-text/small_text/query_strategies/temp.py:28: ValueError
+_ GreedyCoresetSamplingStrategyNormalizedTest.test_query_takes_remaining_pool __
+
+self = <tests.unit.small_text.query_strategies.test_coresets.GreedyCoresetSamplingStrategyNormalizedTest testMethod=test_query_takes_remaining_pool>
+embedding_dim = 100
+
+    def test_query_takes_remaining_pool(self, embedding_dim=100):
+        embeddings = np.random.rand(SamplingStrategiesTests.DEFAULT_NUM_SAMPLES, embedding_dim)
+>       indices = self._query(self._get_query_strategy(),
+                              num_samples=self.DEFAULT_NUM_SAMPLES,
+                              n=10,
+                              embeddings=embeddings)
+
+/local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py:108: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_strategies.py:144: in _query
+    return strategy.query(clf_mock, dataset, indices_unlabeled, indices_labeled, y, n=n,
+/local/data0/moved_data/publishablew/small-text/small-text/small_text/query_strategies/strategies.py:306: in query
+    sampled_indices = self.sample(clf, subset, subset_indices_unlabeled, subset_indices_labeled,
+/local/data0/moved_data/publishablew/small-text/small-text/small_text/query_strategies/coresets.py:114: in sample
+    return greedy_coreset(embeddings, indices_unlabeled, indices_labeled, n, distance_metric=self.distance_metric, normalized=self.normalize)
+/local/data0/moved_data/publishablew/small-text/small-text/small_text/query_strategies/coresets.py:22: in greedy_coreset
+    return greedy_coreset(x, indices_unlabeled, indices_labeled, n, distance_metric, batch_size, normalized)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+x = array([[0.04188592, 0.07519377, 0.03165464, ..., 0.00514542, 0.08376675,
+        0.16647406],
+       [0.15610587, 0.03...66,
+        0.01289134],
+       [0.0315444 , 0.11794679, 0.0005919 , ..., 0.15051067, 0.07986544,
+        0.15493255]])
+indices_unlabeled = array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16,
+       17, 18, 19, 20, 21, 22, 23, 24, 25, ... 64, 65, 66, 67,
+       68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84,
+       85, 86, 87, 88, 89])
+indices_labeled = array([90, 91, 92, 93, 94, 95, 96, 97, 98, 99]), n = 10
+distance_metric = 'euclidean', batch_size = 100, normalized = True
+
+    def greedy_coreset(x, indices_unlabeled, indices_labeled, n, distance_metric='euclidean', batch_size=1, normalized=False):
+        if normalized:
+            norms = np.linalg.norm(x, axis=1, keepdims=True)
+            x = x / norms
+        selected_indices = list(indices_labeled)
+        remaining_indices = list(indices_unlabeled)
+        if distance_metric == 'euclidean':
+            dist_func = 'euclidean'
+        elif distance_metric == 'cosine':
+            dist_func = 'cosine'
+        else:
+            raise ValueError("Unsupported distance metric. Use 'euclidean' or 'cosine'.")
+        distances = cdist(x[remaining_indices], x[selected_indices], metric=dist_func)
+        min_distances = np.min(distances, axis=1)
+        for _ in range(n):
+            max_index = np.argmax(min_distances)
+            selected_point = remaining_indices[max_index]
+            selected_indices.append(selected_point)
+            remaining_indices.remove(selected_point)
+            if len(remaining_indices) > 0:
+                new_distances = cdist(x[remaining_indices], x[[selected_point]], metric=dist_func).flatten()
+>               min_distances = np.minimum(min_distances, new_distances)
+E               ValueError: operands could not be broadcast together with shapes (90,) (89,)
+
+/local/data0/moved_data/publishablew/small-text/small-text/small_text/query_strategies/temp.py:28: ValueError
+________ GreedyCoresetSamplingStrategyNormalizedTest.test_simple_query _________
+
+self = <tests.unit.small_text.query_strategies.test_coresets.GreedyCoresetSamplingStrategyNormalizedTest testMethod=test_simple_query>
+embedding_dim = 100
+
+    def test_simple_query(self, embedding_dim=100):
+        embeddings = np.random.rand(SamplingStrategiesTests.DEFAULT_NUM_SAMPLES, embedding_dim)
+>       indices = self._query(self._get_query_strategy(),
+                              num_samples=self.DEFAULT_NUM_SAMPLES,
+                              n=5,
+                              embeddings=embeddings)
+
+/local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_strategies.py:144: in _query
+    return strategy.query(clf_mock, dataset, indices_unlabeled, indices_labeled, y, n=n,
+/local/data0/moved_data/publishablew/small-text/small-text/small_text/query_strategies/strategies.py:306: in query
+    sampled_indices = self.sample(clf, subset, subset_indices_unlabeled, subset_indices_labeled,
+/local/data0/moved_data/publishablew/small-text/small-text/small_text/query_strategies/coresets.py:114: in sample
+    return greedy_coreset(embeddings, indices_unlabeled, indices_labeled, n, distance_metric=self.distance_metric, normalized=self.normalize)
+/local/data0/moved_data/publishablew/small-text/small-text/small_text/query_strategies/coresets.py:22: in greedy_coreset
+    return greedy_coreset(x, indices_unlabeled, indices_labeled, n, distance_metric, batch_size, normalized)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+x = array([[0.02570561, 0.06952004, 0.0190669 , ..., 0.01524692, 0.16804797,
+        0.14399265],
+       [0.0066908 , 0.11...66,
+        0.14505795],
+       [0.10389482, 0.12977372, 0.01859473, ..., 0.10202414, 0.11768512,
+        0.0927345 ]])
+indices_unlabeled = array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16,
+       17, 18, 19, 20, 21, 22, 23, 24, 25, ... 64, 65, 66, 67,
+       68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84,
+       85, 86, 87, 88, 89])
+indices_labeled = array([90, 91, 92, 93, 94, 95, 96, 97, 98, 99]), n = 5
+distance_metric = 'euclidean', batch_size = 100, normalized = True
+
+    def greedy_coreset(x, indices_unlabeled, indices_labeled, n, distance_metric='euclidean', batch_size=1, normalized=False):
+        if normalized:
+            norms = np.linalg.norm(x, axis=1, keepdims=True)
+            x = x / norms
+        selected_indices = list(indices_labeled)
+        remaining_indices = list(indices_unlabeled)
+        if distance_metric == 'euclidean':
+            dist_func = 'euclidean'
+        elif distance_metric == 'cosine':
+            dist_func = 'cosine'
+        else:
+            raise ValueError("Unsupported distance metric. Use 'euclidean' or 'cosine'.")
+        distances = cdist(x[remaining_indices], x[selected_indices], metric=dist_func)
+        min_distances = np.min(distances, axis=1)
+        for _ in range(n):
+            max_index = np.argmax(min_distances)
+            selected_point = remaining_indices[max_index]
+            selected_indices.append(selected_point)
+            remaining_indices.remove(selected_point)
+            if len(remaining_indices) > 0:
+                new_distances = cdist(x[remaining_indices], x[[selected_point]], metric=dist_func).flatten()
+>               min_distances = np.minimum(min_distances, new_distances)
+E               ValueError: operands could not be broadcast together with shapes (90,) (89,)
+
+/local/data0/moved_data/publishablew/small-text/small-text/small_text/query_strategies/temp.py:28: ValueError
+=============================== warnings summary ===============================
+tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_default_query
+tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_query_empty_pool
+tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_query_exhausts_pool
+tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_query_takes_remaining_pool
+tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_simple_query
+  /local/data0/moved_data/publishablew/small-text/small-text/small_text/data/datasets.py:422: UserWarning: Passing target_labels=None is discouraged as it can lead to unintended results in combination with indexing and cloning. Moreover, explicit target labels might be required in the next major version.
+    check_target_labels(target_labels)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_default_query
+FAILED ../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_query_default
+FAILED ../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_query_takes_remaining_pool
+FAILED ../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_simple_query
+=================== 4 failed, 4 passed, 5 warnings in 1.65s ====================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/small-text/small-text/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/small-text/small-text
+configfile: pytest.ini
+plugins: srcpaths-1.2.1, cov-6.0.0, approvaltests-14.2.0, approvaltests-0.2.4
+collecting ... collected 8 items
+
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_default_query PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_init_with_invalid_distance_metric PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_query_default PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_query_empty_pool PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_query_exhausts_pool PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_query_takes_remaining_pool PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_simple_query PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_str PASSED
+
+=============================== warnings summary ===============================
+tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_default_query
+tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_query_empty_pool
+tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_query_exhausts_pool
+tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_query_takes_remaining_pool
+tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_simple_query
+  /local/data0/moved_data/publishablew/small-text/small-text/small_text/data/datasets.py:422: UserWarning: Passing target_labels=None is discouraged as it can lead to unintended results in combination with indexing and cloning. Moreover, explicit target labels might be required in the next major version.
+    check_target_labels(target_labels)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 8 passed, 5 warnings in 1.45s =========================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/small-text/small-text/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/small-text/small-text
+configfile: pytest.ini
+plugins: srcpaths-1.2.1, cov-6.0.0, approvaltests-14.2.0, approvaltests-0.2.4
+collecting ... collected 8 items
+
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_default_query PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_init_with_invalid_distance_metric PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_query_default PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_query_empty_pool PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_query_exhausts_pool PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_query_takes_remaining_pool PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_simple_query PASSED
+../../../../../../local/data0/moved_data/publishablew/small-text/small-text/tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_str PASSED
+
+=============================== warnings summary ===============================
+tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_default_query
+tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_query_empty_pool
+tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_query_exhausts_pool
+tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_query_takes_remaining_pool
+tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest::test_simple_query
+  /local/data0/moved_data/publishablew/small-text/small-text/small_text/data/datasets.py:422: UserWarning: Passing target_labels=None is discouraged as it can lead to unintended results in combination with indexing and cloning. Moreover, explicit target labels might be required in the next major version.
+    check_target_labels(target_labels)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 8 passed, 5 warnings in 10.70s ========================

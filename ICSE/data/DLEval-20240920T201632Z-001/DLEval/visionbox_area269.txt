@@ -1,0 +1,14 @@
+stage: Inference
+task: Detection
+data: Image
+
+prompt:
+Generate a Python function called box_area that computes the area of a set of bounding boxes specified by their (x1, y1, x2, y2) coordinates. The input is a tensor of shape (N, 4) called boxes, where N is the number of boxes. The boxes are expected to be in (x1, y1, x2, y2) format with 0 <= x1 < x2 and 0 <= y1 < y2. The function returns a tensor of shape (N) containing the area for each box.
+
+ ground Truth:torchvision/ops/boxes.py
+
+ repo:vision
+
+ function:box_area
+ 
+ test_cases:test/test_ops.py::TestRoIAlign

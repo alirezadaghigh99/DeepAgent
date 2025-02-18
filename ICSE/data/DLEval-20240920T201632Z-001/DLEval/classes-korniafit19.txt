@@ -1,0 +1,39 @@
+stage: Image
+task: 
+data: Training
+
+prompt:
+Generate a Python function `fit` for the class `ZCAWhitening` that fits ZCA whitening matrices to the input data tensor `x`. The function should compute the mean vector and transformation matrices using a provided `zca_mean` function, which takes the input data tensor `x`, dimension `dim`, unbiased flag, epsilon for numerical stability, and a flag for computing the inverse transform. The function should also handle the detachment of gradients based on the class attribute `detach_transforms` and set the `fitted` attribute to `True` once the matrices are computed. If the inverse transform matrix is not computed, initialize it as an empty tensor.
+
+```python
+class ZCAWhitening(Module):
+    def __init__(
+        self,
+        dim: int = 0,
+        eps: float = 1e-6,
+        unbiased: bool = True,
+        detach_transforms: bool = True,
+        compute_inv: bool = False,
+    ) -> None:
+        super().__init__()
+        self.dim = dim
+        self.eps = eps
+        self.unbiased = unbiased
+        self.detach_transforms = detach_transforms
+        self.compute_inv = compute_inv
+        self.fitted = False
+
+        self.mean_vector: Tensor
+        self.transform_matrix: Tensor
+        self.transform_inv: Optional[Tensor]
+```
+
+ ground Truth:kornia/enhance/zca.py
+
+ repo:kornia
+
+ function:fit
+ 
+ test_cases:tests/enhance/test_zca.py
+ 
+ class:ZCAWhitening

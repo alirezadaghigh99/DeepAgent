@@ -1,0 +1,20 @@
+stage: Pre-Post processing
+task: segmentation
+data: Image
+
+prompt:
+Create a Python function expand_image_array_cnn that ensures an input image array is in the correct format for use in Convolutional Neural Networks (CNNs). If the input is a 2D grayscale image, the function converts it to a 3D array by repeating the grayscale values across three channels (i.e., converting it to an RGB-like format). If the input is already a 3D array, the function validates its dimensions.
+
+Parameters:
+image_arr: A NumPy array representing the input image. The array can be 2D (grayscale) or 3D (RGB).
+Returns:
+A 3D NumPy array representing the image. If the input is a 2D array, it is converted to a 3D array by repeating the grayscale values across three channels.
+
+
+ ground Truth:imagededup/utils/image_utils.py
+
+ repo:imagededup
+
+ function:expand_image_array_cnn
+ 
+ test_cases:tests/test_image_utils.py

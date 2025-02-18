@@ -1,0 +1,641 @@
+output file:
+processed_GPflowgauss_kl44.json
+function:
+gauss_kl
+Error Cases:
+2025-02-14 03:38:37.754775: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739522317.766318 2188011 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1739522317.770022 2188011 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-02-14 03:38:37.783007: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1739522320.276276 2188011 gpu_device.cc:2022] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 9445 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3060, pci bus id: 0000:06:00.0, compute capability: 8.6
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-1] FAILED', '../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-1] FAILED', '../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-0] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-1]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-0]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-0]', '../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-0] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-1]'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/GPflow/GPflow/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/GPflow/GPflow
+collecting ... collected 4 items
+
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-0] FAILED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-1] FAILED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-0] FAILED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-1] FAILED
+
+=================================== FAILURES ===================================
+______________________________ test_oned[True-0] _______________________________
+
+white = True, dim = 0
+
+    @pytest.mark.parametrize("dim", [0, 1])
+    @pytest.mark.parametrize("white", [True, False])
+    def test_oned(white: bool, dim: bool) -> None:
+        """
+        Check that the KL divergence matches a 1D by-hand calculation.
+        """
+        mu1d = Datum.mu[dim, :][None, :]  # [1, N]
+        s1d = Datum.sqrt[:, dim, dim][:, None, None]  # [N, 1, 1]
+        K1d = Datum.K_batch[:, dim, dim][:, None, None]  # [N, 1, 1]
+    
+        kl = gauss_kl(mu1d, s1d, K1d if not white else None)
+        kl_1d = compute_kl_1d(
+            tf.reshape(mu1d, (-1,)),  # N
+            tf.reshape(s1d, (-1,)),  # N
+            None if white else tf.reshape(K1d, (-1,)),
+        )  # N
+>       np.testing.assert_allclose(kl, kl_1d)
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py:229: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/lib/python3.11/contextlib.py:81: in inner
+    return func(*args, **kwds)
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/numpy/testing/_private/utils.py:1499: in compare
+    return np.core.numeric.isclose(x, y, rtol=rtol, atol=atol,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = array(None, dtype=object), b = array(5.77366804), rtol = 1e-07, atol = 0
+equal_nan = True
+
+    @array_function_dispatch(_isclose_dispatcher)
+    def isclose(a, b, rtol=1.e-5, atol=1.e-8, equal_nan=False):
+        """
+        Returns a boolean array where two arrays are element-wise equal within a
+        tolerance.
+    
+        The tolerance values are positive, typically very small numbers.  The
+        relative difference (`rtol` * abs(`b`)) and the absolute difference
+        `atol` are added together to compare against the absolute difference
+        between `a` and `b`.
+    
+        .. warning:: The default `atol` is not appropriate for comparing numbers
+                     that are much smaller than one (see Notes).
+    
+        Parameters
+        ----------
+        a, b : array_like
+            Input arrays to compare.
+        rtol : float
+            The relative tolerance parameter (see Notes).
+        atol : float
+            The absolute tolerance parameter (see Notes).
+        equal_nan : bool
+            Whether to compare NaN's as equal.  If True, NaN's in `a` will be
+            considered equal to NaN's in `b` in the output array.
+    
+        Returns
+        -------
+        y : array_like
+            Returns a boolean array of where `a` and `b` are equal within the
+            given tolerance. If both `a` and `b` are scalars, returns a single
+            boolean value.
+    
+        See Also
+        --------
+        allclose
+        math.isclose
+    
+        Notes
+        -----
+        .. versionadded:: 1.7.0
+    
+        For finite values, isclose uses the following equation to test whether
+        two floating point values are equivalent.
+    
+         absolute(`a` - `b`) <= (`atol` + `rtol` * absolute(`b`))
+    
+        Unlike the built-in `math.isclose`, the above equation is not symmetric
+        in `a` and `b` -- it assumes `b` is the reference value -- so that
+        `isclose(a, b)` might be different from `isclose(b, a)`. Furthermore,
+        the default value of atol is not zero, and is used to determine what
+        small values should be considered close to zero. The default value is
+        appropriate for expected values of order unity: if the expected values
+        are significantly smaller than one, it can result in false positives.
+        `atol` should be carefully selected for the use case at hand. A zero value
+        for `atol` will result in `False` if either `a` or `b` is zero.
+    
+        `isclose` is not defined for non-numeric data types.
+        `bool` is considered a numeric data-type for this purpose.
+    
+        Examples
+        --------
+        >>> np.isclose([1e10,1e-7], [1.00001e10,1e-8])
+        array([ True, False])
+        >>> np.isclose([1e10,1e-8], [1.00001e10,1e-9])
+        array([ True, True])
+        >>> np.isclose([1e10,1e-8], [1.0001e10,1e-9])
+        array([False,  True])
+        >>> np.isclose([1.0, np.nan], [1.0, np.nan])
+        array([ True, False])
+        >>> np.isclose([1.0, np.nan], [1.0, np.nan], equal_nan=True)
+        array([ True, True])
+        >>> np.isclose([1e-8, 1e-7], [0.0, 0.0])
+        array([ True, False])
+        >>> np.isclose([1e-100, 1e-7], [0.0, 0.0], atol=0.0)
+        array([False, False])
+        >>> np.isclose([1e-10, 1e-10], [1e-20, 0.0])
+        array([ True,  True])
+        >>> np.isclose([1e-10, 1e-10], [1e-20, 0.999999e-10], atol=0.0)
+        array([False,  True])
+        """
+        def within_tol(x, y, atol, rtol):
+            with errstate(invalid='ignore'), _no_nep50_warning():
+                return less_equal(abs(x-y), atol + rtol * abs(y))
+    
+        x = asanyarray(a)
+        y = asanyarray(b)
+    
+        # Make sure y is an inexact type to avoid bad behavior on abs(MIN_INT).
+        # This will cause casting of x later. Also, make sure to allow subclasses
+        # (e.g., for numpy.ma).
+        # NOTE: We explicitly allow timedelta, which used to work. This could
+        #       possibly be deprecated. See also gh-18286.
+        #       timedelta works if `atol` is an integer or also a timedelta.
+        #       Although, the default tolerances are unlikely to be useful
+        if y.dtype.kind != "m":
+            dt = multiarray.result_type(y, 1.)
+            y = asanyarray(y, dtype=dt)
+    
+>       xfin = isfinite(x)
+E       TypeError: ufunc 'isfinite' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/numpy/core/numeric.py:2348: TypeError
+______________________________ test_oned[True-1] _______________________________
+
+white = True, dim = 1
+
+    @pytest.mark.parametrize("dim", [0, 1])
+    @pytest.mark.parametrize("white", [True, False])
+    def test_oned(white: bool, dim: bool) -> None:
+        """
+        Check that the KL divergence matches a 1D by-hand calculation.
+        """
+        mu1d = Datum.mu[dim, :][None, :]  # [1, N]
+        s1d = Datum.sqrt[:, dim, dim][:, None, None]  # [N, 1, 1]
+        K1d = Datum.K_batch[:, dim, dim][:, None, None]  # [N, 1, 1]
+    
+        kl = gauss_kl(mu1d, s1d, K1d if not white else None)
+        kl_1d = compute_kl_1d(
+            tf.reshape(mu1d, (-1,)),  # N
+            tf.reshape(s1d, (-1,)),  # N
+            None if white else tf.reshape(K1d, (-1,)),
+        )  # N
+>       np.testing.assert_allclose(kl, kl_1d)
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py:229: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/lib/python3.11/contextlib.py:81: in inner
+    return func(*args, **kwds)
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/numpy/testing/_private/utils.py:1499: in compare
+    return np.core.numeric.isclose(x, y, rtol=rtol, atol=atol,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = array(None, dtype=object), b = array(3.76264996), rtol = 1e-07, atol = 0
+equal_nan = True
+
+    @array_function_dispatch(_isclose_dispatcher)
+    def isclose(a, b, rtol=1.e-5, atol=1.e-8, equal_nan=False):
+        """
+        Returns a boolean array where two arrays are element-wise equal within a
+        tolerance.
+    
+        The tolerance values are positive, typically very small numbers.  The
+        relative difference (`rtol` * abs(`b`)) and the absolute difference
+        `atol` are added together to compare against the absolute difference
+        between `a` and `b`.
+    
+        .. warning:: The default `atol` is not appropriate for comparing numbers
+                     that are much smaller than one (see Notes).
+    
+        Parameters
+        ----------
+        a, b : array_like
+            Input arrays to compare.
+        rtol : float
+            The relative tolerance parameter (see Notes).
+        atol : float
+            The absolute tolerance parameter (see Notes).
+        equal_nan : bool
+            Whether to compare NaN's as equal.  If True, NaN's in `a` will be
+            considered equal to NaN's in `b` in the output array.
+    
+        Returns
+        -------
+        y : array_like
+            Returns a boolean array of where `a` and `b` are equal within the
+            given tolerance. If both `a` and `b` are scalars, returns a single
+            boolean value.
+    
+        See Also
+        --------
+        allclose
+        math.isclose
+    
+        Notes
+        -----
+        .. versionadded:: 1.7.0
+    
+        For finite values, isclose uses the following equation to test whether
+        two floating point values are equivalent.
+    
+         absolute(`a` - `b`) <= (`atol` + `rtol` * absolute(`b`))
+    
+        Unlike the built-in `math.isclose`, the above equation is not symmetric
+        in `a` and `b` -- it assumes `b` is the reference value -- so that
+        `isclose(a, b)` might be different from `isclose(b, a)`. Furthermore,
+        the default value of atol is not zero, and is used to determine what
+        small values should be considered close to zero. The default value is
+        appropriate for expected values of order unity: if the expected values
+        are significantly smaller than one, it can result in false positives.
+        `atol` should be carefully selected for the use case at hand. A zero value
+        for `atol` will result in `False` if either `a` or `b` is zero.
+    
+        `isclose` is not defined for non-numeric data types.
+        `bool` is considered a numeric data-type for this purpose.
+    
+        Examples
+        --------
+        >>> np.isclose([1e10,1e-7], [1.00001e10,1e-8])
+        array([ True, False])
+        >>> np.isclose([1e10,1e-8], [1.00001e10,1e-9])
+        array([ True, True])
+        >>> np.isclose([1e10,1e-8], [1.0001e10,1e-9])
+        array([False,  True])
+        >>> np.isclose([1.0, np.nan], [1.0, np.nan])
+        array([ True, False])
+        >>> np.isclose([1.0, np.nan], [1.0, np.nan], equal_nan=True)
+        array([ True, True])
+        >>> np.isclose([1e-8, 1e-7], [0.0, 0.0])
+        array([ True, False])
+        >>> np.isclose([1e-100, 1e-7], [0.0, 0.0], atol=0.0)
+        array([False, False])
+        >>> np.isclose([1e-10, 1e-10], [1e-20, 0.0])
+        array([ True,  True])
+        >>> np.isclose([1e-10, 1e-10], [1e-20, 0.999999e-10], atol=0.0)
+        array([False,  True])
+        """
+        def within_tol(x, y, atol, rtol):
+            with errstate(invalid='ignore'), _no_nep50_warning():
+                return less_equal(abs(x-y), atol + rtol * abs(y))
+    
+        x = asanyarray(a)
+        y = asanyarray(b)
+    
+        # Make sure y is an inexact type to avoid bad behavior on abs(MIN_INT).
+        # This will cause casting of x later. Also, make sure to allow subclasses
+        # (e.g., for numpy.ma).
+        # NOTE: We explicitly allow timedelta, which used to work. This could
+        #       possibly be deprecated. See also gh-18286.
+        #       timedelta works if `atol` is an integer or also a timedelta.
+        #       Although, the default tolerances are unlikely to be useful
+        if y.dtype.kind != "m":
+            dt = multiarray.result_type(y, 1.)
+            y = asanyarray(y, dtype=dt)
+    
+>       xfin = isfinite(x)
+E       TypeError: ufunc 'isfinite' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/numpy/core/numeric.py:2348: TypeError
+______________________________ test_oned[False-0] ______________________________
+
+white = False, dim = 0
+
+    @pytest.mark.parametrize("dim", [0, 1])
+    @pytest.mark.parametrize("white", [True, False])
+    def test_oned(white: bool, dim: bool) -> None:
+        """
+        Check that the KL divergence matches a 1D by-hand calculation.
+        """
+        mu1d = Datum.mu[dim, :][None, :]  # [1, N]
+        s1d = Datum.sqrt[:, dim, dim][:, None, None]  # [N, 1, 1]
+        K1d = Datum.K_batch[:, dim, dim][:, None, None]  # [N, 1, 1]
+    
+        kl = gauss_kl(mu1d, s1d, K1d if not white else None)
+        kl_1d = compute_kl_1d(
+            tf.reshape(mu1d, (-1,)),  # N
+            tf.reshape(s1d, (-1,)),  # N
+            None if white else tf.reshape(K1d, (-1,)),
+        )  # N
+>       np.testing.assert_allclose(kl, kl_1d)
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py:229: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/lib/python3.11/contextlib.py:81: in inner
+    return func(*args, **kwds)
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/numpy/testing/_private/utils.py:1499: in compare
+    return np.core.numeric.isclose(x, y, rtol=rtol, atol=atol,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = array(None, dtype=object), b = array(5.91539092), rtol = 1e-07, atol = 0
+equal_nan = True
+
+    @array_function_dispatch(_isclose_dispatcher)
+    def isclose(a, b, rtol=1.e-5, atol=1.e-8, equal_nan=False):
+        """
+        Returns a boolean array where two arrays are element-wise equal within a
+        tolerance.
+    
+        The tolerance values are positive, typically very small numbers.  The
+        relative difference (`rtol` * abs(`b`)) and the absolute difference
+        `atol` are added together to compare against the absolute difference
+        between `a` and `b`.
+    
+        .. warning:: The default `atol` is not appropriate for comparing numbers
+                     that are much smaller than one (see Notes).
+    
+        Parameters
+        ----------
+        a, b : array_like
+            Input arrays to compare.
+        rtol : float
+            The relative tolerance parameter (see Notes).
+        atol : float
+            The absolute tolerance parameter (see Notes).
+        equal_nan : bool
+            Whether to compare NaN's as equal.  If True, NaN's in `a` will be
+            considered equal to NaN's in `b` in the output array.
+    
+        Returns
+        -------
+        y : array_like
+            Returns a boolean array of where `a` and `b` are equal within the
+            given tolerance. If both `a` and `b` are scalars, returns a single
+            boolean value.
+    
+        See Also
+        --------
+        allclose
+        math.isclose
+    
+        Notes
+        -----
+        .. versionadded:: 1.7.0
+    
+        For finite values, isclose uses the following equation to test whether
+        two floating point values are equivalent.
+    
+         absolute(`a` - `b`) <= (`atol` + `rtol` * absolute(`b`))
+    
+        Unlike the built-in `math.isclose`, the above equation is not symmetric
+        in `a` and `b` -- it assumes `b` is the reference value -- so that
+        `isclose(a, b)` might be different from `isclose(b, a)`. Furthermore,
+        the default value of atol is not zero, and is used to determine what
+        small values should be considered close to zero. The default value is
+        appropriate for expected values of order unity: if the expected values
+        are significantly smaller than one, it can result in false positives.
+        `atol` should be carefully selected for the use case at hand. A zero value
+        for `atol` will result in `False` if either `a` or `b` is zero.
+    
+        `isclose` is not defined for non-numeric data types.
+        `bool` is considered a numeric data-type for this purpose.
+    
+        Examples
+        --------
+        >>> np.isclose([1e10,1e-7], [1.00001e10,1e-8])
+        array([ True, False])
+        >>> np.isclose([1e10,1e-8], [1.00001e10,1e-9])
+        array([ True, True])
+        >>> np.isclose([1e10,1e-8], [1.0001e10,1e-9])
+        array([False,  True])
+        >>> np.isclose([1.0, np.nan], [1.0, np.nan])
+        array([ True, False])
+        >>> np.isclose([1.0, np.nan], [1.0, np.nan], equal_nan=True)
+        array([ True, True])
+        >>> np.isclose([1e-8, 1e-7], [0.0, 0.0])
+        array([ True, False])
+        >>> np.isclose([1e-100, 1e-7], [0.0, 0.0], atol=0.0)
+        array([False, False])
+        >>> np.isclose([1e-10, 1e-10], [1e-20, 0.0])
+        array([ True,  True])
+        >>> np.isclose([1e-10, 1e-10], [1e-20, 0.999999e-10], atol=0.0)
+        array([False,  True])
+        """
+        def within_tol(x, y, atol, rtol):
+            with errstate(invalid='ignore'), _no_nep50_warning():
+                return less_equal(abs(x-y), atol + rtol * abs(y))
+    
+        x = asanyarray(a)
+        y = asanyarray(b)
+    
+        # Make sure y is an inexact type to avoid bad behavior on abs(MIN_INT).
+        # This will cause casting of x later. Also, make sure to allow subclasses
+        # (e.g., for numpy.ma).
+        # NOTE: We explicitly allow timedelta, which used to work. This could
+        #       possibly be deprecated. See also gh-18286.
+        #       timedelta works if `atol` is an integer or also a timedelta.
+        #       Although, the default tolerances are unlikely to be useful
+        if y.dtype.kind != "m":
+            dt = multiarray.result_type(y, 1.)
+            y = asanyarray(y, dtype=dt)
+    
+>       xfin = isfinite(x)
+E       TypeError: ufunc 'isfinite' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/numpy/core/numeric.py:2348: TypeError
+______________________________ test_oned[False-1] ______________________________
+
+white = False, dim = 1
+
+    @pytest.mark.parametrize("dim", [0, 1])
+    @pytest.mark.parametrize("white", [True, False])
+    def test_oned(white: bool, dim: bool) -> None:
+        """
+        Check that the KL divergence matches a 1D by-hand calculation.
+        """
+        mu1d = Datum.mu[dim, :][None, :]  # [1, N]
+        s1d = Datum.sqrt[:, dim, dim][:, None, None]  # [N, 1, 1]
+        K1d = Datum.K_batch[:, dim, dim][:, None, None]  # [N, 1, 1]
+    
+        kl = gauss_kl(mu1d, s1d, K1d if not white else None)
+        kl_1d = compute_kl_1d(
+            tf.reshape(mu1d, (-1,)),  # N
+            tf.reshape(s1d, (-1,)),  # N
+            None if white else tf.reshape(K1d, (-1,)),
+        )  # N
+>       np.testing.assert_allclose(kl, kl_1d)
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py:229: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/usr/lib/python3.11/contextlib.py:81: in inner
+    return func(*args, **kwds)
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/numpy/testing/_private/utils.py:1499: in compare
+    return np.core.numeric.isclose(x, y, rtol=rtol, atol=atol,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = array(None, dtype=object), b = array(3.7908131), rtol = 1e-07, atol = 0
+equal_nan = True
+
+    @array_function_dispatch(_isclose_dispatcher)
+    def isclose(a, b, rtol=1.e-5, atol=1.e-8, equal_nan=False):
+        """
+        Returns a boolean array where two arrays are element-wise equal within a
+        tolerance.
+    
+        The tolerance values are positive, typically very small numbers.  The
+        relative difference (`rtol` * abs(`b`)) and the absolute difference
+        `atol` are added together to compare against the absolute difference
+        between `a` and `b`.
+    
+        .. warning:: The default `atol` is not appropriate for comparing numbers
+                     that are much smaller than one (see Notes).
+    
+        Parameters
+        ----------
+        a, b : array_like
+            Input arrays to compare.
+        rtol : float
+            The relative tolerance parameter (see Notes).
+        atol : float
+            The absolute tolerance parameter (see Notes).
+        equal_nan : bool
+            Whether to compare NaN's as equal.  If True, NaN's in `a` will be
+            considered equal to NaN's in `b` in the output array.
+    
+        Returns
+        -------
+        y : array_like
+            Returns a boolean array of where `a` and `b` are equal within the
+            given tolerance. If both `a` and `b` are scalars, returns a single
+            boolean value.
+    
+        See Also
+        --------
+        allclose
+        math.isclose
+    
+        Notes
+        -----
+        .. versionadded:: 1.7.0
+    
+        For finite values, isclose uses the following equation to test whether
+        two floating point values are equivalent.
+    
+         absolute(`a` - `b`) <= (`atol` + `rtol` * absolute(`b`))
+    
+        Unlike the built-in `math.isclose`, the above equation is not symmetric
+        in `a` and `b` -- it assumes `b` is the reference value -- so that
+        `isclose(a, b)` might be different from `isclose(b, a)`. Furthermore,
+        the default value of atol is not zero, and is used to determine what
+        small values should be considered close to zero. The default value is
+        appropriate for expected values of order unity: if the expected values
+        are significantly smaller than one, it can result in false positives.
+        `atol` should be carefully selected for the use case at hand. A zero value
+        for `atol` will result in `False` if either `a` or `b` is zero.
+    
+        `isclose` is not defined for non-numeric data types.
+        `bool` is considered a numeric data-type for this purpose.
+    
+        Examples
+        --------
+        >>> np.isclose([1e10,1e-7], [1.00001e10,1e-8])
+        array([ True, False])
+        >>> np.isclose([1e10,1e-8], [1.00001e10,1e-9])
+        array([ True, True])
+        >>> np.isclose([1e10,1e-8], [1.0001e10,1e-9])
+        array([False,  True])
+        >>> np.isclose([1.0, np.nan], [1.0, np.nan])
+        array([ True, False])
+        >>> np.isclose([1.0, np.nan], [1.0, np.nan], equal_nan=True)
+        array([ True, True])
+        >>> np.isclose([1e-8, 1e-7], [0.0, 0.0])
+        array([ True, False])
+        >>> np.isclose([1e-100, 1e-7], [0.0, 0.0], atol=0.0)
+        array([False, False])
+        >>> np.isclose([1e-10, 1e-10], [1e-20, 0.0])
+        array([ True,  True])
+        >>> np.isclose([1e-10, 1e-10], [1e-20, 0.999999e-10], atol=0.0)
+        array([False,  True])
+        """
+        def within_tol(x, y, atol, rtol):
+            with errstate(invalid='ignore'), _no_nep50_warning():
+                return less_equal(abs(x-y), atol + rtol * abs(y))
+    
+        x = asanyarray(a)
+        y = asanyarray(b)
+    
+        # Make sure y is an inexact type to avoid bad behavior on abs(MIN_INT).
+        # This will cause casting of x later. Also, make sure to allow subclasses
+        # (e.g., for numpy.ma).
+        # NOTE: We explicitly allow timedelta, which used to work. This could
+        #       possibly be deprecated. See also gh-18286.
+        #       timedelta works if `atol` is an integer or also a timedelta.
+        #       Although, the default tolerances are unlikely to be useful
+        if y.dtype.kind != "m":
+            dt = multiarray.result_type(y, 1.)
+            y = asanyarray(y, dtype=dt)
+    
+>       xfin = isfinite(x)
+E       TypeError: ufunc 'isfinite' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
+
+/local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/numpy/core/numeric.py:2348: TypeError
+=============================== warnings summary ===============================
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:57
+  /local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:57: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    if (distutils.version.LooseVersion(tf.__version__) <
+
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:58
+  /local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:58: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    distutils.version.LooseVersion(required_tensorflow_version)):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-0]
+FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-0]
+FAILED ../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-1]
+======================== 4 failed, 2 warnings in 1.05s =========================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/GPflow/GPflow/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/GPflow/GPflow
+collecting ... collected 4 items
+
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-1] PASSED
+
+=============================== warnings summary ===============================
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:57
+  /local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:57: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    if (distutils.version.LooseVersion(tf.__version__) <
+
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:58
+  /local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:58: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    distutils.version.LooseVersion(required_tensorflow_version)):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 4 passed, 2 warnings in 0.63s =========================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/GPflow/GPflow/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/GPflow/GPflow
+collecting ... collected 4 items
+
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[True-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/tests/gpflow/test_kullback_leiblers.py::test_oned[False-1] PASSED
+
+=============================== warnings summary ===============================
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:57
+  /local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:57: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    if (distutils.version.LooseVersion(tf.__version__) <
+
+../../../../../../local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:58
+  /local/data0/moved_data/publishablew/GPflow/GPflow/venv/lib/python3.11/site-packages/tensorflow_probability/python/__init__.py:58: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    distutils.version.LooseVersion(required_tensorflow_version)):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 4 passed, 2 warnings in 0.70s =========================

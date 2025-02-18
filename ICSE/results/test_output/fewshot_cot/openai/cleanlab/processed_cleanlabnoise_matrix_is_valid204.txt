@@ -1,0 +1,619 @@
+output file:
+processed_cleanlabnoise_matrix_is_valid204.json
+function:
+noise_matrix_is_valid
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_invalid_matrix FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_invalid_matrix', 'FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_max_iter', 'FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_verbose', '../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_max_iter FAILED', '../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_many', 'FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_fraczero_high', '../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_many_valid FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_many_verbose', '../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_many_verbose FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_invalid_inputs_verify[True]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_many_verbose_valid', '../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_many_verbose_valid FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_many_valid', 'FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_invalid_inputs_verify[False]', '../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_invalid_inputs_verify[True] FAILED', '../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_verbose FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline', '../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_fraczero_high FAILED', '../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_invalid_inputs_verify[False] FAILED', '../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_many FAILED'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/bin/python
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/aliredaq/Desktop/ICSE/src/tester/.hypothesis/examples'))
+rootdir: /local/data0/moved_data/publishablew/cleanlab/cleanlab
+configfile: pyproject.toml
+plugins: hypothesis-6.124.1
+collecting ... collected 24 items
+
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline FAILED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_fraczero_high FAILED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_verbose FAILED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_many FAILED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_many_verbose_valid FAILED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_many_valid FAILED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_many_verbose FAILED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_invalid_inputs_verify[True] FAILED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_invalid_inputs_verify[False] FAILED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_invalid_matrix FAILED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_trace_less_than_1_error PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_trace_equals_1_error PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_valid_no_py_error PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_one_class_error PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_two_class_nofraczero PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_two_class_fraczero_high PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_two_class_fraczero_high_valid PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_gen_probs_sum_empty PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_gen_probs_max_error PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_gen_probs_min_error PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_probs_min_max_error PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_balls_zero PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_balls_params PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_max_iter FAILED
+
+=================================== FAILURES ===================================
+______________________________ test_main_pipeline ______________________________
+
+verbose = False, n = 10, valid_noise_matrix = True, frac_zero_noise_rates = 0
+
+    def test_main_pipeline(
+        verbose=False,
+        n=10,
+        valid_noise_matrix=True,
+        frac_zero_noise_rates=0,
+    ):
+        trace = 1.5
+        py = [0.1, 0.1, 0.2, 0.6]
+        K = len(py)
+        y = [z for i, p in enumerate(py) for z in [i] * int(p * n)]
+>       nm = noise_generation.generate_noise_matrix_from_trace(
+            K=K,
+            trace=trace,
+            py=py,
+            seed=0,
+            valid_noise_matrix=valid_noise_matrix,
+            frac_zero_noise_rates=frac_zero_noise_rates,
+        )
+
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/benchmarking/noise_generation.py:204: in generate_noise_matrix_from_trace
+    if not valid_noise_matrix or noise_matrix_is_valid(noise_matrix, py):
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/benchmarking/noise_generation.py:14: in noise_matrix_is_valid
+    return noise_matrix_is_valid(noise_matrix, py)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+noise_matrix = array([[0.31731497, 0.04498324, 0.11594842, 0.08379137],
+       [0.32740194, 0.50073928, 0.4203033 , 0.02759258],
+       [0.18150018, 0.1459341 , 0.36808884, 0.57475914],
+       [0.17378291, 0.30834337, 0.09565944, 0.3138569 ]])
+py = [0.1, 0.1, 0.2, 0.6], verbose = False
+
+    def noise_matrix_is_valid(noise_matrix: np.ndarray, py: np.ndarray, verbose: bool=False) -> bool:
+        """
+        Check if the given noise_matrix is learnable, meaning it is possible to achieve
+        better than random performance for the amount of noise in the matrix.
+    
+        Args:
+            noise_matrix (np.ndarray): A square matrix where element (i, j) represents
+                                       the probability of class i being flipped to class j.
+            py (np.ndarray): A 1D array representing the prior probabilities of each class.
+            verbose (bool, optional): If True, print detailed information about the process.
+    
+        Returns:
+            bool: True if the noise matrix is learnable, False otherwise.
+        """
+        num_classes = noise_matrix.shape[0]
+>       if noise_matrix.shape[1] != num_classes or py.shape[0] != num_classes:
+E       AttributeError: 'list' object has no attribute 'shape'
+
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/benchmarking/temp.py:22: AttributeError
+_______________________ test_main_pipeline_fraczero_high _______________________
+
+    def test_main_pipeline_fraczero_high():
+>       test_main_pipeline(n=1000, frac_zero_noise_rates=0.75)
+
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py:43: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py:22: in test_main_pipeline
+    nm = noise_generation.generate_noise_matrix_from_trace(
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/benchmarking/noise_generation.py:204: in generate_noise_matrix_from_trace
+    if not valid_noise_matrix or noise_matrix_is_valid(noise_matrix, py):
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/benchmarking/noise_generation.py:14: in noise_matrix_is_valid
+    return noise_matrix_is_valid(noise_matrix, py)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+noise_matrix = array([[0.31731497, 0.49926072, 0.63191116, 0.        ],
+       [0.68268503, 0.50073928, 0.        , 0.        ],
+       [0.        , 0.        , 0.36808884, 0.6861431 ],
+       [0.        , 0.        , 0.        , 0.3138569 ]])
+py = [0.1, 0.1, 0.2, 0.6], verbose = False
+
+    def noise_matrix_is_valid(noise_matrix: np.ndarray, py: np.ndarray, verbose: bool=False) -> bool:
+        """
+        Check if the given noise_matrix is learnable, meaning it is possible to achieve
+        better than random performance for the amount of noise in the matrix.
+    
+        Args:
+            noise_matrix (np.ndarray): A square matrix where element (i, j) represents
+                                       the probability of class i being flipped to class j.
+            py (np.ndarray): A 1D array representing the prior probabilities of each class.
+            verbose (bool, optional): If True, print detailed information about the process.
+    
+        Returns:
+            bool: True if the noise matrix is learnable, False otherwise.
+        """
+        num_classes = noise_matrix.shape[0]
+>       if noise_matrix.shape[1] != num_classes or py.shape[0] != num_classes:
+E       AttributeError: 'list' object has no attribute 'shape'
+
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/benchmarking/temp.py:22: AttributeError
+__________________________ test_main_pipeline_verbose __________________________
+
+verbose = True, n = 10
+
+    def test_main_pipeline_verbose(verbose=True, n=10):
+>       test_main_pipeline(verbose=verbose, n=n)
+
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py:22: in test_main_pipeline
+    nm = noise_generation.generate_noise_matrix_from_trace(
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/benchmarking/noise_generation.py:204: in generate_noise_matrix_from_trace
+    if not valid_noise_matrix or noise_matrix_is_valid(noise_matrix, py):
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/benchmarking/noise_generation.py:14: in noise_matrix_is_valid
+    return noise_matrix_is_valid(noise_matrix, py)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+noise_matrix = array([[0.31731497, 0.04498324, 0.11594842, 0.08379137],
+       [0.32740194, 0.50073928, 0.4203033 , 0.02759258],
+       [0.18150018, 0.1459341 , 0.36808884, 0.57475914],
+       [0.17378291, 0.30834337, 0.09565944, 0.3138569 ]])
+py = [0.1, 0.1, 0.2, 0.6], verbose = False
+
+    def noise_matrix_is_valid(noise_matrix: np.ndarray, py: np.ndarray, verbose: bool=False) -> bool:
+        """
+        Check if the given noise_matrix is learnable, meaning it is possible to achieve
+        better than random performance for the amount of noise in the matrix.
+    
+        Args:
+            noise_matrix (np.ndarray): A square matrix where element (i, j) represents
+                                       the probability of class i being flipped to class j.
+            py (np.ndarray): A 1D array representing the prior probabilities of each class.
+            verbose (bool, optional): If True, print detailed information about the process.
+    
+        Returns:
+            bool: True if the noise matrix is learnable, False otherwise.
+        """
+        num_classes = noise_matrix.shape[0]
+>       if noise_matrix.shape[1] != num_classes or py.shape[0] != num_classes:
+E       AttributeError: 'list' object has no attribute 'shape'
+
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/benchmarking/temp.py:22: AttributeError
+___________________________ test_main_pipeline_many ____________________________
+
+verbose = False, n = 1000
+
+    def test_main_pipeline_many(verbose=False, n=1000):
+>       test_main_pipeline(verbose=verbose, n=n)
+
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py:51: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py:22: in test_main_pipeline
+    nm = noise_generation.generate_noise_matrix_from_trace(
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/benchmarking/noise_generation.py:204: in generate_noise_matrix_from_trace
+    if not valid_noise_matrix or noise_matrix_is_valid(noise_matrix, py):
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/benchmarking/noise_generation.py:14: in noise_matrix_is_valid
+    return noise_matrix_is_valid(noise_matrix, py)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+noise_matrix = array([[0.31731497, 0.04498324, 0.11594842, 0.08379137],
+       [0.32740194, 0.50073928, 0.4203033 , 0.02759258],
+       [0.18150018, 0.1459341 , 0.36808884, 0.57475914],
+       [0.17378291, 0.30834337, 0.09565944, 0.3138569 ]])
+py = [0.1, 0.1, 0.2, 0.6], verbose = False
+
+    def noise_matrix_is_valid(noise_matrix: np.ndarray, py: np.ndarray, verbose: bool=False) -> bool:
+        """
+        Check if the given noise_matrix is learnable, meaning it is possible to achieve
+        better than random performance for the amount of noise in the matrix.
+    
+        Args:
+            noise_matrix (np.ndarray): A square matrix where element (i, j) represents
+                                       the probability of class i being flipped to class j.
+            py (np.ndarray): A 1D array representing the prior probabilities of each class.
+            verbose (bool, optional): If True, print detailed information about the process.
+    
+        Returns:
+            bool: True if the noise matrix is learnable, False otherwise.
+        """
+        num_classes = noise_matrix.shape[0]
+>       if noise_matrix.shape[1] != num_classes or py.shape[0] != num_classes:
+E       AttributeError: 'list' object has no attribute 'shape'
+
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/benchmarking/temp.py:22: AttributeError
+____________________ test_main_pipeline_many_verbose_valid _____________________
+
+verbose = True, n = 100
+
+    def test_main_pipeline_many_verbose_valid(verbose=True, n=100):
+>       test_main_pipeline(verbose, n, valid_noise_matrix=True)
+
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py:55: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py:22: in test_main_pipeline
+    nm = noise_generation.generate_noise_matrix_from_trace(
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/benchmarking/noise_generation.py:204: in generate_noise_matrix_from_trace
+    if not valid_noise_matrix or noise_matrix_is_valid(noise_matrix, py):
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/benchmarking/noise_generation.py:14: in noise_matrix_is_valid
+    return noise_matrix_is_valid(noise_matrix, py)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+noise_matrix = array([[0.31731497, 0.04498324, 0.11594842, 0.08379137],
+       [0.32740194, 0.50073928, 0.4203033 , 0.02759258],
+       [0.18150018, 0.1459341 , 0.36808884, 0.57475914],
+       [0.17378291, 0.30834337, 0.09565944, 0.3138569 ]])
+py = [0.1, 0.1, 0.2, 0.6], verbose = False
+
+    def noise_matrix_is_valid(noise_matrix: np.ndarray, py: np.ndarray, verbose: bool=False) -> bool:
+        """
+        Check if the given noise_matrix is learnable, meaning it is possible to achieve
+        better than random performance for the amount of noise in the matrix.
+    
+        Args:
+            noise_matrix (np.ndarray): A square matrix where element (i, j) represents
+                                       the probability of class i being flipped to class j.
+            py (np.ndarray): A 1D array representing the prior probabilities of each class.
+            verbose (bool, optional): If True, print detailed information about the process.
+    
+        Returns:
+            bool: True if the noise matrix is learnable, False otherwise.
+        """
+        num_classes = noise_matrix.shape[0]
+>       if noise_matrix.shape[1] != num_classes or py.shape[0] != num_classes:
+E       AttributeError: 'list' object has no attribute 'shape'
+
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/benchmarking/temp.py:22: AttributeError
+________________________ test_main_pipeline_many_valid _________________________
+
+verbose = False, n = 100
+
+    def test_main_pipeline_many_valid(verbose=False, n=100):
+>       test_main_pipeline(verbose, n, valid_noise_matrix=True)
+
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py:59: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py:22: in test_main_pipeline
+    nm = noise_generation.generate_noise_matrix_from_trace(
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/benchmarking/noise_generation.py:204: in generate_noise_matrix_from_trace
+    if not valid_noise_matrix or noise_matrix_is_valid(noise_matrix, py):
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/benchmarking/noise_generation.py:14: in noise_matrix_is_valid
+    return noise_matrix_is_valid(noise_matrix, py)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+noise_matrix = array([[0.31731497, 0.04498324, 0.11594842, 0.08379137],
+       [0.32740194, 0.50073928, 0.4203033 , 0.02759258],
+       [0.18150018, 0.1459341 , 0.36808884, 0.57475914],
+       [0.17378291, 0.30834337, 0.09565944, 0.3138569 ]])
+py = [0.1, 0.1, 0.2, 0.6], verbose = False
+
+    def noise_matrix_is_valid(noise_matrix: np.ndarray, py: np.ndarray, verbose: bool=False) -> bool:
+        """
+        Check if the given noise_matrix is learnable, meaning it is possible to achieve
+        better than random performance for the amount of noise in the matrix.
+    
+        Args:
+            noise_matrix (np.ndarray): A square matrix where element (i, j) represents
+                                       the probability of class i being flipped to class j.
+            py (np.ndarray): A 1D array representing the prior probabilities of each class.
+            verbose (bool, optional): If True, print detailed information about the process.
+    
+        Returns:
+            bool: True if the noise matrix is learnable, False otherwise.
+        """
+        num_classes = noise_matrix.shape[0]
+>       if noise_matrix.shape[1] != num_classes or py.shape[0] != num_classes:
+E       AttributeError: 'list' object has no attribute 'shape'
+
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/benchmarking/temp.py:22: AttributeError
+_______________________ test_main_pipeline_many_verbose ________________________
+
+verbose = True, n = 1000
+
+    def test_main_pipeline_many_verbose(verbose=True, n=1000):
+>       test_main_pipeline(verbose=verbose, n=n)
+
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py:63: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py:22: in test_main_pipeline
+    nm = noise_generation.generate_noise_matrix_from_trace(
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/benchmarking/noise_generation.py:204: in generate_noise_matrix_from_trace
+    if not valid_noise_matrix or noise_matrix_is_valid(noise_matrix, py):
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/benchmarking/noise_generation.py:14: in noise_matrix_is_valid
+    return noise_matrix_is_valid(noise_matrix, py)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+noise_matrix = array([[0.31731497, 0.04498324, 0.11594842, 0.08379137],
+       [0.32740194, 0.50073928, 0.4203033 , 0.02759258],
+       [0.18150018, 0.1459341 , 0.36808884, 0.57475914],
+       [0.17378291, 0.30834337, 0.09565944, 0.3138569 ]])
+py = [0.1, 0.1, 0.2, 0.6], verbose = False
+
+    def noise_matrix_is_valid(noise_matrix: np.ndarray, py: np.ndarray, verbose: bool=False) -> bool:
+        """
+        Check if the given noise_matrix is learnable, meaning it is possible to achieve
+        better than random performance for the amount of noise in the matrix.
+    
+        Args:
+            noise_matrix (np.ndarray): A square matrix where element (i, j) represents
+                                       the probability of class i being flipped to class j.
+            py (np.ndarray): A 1D array representing the prior probabilities of each class.
+            verbose (bool, optional): If True, print detailed information about the process.
+    
+        Returns:
+            bool: True if the noise matrix is learnable, False otherwise.
+        """
+        num_classes = noise_matrix.shape[0]
+>       if noise_matrix.shape[1] != num_classes or py.shape[0] != num_classes:
+E       AttributeError: 'list' object has no attribute 'shape'
+
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/benchmarking/temp.py:22: AttributeError
+_______________________ test_invalid_inputs_verify[True] _______________________
+
+verbose = True
+
+    @pytest.mark.parametrize("verbose", [True, False])
+    def test_invalid_inputs_verify(verbose):
+        nm = np.array(
+            [
+                [0.2, 0.5],
+                [0.8, 0.5],
+            ]
+        )
+        py = [0.1, 0.8]
+>       assert not noise_generation.noise_matrix_is_valid(nm, py, verbose=verbose)
+
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py:75: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/benchmarking/noise_generation.py:14: in noise_matrix_is_valid
+    return noise_matrix_is_valid(noise_matrix, py)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+noise_matrix = array([[0.2, 0.5],
+       [0.8, 0.5]]), py = [0.1, 0.8]
+verbose = False
+
+    def noise_matrix_is_valid(noise_matrix: np.ndarray, py: np.ndarray, verbose: bool=False) -> bool:
+        """
+        Check if the given noise_matrix is learnable, meaning it is possible to achieve
+        better than random performance for the amount of noise in the matrix.
+    
+        Args:
+            noise_matrix (np.ndarray): A square matrix where element (i, j) represents
+                                       the probability of class i being flipped to class j.
+            py (np.ndarray): A 1D array representing the prior probabilities of each class.
+            verbose (bool, optional): If True, print detailed information about the process.
+    
+        Returns:
+            bool: True if the noise matrix is learnable, False otherwise.
+        """
+        num_classes = noise_matrix.shape[0]
+>       if noise_matrix.shape[1] != num_classes or py.shape[0] != num_classes:
+E       AttributeError: 'list' object has no attribute 'shape'
+
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/benchmarking/temp.py:22: AttributeError
+______________________ test_invalid_inputs_verify[False] _______________________
+
+verbose = False
+
+    @pytest.mark.parametrize("verbose", [True, False])
+    def test_invalid_inputs_verify(verbose):
+        nm = np.array(
+            [
+                [0.2, 0.5],
+                [0.8, 0.5],
+            ]
+        )
+        py = [0.1, 0.8]
+>       assert not noise_generation.noise_matrix_is_valid(nm, py, verbose=verbose)
+
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py:75: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/benchmarking/noise_generation.py:14: in noise_matrix_is_valid
+    return noise_matrix_is_valid(noise_matrix, py)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+noise_matrix = array([[0.2, 0.5],
+       [0.8, 0.5]]), py = [0.1, 0.8]
+verbose = False
+
+    def noise_matrix_is_valid(noise_matrix: np.ndarray, py: np.ndarray, verbose: bool=False) -> bool:
+        """
+        Check if the given noise_matrix is learnable, meaning it is possible to achieve
+        better than random performance for the amount of noise in the matrix.
+    
+        Args:
+            noise_matrix (np.ndarray): A square matrix where element (i, j) represents
+                                       the probability of class i being flipped to class j.
+            py (np.ndarray): A 1D array representing the prior probabilities of each class.
+            verbose (bool, optional): If True, print detailed information about the process.
+    
+        Returns:
+            bool: True if the noise matrix is learnable, False otherwise.
+        """
+        num_classes = noise_matrix.shape[0]
+>       if noise_matrix.shape[1] != num_classes or py.shape[0] != num_classes:
+E       AttributeError: 'list' object has no attribute 'shape'
+
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/benchmarking/temp.py:22: AttributeError
+_____________________________ test_invalid_matrix ______________________________
+
+    def test_invalid_matrix():
+        nm = np.array(
+            [
+                [0.1, 0.9],
+                [0.9, 0.1],
+            ]
+        )
+        py = [0.1, 0.9]
+>       assert not noise_generation.noise_matrix_is_valid(nm, py)
+
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py:98: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/benchmarking/noise_generation.py:14: in noise_matrix_is_valid
+    return noise_matrix_is_valid(noise_matrix, py)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+noise_matrix = array([[0.1, 0.9],
+       [0.9, 0.1]]), py = [0.1, 0.9]
+verbose = False
+
+    def noise_matrix_is_valid(noise_matrix: np.ndarray, py: np.ndarray, verbose: bool=False) -> bool:
+        """
+        Check if the given noise_matrix is learnable, meaning it is possible to achieve
+        better than random performance for the amount of noise in the matrix.
+    
+        Args:
+            noise_matrix (np.ndarray): A square matrix where element (i, j) represents
+                                       the probability of class i being flipped to class j.
+            py (np.ndarray): A 1D array representing the prior probabilities of each class.
+            verbose (bool, optional): If True, print detailed information about the process.
+    
+        Returns:
+            bool: True if the noise matrix is learnable, False otherwise.
+        """
+        num_classes = noise_matrix.shape[0]
+>       if noise_matrix.shape[1] != num_classes or py.shape[0] != num_classes:
+E       AttributeError: 'list' object has no attribute 'shape'
+
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/benchmarking/temp.py:22: AttributeError
+________________________________ test_max_iter _________________________________
+
+    def test_max_iter():
+        trace = 2
+        K = 3
+        py = [1 / float(K)] * K
+>       nm = noise_generation.generate_noise_matrix_from_trace(
+            K=K,
+            trace=trace,
+            valid_noise_matrix=True,
+            max_iter=1,
+            py=py,
+            seed=1,
+        )
+
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py:240: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/benchmarking/noise_generation.py:204: in generate_noise_matrix_from_trace
+    if not valid_noise_matrix or noise_matrix_is_valid(noise_matrix, py):
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/benchmarking/noise_generation.py:14: in noise_matrix_is_valid
+    return noise_matrix_is_valid(noise_matrix, py)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+noise_matrix = array([[0.59498546, 0.12465311, 0.24388707],
+       [0.25149193, 0.82011652, 0.1712149 ],
+       [0.15352261, 0.05523037, 0.58489803]])
+py = [0.3333333333333333, 0.3333333333333333, 0.3333333333333333]
+verbose = False
+
+    def noise_matrix_is_valid(noise_matrix: np.ndarray, py: np.ndarray, verbose: bool=False) -> bool:
+        """
+        Check if the given noise_matrix is learnable, meaning it is possible to achieve
+        better than random performance for the amount of noise in the matrix.
+    
+        Args:
+            noise_matrix (np.ndarray): A square matrix where element (i, j) represents
+                                       the probability of class i being flipped to class j.
+            py (np.ndarray): A 1D array representing the prior probabilities of each class.
+            verbose (bool, optional): If True, print detailed information about the process.
+    
+        Returns:
+            bool: True if the noise matrix is learnable, False otherwise.
+        """
+        num_classes = noise_matrix.shape[0]
+>       if noise_matrix.shape[1] != num_classes or py.shape[0] != num_classes:
+E       AttributeError: 'list' object has no attribute 'shape'
+
+/local/data0/moved_data/publishablew/cleanlab/cleanlab/cleanlab/benchmarking/temp.py:22: AttributeError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline
+FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_fraczero_high
+FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_verbose
+FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_many
+FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_many_verbose_valid
+FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_many_valid
+FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_many_verbose
+FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_invalid_inputs_verify[True]
+FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_invalid_inputs_verify[False]
+FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_invalid_matrix
+FAILED ../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_max_iter
+======================== 11 failed, 13 passed in 0.75s =========================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/bin/python
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/aliredaq/Desktop/ICSE/src/tester/.hypothesis/examples'))
+rootdir: /local/data0/moved_data/publishablew/cleanlab/cleanlab
+configfile: pyproject.toml
+plugins: hypothesis-6.124.1
+collecting ... collected 24 items
+
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_fraczero_high PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_verbose PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_many PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_many_verbose_valid PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_many_valid PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_many_verbose PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_invalid_inputs_verify[True] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_invalid_inputs_verify[False] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_invalid_matrix PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_trace_less_than_1_error PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_trace_equals_1_error PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_valid_no_py_error PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_one_class_error PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_two_class_nofraczero PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_two_class_fraczero_high PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_two_class_fraczero_high_valid PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_gen_probs_sum_empty PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_gen_probs_max_error PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_gen_probs_min_error PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_probs_min_max_error PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_balls_zero PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_balls_params PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_max_iter PASSED
+
+============================== 24 passed in 0.59s ==============================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/cleanlab/cleanlab/venv/bin/python
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/aliredaq/Desktop/ICSE/src/tester/.hypothesis/examples'))
+rootdir: /local/data0/moved_data/publishablew/cleanlab/cleanlab
+configfile: pyproject.toml
+plugins: hypothesis-6.124.1
+collecting ... collected 24 items
+
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_fraczero_high PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_verbose PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_many PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_many_verbose_valid PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_many_valid PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_main_pipeline_many_verbose PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_invalid_inputs_verify[True] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_invalid_inputs_verify[False] PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_invalid_matrix PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_trace_less_than_1_error PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_trace_equals_1_error PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_valid_no_py_error PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_one_class_error PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_two_class_nofraczero PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_two_class_fraczero_high PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_two_class_fraczero_high_valid PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_gen_probs_sum_empty PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_gen_probs_max_error PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_gen_probs_min_error PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_probs_min_max_error PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_balls_zero PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_balls_params PASSED
+../../../../../../local/data0/moved_data/publishablew/cleanlab/cleanlab/tests/test_noise_generation.py::test_max_iter PASSED
+
+============================== 24 passed in 0.59s ==============================

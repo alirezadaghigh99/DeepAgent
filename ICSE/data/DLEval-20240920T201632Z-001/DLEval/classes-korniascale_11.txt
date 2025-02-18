@@ -1,0 +1,25 @@
+stage: Image
+task: 
+data: pre-post process
+
+prompt:
+Generate the `scale` function for the following class to scale the intrinsic parameters and image dimensions by a given scale factor. The input is `self` and a `scale_factor` tensor with shape `(B)` or `(1)`, and the output is a new instance of `PinholeCamera` with scaled parameters.
+
+```python
+class PinholeCamera:
+    def __init__(self, intrinsics: Tensor, extrinsics: Tensor, height: Tensor, width: Tensor) -> None:
+        self.height: Tensor = height
+        self.width: Tensor = width
+        self._intrinsics: Tensor = intrinsics
+        self._extrinsics: Tensor = extrinsics
+```
+
+ ground Truth:kornia/geometry/camera/pinhole.py
+
+ repo:kornia
+
+ function:scale
+ 
+ class:PinholeCamera
+ 
+ test_cases:tests/geometry/camera/test_pinhole.py

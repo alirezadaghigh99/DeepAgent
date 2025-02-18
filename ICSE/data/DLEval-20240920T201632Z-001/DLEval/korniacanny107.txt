@@ -1,0 +1,27 @@
+stage: Model Construction
+task: 
+data: Image
+
+prompt:
+Generate a Python function called canny that implements the Canny edge detection algorithm. The function takes the following inputs:
+- input: input image tensor with shape (B,C,H,W)
+- low_threshold: lower threshold for the hysteresis procedure
+- high_threshold: upper threshold for the hysteresis procedure
+- kernel_size: the size of the kernel for the Gaussian blur
+- sigma: the standard deviation of the kernel for the Gaussian blur
+- hysteresis: a boolean indicating whether to apply hysteresis edge tracking
+- eps: a regularization number to avoid NaN during backpropagation
+
+The function returns a tuple containing:
+- the canny edge magnitudes map, with a shape of (B,1,H,W)
+- the canny edge detection filtered by thresholds and hysteresis, with a shape of (B,1,H,W)
+
+The function first checks the input tensor and its shape, then converts the input to grayscale if it has 3 channels. It applies Gaussian blur, computes gradients, computes gradient magnitude and angle, performs non-maximal suppression, applies thresholding, and finally applies hysteresis if specified. The output edges are returned as tensors.
+
+ ground Truth:kornia/filters/canny.py
+
+ repo:kornia
+
+ function:canny
+ 
+ test_cases:tests/filters/test_canny.py

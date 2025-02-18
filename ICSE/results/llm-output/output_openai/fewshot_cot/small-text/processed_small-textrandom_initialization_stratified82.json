@@ -1,0 +1,11 @@
+{
+    "result": "Error",
+    "prompt": "Generate a Python function called random_initialization_stratified that randomly draws a subset stratified by class labels. The function takes in parameters y, which is an np.ndarray[int] or csr_matrix representing the labels to be used for stratification, n_samples which is an integer representing the number of samples to draw, and multilabel_strategy which is a string representing the multi-label strategy to be used in case of a multi-label labeling (default is 'labelsets'). \n\nThe function returns indices, which is an np.ndarray[int] representing the indices relative to y. If y is of type csr_matrix, the function uses the multilabel_strategy 'labelsets' to perform multilabel stratified subsets sampling using the function multilabel_stratified_subsets_sampling. If the multilabel_strategy is not 'labelsets', a ValueError is raised : ValueError(f'Invalid multilabel_strategy: {multilabel_strategy}'). If y is not a csr_matrix, the function performs stratified sampling using the function stratified_sampling. for the input the diefault is n_samples=10, multilabel_strategy='labelsets'",
+    "function_name": "random_initialization_stratified",
+    "ground_truth": "small_text/initialization/strategies.py",
+    "test": "tests/unit/small_text/initialization/test_strategies.py::RandomInitializationStratifiedTest",
+    "class": "",
+    "stage": "Pre-Post processing",
+    "task": "",
+    "data": "Text"
+}

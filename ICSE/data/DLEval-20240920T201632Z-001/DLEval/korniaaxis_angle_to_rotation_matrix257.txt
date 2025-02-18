@@ -1,0 +1,33 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Write a python function axis_angle_to_rotation_matrix thatConvert 3d vector of axis-angle rotation to 3x3 rotation matrix.
+
+    Args:
+        axis_angle: tensor of 3d vector of axis-angle rotations in radians with shape :math:`(N, 3)`.
+
+    Returns:
+        tensor of rotation matrices of shape :math:`(N, 3, 3)`.
+
+    Example:
+        >>> input = tensor([[0., 0., 0.]])
+        >>> axis_angle_to_rotation_matrix(input)
+        tensor([[[1., 0., 0.],
+                 [0., 1., 0.],
+                 [0., 0., 1.]]])
+
+        >>> input = tensor([[1.5708, 0., 0.]])
+        >>> axis_angle_to_rotation_matrix(input)
+        tensor([[[ 1.0000e+00,  0.0000e+00,  0.0000e+00],
+                 [ 0.0000e+00, -3.6200e-06, -1.0000e+00],
+                 [ 0.0000e+00,  1.0000e+00, -3.6200e-06]]]]
+
+ ground Truth:kornia/geometry/conversions.py#L267
+
+ repo:kornia
+
+ function:axis_angle_to_rotation_matrix
+ 
+ test_cases:tests/geometry/test_conversions.py::TestAngleAxisToRotationMatrix

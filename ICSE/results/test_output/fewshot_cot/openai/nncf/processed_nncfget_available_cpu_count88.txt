@@ -1,0 +1,101 @@
+output file:
+processed_nncfget_available_cpu_count88.json
+function:
+get_available_cpu_count
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_none FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_none'}
+
+All Test Cases On Generated code:
+INFO:nncf:NNCF initialized successfully. Supported frameworks detected: torch, tensorflow, onnx
+============================= test session starts ==============================
+platform linux -- Python 3.9.0, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/nncf/nncf/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/nncf/nncf
+configfile: pyproject.toml
+plugins: mock-3.14.0, dependency-0.6.0
+collecting ... collected 12 items
+
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_fail_if_symlink_not_symlink PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_fail_if_symlink_is_symlink PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_safe_open_not_symlink PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_safe_open_is_symlink PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_is_windows PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_is_linux PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_logical PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_physical PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_none FAILED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_exception PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_memory_amount PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_memory_amount_exception PASSED
+
+=================================== FAILURES ===================================
+______________________ test_get_available_cpu_count_none _______________________
+
+mock_cpu_count = <MagicMock name='cpu_count' id='135175635431776'>
+
+    def test_get_available_cpu_count_none(mock_cpu_count):
+        mock_cpu_count.return_value = None
+        result = get_available_cpu_count()
+>       assert result == 1
+E       assert None == 1
+
+/local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py:91: AssertionError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_none
+========================= 1 failed, 11 passed in 0.10s =========================
+
+
+Final Test Result:
+INFO:nncf:NNCF initialized successfully. Supported frameworks detected: torch, tensorflow, onnx
+============================= test session starts ==============================
+platform linux -- Python 3.9.0, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/nncf/nncf/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/nncf/nncf
+configfile: pyproject.toml
+plugins: mock-3.14.0, dependency-0.6.0
+collecting ... collected 12 items
+
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_fail_if_symlink_not_symlink PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_fail_if_symlink_is_symlink PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_safe_open_not_symlink PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_safe_open_is_symlink PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_is_windows PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_is_linux PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_logical PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_physical PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_none PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_exception PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_memory_amount PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_memory_amount_exception PASSED
+
+============================== 12 passed in 0.02s ==============================
+
+
+Initial Result:
+INFO:nncf:NNCF initialized successfully. Supported frameworks detected: torch, tensorflow, onnx
+============================= test session starts ==============================
+platform linux -- Python 3.9.0, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/nncf/nncf/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/nncf/nncf
+configfile: pyproject.toml
+plugins: mock-3.14.0, dependency-0.6.0
+collecting ... collected 12 items
+
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_fail_if_symlink_not_symlink PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_fail_if_symlink_is_symlink PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_safe_open_not_symlink PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_safe_open_is_symlink PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_is_windows PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_is_linux PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_logical PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_physical PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_none PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_cpu_count_exception PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_memory_amount PASSED
+../../../../../../local/data0/moved_data/publishablew/nncf/nncf/tests/common/utils/test_os.py::test_get_available_memory_amount_exception PASSED
+
+============================== 12 passed in 0.08s ==============================

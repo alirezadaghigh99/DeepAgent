@@ -1,0 +1,23 @@
+stage: Evaluating&Metrics
+task: Classification
+data: Table
+
+prompt:
+Generate a Python function called top_k_accuracy_score that calculates the top-k accuracy classification score. The function takes in the following parameters:
+
+- y_true: array-like of shape (n_samples,) representing the true labels.
+- y_score: array-like of shape (n_samples,) or (n_samples, n_classes) representing the target scores.
+- k: an integer representing the number of most likely outcomes considered to find the correct label.
+- normalize: a boolean indicating whether to return the fraction of correctly classified samples or the number of correctly classified samples.
+- sample_weight: array-like of shape (n_samples,) representing sample weights.
+- labels: array-like of shape (n_classes,) representing the list of labels that index the classes in y_score.
+
+The function returns a float value representing the top-k accuracy score. The best performance is 1 with normalize == True and the number of samples with normalize == False. The function also includes examples and additional information about the metric.
+
+ ground Truth:sklearn/metrics/_ranking.py
+
+ repo:scikit-learn
+
+ function:top_k_accuracy_score
+ 
+ test_cases:sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary

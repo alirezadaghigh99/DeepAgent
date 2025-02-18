@@ -1,0 +1,24 @@
+stage: Model Construction
+task: Detection
+data: Image
+
+prompt:
+Create a Python function `run_7point` that computes the fundamental matrix using the 7-point algorithm. The function should:
+
+- Accept two sets of points (`points1`, `points2`) as input, each of shape `(B, N, 2)`, where `B` is the batch size, and `N` is the number of points (exactly 7).
+- Normalize the points, construct a linear system, and solve it using SVD to obtain two fundamental matrices.
+- Use these matrices to form a cubic polynomial, solve for its roots, and compute up to three potential fundamental matrices.
+- Handle edge cases where matrices might be non-invertible and ensure numerical stability.
+- Return the computed fundamental matrices in the shape `(B, 3*m, 3)`, where `m` can be 1, 2, or 3.
+
+Errors:
+- The function should raise `AssertionError` if the input tensors do not have the expected shapes.
+- Handle cases where matrix inversion is problematic, ensuring robust solutions are returned.
+
+ ground Truth:kornia/geometry/epipolar/fundamental.py#L76
+
+ repo:kornia
+
+ function:run_7point
+ 
+ test_cases:tests/geometry/epipolar/test_fundamental.py::TestFindFundamental

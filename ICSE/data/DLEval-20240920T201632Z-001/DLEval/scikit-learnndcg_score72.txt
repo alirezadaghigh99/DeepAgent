@@ -1,0 +1,50 @@
+stage: Evaluating&Metrics
+task: 
+data: Table
+
+prompt:
+Generate a Python function called ndcg_score that Compute Normalized Discounted Cumulative Gain.
+
+    Sum the true scores ranked in the order induced by the predicted scores,
+    after applying a logarithmic discount. Then divide by the best possible
+    score (Ideal DCG, obtained for a perfect ranking) to obtain a score between
+    0 and 1.
+
+    This ranking metric returns a high value if true labels are ranked high by
+    ``y_score``.
+
+    Parameters
+    ----------
+    y_true : array-like of shape (n_samples, n_labels)
+        True targets of multilabel classification, or true scores of entities
+        to be ranked. Negative values in `y_true` may result in an output
+        that is not between 0 and 1.
+
+    y_score : array-like of shape (n_samples, n_labels)
+        Target scores, can either be probability estimates, confidence values,
+        or non-thresholded measure of decisions (as returned by
+        "decision_function" on some classifiers).
+
+    k : int, default=None
+        Only consider the highest k scores in the ranking. If `None`, use all
+        outputs.
+
+    sample_weight : array-like of shape (n_samples,), default=None
+        Sample weights. If `None`, all samples are given the same weight.
+
+    ignore_ties : bool, default=False
+        Assume that there are no ties in y_score (which is likely to be the
+        case if y_score is continuous) for efficiency gains.
+
+    Returns
+    -------
+    normalized_discounted_cumulative_gain : float in [0., 1.]
+        The averaged NDCG scores for all samples.
+
+ ground Truth:sklearn/metrics/_ranking.py
+
+ repo:scikit-learn
+
+ function:ndcg_score
+ 
+ test_cases:sklearn/metrics/tests/test_ranking.py:test_ndcg_toy_examples

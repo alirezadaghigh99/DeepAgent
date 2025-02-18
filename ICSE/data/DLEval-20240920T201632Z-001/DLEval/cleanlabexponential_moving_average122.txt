@@ -1,0 +1,26 @@
+stage: Model Construction
+task: 
+data: Table
+
+prompt:
+Generate a Python function called exponential_moving_average that calculates the exponential moving average (EMA) score aggregation for a given array of scores. The function takes in an array of scores 's', an optional parameter 'alpha' which determines the weight of the previous EMA score, an integer 'axis' indicating the axis along which the scores are sorted, and additional keyword arguments.
+
+The EMA is calculated using the formula: EMA_t = alpha * s_t + (1 - alpha) * EMA_{t-1}, where alpha is the forgetting factor that gives more weight to the most recent scores. The function returns the exponential moving average score 's_ema'.
+
+Example usage:
+```python
+from cleanlab.internal.multilabel_scorer import exponential_moving_average
+import numpy as np
+
+s = np.array([[0.1, 0.2, 0.3]])
+exponential_moving_average(s, alpha=0.5)
+# Output: np.array([0.175])
+```
+
+ ground Truth:cleanlab/internal/multilabel_scorer.py
+
+ repo:cleanlab
+
+ function:exponential_moving_average
+
+ test_cases:tests/test_multilabel_classification.py::TestExponentialMovingAverage

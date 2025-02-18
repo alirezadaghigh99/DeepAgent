@@ -1,0 +1,18 @@
+stage: Inference
+task: Detection
+data: Image
+
+prompt:
+Define a Python function called sample_based_on_detections_number that takes in parameters including an image as a NumPy array, a prediction object, a prediction type, optional integer values for more_than and less_than, a set of selected class names, and a probability value. The function returns a boolean value.
+
+Within the function, it first checks if the prediction is a stub or if the prediction type is not in a predefined list of eligible types, in which case it returns False. It then calculates the number of detections close to a threshold using the count_detections_close_to_threshold function with specific parameters. 
+
+Afterwards, it checks if the calculated value falls within a specified range based on the more_than and less_than parameters. If it does, the function returns True with a probability determined by a random number generator. Otherwise, it returns False.
+
+ ground Truth:inference/core/active_learning/samplers/number_of_detections.py
+
+ repo:inference
+
+ function:sample_based_on_detections_number
+ 
+ test_cases:tests/inference/unit_tests/core/active_learning/samplers/test_number_of_detections.py

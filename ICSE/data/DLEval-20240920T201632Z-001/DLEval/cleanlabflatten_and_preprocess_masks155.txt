@@ -1,0 +1,14 @@
+stage: Inference
+task: segmentation
+data: Image
+
+prompt:
+Create a Python function `flatten_and_preprocess_masks` that flattens a 2D/3D `labels` array and reshapes a 4D `pred_probs` array so that the channels align with the flattened labels. Return the flattened `labels` and the transposed, flattened `pred_probs`.
+
+ ground Truth:cleanlab/segmentation/filter.py#L89
+
+ repo:cleanlab
+
+ function:flatten_and_preprocess_masks
+ 
+ test_cases:tests/test_segmentation.py

@@ -1,0 +1,26 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+
+---
+
+Create a Python function `normalize_transformation` that:
+
+- Accepts two parameters:
+  - `M`: A tensor representing a transformation matrix of any shape with at least 2x2 dimensions.
+  - `eps`: A small float value (default is `1e-8`) used to avoid numerical instabilities during backpropagation.
+- The function normalizes the input transformation matrix `M` so that the value in the last row and column is set to one.
+- Returns the normalized transformation matrix with the same shape as the input.
+
+Errors:
+- Raises an `AssertionError` if the input matrix `M` has fewer than 2 dimensions.
+
+ ground Truth:kornia/geometry/epipolar/fundamental.py
+
+ repo:kornia
+
+ function:normalize_transformation
+ 
+ test_cases:tests/geometry/epipolar/test_fundamental.py

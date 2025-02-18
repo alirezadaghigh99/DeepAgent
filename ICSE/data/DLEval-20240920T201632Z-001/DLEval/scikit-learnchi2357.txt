@@ -1,0 +1,14 @@
+stage: Evaluating&Metrics
+task: Classification
+data: Table
+
+prompt:
+Generate a Python function called chi2 that computes chi-squared statistics between each non-negative feature and class. The function takes two parameters: X, an array-like or sparse matrix of shape (n_samples, n_features) representing sample vectors, and y, an array-like of shape (n_samples,) representing target vector (class labels). The function returns two arrays: chi2, an ndarray of shape (n_features,) containing Chi2 statistics for each feature, and p_values, an ndarray of shape (n_features,) containing p-values for each feature. The complexity of the algorithm is O(n_classes * n_features). The function uses the LabelBinarizer to handle sparse representation for Y and performs calculations to determine observed and expected values before calling the _chisquare function.
+
+ ground Truth:sklearn/feature_selection/_univariate_selection.py
+
+ repo:scikit-learn
+
+ function:chi2
+ 
+ test_cases:sklearn/feature_selection/tests/test_chi2.py

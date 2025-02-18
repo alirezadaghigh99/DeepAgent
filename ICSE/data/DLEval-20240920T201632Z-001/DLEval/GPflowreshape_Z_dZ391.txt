@@ -1,0 +1,23 @@
+stage: Pre-Post processing
+task: Prediction
+data: tabular
+
+prompt:
+"Complete the following function :
+def reshape_Z_dZ(
+    zs: Sequence[TensorType], dzs: Sequence[TensorType]
+) -> Tuple[tf.Tensor, tf.Tensor]:
+    """
+    :param zs: List with d rank-1 Tensors, with shapes N1, N2, ..., Nd
+    :param dzs: List with d rank-1 Tensors, with shapes N1, N2, ..., Nd
+    :returns: points Z, Tensor with shape [N1*N2*...*Nd, D],
+        and weights dZ, Tensor with shape [N1*N2*...*Nd, 1]
+    """
+
+ ground Truth:gpflow/quadrature/gauss_hermite.py
+
+ repo:GPflow
+
+ function:reshape_Z_dZ
+ 
+ test_cases:tests/gpflow/quadrature/test_quadrature.py 

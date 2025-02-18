@@ -1,0 +1,735 @@
+output file:
+processed_classes-korniaforward18.json
+function:
+forward
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_grad_zca_with_fit[cpu] FAILED [ 60%]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_identity[cpu-float32-input_shape1-0.1] FAILED [ 40%]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_grad_detach_zca[cpu] FAILED [ 66%]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_grad_zca_with_fit[cpu]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_zca_unbiased[cpu-float32-True] FAILED [  6%]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_identity[cpu-float32-input_shape0-1e-06] FAILED [ 33%]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_grad_detach_zca[cpu]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_zca_unbiased[cpu-float32-False]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_identity[cpu-float32-input_shape2-0.001]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_dim_args[cpu-float32-0] FAILED [ 20%]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_zca_unbiased[cpu-float32-True]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_dim_args[cpu-float32-0]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_identity[cpu-float32-input_shape2-0.001] FAILED [ 46%]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_zca_unbiased[cpu-float32-False] FAILED [ 13%]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_identity[cpu-float32-input_shape1-0.1]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_identity[cpu-float32-input_shape0-1e-06]'}
+
+All Test Cases On Generated code:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python3
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'cudagraphs', 'jit', 'openxla', 'inductor', 'tvm', None, 'onnxrt'}
+model weights cached: ['checkpoints']
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 15 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_zca_unbiased[cpu-float32-True] FAILED [  6%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_zca_unbiased[cpu-float32-False] FAILED [ 13%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_dim_args[cpu-float32-0] FAILED [ 20%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_dim_args[cpu-float32-1] FAILED [ 26%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_identity[cpu-float32-input_shape0-1e-06] FAILED [ 33%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_identity[cpu-float32-input_shape1-0.1] FAILED [ 40%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_identity[cpu-float32-input_shape2-0.001] FAILED [ 46%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_grad_zca_individual_transforms[cpu] PASSED [ 53%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_grad_zca_with_fit[cpu] FAILED [ 60%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_grad_detach_zca[cpu] FAILED [ 66%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_not_fitted[cpu-float32] PASSED [ 73%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_not_fitted_inv[cpu-float32] PASSED [ 80%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_jit[cpu-float32] FAILED [ 86%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_zca_whiten_func_unbiased[cpu-float32-True] PASSED [ 93%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_zca_whiten_func_unbiased[cpu-float32-False] PASSED [100%]
+
+=================================== FAILURES ===================================
+_________________ TestZCA.test_zca_unbiased[cpu-float32-True] __________________
+
+self = <test_zca.TestZCA object at 0x747ec2939780>, unbiased = True
+device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("unbiased", [True, False])
+    def test_zca_unbiased(self, unbiased, device, dtype):
+        data = torch.tensor([[0, 1], [1, 0], [-1, 0], [0, -1]], device=device, dtype=dtype)
+    
+        if unbiased:
+            unbiased_val = 1.5
+        else:
+            unbiased_val = 2.0
+    
+        expected = torch.sqrt(unbiased_val * torch.abs(data)) * torch.sign(data)
+    
+        zca = kornia.enhance.ZCAWhitening(unbiased=unbiased).fit(data)
+    
+>       actual = zca(data)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py:23: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:274: in __call__
+    _output_image = decorated_forward(*inputs, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:63: in wrapper
+    tensor_outputs = func(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1736: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1747: in _call_impl
+    return forward_call(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/zca.py:116: in forward
+    transformed_data = self.linear_transform(x, self.transform_matrix, self.mean_vector, self.dim)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = ZCAWhitening(), name = 'linear_transform'
+
+    def __getattr__(self, name: str) -> Any:
+        if "_parameters" in self.__dict__:
+            _parameters = self.__dict__["_parameters"]
+            if name in _parameters:
+                return _parameters[name]
+        if "_buffers" in self.__dict__:
+            _buffers = self.__dict__["_buffers"]
+            if name in _buffers:
+                return _buffers[name]
+        if "_modules" in self.__dict__:
+            modules = self.__dict__["_modules"]
+            if name in modules:
+                return modules[name]
+>       raise AttributeError(
+            f"'{type(self).__name__}' object has no attribute '{name}'"
+        )
+E       AttributeError: 'ZCAWhitening' object has no attribute 'linear_transform'. Did you mean: 'inverse_transform'?
+
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1931: AttributeError
+_________________ TestZCA.test_zca_unbiased[cpu-float32-False] _________________
+
+self = <test_zca.TestZCA object at 0x747ec29396f0>, unbiased = False
+device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("unbiased", [True, False])
+    def test_zca_unbiased(self, unbiased, device, dtype):
+        data = torch.tensor([[0, 1], [1, 0], [-1, 0], [0, -1]], device=device, dtype=dtype)
+    
+        if unbiased:
+            unbiased_val = 1.5
+        else:
+            unbiased_val = 2.0
+    
+        expected = torch.sqrt(unbiased_val * torch.abs(data)) * torch.sign(data)
+    
+        zca = kornia.enhance.ZCAWhitening(unbiased=unbiased).fit(data)
+    
+>       actual = zca(data)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py:23: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:274: in __call__
+    _output_image = decorated_forward(*inputs, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:63: in wrapper
+    tensor_outputs = func(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1736: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1747: in _call_impl
+    return forward_call(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/zca.py:116: in forward
+    transformed_data = self.linear_transform(x, self.transform_matrix, self.mean_vector, self.dim)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = ZCAWhitening(), name = 'linear_transform'
+
+    def __getattr__(self, name: str) -> Any:
+        if "_parameters" in self.__dict__:
+            _parameters = self.__dict__["_parameters"]
+            if name in _parameters:
+                return _parameters[name]
+        if "_buffers" in self.__dict__:
+            _buffers = self.__dict__["_buffers"]
+            if name in _buffers:
+                return _buffers[name]
+        if "_modules" in self.__dict__:
+            modules = self.__dict__["_modules"]
+            if name in modules:
+                return modules[name]
+>       raise AttributeError(
+            f"'{type(self).__name__}' object has no attribute '{name}'"
+        )
+E       AttributeError: 'ZCAWhitening' object has no attribute 'linear_transform'. Did you mean: 'inverse_transform'?
+
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1931: AttributeError
+_____________________ TestZCA.test_dim_args[cpu-float32-0] _____________________
+
+self = <test_zca.TestZCA object at 0x747ec2939c60>, dim = 0
+device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("dim", [0, 1])
+    def test_dim_args(self, dim, device, dtype):
+        if "xla" in device.type:
+            pytest.skip("buggy with XLA devices.")
+    
+        if dtype == torch.float16:
+            pytest.skip("not work for half-precision")
+    
+        data = torch.tensor([[0, 1], [1, 0], [-1, 0], [0, -1]], device=device, dtype=dtype)
+    
+        if dim == 1:
+            expected = torch.tensor(
+                [
+                    [-0.35360718, 0.35360718],
+                    [0.35351562, -0.35351562],
+                    [-0.35353088, 0.35353088],
+                    [0.35353088, -0.35353088],
+                ],
+                device=device,
+                dtype=dtype,
+            )
+        elif dim == 0:
+            expected = torch.tensor(
+                [[0.0, 1.2247448], [1.2247448, 0.0], [-1.2247448, 0.0], [0.0, -1.2247448]], device=device, dtype=dtype
+            )
+    
+        zca = kornia.enhance.ZCAWhitening(dim=dim)
+>       actual = zca(data, True)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py:54: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:274: in __call__
+    _output_image = decorated_forward(*inputs, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:63: in wrapper
+    tensor_outputs = func(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1736: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1747: in _call_impl
+    return forward_call(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/zca.py:116: in forward
+    transformed_data = self.linear_transform(x, self.transform_matrix, self.mean_vector, self.dim)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = ZCAWhitening(), name = 'linear_transform'
+
+    def __getattr__(self, name: str) -> Any:
+        if "_parameters" in self.__dict__:
+            _parameters = self.__dict__["_parameters"]
+            if name in _parameters:
+                return _parameters[name]
+        if "_buffers" in self.__dict__:
+            _buffers = self.__dict__["_buffers"]
+            if name in _buffers:
+                return _buffers[name]
+        if "_modules" in self.__dict__:
+            modules = self.__dict__["_modules"]
+            if name in modules:
+                return modules[name]
+>       raise AttributeError(
+            f"'{type(self).__name__}' object has no attribute '{name}'"
+        )
+E       AttributeError: 'ZCAWhitening' object has no attribute 'linear_transform'. Did you mean: 'inverse_transform'?
+
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1931: AttributeError
+_____________________ TestZCA.test_dim_args[cpu-float32-1] _____________________
+
+self = <test_zca.TestZCA object at 0x747ec2939ba0>, dim = 1
+device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("dim", [0, 1])
+    def test_dim_args(self, dim, device, dtype):
+        if "xla" in device.type:
+            pytest.skip("buggy with XLA devices.")
+    
+        if dtype == torch.float16:
+            pytest.skip("not work for half-precision")
+    
+        data = torch.tensor([[0, 1], [1, 0], [-1, 0], [0, -1]], device=device, dtype=dtype)
+    
+        if dim == 1:
+            expected = torch.tensor(
+                [
+                    [-0.35360718, 0.35360718],
+                    [0.35351562, -0.35351562],
+                    [-0.35353088, 0.35353088],
+                    [0.35353088, -0.35353088],
+                ],
+                device=device,
+                dtype=dtype,
+            )
+        elif dim == 0:
+            expected = torch.tensor(
+                [[0.0, 1.2247448], [1.2247448, 0.0], [-1.2247448, 0.0], [0.0, -1.2247448]], device=device, dtype=dtype
+            )
+    
+        zca = kornia.enhance.ZCAWhitening(dim=dim)
+>       actual = zca(data, True)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py:54: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:274: in __call__
+    _output_image = decorated_forward(*inputs, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:63: in wrapper
+    tensor_outputs = func(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1736: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1747: in _call_impl
+    return forward_call(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/zca.py:116: in forward
+    transformed_data = self.linear_transform(x, self.transform_matrix, self.mean_vector, self.dim)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = ZCAWhitening(), name = 'linear_transform'
+
+    def __getattr__(self, name: str) -> Any:
+        if "_parameters" in self.__dict__:
+            _parameters = self.__dict__["_parameters"]
+            if name in _parameters:
+                return _parameters[name]
+        if "_buffers" in self.__dict__:
+            _buffers = self.__dict__["_buffers"]
+            if name in _buffers:
+                return _buffers[name]
+        if "_modules" in self.__dict__:
+            modules = self.__dict__["_modules"]
+            if name in modules:
+                return modules[name]
+>       raise AttributeError(
+            f"'{type(self).__name__}' object has no attribute '{name}'"
+        )
+E       AttributeError: 'ZCAWhitening' object has no attribute 'linear_transform'. Did you mean: 'inverse_transform'?
+
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1931: AttributeError
+____________ TestZCA.test_identity[cpu-float32-input_shape0-1e-06] _____________
+
+self = <test_zca.TestZCA object at 0x747ec293a110>, input_shape = (15, 2, 2, 2)
+eps = 1e-06, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("input_shape,eps", [((15, 2, 2, 2), 1e-6), ((10, 4), 0.1), ((20, 3, 2, 2), 1e-3)])
+    def test_identity(self, input_shape, eps, device, dtype):
+        """Assert that data can be recovered by the inverse transform."""
+        data = torch.randn(*input_shape, device=device, dtype=dtype)
+    
+        zca = kornia.enhance.ZCAWhitening(compute_inv=True, eps=eps).fit(data)
+    
+>       data_w = zca(data)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py:65: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:274: in __call__
+    _output_image = decorated_forward(*inputs, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:63: in wrapper
+    tensor_outputs = func(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1736: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1747: in _call_impl
+    return forward_call(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/zca.py:116: in forward
+    transformed_data = self.linear_transform(x, self.transform_matrix, self.mean_vector, self.dim)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = ZCAWhitening(), name = 'linear_transform'
+
+    def __getattr__(self, name: str) -> Any:
+        if "_parameters" in self.__dict__:
+            _parameters = self.__dict__["_parameters"]
+            if name in _parameters:
+                return _parameters[name]
+        if "_buffers" in self.__dict__:
+            _buffers = self.__dict__["_buffers"]
+            if name in _buffers:
+                return _buffers[name]
+        if "_modules" in self.__dict__:
+            modules = self.__dict__["_modules"]
+            if name in modules:
+                return modules[name]
+>       raise AttributeError(
+            f"'{type(self).__name__}' object has no attribute '{name}'"
+        )
+E       AttributeError: 'ZCAWhitening' object has no attribute 'linear_transform'. Did you mean: 'inverse_transform'?
+
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1931: AttributeError
+_____________ TestZCA.test_identity[cpu-float32-input_shape1-0.1] ______________
+
+self = <test_zca.TestZCA object at 0x747ec293a050>, input_shape = (10, 4)
+eps = 0.1, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("input_shape,eps", [((15, 2, 2, 2), 1e-6), ((10, 4), 0.1), ((20, 3, 2, 2), 1e-3)])
+    def test_identity(self, input_shape, eps, device, dtype):
+        """Assert that data can be recovered by the inverse transform."""
+        data = torch.randn(*input_shape, device=device, dtype=dtype)
+    
+        zca = kornia.enhance.ZCAWhitening(compute_inv=True, eps=eps).fit(data)
+    
+>       data_w = zca(data)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py:65: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:274: in __call__
+    _output_image = decorated_forward(*inputs, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:63: in wrapper
+    tensor_outputs = func(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1736: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1747: in _call_impl
+    return forward_call(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/zca.py:116: in forward
+    transformed_data = self.linear_transform(x, self.transform_matrix, self.mean_vector, self.dim)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = ZCAWhitening(), name = 'linear_transform'
+
+    def __getattr__(self, name: str) -> Any:
+        if "_parameters" in self.__dict__:
+            _parameters = self.__dict__["_parameters"]
+            if name in _parameters:
+                return _parameters[name]
+        if "_buffers" in self.__dict__:
+            _buffers = self.__dict__["_buffers"]
+            if name in _buffers:
+                return _buffers[name]
+        if "_modules" in self.__dict__:
+            modules = self.__dict__["_modules"]
+            if name in modules:
+                return modules[name]
+>       raise AttributeError(
+            f"'{type(self).__name__}' object has no attribute '{name}'"
+        )
+E       AttributeError: 'ZCAWhitening' object has no attribute 'linear_transform'. Did you mean: 'inverse_transform'?
+
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1931: AttributeError
+____________ TestZCA.test_identity[cpu-float32-input_shape2-0.001] _____________
+
+self = <test_zca.TestZCA object at 0x747ec293a3b0>, input_shape = (20, 3, 2, 2)
+eps = 0.001, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("input_shape,eps", [((15, 2, 2, 2), 1e-6), ((10, 4), 0.1), ((20, 3, 2, 2), 1e-3)])
+    def test_identity(self, input_shape, eps, device, dtype):
+        """Assert that data can be recovered by the inverse transform."""
+        data = torch.randn(*input_shape, device=device, dtype=dtype)
+    
+        zca = kornia.enhance.ZCAWhitening(compute_inv=True, eps=eps).fit(data)
+    
+>       data_w = zca(data)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py:65: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:274: in __call__
+    _output_image = decorated_forward(*inputs, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:63: in wrapper
+    tensor_outputs = func(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1736: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1747: in _call_impl
+    return forward_call(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/zca.py:116: in forward
+    transformed_data = self.linear_transform(x, self.transform_matrix, self.mean_vector, self.dim)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = ZCAWhitening(), name = 'linear_transform'
+
+    def __getattr__(self, name: str) -> Any:
+        if "_parameters" in self.__dict__:
+            _parameters = self.__dict__["_parameters"]
+            if name in _parameters:
+                return _parameters[name]
+        if "_buffers" in self.__dict__:
+            _buffers = self.__dict__["_buffers"]
+            if name in _buffers:
+                return _buffers[name]
+        if "_modules" in self.__dict__:
+            modules = self.__dict__["_modules"]
+            if name in modules:
+                return modules[name]
+>       raise AttributeError(
+            f"'{type(self).__name__}' object has no attribute '{name}'"
+        )
+E       AttributeError: 'ZCAWhitening' object has no attribute 'linear_transform'. Did you mean: 'inverse_transform'?
+
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1931: AttributeError
+_____________________ TestZCA.test_grad_zca_with_fit[cpu] ______________________
+
+self = <test_zca.TestZCA object at 0x747ec293a8c0>, device = device(type='cpu')
+
+    def test_grad_zca_with_fit(self, device):
+        data = torch.tensor([[2, 0], [0, 1], [-2, 0], [0, -1]], device=device, dtype=torch.float64)
+    
+        def zca_fit(x):
+            zca = kornia.enhance.ZCAWhitening(detach_transforms=False)
+            return zca(x, include_fit=True)
+    
+>       self.gradcheck(zca_fit, (data,))
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py:95: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:143: in gradcheck
+    return gradcheck(func, inputs, raise_exception=raise_exception, fast_mode=fast_mode, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2052: in gradcheck
+    return _gradcheck_helper(**args)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2074: in _gradcheck_helper
+    func_out = func(*tupled_inputs)
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py:93: in zca_fit
+    return zca(x, include_fit=True)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:274: in __call__
+    _output_image = decorated_forward(*inputs, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:63: in wrapper
+    tensor_outputs = func(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1736: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1747: in _call_impl
+    return forward_call(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/zca.py:116: in forward
+    transformed_data = self.linear_transform(x, self.transform_matrix, self.mean_vector, self.dim)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = ZCAWhitening(), name = 'linear_transform'
+
+    def __getattr__(self, name: str) -> Any:
+        if "_parameters" in self.__dict__:
+            _parameters = self.__dict__["_parameters"]
+            if name in _parameters:
+                return _parameters[name]
+        if "_buffers" in self.__dict__:
+            _buffers = self.__dict__["_buffers"]
+            if name in _buffers:
+                return _buffers[name]
+        if "_modules" in self.__dict__:
+            modules = self.__dict__["_modules"]
+            if name in modules:
+                return modules[name]
+>       raise AttributeError(
+            f"'{type(self).__name__}' object has no attribute '{name}'"
+        )
+E       AttributeError: 'ZCAWhitening' object has no attribute 'linear_transform'. Did you mean: 'inverse_transform'?
+
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1931: AttributeError
+______________________ TestZCA.test_grad_detach_zca[cpu] _______________________
+
+self = <test_zca.TestZCA object at 0x747ec293ab90>, device = device(type='cpu')
+
+    def test_grad_detach_zca(self, device):
+        data = torch.tensor([[1, 0], [0, 1], [-2, 0], [0, -1]], device=device, dtype=torch.float64)
+    
+        zca = kornia.enhance.ZCAWhitening()
+    
+        zca.fit(data)
+    
+>       self.gradcheck(zca, (data,))
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py:104: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:143: in gradcheck
+    return gradcheck(func, inputs, raise_exception=raise_exception, fast_mode=fast_mode, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2052: in gradcheck
+    return _gradcheck_helper(**args)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2074: in _gradcheck_helper
+    func_out = func(*tupled_inputs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:274: in __call__
+    _output_image = decorated_forward(*inputs, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:63: in wrapper
+    tensor_outputs = func(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1736: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1747: in _call_impl
+    return forward_call(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/zca.py:116: in forward
+    transformed_data = self.linear_transform(x, self.transform_matrix, self.mean_vector, self.dim)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = ZCAWhitening(), name = 'linear_transform'
+
+    def __getattr__(self, name: str) -> Any:
+        if "_parameters" in self.__dict__:
+            _parameters = self.__dict__["_parameters"]
+            if name in _parameters:
+                return _parameters[name]
+        if "_buffers" in self.__dict__:
+            _buffers = self.__dict__["_buffers"]
+            if name in _buffers:
+                return _buffers[name]
+        if "_modules" in self.__dict__:
+            modules = self.__dict__["_modules"]
+            if name in modules:
+                return modules[name]
+>       raise AttributeError(
+            f"'{type(self).__name__}' object has no attribute '{name}'"
+        )
+E       AttributeError: 'ZCAWhitening' object has no attribute 'linear_transform'. Did you mean: 'inverse_transform'?
+
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1931: AttributeError
+________________________ TestZCA.test_jit[cpu-float32] _________________________
+
+self = <test_zca.TestZCA object at 0x747ec293b190>, device = device(type='cpu')
+dtype = torch.float32
+
+    def test_jit(self, device, dtype):
+        data = torch.rand(10, 3, 1, 2, device=device, dtype=dtype)
+        zca = kornia.enhance.ZCAWhitening().fit(data)
+        zca_jit = kornia.enhance.ZCAWhitening().fit(data)
+>       zca_jit = torch.jit.script(zca_jit)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py:124: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/jit/_script.py:1429: in script
+    ret = _script_impl(
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/jit/_script.py:1147: in _script_impl
+    return torch.jit._recursive.create_script_module(
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/jit/_recursive.py:557: in create_script_module
+    return create_script_module_impl(nn_module, concrete_type, stubs_fn)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/jit/_recursive.py:634: in create_script_module_impl
+    create_methods_and_properties_from_stubs(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+concrete_type = <torch.ConcreteModuleType object at 0x747ec21d95b0>
+method_stubs = [ScriptMethodStub(resolution_callback=<function createResolutionCallbackFromEnv.<locals>.<lambda> at 0x747ec2393370>, ...._jit_tree_views.Def object at 0x747ec21d9bb0>, original_method=<bound method ZCAWhitening.forward of ZCAWhitening()>)]
+property_stubs = [PropertyStub(resolution_callback=<function createResolutionCallbackFromEnv.<locals>.<lambda> at 0x747ec23936d0>, def_=<torch._C._jit_tree_views.Property object at 0x747ec21dbbb0>)]
+
+    def create_methods_and_properties_from_stubs(
+        concrete_type, method_stubs, property_stubs
+    ):
+        method_defs = [m.def_ for m in method_stubs]
+        method_rcbs = [m.resolution_callback for m in method_stubs]
+        method_defaults = [get_default_args(m.original_method) for m in method_stubs]
+    
+        property_defs = [p.def_ for p in property_stubs]
+        property_rcbs = [p.resolution_callback for p in property_stubs]
+    
+>       concrete_type._create_methods_and_properties(
+            property_defs, property_rcbs, method_defs, method_rcbs, method_defaults
+        )
+E       RuntimeError: 
+E       Module 'ZCAWhitening' has no attribute 'linear_transform' :
+E         File "/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/zca.py", line 116
+E               if not self.fitted:
+E                   raise RuntimeError('The ZCAWhitening instance is not fitted yet. Call `fit` or set `include_fit=True`.')
+E               transformed_data = self.linear_transform(x, self.transform_matrix, self.mean_vector, self.dim)
+E                                  ~~~~~~~~~~~~~~~~~~~~~ <--- HERE
+E               return transformed_data
+
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/jit/_recursive.py:466: RuntimeError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_zca_unbiased[cpu-float32-True]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_zca_unbiased[cpu-float32-False]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_dim_args[cpu-float32-0]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_dim_args[cpu-float32-1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_identity[cpu-float32-input_shape0-1e-06]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_identity[cpu-float32-input_shape1-0.1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_identity[cpu-float32-input_shape2-0.001]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_grad_zca_with_fit[cpu]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_grad_detach_zca[cpu]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_jit[cpu-float32]
+========================= 10 failed, 5 passed in 0.90s =========================
+
+
+Final Test Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python3
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'cudagraphs', 'inductor', 'jit', 'onnxrt', 'tvm', 'openxla', None}
+model weights cached: ['checkpoints']
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 15 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_zca_unbiased[cpu-float32-True] PASSED [  6%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_zca_unbiased[cpu-float32-False] PASSED [ 13%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_dim_args[cpu-float32-0] PASSED [ 20%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_dim_args[cpu-float32-1] PASSED [ 26%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_identity[cpu-float32-input_shape0-1e-06] PASSED [ 33%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_identity[cpu-float32-input_shape1-0.1] PASSED [ 40%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_identity[cpu-float32-input_shape2-0.001] PASSED [ 46%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_grad_zca_individual_transforms[cpu] PASSED [ 53%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_grad_zca_with_fit[cpu] PASSED [ 60%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_grad_detach_zca[cpu] PASSED [ 66%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_not_fitted[cpu-float32] PASSED [ 73%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_not_fitted_inv[cpu-float32] PASSED [ 80%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_jit[cpu-float32] PASSED [ 86%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_zca_whiten_func_unbiased[cpu-float32-True] PASSED [ 93%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_zca_whiten_func_unbiased[cpu-float32-False] PASSED [100%]
+
+============================== 15 passed in 0.28s ==============================
+
+
+Initial Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python3
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'inductor', 'openxla', 'jit', 'onnxrt', 'tvm', 'cudagraphs', None}
+model weights cached: ['checkpoints']
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 15 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_zca_unbiased[cpu-float32-True] PASSED [  6%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_zca_unbiased[cpu-float32-False] PASSED [ 13%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_dim_args[cpu-float32-0] PASSED [ 20%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_dim_args[cpu-float32-1] PASSED [ 26%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_identity[cpu-float32-input_shape0-1e-06] PASSED [ 33%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_identity[cpu-float32-input_shape1-0.1] PASSED [ 40%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_identity[cpu-float32-input_shape2-0.001] PASSED [ 46%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_grad_zca_individual_transforms[cpu] PASSED [ 53%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_grad_zca_with_fit[cpu] PASSED [ 60%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_grad_detach_zca[cpu] PASSED [ 66%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_not_fitted[cpu-float32] PASSED [ 73%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_not_fitted_inv[cpu-float32] PASSED [ 80%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_jit[cpu-float32] PASSED [ 86%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_zca_whiten_func_unbiased[cpu-float32-True] PASSED [ 93%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_zca.py::TestZCA::test_zca_whiten_func_unbiased[cpu-float32-False] PASSED [100%]
+
+============================== 15 passed in 0.24s ==============================

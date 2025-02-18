@@ -1,0 +1,19 @@
+stage: Model Construction
+task: 
+data: 
+
+prompt:
+Generate a Python function called Laplace that simplifies Laplace access using strings instead of different classes. The function takes in a torch.nn.Module called model, a Likelihood or string ('classification' or 'regression') called likelihood, a SubsetOfWeights or string ('last_layer', 'subnetwork', 'all') called subset_of_weights with a default value of SubsetOfWeights.LAST_LAYER, and a HessianStructure or string ('diag', 'kron', 'full', 'lowrank') called hessian_structure with a default value of HessianStructure.KRON. 
+
+The function returns a ParametricLaplace object. If subset_of_weights is "subnetwork" and hessian_structure is not "full" or "diag", a ValueError is raised. The function then creates a dictionary mapping subclass keys to subclasses of ParametricLaplace, instantiates the chosen subclass with additional arguments, and returns the instantiated subclass.if subset_of_weights == "subnetwork" and hessian_structure not in ["full", "diag"]:
+        raise ValueError(
+            "Subnetwork Laplace requires a full or diagonal Hessian approximation!"
+        )
+
+ ground Truth:laplace/laplace.py
+
+ repo:Laplace
+
+ function:Laplace
+ 
+ test_cases:tests/test_lllaplace.py::test_backprop_glm

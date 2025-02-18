@@ -1,0 +1,24 @@
+stage: Text
+task: 
+data: Training
+
+prompt:
+Generate a Python method `_entropy` for the `CategoryVectorInconsistencyAndRanking` class that computes the entropy of a given distribution. The method should take as input the numerator and denominator of the distribution and return the entropy. The method should account for numerical stability using a small epsilon value.
+
+Class structure:
+
+```python
+class CategoryVectorInconsistencyAndRanking(QueryStrategy):
+    def __init__(self, batch_size=2048, prediction_threshold=0.5, epsilon=1e-8, pbar='tqdm'):
+        # Initialization code...
+
+    def _entropy(self, numerator, denominator):
+        # Implement the function as described in the prompt
+putes the distance metric between predicted and true labels
+```
+
+ ground Truth:
+
+ repo:
+
+ f_name:_entropy

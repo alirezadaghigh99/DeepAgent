@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Generate a Python function called undistort_points_kannala_brandt that undistorts one or more points from the camera frame into the canonical z=1 plane using the Kannala-Brandt model. The function takes two input parameters: distorted_points_in_camera, a Tensor representing the points to undistort with shape (..., 2), and params, a Tensor representing the parameters of the Kannala-Brandt distortion model with shape (..., 8). The function returns a Tensor representing the undistorted points with shape (..., 2). The function implements the Gauss-Newton optimization algorithm to iteratively undistort the points.
+
+ ground Truth:kornia/geometry/camera/distortion_kannala_brandt.py
+
+ repo:kornia
+
+ function:undistort_points_kannala_brandt
+ 
+ test_cases:tests/geometry/camera/test_distortion.py::TestDistortionKannalaBrandt

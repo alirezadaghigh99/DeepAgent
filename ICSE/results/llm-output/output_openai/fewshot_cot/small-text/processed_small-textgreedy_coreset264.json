@@ -1,0 +1,11 @@
+{
+    "result": "Error",
+    "prompt": "Generate a Python function called greedy_coreset that computes a greedy coreset over a matrix x with a specified size n. The function takes in the following parameters: x (a numpy array of row-wise vector representations), indices_unlabeled (an array of indices for unlabeled data), indices_labeled (an array of indices for labeled data), n (the size of the coreset), distance_metric (either 'cosine' or 'euclidean' for the distance metric), batch_size (an integer for batch size), and normalized (a boolean indicating if the data should be normalized).\n\nThe function returns an array of indices relative to x.",
+    "function_name": "greedy_coreset",
+    "ground_truth": "small_text/query_strategies/coresets.py",
+    "test": "tests/unit/small_text/query_strategies/test_coresets.py::GreedyCoresetSamplingStrategyNormalizedTest",
+    "class": "",
+    "stage": "Pre-Post processing",
+    "task": "Classification",
+    "data": "Text"
+}

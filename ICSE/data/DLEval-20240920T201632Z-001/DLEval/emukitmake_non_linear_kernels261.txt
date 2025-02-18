@@ -1,0 +1,14 @@
+stage: Model Construction
+task: Prediction
+data: 
+
+prompt:
+Write a Python function `make_non_linear_kernels` that constructs a list of structured multi-fidelity kernels using a specified base kernel class from GPy. The function should accept the following parameters: `base_kernel_class` (the GPy kernel class to use), `n_fidelities` (number of fidelity levels), `n_input_dims` (number of input dimensions), and `ARD` (a boolean indicating whether to use Automatic Relevance Determination, i.e., different lengthscales for different dimensions). The function should return a list of kernels, with one kernel per fidelity level, starting from the lowest to the highest fidelity. For the first fidelity, the kernel is simply the base kernel applied to the input dimensions. For subsequent fidelities, the kernel is constructed by multiplying the base kernel applied to the current fidelity with the base kernel applied to the previous fidelity, and adding another base kernel for bias. Default value of ARD is False
+
+ ground Truth:emukit/multi_fidelity/models/non_linear_multi_fidelity_model.py
+
+ repo:emukit
+
+ function:make_non_linear_kernels
+ 
+ test_cases:tests/emukit/multi_fidelity/test_non_linear_models.py

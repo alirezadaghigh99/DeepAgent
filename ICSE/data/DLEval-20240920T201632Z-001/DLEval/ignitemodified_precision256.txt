@@ -1,0 +1,14 @@
+stage: Evaluating&Metrics
+task: Prediction
+data: Text
+
+prompt:
+Generate a Python function called modified_precision that computes the modified precision for a given list of references, a candidate translation, and an n-gram order. The function calculates the number of matched n-grams between the candidate translation and its references, and the total number of n-grams in the translation. The output is a tuple containing the sum of the clipped counts of the candidate and references, and the sum of the counts of the candidate.
+
+ ground Truth:ignite/metrics/nlp/utils.py
+
+ repo:ignite
+
+ function:modified_precision
+ 
+ test_cases:tests/ignite/metrics/nlp/test_utils.py

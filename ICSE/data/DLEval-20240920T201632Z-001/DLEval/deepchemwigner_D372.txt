@@ -1,0 +1,32 @@
+stage: Model Construction
+task: 
+data: 
+
+prompt:
+Write a python function winger_D The function computes the Wigner D matrix representation of the SO(3) rotation group
+    for a given representation index 'k' and rotation angles 'alpha', 'beta', and 'gamma'.
+    The resulting matrix satisfies properties of the SO(3) group representation.
+
+    Parameters
+    ----------
+    k : int
+        The representation index, which determines the order of the representation.
+    alpha : torch.Tensor
+        Rotation angles (in radians) around the Y axis, applied third.
+    beta : torch.Tensor
+        Rotation angles (in radians) around the X axis, applied second.
+    gamma : torch.Tensor)
+        Rotation angles (in radians) around the Y axis, applied first.
+
+    Returns
+    -------
+    torch.Tensor
+        The Wigner D matrix of shape (#angles, 2k+1, 2k+1).
+
+ ground Truth:deepchem/utils/equivariance_utils.py
+
+ repo:deepchem
+
+ function:wigner_D
+ 
+ test_cases:deepchem/utils/test/test_equivariance_utils.py

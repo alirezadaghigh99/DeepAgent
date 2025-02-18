@@ -1,0 +1,437 @@
+output file:
+processed_recommendersprecision_at_k340.json
+function:
+precision_at_k
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_precision_at_k', '../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_errors FAILED', '../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_precision_at_k FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_errors'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/recommenders/recommenders/venv/bin/python
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/aliredaq/Desktop/ICSE/src/tester/.hypothesis/examples'))
+rootdir: /local/data0/moved_data/publishablew/recommenders/recommenders
+configfile: pyproject.toml
+plugins: typeguard-4.4.1, hypothesis-6.123.13, anyio-4.8.0
+collecting ... collected 32 items
+
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_column_dtypes_match PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_merge_rating PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_merge_ranking PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_rmse PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_mae PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_rsquared PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_exp_var PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_get_top_k_items PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_get_top_k_items_largek PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_ndcg_at_k PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_map PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_map_at_k PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_precision_at_k FAILED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_recall_at_k PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_r_precision PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_auc PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_logloss PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_errors FAILED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_catalog_coverage PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_distributional_coverage PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_item_novelty PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_novelty PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_user_diversity PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_diversity PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_user_item_serendipity PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_user_serendipity PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_serendipity PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_user_diversity_item_feature_vector PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_diversity_item_feature_vector PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_user_item_serendipity_item_feature_vector PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_user_serendipity_item_feature_vector PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_serendipity_item_feature_vector PASSED
+
+=================================== FAILURES ===================================
+__________________________ test_python_precision_at_k __________________________
+
+rating_true =     userID  itemID  rating
+0        1       3       3
+1        2       1       5
+2        2       4       5
+3        2... 12       3
+14       3      13       2
+15       3      14       1
+16       1       1       5
+17       1       2       4
+rating_pred =     userID  itemID  prediction  rating
+0        1      12          12       3
+1        2      10          14       5
+2... 2
+15       3      14           5       1
+16       1       3          14       5
+17       1      10          13       4
+rating_nohit =     userID  itemID  prediction
+0        1     100          12
+1        2     100          14
+2        2     100       ...     3     100           6
+15       3     100           5
+16       1     100          14
+17       1     100          13
+
+    def test_python_precision_at_k(rating_true, rating_pred, rating_nohit):
+        assert (
+>           precision_at_k(
+                rating_true=rating_true,
+                rating_pred=rating_true,
+                col_prediction=DEFAULT_RATING_COL,
+                k=10,
+            )
+            == 0.6
+        )
+
+/local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py:299: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/recommenders/recommenders/recommenders/evaluation/python_evaluation.py:251: in precision_at_k
+    return precision_at_k(rating_true, rating_pred, col_user, col_item, col_prediction, relevancy_method, k, threshold)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+rating_true =     userID  itemID  rating
+0        1       3       3
+1        2       1       5
+2        2       4       5
+3        2... 12       3
+14       3      13       2
+15       3      14       1
+16       1       1       5
+17       1       2       4
+rating_pred =     userID  itemID  rating
+0        1       3       3
+1        2       1       5
+2        2       4       5
+3        2... 12       3
+14       3      13       2
+15       3      14       1
+16       1       1       5
+17       1       2       4
+col_user = 'userID', col_item = 'itemID', col_prediction = 'rating'
+relevancy_method = 'top_k', k = 10, threshold = 10
+
+    def precision_at_k(rating_true, rating_pred, col_user, col_item, col_prediction, relevancy_method, k, threshold):
+        if not all((col in rating_true.columns for col in [col_user, col_item])):
+            raise ValueError('rating_true must contain the specified user and item columns.')
+        if not all((col in rating_pred.columns for col in [col_user, col_item, col_prediction])):
+            raise ValueError('rating_pred must contain the specified user, item, and prediction columns.')
+        if relevancy_method == 'threshold':
+            relevant_items = rating_true[rating_true[col_prediction] >= threshold]
+        else:
+>           raise ValueError('Unsupported relevancy method.')
+E           ValueError: Unsupported relevancy method.
+
+/local/data0/moved_data/publishablew/recommenders/recommenders/recommenders/evaluation/temp.py:17: ValueError
+______________________________ test_python_errors ______________________________
+
+rating_true =     userID  itemID  rating
+0        1       3       3
+1        2       1       5
+2        2       4       5
+3        2... 12       3
+14       3      13       2
+15       3      14       1
+16       1       1       5
+17       1       2       4
+rating_pred =     userID  itemID  prediction  rating
+0        1      12          12       3
+1        2      10          14       5
+2... 2
+15       3      14           5       1
+16       1       3          14       5
+17       1      10          13       4
+
+    def test_python_errors(rating_true, rating_pred):
+        with pytest.raises(ColumnMismatchError):
+            rmse(rating_true, rating_true, col_user="not_user")
+    
+        with pytest.raises(ColumnMismatchError):
+            mae(
+                rating_pred,
+                rating_pred,
+                col_rating=DEFAULT_PREDICTION_COL,
+                col_user="not_user",
+            )
+    
+        with pytest.raises(ColumnMismatchError):
+            rsquared(rating_true, rating_pred, col_item="not_item")
+    
+        with pytest.raises(ColumnMismatchError):
+            exp_var(
+                rating_pred,
+                rating_pred,
+                col_rating=DEFAULT_PREDICTION_COL,
+                col_item="not_item",
+            )
+    
+        with pytest.raises(ColumnMismatchError):
+>           precision_at_k(rating_true, rating_pred, col_prediction="not_prediction")
+
+/local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py:444: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/recommenders/recommenders/recommenders/evaluation/python_evaluation.py:251: in precision_at_k
+    return precision_at_k(rating_true, rating_pred, col_user, col_item, col_prediction, relevancy_method, k, threshold)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+rating_true =     userID  itemID  rating
+0        1       3       3
+1        2       1       5
+2        2       4       5
+3        2... 12       3
+14       3      13       2
+15       3      14       1
+16       1       1       5
+17       1       2       4
+rating_pred =     userID  itemID  prediction  rating
+0        1      12          12       3
+1        2      10          14       5
+2... 2
+15       3      14           5       1
+16       1       3          14       5
+17       1      10          13       4
+col_user = 'userID', col_item = 'itemID', col_prediction = 'not_prediction'
+relevancy_method = 'top_k', k = 10, threshold = 10
+
+    def precision_at_k(rating_true, rating_pred, col_user, col_item, col_prediction, relevancy_method, k, threshold):
+        if not all((col in rating_true.columns for col in [col_user, col_item])):
+            raise ValueError('rating_true must contain the specified user and item columns.')
+        if not all((col in rating_pred.columns for col in [col_user, col_item, col_prediction])):
+>           raise ValueError('rating_pred must contain the specified user, item, and prediction columns.')
+E           ValueError: rating_pred must contain the specified user, item, and prediction columns.
+
+/local/data0/moved_data/publishablew/recommenders/recommenders/recommenders/evaluation/temp.py:13: ValueError
+=============================== warnings summary ===============================
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_distributional_coverage
+  /local/data0/moved_data/publishablew/recommenders/recommenders/recommenders/evaluation/python_evaluation.py:959: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+    d_coverage = -df_entropy.agg({'entropy(i)': 'sum'})[0]
+
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_novelty
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_novelty
+  /local/data0/moved_data/publishablew/recommenders/recommenders/recommenders/evaluation/python_evaluation.py:798: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+    avg_novelty = reco_item_novelty.agg({'product': 'sum'})[0] / n_recommendations
+
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_user_diversity
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_user_diversity_item_feature_vector
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_diversity_item_feature_vector
+  /local/data0/moved_data/publishablew/recommenders/recommenders/recommenders/evaluation/python_evaluation.py:668: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+  The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+  
+  For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+  
+  
+    item_pair_sim[col_sim].fillna(0, inplace=True)
+
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_diversity
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_diversity_item_feature_vector
+  /local/data0/moved_data/publishablew/recommenders/recommenders/recommenders/evaluation/python_evaluation.py:732: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+    avg_diversity = df_user_diversity.agg({'user_diversity': 'mean'})[0]
+
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_user_item_serendipity
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_user_item_serendipity_item_feature_vector
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_user_serendipity_item_feature_vector
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_serendipity_item_feature_vector
+  /local/data0/moved_data/publishablew/recommenders/recommenders/recommenders/evaluation/python_evaluation.py:842: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+  The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+  
+  For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+  
+  
+    reco_train_user_item_sim[col_sim].fillna(0, inplace=True)
+
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_serendipity
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_serendipity_item_feature_vector
+  /local/data0/moved_data/publishablew/recommenders/recommenders/recommenders/evaluation/python_evaluation.py:902: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+    avg_serendipity = df_user_serendipity.agg({'user_serendipity': 'mean'})[0]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_precision_at_k
+FAILED ../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_errors
+================== 2 failed, 30 passed, 14 warnings in 0.41s ===================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/recommenders/recommenders/venv/bin/python
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/aliredaq/Desktop/ICSE/src/tester/.hypothesis/examples'))
+rootdir: /local/data0/moved_data/publishablew/recommenders/recommenders
+configfile: pyproject.toml
+plugins: typeguard-4.4.1, hypothesis-6.123.13, anyio-4.8.0
+collecting ... collected 32 items
+
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_column_dtypes_match PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_merge_rating PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_merge_ranking PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_rmse PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_mae PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_rsquared PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_exp_var PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_get_top_k_items PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_get_top_k_items_largek PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_ndcg_at_k PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_map PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_map_at_k PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_precision_at_k PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_recall_at_k PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_r_precision PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_auc PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_logloss PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_errors PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_catalog_coverage PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_distributional_coverage PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_item_novelty PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_novelty PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_user_diversity PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_diversity PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_user_item_serendipity PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_user_serendipity PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_serendipity PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_user_diversity_item_feature_vector PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_diversity_item_feature_vector PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_user_item_serendipity_item_feature_vector PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_user_serendipity_item_feature_vector PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_serendipity_item_feature_vector PASSED
+
+=============================== warnings summary ===============================
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_distributional_coverage
+  /local/data0/moved_data/publishablew/recommenders/recommenders/recommenders/evaluation/python_evaluation.py:1714: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+    d_coverage = -df_entropy.agg({"entropy(i)": "sum"})[0]
+
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_novelty
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_novelty
+  /local/data0/moved_data/publishablew/recommenders/recommenders/recommenders/evaluation/python_evaluation.py:1435: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+    avg_novelty = reco_item_novelty.agg({"product": "sum"})[0] / n_recommendations
+
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_user_diversity
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_user_diversity_item_feature_vector
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_diversity_item_feature_vector
+  /local/data0/moved_data/publishablew/recommenders/recommenders/recommenders/evaluation/python_evaluation.py:1233: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+  The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+  
+  For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+  
+  
+    item_pair_sim[col_sim].fillna(0, inplace=True)
+
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_diversity
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_diversity_item_feature_vector
+  /local/data0/moved_data/publishablew/recommenders/recommenders/recommenders/evaluation/python_evaluation.py:1348: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+    avg_diversity = df_user_diversity.agg({"user_diversity": "mean"})[0]
+
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_user_item_serendipity
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_user_item_serendipity_item_feature_vector
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_user_serendipity_item_feature_vector
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_serendipity_item_feature_vector
+  /local/data0/moved_data/publishablew/recommenders/recommenders/recommenders/evaluation/python_evaluation.py:1511: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+  The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+  
+  For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+  
+  
+    reco_train_user_item_sim[col_sim].fillna(0, inplace=True)
+
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_serendipity
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_serendipity_item_feature_vector
+  /local/data0/moved_data/publishablew/recommenders/recommenders/recommenders/evaluation/python_evaluation.py:1639: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+    avg_serendipity = df_user_serendipity.agg({"user_serendipity": "mean"})[0]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================= 32 passed, 14 warnings in 0.32s ========================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/recommenders/recommenders/venv/bin/python
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/aliredaq/Desktop/ICSE/src/tester/.hypothesis/examples'))
+rootdir: /local/data0/moved_data/publishablew/recommenders/recommenders
+configfile: pyproject.toml
+plugins: typeguard-4.4.1, hypothesis-6.123.13, anyio-4.8.0
+collecting ... collected 32 items
+
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_column_dtypes_match PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_merge_rating PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_merge_ranking PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_rmse PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_mae PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_rsquared PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_exp_var PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_get_top_k_items PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_get_top_k_items_largek PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_ndcg_at_k PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_map PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_map_at_k PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_precision_at_k PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_recall_at_k PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_r_precision PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_auc PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_logloss PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_python_errors PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_catalog_coverage PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_distributional_coverage PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_item_novelty PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_novelty PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_user_diversity PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_diversity PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_user_item_serendipity PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_user_serendipity PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_serendipity PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_user_diversity_item_feature_vector PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_diversity_item_feature_vector PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_user_item_serendipity_item_feature_vector PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_user_serendipity_item_feature_vector PASSED
+../../../../../../local/data0/moved_data/publishablew/recommenders/recommenders/tests/unit/recommenders/evaluation/test_python_evaluation.py::test_serendipity_item_feature_vector PASSED
+
+=============================== warnings summary ===============================
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_distributional_coverage
+  /local/data0/moved_data/publishablew/recommenders/recommenders/recommenders/evaluation/python_evaluation.py:1714: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+    d_coverage = -df_entropy.agg({"entropy(i)": "sum"})[0]
+
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_novelty
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_novelty
+  /local/data0/moved_data/publishablew/recommenders/recommenders/recommenders/evaluation/python_evaluation.py:1435: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+    avg_novelty = reco_item_novelty.agg({"product": "sum"})[0] / n_recommendations
+
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_user_diversity
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_user_diversity_item_feature_vector
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_diversity_item_feature_vector
+  /local/data0/moved_data/publishablew/recommenders/recommenders/recommenders/evaluation/python_evaluation.py:1233: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+  The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+  
+  For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+  
+  
+    item_pair_sim[col_sim].fillna(0, inplace=True)
+
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_diversity
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_diversity_item_feature_vector
+  /local/data0/moved_data/publishablew/recommenders/recommenders/recommenders/evaluation/python_evaluation.py:1348: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+    avg_diversity = df_user_diversity.agg({"user_diversity": "mean"})[0]
+
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_user_item_serendipity
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_user_item_serendipity_item_feature_vector
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_user_serendipity_item_feature_vector
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_serendipity_item_feature_vector
+  /local/data0/moved_data/publishablew/recommenders/recommenders/recommenders/evaluation/python_evaluation.py:1511: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+  The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+  
+  For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+  
+  
+    reco_train_user_item_sim[col_sim].fillna(0, inplace=True)
+
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_serendipity
+tests/unit/recommenders/evaluation/test_python_evaluation.py::test_serendipity_item_feature_vector
+  /local/data0/moved_data/publishablew/recommenders/recommenders/recommenders/evaluation/python_evaluation.py:1639: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+    avg_serendipity = df_user_serendipity.agg({"user_serendipity": "mean"})[0]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================= 32 passed, 14 warnings in 0.32s ========================

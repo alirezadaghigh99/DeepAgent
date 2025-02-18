@@ -1,0 +1,1299 @@
+output file:
+processed_classes-pytorch3d_get_matrix_inverse, 110.json
+function:
+_get_matrix_inverse
+Error Cases:
+
+Pass or Failed: 1
+
+Related Failed Test Cases:
+set()
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 18 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_clone PASSED [  5%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_compose_fail PASSED [ 11%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_dtype_propagation PASSED [ 16%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_get_item PASSED [ 22%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_get_se3 PASSED [ 27%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_init_with_custom_matrix PASSED [ 33%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_init_with_custom_matrix_errors PASSED [ 38%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_inverse PASSED [ 44%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_rotate_axis_angle FAILED [ 50%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_rotate_check_rot_valid_off FAILED [ 55%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_rotate_check_rot_valid_on FAILED [ 61%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_scale FAILED [ 66%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_scale_translate FAILED [ 72%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_stack FAILED [ 77%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_to PASSED [ 83%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_transform_points_eps FAILED [ 88%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_transform_points_fail PASSED [ 94%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_translate FAILED [100%]
+
+=================================== FAILURES ===================================
+_____________________ TestTransform.test_rotate_axis_angle _____________________
+
+self = <tests.test_transforms.TestTransform testMethod=test_rotate_axis_angle>
+
+    def test_rotate_axis_angle(self):
+        t = Transform3d().rotate_axis_angle(90.0, axis="Z")
+        points = torch.tensor([[0.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.0, 1.0, 1.0]]).view(
+            1, 3, 3
+        )
+        normals = torch.tensor(
+            [[1.0, 0.0, 0.0], [1.0, 0.0, 0.0], [1.0, 0.0, 0.0]]
+        ).view(1, 3, 3)
+>       points_out = t.transform_points(points)
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:275: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pytorch3d.transforms.transform3d.Transform3d object at 0x721cf8af75e0>
+points = tensor([[[0., 0., 0.],
+         [0., 1., 0.],
+         [0., 1., 1.]]])
+eps = None
+
+    def transform_points(self, points: torch.Tensor, eps: Optional[float]=None) -> torch.Tensor:
+        """
+        Transforms a set of 3D points using the transformation matrix.
+    
+        Args:
+            points (torch.Tensor): Tensor of shape (P, 3) or (N, P, 3).
+            eps (float, optional): Small value to clamp the homogeneous coordinate.
+    
+        Returns:
+            torch.Tensor: Transformed points of the same shape as input.
+        """
+        if points.dim() not in {2, 3} or points.size(-1) != 3:
+            raise ValueError('Points should be of shape (P, 3) or (N, P, 3).')
+        ones = torch.ones(*points.shape[:-1], 1, dtype=points.dtype, device=points.device)
+        points_homogeneous = torch.cat([points, ones], dim=-1)
+        if points.dim() == 2:
+            transformed_points = points_homogeneous @ self._matrix.T
+        else:
+>           transformed_points = torch.bmm(points_homogeneous, self._matrix.transpose(0, 1).expand(points.size(0), -1, -1))
+E           RuntimeError: The expanded size of the tensor (1) must match the existing size (4) at non-singleton dimension 0.  Target sizes: [1, -1, -1].  Tensor sizes: [4, 1, 4]
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:345: RuntimeError
+________________ TestTransform.test_rotate_check_rot_valid_off _________________
+
+self = <tests.test_transforms.TestTransform testMethod=test_rotate_check_rot_valid_off>
+
+    @mock.patch.dict(os.environ, {"PYTORCH3D_CHECK_ROTATION_MATRICES": "0"}, clear=True)
+    def test_rotate_check_rot_valid_off(self):
+        R = so3_exp_map(torch.randn((1, 3)))
+        t = Transform3d().rotate(R)
+        points = torch.tensor([[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.5, 0.5, 0.0]]).view(
+            1, 3, 3
+        )
+        normals = torch.tensor(
+            [[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [1.0, 1.0, 0.0]]
+        ).view(1, 3, 3)
+>       points_out = t.transform_points(points)
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:222: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pytorch3d.transforms.transform3d.Transform3d object at 0x721dae5e48b0>
+points = tensor([[[1.0000, 0.0000, 0.0000],
+         [0.0000, 1.0000, 0.0000],
+         [0.5000, 0.5000, 0.0000]]])
+eps = None
+
+    def transform_points(self, points: torch.Tensor, eps: Optional[float]=None) -> torch.Tensor:
+        """
+        Transforms a set of 3D points using the transformation matrix.
+    
+        Args:
+            points (torch.Tensor): Tensor of shape (P, 3) or (N, P, 3).
+            eps (float, optional): Small value to clamp the homogeneous coordinate.
+    
+        Returns:
+            torch.Tensor: Transformed points of the same shape as input.
+        """
+        if points.dim() not in {2, 3} or points.size(-1) != 3:
+            raise ValueError('Points should be of shape (P, 3) or (N, P, 3).')
+        ones = torch.ones(*points.shape[:-1], 1, dtype=points.dtype, device=points.device)
+        points_homogeneous = torch.cat([points, ones], dim=-1)
+        if points.dim() == 2:
+            transformed_points = points_homogeneous @ self._matrix.T
+        else:
+>           transformed_points = torch.bmm(points_homogeneous, self._matrix.transpose(0, 1).expand(points.size(0), -1, -1))
+E           RuntimeError: The expanded size of the tensor (1) must match the existing size (4) at non-singleton dimension 0.  Target sizes: [1, -1, -1].  Tensor sizes: [4, 1, 4]
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:345: RuntimeError
+_________________ TestTransform.test_rotate_check_rot_valid_on _________________
+
+self = <tests.test_transforms.TestTransform testMethod=test_rotate_check_rot_valid_on>
+
+    @mock.patch.dict(os.environ, {"PYTORCH3D_CHECK_ROTATION_MATRICES": "1"}, clear=True)
+    def test_rotate_check_rot_valid_on(self):
+        R = so3_exp_map(torch.randn((1, 3)))
+        t = Transform3d().rotate(R)
+        points = torch.tensor([[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.5, 0.5, 0.0]]).view(
+            1, 3, 3
+        )
+        normals = torch.tensor(
+            [[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [1.0, 1.0, 0.0]]
+        ).view(1, 3, 3)
+>       points_out = t.transform_points(points)
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:205: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pytorch3d.transforms.transform3d.Transform3d object at 0x721dae5d0790>
+points = tensor([[[1.0000, 0.0000, 0.0000],
+         [0.0000, 1.0000, 0.0000],
+         [0.5000, 0.5000, 0.0000]]])
+eps = None
+
+    def transform_points(self, points: torch.Tensor, eps: Optional[float]=None) -> torch.Tensor:
+        """
+        Transforms a set of 3D points using the transformation matrix.
+    
+        Args:
+            points (torch.Tensor): Tensor of shape (P, 3) or (N, P, 3).
+            eps (float, optional): Small value to clamp the homogeneous coordinate.
+    
+        Returns:
+            torch.Tensor: Transformed points of the same shape as input.
+        """
+        if points.dim() not in {2, 3} or points.size(-1) != 3:
+            raise ValueError('Points should be of shape (P, 3) or (N, P, 3).')
+        ones = torch.ones(*points.shape[:-1], 1, dtype=points.dtype, device=points.device)
+        points_homogeneous = torch.cat([points, ones], dim=-1)
+        if points.dim() == 2:
+            transformed_points = points_homogeneous @ self._matrix.T
+        else:
+>           transformed_points = torch.bmm(points_homogeneous, self._matrix.transpose(0, 1).expand(points.size(0), -1, -1))
+E           RuntimeError: The expanded size of the tensor (1) must match the existing size (4) at non-singleton dimension 0.  Target sizes: [1, -1, -1].  Tensor sizes: [4, 1, 4]
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:345: RuntimeError
+___________________________ TestTransform.test_scale ___________________________
+
+self = <tests.test_transforms.TestTransform testMethod=test_scale>
+
+    def test_scale(self):
+        t = Transform3d().scale(2.0).scale(0.5, 0.25, 1.0)
+        points = torch.tensor([[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.5, 0.5, 0.0]]).view(
+            1, 3, 3
+        )
+        normals = torch.tensor(
+            [[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [1.0, 1.0, 0.0]]
+        ).view(1, 3, 3)
+>       points_out = t.transform_points(points)
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:237: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pytorch3d.transforms.transform3d.Transform3d object at 0x721cf81b3af0>
+points = tensor([[[1.0000, 0.0000, 0.0000],
+         [0.0000, 1.0000, 0.0000],
+         [0.5000, 0.5000, 0.0000]]])
+eps = None
+
+    def transform_points(self, points: torch.Tensor, eps: Optional[float]=None) -> torch.Tensor:
+        """
+        Transforms a set of 3D points using the transformation matrix.
+    
+        Args:
+            points (torch.Tensor): Tensor of shape (P, 3) or (N, P, 3).
+            eps (float, optional): Small value to clamp the homogeneous coordinate.
+    
+        Returns:
+            torch.Tensor: Transformed points of the same shape as input.
+        """
+        if points.dim() not in {2, 3} or points.size(-1) != 3:
+            raise ValueError('Points should be of shape (P, 3) or (N, P, 3).')
+        ones = torch.ones(*points.shape[:-1], 1, dtype=points.dtype, device=points.device)
+        points_homogeneous = torch.cat([points, ones], dim=-1)
+        if points.dim() == 2:
+            transformed_points = points_homogeneous @ self._matrix.T
+        else:
+>           transformed_points = torch.bmm(points_homogeneous, self._matrix.transpose(0, 1).expand(points.size(0), -1, -1))
+E           RuntimeError: The expanded size of the tensor (1) must match the existing size (4) at non-singleton dimension 0.  Target sizes: [1, -1, -1].  Tensor sizes: [4, 1, 4]
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:345: RuntimeError
+______________________ TestTransform.test_scale_translate ______________________
+
+self = <tests.test_transforms.TestTransform testMethod=test_scale_translate>
+
+    def test_scale_translate(self):
+        t = Transform3d().scale(2, 1, 3).translate(1, 2, 3)
+        points = torch.tensor([[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.5, 0.5, 0.0]]).view(
+            1, 3, 3
+        )
+        normals = torch.tensor(
+            [[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [1.0, 1.0, 0.0]]
+        ).view(1, 3, 3)
+>       points_out = t.transform_points(points)
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:256: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pytorch3d.transforms.transform3d.Transform3d object at 0x721dad424ac0>
+points = tensor([[[1.0000, 0.0000, 0.0000],
+         [0.0000, 1.0000, 0.0000],
+         [0.5000, 0.5000, 0.0000]]])
+eps = None
+
+    def transform_points(self, points: torch.Tensor, eps: Optional[float]=None) -> torch.Tensor:
+        """
+        Transforms a set of 3D points using the transformation matrix.
+    
+        Args:
+            points (torch.Tensor): Tensor of shape (P, 3) or (N, P, 3).
+            eps (float, optional): Small value to clamp the homogeneous coordinate.
+    
+        Returns:
+            torch.Tensor: Transformed points of the same shape as input.
+        """
+        if points.dim() not in {2, 3} or points.size(-1) != 3:
+            raise ValueError('Points should be of shape (P, 3) or (N, P, 3).')
+        ones = torch.ones(*points.shape[:-1], 1, dtype=points.dtype, device=points.device)
+        points_homogeneous = torch.cat([points, ones], dim=-1)
+        if points.dim() == 2:
+            transformed_points = points_homogeneous @ self._matrix.T
+        else:
+>           transformed_points = torch.bmm(points_homogeneous, self._matrix.transpose(0, 1).expand(points.size(0), -1, -1))
+E           RuntimeError: The expanded size of the tensor (1) must match the existing size (4) at non-singleton dimension 0.  Target sizes: [1, -1, -1].  Tensor sizes: [4, 1, 4]
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:345: RuntimeError
+___________________________ TestTransform.test_stack ___________________________
+
+self = <tests.test_transforms.TestTransform testMethod=test_stack>
+
+    def test_stack(self):
+        rotations = random_rotations(3)
+        transform3 = Transform3d().rotate(rotations).translate(torch.full((3, 3), 0.3))
+        transform1 = Scale(37)
+        transform4 = transform1.stack(transform3)
+        self.assertEqual(len(transform1), 1)
+        self.assertEqual(len(transform3), 3)
+        self.assertEqual(len(transform4), 4)
+        self.assertClose(
+            transform4.get_matrix(),
+            torch.cat([transform1.get_matrix(), transform3.get_matrix()]),
+        )
+        points = torch.rand(4, 5, 3)
+        new_points_expect = torch.cat(
+            [
+>               transform1.transform_points(points[:1]),
+                transform3.transform_points(points[1:]),
+            ]
+        )
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:486: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pytorch3d.transforms.transform3d.Scale object at 0x721cf824a310>
+points = tensor([[[0.1053, 0.2695, 0.3588],
+         [0.1994, 0.5472, 0.0062],
+         [0.9516, 0.0753, 0.8860],
+         [0.5832, 0.3376, 0.8090],
+         [0.5779, 0.9040, 0.5547]]])
+eps = None
+
+    def transform_points(self, points: torch.Tensor, eps: Optional[float]=None) -> torch.Tensor:
+        """
+        Transforms a set of 3D points using the transformation matrix.
+    
+        Args:
+            points (torch.Tensor): Tensor of shape (P, 3) or (N, P, 3).
+            eps (float, optional): Small value to clamp the homogeneous coordinate.
+    
+        Returns:
+            torch.Tensor: Transformed points of the same shape as input.
+        """
+        if points.dim() not in {2, 3} or points.size(-1) != 3:
+            raise ValueError('Points should be of shape (P, 3) or (N, P, 3).')
+        ones = torch.ones(*points.shape[:-1], 1, dtype=points.dtype, device=points.device)
+        points_homogeneous = torch.cat([points, ones], dim=-1)
+        if points.dim() == 2:
+            transformed_points = points_homogeneous @ self._matrix.T
+        else:
+>           transformed_points = torch.bmm(points_homogeneous, self._matrix.transpose(0, 1).expand(points.size(0), -1, -1))
+E           RuntimeError: The expanded size of the tensor (1) must match the existing size (4) at non-singleton dimension 0.  Target sizes: [1, -1, -1].  Tensor sizes: [4, 1, 4]
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:345: RuntimeError
+___________________ TestTransform.test_transform_points_eps ____________________
+
+self = <tests.test_transforms.TestTransform testMethod=test_transform_points_eps>
+
+    def test_transform_points_eps(self):
+        t1 = Transform3d()
+        persp_proj = [
+            [
+                [1.0, 0.0, 0.0, 0.0],
+                [0.0, 1.0, 0.0, 0.0],
+                [0.0, 0.0, 0.0, 1.0],
+                [0.0, 0.0, 1.0, 0.0],
+            ]
+        ]
+        t1._matrix = torch.FloatTensor(persp_proj)
+        points = torch.tensor(
+            [[0.0, 1.0, 0.0], [0.0, 0.0, 1e-5], [-1.0, 0.0, 1e-5]]
+        ).view(
+            1, 3, 3
+        )  # a set of points with z-coord very close to 0
+    
+>       proj = t1.transform_points(points)
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:315: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pytorch3d.transforms.transform3d.Transform3d object at 0x721dad424190>
+points = tensor([[[ 0.0000e+00,  1.0000e+00,  0.0000e+00],
+         [ 0.0000e+00,  0.0000e+00,  1.0000e-05],
+         [-1.0000e+00,  0.0000e+00,  1.0000e-05]]])
+eps = None
+
+    def transform_points(self, points: torch.Tensor, eps: Optional[float]=None) -> torch.Tensor:
+        """
+        Transforms a set of 3D points using the transformation matrix.
+    
+        Args:
+            points (torch.Tensor): Tensor of shape (P, 3) or (N, P, 3).
+            eps (float, optional): Small value to clamp the homogeneous coordinate.
+    
+        Returns:
+            torch.Tensor: Transformed points of the same shape as input.
+        """
+        if points.dim() not in {2, 3} or points.size(-1) != 3:
+            raise ValueError('Points should be of shape (P, 3) or (N, P, 3).')
+        ones = torch.ones(*points.shape[:-1], 1, dtype=points.dtype, device=points.device)
+        points_homogeneous = torch.cat([points, ones], dim=-1)
+        if points.dim() == 2:
+            transformed_points = points_homogeneous @ self._matrix.T
+        else:
+>           transformed_points = torch.bmm(points_homogeneous, self._matrix.transpose(0, 1).expand(points.size(0), -1, -1))
+E           RuntimeError: The expanded size of the tensor (1) must match the existing size (4) at non-singleton dimension 0.  Target sizes: [1, -1, -1].  Tensor sizes: [4, 1, 4]
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:345: RuntimeError
+_________________________ TestTransform.test_translate _________________________
+
+self = <tests.test_transforms.TestTransform testMethod=test_translate>
+
+    def test_translate(self):
+        t = Transform3d().translate(1, 2, 3)
+        points = torch.tensor([[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.5, 0.5, 0.0]]).view(
+            1, 3, 3
+        )
+        normals = torch.tensor(
+            [[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [1.0, 1.0, 0.0]]
+        ).view(1, 3, 3)
+>       points_out = t.transform_points(points)
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:184: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pytorch3d.transforms.transform3d.Transform3d object at 0x721cf8201f10>
+points = tensor([[[1.0000, 0.0000, 0.0000],
+         [0.0000, 1.0000, 0.0000],
+         [0.5000, 0.5000, 0.0000]]])
+eps = None
+
+    def transform_points(self, points: torch.Tensor, eps: Optional[float]=None) -> torch.Tensor:
+        """
+        Transforms a set of 3D points using the transformation matrix.
+    
+        Args:
+            points (torch.Tensor): Tensor of shape (P, 3) or (N, P, 3).
+            eps (float, optional): Small value to clamp the homogeneous coordinate.
+    
+        Returns:
+            torch.Tensor: Transformed points of the same shape as input.
+        """
+        if points.dim() not in {2, 3} or points.size(-1) != 3:
+            raise ValueError('Points should be of shape (P, 3) or (N, P, 3).')
+        ones = torch.ones(*points.shape[:-1], 1, dtype=points.dtype, device=points.device)
+        points_homogeneous = torch.cat([points, ones], dim=-1)
+        if points.dim() == 2:
+            transformed_points = points_homogeneous @ self._matrix.T
+        else:
+>           transformed_points = torch.bmm(points_homogeneous, self._matrix.transpose(0, 1).expand(points.size(0), -1, -1))
+E           RuntimeError: The expanded size of the tensor (1) must match the existing size (4) at non-singleton dimension 0.  Target sizes: [1, -1, -1].  Tensor sizes: [4, 1, 4]
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:345: RuntimeError
+=============================== warnings summary ===============================
+tests/test_transforms.py::TestTransform::test_dtype_propagation
+  /local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:343: UserWarning: The use of `x.T` on tensors of dimension other than 2 to reverse their shape is deprecated and it will throw an error in a future release. Consider `x.mT` to transpose batches of matrices or `x.permute(*torch.arange(x.ndim - 1, -1, -1))` to reverse the dimensions of a tensor. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3697.)
+    transformed_points = points_homogeneous @ self._matrix.T
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_rotate_axis_angle
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_rotate_check_rot_valid_off
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_rotate_check_rot_valid_on
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_scale
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_scale_translate
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_stack
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_transform_points_eps
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_translate
+=================== 8 failed, 10 passed, 1 warning in 1.54s ====================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 18 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_clone PASSED [  5%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_compose_fail PASSED [ 11%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_dtype_propagation PASSED [ 16%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_get_item PASSED [ 22%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_get_se3 PASSED [ 27%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_init_with_custom_matrix PASSED [ 33%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_init_with_custom_matrix_errors PASSED [ 38%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_inverse PASSED [ 44%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_rotate_axis_angle FAILED [ 50%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_rotate_check_rot_valid_off FAILED [ 55%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_rotate_check_rot_valid_on FAILED [ 61%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_scale FAILED [ 66%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_scale_translate FAILED [ 72%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_stack FAILED [ 77%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_to PASSED [ 83%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_transform_points_eps FAILED [ 88%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_transform_points_fail PASSED [ 94%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_translate FAILED [100%]
+
+=================================== FAILURES ===================================
+_____________________ TestTransform.test_rotate_axis_angle _____________________
+
+self = <tests.test_transforms.TestTransform testMethod=test_rotate_axis_angle>
+
+    def test_rotate_axis_angle(self):
+        t = Transform3d().rotate_axis_angle(90.0, axis="Z")
+        points = torch.tensor([[0.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.0, 1.0, 1.0]]).view(
+            1, 3, 3
+        )
+        normals = torch.tensor(
+            [[1.0, 0.0, 0.0], [1.0, 0.0, 0.0], [1.0, 0.0, 0.0]]
+        ).view(1, 3, 3)
+>       points_out = t.transform_points(points)
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:275: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pytorch3d.transforms.transform3d.Transform3d object at 0x7c3753141520>
+points = tensor([[[0., 0., 0.],
+         [0., 1., 0.],
+         [0., 1., 1.]]])
+eps = None
+
+    def transform_points(self, points: torch.Tensor, eps: Optional[float]=None) -> torch.Tensor:
+        """
+        Transforms a set of 3D points using the transformation matrix.
+    
+        Args:
+            points (torch.Tensor): Tensor of shape (P, 3) or (N, P, 3).
+            eps (float, optional): Small value to clamp the homogeneous coordinate.
+    
+        Returns:
+            torch.Tensor: Transformed points of the same shape as input.
+        """
+        if points.dim() not in {2, 3} or points.size(-1) != 3:
+            raise ValueError('Points should be of shape (P, 3) or (N, P, 3).')
+        ones = torch.ones(*points.shape[:-1], 1, dtype=points.dtype, device=points.device)
+        points_homogeneous = torch.cat([points, ones], dim=-1)
+        if points.dim() == 2:
+            transformed_points = points_homogeneous @ self._matrix.T
+        else:
+>           transformed_points = torch.bmm(points_homogeneous, self._matrix.transpose(0, 1).expand(points.size(0), -1, -1))
+E           RuntimeError: The expanded size of the tensor (1) must match the existing size (4) at non-singleton dimension 0.  Target sizes: [1, -1, -1].  Tensor sizes: [4, 1, 4]
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:345: RuntimeError
+________________ TestTransform.test_rotate_check_rot_valid_off _________________
+
+self = <tests.test_transforms.TestTransform testMethod=test_rotate_check_rot_valid_off>
+
+    @mock.patch.dict(os.environ, {"PYTORCH3D_CHECK_ROTATION_MATRICES": "0"}, clear=True)
+    def test_rotate_check_rot_valid_off(self):
+        R = so3_exp_map(torch.randn((1, 3)))
+        t = Transform3d().rotate(R)
+        points = torch.tensor([[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.5, 0.5, 0.0]]).view(
+            1, 3, 3
+        )
+        normals = torch.tensor(
+            [[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [1.0, 1.0, 0.0]]
+        ).view(1, 3, 3)
+>       points_out = t.transform_points(points)
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:222: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pytorch3d.transforms.transform3d.Transform3d object at 0x7c3808be48b0>
+points = tensor([[[1.0000, 0.0000, 0.0000],
+         [0.0000, 1.0000, 0.0000],
+         [0.5000, 0.5000, 0.0000]]])
+eps = None
+
+    def transform_points(self, points: torch.Tensor, eps: Optional[float]=None) -> torch.Tensor:
+        """
+        Transforms a set of 3D points using the transformation matrix.
+    
+        Args:
+            points (torch.Tensor): Tensor of shape (P, 3) or (N, P, 3).
+            eps (float, optional): Small value to clamp the homogeneous coordinate.
+    
+        Returns:
+            torch.Tensor: Transformed points of the same shape as input.
+        """
+        if points.dim() not in {2, 3} or points.size(-1) != 3:
+            raise ValueError('Points should be of shape (P, 3) or (N, P, 3).')
+        ones = torch.ones(*points.shape[:-1], 1, dtype=points.dtype, device=points.device)
+        points_homogeneous = torch.cat([points, ones], dim=-1)
+        if points.dim() == 2:
+            transformed_points = points_homogeneous @ self._matrix.T
+        else:
+>           transformed_points = torch.bmm(points_homogeneous, self._matrix.transpose(0, 1).expand(points.size(0), -1, -1))
+E           RuntimeError: The expanded size of the tensor (1) must match the existing size (4) at non-singleton dimension 0.  Target sizes: [1, -1, -1].  Tensor sizes: [4, 1, 4]
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:345: RuntimeError
+_________________ TestTransform.test_rotate_check_rot_valid_on _________________
+
+self = <tests.test_transforms.TestTransform testMethod=test_rotate_check_rot_valid_on>
+
+    @mock.patch.dict(os.environ, {"PYTORCH3D_CHECK_ROTATION_MATRICES": "1"}, clear=True)
+    def test_rotate_check_rot_valid_on(self):
+        R = so3_exp_map(torch.randn((1, 3)))
+        t = Transform3d().rotate(R)
+        points = torch.tensor([[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.5, 0.5, 0.0]]).view(
+            1, 3, 3
+        )
+        normals = torch.tensor(
+            [[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [1.0, 1.0, 0.0]]
+        ).view(1, 3, 3)
+>       points_out = t.transform_points(points)
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:205: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pytorch3d.transforms.transform3d.Transform3d object at 0x7c375ab52f70>
+points = tensor([[[1.0000, 0.0000, 0.0000],
+         [0.0000, 1.0000, 0.0000],
+         [0.5000, 0.5000, 0.0000]]])
+eps = None
+
+    def transform_points(self, points: torch.Tensor, eps: Optional[float]=None) -> torch.Tensor:
+        """
+        Transforms a set of 3D points using the transformation matrix.
+    
+        Args:
+            points (torch.Tensor): Tensor of shape (P, 3) or (N, P, 3).
+            eps (float, optional): Small value to clamp the homogeneous coordinate.
+    
+        Returns:
+            torch.Tensor: Transformed points of the same shape as input.
+        """
+        if points.dim() not in {2, 3} or points.size(-1) != 3:
+            raise ValueError('Points should be of shape (P, 3) or (N, P, 3).')
+        ones = torch.ones(*points.shape[:-1], 1, dtype=points.dtype, device=points.device)
+        points_homogeneous = torch.cat([points, ones], dim=-1)
+        if points.dim() == 2:
+            transformed_points = points_homogeneous @ self._matrix.T
+        else:
+>           transformed_points = torch.bmm(points_homogeneous, self._matrix.transpose(0, 1).expand(points.size(0), -1, -1))
+E           RuntimeError: The expanded size of the tensor (1) must match the existing size (4) at non-singleton dimension 0.  Target sizes: [1, -1, -1].  Tensor sizes: [4, 1, 4]
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:345: RuntimeError
+___________________________ TestTransform.test_scale ___________________________
+
+self = <tests.test_transforms.TestTransform testMethod=test_scale>
+
+    def test_scale(self):
+        t = Transform3d().scale(2.0).scale(0.5, 0.25, 1.0)
+        points = torch.tensor([[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.5, 0.5, 0.0]]).view(
+            1, 3, 3
+        )
+        normals = torch.tensor(
+            [[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [1.0, 1.0, 0.0]]
+        ).view(1, 3, 3)
+>       points_out = t.transform_points(points)
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:237: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pytorch3d.transforms.transform3d.Transform3d object at 0x7c3752834a00>
+points = tensor([[[1.0000, 0.0000, 0.0000],
+         [0.0000, 1.0000, 0.0000],
+         [0.5000, 0.5000, 0.0000]]])
+eps = None
+
+    def transform_points(self, points: torch.Tensor, eps: Optional[float]=None) -> torch.Tensor:
+        """
+        Transforms a set of 3D points using the transformation matrix.
+    
+        Args:
+            points (torch.Tensor): Tensor of shape (P, 3) or (N, P, 3).
+            eps (float, optional): Small value to clamp the homogeneous coordinate.
+    
+        Returns:
+            torch.Tensor: Transformed points of the same shape as input.
+        """
+        if points.dim() not in {2, 3} or points.size(-1) != 3:
+            raise ValueError('Points should be of shape (P, 3) or (N, P, 3).')
+        ones = torch.ones(*points.shape[:-1], 1, dtype=points.dtype, device=points.device)
+        points_homogeneous = torch.cat([points, ones], dim=-1)
+        if points.dim() == 2:
+            transformed_points = points_homogeneous @ self._matrix.T
+        else:
+>           transformed_points = torch.bmm(points_homogeneous, self._matrix.transpose(0, 1).expand(points.size(0), -1, -1))
+E           RuntimeError: The expanded size of the tensor (1) must match the existing size (4) at non-singleton dimension 0.  Target sizes: [1, -1, -1].  Tensor sizes: [4, 1, 4]
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:345: RuntimeError
+______________________ TestTransform.test_scale_translate ______________________
+
+self = <tests.test_transforms.TestTransform testMethod=test_scale_translate>
+
+    def test_scale_translate(self):
+        t = Transform3d().scale(2, 1, 3).translate(1, 2, 3)
+        points = torch.tensor([[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.5, 0.5, 0.0]]).view(
+            1, 3, 3
+        )
+        normals = torch.tensor(
+            [[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [1.0, 1.0, 0.0]]
+        ).view(1, 3, 3)
+>       points_out = t.transform_points(points)
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:256: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pytorch3d.transforms.transform3d.Transform3d object at 0x7c38079c0670>
+points = tensor([[[1.0000, 0.0000, 0.0000],
+         [0.0000, 1.0000, 0.0000],
+         [0.5000, 0.5000, 0.0000]]])
+eps = None
+
+    def transform_points(self, points: torch.Tensor, eps: Optional[float]=None) -> torch.Tensor:
+        """
+        Transforms a set of 3D points using the transformation matrix.
+    
+        Args:
+            points (torch.Tensor): Tensor of shape (P, 3) or (N, P, 3).
+            eps (float, optional): Small value to clamp the homogeneous coordinate.
+    
+        Returns:
+            torch.Tensor: Transformed points of the same shape as input.
+        """
+        if points.dim() not in {2, 3} or points.size(-1) != 3:
+            raise ValueError('Points should be of shape (P, 3) or (N, P, 3).')
+        ones = torch.ones(*points.shape[:-1], 1, dtype=points.dtype, device=points.device)
+        points_homogeneous = torch.cat([points, ones], dim=-1)
+        if points.dim() == 2:
+            transformed_points = points_homogeneous @ self._matrix.T
+        else:
+>           transformed_points = torch.bmm(points_homogeneous, self._matrix.transpose(0, 1).expand(points.size(0), -1, -1))
+E           RuntimeError: The expanded size of the tensor (1) must match the existing size (4) at non-singleton dimension 0.  Target sizes: [1, -1, -1].  Tensor sizes: [4, 1, 4]
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:345: RuntimeError
+___________________________ TestTransform.test_stack ___________________________
+
+self = <tests.test_transforms.TestTransform testMethod=test_stack>
+
+    def test_stack(self):
+        rotations = random_rotations(3)
+        transform3 = Transform3d().rotate(rotations).translate(torch.full((3, 3), 0.3))
+        transform1 = Scale(37)
+        transform4 = transform1.stack(transform3)
+        self.assertEqual(len(transform1), 1)
+        self.assertEqual(len(transform3), 3)
+        self.assertEqual(len(transform4), 4)
+        self.assertClose(
+            transform4.get_matrix(),
+            torch.cat([transform1.get_matrix(), transform3.get_matrix()]),
+        )
+        points = torch.rand(4, 5, 3)
+        new_points_expect = torch.cat(
+            [
+>               transform1.transform_points(points[:1]),
+                transform3.transform_points(points[1:]),
+            ]
+        )
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:486: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pytorch3d.transforms.transform3d.Scale object at 0x7c3807a2bb20>
+points = tensor([[[0.1053, 0.2695, 0.3588],
+         [0.1994, 0.5472, 0.0062],
+         [0.9516, 0.0753, 0.8860],
+         [0.5832, 0.3376, 0.8090],
+         [0.5779, 0.9040, 0.5547]]])
+eps = None
+
+    def transform_points(self, points: torch.Tensor, eps: Optional[float]=None) -> torch.Tensor:
+        """
+        Transforms a set of 3D points using the transformation matrix.
+    
+        Args:
+            points (torch.Tensor): Tensor of shape (P, 3) or (N, P, 3).
+            eps (float, optional): Small value to clamp the homogeneous coordinate.
+    
+        Returns:
+            torch.Tensor: Transformed points of the same shape as input.
+        """
+        if points.dim() not in {2, 3} or points.size(-1) != 3:
+            raise ValueError('Points should be of shape (P, 3) or (N, P, 3).')
+        ones = torch.ones(*points.shape[:-1], 1, dtype=points.dtype, device=points.device)
+        points_homogeneous = torch.cat([points, ones], dim=-1)
+        if points.dim() == 2:
+            transformed_points = points_homogeneous @ self._matrix.T
+        else:
+>           transformed_points = torch.bmm(points_homogeneous, self._matrix.transpose(0, 1).expand(points.size(0), -1, -1))
+E           RuntimeError: The expanded size of the tensor (1) must match the existing size (4) at non-singleton dimension 0.  Target sizes: [1, -1, -1].  Tensor sizes: [4, 1, 4]
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:345: RuntimeError
+___________________ TestTransform.test_transform_points_eps ____________________
+
+self = <tests.test_transforms.TestTransform testMethod=test_transform_points_eps>
+
+    def test_transform_points_eps(self):
+        t1 = Transform3d()
+        persp_proj = [
+            [
+                [1.0, 0.0, 0.0, 0.0],
+                [0.0, 1.0, 0.0, 0.0],
+                [0.0, 0.0, 0.0, 1.0],
+                [0.0, 0.0, 1.0, 0.0],
+            ]
+        ]
+        t1._matrix = torch.FloatTensor(persp_proj)
+        points = torch.tensor(
+            [[0.0, 1.0, 0.0], [0.0, 0.0, 1e-5], [-1.0, 0.0, 1e-5]]
+        ).view(
+            1, 3, 3
+        )  # a set of points with z-coord very close to 0
+    
+>       proj = t1.transform_points(points)
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:315: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pytorch3d.transforms.transform3d.Transform3d object at 0x7c3808be4880>
+points = tensor([[[ 0.0000e+00,  1.0000e+00,  0.0000e+00],
+         [ 0.0000e+00,  0.0000e+00,  1.0000e-05],
+         [-1.0000e+00,  0.0000e+00,  1.0000e-05]]])
+eps = None
+
+    def transform_points(self, points: torch.Tensor, eps: Optional[float]=None) -> torch.Tensor:
+        """
+        Transforms a set of 3D points using the transformation matrix.
+    
+        Args:
+            points (torch.Tensor): Tensor of shape (P, 3) or (N, P, 3).
+            eps (float, optional): Small value to clamp the homogeneous coordinate.
+    
+        Returns:
+            torch.Tensor: Transformed points of the same shape as input.
+        """
+        if points.dim() not in {2, 3} or points.size(-1) != 3:
+            raise ValueError('Points should be of shape (P, 3) or (N, P, 3).')
+        ones = torch.ones(*points.shape[:-1], 1, dtype=points.dtype, device=points.device)
+        points_homogeneous = torch.cat([points, ones], dim=-1)
+        if points.dim() == 2:
+            transformed_points = points_homogeneous @ self._matrix.T
+        else:
+>           transformed_points = torch.bmm(points_homogeneous, self._matrix.transpose(0, 1).expand(points.size(0), -1, -1))
+E           RuntimeError: The expanded size of the tensor (1) must match the existing size (4) at non-singleton dimension 0.  Target sizes: [1, -1, -1].  Tensor sizes: [4, 1, 4]
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:345: RuntimeError
+_________________________ TestTransform.test_translate _________________________
+
+self = <tests.test_transforms.TestTransform testMethod=test_translate>
+
+    def test_translate(self):
+        t = Transform3d().translate(1, 2, 3)
+        points = torch.tensor([[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.5, 0.5, 0.0]]).view(
+            1, 3, 3
+        )
+        normals = torch.tensor(
+            [[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [1.0, 1.0, 0.0]]
+        ).view(1, 3, 3)
+>       points_out = t.transform_points(points)
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:184: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pytorch3d.transforms.transform3d.Transform3d object at 0x7c3752ebf490>
+points = tensor([[[1.0000, 0.0000, 0.0000],
+         [0.0000, 1.0000, 0.0000],
+         [0.5000, 0.5000, 0.0000]]])
+eps = None
+
+    def transform_points(self, points: torch.Tensor, eps: Optional[float]=None) -> torch.Tensor:
+        """
+        Transforms a set of 3D points using the transformation matrix.
+    
+        Args:
+            points (torch.Tensor): Tensor of shape (P, 3) or (N, P, 3).
+            eps (float, optional): Small value to clamp the homogeneous coordinate.
+    
+        Returns:
+            torch.Tensor: Transformed points of the same shape as input.
+        """
+        if points.dim() not in {2, 3} or points.size(-1) != 3:
+            raise ValueError('Points should be of shape (P, 3) or (N, P, 3).')
+        ones = torch.ones(*points.shape[:-1], 1, dtype=points.dtype, device=points.device)
+        points_homogeneous = torch.cat([points, ones], dim=-1)
+        if points.dim() == 2:
+            transformed_points = points_homogeneous @ self._matrix.T
+        else:
+>           transformed_points = torch.bmm(points_homogeneous, self._matrix.transpose(0, 1).expand(points.size(0), -1, -1))
+E           RuntimeError: The expanded size of the tensor (1) must match the existing size (4) at non-singleton dimension 0.  Target sizes: [1, -1, -1].  Tensor sizes: [4, 1, 4]
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:345: RuntimeError
+=============================== warnings summary ===============================
+tests/test_transforms.py::TestTransform::test_dtype_propagation
+  /local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:343: UserWarning: The use of `x.T` on tensors of dimension other than 2 to reverse their shape is deprecated and it will throw an error in a future release. Consider `x.mT` to transpose batches of matrices or `x.permute(*torch.arange(x.ndim - 1, -1, -1))` to reverse the dimensions of a tensor. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3697.)
+    transformed_points = points_homogeneous @ self._matrix.T
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_rotate_axis_angle
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_rotate_check_rot_valid_off
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_rotate_check_rot_valid_on
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_scale
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_scale_translate
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_stack
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_transform_points_eps
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_translate
+=================== 8 failed, 10 passed, 1 warning in 1.60s ====================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 18 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_clone PASSED [  5%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_compose_fail PASSED [ 11%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_dtype_propagation PASSED [ 16%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_get_item PASSED [ 22%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_get_se3 PASSED [ 27%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_init_with_custom_matrix PASSED [ 33%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_init_with_custom_matrix_errors PASSED [ 38%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_inverse PASSED [ 44%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_rotate_axis_angle FAILED [ 50%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_rotate_check_rot_valid_off FAILED [ 55%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_rotate_check_rot_valid_on FAILED [ 61%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_scale FAILED [ 66%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_scale_translate FAILED [ 72%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_stack FAILED [ 77%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_to PASSED [ 83%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_transform_points_eps FAILED [ 88%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_transform_points_fail PASSED [ 94%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_translate FAILED [100%]
+
+=================================== FAILURES ===================================
+_____________________ TestTransform.test_rotate_axis_angle _____________________
+
+self = <tests.test_transforms.TestTransform testMethod=test_rotate_axis_angle>
+
+    def test_rotate_axis_angle(self):
+        t = Transform3d().rotate_axis_angle(90.0, axis="Z")
+        points = torch.tensor([[0.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.0, 1.0, 1.0]]).view(
+            1, 3, 3
+        )
+        normals = torch.tensor(
+            [[1.0, 0.0, 0.0], [1.0, 0.0, 0.0], [1.0, 0.0, 0.0]]
+        ).view(1, 3, 3)
+>       points_out = t.transform_points(points)
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:275: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pytorch3d.transforms.transform3d.Transform3d object at 0x7cdb80e35430>
+points = tensor([[[0., 0., 0.],
+         [0., 1., 0.],
+         [0., 1., 1.]]])
+eps = None
+
+    def transform_points(self, points: torch.Tensor, eps: Optional[float]=None) -> torch.Tensor:
+        """
+        Transforms a set of 3D points using the transformation matrix.
+    
+        Args:
+            points (torch.Tensor): Tensor of shape (P, 3) or (N, P, 3).
+            eps (float, optional): Small value to clamp the homogeneous coordinate.
+    
+        Returns:
+            torch.Tensor: Transformed points of the same shape as input.
+        """
+        if points.dim() not in {2, 3} or points.size(-1) != 3:
+            raise ValueError('Points should be of shape (P, 3) or (N, P, 3).')
+        ones = torch.ones(*points.shape[:-1], 1, dtype=points.dtype, device=points.device)
+        points_homogeneous = torch.cat([points, ones], dim=-1)
+        if points.dim() == 2:
+            transformed_points = points_homogeneous @ self._matrix.T
+        else:
+>           transformed_points = torch.bmm(points_homogeneous, self._matrix.transpose(0, 1).expand(points.size(0), -1, -1))
+E           RuntimeError: The expanded size of the tensor (1) must match the existing size (4) at non-singleton dimension 0.  Target sizes: [1, -1, -1].  Tensor sizes: [4, 1, 4]
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:345: RuntimeError
+________________ TestTransform.test_rotate_check_rot_valid_off _________________
+
+self = <tests.test_transforms.TestTransform testMethod=test_rotate_check_rot_valid_off>
+
+    @mock.patch.dict(os.environ, {"PYTORCH3D_CHECK_ROTATION_MATRICES": "0"}, clear=True)
+    def test_rotate_check_rot_valid_off(self):
+        R = so3_exp_map(torch.randn((1, 3)))
+        t = Transform3d().rotate(R)
+        points = torch.tensor([[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.5, 0.5, 0.0]]).view(
+            1, 3, 3
+        )
+        normals = torch.tensor(
+            [[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [1.0, 1.0, 0.0]]
+        ).view(1, 3, 3)
+>       points_out = t.transform_points(points)
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:222: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pytorch3d.transforms.transform3d.Transform3d object at 0x7cdc368fd8b0>
+points = tensor([[[1.0000, 0.0000, 0.0000],
+         [0.0000, 1.0000, 0.0000],
+         [0.5000, 0.5000, 0.0000]]])
+eps = None
+
+    def transform_points(self, points: torch.Tensor, eps: Optional[float]=None) -> torch.Tensor:
+        """
+        Transforms a set of 3D points using the transformation matrix.
+    
+        Args:
+            points (torch.Tensor): Tensor of shape (P, 3) or (N, P, 3).
+            eps (float, optional): Small value to clamp the homogeneous coordinate.
+    
+        Returns:
+            torch.Tensor: Transformed points of the same shape as input.
+        """
+        if points.dim() not in {2, 3} or points.size(-1) != 3:
+            raise ValueError('Points should be of shape (P, 3) or (N, P, 3).')
+        ones = torch.ones(*points.shape[:-1], 1, dtype=points.dtype, device=points.device)
+        points_homogeneous = torch.cat([points, ones], dim=-1)
+        if points.dim() == 2:
+            transformed_points = points_homogeneous @ self._matrix.T
+        else:
+>           transformed_points = torch.bmm(points_homogeneous, self._matrix.transpose(0, 1).expand(points.size(0), -1, -1))
+E           RuntimeError: The expanded size of the tensor (1) must match the existing size (4) at non-singleton dimension 0.  Target sizes: [1, -1, -1].  Tensor sizes: [4, 1, 4]
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:345: RuntimeError
+_________________ TestTransform.test_rotate_check_rot_valid_on _________________
+
+self = <tests.test_transforms.TestTransform testMethod=test_rotate_check_rot_valid_on>
+
+    @mock.patch.dict(os.environ, {"PYTORCH3D_CHECK_ROTATION_MATRICES": "1"}, clear=True)
+    def test_rotate_check_rot_valid_on(self):
+        R = so3_exp_map(torch.randn((1, 3)))
+        t = Transform3d().rotate(R)
+        points = torch.tensor([[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.5, 0.5, 0.0]]).view(
+            1, 3, 3
+        )
+        normals = torch.tensor(
+            [[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [1.0, 1.0, 0.0]]
+        ).view(1, 3, 3)
+>       points_out = t.transform_points(points)
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:205: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pytorch3d.transforms.transform3d.Transform3d object at 0x7cdc368e97c0>
+points = tensor([[[1.0000, 0.0000, 0.0000],
+         [0.0000, 1.0000, 0.0000],
+         [0.5000, 0.5000, 0.0000]]])
+eps = None
+
+    def transform_points(self, points: torch.Tensor, eps: Optional[float]=None) -> torch.Tensor:
+        """
+        Transforms a set of 3D points using the transformation matrix.
+    
+        Args:
+            points (torch.Tensor): Tensor of shape (P, 3) or (N, P, 3).
+            eps (float, optional): Small value to clamp the homogeneous coordinate.
+    
+        Returns:
+            torch.Tensor: Transformed points of the same shape as input.
+        """
+        if points.dim() not in {2, 3} or points.size(-1) != 3:
+            raise ValueError('Points should be of shape (P, 3) or (N, P, 3).')
+        ones = torch.ones(*points.shape[:-1], 1, dtype=points.dtype, device=points.device)
+        points_homogeneous = torch.cat([points, ones], dim=-1)
+        if points.dim() == 2:
+            transformed_points = points_homogeneous @ self._matrix.T
+        else:
+>           transformed_points = torch.bmm(points_homogeneous, self._matrix.transpose(0, 1).expand(points.size(0), -1, -1))
+E           RuntimeError: The expanded size of the tensor (1) must match the existing size (4) at non-singleton dimension 0.  Target sizes: [1, -1, -1].  Tensor sizes: [4, 1, 4]
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:345: RuntimeError
+___________________________ TestTransform.test_scale ___________________________
+
+self = <tests.test_transforms.TestTransform testMethod=test_scale>
+
+    def test_scale(self):
+        t = Transform3d().scale(2.0).scale(0.5, 0.25, 1.0)
+        points = torch.tensor([[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.5, 0.5, 0.0]]).view(
+            1, 3, 3
+        )
+        normals = torch.tensor(
+            [[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [1.0, 1.0, 0.0]]
+        ).view(1, 3, 3)
+>       points_out = t.transform_points(points)
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:237: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pytorch3d.transforms.transform3d.Transform3d object at 0x7cdb80ed3130>
+points = tensor([[[1.0000, 0.0000, 0.0000],
+         [0.0000, 1.0000, 0.0000],
+         [0.5000, 0.5000, 0.0000]]])
+eps = None
+
+    def transform_points(self, points: torch.Tensor, eps: Optional[float]=None) -> torch.Tensor:
+        """
+        Transforms a set of 3D points using the transformation matrix.
+    
+        Args:
+            points (torch.Tensor): Tensor of shape (P, 3) or (N, P, 3).
+            eps (float, optional): Small value to clamp the homogeneous coordinate.
+    
+        Returns:
+            torch.Tensor: Transformed points of the same shape as input.
+        """
+        if points.dim() not in {2, 3} or points.size(-1) != 3:
+            raise ValueError('Points should be of shape (P, 3) or (N, P, 3).')
+        ones = torch.ones(*points.shape[:-1], 1, dtype=points.dtype, device=points.device)
+        points_homogeneous = torch.cat([points, ones], dim=-1)
+        if points.dim() == 2:
+            transformed_points = points_homogeneous @ self._matrix.T
+        else:
+>           transformed_points = torch.bmm(points_homogeneous, self._matrix.transpose(0, 1).expand(points.size(0), -1, -1))
+E           RuntimeError: The expanded size of the tensor (1) must match the existing size (4) at non-singleton dimension 0.  Target sizes: [1, -1, -1].  Tensor sizes: [4, 1, 4]
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:345: RuntimeError
+______________________ TestTransform.test_scale_translate ______________________
+
+self = <tests.test_transforms.TestTransform testMethod=test_scale_translate>
+
+    def test_scale_translate(self):
+        t = Transform3d().scale(2, 1, 3).translate(1, 2, 3)
+        points = torch.tensor([[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.5, 0.5, 0.0]]).view(
+            1, 3, 3
+        )
+        normals = torch.tensor(
+            [[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [1.0, 1.0, 0.0]]
+        ).view(1, 3, 3)
+>       points_out = t.transform_points(points)
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:256: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pytorch3d.transforms.transform3d.Transform3d object at 0x7cdc3572b760>
+points = tensor([[[1.0000, 0.0000, 0.0000],
+         [0.0000, 1.0000, 0.0000],
+         [0.5000, 0.5000, 0.0000]]])
+eps = None
+
+    def transform_points(self, points: torch.Tensor, eps: Optional[float]=None) -> torch.Tensor:
+        """
+        Transforms a set of 3D points using the transformation matrix.
+    
+        Args:
+            points (torch.Tensor): Tensor of shape (P, 3) or (N, P, 3).
+            eps (float, optional): Small value to clamp the homogeneous coordinate.
+    
+        Returns:
+            torch.Tensor: Transformed points of the same shape as input.
+        """
+        if points.dim() not in {2, 3} or points.size(-1) != 3:
+            raise ValueError('Points should be of shape (P, 3) or (N, P, 3).')
+        ones = torch.ones(*points.shape[:-1], 1, dtype=points.dtype, device=points.device)
+        points_homogeneous = torch.cat([points, ones], dim=-1)
+        if points.dim() == 2:
+            transformed_points = points_homogeneous @ self._matrix.T
+        else:
+>           transformed_points = torch.bmm(points_homogeneous, self._matrix.transpose(0, 1).expand(points.size(0), -1, -1))
+E           RuntimeError: The expanded size of the tensor (1) must match the existing size (4) at non-singleton dimension 0.  Target sizes: [1, -1, -1].  Tensor sizes: [4, 1, 4]
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:345: RuntimeError
+___________________________ TestTransform.test_stack ___________________________
+
+self = <tests.test_transforms.TestTransform testMethod=test_stack>
+
+    def test_stack(self):
+        rotations = random_rotations(3)
+        transform3 = Transform3d().rotate(rotations).translate(torch.full((3, 3), 0.3))
+        transform1 = Scale(37)
+        transform4 = transform1.stack(transform3)
+        self.assertEqual(len(transform1), 1)
+        self.assertEqual(len(transform3), 3)
+        self.assertEqual(len(transform4), 4)
+        self.assertClose(
+            transform4.get_matrix(),
+            torch.cat([transform1.get_matrix(), transform3.get_matrix()]),
+        )
+        points = torch.rand(4, 5, 3)
+        new_points_expect = torch.cat(
+            [
+>               transform1.transform_points(points[:1]),
+                transform3.transform_points(points[1:]),
+            ]
+        )
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:486: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pytorch3d.transforms.transform3d.Scale object at 0x7cdc357178e0>
+points = tensor([[[0.1053, 0.2695, 0.3588],
+         [0.1994, 0.5472, 0.0062],
+         [0.9516, 0.0753, 0.8860],
+         [0.5832, 0.3376, 0.8090],
+         [0.5779, 0.9040, 0.5547]]])
+eps = None
+
+    def transform_points(self, points: torch.Tensor, eps: Optional[float]=None) -> torch.Tensor:
+        """
+        Transforms a set of 3D points using the transformation matrix.
+    
+        Args:
+            points (torch.Tensor): Tensor of shape (P, 3) or (N, P, 3).
+            eps (float, optional): Small value to clamp the homogeneous coordinate.
+    
+        Returns:
+            torch.Tensor: Transformed points of the same shape as input.
+        """
+        if points.dim() not in {2, 3} or points.size(-1) != 3:
+            raise ValueError('Points should be of shape (P, 3) or (N, P, 3).')
+        ones = torch.ones(*points.shape[:-1], 1, dtype=points.dtype, device=points.device)
+        points_homogeneous = torch.cat([points, ones], dim=-1)
+        if points.dim() == 2:
+            transformed_points = points_homogeneous @ self._matrix.T
+        else:
+>           transformed_points = torch.bmm(points_homogeneous, self._matrix.transpose(0, 1).expand(points.size(0), -1, -1))
+E           RuntimeError: The expanded size of the tensor (1) must match the existing size (4) at non-singleton dimension 0.  Target sizes: [1, -1, -1].  Tensor sizes: [4, 1, 4]
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:345: RuntimeError
+___________________ TestTransform.test_transform_points_eps ____________________
+
+self = <tests.test_transforms.TestTransform testMethod=test_transform_points_eps>
+
+    def test_transform_points_eps(self):
+        t1 = Transform3d()
+        persp_proj = [
+            [
+                [1.0, 0.0, 0.0, 0.0],
+                [0.0, 1.0, 0.0, 0.0],
+                [0.0, 0.0, 0.0, 1.0],
+                [0.0, 0.0, 1.0, 0.0],
+            ]
+        ]
+        t1._matrix = torch.FloatTensor(persp_proj)
+        points = torch.tensor(
+            [[0.0, 1.0, 0.0], [0.0, 0.0, 1e-5], [-1.0, 0.0, 1e-5]]
+        ).view(
+            1, 3, 3
+        )  # a set of points with z-coord very close to 0
+    
+>       proj = t1.transform_points(points)
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:315: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pytorch3d.transforms.transform3d.Transform3d object at 0x7cdb888fff70>
+points = tensor([[[ 0.0000e+00,  1.0000e+00,  0.0000e+00],
+         [ 0.0000e+00,  0.0000e+00,  1.0000e-05],
+         [-1.0000e+00,  0.0000e+00,  1.0000e-05]]])
+eps = None
+
+    def transform_points(self, points: torch.Tensor, eps: Optional[float]=None) -> torch.Tensor:
+        """
+        Transforms a set of 3D points using the transformation matrix.
+    
+        Args:
+            points (torch.Tensor): Tensor of shape (P, 3) or (N, P, 3).
+            eps (float, optional): Small value to clamp the homogeneous coordinate.
+    
+        Returns:
+            torch.Tensor: Transformed points of the same shape as input.
+        """
+        if points.dim() not in {2, 3} or points.size(-1) != 3:
+            raise ValueError('Points should be of shape (P, 3) or (N, P, 3).')
+        ones = torch.ones(*points.shape[:-1], 1, dtype=points.dtype, device=points.device)
+        points_homogeneous = torch.cat([points, ones], dim=-1)
+        if points.dim() == 2:
+            transformed_points = points_homogeneous @ self._matrix.T
+        else:
+>           transformed_points = torch.bmm(points_homogeneous, self._matrix.transpose(0, 1).expand(points.size(0), -1, -1))
+E           RuntimeError: The expanded size of the tensor (1) must match the existing size (4) at non-singleton dimension 0.  Target sizes: [1, -1, -1].  Tensor sizes: [4, 1, 4]
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:345: RuntimeError
+_________________________ TestTransform.test_translate _________________________
+
+self = <tests.test_transforms.TestTransform testMethod=test_translate>
+
+    def test_translate(self):
+        t = Transform3d().translate(1, 2, 3)
+        points = torch.tensor([[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.5, 0.5, 0.0]]).view(
+            1, 3, 3
+        )
+        normals = torch.tensor(
+            [[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [1.0, 1.0, 0.0]]
+        ).view(1, 3, 3)
+>       points_out = t.transform_points(points)
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:184: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pytorch3d.transforms.transform3d.Transform3d object at 0x7cdc35706f70>
+points = tensor([[[1.0000, 0.0000, 0.0000],
+         [0.0000, 1.0000, 0.0000],
+         [0.5000, 0.5000, 0.0000]]])
+eps = None
+
+    def transform_points(self, points: torch.Tensor, eps: Optional[float]=None) -> torch.Tensor:
+        """
+        Transforms a set of 3D points using the transformation matrix.
+    
+        Args:
+            points (torch.Tensor): Tensor of shape (P, 3) or (N, P, 3).
+            eps (float, optional): Small value to clamp the homogeneous coordinate.
+    
+        Returns:
+            torch.Tensor: Transformed points of the same shape as input.
+        """
+        if points.dim() not in {2, 3} or points.size(-1) != 3:
+            raise ValueError('Points should be of shape (P, 3) or (N, P, 3).')
+        ones = torch.ones(*points.shape[:-1], 1, dtype=points.dtype, device=points.device)
+        points_homogeneous = torch.cat([points, ones], dim=-1)
+        if points.dim() == 2:
+            transformed_points = points_homogeneous @ self._matrix.T
+        else:
+>           transformed_points = torch.bmm(points_homogeneous, self._matrix.transpose(0, 1).expand(points.size(0), -1, -1))
+E           RuntimeError: The expanded size of the tensor (1) must match the existing size (4) at non-singleton dimension 0.  Target sizes: [1, -1, -1].  Tensor sizes: [4, 1, 4]
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:345: RuntimeError
+=============================== warnings summary ===============================
+tests/test_transforms.py::TestTransform::test_dtype_propagation
+  /local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:343: UserWarning: The use of `x.T` on tensors of dimension other than 2 to reverse their shape is deprecated and it will throw an error in a future release. Consider `x.mT` to transpose batches of matrices or `x.permute(*torch.arange(x.ndim - 1, -1, -1))` to reverse the dimensions of a tensor. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3697.)
+    transformed_points = points_homogeneous @ self._matrix.T
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_rotate_axis_angle
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_rotate_check_rot_valid_off
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_rotate_check_rot_valid_on
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_scale
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_scale_translate
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_stack
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_transform_points_eps
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTransform::test_translate
+=================== 8 failed, 10 passed, 1 warning in 1.55s ====================

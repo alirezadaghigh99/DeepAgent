@@ -1,0 +1,11 @@
+{
+    "result": "Certainly! Let's focus on implementing the `deg2rad` function as described in your plan. This function will convert angles from degrees to radians for a given tensor. Here's how you can implement it in Python:\n\n```python\nimport torch\nfrom torch import Tensor\nimport math\n\ndef deg2rad(tensor: Tensor) -> Tensor:\n    \"\"\"\n    Convert angles from degrees to radians.\n\n    Args:\n        tensor (Tensor): Tensor of arbitrary shape containing angles in degrees.\n\n    Returns:\n        Tensor: Tensor with the same shape as input, containing angles in radians.\n    \"\"\"\n    if not isinstance(tensor, Tensor):\n        raise TypeError(f\"Input type is not a Tensor. Got {type(tensor)}\")\n    \n    # Convert degrees to radians\n    radians_tensor = tensor * (math.pi / 180)\n    \n    return radians_tensor\n\n# Example usage:\n# tensor = torch.tensor([0, 90, 180, 270, 360])\n# radians_tensor = deg2rad(tensor)\n# print(radians_tensor)\n```\n\n### Explanation:\n\n1. **Check Input Type:**\n   - The function first checks if the input is a `Tensor`. If not, it raises a `TypeError`.\n\n2. **Convert Degrees to Radians:**\n   - The conversion is done using the formula \\( \\text{radians} = \\text{degrees} \\times \\frac{\\pi}{180} \\). This is applied element-wise to the input tensor.\n\n3. **Return Converted Tensor:**\n   - The function returns a new tensor with the same shape as the input, but with values converted to radians.\n\nThis function uses PyTorch's `Tensor` class, which is commonly used for handling multi-dimensional arrays in machine learning tasks. If you have any further questions or need additional implementations, feel free to ask!",
+    "prompt": "Generate a Python function called deg2rad Function that converts angles from degrees to radians.\n\n    Args:\n        tensor: Tensor of arbitrary shape.\n\n    Returns:\n        tensor with same shape as input.\nif not isinstance(tensor, Tensor):\n        raise TypeError(f\"Input type is not a Tensor. Got {type(tensor)}\")",
+    "function_name": "deg2rad",
+    "ground_truth": "kornia/geometry/conversions.py#L83",
+    "test": "tests/geometry/test_conversions.py::TestRadDegConversions::test_deg2rad_gradcheck",
+    "class": "",
+    "stage": "Pre-Post processing",
+    "task": "",
+    "data": ""
+}

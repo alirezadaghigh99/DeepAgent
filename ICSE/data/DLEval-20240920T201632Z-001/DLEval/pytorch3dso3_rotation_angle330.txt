@@ -1,0 +1,20 @@
+stage: Inference
+task: Prediction
+data: Image
+
+prompt:
+Generate the python so3_rotation_angle function with torch calculates rotation angles from a batch of 3x3 rotation matrices by using the trace of the matrices. It allows returning either the angle in radians or the cosine of the angle, which can help avoid numerical instability in certain cases. The function includes checks to ensure the input is correctly shaped as a batch of 3x3 matrices and that the trace of each matrix falls within a valid range. If these conditions are not met, it raises a ValueError. Additionally, the function can clamp the cosine of the rotation angle to prevent non-finite outputs during the calculation of the angle using acos, ensuring robust handling of edge cases and potential numerical issues.
+def so3_rotation_angle(
+    R: torch.Tensor,
+    eps: float = 1e-4,
+    cos_angle: bool = False,
+    cos_bound: float = 1e-4,
+) -> torch.Tensor:
+
+ ground Truth:pytorch3d/transforms/so3.py
+
+ repo:pytorch3d
+
+ function:so3_rotation_angle
+ 
+ test_cases:tests/test_so3.py::TestSO3

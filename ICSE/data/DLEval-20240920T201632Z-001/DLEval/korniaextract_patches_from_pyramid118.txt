@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: Detection
+data: Image
+
+prompt:
+Write a Python function that extracts image patches from a pyramid of images based on input Local Affine Frames (LAFs). The function should take as input an image tensor `img` of shape `(B, CH, H, W)` and LAFs `laf` of shape `(B, N, 2, 3)`. Optionally, normalize the LAFs before extraction. The function should return a tensor of extracted patches of shape `(B, N, CH, PS, PS)`. The extraction should be done at the appropriate pyramid level based on the scale of each LAF. Ensure that the function handles various cases, such as when no patches need to be extracted at a particular pyramid level.
+
+ ground Truth:kornia/feature/laf.py
+
+ repo:kornia
+
+ function:extract_patches_from_pyramid
+ 
+ test_cases:tests/feature/test_laf.py::TestExtractPatchesPyr

@@ -1,0 +1,745 @@
+output file:
+processed_kornia_jpeg_decode314.json
+function:
+_jpeg_decode
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_module[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_smoke[cpu-float32] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_non_batch_param[cpu-float32] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_cardinality[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_cardinality[cpu-float32] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_smoke_not_div_by_16[cpu-float32] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_smoke_not_div_by_16[cpu-float32]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_multi_batch[cpu-float32]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_module_with_param[cpu-float32]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_custom_qt[cpu-float32]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_non_batch_inp[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_multi_batch[cpu-float32] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_gradcheck[cpu]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_non_batch_inp[cpu-float32] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_non_batch_param[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_gradcheck[cpu] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_module_with_param[cpu-float32] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_custom_qt[cpu-float32] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_module[cpu-float32] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_smoke[cpu-float32]'}
+
+All Test Cases On Generated code:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'jit', 'openxla', 'cudagraphs', 'tvm', 'onnxrt', 'inductor', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 11 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_smoke[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_smoke_not_div_by_16[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_multi_batch[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_custom_qt[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_non_batch_param[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_non_batch_inp[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_exception[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_cardinality[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_module[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_module_with_param[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_gradcheck[cpu] FAILED
+
+=================================== FAILURES ===================================
+_____________________ TestDiffJPEG.test_smoke[cpu-float32] _____________________
+
+self = <test_jpeg.TestDiffJPEG object at 0x7c130c545000>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_smoke(self, device, dtype) -> None:
+        """This test standard usage."""
+        B, H, W = 2, 32, 32
+        img = torch.rand(B, 3, H, W, device=device, dtype=dtype)
+        jpeg_quality = torch.randint(low=0, high=100, size=(B,), device=device, dtype=dtype)
+>       img_jpeg = kornia.enhance.jpeg_codec_differentiable(img, jpeg_quality)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py:15: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:341: in jpeg_codec_differentiable
+    image_rgb_jpeg: Tensor = _jpeg_decode(input_y=y_encoded, input_cb=cb_encoded, input_cr=cr_encoded, jpeg_quality=jpeg_quality, H=H, W=W, quantization_table_c=quantization_table_c, quantization_table_y=quantization_table_y)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:190: in _jpeg_decode
+    return _jpeg_decode(input_y, input_cb, input_cr, jpeg_quality, H, W, quantization_table_y, quantization_table_c)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:39: in _jpeg_decode
+    y_blocks = idct_2d(dequantized_y)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:38: in idct_2d
+    return torch.idct(block, norm='ortho')
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'idct'
+
+    def __getattr__(name):
+        # Deprecated attrs
+        replacement = _deprecated_attrs.get(name)
+        if replacement is not None:
+            import warnings
+    
+            warnings.warn(
+                f"'{name}' is deprecated, please use '{replacement.__module__}.{replacement.__name__}()'",
+                stacklevel=2,
+            )
+            return replacement()
+    
+        # Lazy modules
+        if name in _lazy_modules:
+            return importlib.import_module(f".{name}", __name__)
+    
+>       raise AttributeError(f"module '{__name__}' has no attribute '{name}'")
+E       AttributeError: module 'torch' has no attribute 'idct'
+
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/__init__.py:2562: AttributeError
+______________ TestDiffJPEG.test_smoke_not_div_by_16[cpu-float32] ______________
+
+self = <test_jpeg.TestDiffJPEG object at 0x7c130c5453f0>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_smoke_not_div_by_16(self, device, dtype) -> None:
+        """This test standard usage."""
+        B, H, W = 2, 33, 33
+        img = torch.rand(B, 3, H, W, device=device, dtype=dtype)
+        jpeg_quality = torch.randint(low=0, high=100, size=(B,), device=device, dtype=dtype)
+>       img_jpeg = kornia.enhance.jpeg_codec_differentiable(img, jpeg_quality)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:341: in jpeg_codec_differentiable
+    image_rgb_jpeg: Tensor = _jpeg_decode(input_y=y_encoded, input_cb=cb_encoded, input_cr=cr_encoded, jpeg_quality=jpeg_quality, H=H, W=W, quantization_table_c=quantization_table_c, quantization_table_y=quantization_table_y)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:190: in _jpeg_decode
+    return _jpeg_decode(input_y, input_cb, input_cr, jpeg_quality, H, W, quantization_table_y, quantization_table_c)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:39: in _jpeg_decode
+    y_blocks = idct_2d(dequantized_y)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:38: in idct_2d
+    return torch.idct(block, norm='ortho')
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'idct'
+
+    def __getattr__(name):
+        # Deprecated attrs
+        replacement = _deprecated_attrs.get(name)
+        if replacement is not None:
+            import warnings
+    
+            warnings.warn(
+                f"'{name}' is deprecated, please use '{replacement.__module__}.{replacement.__name__}()'",
+                stacklevel=2,
+            )
+            return replacement()
+    
+        # Lazy modules
+        if name in _lazy_modules:
+            return importlib.import_module(f".{name}", __name__)
+    
+>       raise AttributeError(f"module '{__name__}' has no attribute '{name}'")
+E       AttributeError: module 'torch' has no attribute 'idct'
+
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/__init__.py:2562: AttributeError
+__________________ TestDiffJPEG.test_multi_batch[cpu-float32] __________________
+
+self = <test_jpeg.TestDiffJPEG object at 0x7c130c545720>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_multi_batch(self, device, dtype) -> None:
+        """Here we test two batch dimensions."""
+        B, H, W = 4, 32, 32
+        img = torch.rand(B, B, 3, H, W, device=device, dtype=dtype)
+        jpeg_quality = torch.randint(low=0, high=100, size=(1,), device=device, dtype=dtype)
+        qt_y = torch.randint(low=1, high=255, size=(B * B, 8, 8), device=device, dtype=dtype)
+        qt_c = torch.randint(low=1, high=255, size=(B * B, 8, 8), device=device, dtype=dtype)
+>       img_jpeg = kornia.enhance.jpeg_codec_differentiable(img, jpeg_quality, qt_y, qt_c)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py:35: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:341: in jpeg_codec_differentiable
+    image_rgb_jpeg: Tensor = _jpeg_decode(input_y=y_encoded, input_cb=cb_encoded, input_cr=cr_encoded, jpeg_quality=jpeg_quality, H=H, W=W, quantization_table_c=quantization_table_c, quantization_table_y=quantization_table_y)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:190: in _jpeg_decode
+    return _jpeg_decode(input_y, input_cb, input_cr, jpeg_quality, H, W, quantization_table_y, quantization_table_c)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input_y = tensor([[[[ 7.4123e-03, -9.2253e-01, -2.2939e-02,  ..., -1.0231e+00,
+            6.9162e-03,  1.6247e-02],
+          [...862e-01],
+          [ 1.5081e-02,  1.1525e-03,  2.9337e-03,  ..., -1.1692e-03,
+            1.1924e-02, -2.1057e-02]]]])
+input_cb = tensor([[[[-1.7567e-03, -1.0605e-06,  9.9457e-01,  ..., -2.4824e-06,
+            1.6896e-05,  6.0177e-04],
+          [...852e-05],
+          [-4.4363e-06, -5.0436e-10,  1.0299e-05,  ...,  6.9886e-03,
+           -1.1692e-07,  1.2798e-04]]]])
+input_cr = tensor([[[[-1.0324e+00, -5.6444e-05,  8.8925e-01,  ...,  1.9285e-04,
+           -1.4358e-03,  3.8906e-04],
+          [...451e-05],
+          [ 1.1860e-04, -1.7190e-03, -5.1737e-05,  ...,  2.8681e-02,
+            6.4186e-05,  4.8787e-03]]]])
+jpeg_quality = tensor([22.]), H = 32, W = 32
+quantization_table_y = tensor([[[155.,  78.,  30.,  ...,  26., 193., 227.],
+         [221., 178.,  36.,  ...,  19., 151.,  88.],
+         [ 5...88.,  14.],
+         [153., 113., 179.,  ..., 180., 146.,  36.],
+         [153., 103., 204.,  ..., 125., 216., 126.]]])
+quantization_table_c = tensor([[[ 16., 243.,  19.,  ..., 156.,  60., 150.],
+         [ 43., 192., 134.,  ..., 233.,  89., 134.],
+         [13...16., 113.],
+         [ 36., 195.,  38.,  ..., 114., 135., 213.],
+         [196., 172., 119.,  ...,  27., 155., 129.]]])
+
+    def _jpeg_decode(input_y, input_cb, input_cr, jpeg_quality, H, W, quantization_table_y, quantization_table_c):
+        """
+        Performs JPEG decoding.
+    
+        Args:
+            input_y (Tensor): Compressed Y component of the shape (B, N, 8, 8).
+            input_cb (Tensor): Compressed Cb component of the shape (B, N, 8, 8).
+            input_cr (Tensor): Compressed Cr component of the shape (B, N, 8, 8).
+            jpeg_quality (Tensor): Compression strength of the shape (B).
+            H (int): Original image height.
+            W (int): Original image width.
+            quantization_table_y (Tensor): Quantization table for Y channel.
+            quantization_table_c (Tensor): Quantization table for C channels.
+    
+        Returns:
+            rgb_decoded (Tensor): Decompressed RGB image of the shape (B, 3, H, W).
+        """
+        dequantized_y = input_y * quantization_table_y
+>       dequantized_cb = input_cb * quantization_table_c
+E       RuntimeError: The size of tensor a (4) must match the size of tensor b (16) at non-singleton dimension 1
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:34: RuntimeError
+___________________ TestDiffJPEG.test_custom_qt[cpu-float32] ___________________
+
+self = <test_jpeg.TestDiffJPEG object at 0x7c130c545a50>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_custom_qt(self, device, dtype) -> None:
+        """Here we test if we can handle custom quantization tables."""
+        B, H, W = 4, 32, 32
+        img = torch.rand(B, 3, H, W, device=device, dtype=dtype)
+        jpeg_quality = torch.randint(low=0, high=100, size=(B,), device=device, dtype=dtype)
+        qt_y = torch.randint(low=1, high=255, size=(B, 8, 8), device=device, dtype=dtype)
+        qt_c = torch.randint(low=1, high=255, size=(B, 8, 8), device=device, dtype=dtype)
+>       img_jpeg = kornia.enhance.jpeg_codec_differentiable(img, jpeg_quality, qt_y, qt_c)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py:46: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:341: in jpeg_codec_differentiable
+    image_rgb_jpeg: Tensor = _jpeg_decode(input_y=y_encoded, input_cb=cb_encoded, input_cr=cr_encoded, jpeg_quality=jpeg_quality, H=H, W=W, quantization_table_c=quantization_table_c, quantization_table_y=quantization_table_y)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:190: in _jpeg_decode
+    return _jpeg_decode(input_y, input_cb, input_cr, jpeg_quality, H, W, quantization_table_y, quantization_table_c)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input_y = tensor([[[[ 3.1160e-04, -2.0318e-04,  2.6907e-04,  ..., -2.6708e-04,
+           -1.7557e-04, -6.7387e-03],
+          [...823e-01],
+          [-2.7219e-02, -8.7512e-03,  1.9002e-05,  ..., -1.8585e-02,
+            9.5744e-01,  1.3123e-05]]]])
+input_cb = tensor([[[[-4.2018e-05, -3.8221e-10,  1.9543e-03,  ...,  2.9958e-03,
+           -1.2316e-04,  1.9178e-05],
+          [...794e-04],
+          [ 3.8337e-06, -3.0000e+00, -4.0693e-07,  ...,  2.4589e-03,
+            9.8867e-05,  2.9792e-05]]]])
+input_cr = tensor([[[[-1.7613e-02, -4.9260e-03,  3.0212e-10,  ...,  2.3468e-03,
+           -1.1270e-03, -1.4913e-06],
+          [...803e-07],
+          [-2.0563e-04, -8.0534e-02,  2.7745e-04,  ..., -3.3167e-04,
+           -3.2459e-05,  3.7202e-04]]]])
+jpeg_quality = tensor([ 6., 68., 10., 12.]), H = 32, W = 32
+quantization_table_y = tensor([[[243., 152., 162., 226., 133., 186., 131.,  92.],
+         [ 68., 123., 246., 109., 157., 172.,  17.,  19.],
+...         [ 41., 120.,  82.,  32.,  23.,  76.,  36.,  13.],
+         [ 94., 196.,  43., 247., 101.,  57.,  31., 157.]]])
+quantization_table_c = tensor([[[212., 239., 212., 114., 106., 111., 225., 165.],
+         [ 48.,  40., 191.,  65.,  96., 144.,  33., 232.],
+...         [ 37., 177., 100.,  27.,  16.,  33., 232.,  93.],
+         [250.,   4., 144., 113., 157., 141., 219., 244.]]])
+
+    def _jpeg_decode(input_y, input_cb, input_cr, jpeg_quality, H, W, quantization_table_y, quantization_table_c):
+        """
+        Performs JPEG decoding.
+    
+        Args:
+            input_y (Tensor): Compressed Y component of the shape (B, N, 8, 8).
+            input_cb (Tensor): Compressed Cb component of the shape (B, N, 8, 8).
+            input_cr (Tensor): Compressed Cr component of the shape (B, N, 8, 8).
+            jpeg_quality (Tensor): Compression strength of the shape (B).
+            H (int): Original image height.
+            W (int): Original image width.
+            quantization_table_y (Tensor): Quantization table for Y channel.
+            quantization_table_c (Tensor): Quantization table for C channels.
+    
+        Returns:
+            rgb_decoded (Tensor): Decompressed RGB image of the shape (B, 3, H, W).
+        """
+>       dequantized_y = input_y * quantization_table_y
+E       RuntimeError: The size of tensor a (16) must match the size of tensor b (4) at non-singleton dimension 1
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:33: RuntimeError
+________________ TestDiffJPEG.test_non_batch_param[cpu-float32] ________________
+
+self = <test_jpeg.TestDiffJPEG object at 0x7c130c545d80>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_non_batch_param(self, device, dtype) -> None:
+        """Here we test if we can handle non-batched JPEG parameters (JPEG quality and QT's)."""
+        B, H, W = 3, 32, 32
+        img = torch.rand(B, 3, H, W, device=device, dtype=dtype)
+        jpeg_quality = torch.randint(low=0, high=100, size=(1,), device=device, dtype=dtype)
+        qt_y = torch.randint(low=1, high=255, size=(1, 8, 8), device=device, dtype=dtype)
+        qt_c = torch.randint(low=1, high=255, size=(1, 8, 8), device=device, dtype=dtype)
+>       img_jpeg = kornia.enhance.jpeg_codec_differentiable(img, jpeg_quality, qt_y, qt_c)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py:57: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:341: in jpeg_codec_differentiable
+    image_rgb_jpeg: Tensor = _jpeg_decode(input_y=y_encoded, input_cb=cb_encoded, input_cr=cr_encoded, jpeg_quality=jpeg_quality, H=H, W=W, quantization_table_c=quantization_table_c, quantization_table_y=quantization_table_y)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:190: in _jpeg_decode
+    return _jpeg_decode(input_y, input_cb, input_cr, jpeg_quality, H, W, quantization_table_y, quantization_table_c)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:39: in _jpeg_decode
+    y_blocks = idct_2d(dequantized_y)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:38: in idct_2d
+    return torch.idct(block, norm='ortho')
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'idct'
+
+    def __getattr__(name):
+        # Deprecated attrs
+        replacement = _deprecated_attrs.get(name)
+        if replacement is not None:
+            import warnings
+    
+            warnings.warn(
+                f"'{name}' is deprecated, please use '{replacement.__module__}.{replacement.__name__}()'",
+                stacklevel=2,
+            )
+            return replacement()
+    
+        # Lazy modules
+        if name in _lazy_modules:
+            return importlib.import_module(f".{name}", __name__)
+    
+>       raise AttributeError(f"module '{__name__}' has no attribute '{name}'")
+E       AttributeError: module 'torch' has no attribute 'idct'
+
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/__init__.py:2562: AttributeError
+_________________ TestDiffJPEG.test_non_batch_inp[cpu-float32] _________________
+
+self = <test_jpeg.TestDiffJPEG object at 0x7c130c5460b0>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_non_batch_inp(self, device, dtype) -> None:
+        """Here we test if we can handle non-batched inputs (input image, JPEG quality, and QT's)."""
+        H, W = 32, 32
+        img = torch.rand(3, H, W, device=device, dtype=dtype)
+        jpeg_quality = torch.randint(low=0, high=100, size=(1,), device=device, dtype=dtype)
+        qt_y = torch.randint(low=1, high=255, size=(8, 8), device=device, dtype=dtype)
+        qt_c = torch.randint(low=1, high=255, size=(8, 8), device=device, dtype=dtype)
+>       img_jpeg = kornia.enhance.jpeg_codec_differentiable(img, jpeg_quality, qt_y, qt_c)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py:68: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:341: in jpeg_codec_differentiable
+    image_rgb_jpeg: Tensor = _jpeg_decode(input_y=y_encoded, input_cb=cb_encoded, input_cr=cr_encoded, jpeg_quality=jpeg_quality, H=H, W=W, quantization_table_c=quantization_table_c, quantization_table_y=quantization_table_y)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:190: in _jpeg_decode
+    return _jpeg_decode(input_y, input_cb, input_cr, jpeg_quality, H, W, quantization_table_y, quantization_table_c)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:39: in _jpeg_decode
+    y_blocks = idct_2d(dequantized_y)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:38: in idct_2d
+    return torch.idct(block, norm='ortho')
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'idct'
+
+    def __getattr__(name):
+        # Deprecated attrs
+        replacement = _deprecated_attrs.get(name)
+        if replacement is not None:
+            import warnings
+    
+            warnings.warn(
+                f"'{name}' is deprecated, please use '{replacement.__module__}.{replacement.__name__}()'",
+                stacklevel=2,
+            )
+            return replacement()
+    
+        # Lazy modules
+        if name in _lazy_modules:
+            return importlib.import_module(f".{name}", __name__)
+    
+>       raise AttributeError(f"module '{__name__}' has no attribute '{name}'")
+E       AttributeError: module 'torch' has no attribute 'idct'
+
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/__init__.py:2562: AttributeError
+__________________ TestDiffJPEG.test_cardinality[cpu-float32] __________________
+
+self = <test_jpeg.TestDiffJPEG object at 0x7c130c546710>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_cardinality(self, device, dtype) -> None:
+        B, H, W = 1, 16, 16
+        img = torch.zeros(B, 3, H, W, device=device, dtype=dtype)
+        img[..., 4:-4, 4:-4] = 1.0
+        jpeg_quality = torch.tensor([2.0], device=device, dtype=dtype)
+>       img_jpeg = kornia.enhance.jpeg_codec_differentiable(img, jpeg_quality)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py:143: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:341: in jpeg_codec_differentiable
+    image_rgb_jpeg: Tensor = _jpeg_decode(input_y=y_encoded, input_cb=cb_encoded, input_cr=cr_encoded, jpeg_quality=jpeg_quality, H=H, W=W, quantization_table_c=quantization_table_c, quantization_table_y=quantization_table_y)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:190: in _jpeg_decode
+    return _jpeg_decode(input_y, input_cb, input_cr, jpeg_quality, H, W, quantization_table_y, quantization_table_c)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:39: in _jpeg_decode
+    y_blocks = idct_2d(dequantized_y)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:38: in idct_2d
+    return torch.idct(block, norm='ortho')
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'idct'
+
+    def __getattr__(name):
+        # Deprecated attrs
+        replacement = _deprecated_attrs.get(name)
+        if replacement is not None:
+            import warnings
+    
+            warnings.warn(
+                f"'{name}' is deprecated, please use '{replacement.__module__}.{replacement.__name__}()'",
+                stacklevel=2,
+            )
+            return replacement()
+    
+        # Lazy modules
+        if name in _lazy_modules:
+            return importlib.import_module(f".{name}", __name__)
+    
+>       raise AttributeError(f"module '{__name__}' has no attribute '{name}'")
+E       AttributeError: module 'torch' has no attribute 'idct'
+
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/__init__.py:2562: AttributeError
+____________________ TestDiffJPEG.test_module[cpu-float32] _____________________
+
+self = <test_jpeg.TestDiffJPEG object at 0x7c130c546a40>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_module(self, device, dtype) -> None:
+        B, H, W = 4, 16, 16
+        img = torch.rand(B, 3, H, W, device=device, dtype=dtype)
+        jpeg_quality = torch.randint(low=0, high=100, size=(B,), device=device, dtype=dtype)
+        qt_y = torch.randint(low=1, high=255, size=(B, 8, 8), device=device, dtype=dtype)
+        qt_c = torch.randint(low=1, high=255, size=(B, 8, 8), device=device, dtype=dtype)
+        diff_jpeg_module = kornia.enhance.JPEGCodecDifferentiable(qt_y, qt_c)
+>       img_jpeg = diff_jpeg_module(img, jpeg_quality)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py:1033: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:274: in __call__
+    _output_image = decorated_forward(*inputs, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:63: in wrapper
+    tensor_outputs = func(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1736: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1747: in _call_impl
+    return forward_call(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:432: in forward
+    image_rgb_jpeg: Tensor = jpeg_codec_differentiable(image_rgb, jpeg_quality=jpeg_quality, quantization_table_c=self.quantization_table_c, quantization_table_y=self.quantization_table_y)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:341: in jpeg_codec_differentiable
+    image_rgb_jpeg: Tensor = _jpeg_decode(input_y=y_encoded, input_cb=cb_encoded, input_cr=cr_encoded, jpeg_quality=jpeg_quality, H=H, W=W, quantization_table_c=quantization_table_c, quantization_table_y=quantization_table_y)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:190: in _jpeg_decode
+    return _jpeg_decode(input_y, input_cb, input_cr, jpeg_quality, H, W, quantization_table_y, quantization_table_c)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:39: in _jpeg_decode
+    y_blocks = idct_2d(dequantized_y)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:38: in idct_2d
+    return torch.idct(block, norm='ortho')
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'idct'
+
+    def __getattr__(name):
+        # Deprecated attrs
+        replacement = _deprecated_attrs.get(name)
+        if replacement is not None:
+            import warnings
+    
+            warnings.warn(
+                f"'{name}' is deprecated, please use '{replacement.__module__}.{replacement.__name__}()'",
+                stacklevel=2,
+            )
+            return replacement()
+    
+        # Lazy modules
+        if name in _lazy_modules:
+            return importlib.import_module(f".{name}", __name__)
+    
+>       raise AttributeError(f"module '{__name__}' has no attribute '{name}'")
+E       AttributeError: module 'torch' has no attribute 'idct'
+
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/__init__.py:2562: AttributeError
+_______________ TestDiffJPEG.test_module_with_param[cpu-float32] _______________
+
+self = <test_jpeg.TestDiffJPEG object at 0x7c130c545f00>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_module_with_param(self, device, dtype) -> None:
+        B, H, W = 4, 16, 16
+        img = torch.rand(B, 3, H, W, device=device, dtype=dtype)
+        jpeg_quality = torch.randint(low=0, high=100, size=(B,), device=device, dtype=dtype)
+        qt_y = torch.nn.Parameter(torch.randint(low=1, high=255, size=(B, 8, 8), device=device, dtype=dtype))
+        qt_c = torch.nn.Parameter(torch.randint(low=1, high=255, size=(B, 8, 8), device=device, dtype=dtype))
+        diff_jpeg_module = kornia.enhance.JPEGCodecDifferentiable(qt_y, qt_c)
+>       img_jpeg = diff_jpeg_module(img, jpeg_quality)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py:1044: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:274: in __call__
+    _output_image = decorated_forward(*inputs, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:63: in wrapper
+    tensor_outputs = func(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1736: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1747: in _call_impl
+    return forward_call(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:432: in forward
+    image_rgb_jpeg: Tensor = jpeg_codec_differentiable(image_rgb, jpeg_quality=jpeg_quality, quantization_table_c=self.quantization_table_c, quantization_table_y=self.quantization_table_y)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:341: in jpeg_codec_differentiable
+    image_rgb_jpeg: Tensor = _jpeg_decode(input_y=y_encoded, input_cb=cb_encoded, input_cr=cr_encoded, jpeg_quality=jpeg_quality, H=H, W=W, quantization_table_c=quantization_table_c, quantization_table_y=quantization_table_y)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:190: in _jpeg_decode
+    return _jpeg_decode(input_y, input_cb, input_cr, jpeg_quality, H, W, quantization_table_y, quantization_table_c)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:39: in _jpeg_decode
+    y_blocks = idct_2d(dequantized_y)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:38: in idct_2d
+    return torch.idct(block, norm='ortho')
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'idct'
+
+    def __getattr__(name):
+        # Deprecated attrs
+        replacement = _deprecated_attrs.get(name)
+        if replacement is not None:
+            import warnings
+    
+            warnings.warn(
+                f"'{name}' is deprecated, please use '{replacement.__module__}.{replacement.__name__}()'",
+                stacklevel=2,
+            )
+            return replacement()
+    
+        # Lazy modules
+        if name in _lazy_modules:
+            return importlib.import_module(f".{name}", __name__)
+    
+>       raise AttributeError(f"module '{__name__}' has no attribute '{name}'")
+E       AttributeError: module 'torch' has no attribute 'idct'
+
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/__init__.py:2562: AttributeError
+_______________________ TestDiffJPEG.test_gradcheck[cpu] _______________________
+
+self = <test_jpeg.TestDiffJPEG object at 0x7c130c5469b0>
+device = device(type='cpu')
+
+    def test_gradcheck(self, device) -> None:
+        """We test that the gradient matches the gradient of the reference implementation."""
+        B, H, W = 1, 16, 16
+        img = torch.zeros(B, 3, H, W, device=device, dtype=torch.float)
+        img[..., 0, 4:-4, 4:-4] = 1.0
+        img[..., 1, 4:-4, 4:-4] = 0.5
+        img[..., 2, 4:-4, 4:-4] = 0.5
+        img.requires_grad = True
+        jpeg_quality = torch.tensor([10.0], device=device, dtype=torch.float, requires_grad=True)
+>       img_jpeg = kornia.enhance.jpeg_codec_differentiable(img, jpeg_quality)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py:1058: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:341: in jpeg_codec_differentiable
+    image_rgb_jpeg: Tensor = _jpeg_decode(input_y=y_encoded, input_cb=cb_encoded, input_cr=cr_encoded, jpeg_quality=jpeg_quality, H=H, W=W, quantization_table_c=quantization_table_c, quantization_table_y=quantization_table_y)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:190: in _jpeg_decode
+    return _jpeg_decode(input_y, input_cb, input_cr, jpeg_quality, H, W, quantization_table_y, quantization_table_c)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:39: in _jpeg_decode
+    y_blocks = idct_2d(dequantized_y)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:38: in idct_2d
+    return torch.idct(block, norm='ortho')
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'idct'
+
+    def __getattr__(name):
+        # Deprecated attrs
+        replacement = _deprecated_attrs.get(name)
+        if replacement is not None:
+            import warnings
+    
+            warnings.warn(
+                f"'{name}' is deprecated, please use '{replacement.__module__}.{replacement.__name__}()'",
+                stacklevel=2,
+            )
+            return replacement()
+    
+        # Lazy modules
+        if name in _lazy_modules:
+            return importlib.import_module(f".{name}", __name__)
+    
+>       raise AttributeError(f"module '{__name__}' has no attribute '{name}'")
+E       AttributeError: module 'torch' has no attribute 'idct'
+
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/__init__.py:2562: AttributeError
+=============================== warnings summary ===============================
+tests/enhance/test_jpeg.py::TestDiffJPEG::test_smoke[cpu-float32]
+  /local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/functional.py:534: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3595.)
+    return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_smoke[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_smoke_not_div_by_16[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_multi_batch[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_custom_qt[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_non_batch_param[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_non_batch_inp[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_cardinality[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_module[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_module_with_param[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_gradcheck[cpu]
+=================== 10 failed, 1 passed, 1 warning in 0.76s ====================
+
+
+Final Test Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'tvm', 'jit', 'inductor', 'cudagraphs', 'openxla', 'onnxrt', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 11 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_smoke[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_smoke_not_div_by_16[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_multi_batch[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_custom_qt[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_non_batch_param[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_non_batch_inp[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_exception[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_cardinality[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_module[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_module_with_param[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_gradcheck[cpu] PASSED
+
+=============================== warnings summary ===============================
+tests/enhance/test_jpeg.py::TestDiffJPEG::test_smoke[cpu-float32]
+  /local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/functional.py:534: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3595.)
+    return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 11 passed, 1 warning in 0.20s =========================
+
+
+Initial Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'openxla', 'inductor', 'tvm', 'cudagraphs', 'onnxrt', None, 'jit'}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 11 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_smoke[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_smoke_not_div_by_16[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_multi_batch[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_custom_qt[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_non_batch_param[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_non_batch_inp[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_exception[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_cardinality[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_module[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_module_with_param[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_gradcheck[cpu] PASSED
+
+=============================== warnings summary ===============================
+tests/enhance/test_jpeg.py::TestDiffJPEG::test_smoke[cpu-float32]
+  /local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/functional.py:534: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3595.)
+    return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 11 passed, 1 warning in 0.25s =========================

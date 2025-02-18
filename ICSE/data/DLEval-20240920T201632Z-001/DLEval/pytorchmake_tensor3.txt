@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: Table
+
+prompt:
+Generate a Python function called make_tensor that takes in two parameters: size and dtype. If the dtype is torch.bool, the function will return a random tensor of size 'size' with values between 0 and 1. If the dtype is torch.int, the function will return a random tensor of size 'size' with integer values between 0 and 9. If the dtype is any other type, the function will return a random tensor of size 'size' with values drawn from a normal distribution. The output will be a torch tensor.
+
+ ground Truth:test/test_type_promotion.py
+
+ repo:pytorch
+
+ function:make_tensor
+ 
+ test_cases:test/test_type_promotion.py::TestTypePromotionCPU

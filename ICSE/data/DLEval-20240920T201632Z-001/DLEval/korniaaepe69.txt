@@ -1,0 +1,39 @@
+stage: Model Construction
+task: 
+data: Image
+
+prompt:
+"Generate a python function aepe Create a function that calculates the average endpoint error (AEPE) between 2 flow maps.
+
+    AEPE is the endpoint error between two 2D vectors (e.g., optical flow).
+    Given a h x w x 2 optical flow map, the AEPE is:
+
+    .. math::
+
+        \text{AEPE}=\frac{1}{hw}\sum_{i=1, j=1}^{h, w}\sqrt{(I_{i,j,1}-T_{i,j,1})^{2}+(I_{i,j,2}-T_{i,j,2})^{2}}
+
+    Args:
+        input: the input flow map with shape :math:`(*, 2)`.
+        target: the target flow map with shape :math:`(*, 2)`.
+        reduction : Specifies the reduction to apply to the
+         output: ``'none'`` | ``'mean'`` | ``'sum'``. ``'none'``: no reduction will be applied,
+         ``'mean'``: the sum of the output will be divided by the number of elements
+         in the output, ``'sum'``: the output will be summed.
+
+    Return:
+        the computed AEPE as a scalar.
+
+    Examples:
+        >>> ones = torch.ones(4, 4, 2)
+        >>> aepe(ones, 1.2 * ones)
+        tensor(0.2828)"
+
+ ground Truth:kornia/metrics/endpoint_error.py
+
+ repo:kornia
+
+ function:aepe
+ 
+ test_cases:tests/metrics/test_aepe.py
+ 
+

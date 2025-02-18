@@ -1,0 +1,76 @@
+stage: Evaluating&Metrics
+task: 
+data: Table
+
+prompt:
+Generate a Python function called jaccard_score that calculate Jaccard similarity coefficient score.
+
+    The Jaccard index or Jaccard similarity coefficient, defined as
+    the size of the intersection divided by the size of the union of two label
+    sets, is used to compare set of predicted labels for a sample to the
+    corresponding set of labels in ``y_true``.
+    Parameters
+    ----------
+    y_true : 1d array-like, or label indicator array / sparse matrix
+        Ground truth (correct) labels.
+
+    y_pred : 1d array-like, or label indicator array / sparse matrix
+        Predicted labels, as returned by a classifier.
+
+    labels : array-like of shape (n_classes,), default=None
+        The set of labels to include when `average != 'binary'`, and their
+        order if `average is None`. Labels present in the data can be
+        excluded, for example in multiclass classification to exclude a "negative
+        class". Labels not present in the data can be included and will be
+        "assigned" 0 samples. For multilabel targets, labels are column indices.
+        By default, all labels in `y_true` and `y_pred` are used in sorted order.
+
+    pos_label : int, float, bool or str, default=1
+        The class to report if `average='binary'` and the data is binary,
+        otherwise this parameter is ignored.
+        For multiclass or multilabel targets, set `labels=[pos_label]` and
+        `average != 'binary'` to report metrics for one label only.
+
+    average : {'micro', 'macro', 'samples', 'weighted', \
+            'binary'} or None, default='binary'
+        If ``None``, the scores for each class are returned. Otherwise, this
+        determines the type of averaging performed on the data:
+
+        ``'binary'``:
+            Only report results for the class specified by ``pos_label``.
+            This is applicable only if targets (``y_{true,pred}``) are binary.
+        ``'micro'``:
+            Calculate metrics globally by counting the total true positives,
+            false negatives and false positives.
+        ``'macro'``:
+            Calculate metrics for each label, and find their unweighted
+            mean.  This does not take label imbalance into account.
+        ``'weighted'``:
+            Calculate metrics for each label, and find their average, weighted
+            by support (the number of true instances for each label). This
+            alters 'macro' to account for label imbalance.
+        ``'samples'``:
+            Calculate metrics for each instance, and find their average (only
+            meaningful for multilabel classification).
+
+    sample_weight : array-like of shape (n_samples,), default=None
+        Sample weights.
+
+    zero_division : "warn", {0.0, 1.0}, default="warn"
+        Sets the value to return when there is a zero division, i.e. when there
+        there are no negative values in predictions and labels. If set to
+        "warn", this acts like 0, but a warning is also raised.
+
+    Returns
+    -------
+    score : float or ndarray of shape (n_unique_labels,), dtype=np.float64
+        The Jaccard score. When `average` is not `None`, a single scalar is
+        returned.
+
+ ground Truth:sklearn/metrics/_classification.py
+
+ repo:scikit-learn
+
+ function:jaccard_score
+ 
+ test_cases:sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types

@@ -1,0 +1,41 @@
+stage: Inference
+task: 
+data: Timeseries
+
+prompt:
+Create a Python function `ndiagquad` that computes N Gaussian expectation integrals using Gauss-Hermite quadrature for one or more functions. The function should accept the following parameters:
+- `funcs`: A callable or an iterable of callables representing the integrands, which operate elementwise on the inputs.
+- `H`: An integer specifying the number of Gauss-Hermite quadrature points.
+- `Fmu`: A tensor or a tuple/list of tensors representing the means of the Gaussian distributions.
+- `Fvar`: A tensor or a tuple/list of tensors representing the variances of the Gaussian distributions.
+- `logspace`: A boolean indicating whether to compute the log-expectation of `exp(funcs)`.
+- `Ys`: Additional named arguments passed as tensors, which represent deterministic inputs to the integrands.
+
+The function should reshape `Fmu` and `Fvar` to ensure they match the expected dimensionality and apply Gauss-Hermite quadrature using the `NDiagGHQuadrature` class. If `logspace` is `True`, it computes the log-expectation of the functions; otherwise, it computes the standard expectation. The result should be returned with the same shape as the input `Fmu`.
+
+### Error Handling:
+- A deprecation warning should be issued advising the use of `gpflow.quadrature.NDiagGHQuadrature` instead.
+
+This function is particularly useful in Gaussian process models or other machine learning contexts where expectations with respect to Gaussian distributions are required, and it leverages Gauss-Hermite quadrature for efficient computation.
+@check_shapes(
+    "Fmu: [broadcast Din, N...]",
+    "Fvar: [broadcast Din, N...]",
+    "Ys.values(): [N...]",
+    "return: [broadcast Dout, N...]",
+)
+def ndiagquad(
+    funcs: Union[Callable[..., tf.Tensor], Iterable[Callable[..., tf.Tensor]]],
+    H: int,
+    Fmu: Union[TensorType, Tuple[TensorType, ...], List[TensorType]],
+    Fvar: Union[TensorType, Tuple[TensorType, ...], List[TensorType]],
+    logspace: bool = False,
+    **Ys: TensorType,
+) -> tf.Tensor:
+
+ ground Truth:gpflow/quadrature/deprecated.py
+
+ repo:GPflow
+
+ function:ndiagquad
+ 
+ test_cases:tests/gpflow/quadrature/test_quadrature.py

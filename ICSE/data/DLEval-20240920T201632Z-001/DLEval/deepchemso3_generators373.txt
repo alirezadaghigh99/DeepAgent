@@ -1,0 +1,34 @@
+stage: Model Construction
+task: 
+data: 
+
+prompt:
+Write a python function so
+3_generators enerates the generators of the special orthogonal group SO(3), which represents the group
+    of rotations in three-dimensional space. Its Lie algebra, which consists of the generators of
+    infinitesimal rotations, is often used in physics to describe angular momentum operators.
+    The generators of the Lie algebra can be related to the SU(2) group, and this function uses
+    a transformation to convert the SU(2) generators to the SO(3) basis.
+
+    The primary significance of the SO(3) group lies in its representation of three-dimensional
+    rotations. Each matrix in SO(3) corresponds to a unique rotation, capturing the intricate
+    ways in which objects can be oriented in 3D space. This concept finds application in
+    numerous fields, ranging from physics to engineering.
+
+    Parameters
+    ----------
+     k : int
+        The representation index, which determines the order of the representation.
+
+    Returns
+    -------
+    torch.Tensor
+        A stack of three SO(3) generators, corresponding to J_x, J_z, and J_y.
+
+ ground Truth:deepchem/utils/equivariance_utils.py
+
+ repo:deepchem
+
+ function:so3_generators
+ 
+ test_cases:deepchem/utils/test/test_equivariance_utils.py

@@ -1,0 +1,169 @@
+output file:
+processed_neurodiffeqdiff203.json
+function:
+diff
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_diff FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_higher_order_derivatives', 'FAILED ../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_diff', '../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_higher_order_derivatives FAILED', '../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_legacy_signature FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_legacy_signature'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq
+collecting ... collected 5 items
+
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_safe_diff PASSED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_unsafe_diff PASSED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_diff FAILED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_higher_order_derivatives FAILED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_legacy_signature FAILED
+
+=================================== FAILURES ===================================
+__________________________________ test_diff ___________________________________
+
+    def test_diff():
+        # with default shape_check
+        with pytest.raises(ValueError):
+            u, t = get_data(flatten_u=True, flatten_t=True)
+>           check_output(t, diff(u, t))
+
+/local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py:51: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/neurodiffeq/_version_utils.py:35: in wrapper
+    return f(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+u = tensor([0.1612, 0.7818, 0.9511, 0.1120, 0.9848, 0.0893, 0.2415, 0.2308, 0.1057,
+        0.9098], device='cuda:0', grad_fn=<ViewBackward0>)
+t = tensor([0.4015, 0.8842, 0.9752, 0.3347, 0.9924, 0.2989, 0.4914, 0.4804, 0.3251,
+        0.9538], device='cuda:0', requires_grad=True)
+order = 1, shape_check = True
+
+    @deprecated_alias(x='u')
+    def diff(u, t, order=1, shape_check=True):
+>       from .temp import diff
+E       ImportError: cannot import name 'diff' from 'neurodiffeq.temp' (/local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/neurodiffeq/temp.py)
+
+/local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/neurodiffeq/neurodiffeq.py:58: ImportError
+________________________ test_higher_order_derivatives _________________________
+
+    def test_higher_order_derivatives():
+        u, t = get_data(flatten_u=False, flatten_t=False, f=lambda x: x ** 2)
+>       assert torch.isclose(diff(u, t), t * 2).all()
+
+/local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py:89: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/neurodiffeq/_version_utils.py:35: in wrapper
+    return f(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+u = tensor([[0.1245],
+        [0.7393],
+        [0.0197],
+        [0.3387],
+        [0.0019],
+        [0.0009],
+        [0.1213],
+        [0.4475],
+        [0.1851],
+        [0.2187]], device='cuda:0', grad_fn=<ViewBackward0>)
+t = tensor([[0.3529],
+        [0.8598],
+        [0.1404],
+        [0.5820],
+        [0.0436],
+        [0.0305],
+        [0.3483],
+        [0.6690],
+        [0.4303],
+        [0.4676]], device='cuda:0', requires_grad=True)
+order = 1, shape_check = True
+
+    @deprecated_alias(x='u')
+    def diff(u, t, order=1, shape_check=True):
+>       from .temp import diff
+E       ImportError: cannot import name 'diff' from 'neurodiffeq.temp' (/local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/neurodiffeq/temp.py)
+
+/local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/neurodiffeq/neurodiffeq.py:58: ImportError
+____________________________ test_legacy_signature _____________________________
+
+    def test_legacy_signature():
+        u, t = get_data(flatten_u=False, flatten_t=False)
+        with pytest.warns(FutureWarning):
+>           diff(x=u, t=t)
+
+/local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py:102: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/neurodiffeq/_version_utils.py:35: in wrapper
+    return f(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+u = tensor([[0.8771],
+        [0.0511],
+        [0.4239],
+        [0.0079],
+        [0.4994],
+        [0.8494],
+        [0.0597],
+        [0.5337],
+        [0.3239],
+        [0.0094]], device='cuda:0', grad_fn=<ViewBackward0>)
+t = tensor([[0.9365],
+        [0.2259],
+        [0.6511],
+        [0.0890],
+        [0.7067],
+        [0.9217],
+        [0.2443],
+        [0.7305],
+        [0.5692],
+        [0.0970]], device='cuda:0', requires_grad=True)
+order = 1, shape_check = True
+
+    @deprecated_alias(x='u')
+    def diff(u, t, order=1, shape_check=True):
+>       from .temp import diff
+E       ImportError: cannot import name 'diff' from 'neurodiffeq.temp' (/local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/neurodiffeq/temp.py)
+
+/local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/neurodiffeq/neurodiffeq.py:58: ImportError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_diff
+FAILED ../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_higher_order_derivatives
+FAILED ../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_legacy_signature
+========================= 3 failed, 2 passed in 2.20s ==========================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq
+collecting ... collected 5 items
+
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_safe_diff PASSED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_unsafe_diff PASSED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_diff PASSED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_higher_order_derivatives PASSED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_legacy_signature PASSED
+
+============================== 5 passed in 2.03s ===============================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq
+collecting ... collected 5 items
+
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_safe_diff PASSED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_unsafe_diff PASSED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_diff PASSED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_higher_order_derivatives PASSED
+../../../../../../local/data0/moved_data/publishablew/neurodiffeq/neurodiffeq/tests/test_neurodiffeq.py::test_legacy_signature PASSED
+
+============================== 5 passed in 2.11s ===============================

@@ -1,0 +1,29 @@
+stage: Training
+task: 
+data: Text
+
+prompt:
+Complete the following function
+def position_embedding(embed_dim: int, pos: Tensor) -> Tensor:
+    """Compute the 1D sine/cosine position embedding.
+
+    Args:
+        embed_dim: Output dimension D for each position. Must be even.
+        pos: A list of positions to be encoded, of size (M,).
+
+    Returns:
+        Position embeddings of size (M, D).
+
+    Raises:
+        AssertionError: If *embed_dim* is not even.
+    """
+    
+    assert embed_dim % 2 == 0
+
+ ground Truth:torchgeo/models/dofa.py
+
+ repo:torchgeo
+
+ function:position_embedding
+ 
+ test_cases:tests/models/test_dofa.py

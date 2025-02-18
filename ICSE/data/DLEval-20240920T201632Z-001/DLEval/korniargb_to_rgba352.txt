@@ -1,0 +1,28 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Generate a Python function called rgb_to_rgba that Convert an image from RGB to RGBA.
+
+    Args:
+        image: RGB Image to be converted to RGBA of shape :math:`(*,3,H,W)`.
+        alpha_val (float, torch.Tensor): A float number for the alpha value or a tensor
+          of shape :math:`(*,1,H,W)`.
+
+    Returns:
+        RGBA version of the image with shape :math:`(*,4,H,W)`.
+
+    .. note:: The current functionality is NOT supported by Torchscript.
+
+    Example:
+        >>> input = torch.rand(2, 3, 4, 5)
+        >>> output = rgb_to_rgba(input, 1.) # 2x4x4x5
+
+ ground Truth:kornia/color/rgb.py
+
+ repo:kornia
+
+ function:rgb_to_rgba
+ 
+ test_cases:tests/color/test_rgb.py::TestRgbToRgba

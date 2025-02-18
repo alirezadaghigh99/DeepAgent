@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Generate a Python function called resize that resizes an input torch.Tensor to a specified size using various parameters such as interpolation method, alignment, side, and antialiasing. The function takes in the input tensor, desired output size, interpolation method (default is "bilinear"), alignment flag, side for resizing, and antialiasing flag. It returns the resized tensor with the specified size. The function includes error handling for input validation and an example usage.
+
+ ground Truth:kornia/geometry/transform/affwarp.py
+
+ repo:kornia
+
+ function:resize
+ 
+ test_cases:tests/geometry/transform/test_affine.py::TestResize

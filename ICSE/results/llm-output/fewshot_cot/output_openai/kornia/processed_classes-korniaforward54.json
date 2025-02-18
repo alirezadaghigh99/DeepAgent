@@ -1,0 +1,11 @@
+{
+    "result": "To implement the `forward` method for the `Rot180` class, you need to rotate the input tensor by 180 degrees. This can be achieved by flipping the tensor both vertically and horizontally. Here's how you can implement this:\n\n```python\nimport torch\nfrom torch import Tensor\nfrom torch.nn import Module\n\nclass Rot180(Module):\n    def forward(self, input: Tensor) -> Tensor:\n        # Flip the tensor vertically and horizontally to achieve a 180-degree rotation\n        return torch.flip(input, dims=(-2, -1))\n```\n\n### Explanation:\n\n1. **Input Shape Handling**: The input tensor can be of shape `(C, H, W)` or a batch of tensors with shape `(*, C, H, W)`. The `torch.flip` function can handle both cases.\n\n2. **Flipping Dimensions**: \n   - `dims=(-2, -1)` specifies that the last two dimensions should be flipped. \n   - For a single image tensor `(C, H, W)`, this corresponds to flipping the height (`H`) and width (`W`).\n   - For a batch of images `(*, C, H, W)`, it still correctly flips the height and width of each image in the batch.\n\n3. **Rotation by 180 Degrees**: Flipping both vertically and horizontally results in a 180-degree rotation of the image.\n\nThis implementation is efficient and leverages PyTorch's built-in operations to handle the rotation.",
+    "prompt": "**Task:** Write the `forward` method for the `Rot180` class. This method should rotate the input tensor by 180 degrees.\n\n**Class Context:**\n```python\nclass Rot180(Module):\n    def forward(self, input: Tensor) -> Tensor:\n        # Implement this function\n```\n\n**Requirements:**\n- The input tensor can be of shape `(C, H, W)` or a batch of tensors of shape `(*, C, H, W)`.\n\n---\n\nThis prompt guides the user to implement the `forward` method that performs a 180-degree rotation on the input tensor.",
+    "function_name": "forward",
+    "ground_truth": "kornia/geometry/transform/flips.py",
+    "test": "tests/geometry/transform/test_flip.py::TestRot180",
+    "class": "Rot180",
+    "stage": "Image",
+    "task": "",
+    "data": "Training"
+}

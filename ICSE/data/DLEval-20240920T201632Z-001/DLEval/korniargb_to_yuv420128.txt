@@ -1,0 +1,31 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Generate a Python function called rgb_to_yuv420 that takes in a torch.Tensor representing an RGB image and returns a tuple of two torch.Tensors. The input image is assumed to be in the range of (0, 1) and needs to be padded to be evenly divisible by 2 horizontally and vertically. The function will output the YUV 420 (subsampled) version of the input image with chroma siting at (0.5, 0.5).
+
+The function should have the following signature:
+```python
+def rgb_to_yuv420(image: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor]:
+```
+
+The function converts the RGB image to YUV 420 format and returns:
+- A Tensor containing the Y plane with shape (*, 1, H, W)
+- A Tensor containing the UV planes with shape (*, 2, H/2, W/2)
+
+Ensure that the input image has a shape of (*, 3, H, W) where H and W are even numbers. If the input does not meet these requirements, appropriate errors will be raised.
+
+Example usage:
+```python
+input = torch.rand(2, 3, 4, 6)
+output = rgb_to_yuv420(input)  # (2x1x4x6, 2x2x2x3)
+```
+
+ ground Truth:kornia/color/yuv.py
+
+ repo:kornia
+
+ function:rgb_to_yuv420
+ 
+ test_cases:tests/color/test_yuv.py::TestRgbToYuv420

@@ -1,0 +1,35 @@
+stage: Pre-Post processing
+task: Classification
+data: Image
+
+prompt:
+Generate a Python function named shift_rgb that shifts the RGB channels of an image. The function takes the following inputs: an image tensor of shape (N, C, H, W), where C is 3 (indicating an RGB image), and three tensors r_shift, g_shift, and b_shift of shape (N) that represent the shift values for the red, green, and blue channels, respectively.
+
+The function should:
+
+Verify that the image is a valid tensor and a color image.
+Apply the shifts to each channel.
+Ensure the output values are clamped between 0 and 1.
+Return the modified image as a tensor of the same shape.
+The function should handle errors by checking the tensor types and confirming that the input image is an RGB image."
+example of input : image = tensor([[[[0.2000, 0.0000]],
+
+         [[0.3000, 0.5000]],
+
+         [[0.4000, 0.7000]]],
+
+
+        [[[0.2000, 0.7000]],
+
+         [[0.0000, 0.8000]],
+
+         [[0.2000, 0.3000]]]]), r_shift = tensor([0.1000]), g_shift = tensor([0.3000]), b_shift = tensor([-0.3000])
+
+
+ ground Truth:kornia/enhance/shift_rgb.py
+
+ repo:kornia
+
+ function:shift_rgb
+ 
+ test_cases:tests/enhance/test_shift_rgb.py 

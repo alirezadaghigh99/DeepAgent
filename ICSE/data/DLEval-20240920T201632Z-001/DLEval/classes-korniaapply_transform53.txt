@@ -1,0 +1,50 @@
+stage: 
+task: 
+data: Inference
+
+prompt:
+**Prompt:**
+
+Write a Python function `apply_transform` for the `ColorJiggle` class that applies a sequence of transformations to an input tensor image based on parameters for brightness, contrast, saturation, and hue. The function should take an input tensor, a dictionary of parameters (`params`), and optionally a transformation tensor, and it returns a tensor with the applied transformations.
+
+Key steps:
+1. The function defines a list of lambda functions that apply brightness, contrast, saturation, and hue adjustments if the corresponding factors are non-zero or different from the identity.
+2. The transformations are applied in the order specified by `params["order"]`, iteratively modifying the input tensor.
+3. The function returns the transformed image tensor.
+
+Class structure and necessary context:
+
+```python
+class ColorJiggle(IntensityAugmentationBase2D):
+    def __init__(
+        self,
+        brightness: Union[Tensor, float, Tuple[float, float], List[float]] = 0.0,
+        contrast: Union[Tensor, float, Tuple[float, float], List[float]] = 0.0,
+        saturation: Union[Tensor, float, Tuple[float, float], List[float]] = 0.0,
+        hue: Union[Tensor, float, Tuple[float, float], List[float]] = 0.0,
+        same_on_batch: bool = False,
+        p: float = 1.0,
+        keepdim: bool = False,
+    ) -> None:
+        super().__init__(p=p, same_on_batch=same_on_batch, keepdim=keepdim)
+        self.brightness = brightness
+        self.contrast = contrast
+        self.saturation = saturation
+        self.hue = hue
+        self._param_generator = rg.ColorJiggleGenerator(brightness, contrast, saturation, hue)
+
+    def apply_transform(
+        self, input: Tensor, params: Dict[str, Tensor], flags: Dict[str, Any], transform: Optional[Tensor] = None
+    ) -> Tensor:
+        pass  # This is the function to be implemented.
+```
+
+ ground Truth:kornia/augmentation/_2d/intensity/color_jiggle.py
+
+ repo:kornia
+
+ function:apply_transform
+ 
+ class:ColorJiggle
+ 
+ test_cases:tests/augmentation/test_augmentation.py::TestColorJiggle

@@ -1,0 +1,11 @@
+{
+    "result": "Error",
+    "prompt": "Generate a Python function called _apply_categorical_projection that implements . The function takes three inputs: y (an ndarray representing values of atoms before projection with shape (batch_size, n_atoms)), y_probs (an ndarray representing probabilities of atoms with shape (batch_size, n_atoms)), and z (an ndarray representing values of atoms after projection with shape (n_atoms,)). It is assumed that the values in z are sorted in ascending order and evenly spaced.\n\nThe function calculates the probabilities of atoms whose values are z and returns an ndarray with shape (batch_size, n_atoms). The function performs various calculations including clamping values, calculating bj, floor and ceil values, and accumulating m_l and m_u based on the provided formulas. The function utilizes torch functions for these calculations.\n\nThe function ensures that the shapes of the input arrays are as expected and performs necessary assertions. The final output is the probabilities of atoms whose values are z.",
+    "function_name": "_apply_categorical_projection",
+    "ground_truth": "pfrl/agents/categorical_dqn.py",
+    "test": "tests/agents_tests/test_categorical_dqn.py::TestApplyCategoricalProjectionToRandomCases",
+    "class": "",
+    "stage": "Training",
+    "task": "",
+    "data": "Table"
+}

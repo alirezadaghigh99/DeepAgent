@@ -1,0 +1,25 @@
+stage: Image
+task: 
+data: Inference
+
+prompt:
+Generate the `translation_vector` function for the following class to return the translation vector from the extrinsics matrix. The function should take `self` as input and return a tensor with shape `(B, 3, 1)`.
+
+```python
+class PinholeCamera:
+    def __init__(self, intrinsics: Tensor, extrinsics: Tensor, height: Tensor, width: Tensor) -> None:
+        self.height: Tensor = height
+        self.width: Tensor = width
+        self._intrinsics: Tensor = intrinsics
+        self._extrinsics: Tensor = extrinsics
+```
+
+ ground Truth:kornia/geometry/camera/pinhole.py
+
+ repo:kornia
+ 
+ class:PinholeCamera
+
+ function:translation_vector
+ 
+ test_cases:tests/geometry/camera/test_pinhole.py

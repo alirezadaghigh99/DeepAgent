@@ -1,0 +1,30 @@
+stage: Image
+task: 
+data: Inference
+
+prompt:
+Generate a Python method `forward` for the `HarmonicEmbedding` class that computes the harmonic embedding of a given input tensor `x`. The method should support an optional diagonal covariance tensor `diag_cov` to approximate the Gaussian representation of the input. The output should include sine and cosine components of the input multiplied by various frequencies, with an option to append the original input to the output. The method should handle both log-spaced and linear-spaced frequencies and use a base frequency `omega_0` to scale the input.
+
+Class structure:
+
+```python
+class HarmonicEmbedding(torch.nn.Module):
+    def __init__(self, n_harmonic_functions: int = 6, omega_0: float = 1.0, logspace: bool = True, append_input: bool = True):
+        self.register_buffer("_frequencies", frequencies * omega_0, persistent=False)
+        self.register_buffer("_zero_half_pi", torch.tensor([0.0, 0.5 * torch.pi]), persistent=False)
+        self.append_input = append_input
+        pass
+
+    def forward(self, x: torch.Tensor, diag_cov: Optional[torch.Tensor] = None) -> torch.Tensor:
+        # Implement the function as described in the prompt
+```
+
+ ground Truth:pytorch3d/renderer/implicit/harmonic_embedding.py
+
+ repo:pytorch3d
+
+ function:forward
+ 
+ class:HarmonicEmbedding
+ 
+ test_cases:tests/test_harmonic_embedding.py

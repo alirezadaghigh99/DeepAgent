@@ -1,0 +1,18 @@
+stage: Training
+task: Classification
+data: Table
+
+prompt:
+Create a Python function called compute_sample_weight that estimates sample weights by class for unbalanced datasets. The function takes in three parameters: class_weight (dict, list of dicts, "balanced", or None), y (array-like, sparse matrix), and indices (array-like of shape (n_subsample,), default=None). 
+
+The class_weight parameter represents weights associated with classes, with options for different formats and the "balanced" mode for automatic adjustment based on class frequencies. The y parameter is an array of original class labels per sample, and the indices parameter is an array of indices to be used in a subsample.
+
+The function returns a numpy array called sample_weight_vect of shape (n_samples,) containing the sample weights as applied to the original y. The function includes examples of usage and error handling for different scenarios.
+
+ ground Truth:sklearn/utils/class_weight.py
+
+ repo:scikit-learn
+
+ function:compute_sample_weight
+ 
+ test_cases:sklearn/utils/tests/test_class_weight.py

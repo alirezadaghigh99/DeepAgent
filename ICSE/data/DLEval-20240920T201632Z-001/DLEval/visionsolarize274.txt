@@ -1,0 +1,17 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Create a Python function called solarize that takes in an image tensor (img) and a threshold value (threshold) as input. The function first checks if the input image tensor is valid by calling the _assert_image_tensor function. It then ensures that the image tensor has at least 3 dimensions, raising a TypeError if it does not. The function also checks that the image tensor has either 1 or 3 channels by calling the _assert_channels function.
+
+If the threshold value is greater than the maximum value of the image tensor's data type, a TypeError is raised. The function then inverts the image tensor using the invert function and returns a new tensor where the values are replaced based on a condition: if the original image tensor values are greater than or equal to the threshold, they are replaced with the corresponding values from the inverted image tensor; otherwise, the original values are retained. The output of the function is a tensor.
+
+ ground Truth:torchvision/transforms/_functional_tensor.py
+
+ repo:vision
+
+ function:solarize
+ 
+ test_cases:test/test_functional_tensor.py::test_solarize2
+

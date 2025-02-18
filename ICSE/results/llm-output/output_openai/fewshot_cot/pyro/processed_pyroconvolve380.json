@@ -1,0 +1,11 @@
+{
+    "result": "Error",
+    "prompt": "Write a python function that Computes the 1-d convolution of signal by kernel using FFTs.\n    The two arguments should have the same rightmost dim, but may otherwise be\n    arbitrarily broadcastable. :\ndef convolve(signal, kernel, mode=\"full\"):\n\n    \"\"\"\n\n    :param torch.Tensor signal: A signal to convolve.\n    :param torch.Tensor kernel: A convolution kernel.\n    :param str mode: One of: 'full', 'valid', 'same'.\n    :return: A tensor with broadcasted shape. Letting ``m = signal.size(-1)``\n        and ``n = kernel.size(-1)``, the rightmost size of the result will be:\n        ``m + n - 1`` if mode is 'full';\n        ``max(m, n) - min(m, n) + 1`` if mode is 'valid'; or\n        ``max(m, n)`` if mode is 'same'.\n    :rtype torch.Tensor:\n    \"\"\"",
+    "function_name": "convolve",
+    "ground_truth": "pyro/ops/tensor_utils.py",
+    "test": "tests/ops/test_tensor_utils.py::test_convolve",
+    "class": "",
+    "stage": "Model Construction",
+    "task": "prediction",
+    "data": ""
+}

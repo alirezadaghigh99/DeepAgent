@@ -1,0 +1,31 @@
+stage: 
+task: 
+data: pre-post process
+
+prompt:
+
+Generate a Python method `inverse` for the `Transform3d` class that returns a new `Transform3d` object representing the inverse of the current transformation. The method should have an argument `invert_composed` which, when set to `True`, first composes the list of stored transformations and then inverts the result, and when set to `False`, inverts the individual stored transformations independently without composing them. The method should efficiently handle both cases, returning a new `Transform3d` object containing the inverse of the original transformation.
+
+Class structure:
+
+```python
+class Transform3d:
+    def __init__(self, dtype: torch.dtype = torch.float32, device: Device = "cpu", matrix: Optional[torch.Tensor] = None):
+        self._matrix = ...
+        self._transforms = []
+        self.device = ...
+        self.dtype = ...
+
+    def inverse(self, invert_composed: bool = False) -> "Transform3d":
+        # Implement the function as described in the prompt
+```
+
+ ground Truth:pytorch3d/transforms/transform3d.py
+
+ repo:pytorch3d
+
+ function:inverse
+ 
+ test_cases:tests/test_transforms.py
+ 
+ class:Transform3d

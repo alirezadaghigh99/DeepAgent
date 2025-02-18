@@ -1,0 +1,36 @@
+stage: 
+task: 
+data: Training
+
+prompt:
+Generate a Python function `forward` for the class `MMCRLoss` that computes the loss using Manifold Capacity Representations. The function should:
+
+1. Ensure the `online` and `momentum` tensors have the same shape.
+2. Concatenate `online` and `momentum` along the second dimension.
+3. Compute the centroid of the concatenated tensor.
+4. Calculate the singular values of the concatenated tensor and the centroid.
+5. Compute the loss as the negative sum of the singular values of the centroid plus the weighted sum of the singular values of the concatenated tensor, divided by the batch size.
+
+Output format:
+
+```python
+class MMCRLoss(nn.Module):
+    def __init__(self, lmda: float = 5e-3):
+        super().__init__()
+        if lmda < 0:
+            raise ValueError("lmda must be greater than or equal to 0")
+
+        self.lmda = lmda
+
+    def forward(self, online: torch.Tensor, momentum: torch.Tensor) -> torch.Tensor:
+```
+
+ ground Truth:lightly/loss/mmcr_loss.py
+
+ repo:lightly
+
+ function:forward
+ 
+ test_cases:tests/loss/test_MMCR_loss.py
+ 
+ class:MMCRLoss

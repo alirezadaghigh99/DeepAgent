@@ -1,0 +1,11 @@
+{
+    "result": "To convert bounding boxes from the (x, y, w, h) format to the (x1, y1, x2, y2) format, you can follow these steps:\n\n1. Extract the top-left corner coordinates (x, y) and the width (w) and height (h) from the input tensor.\n2. Calculate the bottom-right corner coordinates (x2, y2) by adding the width to the x-coordinate and the height to the y-coordinate.\n3. Construct a new tensor with the format (x1, y1, x2, y2) and return it.\n\nHere's how you can implement this in a Python function:\n\n```python\nimport torch\n\ndef _box_xywh_to_xyxy(boxes: torch.Tensor) -> torch.Tensor:\n    \"\"\"\n    Convert bounding boxes from (x, y, w, h) format to (x1, y1, x2, y2) format.\n\n    Args:\n        boxes (Tensor): Tensor of shape (N, 4) where each row is (x, y, w, h).\n\n    Returns:\n        Tensor: Tensor of shape (N, 4) where each row is (x1, y1, x2, y2).\n    \"\"\"\n    # 1. Extract x, y, w, h from the input tensor\n    x, y, w, h = boxes.unbind(dim=1)\n\n    # 2. Calculate x2 and y2\n    x2 = x + w\n    y2 = y + h\n\n    # 3. Stack the results into a new tensor in the format (x1, y1, x2, y2)\n    boxes_xyxy = torch.stack((x, y, x2, y2), dim=1)\n\n    # 4. Return the converted bounding boxes\n    return boxes_xyxy\n```\n\nThis function takes a tensor of bounding boxes in the (x, y, w, h) format and returns a tensor in the (x1, y1, x2, y2) format. The `unbind` function is used to split the input tensor into separate components, and `stack` is used to combine the calculated coordinates into the desired format.",
+    "prompt": "Write a Python function _box_xywh_to_xyxy that converts bounding boxes from the (x, y, w, h) format, where (x, y) represents the top-left corner and (w, h) represents the width and height, to the (x1, y1, x2, y2) format, where (x1, y1) and (x2, y2) represent the top-left and bottom-right corners. The function should return a tensor with the converted bounding boxes.",
+    "function_name": "_box_xywh_to_xyxy",
+    "ground_truth": "torchvision/ops/_box_convert.py",
+    "test": "test/test_ops.py::TestBoxConvert",
+    "class": "",
+    "stage": "Pre-Post processing",
+    "task": "Detection",
+    "data": "Image"
+}

@@ -1,0 +1,24 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Create a Python function _jpeg_encode that performs JPEG encoding on a batch of RGB images. The function takes the following parameters:
+
+image_rgb: A tensor of shape (B, 3, H, W) representing a batch of RGB images.
+jpeg_quality: A tensor of shape (B) representing the JPEG compression quality for each image in the batch.
+quantization_table_y: A tensor representing the quantization table for the Y (luminance) channel.
+quantization_table_c: A tensor representing the quantization table for the Cb and Cr (chrominance) channels.
+The function returns a tuple of three tensors:
+
+y_encoded: A tensor of shape (B, N, 8, 8) representing the encoded Y component.
+cb_encoded: A tensor of shape (B, N, 8, 8) representing the encoded Cb component.
+cr_encoded: A tensor of shape (B, N, 8, 8) representing the encoded Cr component.
+
+ ground Truth:kornia/enhance/jpeg.py#L276
+
+ repo:kornia
+
+ function:_jpeg_encode
+ 
+ test_cases:tests/enhance/test_jpeg.py::TestDiffJPEG

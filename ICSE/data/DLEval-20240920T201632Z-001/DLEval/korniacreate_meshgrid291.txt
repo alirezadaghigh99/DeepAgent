@@ -1,0 +1,30 @@
+stage: Pre-Post processing
+task: Segmentation
+data: Image
+
+prompt:
+Generate a Python function called create_meshgrid that generates a coordinate grid for an image. The function takes in parameters such as height, width, normalized_coordinates (defaulted to True), device, and dtype. It returns a grid tensor with shape (1, H, W, 2) where H is the image height and W is the image width. The function normalizes coordinates to be in the range [-1,1] if normalized_coordinates is set to True. The output is a tensor representing the coordinate grid for the image. Return:
+        grid tensor with shape :math:`(1, H, W, 2)`.
+
+    Example:
+        >>> create_meshgrid(2, 2)
+        tensor([[[[-1., -1.],
+                  [ 1., -1.]],
+        <BLANKLINE>
+                 [[-1.,  1.],
+                  [ 1.,  1.]]]])
+
+        >>> create_meshgrid(2, 2, normalized_coordinates=False)
+        tensor([[[[0., 0.],
+                  [1., 0.]],
+        <BLANKLINE>
+                 [[0., 1.],
+                  [1., 1.]]]])
+
+ ground Truth:kornia/utils/grid.py
+
+ repo:kornia
+
+ function:create_meshgrid
+ 
+ test_cases: tests/geometry/transform/test_imgwarp.py::TestRemap

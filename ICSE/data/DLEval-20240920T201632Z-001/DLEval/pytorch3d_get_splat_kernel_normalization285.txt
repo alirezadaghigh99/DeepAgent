@@ -1,0 +1,14 @@
+stage: Model Construction
+task: 
+data: Image
+
+prompt:
+Define a Python function called `_get_splat_kernel_normalization` that takes in a tensor `offsets` and a float `sigma` with a default value of 0.5. If the `sigma` value is less than or equal to 0.0, a ValueError is raised. The function calculates a normalization constant using the formula involving exponential and sum operations on the squared values of the `offsets` tensor. An epsilon value of 0.05 is added to the normalization constant to ensure gradient flow through non-boundary pixels. The function returns a normalized value by dividing (1 + epsilon) by the normalization constant.
+
+ ground Truth:pytorch3d/renderer/splatter_blend.py
+
+ repo:pytorch3d
+
+ function:_get_splat_kernel_normalization
+ 
+ test_cases:tests/test_splatter_blend.py 

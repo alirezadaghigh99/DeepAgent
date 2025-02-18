@@ -1,0 +1,14 @@
+stage: Training
+task: Segmentation
+data: Image
+
+prompt:
+Generate a Python function called `_compute_occlusion_layers` that takes a tensor `q_depth` as input. The function calculates occlusion layers for each splatting pixel, determining whether it splats from a background, surface, or foreground depth relative to the splatted pixel. The output is a tensor `occlusion_layers` with shape (N, H, W, 9), where each of the 9 values corresponds to one of the nine splatting directions. The values in the tensor indicate whether the splat is on the same surface level as the pixel, in the background (occluded by another splat above it), or in the foreground.
+
+ ground Truth:pytorch3d/renderer/splatter_blend.py
+
+ repo:pytorch3d
+
+ function:_compute_occlusion_layers
+ 
+ test_cases:tests/test_splatter_blend.py 

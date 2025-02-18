@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: Detection
+data: Image
+
+prompt:
+Write a Python function _box_xywh_to_xyxy that converts bounding boxes from the (x, y, w, h) format, where (x, y) represents the top-left corner and (w, h) represents the width and height, to the (x1, y1, x2, y2) format, where (x1, y1) and (x2, y2) represent the top-left and bottom-right corners. The function should return a tensor with the converted bounding boxes.
+
+ ground Truth:torchvision/ops/_box_convert.py
+
+ repo:vision
+
+ function:_box_xywh_to_xyxy
+ 
+ test_cases:test/test_ops.py::TestBoxConvert

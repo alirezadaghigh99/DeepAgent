@@ -1,0 +1,23 @@
+stage: Evaluating&Metrics
+task: Classification
+data: 
+
+prompt:
+Generate a Python function called accuracy_score that calculates the accuracy classification score. The function takes in the following parameters:
+
+- y_true: Ground truth (correct) labels
+- y_pred: Predicted labels
+- normalize: Boolean value indicating whether to return the fraction of correctly classified samples or the number of correctly classified samples
+- sample_weight: Sample weights
+
+The function returns a float or integer value based on the normalize parameter. The best performance is 1 when normalize is True and the number of samples when normalize is False.
+
+The function also includes examples demonstrating how to use it with different inputs.
+
+ ground Truth:sklearn/metrics/_classification.py
+
+ repo:scikit-learn
+
+ function:accuracy_score
+ 
+ test_cases:sklearn/metrics/tests/test_classification.py

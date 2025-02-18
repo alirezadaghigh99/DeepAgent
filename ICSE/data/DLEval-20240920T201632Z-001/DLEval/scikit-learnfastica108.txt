@@ -1,0 +1,40 @@
+stage: Pre-Post processing
+task: 
+data: Table
+
+prompt:
+Create a Python function fastica that performs Fast Independent Component Analysis (FastICA) for unmixing data into independent components.
+
+Inputs:
+X: A 2D array-like of shape (n_samples, n_features) representing the input data.
+n_components: An integer for the number of components to use. Default is None, meaning all are used.
+algorithm: A string specifying which algorithm to use for FastICA, either "parallel" or "deflation". Default is "parallel".
+whiten: A string or boolean indicating the whitening strategy. Options include "unit-variance", "arbitrary-variance", or False. Default is "unit-variance".
+fun: A string or callable defining the function used in the approximation to neg-entropy. Options include "logcosh", "exp", "cube", or a custom function. Default is "logcosh".
+fun_args: A dictionary of additional arguments to pass to fun. Default is None.
+max_iter: An integer for the maximum number of iterations. Default is 200.
+tol: A float for the convergence tolerance. Default is 1e-04.
+w_init: An optional array for the initial unmixing matrix. Default is None.
+whiten_solver: A string indicating which solver to use for whitening. Options include "eigh" or "svd". Default is "svd".
+random_state: An optional seed or random state for reproducibility. Default is None.
+return_X_mean: A boolean indicating whether to return the mean of X. Default is False.
+compute_sources: A boolean indicating whether to compute sources. Default is True.
+return_n_iter: A boolean indicating whether to return the number of iterations. Default is False.
+Outputs:
+Returns a list containing:
+K: The pre-whitening matrix if whitening is applied.
+W: The unmixing matrix.
+S: The estimated source matrix.
+X_mean: The mean of X (optional).
+n_iter: The number of iterations taken to converge (optional).
+Errors:
+Raises a ValueError if whiten is not a valid option.
+Raises a TypeError if X is not array-like.
+
+ ground Truth:sklearn/decomposition/_fastica.py
+
+ repo:scikit-learn
+
+ function:fastica
+ 
+ test_cases:sklearn/decomposition/tests/test_fastica.py

@@ -1,0 +1,214 @@
+output file:
+processed_korniaaepe69.json
+function:
+aepe
+Error Cases:
+
+Pass or Failed: 1
+
+Related Failed Test Cases:
+set()
+
+All Test Cases On Generated code:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'openxla', 'onnxrt', 'cudagraphs', 'tvm', 'jit', None, 'inductor'}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 7 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/metrics/test_aepe.py::TestAepe::test_metric_mean_reduction[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/metrics/test_aepe.py::TestAepe::test_metric_sum_reduction[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/metrics/test_aepe.py::TestAepe::test_metric_no_reduction[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/metrics/test_aepe.py::TestAepe::test_perfect_fit[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/metrics/test_aepe.py::TestAepe::test_aepe_alias[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/metrics/test_aepe.py::TestAepe::test_exception[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/metrics/test_aepe.py::TestAepe::test_smoke[cpu-float32] PASSED
+
+=================================== FAILURES ===================================
+_____________________ TestAepe.test_exception[cpu-float32] _____________________
+
+self = <test_aepe.TestAepe object at 0x7f92d8221cc0>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_exception(self, device, dtype):
+        with pytest.raises(TypeError) as errinfo:
+            criterion = kornia.metrics.AEPE()
+>           criterion(None, torch.ones(4, 4, 2, device=device, dtype=dtype))
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/metrics/test_aepe.py:46: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1736: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1747: in _call_impl
+    return forward_call(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/metrics/endpoint_error.py:87: in forward
+    return aepe(input, target, self.reduction)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/metrics/endpoint_error.py:7: in aepe
+    return aepe(input, target, reduction)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = None
+target = tensor([[[1., 1.],
+         [1., 1.],
+         [1., 1.],
+         [1., 1.]],
+
+        [[1., 1.],
+         [1., 1.],
+  ...,
+         [1., 1.],
+         [1., 1.]],
+
+        [[1., 1.],
+         [1., 1.],
+         [1., 1.],
+         [1., 1.]]])
+reduction = 'mean'
+
+    def aepe(input: torch.Tensor, target: torch.Tensor, reduction: str='mean') -> torch.Tensor:
+        """
+        Calculate the Average Endpoint Error (AEPE) between two flow maps.
+    
+        AEPE is the endpoint error between two 2D vectors (e.g., optical flow).
+        Given a h x w x 2 optical flow map, the AEPE is:
+    
+        .. math::
+    
+            	ext{AEPE}=\x0crac{1}{hw}\\sum_{i=1, j=1}^{h, w}\\sqrt{(I_{i,j,1}-T_{i,j,1})^{2}+(I_{i,j,2}-T_{i,j,2})^{2}}
+    
+        Args:
+            input (Tensor): The input flow map with shape :math:`(*, 2)`.
+            target (Tensor): The target flow map with shape :math:`(*, 2)`.
+            reduction (str): Specifies the reduction to apply to the output:
+                             ``'none'`` | ``'mean'`` | ``'sum'``.
+                             ``'none'``: no reduction will be applied,
+                             ``'mean'``: the sum of the output will be divided by the number of elements
+                             in the output, ``'sum'``: the output will be summed.
+    
+        Returns:
+            Tensor: The computed AEPE as a scalar or tensor depending on the reduction.
+        """
+>       if input.shape != target.shape:
+E       AttributeError: 'NoneType' object has no attribute 'shape'
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/metrics/temp.py:29: AttributeError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/metrics/test_aepe.py::TestAepe::test_exception[cpu-float32]
+========================= 1 failed, 6 passed in 0.32s ==========================
+
+
+Final Test Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'onnxrt', 'cudagraphs', None, 'tvm', 'openxla', 'inductor', 'jit'}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 7 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/metrics/test_aepe.py::TestAepe::test_metric_mean_reduction[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/metrics/test_aepe.py::TestAepe::test_metric_sum_reduction[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/metrics/test_aepe.py::TestAepe::test_metric_no_reduction[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/metrics/test_aepe.py::TestAepe::test_perfect_fit[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/metrics/test_aepe.py::TestAepe::test_aepe_alias[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/metrics/test_aepe.py::TestAepe::test_exception[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/metrics/test_aepe.py::TestAepe::test_smoke[cpu-float32] PASSED
+
+============================== 7 passed in 0.13s ===============================
+
+
+Initial Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'jit', 'openxla', 'cudagraphs', 'onnxrt', 'inductor', 'tvm', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 7 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/metrics/test_aepe.py::TestAepe::test_metric_mean_reduction[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/metrics/test_aepe.py::TestAepe::test_metric_sum_reduction[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/metrics/test_aepe.py::TestAepe::test_metric_no_reduction[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/metrics/test_aepe.py::TestAepe::test_perfect_fit[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/metrics/test_aepe.py::TestAepe::test_aepe_alias[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/metrics/test_aepe.py::TestAepe::test_exception[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/metrics/test_aepe.py::TestAepe::test_smoke[cpu-float32] PASSED
+
+============================== 7 passed in 0.16s ===============================

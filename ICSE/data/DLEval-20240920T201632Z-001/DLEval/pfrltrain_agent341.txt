@@ -1,0 +1,18 @@
+stage: Training
+task: 
+data: 
+
+prompt:
+Define a Python function called train_agent that takes in the following parameters: agent, env, steps, outdir, checkpoint_freq (optional), max_episode_len (optional), step_offset (default 0), evaluator (optional), successful_score (optional), step_hooks (optional), eval_during_episode (default False), and logger (optional). The function runs a training loop for the agent in the environment for a specified number of steps. It logs the progress and evaluates the agent's performance during training.
+
+The function initializes variables for episode rewards and index, resets the environment, and iterates through steps while taking actions, observing outcomes, and updating the agent. It also handles episode endings, logging statistics, and evaluating the agent's performance. If a successful score is achieved or an exception occurs, the function saves the agent's model. Finally, it returns a list of evaluation statistics history.
+
+The output of the function is a list of evaluation episode statistics dictionaries.
+
+ ground Truth:pfrl/experiments/train_agent.py
+
+ repo:pfrl
+
+ function:train_agent
+ 
+ test_cases:tests/experiments_tests/test_train_agent.py 

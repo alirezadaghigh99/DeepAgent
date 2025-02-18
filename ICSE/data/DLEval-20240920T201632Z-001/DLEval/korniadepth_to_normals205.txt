@@ -1,0 +1,25 @@
+stage: Model Construction
+task: Segmentation
+data: Image
+
+prompt:
+Create a Python function `depth_to_normals` that:
+
+- Computes the surface normals per pixel from a depth image.
+- Accepts the following parameters:
+  - `depth`: A tensor of shape `(B, 1, H, W)` containing depth values.
+  - `camera_matrix`: A tensor of shape `(B, 3, 3)` representing the camera intrinsics.
+  - `normalize_points`: A boolean indicating whether to normalize the point cloud. This is necessary when depth values represent Euclidean distances from the camera position.
+- Returns a tensor with a normal vector per pixel of shape `(B, 3, H, W)`.
+
+Errors:
+- Raises `TypeError` if `depth` or `camera_matrix` is not a Tensor.
+- Raises `ValueError` if `depth` does not have the shape `(B, 1, H, W)` or `camera_matrix` does not have the shape `(B, 3, 3)`.
+
+ ground Truth:kornia/geometry/depth.py
+
+ repo:kornia
+
+ function:depth_to_normals
+ 
+ test_cases:tests/geometry/test_depth.py::TestDepthToNormals

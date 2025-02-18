@@ -1,0 +1,14 @@
+stage: Model Construction
+task: Classification
+data: 
+
+prompt:
+The `brier_score_loss` function calculates the Brier score loss, which measures the mean squared difference between predicted probabilities and actual binary outcomes. The function supports binary classification and includes error handling for deprecated parameters, input type checking, and label consistency. Inputs include the true labels (`y_true`), predicted probabilities (`y_proba`), optional sample weights, and a parameter to define the positive class label (`pos_label`). The output is a float representing the Brier score loss. Errors are raised for incorrect input types, non-binary classification targets, and probability values outside the [0, 1] range.
+
+ ground Truth:sklearn/metrics/_classification.py
+
+ repo:scikit-learn
+
+ function:brier_score_loss
+ 
+ test_cases:sklearn/metrics/tests/test_classification.py

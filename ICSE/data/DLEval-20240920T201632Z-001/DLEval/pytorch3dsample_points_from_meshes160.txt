@@ -1,0 +1,25 @@
+stage: Pre-Post processing
+task: 
+data: Table
+
+prompt:
+Generate a Python function called sample_points_from_meshes that converts a batch of meshes to a batch of point clouds by uniformly sampling points on the surface of the mesh with probability proportional to the face area. The function takes in the following arguments:
+- meshes: A Meshes object with a batch of N meshes.
+- num_samples: An integer specifying the number of point samples per mesh.
+- return_normals: A boolean indicating whether to return normals for the sampled points.
+- return_textures: A boolean indicating whether to return textures for the sampled points.
+
+The function returns a 3-element tuple containing:
+- samples: FloatTensor of shape (N, num_samples, 3) giving the coordinates of sampled points for each mesh in the batch. For empty meshes, the corresponding row in the samples array will be filled with 0.
+- normals: FloatTensor of shape (N, num_samples, 3) giving a normal vector to each sampled point. Only returned if return_normals is True. For empty meshes, the corresponding row in the normals array will be filled with 0.
+- textures: FloatTensor of shape (N, num_samples, C) giving a C-dimensional texture vector to each sampled point. Only returned if return_textures is True. For empty meshes, the corresponding row in the textures array will be filled with 0.
+
+Note that in future releases, the output will be replaced with a `Pointclouds` data structure.
+
+ ground Truth:pytorch3d/ops/sample_points_from_meshes.py
+
+ repo:pytorch3d
+
+ function:sample_points_from_meshes
+ 
+ test_cases:tests/test_sample_points_from_meshes.py::TestSamplePoints

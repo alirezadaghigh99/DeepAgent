@@ -1,0 +1,25 @@
+stage: Image
+task: 
+data: pre-post process
+
+prompt:
+"Generate the `project` function for the following class to project a 3D point in world coordinates onto the 2D camera plane. The input is `self` and a `point_3d` tensor with shape `(*, 3)`, and the output is a tensor of `(u, v)` camera coordinates with shape `(*, 2)`.
+
+```python
+class PinholeCamera:
+    def __init__(self, intrinsics: Tensor, extrinsics: Tensor, height: Tensor, width: Tensor) -> None:
+        self.height: Tensor = height
+        self.width: Tensor = width
+        self._intrinsics: Tensor = intrinsics
+        self._extrinsics: Tensor = extrinsics
+```"
+
+ ground Truth:kornia/geometry/camera/pinhole.py
+
+ repo:kornia
+
+ function:project
+ 
+ class:PinholeCamera
+ 
+ test_cases:tests/geometry/camera/test_pinhole.py

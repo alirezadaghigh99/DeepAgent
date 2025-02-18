@@ -1,0 +1,23 @@
+stage: Model Construction
+task: Segmentation
+data: Image
+
+prompt:
+Create a Python function called cubify that takes in the following parameters:
+- voxels: a torch.Tensor of shape (N, D, H, W) containing occupancy probabilities
+- thresh: a scalar threshold
+- feats: an optional torch.Tensor of shape (N, K, D, H, W) containing color information
+- device: the device of the output meshes
+- align: a string defining the alignment of the mesh vertices and grid locations
+
+The function converts a voxel to a mesh by replacing each occupied voxel with a cube consisting of 12 faces and 8 vertices. Shared vertices are merged, and internal faces are removed. The alignment between the vertices of the cubified mesh and the voxel locations is defined by the choice of align, which can be "topleft", "corner", or "center".
+
+The function returns a Meshes object of the corresponding meshes.
+
+ ground Truth:pytorch3d/ops/cubify.py
+
+ repo:pytorch3d
+
+ function:cubify
+ 
+ test_cases:tests/test_cubify.py

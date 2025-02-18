@@ -1,0 +1,36 @@
+stage:Training
+task: 
+data: Text
+
+prompt:
+Generate a Python function `training_quantized_forward` for the class `QuantizedLinear` that performs a fake quantized forward pass during training. The function should quantize the input and weights using fake quantization techniques and update the exponential moving average (EMA) of quantization ranges if the quantization mode is set to EMA. If `requantize_output` is enabled, the output should also be quantized. The function should only be used in training mode and throws an assertion error if called during evaluation.
+
+Class structure:
+
+```python
+class QuantizedLinear(QuantizedLayer, nn.Linear):
+    def __init__(self, *args, activation_bits=8, requantize_output=True, ema_decay=0.9999, **kwargs):
+        self.activation_bits = activation_bits  # Number of bits for quantization
+        self.accumulation_bits = 32  # Number of bits for accumulation
+        self.ema_decay = ema_decay  # EMA decay factor
+        self.requantize_output = requantize_output  # Flag to requantize the output
+        self.register_buffer("input_thresh", torch.zeros(1))  # Threshold for input quantization
+        if self.requantize_output:
+            self.register_buffer("output_thresh", torch.zeros(1))  # Threshold for output quantization
+        pass
+
+    def training_quantized_forward(self, input):
+        # Implement the function as described in the prompt
+```
+
+This function is designed to fake quantize inputs and weights during the forward pass in training, with optional output quantization and EMA updates for quantization ranges.
+
+ ground Truth:nlp_architect/nn/torch/quantization.py
+
+ repo:nlp-architect
+
+ function:training_quantized_forward
+ 
+ test_cases:tests/test_quantization.py
+ 
+ class:QuantizedLinear

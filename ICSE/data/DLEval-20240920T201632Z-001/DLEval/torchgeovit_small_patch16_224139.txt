@@ -1,0 +1,14 @@
+stage: Model Construction
+task: Classification
+data: Image
+
+prompt:
+Generate a Python function called vit_small_patch16_224 that creates a Vision Transformer (ViT) model with small patch size 16. The function takes in optional pre-trained model weights, additional arguments, and keyword arguments. If weights are provided, the function adjusts the input channels based on the weights. The function then creates a ViT small 16 model using the timm library, loads the pre-trained weights if available, and returns the model. 
+
+ ground Truth:torchgeo/models/vit.py
+
+ repo:torchgeo
+
+ function:vit_small_patch16_224
+ 
+ test_cases:tests/models/test_vit.py

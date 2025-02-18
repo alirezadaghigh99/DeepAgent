@@ -1,0 +1,14 @@
+stage: Evaluating&Metrics
+task: Regression
+data: 
+
+prompt:
+Create a Python function `normalized_mse` that computes the normalized mean square error (NMSE) between two lists of NumPy arrays, `ref_outputs` and `approx_outputs`. The NMSE is defined as the mean square error (MSE) between the reference and approximate outputs, normalized by the MSE between the reference output and zero. The function iterates over corresponding elements in `ref_outputs` and `approx_outputs`, computes the NMSE for each pair, and then returns the average NMSE across all pairs as a single float value.
+
+ ground Truth:nncf/quantization/algorithms/accuracy_control/rank_functions.py
+
+ repo:nncf
+
+ function:normalized_mse
+ 
+  test_cases:tests/common/accuracy_control/test_ranking.py

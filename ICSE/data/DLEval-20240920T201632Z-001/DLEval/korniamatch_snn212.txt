@@ -1,0 +1,17 @@
+stage: Evaluating&Metrics
+task: Detection
+data: Image
+
+prompt:
+Create a Python function `match_snn` that takes in two tensors, `desc1` and `desc2`, representing batches of descriptors, a threshold `th` = 0.8, and an optional precomputed distance matrix `dm`. The function returns the distances and indices of descriptors from `desc1` that have nearest neighbors in `desc2`, satisfying the condition that the ratio of the first to the second nearest neighbor distance is less than or equal to `th`. If `desc2` has fewer than two descriptors, or if no matches meet the ratio threshold, the function returns an empty result. It checks the validity of the input shapes and then identifies the matching descriptors and their corresponding distances.Return:
+        - Descriptor distance of matching descriptors, shape of :math:`(B3, 1)`.
+        - Long tensor indexes of matching descriptors in desc1 and desc2. Shape: :math:`(B3, 2)`,
+          where 0 <= B3 <= B1.
+
+ ground Truth:kornia/feature/matching.py#L48
+
+ repo:kornia
+
+ function:match_snn
+ 
+ test_cases:tests/feature/test_matching.py::TestMatchSNN

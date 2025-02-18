@@ -1,0 +1,14 @@
+stage: Model Construction
+task: 
+data: image
+
+prompt:
+Create a Python function named `_get_perspective_coeffs` that calculates the eight coefficients required for performing a perspective transformation on an image. The function takes two lists of four coordinate pairs each, `startpoints` and `endpoints`, corresponding to the corners of the original and transformed images, respectively. It computes the coefficients `(a, b, c, d, e, f, g, h)` using least squares to map each pixel `(x, y)` in the original image to its new position in the transformed image. The function should validate that exactly four corners are provided for both inputs, raising a `ValueError` if this condition is not met. Calculations should be performed in double precision to ensure numerical stability, with results converted to single precision before returning. Use the PyTorch library for matrix operations and numerical computations.
+
+ground Truth:torchvision/transforms/functional.py#L674
+
+ repo:vision
+
+ function:_get_perspective_coeffs
+ 
+ test_cases:test/test_transforms.py::test_randomperspective_fill

@@ -1,0 +1,18 @@
+stage: Model Construction
+task: Classification
+data: 
+
+prompt:
+Generate a Python function called polarity that calculates the polarity of a given kernel function. The function takes in the following parameters: X (list of datapoints), Y (list of class labels of datapoints, assumed to be either -1 or 1), kernel (function that maps datapoints to kernel value), assume_normalized_kernel (optional boolean), rescale_class_labels (optional boolean), and normalize (boolean). 
+
+The polarity of the kernel function is calculated as the sum of the product of class labels and kernel values for all pairs of datapoints. If the dataset is unbalanced, the class labels are rescaled based on the number of datapoints in each class. The function returns the kernel polarity as a float value.
+
+An example is provided using a simple kernel function based on AngleEmbedding, where the polarity is computed for a set of feature vectors X with corresponding class labels Y. The function is called with X, Y, and the kernel function, and returns the computed polarity value.
+
+ ground Truth:pennylane/kernels/cost_functions.py
+
+ repo:pennylane
+
+ function:polarity
+ 
+ test_cases:tests/kernels/test_kernels.py::TestKernelPolarity

@@ -1,0 +1,23 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Create a Python function `rgb_to_grayscale` that converts an RGB image to its grayscale version. The function should:
+
+- Accept an `image` tensor with shape `(*, 3, H, W)` representing the RGB image.
+- Optionally accept `rgb_weights`, a tensor containing weights for the RGB channels. The sum of these weights should be 1.
+- If `rgb_weights` is not provided, default weights based on the image data type should be used: `[76, 150, 29]` for `uint8` images and `[0.299, 0.587, 0.114]` for floating-point images.
+- Validate that the input tensor has the correct shape and raise a `ValueError` if not.
+- Convert the RGB image to grayscale using the provided or default weights.
+- Return the grayscale image with shape `(*, 1, H, W)`.
+
+Ensure that the function handles different image data types correctly and raises a `TypeError` for unsupported types.
+
+ ground Truth:kornia/color/gray.py
+
+ repo:kornia
+
+ function:rgb_to_grayscale
+ 
+ test_cases:tests/color/test_gray.py::TestRgbToGrayscale

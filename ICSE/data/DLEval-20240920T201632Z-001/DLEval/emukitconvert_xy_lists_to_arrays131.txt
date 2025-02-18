@@ -1,0 +1,22 @@
+stage: Pre-Post processing
+task: 
+data: Table
+
+prompt:
+Generate a Python function called convert_xy_lists_to_arrays that takes in two input parameters: x_list and y_list, both of type List. The function returns a Tuple containing two numpy arrays: x_array and y_array. 
+
+The x_list parameter is a list of numpy arrays representing inputs, ordered from lowest to highest fidelity. The y_list parameter is a list of numpy arrays representing outputs, also ordered from lowest to highest fidelity. 
+
+The function first checks if the lengths of x_list and y_list are equal, raising a ValueError if they are not. It then checks if the number of points in each fidelity level is the same for both x_list and y_list, raising a ValueError if they are not. 
+
+The x_array returned contains all inputs across all fidelities with the fidelity index appended as the last column. The y_array returned contains all outputs across all fidelities. 
+
+If the function encounters any errors during the conversion process, it will raise appropriate ValueErrors.
+
+ ground Truth:emukit/multi_fidelity/convert_lists_to_array.py
+
+ repo:emukit
+
+ function:convert_xy_lists_to_arrays
+ 
+ test_cases:tests/emukit/core/test_constraints.py

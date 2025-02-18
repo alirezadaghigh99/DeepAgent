@@ -1,0 +1,20 @@
+stage: Training
+task: 
+data: Table
+
+prompt:
+Generate a Python function called orthogonal_mp that implements the Orthogonal Matching Pursuit (OMP) algorithm. The function takes in input parameters X (array-like of shape (n_samples, n_features)) and y (ndarray of shape (n_samples,) or (n_samples, n_targets)), along with optional parameters such as n_nonzero_coefs, tol, precompute, copy_X, return_path, and return_n_iter. 
+
+The function solves n_targets OMP problems by finding the coefficients of the OMP solution based on the input data X and targets y. The OMP problem is defined as finding the coefficients that minimize the residual error subject to constraints on the number of non-zero coefficients or the maximum squared norm of the residual.
+
+The function returns the coefficients (coef) of the OMP solution as an ndarray of shape (n_features,) or (n_features, n_targets), along with the number of active features across every target (n_iters) if return_n_iter is set to True. Additionally, the function provides options to return the coefficient path and the number of iterations.
+
+The OMP algorithm is based on the work by Mallat and Zhang in 1993 and Rubinstein, Zibulevsky, and Elad in 2008. The function includes examples demonstrating the usage of orthogonal_mp with sample data.
+
+ ground Truth:sklearn/linear_model/_omp.py
+
+ repo:scikit-learn
+
+ function:orthogonal_mp
+ 
+ test_cases:sklearn/linear_model/tests/test_omp.py

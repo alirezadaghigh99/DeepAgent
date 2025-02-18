@@ -1,0 +1,21 @@
+stage: 
+task: Regression
+data: Inference
+
+prompt:
+Generate a Python function called `K_diag` that computes the diagonal of the kernel matrix for the input tensor `X` using the `_diag_weighted_product` method and the `_J` method. The input is a tensor `X`, and the output is a tensor representing the diagonal of the kernel matrix.
+
+```python
+class ArcCosine(Kernel):
+    def K_diag(self, X: TensorType) -> tf.Tensor:
+```
+
+ ground Truth:gpflow/kernels/misc.py
+
+ repo:GPflow
+
+ function:K_diag
+ 
+ class:ArcCosine
+ 
+ test_cases:tests/gpflow/kernels/test_kernels.py

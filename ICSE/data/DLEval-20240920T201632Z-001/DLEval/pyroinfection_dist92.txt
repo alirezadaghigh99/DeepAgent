@@ -1,0 +1,24 @@
+stage: Evaluating&Metrics
+task: 
+data: Table
+
+prompt:
+Define a Python function called infection_dist that creates a distribution over the number of new infections at a discrete time step. The function takes in parameters such as individual_rate, num_infectious, num_susceptible, population, concentration, and overdispersion. Depending on the values of population and concentration, the function returns a Poisson, Negative-Binomial, Binomial, or Beta-Binomial distribution. The function handles different scenarios such as modeling superspreader individuals and small populations. It also includes references to relevant research papers. The function converts input variables to colloquial names and computes probabilities for infection based on the given parameters. The function then returns the appropriate distribution model based on the input parameters.
+Parameters:
+    - individual_rate: The rate at which an individual can infect others.
+    - num_infectious: The number of currently infectious individuals.
+    - num_susceptible: The number of susceptible individuals.
+    - population: The total population size.
+    - concentration: A parameter that affects the distribution choice.
+    - overdispersion: A parameter that models the variability in the infection process.
+    
+    Returns:
+    - A distribution object (Poisson, Negative-Binomial, Binomial, or Beta-Binomial).
+
+ ground Truth:pyro/contrib/epidemiology/distributions.py
+
+ repo:pyro
+
+ function:infection_dist
+ 
+ test_cases:tests/contrib/epidemiology/test_distributions.py

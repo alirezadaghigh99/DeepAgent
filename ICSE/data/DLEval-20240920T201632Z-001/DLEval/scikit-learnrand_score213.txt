@@ -1,0 +1,14 @@
+stage: Training
+task: 
+data: 
+
+prompt:
+Create a Python function called rand_score that calculates the Rand Index, a similarity measure between two clusterings. The function takes two array-like inputs: labels_true (ground truth class labels) and labels_pred (cluster labels to evaluate). It returns a float RI score between 0.0 and 1.0, where 1.0 indicates a perfect match. The function first calculates a pair confusion matrix using pair_confusion_matrix, then computes the numerator and denominator for the RI score. Special cases where the numerator equals the denominator or the denominator is 0 result in a return value of 1.0.
+
+ ground Truth:sklearn/metrics/cluster/_supervised.py
+
+ repo:scikit-learn
+
+ function:rand_score
+ 
+ test_cases: sklearn/metrics/cluster/tests/test_supervised.py

@@ -1,0 +1,21 @@
+stage: Evaluating&Metrics
+task: 
+data: Text
+
+prompt:
+Write a python function ngrams Generate the ngrams from a sequence of items
+
+    Args:
+        sequence: sequence of items
+        n: n-gram order
+
+    Returns:
+        A counter of ngram objects
+
+ ground Truth:ignite/metrics/nlp/utils.py
+
+ repo:ignite
+
+ function:ngrams
+ 
+ test_cases:tests/ignite/metrics/nlp/test_utils.py::test_ngrams

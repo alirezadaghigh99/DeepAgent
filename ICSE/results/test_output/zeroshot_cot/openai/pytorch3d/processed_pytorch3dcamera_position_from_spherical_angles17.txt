@@ -1,0 +1,723 @@
+output file:
+processed_pytorch3dcamera_position_from_spherical_angles17.json
+function:
+camera_position_from_spherical_angles
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_vectors_bad_broadcast FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_view_transform_non_default_at_position', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_vectors', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_torch_scalar_grads', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_view_transform_from_eye_point_tuple FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_vectors_mixed_broadcast_grads', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_torch_scalars FAILED', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_python_scalar_radians FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_python_scalar_radians', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_torch_scalar_grads FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_mixed_scalars', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_view_transform_default_values FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_vectors_broadcast', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_mixed_scalars FAILED', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_vectors_mixed_broadcast FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_python_scalar', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_vectors_mixed_broadcast_grads FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_view_transform_default_values', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_vectors FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_vectors_mixed_broadcast', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_vectors_bad_broadcast', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_view_transform_from_eye_point_tuple', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_python_scalar FAILED', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_view_transform_non_default_at_position FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_torch_scalars', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_vectors_broadcast FAILED'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 65 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_mixed_scalars FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_python_scalar FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_python_scalar_radians FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_torch_scalar_grads FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_torch_scalars FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_vectors FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_vectors_bad_broadcast FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_vectors_broadcast FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_vectors_mixed_broadcast FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_vectors_mixed_broadcast_grads FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_rotation_input_fail PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_rotation_list_broadcast PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_rotation_python_list PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_rotation_tensor_broadcast PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_rotation_tensor_grad PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_view_transform_corner_case FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_view_transform_default_values FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_view_transform_from_eye_point_tuple FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_view_transform_non_default_at_position FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_view_transform PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCamerasCommon::test_K PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCamerasCommon::test_clone PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCamerasCommon::test_equiv_project_points PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCamerasCommon::test_get_camera_center PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCamerasCommon::test_iterable PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCamerasCommon::test_join_batch_orthographic PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCamerasCommon::test_join_batch_perspective PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCamerasCommon::test_join_cameras_as_batch_errors PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCamerasCommon::test_project_points_screen PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCamerasCommon::test_unproject_points PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCamerasCommon::test_view_transform_class_method PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVPerspectiveProjection::test_camera_class_init PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVPerspectiveProjection::test_get_full_transform PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVPerspectiveProjection::test_getitem PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVPerspectiveProjection::test_perspective PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVPerspectiveProjection::test_perspective_kwargs PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVPerspectiveProjection::test_perspective_mixed_inputs_broadcast PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVPerspectiveProjection::test_perspective_mixed_inputs_grad PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVPerspectiveProjection::test_perspective_type PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVPerspectiveProjection::test_transform_points PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVOrthographicProjection::test_getitem PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVOrthographicProjection::test_orthographic PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVOrthographicProjection::test_orthographic_kwargs PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVOrthographicProjection::test_orthographic_mixed_inputs_broadcast PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVOrthographicProjection::test_orthographic_mixed_inputs_grad PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVOrthographicProjection::test_orthographic_scaled PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVOrthographicProjection::test_perspective_type PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestOrthographicProjection::test_getitem PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestOrthographicProjection::test_orthographic PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestOrthographicProjection::test_orthographic_kwargs PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestOrthographicProjection::test_orthographic_scaled PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestOrthographicProjection::test_perspective_type PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestPerspectiveProjection::test_clone_picklable PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestPerspectiveProjection::test_getitem PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestPerspectiveProjection::test_perspective PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestPerspectiveProjection::test_perspective_kwargs PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestPerspectiveProjection::test_perspective_scaled PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestPerspectiveProjection::test_perspective_type PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFishEyeProjection::test_cuda PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFishEyeProjection::test_distortion_params_set_to_zeors PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFishEyeProjection::test_fisheye_against_perspective_cameras PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFishEyeProjection::test_getitem PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFishEyeProjection::test_project_shape_broadcasts PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFishEyeProjection::test_unhandled_shape PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFishEyeProjection::test_unproject_shape_broadcasts PASSED
+
+=================================== FAILURES ===================================
+_______ TestCameraHelpers.test_camera_position_from_angles_mixed_scalars _______
+
+self = <tests.test_cameras.TestCameraHelpers testMethod=test_camera_position_from_angles_mixed_scalars>
+
+    def test_camera_position_from_angles_mixed_scalars(self):
+        dist = 2.7
+        elev = torch.tensor(0.0)
+        azim = 90.0
+        expected_position = torch.tensor([2.7, 0.0, 0.0], dtype=torch.float32).view(
+            1, 3
+        )
+>       position = camera_position_from_spherical_angles(dist, elev, azim)
+
+/local/data0/moved_data/pytorch3d/tests/test_cameras.py:242: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+distance = 2.7, elevation = tensor(0.), azimuth = 90.0, degrees = True
+device = 'cpu'
+
+    def camera_position_from_spherical_angles(distance: float, elevation: float, azimuth: float, degrees: bool=True, device: Device='cpu') -> torch.Tensor:
+>       from .temp import camera_position_from_spherical_angles
+E       ImportError: cannot import name 'camera_position_from_spherical_angles' from 'pytorch3d.renderer.temp' (/local/data0/moved_data/pytorch3d/pytorch3d/renderer/temp.py)
+
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/cameras.py:1087: ImportError
+_______ TestCameraHelpers.test_camera_position_from_angles_python_scalar _______
+
+self = <tests.test_cameras.TestCameraHelpers testMethod=test_camera_position_from_angles_python_scalar>
+
+    def test_camera_position_from_angles_python_scalar(self):
+        dist = 2.7
+        elev = 90.0
+        azim = 0.0
+        expected_position = torch.tensor([0.0, 2.7, 0.0], dtype=torch.float32).view(
+            1, 3
+        )
+>       position = camera_position_from_spherical_angles(dist, elev, azim)
+
+/local/data0/moved_data/pytorch3d/tests/test_cameras.py:211: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+distance = 2.7, elevation = 90.0, azimuth = 0.0, degrees = True, device = 'cpu'
+
+    def camera_position_from_spherical_angles(distance: float, elevation: float, azimuth: float, degrees: bool=True, device: Device='cpu') -> torch.Tensor:
+>       from .temp import camera_position_from_spherical_angles
+E       ImportError: cannot import name 'camera_position_from_spherical_angles' from 'pytorch3d.renderer.temp' (/local/data0/moved_data/pytorch3d/pytorch3d/renderer/temp.py)
+
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/cameras.py:1087: ImportError
+___ TestCameraHelpers.test_camera_position_from_angles_python_scalar_radians ___
+
+self = <tests.test_cameras.TestCameraHelpers testMethod=test_camera_position_from_angles_python_scalar_radians>
+
+    def test_camera_position_from_angles_python_scalar_radians(self):
+        dist = 2.7
+        elev = math.pi / 2
+        azim = 0.0
+        expected_position = torch.tensor([0.0, 2.7, 0.0], dtype=torch.float32)
+        expected_position = expected_position.view(1, 3)
+>       position = camera_position_from_spherical_angles(
+            dist, elev, azim, degrees=False
+        )
+
+/local/data0/moved_data/pytorch3d/tests/test_cameras.py:220: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+distance = 2.7, elevation = 1.5707963267948966, azimuth = 0.0, degrees = False
+device = 'cpu'
+
+    def camera_position_from_spherical_angles(distance: float, elevation: float, azimuth: float, degrees: bool=True, device: Device='cpu') -> torch.Tensor:
+>       from .temp import camera_position_from_spherical_angles
+E       ImportError: cannot import name 'camera_position_from_spherical_angles' from 'pytorch3d.renderer.temp' (/local/data0/moved_data/pytorch3d/pytorch3d/renderer/temp.py)
+
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/cameras.py:1087: ImportError
+____ TestCameraHelpers.test_camera_position_from_angles_torch_scalar_grads _____
+
+self = <tests.test_cameras.TestCameraHelpers testMethod=test_camera_position_from_angles_torch_scalar_grads>
+
+    def test_camera_position_from_angles_torch_scalar_grads(self):
+        dist = torch.tensor(2.7, requires_grad=True)
+        elev = torch.tensor(45.0, requires_grad=True)
+        azim = torch.tensor(45.0)
+>       position = camera_position_from_spherical_angles(dist, elev, azim)
+
+/local/data0/moved_data/pytorch3d/tests/test_cameras.py:249: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+distance = tensor(2.7000, requires_grad=True)
+elevation = tensor(45., requires_grad=True), azimuth = tensor(45.)
+degrees = True, device = 'cpu'
+
+    def camera_position_from_spherical_angles(distance: float, elevation: float, azimuth: float, degrees: bool=True, device: Device='cpu') -> torch.Tensor:
+>       from .temp import camera_position_from_spherical_angles
+E       ImportError: cannot import name 'camera_position_from_spherical_angles' from 'pytorch3d.renderer.temp' (/local/data0/moved_data/pytorch3d/pytorch3d/renderer/temp.py)
+
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/cameras.py:1087: ImportError
+_______ TestCameraHelpers.test_camera_position_from_angles_torch_scalars _______
+
+self = <tests.test_cameras.TestCameraHelpers testMethod=test_camera_position_from_angles_torch_scalars>
+
+    def test_camera_position_from_angles_torch_scalars(self):
+        dist = torch.tensor(2.7)
+        elev = torch.tensor(0.0)
+        azim = torch.tensor(90.0)
+        expected_position = torch.tensor([2.7, 0.0, 0.0], dtype=torch.float32).view(
+            1, 3
+        )
+>       position = camera_position_from_spherical_angles(dist, elev, azim)
+
+/local/data0/moved_data/pytorch3d/tests/test_cameras.py:232: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+distance = tensor(2.7000), elevation = tensor(0.), azimuth = tensor(90.)
+degrees = True, device = 'cpu'
+
+    def camera_position_from_spherical_angles(distance: float, elevation: float, azimuth: float, degrees: bool=True, device: Device='cpu') -> torch.Tensor:
+>       from .temp import camera_position_from_spherical_angles
+E       ImportError: cannot import name 'camera_position_from_spherical_angles' from 'pytorch3d.renderer.temp' (/local/data0/moved_data/pytorch3d/pytorch3d/renderer/temp.py)
+
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/cameras.py:1087: ImportError
+__________ TestCameraHelpers.test_camera_position_from_angles_vectors __________
+
+self = <tests.test_cameras.TestCameraHelpers testMethod=test_camera_position_from_angles_vectors>
+
+    def test_camera_position_from_angles_vectors(self):
+        dist = torch.tensor([2.0, 2.0])
+        elev = torch.tensor([0.0, 90.0])
+        azim = torch.tensor([90.0, 0.0])
+        expected_position = torch.tensor(
+            [[2.0, 0.0, 0.0], [0.0, 2.0, 0.0]], dtype=torch.float32
+        )
+>       position = camera_position_from_spherical_angles(dist, elev, azim)
+
+/local/data0/moved_data/pytorch3d/tests/test_cameras.py:278: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+distance = tensor([2., 2.]), elevation = tensor([ 0., 90.])
+azimuth = tensor([90.,  0.]), degrees = True, device = 'cpu'
+
+    def camera_position_from_spherical_angles(distance: float, elevation: float, azimuth: float, degrees: bool=True, device: Device='cpu') -> torch.Tensor:
+>       from .temp import camera_position_from_spherical_angles
+E       ImportError: cannot import name 'camera_position_from_spherical_angles' from 'pytorch3d.renderer.temp' (/local/data0/moved_data/pytorch3d/pytorch3d/renderer/temp.py)
+
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/cameras.py:1087: ImportError
+___ TestCameraHelpers.test_camera_position_from_angles_vectors_bad_broadcast ___
+
+self = <tests.test_cameras.TestCameraHelpers testMethod=test_camera_position_from_angles_vectors_bad_broadcast>
+
+    def test_camera_position_from_angles_vectors_bad_broadcast(self):
+        # Batch dim for broadcast must be N or 1
+        dist = torch.tensor([2.0, 3.0, 5.0])
+        elev = torch.tensor([0.0, 90.0])
+        azim = torch.tensor([90.0])
+        with self.assertRaises(ValueError):
+>           camera_position_from_spherical_angles(dist, elev, azim)
+
+/local/data0/moved_data/pytorch3d/tests/test_cameras.py:334: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def camera_position_from_spherical_angles(distance: float, elevation: float, azimuth: float, degrees: bool=True, device: Device='cpu') -> torch.Tensor:
+>       from .temp import camera_position_from_spherical_angles
+E       ImportError: cannot import name 'camera_position_from_spherical_angles' from 'pytorch3d.renderer.temp' (/local/data0/moved_data/pytorch3d/pytorch3d/renderer/temp.py)
+
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/cameras.py:1087: ImportError
+_____ TestCameraHelpers.test_camera_position_from_angles_vectors_broadcast _____
+
+self = <tests.test_cameras.TestCameraHelpers testMethod=test_camera_position_from_angles_vectors_broadcast>
+
+    def test_camera_position_from_angles_vectors_broadcast(self):
+        dist = torch.tensor([2.0, 3.0, 5.0])
+        elev = torch.tensor([0.0])
+        azim = torch.tensor([90.0])
+        expected_position = torch.tensor(
+            [[2.0, 0.0, 0.0], [3.0, 0.0, 0.0], [5.0, 0.0, 0.0]], dtype=torch.float32
+        )
+>       position = camera_position_from_spherical_angles(dist, elev, azim)
+
+/local/data0/moved_data/pytorch3d/tests/test_cameras.py:288: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+distance = tensor([2., 3., 5.]), elevation = tensor([0.])
+azimuth = tensor([90.]), degrees = True, device = 'cpu'
+
+    def camera_position_from_spherical_angles(distance: float, elevation: float, azimuth: float, degrees: bool=True, device: Device='cpu') -> torch.Tensor:
+>       from .temp import camera_position_from_spherical_angles
+E       ImportError: cannot import name 'camera_position_from_spherical_angles' from 'pytorch3d.renderer.temp' (/local/data0/moved_data/pytorch3d/pytorch3d/renderer/temp.py)
+
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/cameras.py:1087: ImportError
+__ TestCameraHelpers.test_camera_position_from_angles_vectors_mixed_broadcast __
+
+self = <tests.test_cameras.TestCameraHelpers testMethod=test_camera_position_from_angles_vectors_mixed_broadcast>
+
+    def test_camera_position_from_angles_vectors_mixed_broadcast(self):
+        dist = torch.tensor([2.0, 3.0, 5.0])
+        elev = 0.0
+        azim = torch.tensor(90.0)
+        expected_position = torch.tensor(
+            [[2.0, 0.0, 0.0], [3.0, 0.0, 0.0], [5.0, 0.0, 0.0]], dtype=torch.float32
+        )
+>       position = camera_position_from_spherical_angles(dist, elev, azim)
+
+/local/data0/moved_data/pytorch3d/tests/test_cameras.py:298: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+distance = tensor([2., 3., 5.]), elevation = 0.0, azimuth = tensor(90.)
+degrees = True, device = 'cpu'
+
+    def camera_position_from_spherical_angles(distance: float, elevation: float, azimuth: float, degrees: bool=True, device: Device='cpu') -> torch.Tensor:
+>       from .temp import camera_position_from_spherical_angles
+E       ImportError: cannot import name 'camera_position_from_spherical_angles' from 'pytorch3d.renderer.temp' (/local/data0/moved_data/pytorch3d/pytorch3d/renderer/temp.py)
+
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/cameras.py:1087: ImportError
+_ TestCameraHelpers.test_camera_position_from_angles_vectors_mixed_broadcast_grads _
+
+self = <tests.test_cameras.TestCameraHelpers testMethod=test_camera_position_from_angles_vectors_mixed_broadcast_grads>
+
+    def test_camera_position_from_angles_vectors_mixed_broadcast_grads(self):
+        dist = torch.tensor([2.0, 3.0, 5.0], requires_grad=True)
+        elev = torch.tensor(45.0, requires_grad=True)
+        azim = 45.0
+>       position = camera_position_from_spherical_angles(dist, elev, azim)
+
+/local/data0/moved_data/pytorch3d/tests/test_cameras.py:305: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+distance = tensor([2., 3., 5.], requires_grad=True)
+elevation = tensor(45., requires_grad=True), azimuth = 45.0, degrees = True
+device = 'cpu'
+
+    def camera_position_from_spherical_angles(distance: float, elevation: float, azimuth: float, degrees: bool=True, device: Device='cpu') -> torch.Tensor:
+>       from .temp import camera_position_from_spherical_angles
+E       ImportError: cannot import name 'camera_position_from_spherical_angles' from 'pytorch3d.renderer.temp' (/local/data0/moved_data/pytorch3d/pytorch3d/renderer/temp.py)
+
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/cameras.py:1087: ImportError
+__________ TestCameraHelpers.test_look_at_view_transform_corner_case ___________
+
+self = <tests.test_cameras.TestCameraHelpers testMethod=test_look_at_view_transform_corner_case>
+
+    def test_look_at_view_transform_corner_case(self):
+        dist = 2.7
+        elev = 90
+        azim = 90
+        expected_position = torch.tensor([0.0, 2.7, 0.0], dtype=torch.float32).view(
+            1, 3
+        )
+>       position = camera_position_from_spherical_angles(dist, elev, azim)
+
+/local/data0/moved_data/pytorch3d/tests/test_cameras.py:415: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+distance = 2.7, elevation = 90, azimuth = 90, degrees = True, device = 'cpu'
+
+    def camera_position_from_spherical_angles(distance: float, elevation: float, azimuth: float, degrees: bool=True, device: Device='cpu') -> torch.Tensor:
+>       from .temp import camera_position_from_spherical_angles
+E       ImportError: cannot import name 'camera_position_from_spherical_angles' from 'pytorch3d.renderer.temp' (/local/data0/moved_data/pytorch3d/pytorch3d/renderer/temp.py)
+
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/cameras.py:1087: ImportError
+_________ TestCameraHelpers.test_look_at_view_transform_default_values _________
+
+self = <tests.test_cameras.TestCameraHelpers testMethod=test_look_at_view_transform_default_values>
+
+    def test_look_at_view_transform_default_values(self):
+        dist = 1.0
+        elev = 0.0
+        azim = 0.0
+        # Using passed values for dist, elev, azim
+>       R, t = look_at_view_transform(dist, elev, azim)
+
+/local/data0/moved_data/pytorch3d/tests/test_cameras.py:182: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/cameras.py:1203: in look_at_view_transform
+    C = camera_position_from_spherical_angles(dist, elev, azim, degrees=degrees, device=device) + at
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+distance = tensor([1.]), elevation = tensor([0.]), azimuth = tensor([0.])
+degrees = True, device = 'cpu'
+
+    def camera_position_from_spherical_angles(distance: float, elevation: float, azimuth: float, degrees: bool=True, device: Device='cpu') -> torch.Tensor:
+>       from .temp import camera_position_from_spherical_angles
+E       ImportError: cannot import name 'camera_position_from_spherical_angles' from 'pytorch3d.renderer.temp' (/local/data0/moved_data/pytorch3d/pytorch3d/renderer/temp.py)
+
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/cameras.py:1087: ImportError
+______ TestCameraHelpers.test_look_at_view_transform_from_eye_point_tuple ______
+
+self = <tests.test_cameras.TestCameraHelpers testMethod=test_look_at_view_transform_from_eye_point_tuple>
+
+    def test_look_at_view_transform_from_eye_point_tuple(self):
+        dist = math.sqrt(2)
+        elev = math.pi / 4
+        azim = 0.0
+        eye = ((0.0, 1.0, 1.0),)
+        # using passed values for dist, elev, azim
+>       R, t = look_at_view_transform(dist, elev, azim, degrees=False)
+
+/local/data0/moved_data/pytorch3d/tests/test_cameras.py:166: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/cameras.py:1203: in look_at_view_transform
+    C = camera_position_from_spherical_angles(dist, elev, azim, degrees=degrees, device=device) + at
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+distance = tensor([1.4142]), elevation = tensor([0.7854])
+azimuth = tensor([0.]), degrees = False, device = 'cpu'
+
+    def camera_position_from_spherical_angles(distance: float, elevation: float, azimuth: float, degrees: bool=True, device: Device='cpu') -> torch.Tensor:
+>       from .temp import camera_position_from_spherical_angles
+E       ImportError: cannot import name 'camera_position_from_spherical_angles' from 'pytorch3d.renderer.temp' (/local/data0/moved_data/pytorch3d/pytorch3d/renderer/temp.py)
+
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/cameras.py:1087: ImportError
+____ TestCameraHelpers.test_look_at_view_transform_non_default_at_position _____
+
+self = <tests.test_cameras.TestCameraHelpers testMethod=test_look_at_view_transform_non_default_at_position>
+
+    def test_look_at_view_transform_non_default_at_position(self):
+        dist = 1.0
+        elev = 0.0
+        azim = 0.0
+        at = ((1, 1, 1),)
+        # Using passed values for dist, elev, azim, at
+>       R, t = look_at_view_transform(dist, elev, azim, at=at)
+
+/local/data0/moved_data/pytorch3d/tests/test_cameras.py:195: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/cameras.py:1203: in look_at_view_transform
+    C = camera_position_from_spherical_angles(dist, elev, azim, degrees=degrees, device=device) + at
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+distance = tensor([1.]), elevation = tensor([0.]), azimuth = tensor([0.])
+degrees = True, device = 'cpu'
+
+    def camera_position_from_spherical_angles(distance: float, elevation: float, azimuth: float, degrees: bool=True, device: Device='cpu') -> torch.Tensor:
+>       from .temp import camera_position_from_spherical_angles
+E       ImportError: cannot import name 'camera_position_from_spherical_angles' from 'pytorch3d.renderer.temp' (/local/data0/moved_data/pytorch3d/pytorch3d/renderer/temp.py)
+
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/cameras.py:1087: ImportError
+=============================== warnings summary ===============================
+tests/test_cameras.py::TestCamerasCommon::test_clone
+tests/test_cameras.py::TestCamerasCommon::test_get_camera_center
+tests/test_cameras.py::TestCamerasCommon::test_project_points_screen
+tests/test_cameras.py::TestCamerasCommon::test_unproject_points
+tests/test_cameras.py::TestCamerasCommon::test_view_transform_class_method
+  /local/data0/moved_data/pytorch3d/pytorch3d/renderer/cameras.py:848: PendingDeprecationWarning: SfMOrthographicCameras is deprecated,
+          Use OrthographicCameras instead.
+          SfMOrthographicCameras will be removed in future releases.
+    warnings.warn('SfMOrthographicCameras is deprecated,\n        Use OrthographicCameras instead.\n        SfMOrthographicCameras will be removed in future releases.', PendingDeprecationWarning)
+
+tests/test_cameras.py::TestCamerasCommon::test_clone
+  /local/data0/moved_data/pytorch3d/tests/common_testing.py:85: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+    self.assertNotEqual(tensor1.storage().data_ptr(), tensor2.storage().data_ptr())
+
+tests/test_cameras.py::TestCamerasCommon::test_clone
+tests/test_cameras.py::TestCamerasCommon::test_get_camera_center
+tests/test_cameras.py::TestCamerasCommon::test_project_points_screen
+tests/test_cameras.py::TestCamerasCommon::test_unproject_points
+tests/test_cameras.py::TestCamerasCommon::test_view_transform_class_method
+  /local/data0/moved_data/pytorch3d/pytorch3d/renderer/cameras.py:384: PendingDeprecationWarning: OpenGLPerspectiveCameras is deprecated,
+          Use FoVPerspectiveCameras instead.
+          OpenGLPerspectiveCameras will be removed in future releases.
+    warnings.warn('OpenGLPerspectiveCameras is deprecated,\n        Use FoVPerspectiveCameras instead.\n        OpenGLPerspectiveCameras will be removed in future releases.', PendingDeprecationWarning)
+
+tests/test_cameras.py::TestCamerasCommon::test_clone
+tests/test_cameras.py::TestCamerasCommon::test_get_camera_center
+tests/test_cameras.py::TestCamerasCommon::test_project_points_screen
+tests/test_cameras.py::TestCamerasCommon::test_unproject_points
+tests/test_cameras.py::TestCamerasCommon::test_view_transform_class_method
+  /local/data0/moved_data/pytorch3d/pytorch3d/renderer/cameras.py:561: PendingDeprecationWarning: OpenGLOrthographicCameras is deprecated,
+          Use FoVOrthographicCameras instead.
+          OpenGLOrthographicCameras will be removed in future releases.
+    warnings.warn('OpenGLOrthographicCameras is deprecated,\n        Use FoVOrthographicCameras instead.\n        OpenGLOrthographicCameras will be removed in future releases.', PendingDeprecationWarning)
+
+tests/test_cameras.py::TestCamerasCommon::test_clone
+tests/test_cameras.py::TestCamerasCommon::test_get_camera_center
+tests/test_cameras.py::TestCamerasCommon::test_project_points_screen
+tests/test_cameras.py::TestCamerasCommon::test_unproject_points
+tests/test_cameras.py::TestCamerasCommon::test_view_transform_class_method
+  /local/data0/moved_data/pytorch3d/pytorch3d/renderer/cameras.py:697: PendingDeprecationWarning: SfMPerspectiveCameras is deprecated,
+          Use PerspectiveCameras instead.
+          SfMPerspectiveCameras will be removed in future releases.
+    warnings.warn('SfMPerspectiveCameras is deprecated,\n        Use PerspectiveCameras instead.\n        SfMPerspectiveCameras will be removed in future releases.', PendingDeprecationWarning)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_mixed_scalars
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_python_scalar
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_python_scalar_radians
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_torch_scalar_grads
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_torch_scalars
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_vectors
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_vectors_bad_broadcast
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_vectors_broadcast
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_vectors_mixed_broadcast
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_vectors_mixed_broadcast_grads
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_view_transform_corner_case
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_view_transform_default_values
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_view_transform_from_eye_point_tuple
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_view_transform_non_default_at_position
+================== 14 failed, 51 passed, 21 warnings in 2.32s ==================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 65 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_mixed_scalars PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_python_scalar PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_python_scalar_radians PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_torch_scalar_grads PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_torch_scalars PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_vectors PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_vectors_bad_broadcast PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_vectors_broadcast PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_vectors_mixed_broadcast PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_vectors_mixed_broadcast_grads PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_rotation_input_fail PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_rotation_list_broadcast PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_rotation_python_list PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_rotation_tensor_broadcast PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_rotation_tensor_grad PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_view_transform_corner_case PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_view_transform_default_values PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_view_transform_from_eye_point_tuple PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_view_transform_non_default_at_position PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_view_transform PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCamerasCommon::test_K PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCamerasCommon::test_clone PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCamerasCommon::test_equiv_project_points PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCamerasCommon::test_get_camera_center PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCamerasCommon::test_iterable PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCamerasCommon::test_join_batch_orthographic PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCamerasCommon::test_join_batch_perspective PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCamerasCommon::test_join_cameras_as_batch_errors PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCamerasCommon::test_project_points_screen PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCamerasCommon::test_unproject_points PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCamerasCommon::test_view_transform_class_method PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVPerspectiveProjection::test_camera_class_init PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVPerspectiveProjection::test_get_full_transform PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVPerspectiveProjection::test_getitem PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVPerspectiveProjection::test_perspective PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVPerspectiveProjection::test_perspective_kwargs PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVPerspectiveProjection::test_perspective_mixed_inputs_broadcast PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVPerspectiveProjection::test_perspective_mixed_inputs_grad PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVPerspectiveProjection::test_perspective_type PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVPerspectiveProjection::test_transform_points PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVOrthographicProjection::test_getitem PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVOrthographicProjection::test_orthographic PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVOrthographicProjection::test_orthographic_kwargs PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVOrthographicProjection::test_orthographic_mixed_inputs_broadcast PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVOrthographicProjection::test_orthographic_mixed_inputs_grad PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVOrthographicProjection::test_orthographic_scaled PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVOrthographicProjection::test_perspective_type PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestOrthographicProjection::test_getitem PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestOrthographicProjection::test_orthographic PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestOrthographicProjection::test_orthographic_kwargs PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestOrthographicProjection::test_orthographic_scaled PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestOrthographicProjection::test_perspective_type PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestPerspectiveProjection::test_clone_picklable PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestPerspectiveProjection::test_getitem PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestPerspectiveProjection::test_perspective PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestPerspectiveProjection::test_perspective_kwargs PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestPerspectiveProjection::test_perspective_scaled PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestPerspectiveProjection::test_perspective_type PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFishEyeProjection::test_cuda PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFishEyeProjection::test_distortion_params_set_to_zeors PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFishEyeProjection::test_fisheye_against_perspective_cameras PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFishEyeProjection::test_getitem PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFishEyeProjection::test_project_shape_broadcasts PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFishEyeProjection::test_unhandled_shape PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFishEyeProjection::test_unproject_shape_broadcasts PASSED
+
+=============================== warnings summary ===============================
+tests/test_cameras.py::TestCamerasCommon::test_clone
+tests/test_cameras.py::TestCamerasCommon::test_get_camera_center
+tests/test_cameras.py::TestCamerasCommon::test_project_points_screen
+tests/test_cameras.py::TestCamerasCommon::test_unproject_points
+tests/test_cameras.py::TestCamerasCommon::test_view_transform_class_method
+  /local/data0/moved_data/pytorch3d/pytorch3d/renderer/cameras.py:1248: PendingDeprecationWarning: SfMOrthographicCameras is deprecated,
+          Use OrthographicCameras instead.
+          SfMOrthographicCameras will be removed in future releases.
+    warnings.warn(
+
+tests/test_cameras.py::TestCamerasCommon::test_clone
+  /local/data0/moved_data/pytorch3d/tests/common_testing.py:85: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+    self.assertNotEqual(tensor1.storage().data_ptr(), tensor2.storage().data_ptr())
+
+tests/test_cameras.py::TestCamerasCommon::test_clone
+tests/test_cameras.py::TestCamerasCommon::test_get_camera_center
+tests/test_cameras.py::TestCamerasCommon::test_project_points_screen
+tests/test_cameras.py::TestCamerasCommon::test_unproject_points
+tests/test_cameras.py::TestCamerasCommon::test_view_transform_class_method
+  /local/data0/moved_data/pytorch3d/pytorch3d/renderer/cameras.py:482: PendingDeprecationWarning: OpenGLPerspectiveCameras is deprecated,
+          Use FoVPerspectiveCameras instead.
+          OpenGLPerspectiveCameras will be removed in future releases.
+    warnings.warn(
+
+tests/test_cameras.py::TestCamerasCommon::test_clone
+tests/test_cameras.py::TestCamerasCommon::test_get_camera_center
+tests/test_cameras.py::TestCamerasCommon::test_project_points_screen
+tests/test_cameras.py::TestCamerasCommon::test_unproject_points
+tests/test_cameras.py::TestCamerasCommon::test_view_transform_class_method
+  /local/data0/moved_data/pytorch3d/pytorch3d/renderer/cameras.py:768: PendingDeprecationWarning: OpenGLOrthographicCameras is deprecated,
+          Use FoVOrthographicCameras instead.
+          OpenGLOrthographicCameras will be removed in future releases.
+    warnings.warn(
+
+tests/test_cameras.py::TestCamerasCommon::test_clone
+tests/test_cameras.py::TestCamerasCommon::test_get_camera_center
+tests/test_cameras.py::TestCamerasCommon::test_project_points_screen
+tests/test_cameras.py::TestCamerasCommon::test_unproject_points
+tests/test_cameras.py::TestCamerasCommon::test_view_transform_class_method
+  /local/data0/moved_data/pytorch3d/pytorch3d/renderer/cameras.py:1010: PendingDeprecationWarning: SfMPerspectiveCameras is deprecated,
+          Use PerspectiveCameras instead.
+          SfMPerspectiveCameras will be removed in future releases.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================= 65 passed, 21 warnings in 1.86s ========================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 65 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_mixed_scalars PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_python_scalar PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_python_scalar_radians PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_torch_scalar_grads PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_torch_scalars PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_vectors PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_vectors_bad_broadcast PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_vectors_broadcast PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_vectors_mixed_broadcast PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_camera_position_from_angles_vectors_mixed_broadcast_grads PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_rotation_input_fail PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_rotation_list_broadcast PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_rotation_python_list PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_rotation_tensor_broadcast PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_rotation_tensor_grad PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_view_transform_corner_case PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_view_transform_default_values PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_view_transform_from_eye_point_tuple PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_look_at_view_transform_non_default_at_position PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCameraHelpers::test_view_transform PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCamerasCommon::test_K PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCamerasCommon::test_clone PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCamerasCommon::test_equiv_project_points PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCamerasCommon::test_get_camera_center PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCamerasCommon::test_iterable PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCamerasCommon::test_join_batch_orthographic PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCamerasCommon::test_join_batch_perspective PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCamerasCommon::test_join_cameras_as_batch_errors PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCamerasCommon::test_project_points_screen PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCamerasCommon::test_unproject_points PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestCamerasCommon::test_view_transform_class_method PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVPerspectiveProjection::test_camera_class_init PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVPerspectiveProjection::test_get_full_transform PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVPerspectiveProjection::test_getitem PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVPerspectiveProjection::test_perspective PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVPerspectiveProjection::test_perspective_kwargs PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVPerspectiveProjection::test_perspective_mixed_inputs_broadcast PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVPerspectiveProjection::test_perspective_mixed_inputs_grad PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVPerspectiveProjection::test_perspective_type PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVPerspectiveProjection::test_transform_points PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVOrthographicProjection::test_getitem PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVOrthographicProjection::test_orthographic PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVOrthographicProjection::test_orthographic_kwargs PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVOrthographicProjection::test_orthographic_mixed_inputs_broadcast PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVOrthographicProjection::test_orthographic_mixed_inputs_grad PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVOrthographicProjection::test_orthographic_scaled PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFoVOrthographicProjection::test_perspective_type PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestOrthographicProjection::test_getitem PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestOrthographicProjection::test_orthographic PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestOrthographicProjection::test_orthographic_kwargs PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestOrthographicProjection::test_orthographic_scaled PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestOrthographicProjection::test_perspective_type PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestPerspectiveProjection::test_clone_picklable PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestPerspectiveProjection::test_getitem PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestPerspectiveProjection::test_perspective PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestPerspectiveProjection::test_perspective_kwargs PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestPerspectiveProjection::test_perspective_scaled PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestPerspectiveProjection::test_perspective_type PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFishEyeProjection::test_cuda PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFishEyeProjection::test_distortion_params_set_to_zeors PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFishEyeProjection::test_fisheye_against_perspective_cameras PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFishEyeProjection::test_getitem PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFishEyeProjection::test_project_shape_broadcasts PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFishEyeProjection::test_unhandled_shape PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cameras.py::TestFishEyeProjection::test_unproject_shape_broadcasts PASSED
+
+=============================== warnings summary ===============================
+tests/test_cameras.py::TestCamerasCommon::test_clone
+tests/test_cameras.py::TestCamerasCommon::test_get_camera_center
+tests/test_cameras.py::TestCamerasCommon::test_project_points_screen
+tests/test_cameras.py::TestCamerasCommon::test_unproject_points
+tests/test_cameras.py::TestCamerasCommon::test_view_transform_class_method
+  /local/data0/moved_data/pytorch3d/pytorch3d/renderer/cameras.py:1248: PendingDeprecationWarning: SfMOrthographicCameras is deprecated,
+          Use OrthographicCameras instead.
+          SfMOrthographicCameras will be removed in future releases.
+    warnings.warn(
+
+tests/test_cameras.py::TestCamerasCommon::test_clone
+  /local/data0/moved_data/pytorch3d/tests/common_testing.py:85: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+    self.assertNotEqual(tensor1.storage().data_ptr(), tensor2.storage().data_ptr())
+
+tests/test_cameras.py::TestCamerasCommon::test_clone
+tests/test_cameras.py::TestCamerasCommon::test_get_camera_center
+tests/test_cameras.py::TestCamerasCommon::test_project_points_screen
+tests/test_cameras.py::TestCamerasCommon::test_unproject_points
+tests/test_cameras.py::TestCamerasCommon::test_view_transform_class_method
+  /local/data0/moved_data/pytorch3d/pytorch3d/renderer/cameras.py:482: PendingDeprecationWarning: OpenGLPerspectiveCameras is deprecated,
+          Use FoVPerspectiveCameras instead.
+          OpenGLPerspectiveCameras will be removed in future releases.
+    warnings.warn(
+
+tests/test_cameras.py::TestCamerasCommon::test_clone
+tests/test_cameras.py::TestCamerasCommon::test_get_camera_center
+tests/test_cameras.py::TestCamerasCommon::test_project_points_screen
+tests/test_cameras.py::TestCamerasCommon::test_unproject_points
+tests/test_cameras.py::TestCamerasCommon::test_view_transform_class_method
+  /local/data0/moved_data/pytorch3d/pytorch3d/renderer/cameras.py:768: PendingDeprecationWarning: OpenGLOrthographicCameras is deprecated,
+          Use FoVOrthographicCameras instead.
+          OpenGLOrthographicCameras will be removed in future releases.
+    warnings.warn(
+
+tests/test_cameras.py::TestCamerasCommon::test_clone
+tests/test_cameras.py::TestCamerasCommon::test_get_camera_center
+tests/test_cameras.py::TestCamerasCommon::test_project_points_screen
+tests/test_cameras.py::TestCamerasCommon::test_unproject_points
+tests/test_cameras.py::TestCamerasCommon::test_view_transform_class_method
+  /local/data0/moved_data/pytorch3d/pytorch3d/renderer/cameras.py:1010: PendingDeprecationWarning: SfMPerspectiveCameras is deprecated,
+          Use PerspectiveCameras instead.
+          SfMPerspectiveCameras will be removed in future releases.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================= 65 passed, 21 warnings in 1.86s ========================

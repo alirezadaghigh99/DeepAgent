@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Generate a Python function called elastic_transform that applies elastic transformations to a tensor image. The function takes in parameters such as img (PIL Image or Tensor), displacement (Tensor), interpolation (InterpolationMode), and fill (optional list of floats) and returns a transformed tensor image. The displacement field is used to generate random offsets for each pixel based on alpha and sigma values, controlling the strength and smoothness of the displacements. The function can be used to randomly transform the morphology of objects in images and create a see-through-water-like effect. The output is the transformed tensor image after applying elastic transformations.
+
+ ground Truth:torchvision/transforms/functional.py
+
+ repo:vision
+
+ function:elastic_transform
+ 
+ test_cases:test/test_transforms_tensor.py::test_elastic_transform

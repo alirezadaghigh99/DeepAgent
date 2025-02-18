@@ -1,0 +1,23 @@
+stage: Pre-Post processing
+task: Segmentation
+data: Image
+
+prompt:
+Generate a Python function called hinton that draws a Hinton diagram for visualizing a weight matrix. The function takes in the following parameters:
+
+- matrix: array-like, the matrix that you want to visualize using the Hinton diagram.
+- max_weight: float, the maximum value of the matrix. If set to None, the value will be calculated using the maximum from the matrix.
+- ax: object, a Matplotlib Axes instance. If set to None, a new Axes instance will be generated.
+- add_legend: boolean, a flag to determine whether to add a legend to the diagram. Defaults to True.
+
+The function returns a Matplotlib Axes instance. The Hinton diagram is drawn by representing each element in the matrix as a square, with the color indicating the sign of the value and the size indicating the magnitude relative to the max_weight.
+
+
+
+ ground Truth:neupy/plots/hinton.py
+
+ repo:neupy
+
+ function:hinton
+ 
+ test_cases:

@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: Segmentation
+data: Image
+
+prompt:
+Generate a Python function called create_tiles that takes in a list of NumPy arrays called images, an optional grid size as a tuple, an optional single tile size as a tuple, a tile scaling method as a string (either "min", "max", or "avg"), a tile padding color as a tuple, a tile margin value, and a tile margin color as a tuple. The function returns a NumPy array of generated image tiles based on the input parameters. If the list of images is empty, a ValueError is raised. The function resizes the images, establishes the grid size, and generates the tiles accordingly. If the number of images exceeds the grid size, a ValueError is raised.
+
+ ground Truth:inference/core/utils/drawing.py
+
+ repo:inference
+
+ function:create_tiles
+ 
+ test_cases:tests/inference/unit_tests/core/utils/test_drawing.py

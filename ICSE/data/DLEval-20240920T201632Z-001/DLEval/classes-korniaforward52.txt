@@ -1,0 +1,54 @@
+stage: Image
+task: 
+data: Inference
+
+prompt:
+**Prompt:**
+
+Write a Python function `forward` for the `LoFTR` class that processes two input images (`image0`, `image1`) and optional masks (`mask0`, `mask1`) to find matching keypoints and confidence scores. The function returns a dictionary with `keypoints0`, `keypoints1`, `confidence`, and `batch_indexes`.
+
+Key steps:
+1. Extract coarse and fine features from the images using the CNN backbone.
+2. Apply positional encoding and perform coarse-level matching with `loftr_coarse`.
+3. Optionally use resized masks to handle padded regions during matching.
+4. Refine correspondences with fine-level matching using `loftr_fine`.
+
+Static variables:
+- `hw0_i`, `hw1_i`: Original image dimensions.
+- `hw0_c`, `hw1_c`, `hw0_f`, `hw1_f`: Coarse and fine feature dimensions.
+
+Ensure correct handling of image sizes and masks throughout the process.
+
+Class structure and necessary functions:
+
+```python
+class LoFTR(Module):
+    def __init__(self, pretrained: Optional[str] = "outdoor", config: dict[str, Any] = default_cfg) -> None:
+        super().__init__()
+        self.config = config
+        self.backbone = build_backbone(config)
+        self.pos_encoding = PositionEncodingSine(config["coarse"]["d_model"])
+        self.loftr_coarse = LocalFeatureTransformer(config["coarse"])
+        self.coarse_matching = CoarseMatching(config["match_coarse"])
+        self.fine_preprocess = FinePreprocess(config)
+        self.loftr_fine = LocalFeatureTransformer(config["fine"])
+        self.fine_matching = FineMatching()
+        self.pretrained = pretrained
+        if pretrained is not None:
+            pretrained_dict = torch.hub.load_state_dict_from_url(urls[pretrained], map_location=map_location_to_cpu)
+            self.load_state_dict(pretrained_dict["state_dict"])
+        self.eval()
+
+    def forward(self, data: dict[str, Tensor]) -> dict[str, Tensor]:
+        pass  # This is the function to be implemented.
+```
+
+ ground Truth:kornia/feature/loftr/loftr.py
+
+ repo:kornia
+
+ function:forward
+ 
+ class:LoFTR
+ 
+ test_cases:tests/feature/test_loftr.py::TestLoFTR

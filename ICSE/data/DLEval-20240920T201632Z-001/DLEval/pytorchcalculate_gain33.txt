@@ -1,0 +1,43 @@
+stage: Model Construction
+task: 
+data: 
+
+prompt:
+Return the recommended gain value for the given nonlinearity function.
+
+    The values are as follows:
+
+    ================= ====================================================
+    nonlinearity      gain
+    ================= ====================================================
+    Linear / Identity :math:`1`
+    Conv{1,2,3}D      :math:`1`
+    Sigmoid           :math:`1`
+    Tanh              :math:`\frac{5}{3}`
+    ReLU              :math:`\sqrt{2}`
+    Leaky Relu        :math:`\sqrt{\frac{2}{1 + \text{negative\_slope}^2}}`
+    SELU              :math:`\frac{3}{4}`
+    ================= ====================================================
+
+    .. warning::
+        In order to implement `Self-Normalizing Neural Networks`_ ,
+        you should use ``nonlinearity='linear'`` instead of ``nonlinearity='selu'``.
+        This gives the initial weights a variance of ``1 / N``,
+        which is necessary to induce a stable fixed point in the forward pass.
+        In contrast, the default gain for ``SELU`` sacrifices the normalization
+        effect for more stable gradient flow in rectangular layers.
+
+    Args:
+        nonlinearity: the non-linear function (`nn.functional` name)
+        param: optional parameter for the non-linear function
+
+    Examples:
+        >>> gain = nn.init.calculate_gain('leaky_relu', 0.2)  # leaky_relu with negative_slope=0.2
+
+ ground Truth:torch/nn/init.py
+
+ repo:pytorch
+
+ function:calculate_gain
+ 
+ test_cases: test/nn/test_init.py::TestNNInit

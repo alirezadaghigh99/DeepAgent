@@ -1,0 +1,14 @@
+stage: Training
+task: 
+data: 
+
+prompt:
+Create a Python function called device that returns the current device based on the current distributed configuration. If there is no distributed configuration or if it is using torch native gloo, it will return torch.device("cpu"). If it is using torch native nccl or horovod, it will return torch.device("cuda:local_rank"). If it is using XLA distributed configuration, it will return torch.device("xla:index"). The function does not take any inputs and the output is a torch.device object.
+
+ ground Truth:ignite/distributed/utils.py
+
+ repo:ignite
+
+ function:device
+ 
+ test_cases:tests/ignite/distributed/utils/test_native.py

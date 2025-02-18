@@ -1,0 +1,24 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+"Write a python function _perform_padding that Pads a given image to be dividable by 16.
+
+    Args:
+        image: Image of the shape :math:`(*, 3, H, W)`.
+
+    Returns:
+        image_padded: Padded image of the shape :math:`(*, 3, H_{new}, W_{new})`.
+        h_pad: Padded pixels along the horizontal axis.
+      w_pad: Padded pixels along the vertical axis."
+      def _perform_padding(image: Tensor) -> tuple[Tensor, int, int]:
+        # complete
+
+ ground Truth:kornia/enhance/jpeg.py#L375
+
+ repo:kornia
+
+ function:_perform_padding
+ 
+ test_cases:tests/enhance/test_jpeg.py::TestDiffJPEG

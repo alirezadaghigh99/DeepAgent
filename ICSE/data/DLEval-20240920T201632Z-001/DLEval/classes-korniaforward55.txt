@@ -1,0 +1,32 @@
+stage: Image
+task: 
+data: Inference
+
+prompt:
+
+
+**Task:** Write the `forward` method for the `Rotate` class. This method should rotate the input tensor anti-clockwise around its center. The method should return a tensor of the same shape as the input.
+
+
+**Class Context:**
+```python
+class Rotate(nn.Module):
+    def forward(self, input: torch.Tensor) -> torch.Tensor:
+        # Implement this function
+```
+
+**Requirements:**
+- The method should take the input tensor and rotate it by the specified angle.
+- The rotation should be performed around the provided center, or the center should be calculated if not provided.
+- Use the specified interpolation mode (`'bilinear'` or `'nearest'`), padding mode (`'zeros'`, `'border'`, or `'reflection'`), and alignment flag (`align_corners`).
+
+
+ ground Truth:kornia/geometry/transform/affwarp.py
+
+ repo:kornia
+
+ function:forward
+ 
+ class:Rotate
+ 
+ test_cases:tests/geometry/transform/test_affine.py::TestRotate

@@ -1,0 +1,20 @@
+stage: Training
+task: 
+data: Text
+
+prompt:
+Create a Python function called resplit_mwt that takes in three parameters: tokens (a list of lists of strings), pipeline (a Stanza pipeline containing tokenize and mwt processors), and keep_tokens (a boolean indicating whether to enforce old token boundaries). 
+
+The function uses the tokenize processor and the mwt processor in the pipeline to resplit tokens into multi-word tokens (MWT). It first checks if the pipeline contains the necessary processors, then sets up batches for tokenization. 
+
+After predicting token boundaries, the function optionally modifies the results based on the keep_tokens parameter. It then decodes the predictions and processes the document using the mwt processor. 
+
+The function returns a Document object with the tokens and words annotated.
+
+ ground Truth:stanza/models/mwt/utils.py
+
+ repo:stanza
+
+ function:resplit_mwt
+ 
+ test_cases:stanza/tests/mwt/test_utils.py

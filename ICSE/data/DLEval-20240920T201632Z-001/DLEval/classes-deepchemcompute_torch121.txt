@@ -1,0 +1,21 @@
+stage: 
+task: Classification
+data: Evaluation/metrics
+
+prompt:
+Generate a Python function called `_create_pytorch_loss` that calculates the sigmoid cross entropy loss between output logits and labels using PyTorch. The inputs are tensors of logits and labels with shapes `(batch_size)` or `(batch_size, tasks)`, and the output is a tensor of loss values.
+
+```python
+class SigmoidCrossEntropy(Loss):
+    def _create_pytorch_loss(self):
+```
+
+ ground Truth:deepchem/models/losses.py
+
+ repo:deepchem
+
+ function:_create_pytorch_loss
+ 
+ class:SigmoidCrossEntropy
+ 
+ test_cases:deepchem/models/tests/test_losses.py::TestLosses

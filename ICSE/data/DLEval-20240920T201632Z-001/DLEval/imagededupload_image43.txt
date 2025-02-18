@@ -1,0 +1,22 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Generate a Python function called load_image that loads an image from a specified path and returns an array version of the image. The function takes the following arguments:
+- image_file: Path to the image file.
+- target_size: Size to resize the input image to (optional).
+- grayscale: A boolean indicating whether to grayscale the image (optional).
+- img_formats: List of allowed image formats that can be loaded.
+
+The function first opens the image file using the PIL library and checks if the image format is allowed based on the img_formats argument. If the format is not allowed, a warning is logged and None is returned. If the format is allowed, the function preprocesses the image by resizing and grayscaling it if specified, and then returns the processed image as an array.
+
+If any exceptions occur during the image loading process, a warning is logged and None is returned.
+
+ ground Truth:imagededup/utils/image_utils.py
+
+ repo:imagededup
+
+ function:load_image
+ 
+ test_cases:tests/test_image_utils.py

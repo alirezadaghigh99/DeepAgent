@@ -1,0 +1,27 @@
+stage: 
+task: 
+data: pre-post process
+
+prompt:
+Generate a Python `__init__` function for the `Rotate` class that initializes a 3D rotation transformation using a rotation matrix. The input tensor `R` has a shape of `(3, 3)` or `(N, 3, 3)`. The function checks the orthogonality of `R` within a specified tolerance. The dtype is `torch.float32` by default, and the device can be specified. The output is the initialized `Rotate` object.
+
+```python
+class Rotate(Transform3d):
+    def __init__(
+        self,
+        R: torch.Tensor,
+        dtype: torch.dtype = torch.float32,
+        device: Optional[Device] = None,
+        orthogonal_tol: float = 1e-5,
+    ) -> None:
+```
+
+ ground Truth:pytorch3d/transforms/transform3d.py
+
+ repo:pytorch3d
+
+ function:__init__
+ 
+ class:Rotate
+ 
+ test_cases:tests/test_transforms.py::TestRotate

@@ -1,0 +1,557 @@
+output file:
+processed_kornia_jpeg_encode50.json
+function:
+_jpeg_encode
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_module[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_smoke[cpu-float32] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_non_batch_param[cpu-float32] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_cardinality[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_cardinality[cpu-float32] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_smoke_not_div_by_16[cpu-float32] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_smoke_not_div_by_16[cpu-float32]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_multi_batch[cpu-float32]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_module_with_param[cpu-float32]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_custom_qt[cpu-float32]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_non_batch_inp[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_multi_batch[cpu-float32] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_gradcheck[cpu]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_non_batch_inp[cpu-float32] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_non_batch_param[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_gradcheck[cpu] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_module_with_param[cpu-float32] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_custom_qt[cpu-float32] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_module[cpu-float32] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_smoke[cpu-float32]'}
+
+All Test Cases On Generated code:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'jit', 'inductor', 'openxla', 'tvm', 'cudagraphs', 'onnxrt', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 11 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_smoke[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_smoke_not_div_by_16[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_multi_batch[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_custom_qt[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_non_batch_param[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_non_batch_inp[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_exception[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_cardinality[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_module[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_module_with_param[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_gradcheck[cpu] FAILED
+
+=================================== FAILURES ===================================
+_____________________ TestDiffJPEG.test_smoke[cpu-float32] _____________________
+
+self = <test_jpeg.TestDiffJPEG object at 0x742433908fa0>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_smoke(self, device, dtype) -> None:
+        """This test standard usage."""
+        B, H, W = 2, 32, 32
+        img = torch.rand(B, 3, H, W, device=device, dtype=dtype)
+        jpeg_quality = torch.randint(low=0, high=100, size=(B,), device=device, dtype=dtype)
+>       img_jpeg = kornia.enhance.jpeg_codec_differentiable(img, jpeg_quality)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py:15: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:340: in jpeg_codec_differentiable
+    y_encoded, cb_encoded, cr_encoded = _jpeg_encode(image_rgb=image_rgb, jpeg_quality=jpeg_quality, quantization_table_c=quantization_table_c, quantization_table_y=quantization_table_y)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:166: in _jpeg_encode
+    return _jpeg_encode(image_rgb, jpeg_quality, quantization_table_y, quantization_table_c)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:38: in _jpeg_encode
+    y_blocks = block_split(y)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+image = tensor([[[ 0.3735,  0.2842,  0.0604,  ..., -0.0495,  0.3225,  0.5638],
+         [ 0.1857,  0.5172,  0.2788,  ..., -0.0...70,  0.1077,  ...,  0.3169,  0.2720,  0.4037],
+         [ 0.1426,  0.3270,  0.1431,  ...,  0.4319,  0.0204,  0.1743]]])
+block_size = 8
+
+    def block_split(image, block_size=8):
+>       B, C, H, W = image.shape
+E       ValueError: not enough values to unpack (expected 4, got 3)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:23: ValueError
+______________ TestDiffJPEG.test_smoke_not_div_by_16[cpu-float32] ______________
+
+self = <test_jpeg.TestDiffJPEG object at 0x742433909390>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_smoke_not_div_by_16(self, device, dtype) -> None:
+        """This test standard usage."""
+        B, H, W = 2, 33, 33
+        img = torch.rand(B, 3, H, W, device=device, dtype=dtype)
+        jpeg_quality = torch.randint(low=0, high=100, size=(B,), device=device, dtype=dtype)
+>       img_jpeg = kornia.enhance.jpeg_codec_differentiable(img, jpeg_quality)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:340: in jpeg_codec_differentiable
+    y_encoded, cb_encoded, cr_encoded = _jpeg_encode(image_rgb=image_rgb, jpeg_quality=jpeg_quality, quantization_table_c=quantization_table_c, quantization_table_y=quantization_table_y)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:166: in _jpeg_encode
+    return _jpeg_encode(image_rgb, jpeg_quality, quantization_table_y, quantization_table_c)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:38: in _jpeg_encode
+    y_blocks = block_split(y)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+image = tensor([[[0.2281, 0.3471, 0.1614,  ..., 0.3002, 0.3002, 0.3002],
+         [0.7246, 0.0091, 0.5094,  ..., 0.0464, 0.046...4832, 0.2933, 0.3610,  ..., 0.5977, 0.5977, 0.5977],
+         [0.4832, 0.2933, 0.3610,  ..., 0.5977, 0.5977, 0.5977]]])
+block_size = 8
+
+    def block_split(image, block_size=8):
+>       B, C, H, W = image.shape
+E       ValueError: not enough values to unpack (expected 4, got 3)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:23: ValueError
+__________________ TestDiffJPEG.test_multi_batch[cpu-float32] __________________
+
+self = <test_jpeg.TestDiffJPEG object at 0x7424339096c0>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_multi_batch(self, device, dtype) -> None:
+        """Here we test two batch dimensions."""
+        B, H, W = 4, 32, 32
+        img = torch.rand(B, B, 3, H, W, device=device, dtype=dtype)
+        jpeg_quality = torch.randint(low=0, high=100, size=(1,), device=device, dtype=dtype)
+        qt_y = torch.randint(low=1, high=255, size=(B * B, 8, 8), device=device, dtype=dtype)
+        qt_c = torch.randint(low=1, high=255, size=(B * B, 8, 8), device=device, dtype=dtype)
+>       img_jpeg = kornia.enhance.jpeg_codec_differentiable(img, jpeg_quality, qt_y, qt_c)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py:35: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:340: in jpeg_codec_differentiable
+    y_encoded, cb_encoded, cr_encoded = _jpeg_encode(image_rgb=image_rgb, jpeg_quality=jpeg_quality, quantization_table_c=quantization_table_c, quantization_table_y=quantization_table_y)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:166: in _jpeg_encode
+    return _jpeg_encode(image_rgb, jpeg_quality, quantization_table_y, quantization_table_c)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:38: in _jpeg_encode
+    y_blocks = block_split(y)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+image = tensor([[[ 0.4391,  0.5225,  0.2401,  ...,  0.3268, -0.0089,  0.5709],
+         [ 0.5415,  0.2922,  0.1769,  ...,  0.2...32,  0.1275,  ...,  0.2923,  0.0983,  0.4446],
+         [ 0.2340,  0.5250,  0.4790,  ...,  0.1952,  0.0370,  0.2916]]])
+block_size = 8
+
+    def block_split(image, block_size=8):
+>       B, C, H, W = image.shape
+E       ValueError: not enough values to unpack (expected 4, got 3)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:23: ValueError
+___________________ TestDiffJPEG.test_custom_qt[cpu-float32] ___________________
+
+self = <test_jpeg.TestDiffJPEG object at 0x7424339099f0>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_custom_qt(self, device, dtype) -> None:
+        """Here we test if we can handle custom quantization tables."""
+        B, H, W = 4, 32, 32
+        img = torch.rand(B, 3, H, W, device=device, dtype=dtype)
+        jpeg_quality = torch.randint(low=0, high=100, size=(B,), device=device, dtype=dtype)
+        qt_y = torch.randint(low=1, high=255, size=(B, 8, 8), device=device, dtype=dtype)
+        qt_c = torch.randint(low=1, high=255, size=(B, 8, 8), device=device, dtype=dtype)
+>       img_jpeg = kornia.enhance.jpeg_codec_differentiable(img, jpeg_quality, qt_y, qt_c)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py:46: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:340: in jpeg_codec_differentiable
+    y_encoded, cb_encoded, cr_encoded = _jpeg_encode(image_rgb=image_rgb, jpeg_quality=jpeg_quality, quantization_table_c=quantization_table_c, quantization_table_y=quantization_table_y)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:166: in _jpeg_encode
+    return _jpeg_encode(image_rgb, jpeg_quality, quantization_table_y, quantization_table_c)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:38: in _jpeg_encode
+    y_blocks = block_split(y)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+image = tensor([[[ 0.1123,  0.5997,  0.6550,  ...,  0.3532,  0.6184, -0.0209],
+         [ 0.4332,  0.5155,  0.5375,  ...,  0.3...57,  0.4241,  ...,  0.4539,  0.2664,  0.0261],
+         [ 0.5233,  0.1774,  0.3509,  ...,  0.1270, -0.0450,  0.4941]]])
+block_size = 8
+
+    def block_split(image, block_size=8):
+>       B, C, H, W = image.shape
+E       ValueError: not enough values to unpack (expected 4, got 3)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:23: ValueError
+________________ TestDiffJPEG.test_non_batch_param[cpu-float32] ________________
+
+self = <test_jpeg.TestDiffJPEG object at 0x742433909d20>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_non_batch_param(self, device, dtype) -> None:
+        """Here we test if we can handle non-batched JPEG parameters (JPEG quality and QT's)."""
+        B, H, W = 3, 32, 32
+        img = torch.rand(B, 3, H, W, device=device, dtype=dtype)
+        jpeg_quality = torch.randint(low=0, high=100, size=(1,), device=device, dtype=dtype)
+        qt_y = torch.randint(low=1, high=255, size=(1, 8, 8), device=device, dtype=dtype)
+        qt_c = torch.randint(low=1, high=255, size=(1, 8, 8), device=device, dtype=dtype)
+>       img_jpeg = kornia.enhance.jpeg_codec_differentiable(img, jpeg_quality, qt_y, qt_c)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py:57: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:340: in jpeg_codec_differentiable
+    y_encoded, cb_encoded, cr_encoded = _jpeg_encode(image_rgb=image_rgb, jpeg_quality=jpeg_quality, quantization_table_c=quantization_table_c, quantization_table_y=quantization_table_y)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:166: in _jpeg_encode
+    return _jpeg_encode(image_rgb, jpeg_quality, quantization_table_y, quantization_table_c)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:38: in _jpeg_encode
+    y_blocks = block_split(y)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+image = tensor([[[ 0.0786,  0.3587,  0.5578,  ...,  0.2139,  0.3659,  0.3696],
+         [ 0.3978,  0.1585, -0.0491,  ...,  0.5...50,  0.3174,  ...,  0.5252,  0.2734,  0.4884],
+         [ 0.5937,  0.1439,  0.4849,  ...,  0.3002,  0.2815,  0.3140]]])
+block_size = 8
+
+    def block_split(image, block_size=8):
+>       B, C, H, W = image.shape
+E       ValueError: not enough values to unpack (expected 4, got 3)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:23: ValueError
+_________________ TestDiffJPEG.test_non_batch_inp[cpu-float32] _________________
+
+self = <test_jpeg.TestDiffJPEG object at 0x74243390a050>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_non_batch_inp(self, device, dtype) -> None:
+        """Here we test if we can handle non-batched inputs (input image, JPEG quality, and QT's)."""
+        H, W = 32, 32
+        img = torch.rand(3, H, W, device=device, dtype=dtype)
+        jpeg_quality = torch.randint(low=0, high=100, size=(1,), device=device, dtype=dtype)
+        qt_y = torch.randint(low=1, high=255, size=(8, 8), device=device, dtype=dtype)
+        qt_c = torch.randint(low=1, high=255, size=(8, 8), device=device, dtype=dtype)
+>       img_jpeg = kornia.enhance.jpeg_codec_differentiable(img, jpeg_quality, qt_y, qt_c)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py:68: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:340: in jpeg_codec_differentiable
+    y_encoded, cb_encoded, cr_encoded = _jpeg_encode(image_rgb=image_rgb, jpeg_quality=jpeg_quality, quantization_table_c=quantization_table_c, quantization_table_y=quantization_table_y)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:166: in _jpeg_encode
+    return _jpeg_encode(image_rgb, jpeg_quality, quantization_table_y, quantization_table_c)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:38: in _jpeg_encode
+    y_blocks = block_split(y)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+image = tensor([[[ 0.4685, -0.0250,  0.3259,  ...,  0.1548,  0.0856,  0.6979],
+         [-0.0416,  0.2638,  0.3031,  ...,  0.3...06,  0.2960,  ...,  0.1217,  0.3614,  0.1263],
+         [ 0.2662,  0.3327,  0.3686,  ...,  0.4707,  0.2430,  0.2833]]])
+block_size = 8
+
+    def block_split(image, block_size=8):
+>       B, C, H, W = image.shape
+E       ValueError: not enough values to unpack (expected 4, got 3)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:23: ValueError
+__________________ TestDiffJPEG.test_cardinality[cpu-float32] __________________
+
+self = <test_jpeg.TestDiffJPEG object at 0x74243390a6b0>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_cardinality(self, device, dtype) -> None:
+        B, H, W = 1, 16, 16
+        img = torch.zeros(B, 3, H, W, device=device, dtype=dtype)
+        img[..., 4:-4, 4:-4] = 1.0
+        jpeg_quality = torch.tensor([2.0], device=device, dtype=dtype)
+>       img_jpeg = kornia.enhance.jpeg_codec_differentiable(img, jpeg_quality)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py:143: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:340: in jpeg_codec_differentiable
+    y_encoded, cb_encoded, cr_encoded = _jpeg_encode(image_rgb=image_rgb, jpeg_quality=jpeg_quality, quantization_table_c=quantization_table_c, quantization_table_y=quantization_table_y)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:166: in _jpeg_encode
+    return _jpeg_encode(image_rgb, jpeg_quality, quantization_table_y, quantization_table_c)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:38: in _jpeg_encode
+    y_blocks = block_split(y)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+image = tensor([[[0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000,
+          0.0000, 0.0000, 0.0000, 0.0000, 0....0, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000,
+          0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000]]])
+block_size = 8
+
+    def block_split(image, block_size=8):
+>       B, C, H, W = image.shape
+E       ValueError: not enough values to unpack (expected 4, got 3)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:23: ValueError
+____________________ TestDiffJPEG.test_module[cpu-float32] _____________________
+
+self = <test_jpeg.TestDiffJPEG object at 0x74243390a9e0>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_module(self, device, dtype) -> None:
+        B, H, W = 4, 16, 16
+        img = torch.rand(B, 3, H, W, device=device, dtype=dtype)
+        jpeg_quality = torch.randint(low=0, high=100, size=(B,), device=device, dtype=dtype)
+        qt_y = torch.randint(low=1, high=255, size=(B, 8, 8), device=device, dtype=dtype)
+        qt_c = torch.randint(low=1, high=255, size=(B, 8, 8), device=device, dtype=dtype)
+        diff_jpeg_module = kornia.enhance.JPEGCodecDifferentiable(qt_y, qt_c)
+>       img_jpeg = diff_jpeg_module(img, jpeg_quality)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py:1033: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:274: in __call__
+    _output_image = decorated_forward(*inputs, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:63: in wrapper
+    tensor_outputs = func(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1736: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1747: in _call_impl
+    return forward_call(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:432: in forward
+    image_rgb_jpeg: Tensor = jpeg_codec_differentiable(image_rgb, jpeg_quality=jpeg_quality, quantization_table_c=self.quantization_table_c, quantization_table_y=self.quantization_table_y)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:340: in jpeg_codec_differentiable
+    y_encoded, cb_encoded, cr_encoded = _jpeg_encode(image_rgb=image_rgb, jpeg_quality=jpeg_quality, quantization_table_c=quantization_table_c, quantization_table_y=quantization_table_y)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:166: in _jpeg_encode
+    return _jpeg_encode(image_rgb, jpeg_quality, quantization_table_y, quantization_table_c)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:38: in _jpeg_encode
+    y_blocks = block_split(y)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+image = tensor([[[ 0.3920,  0.2815,  0.2690,  ...,  0.4248,  0.5267,  0.4902],
+         [ 0.1264,  0.2378,  0.5536,  ...,  0.4...04,  0.1108,  ...,  0.3004,  0.5108,  0.2776],
+         [ 0.1485,  0.3696,  0.1084,  ...,  0.0620,  0.1955,  0.2492]]])
+block_size = 8
+
+    def block_split(image, block_size=8):
+>       B, C, H, W = image.shape
+E       ValueError: not enough values to unpack (expected 4, got 3)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:23: ValueError
+_______________ TestDiffJPEG.test_module_with_param[cpu-float32] _______________
+
+self = <test_jpeg.TestDiffJPEG object at 0x742433909ea0>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_module_with_param(self, device, dtype) -> None:
+        B, H, W = 4, 16, 16
+        img = torch.rand(B, 3, H, W, device=device, dtype=dtype)
+        jpeg_quality = torch.randint(low=0, high=100, size=(B,), device=device, dtype=dtype)
+        qt_y = torch.nn.Parameter(torch.randint(low=1, high=255, size=(B, 8, 8), device=device, dtype=dtype))
+        qt_c = torch.nn.Parameter(torch.randint(low=1, high=255, size=(B, 8, 8), device=device, dtype=dtype))
+        diff_jpeg_module = kornia.enhance.JPEGCodecDifferentiable(qt_y, qt_c)
+>       img_jpeg = diff_jpeg_module(img, jpeg_quality)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py:1044: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:274: in __call__
+    _output_image = decorated_forward(*inputs, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:63: in wrapper
+    tensor_outputs = func(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1736: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1747: in _call_impl
+    return forward_call(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:432: in forward
+    image_rgb_jpeg: Tensor = jpeg_codec_differentiable(image_rgb, jpeg_quality=jpeg_quality, quantization_table_c=self.quantization_table_c, quantization_table_y=self.quantization_table_y)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:340: in jpeg_codec_differentiable
+    y_encoded, cb_encoded, cr_encoded = _jpeg_encode(image_rgb=image_rgb, jpeg_quality=jpeg_quality, quantization_table_c=quantization_table_c, quantization_table_y=quantization_table_y)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:166: in _jpeg_encode
+    return _jpeg_encode(image_rgb, jpeg_quality, quantization_table_y, quantization_table_c)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:38: in _jpeg_encode
+    y_blocks = block_split(y)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+image = tensor([[[ 0.0988,  0.4079,  0.5561,  ...,  0.3371,  0.4423,  0.5575],
+         [ 0.4999,  0.3298,  0.3301,  ...,  0.1...40,  0.2808,  ...,  0.1737, -0.1192,  0.1327],
+         [ 0.5807,  0.2931,  0.6152,  ...,  0.2160,  0.3617,  0.0558]]])
+block_size = 8
+
+    def block_split(image, block_size=8):
+>       B, C, H, W = image.shape
+E       ValueError: not enough values to unpack (expected 4, got 3)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:23: ValueError
+_______________________ TestDiffJPEG.test_gradcheck[cpu] _______________________
+
+self = <test_jpeg.TestDiffJPEG object at 0x74243390a950>
+device = device(type='cpu')
+
+    def test_gradcheck(self, device) -> None:
+        """We test that the gradient matches the gradient of the reference implementation."""
+        B, H, W = 1, 16, 16
+        img = torch.zeros(B, 3, H, W, device=device, dtype=torch.float)
+        img[..., 0, 4:-4, 4:-4] = 1.0
+        img[..., 1, 4:-4, 4:-4] = 0.5
+        img[..., 2, 4:-4, 4:-4] = 0.5
+        img.requires_grad = True
+        jpeg_quality = torch.tensor([10.0], device=device, dtype=torch.float, requires_grad=True)
+>       img_jpeg = kornia.enhance.jpeg_codec_differentiable(img, jpeg_quality)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py:1058: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:340: in jpeg_codec_differentiable
+    y_encoded, cb_encoded, cr_encoded = _jpeg_encode(image_rgb=image_rgb, jpeg_quality=jpeg_quality, quantization_table_c=quantization_table_c, quantization_table_y=quantization_table_y)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/jpeg.py:166: in _jpeg_encode
+    return _jpeg_encode(image_rgb, jpeg_quality, quantization_table_y, quantization_table_c)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:38: in _jpeg_encode
+    y_blocks = block_split(y)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+image = tensor([[[0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000,
+          0.0000, 0.0000, 0.0000, 0.0000, 0...., 0.0000,
+          0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000]]],
+       grad_fn=<SliceBackward0>)
+block_size = 8
+
+    def block_split(image, block_size=8):
+>       B, C, H, W = image.shape
+E       ValueError: not enough values to unpack (expected 4, got 3)
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/enhance/temp.py:23: ValueError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_smoke[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_smoke_not_div_by_16[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_multi_batch[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_custom_qt[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_non_batch_param[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_non_batch_inp[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_cardinality[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_module[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_module_with_param[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_gradcheck[cpu]
+========================= 10 failed, 1 passed in 0.51s =========================
+
+
+Final Test Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'tvm', 'jit', 'inductor', 'onnxrt', 'cudagraphs', 'openxla', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 11 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_smoke[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_smoke_not_div_by_16[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_multi_batch[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_custom_qt[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_non_batch_param[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_non_batch_inp[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_exception[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_cardinality[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_module[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_module_with_param[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_gradcheck[cpu] PASSED
+
+=============================== warnings summary ===============================
+tests/enhance/test_jpeg.py::TestDiffJPEG::test_smoke[cpu-float32]
+  /local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/functional.py:534: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3595.)
+    return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 11 passed, 1 warning in 0.21s =========================
+
+
+Initial Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'cudagraphs', 'inductor', 'onnxrt', 'jit', 'openxla', 'tvm', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 11 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_smoke[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_smoke_not_div_by_16[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_multi_batch[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_custom_qt[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_non_batch_param[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_non_batch_inp[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_exception[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_cardinality[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_module[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_module_with_param[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/enhance/test_jpeg.py::TestDiffJPEG::test_gradcheck[cpu] PASSED
+
+=============================== warnings summary ===============================
+tests/enhance/test_jpeg.py::TestDiffJPEG::test_smoke[cpu-float32]
+  /local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/functional.py:534: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3595.)
+    return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 11 passed, 1 warning in 0.24s =========================

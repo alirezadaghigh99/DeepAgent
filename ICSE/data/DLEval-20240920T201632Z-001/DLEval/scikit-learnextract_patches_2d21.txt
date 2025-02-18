@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Generate a Python function called extract_patches_2d that reshapes a 2D image into a collection of patches. The function takes in parameters including the original image data, patch size, maximum number of patches to extract, and random state for sampling. It returns an array of patches extracted from the image, with the shape of the patches specified by the patch height, patch width, and number of channels in the image. The function also includes examples demonstrating how to use it with sample image data.
+
+ ground Truth:sklearn/feature_extraction/image.py
+
+ repo:scikit-learn
+
+ function:extract_patches_2d
+ 
+ test_cases:sklearn/feature_extraction/tests/test_image.py

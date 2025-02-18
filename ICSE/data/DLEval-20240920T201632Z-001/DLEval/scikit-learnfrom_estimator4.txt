@@ -1,0 +1,14 @@
+stage: Evaluating&Metrics
+task: 
+data: Table
+
+prompt:
+Generate a Python function called from_estimator that plots a calibration curve using a binary classifier and data. The function takes in parameters such as estimator (fitted classifier), X (input values), y (binary target values), n_bins (number of bins for discretization), strategy (bin width strategy), pos_label (positive class label), name (label for curve), ref_line (whether to plot a reference line), ax (matplotlib axes), and additional keyword arguments. The function returns a CalibrationDisplay object that stores computed values. 
+
+ ground Truth:sklearn/calibration.py
+
+ repo:scikit-learn
+
+ function:from_estimator
+ 
+ test_cases:sklearn/tests/test_calibration.py

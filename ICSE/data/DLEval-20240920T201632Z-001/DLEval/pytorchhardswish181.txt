@@ -1,0 +1,21 @@
+stage: Pre-Post processing
+task: 
+data: 
+
+prompt:
+Create a Python function called hardswish that applies the hardswish function element-wise to a given input tensor. The function follows the implementation described in the paper "Searching for MobileNetV3". The hardswish function is defined as follows:
+- Returns 0 if x is less than or equal to -3
+- Returns x if x is greater than or equal to +3
+- Returns x * (x + 3) / 6 otherwise
+
+The input to the function is a PyTorch tensor called input, and there is an optional boolean parameter called inplace which defaults to False. The output of the function is also a PyTorch tensor.
+
+
+ ground Truth:torch/nn/functional.py
+
+ repo:pytorch
+
+ function:hardswish
+ 
+ test_cases:test
+/test_unary_ufuncs.py

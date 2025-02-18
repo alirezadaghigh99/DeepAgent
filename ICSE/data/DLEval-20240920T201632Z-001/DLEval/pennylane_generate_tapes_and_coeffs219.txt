@@ -1,0 +1,16 @@
+stage: Model Construction
+task: 
+data: 
+
+prompt:
+Generate a Python function called `_generate_tapes_and_coeffs` that computes the modified tapes and coefficients required to compute the pulse generator derivative of a tape with respect to an indicated trainable parameter. The function takes in parameters `tape` (a `QuantumTape`), `idx` (an integer referring to the index of the trainable parameter), `atol` (a float representing the absolute tolerance), and `cache` (a dictionary for caching). 
+
+The function returns a list of modified tapes to be added to the pulse generator differentiation tapes, a tuple containing the start and end indices into the total list of tapes as well as the coefficients needed for contraction, and the updated cache dictionary. If modified tapes were already created for another parameter, the function returns an empty list.
+
+ ground Truth:pennylane/gradients/pulse_gradient_odegen.py
+
+ repo:pennylane
+
+ function:_generate_tapes_and_coeffs
+ 
+ test_cases:tests/gradients/core/test_pulse_odegen.py

@@ -1,0 +1,16 @@
+stage: Inference
+task: 
+data: Image
+
+prompt:
+Generate a Python method called `_get_cnn_features_batch` that takes in parameters `image_dir` of type `PurePath`, `recursive` of type `Optional[bool]` with a default value of `False`, and `num_workers` of type `int` with a default value of `0`. The method returns a dictionary mapping filenames to corresponding numpy arrays of CNN encodings.
+
+The method generates CNN encodings for all images in a given directory of images. It initializes a data loader, processes the images using a model, and creates a dictionary mapping filenames to their respective encodings. The method handles bad images and provides logging information throughout the process.
+
+ ground Truth:imagededup/methods/cnn.py
+
+ repo:imagededup
+
+ function:_get_cnn_features_batch
+ 
+ test_cases:tests/test_cnn.py

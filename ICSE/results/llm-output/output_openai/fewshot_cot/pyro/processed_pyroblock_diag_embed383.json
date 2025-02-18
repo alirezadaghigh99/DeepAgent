@@ -1,0 +1,11 @@
+{
+    "result": "Error",
+    "prompt": "Complete the following function:\ndef block_diag_embed(mat):\n    \"\"\"\n    Takes a tensor of shape (..., B, M, N) and returns a block diagonal tensor\n    of shape (..., B x M, B x N).\n\n    :param torch.Tensor mat: an input tensor with 3 or more dimensions\n    :returns torch.Tensor: a block diagonal tensor with dimension `m.dim() - 1`\n    \"\"\"",
+    "function_name": "block_diag_embed",
+    "ground_truth": "pyro/ops/tensor_utils.py",
+    "test": "tests/ops/test_tensor_utils.py::test_block_diag",
+    "class": "",
+    "stage": "Pre-Post processing",
+    "task": "",
+    "data": "tabular"
+}

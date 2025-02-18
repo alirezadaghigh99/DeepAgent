@@ -1,0 +1,24 @@
+stage: Evaluating&Metrics
+task: Classification
+data: image
+
+prompt:
+Generate a python function that Given ground truth dictionary and retrieved dictionary, return per class precision, recall and f1 score. Class 1 is
+    assigned to duplicate file pairs while class 0 is for non-duplicate file pairs.
+
+    Args:
+        ground_truth: A dictionary representing ground truth with filenames as key and a list of duplicate filenames
+        as value.
+        retrieved: A dictionary representing retrieved duplicates with filenames as key and a list of retrieved
+        duplicate filenames as value.
+
+    Returns:
+        Dictionary of precision, recall and f1 score for both classes.
+
+ ground Truth:imagededup/handlers/metrics/classification.py#L69
+
+ repo:imagededup
+
+ function:classification_metrics
+ 
+ test_cases:tests/test_evaluator.py

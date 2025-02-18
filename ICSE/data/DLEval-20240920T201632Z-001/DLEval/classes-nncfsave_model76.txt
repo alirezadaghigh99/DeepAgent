@@ -1,0 +1,31 @@
+stage: 
+task: 
+data: Inference
+
+prompt:
+Generate a Python function `save_model` for the class `DDPG` that saves the weights of the actor and critic networks to a specified output directory. The function should save the actor's state dictionary as `actor.pkl` and the critic's state dictionary as `critic.pkl` within the given output directory.
+
+Class structure:
+
+```python
+class DDPG:
+    def __init__(self, nb_states, nb_actions, iter_number: int = None, hparam_override: dict = None):
+        self.actor = None  # actor network
+        self.critic = None  # critic network
+        pass
+
+    def save_model(self, output):
+        # Implement the function as described in the prompt
+```
+
+This function will save the model's actor and critic networks' weights to the specified output directory, ensuring that the models can be reloaded later.
+
+ ground Truth:nncf/torch/automl/agent/ddpg/ddpg.py
+
+ repo:nncf
+
+ function:save_model
+ 
+ test_cases:tests/torch/automl/test_ddpg.py
+ 
+ class:DDPG

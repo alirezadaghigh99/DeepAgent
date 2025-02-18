@@ -1,0 +1,173 @@
+output file:
+processed_pytorch3dvert_align90.json
+function:
+vert_align
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/pytorch3d/tests/test_vert_align.py::TestVertAlign::test_vert_align_with_pointclouds FAILED', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_vert_align.py::TestVertAlign::test_vert_align_with_meshes FAILED', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_vert_align.py::TestVertAlign::test_vert_align_with_verts FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_vert_align.py::TestVertAlign::test_vert_align_with_pointclouds', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_vert_align.py::TestVertAlign::test_vert_align_with_meshes', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_vert_align.py::TestVertAlign::test_vert_align_with_verts'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 3 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_vert_align.py::TestVertAlign::test_vert_align_with_meshes FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_vert_align.py::TestVertAlign::test_vert_align_with_pointclouds FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_vert_align.py::TestVertAlign::test_vert_align_with_verts FAILED
+
+=================================== FAILURES ===================================
+__________________ TestVertAlign.test_vert_align_with_meshes ___________________
+
+self = <tests.test_vert_align.TestVertAlign testMethod=test_vert_align_with_meshes>
+
+    def test_vert_align_with_meshes(self):
+        """
+        Test vert align vs naive implementation with meshes.
+        """
+        meshes = TestVertAlign.init_meshes(10, 1000, 3000)
+        feats = TestVertAlign.init_feats(10, 256)
+    
+        # feats in list
+>       out = vert_align(feats, meshes, return_packed=True)
+
+/local/data0/moved_data/pytorch3d/tests/test_vert_align.py:115: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/pytorch3d/ops/vert_align.py:6: in vert_align
+    return vert_align(feats, verts, return_packed, interp_mode, padding_mode, align_corners)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+feats = [tensor([[[[1.4166e-01, 6.3603e-01, 3.4971e-01,  ..., 4.4116e-01,
+           6.7897e-01, 7.7422e-01],
+          [7.073...        [4.6370e-01, 2.8138e-01, 7.5145e-01,  ..., 1.1972e-01,
+           9.5743e-01, 4.4080e-01]]]], device='cuda:0')]
+verts = <bound method Meshes.verts_padded of <pytorch3d.structures.meshes.Meshes object at 0x79d84e1ec9a0>>
+return_packed = True, interp_mode = 'bilinear', padding_mode = 'zeros'
+align_corners = True
+
+    def vert_align(feats, verts, return_packed=False, interp_mode='bilinear', padding_mode='zeros', align_corners=True):
+        if isinstance(feats, list):
+            for f in feats:
+                if not isinstance(f, torch.Tensor) or f.dim() != 4:
+                    raise ValueError('Each element in feats must be a tensor of shape (N, C, H, W).')
+        elif isinstance(feats, torch.Tensor):
+            if feats.dim() != 4:
+                raise ValueError('feats must be a tensor of shape (N, C, H, W).')
+        else:
+            raise ValueError('feats must be a tensor or a list of tensors.')
+        if isinstance(verts, torch.Tensor):
+            if verts.dim() != 3 or verts.size(2) != 3:
+                raise ValueError('verts must be a tensor of shape (N, V, 3).')
+        elif hasattr(verts, 'verts_padded') or hasattr(verts, 'points_padded'):
+            verts = verts.verts_padded if hasattr(verts, 'verts_padded') else verts.points_padded
+>           if verts.dim() != 3 or verts.size(2) != 3:
+E           AttributeError: 'function' object has no attribute 'dim'
+
+/local/data0/moved_data/pytorch3d/pytorch3d/ops/temp.py:21: AttributeError
+________________ TestVertAlign.test_vert_align_with_pointclouds ________________
+
+self = <tests.test_vert_align.TestVertAlign testMethod=test_vert_align_with_pointclouds>
+
+    def test_vert_align_with_pointclouds(self):
+        """
+        Test vert align vs naive implementation with meshes.
+        """
+        pointclouds = TestVertAlign.init_pointclouds(10, 1000)
+        feats = TestVertAlign.init_feats(10, 256)
+    
+        # feats in list
+>       out = vert_align(feats, pointclouds, return_packed=True)
+
+/local/data0/moved_data/pytorch3d/tests/test_vert_align.py:132: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/pytorch3d/ops/vert_align.py:6: in vert_align
+    return vert_align(feats, verts, return_packed, interp_mode, padding_mode, align_corners)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+feats = [tensor([[[[0.7402, 0.4340, 0.5641,  ..., 0.5564, 0.1984, 0.3877],
+          [0.0515, 0.0568, 0.3634,  ..., 0.8118, 0....        [1.7379e-02, 1.4854e-01, 1.3633e-02,  ..., 4.4707e-01,
+           1.0624e-01, 8.0634e-01]]]], device='cuda:0')]
+verts = <bound method Pointclouds.points_padded of <pytorch3d.structures.pointclouds.Pointclouds object at 0x79d84d9f5040>>
+return_packed = True, interp_mode = 'bilinear', padding_mode = 'zeros'
+align_corners = True
+
+    def vert_align(feats, verts, return_packed=False, interp_mode='bilinear', padding_mode='zeros', align_corners=True):
+        if isinstance(feats, list):
+            for f in feats:
+                if not isinstance(f, torch.Tensor) or f.dim() != 4:
+                    raise ValueError('Each element in feats must be a tensor of shape (N, C, H, W).')
+        elif isinstance(feats, torch.Tensor):
+            if feats.dim() != 4:
+                raise ValueError('feats must be a tensor of shape (N, C, H, W).')
+        else:
+            raise ValueError('feats must be a tensor or a list of tensors.')
+        if isinstance(verts, torch.Tensor):
+            if verts.dim() != 3 or verts.size(2) != 3:
+                raise ValueError('verts must be a tensor of shape (N, V, 3).')
+        elif hasattr(verts, 'verts_padded') or hasattr(verts, 'points_padded'):
+            verts = verts.verts_padded if hasattr(verts, 'verts_padded') else verts.points_padded
+>           if verts.dim() != 3 or verts.size(2) != 3:
+E           AttributeError: 'function' object has no attribute 'dim'
+
+/local/data0/moved_data/pytorch3d/pytorch3d/ops/temp.py:21: AttributeError
+___________________ TestVertAlign.test_vert_align_with_verts ___________________
+
+self = <tests.test_vert_align.TestVertAlign testMethod=test_vert_align_with_verts>
+
+    def test_vert_align_with_verts(self):
+        """
+        Test vert align vs naive implementation with verts as tensor.
+        """
+        feats = TestVertAlign.init_feats(10, 256)
+        verts = (
+            torch.rand((10, 100, 3), dtype=torch.float32, device=feats[0].device) * 2.0
+            - 1.0
+        )
+    
+        # feats in list
+        out = vert_align(feats, verts, return_packed=True)
+        naive_out = TestVertAlign.vert_align_naive(feats, verts, return_packed=True)
+>       self.assertClose(out, naive_out)
+
+/local/data0/moved_data/pytorch3d/tests/test_vert_align.py:158: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/tests/common_testing.py:173: in assertClose
+    self.assertEqual(np.shape(input), np.shape(other))
+E   AssertionError: () != torch.Size([1000, 512])
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_vert_align.py::TestVertAlign::test_vert_align_with_meshes
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_vert_align.py::TestVertAlign::test_vert_align_with_pointclouds
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_vert_align.py::TestVertAlign::test_vert_align_with_verts
+============================== 3 failed in 1.32s ===============================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 3 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_vert_align.py::TestVertAlign::test_vert_align_with_meshes PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_vert_align.py::TestVertAlign::test_vert_align_with_pointclouds PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_vert_align.py::TestVertAlign::test_vert_align_with_verts PASSED
+
+============================== 3 passed in 1.29s ===============================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 3 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_vert_align.py::TestVertAlign::test_vert_align_with_meshes PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_vert_align.py::TestVertAlign::test_vert_align_with_pointclouds PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_vert_align.py::TestVertAlign::test_vert_align_with_verts PASSED
+
+============================== 3 passed in 1.28s ===============================

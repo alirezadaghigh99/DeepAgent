@@ -1,0 +1,68 @@
+stage: 
+task: Classification
+data: Inference
+
+prompt:
+Generate a Python function `predict_proba` for the class `CleanLearning` that predicts class probabilities using the wrapped classifier `clf`. The function should:
+Predict class probabilities ``P(true label=k)`` using your wrapped classifier `clf`.
+        Works just like ``clf.predict_proba()``.
+
+        Parameters
+        ----------
+        X : np.ndarray or DatasetLike
+          Test data in the same format expected by your wrapped classifier.
+
+        Returns
+        -------
+        pred_probs : np.ndarray
+          ``(N x K)`` array of predicted class probabilities, one row for each test example.
+1. Accept variable arguments and keyword arguments.
+2. If the default classifier is used and input data `X` is provided, ensure `X` is two-dimensional.
+3. Call `clf.predict_proba` with the processed arguments and return the predicted class probabilities.
+
+```python
+class CleanLearning(BaseEstimator):
+    def __init__(
+        self,
+        clf=None,
+        *,
+        seed=None,
+        cv_n_folds=5,
+        converge_latent_estimates=False,
+        pulearning=None,
+        find_label_issues_kwargs={},
+        label_quality_scores_kwargs={},
+        verbose=False,
+        low_memory=False,
+    ):
+        self.clf = clf
+        self.seed = seed
+        self.cv_n_folds = cv_n_folds
+        self.converge_latent_estimates = converge_latent_estimates
+        self.pulearning = pulearning
+        self.find_label_issues_kwargs = find_label_issues_kwargs
+        self.label_quality_scores_kwargs = label_quality_scores_kwargs
+        self.verbose = verbose
+        self.label_issues_df = None
+        self.label_issues_mask = None
+        self.sample_weight = None
+        self.confident_joint = None
+        self.py = None
+        self.ps = None
+        self.num_classes = None
+        self.noise_matrix = None
+        self.inverse_noise_matrix = None
+        self.clf_kwargs = None
+        self.clf_final_kwargs = None
+        self.low_memory = low_memory
+```
+
+ ground Truth:cleanlab/classification.py
+
+ repo:cleanlab
+
+ function:predict_proba
+ 
+ class:CleanLearning
+ 
+ test_cases:tests/test_classification.py

@@ -1,0 +1,18 @@
+stage: Pre-Post processing
+task: Classification
+data: Table
+
+prompt:
+Generate a Python function called `_grid_from_X` that generates a grid of points based on the percentiles of a given dataset `X`. The function takes four parameters: `X` (array-like data), `percentiles` (tuple of float values), `is_categorical` (list of boolean values), and `grid_resolution` (integer). 
+
+The function calculates a grid by creating a cartesian product between the columns of `values`, where each column consists of `grid_resolution` equally-spaced points between the percentiles of the corresponding column in `X`. If `grid_resolution` is greater than the number of unique values in a column of `X` or if the feature is categorical (based on `is_categorical`), then the unique values will be used instead.
+
+The function returns two outputs: `grid`, which is an ndarray containing a value for each feature at each point in the grid, and `values`, which is a list of 1d ndarrays representing the values used to create the grid. The size of each array in `values` is either `grid_resolution` or the number of unique values in the corresponding column of `X`, whichever is smaller.
+
+ ground Truth:sklearn/inspection/_partial_dependence.py
+
+ repo:scikit-learn
+
+ function:_grid_from_X
+ 
+ test_cases:sklearn/inspection/tests/test_partial_dependence.py

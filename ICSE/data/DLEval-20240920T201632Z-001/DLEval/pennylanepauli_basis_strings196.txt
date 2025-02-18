@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: 
+
+prompt:
+Generate a Python function called pauli_basis_strings that computes all n-qubit Pauli words except "I"*num_wires, corresponding to the Pauli basis of the Lie algebra su(N). The input is an integer num_wires representing the number of wires or letters per word. The output is a list of strings representing all Pauli words on num_wires qubits, except for the identity. The function returns the Pauli words in a specific order, either lexicographically or based on the change in terms acting on the qubits. The function also provides examples of its usage, such as pauli_basis_strings(1) returning ['X', 'Y', 'Z'] and len(pauli_basis_strings(3)) returning 63.
+
+ ground Truth:pennylane/ops/qubit/special_unitary.py
+
+ repo:pennylane
+
+ function:pauli_basis_strings
+  
+ test_cases:tests/ops/qubit/test_special_unitary.py

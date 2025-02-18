@@ -1,0 +1,36 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Create a Python function named look_at_view_transform1 that computes a rotation and translation matrix for applying a 'Look At' transformation from world coordinates to view coordinates. This function should allow for customization of the camera's position and orientation with respect to an object in 3D space.
+
+Function Overview:
+
+Inputs:
+
+dist (float or tensor, default 1.0): The distance of the camera from the object.
+elev (float or tensor, default 0.0): The elevation angle, representing the angle between the camera-object vector and the horizontal plane (in degrees or radians).
+azim (float or tensor, default 0.0): The azimuth angle, representing the angle between the projected camera-object vector on the horizontal plane and a reference vector.
+degrees (bool, default True): A flag indicating whether the elevation and azimuth angles are provided in degrees or radians.
+eye (optional, sequence or tensor, default None): The camera's position in world coordinates, overriding dist, elev, and azim if provided.
+at (tuple, default ((0, 0, 0),)): The object's position in world coordinates.
+up (tuple, default ((0, 1, 0),)): The direction of the up axis in the world coordinate system.
+device (str, default "cpu"): The device on which to perform the computation (e.g., 'cpu' or 'cuda').
+Outputs:
+
+A tuple containing:
+R (tensor): The rotation matrix aligning the points with the camera.
+T (tensor): The translation matrix aligning the points with the camera.
+Error Handling:
+
+Ensure that the inputs are tensors and have compatible shapes by broadcasting them.
+Handle cases where the eye parameter is provided, overriding the calculated camera position based on dist, elev, and azim.
+
+ ground Truth:pytorch3d/renderer/cameras.py
+
+ repo:pytorch3d
+
+ function:look_at_view_transform
+ 
+ test_cases:tests/test_camera_utils.py

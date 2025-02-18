@@ -1,0 +1,28 @@
+stage: 
+task: 
+data: Training
+
+prompt:
+Generate a Python function `update_delta_decay_factor` for the class `DDPG` that updates the delta decay factor based on the number of training episodes. The function adjusts the decay factor according to specific calibrated values for episodes below 1000, a linear interpolation for episodes between 1000 and 3000, and sets a constant decay factor for episodes beyond 3000. The function raises an assertion error if the number of training episodes is less than or equal to zero.
+
+Class structure:
+
+```python
+class DDPG:
+    def __init__(self, nb_states, nb_actions, iter_number: int = None, hparam_override: dict = None):
+        self.delta_decay = None  # Initialize the delta decay factor
+        pass
+
+    def update_delta_decay_factor(self, num_train_episode):
+        # Implement the function as described in the prompt
+```
+
+ ground Truth:nncf/torch/automl/agent/ddpg/ddpg.py
+
+ repo:nncf
+
+ function:update_delta
+ 
+ test_cases:tests/torch/automl/test_ddpg.py::test_select_action
+ 
+ class:DDPG

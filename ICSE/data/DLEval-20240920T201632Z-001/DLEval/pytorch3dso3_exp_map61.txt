@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: Detection
+data: image
+
+prompt:
+Create a Python function called so3_exp_map that takes in a torch.Tensor log_rot representing a batch of logarithmic representations of rotation matrices and an optional float eps set to 0.0001. The function converts the logarithmic representations to a batch of 3x3 rotation matrices using the Rodrigues formula. The input log_rot should be a batch of vectors of shape (minibatch, 3) and the output should be a batch of rotation matrices of shape (minibatch, 3, 3). The function handles a singularity around log(R) = 0 by clamping it with the eps argument. If the input log_rot is of incorrect shape, a ValueError is raised. The function returns the batch of rotation matrices after conversion. Reference to Rodrigues' rotation formula is provided for further information.
+
+ ground Truth:pytorch3d/transforms/so3.py
+
+ repo:pytorch3d
+
+ function:so3_exp_map
+ 
+  test_cases:tests/test_so3.py

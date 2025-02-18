@@ -1,0 +1,22 @@
+stage: Model Construction
+task: 
+data: 
+
+prompt:
+Complete the following function for Approximating cauchy kernel in 1d..
+def cauchy_kernel1d(sigma: int) -> tf.Tensor:
+    """
+
+    :param sigma: int, defining standard deviation of kernel.
+    :return: shape = (dim, )
+    """
+    assert sigma > 0
+
+
+ ground Truth:deepreg/loss/kernel.py
+
+ repo:DeepReg
+
+ function:cauchy_kernel1d
+ 
+ test_cases:test/unit/test_loss_kernel.py::test_cauchy_kernel1d

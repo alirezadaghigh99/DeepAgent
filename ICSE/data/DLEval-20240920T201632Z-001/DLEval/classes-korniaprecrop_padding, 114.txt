@@ -1,0 +1,21 @@
+stage: Image
+task: Segmentation
+data: pre-post process
+
+prompt:
+Generate a Python function called `precrop_padding` that applies optional padding to a 3D volume tensor before cropping. The input is a tensor and an optional dictionary of flags. The output is the padded tensor.
+
+```python
+class RandomCrop3D(GeometricAugmentationBase3D):
+    def precrop_padding(self, input: Tensor, flags: Optional[Dict[str, Any]] = None) -> Tensor:
+```
+
+ ground Truth:kornia/augmentation/_3d/geometric/crop.py
+
+ repo:kornia
+
+ function:precrop_padding 
+ 
+ class:RandomCrop3D
+ 
+ test_cases:tests/geometry/test_depth_wrapper.py

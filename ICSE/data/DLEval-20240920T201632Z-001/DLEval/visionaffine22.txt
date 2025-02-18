@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Create a Python function called affine that applies an affine transformation on an image while keeping the image center invariant. The function takes in parameters such as img (PIL Image or Tensor), angle (rotation angle in degrees), translate (horizontal and vertical translations), scale (overall scale), shear (shear angle values), interpolation (desired interpolation mode), fill (pixel fill value for areas outside the transformed image), and center (optional center of rotation). The function returns the transformed image as a PIL Image or Tensor.
+
+ ground Truth:torchvision/transforms/_functional_pil.py
+
+ repo:vision
+
+ function:affine
+ 
+ test_cases:test/test_transforms_tensor.py::test_random_affine_shear

@@ -1,0 +1,16 @@
+stage: Evaluating&Metrics
+task: 
+data: Image
+
+prompt:
+Generate a Python function called left_jacobian that computes the left Jacobian of So3. The input is a tensor called vec of shape (B, 3) where B is the batch size. The output is a tensor of shape (B, 3, 3) representing the left Jacobian matrix. The function uses the input tensor to calculate the left Jacobian matrix using specific mathematical operations
+
+ ground Truth:kornia/geometry/liegroup/so3.py
+
+ repo:kornia
+
+ function:left_jacobian
+ 
+ test_cases:tests/geometry/liegroup/test_so3.py::TestSo3::test_left_jacobian
+ 
+ class:So3

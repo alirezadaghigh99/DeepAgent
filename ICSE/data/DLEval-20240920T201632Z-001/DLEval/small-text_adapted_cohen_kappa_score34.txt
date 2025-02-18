@@ -1,0 +1,16 @@
+stage: Evaluating&Metrics
+task: Regression
+data: Table
+
+prompt:
+Create a Python function called _adapted_cohen_kappa_score that extends Cohen's kappa by handling the special case of perfect agreement, preventing a division by zero error. 
+def _adapted_cohen_kappa_score(y1, y2, *, labels=None, weights=None, sample_weight=None):
+
+
+ ground Truth:small_text/stopping_criteria/kappa.py
+
+ repo:small-text
+
+ function:_adapted_cohen_kappa_score
+ 
+ test_cases:tests/unit/small_text/stopping_criteria/test_kappa.py::TestAdaptedCohenKappScore

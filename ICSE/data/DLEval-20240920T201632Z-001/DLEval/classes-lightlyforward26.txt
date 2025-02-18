@@ -1,0 +1,31 @@
+stage: Image
+task: 
+data: Training
+
+prompt:
+Generate a Python method `forward` for the `NTXentLoss` class that computes the contrastive cross-entropy loss based on the output projections of two sets of transformed images. The method should normalize the outputs, handle negative samples from the memory bank or within the batch, and calculate the loss using cosine similarity and cross-entropy. The method should return the computed loss.
+
+Class structure:
+
+```python
+class NTXentLoss(MemoryBankModule):
+    def __init__(self, temperature: float = 0.5, memory_bank_size: Union[int, Sequence[int]] = 0, gather_distributed: bool = False):
+        self.temperature = temperature
+        self.gather_distributed = gather_distributed
+        self.cross_entropy = nn.CrossEntropyLoss(reduction="mean")
+        self.eps = 1e-8
+        pass
+
+    def forward(self, out0: torch.Tensor, out1: torch.Tensor) -> torch.Tensor:
+        # Implement the function as described in the prompt
+```
+
+ ground Truth:lightly/loss/ntx_ent_loss.py
+
+ repo:lightly
+
+ function:forward
+ 
+ test_cases:tests/loss/test_NTXentLoss.py
+ 
+ class:NTXentLoss

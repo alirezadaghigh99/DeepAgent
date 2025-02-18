@@ -1,0 +1,14 @@
+stage: Evaluating&Metrics
+task: Detection
+data: Image
+
+prompt:
+Generate a Python function called _get_min_pred_prob that takes in a list of NumPy arrays called predictions. The function returns a float value which is the minimum prediction probability out of all the predictions in the input list. The function first initializes a list called pred_probs with a value of 1.0 to avoid calling np.min on an empty array. It then iterates through each prediction in the input list, extracts the last column of each class prediction, and appends it to the pred_probs list. Finally, the function calculates the minimum value in the pred_probs list using np.min and returns it as the output.
+
+ ground Truth:cleanlab/object_detection/rank.py
+
+ repo:cleanlab
+
+ function:_get_min_pred_prob
+ 
+ test_cases:tests/test_object_detection.py

@@ -1,0 +1,698 @@
+output file:
+processed_classes-korniaforward61.json
+function:
+forward
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_averaging_micro[cpu-float32] FAILED [ 38%]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_weight[cpu-float32-micro]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_all_zeros[cpu-float32-None] FAILED [ 23%]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_module[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_weight[cpu-float32-micro] FAILED [ 46%]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_averaging_macro[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_all_zeros[cpu-float32--100] FAILED [ 15%]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_ignore_index[cpu-float32-255]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_ignore_index[cpu-float32--100] FAILED [ 69%]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_module[cpu-float32] FAILED [100%]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_ignore_index[cpu-float32-255] FAILED [ 76%]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_weight[cpu-float32-macro]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_averaging_macro[cpu-float32] FAILED [ 61%]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_ignore_index[cpu-float32--100]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_averaging_micro[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_weight[cpu-float32-macro] FAILED [ 53%]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_all_zeros[cpu-float32-None]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_all_zeros[cpu-float32--100]'}
+
+All Test Cases On Generated code:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python3
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'openxla', 'jit', 'inductor', 'cudagraphs', 'tvm', None, 'onnxrt'}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 13 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_smoke[cpu-float32] PASSED [  7%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_all_zeros[cpu-float32--100] FAILED [ 15%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_all_zeros[cpu-float32-None] FAILED [ 23%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_exception FAILED [ 30%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_averaging_micro[cpu-float32] FAILED [ 38%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_weight[cpu-float32-micro] FAILED [ 46%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_weight[cpu-float32-macro] FAILED [ 53%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_averaging_macro[cpu-float32] FAILED [ 61%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_ignore_index[cpu-float32--100] FAILED [ 69%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_ignore_index[cpu-float32-255] FAILED [ 76%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_gradcheck[cpu] PASSED [ 84%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_dynamo[cpu-float32-inductor] PASSED [ 92%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_module[cpu-float32] FAILED [100%]
+
+=================================== FAILURES ===================================
+________________ TestDiceLoss.test_all_zeros[cpu-float32--100] _________________
+
+self = <test_dice.TestDiceLoss object at 0x78fe7eb29d80>
+device = device(type='cpu'), dtype = torch.float32, ignore_index = -100
+
+    @pytest.mark.parametrize("ignore_index", [-100, None])
+    def test_all_zeros(self, device, dtype, ignore_index):
+        num_classes = 3
+        logits = torch.zeros(2, num_classes, 1, 2, device=device, dtype=dtype)
+        logits[:, 0] = 10.0
+        logits[:, 1] = 1.0
+        logits[:, 2] = 1.0
+        labels = torch.zeros(2, 1, 2, device=device, dtype=torch.int64)
+    
+        criterion = kornia.losses.DiceLoss(ignore_index=ignore_index)
+        loss = criterion(logits, labels)
+>       self.assert_close(loss, torch.zeros_like(loss), rtol=1e-3, atol=1e-3)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:106: in assert_close
+    return assert_close(actual, expected, rtol=rtol, atol=atol)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+actual = tensor(0.6667), expected = tensor(0.), rtol = 0.001, atol = 0.001
+kwargs = {}
+
+    def assert_close(
+        actual: Tensor, expected: Tensor, *, rtol: Optional[float] = None, atol: Optional[float] = None, **kwargs: Any
+    ) -> None:
+        if rtol is None and atol is None:
+            # `torch.testing.assert_close` used different default tolerances than `torch.testing.assert_allclose`.
+            # TODO: remove this special handling as soon as https://github.com/kornia/kornia/issues/1134 is resolved
+            #  Basically, this whole wrapper function can be removed and `torch.testing.assert_close` can be used
+            #  directly.
+            rtol, atol = _default_tolerances(actual, expected)
+    
+>       return _assert_close(
+            actual,
+            expected,
+            rtol=rtol,
+            atol=atol,
+            # this is the default value for torch>=1.10, but not for torch==1.9
+            # TODO: remove this if kornia relies on torch>=1.10
+            check_stride=False,
+            equal_nan=False,
+            **kwargs,
+        )
+E       AssertionError: Scalars are not close!
+E       
+E       Expected 0.0 but got 0.6666808128356934.
+E       Absolute difference: 0.6666808128356934 (up to 0.001 allowed)
+E       Relative difference: inf (up to 0.001 allowed)
+
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:37: AssertionError
+________________ TestDiceLoss.test_all_zeros[cpu-float32-None] _________________
+
+self = <test_dice.TestDiceLoss object at 0x78fe7eb29cc0>
+device = device(type='cpu'), dtype = torch.float32, ignore_index = None
+
+    @pytest.mark.parametrize("ignore_index", [-100, None])
+    def test_all_zeros(self, device, dtype, ignore_index):
+        num_classes = 3
+        logits = torch.zeros(2, num_classes, 1, 2, device=device, dtype=dtype)
+        logits[:, 0] = 10.0
+        logits[:, 1] = 1.0
+        logits[:, 2] = 1.0
+        labels = torch.zeros(2, 1, 2, device=device, dtype=torch.int64)
+    
+        criterion = kornia.losses.DiceLoss(ignore_index=ignore_index)
+        loss = criterion(logits, labels)
+>       self.assert_close(loss, torch.zeros_like(loss), rtol=1e-3, atol=1e-3)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:106: in assert_close
+    return assert_close(actual, expected, rtol=rtol, atol=atol)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+actual = tensor(0.6667), expected = tensor(0.), rtol = 0.001, atol = 0.001
+kwargs = {}
+
+    def assert_close(
+        actual: Tensor, expected: Tensor, *, rtol: Optional[float] = None, atol: Optional[float] = None, **kwargs: Any
+    ) -> None:
+        if rtol is None and atol is None:
+            # `torch.testing.assert_close` used different default tolerances than `torch.testing.assert_allclose`.
+            # TODO: remove this special handling as soon as https://github.com/kornia/kornia/issues/1134 is resolved
+            #  Basically, this whole wrapper function can be removed and `torch.testing.assert_close` can be used
+            #  directly.
+            rtol, atol = _default_tolerances(actual, expected)
+    
+>       return _assert_close(
+            actual,
+            expected,
+            rtol=rtol,
+            atol=atol,
+            # this is the default value for torch>=1.10, but not for torch==1.9
+            # TODO: remove this if kornia relies on torch>=1.10
+            check_stride=False,
+            equal_nan=False,
+            **kwargs,
+        )
+E       AssertionError: Scalars are not close!
+E       
+E       Expected 0.0 but got 0.6666808128356934.
+E       Absolute difference: 0.6666808128356934 (up to 0.001 allowed)
+E       Relative difference: inf (up to 0.001 allowed)
+
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:37: AssertionError
+_________________________ TestDiceLoss.test_exception __________________________
+
+self = <test_dice.TestDiceLoss object at 0x78fe7eb2a0b0>
+
+    def test_exception(self):
+        with pytest.raises(ValueError) as errinf:
+>           kornia.losses.DiceLoss()(torch.rand(1, 1, 1), torch.rand(1, 1, 1))
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1736: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1747: in _call_impl
+    return forward_call(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = DiceLoss(), pred = tensor([[[1.]]]), target = tensor([[[0.7041]]])
+
+    def forward(self, pred: Tensor, target: Tensor) -> Tensor:
+        pred = torch.softmax(pred, dim=1)
+>       target_one_hot = torch.nn.functional.one_hot(target, num_classes=pred.shape[1]).permute(0, 3, 1, 2).float()
+E       RuntimeError: one_hot is only applicable to index tensor of type LongTensor.
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/losses/dice.py:146: RuntimeError
+________________ TestDiceLoss.test_averaging_micro[cpu-float32] ________________
+
+self = <test_dice.TestDiceLoss object at 0x78fe7eb2a3b0>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_averaging_micro(self, device, dtype):
+        num_classes = 2
+        eps = 1e-8
+    
+        logits = torch.zeros(1, num_classes, 4, 1, device=device, dtype=dtype)
+        logits[:, 0, 0:3] = 10.0
+        logits[:, 0, 3:4] = 1.0
+        logits[:, 1, 0:3] = 1.0
+        logits[:, 1, 3:4] = 10.0
+    
+        labels = torch.zeros(2, 4, 1, device=device, dtype=torch.int64)
+    
+        exp_1_0 = torch.exp(torch.tensor([1.0], device=device, dtype=dtype))
+        exp_10_0 = torch.exp(torch.tensor([10.0], device=device, dtype=dtype))
+    
+        expected_intersection = (3.0 * exp_10_0 + 1.0 * exp_1_0) / (exp_1_0 + exp_10_0)
+        expected_cardinality = 8.0  # for micro averaging cardinality is equal 2 * H * W
+        expected_loss = 1.0 - 2.0 * expected_intersection / (expected_cardinality + eps)
+        expected_loss = expected_loss.squeeze()
+    
+        criterion = kornia.losses.DiceLoss(average="micro", eps=eps)
+        loss = criterion(logits, labels)
+>       self.assert_close(loss, expected_loss, rtol=1e-3, atol=1e-3)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:106: in assert_close
+    return assert_close(actual, expected, rtol=rtol, atol=atol)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+actual = tensor(0.5714), expected = tensor(0.2501), rtol = 0.001, atol = 0.001
+kwargs = {}
+
+    def assert_close(
+        actual: Tensor, expected: Tensor, *, rtol: Optional[float] = None, atol: Optional[float] = None, **kwargs: Any
+    ) -> None:
+        if rtol is None and atol is None:
+            # `torch.testing.assert_close` used different default tolerances than `torch.testing.assert_allclose`.
+            # TODO: remove this special handling as soon as https://github.com/kornia/kornia/issues/1134 is resolved
+            #  Basically, this whole wrapper function can be removed and `torch.testing.assert_close` can be used
+            #  directly.
+            rtol, atol = _default_tolerances(actual, expected)
+    
+>       return _assert_close(
+            actual,
+            expected,
+            rtol=rtol,
+            atol=atol,
+            # this is the default value for torch>=1.10, but not for torch==1.9
+            # TODO: remove this if kornia relies on torch>=1.10
+            check_stride=False,
+            equal_nan=False,
+            **kwargs,
+        )
+E       AssertionError: Scalars are not close!
+E       
+E       Expected 0.2500617504119873 but got 0.5714486837387085.
+E       Absolute difference: 0.3213869333267212 (up to 0.001 allowed)
+E       Relative difference: 1.285230279309901 (up to 0.001 allowed)
+
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:37: AssertionError
+_________________ TestDiceLoss.test_weight[cpu-float32-micro] __________________
+
+self = <test_dice.TestDiceLoss object at 0x78fe7eb2a7a0>
+device = device(type='cpu'), dtype = torch.float32, avg = 'micro'
+
+    @pytest.mark.parametrize("avg", ["micro", "macro"])
+    def test_weight(self, device, dtype, avg):
+        num_classes = 3
+        eps = 1e-8
+        logits = torch.zeros(4, num_classes, 1, 4, device=device, dtype=dtype)
+        logits[:, 0, :, 0] = 100.0
+        logits[:, 2, :, 1:] = 100.0
+        labels = torch.tensor([0, 1, 2, 2], device=device, dtype=torch.int64).expand((4, 1, -1))
+    
+        # class 0 is all correct
+        expected_loss = torch.tensor([0.0], device=device, dtype=dtype).squeeze()
+        weight = torch.tensor([1.0, 0.0, 0.0], device=device, dtype=dtype)
+        criterion = kornia.losses.DiceLoss(average=avg, eps=eps, weight=weight)
+        loss = criterion(logits, labels)
+>       self.assert_close(loss, expected_loss, rtol=1e-3, atol=1e-3)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py:83: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:106: in assert_close
+    return assert_close(actual, expected, rtol=rtol, atol=atol)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+actual = tensor(0.4000), expected = tensor(0.), rtol = 0.001, atol = 0.001
+kwargs = {}
+
+    def assert_close(
+        actual: Tensor, expected: Tensor, *, rtol: Optional[float] = None, atol: Optional[float] = None, **kwargs: Any
+    ) -> None:
+        if rtol is None and atol is None:
+            # `torch.testing.assert_close` used different default tolerances than `torch.testing.assert_allclose`.
+            # TODO: remove this special handling as soon as https://github.com/kornia/kornia/issues/1134 is resolved
+            #  Basically, this whole wrapper function can be removed and `torch.testing.assert_close` can be used
+            #  directly.
+            rtol, atol = _default_tolerances(actual, expected)
+    
+>       return _assert_close(
+            actual,
+            expected,
+            rtol=rtol,
+            atol=atol,
+            # this is the default value for torch>=1.10, but not for torch==1.9
+            # TODO: remove this if kornia relies on torch>=1.10
+            check_stride=False,
+            equal_nan=False,
+            **kwargs,
+        )
+E       AssertionError: Scalars are not close!
+E       
+E       Expected 0.0 but got 0.3999999761581421.
+E       Absolute difference: 0.3999999761581421 (up to 0.001 allowed)
+E       Relative difference: inf (up to 0.001 allowed)
+
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:37: AssertionError
+_________________ TestDiceLoss.test_weight[cpu-float32-macro] __________________
+
+self = <test_dice.TestDiceLoss object at 0x78fe7eb2a6e0>
+device = device(type='cpu'), dtype = torch.float32, avg = 'macro'
+
+    @pytest.mark.parametrize("avg", ["micro", "macro"])
+    def test_weight(self, device, dtype, avg):
+        num_classes = 3
+        eps = 1e-8
+        logits = torch.zeros(4, num_classes, 1, 4, device=device, dtype=dtype)
+        logits[:, 0, :, 0] = 100.0
+        logits[:, 2, :, 1:] = 100.0
+        labels = torch.tensor([0, 1, 2, 2], device=device, dtype=torch.int64).expand((4, 1, -1))
+    
+        # class 0 is all correct
+        expected_loss = torch.tensor([0.0], device=device, dtype=dtype).squeeze()
+        weight = torch.tensor([1.0, 0.0, 0.0], device=device, dtype=dtype)
+        criterion = kornia.losses.DiceLoss(average=avg, eps=eps, weight=weight)
+        loss = criterion(logits, labels)
+>       self.assert_close(loss, expected_loss, rtol=1e-3, atol=1e-3)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py:83: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:106: in assert_close
+    return assert_close(actual, expected, rtol=rtol, atol=atol)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+actual = tensor(0.6667), expected = tensor(0.), rtol = 0.001, atol = 0.001
+kwargs = {}
+
+    def assert_close(
+        actual: Tensor, expected: Tensor, *, rtol: Optional[float] = None, atol: Optional[float] = None, **kwargs: Any
+    ) -> None:
+        if rtol is None and atol is None:
+            # `torch.testing.assert_close` used different default tolerances than `torch.testing.assert_allclose`.
+            # TODO: remove this special handling as soon as https://github.com/kornia/kornia/issues/1134 is resolved
+            #  Basically, this whole wrapper function can be removed and `torch.testing.assert_close` can be used
+            #  directly.
+            rtol, atol = _default_tolerances(actual, expected)
+    
+>       return _assert_close(
+            actual,
+            expected,
+            rtol=rtol,
+            atol=atol,
+            # this is the default value for torch>=1.10, but not for torch==1.9
+            # TODO: remove this if kornia relies on torch>=1.10
+            check_stride=False,
+            equal_nan=False,
+            **kwargs,
+        )
+E       AssertionError: Scalars are not close!
+E       
+E       Expected 0.0 but got 0.6666666269302368.
+E       Absolute difference: 0.6666666269302368 (up to 0.001 allowed)
+E       Relative difference: inf (up to 0.001 allowed)
+
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:37: AssertionError
+________________ TestDiceLoss.test_averaging_macro[cpu-float32] ________________
+
+self = <test_dice.TestDiceLoss object at 0x78fe7eb2ab90>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_averaging_macro(self, device, dtype):
+        num_classes = 2
+        eps = 1e-8
+    
+        logits = torch.zeros(1, num_classes, 1, 4, device=device, dtype=dtype)
+        logits[:, 0, :, 0:3] = 10.0
+        logits[:, 0, :, 3:4] = 1.0
+        logits[:, 1, :, 0:3] = 1.0
+        logits[:, 1, :, 3:4] = 10.0
+    
+        labels = torch.zeros(2, 1, 4, device=device, dtype=torch.int64)
+    
+        exp_1_0 = torch.exp(torch.tensor([1.0], device=device, dtype=dtype))
+        exp_10_0 = torch.exp(torch.tensor([10.0], device=device, dtype=dtype))
+    
+        expected_intersection_1 = (3.0 * exp_10_0 + exp_1_0) / (exp_1_0 + exp_10_0)
+        expected_intersection_2 = 0.0  # all labels are 0 so the intersection for the second class is empty
+        expected_cardinality_1 = 4.0 + (3.0 * exp_10_0 + 1.0 * exp_1_0) / (exp_1_0 + exp_10_0)
+        expected_cardinality_2 = 0.0 + (1.0 * exp_10_0 + 3.0 * exp_1_0) / (exp_1_0 + exp_10_0)
+    
+        expected_loss_1 = 1.0 - 2.0 * expected_intersection_1 / (expected_cardinality_1 + eps)
+        expected_loss_2 = 1.0 - 2.0 * expected_intersection_2 / (expected_cardinality_2 + eps)
+        expected_loss = (expected_loss_1 + expected_loss_2) / 2.0
+        expected_loss = expected_loss.squeeze()
+    
+        criterion = kornia.losses.DiceLoss(average="macro", eps=eps)
+        loss = criterion(logits, labels)
+>       self.assert_close(loss, expected_loss, rtol=1e-3, atol=1e-3)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py:162: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:106: in assert_close
+    return assert_close(actual, expected, rtol=rtol, atol=atol)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+actual = tensor([0.5714, 0.5714]), expected = tensor(0.5714), rtol = 0.001
+atol = 0.001, kwargs = {}
+
+    def assert_close(
+        actual: Tensor, expected: Tensor, *, rtol: Optional[float] = None, atol: Optional[float] = None, **kwargs: Any
+    ) -> None:
+        if rtol is None and atol is None:
+            # `torch.testing.assert_close` used different default tolerances than `torch.testing.assert_allclose`.
+            # TODO: remove this special handling as soon as https://github.com/kornia/kornia/issues/1134 is resolved
+            #  Basically, this whole wrapper function can be removed and `torch.testing.assert_close` can be used
+            #  directly.
+            rtol, atol = _default_tolerances(actual, expected)
+    
+>       return _assert_close(
+            actual,
+            expected,
+            rtol=rtol,
+            atol=atol,
+            # this is the default value for torch>=1.10, but not for torch==1.9
+            # TODO: remove this if kornia relies on torch>=1.10
+            check_stride=False,
+            equal_nan=False,
+            **kwargs,
+        )
+E       AssertionError: The values for attribute 'shape' do not match: torch.Size([2]) != torch.Size([]).
+
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:37: AssertionError
+_______________ TestDiceLoss.test_ignore_index[cpu-float32--100] _______________
+
+self = <test_dice.TestDiceLoss object at 0x78fe7eb2a9b0>
+device = device(type='cpu'), dtype = torch.float32, ignore_index = -100
+
+    @pytest.mark.parametrize("ignore_index", [-100, 255])
+    def test_ignore_index(self, device, dtype, ignore_index):
+        num_classes = 2
+        eps = 1e-8
+    
+        logits = torch.zeros(2, num_classes, 1, 4, device=device, dtype=dtype)
+        logits[:, 0, :, 0] = 100.0
+        logits[:, 1, :, 1:] = 100.0
+        labels = torch.zeros(2, 1, 4, device=device, dtype=torch.int64)
+    
+        labels[..., 2:] = ignore_index
+        expected_loss = torch.tensor([1.0 / 2.0], device=device, dtype=dtype).squeeze()
+        criterion = kornia.losses.DiceLoss(average="micro", eps=eps, ignore_index=ignore_index)
+>       loss = criterion(logits, labels)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py:177: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1736: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1747: in _call_impl
+    return forward_call(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = DiceLoss()
+pred = tensor([[[[1.0000e+00, 3.7835e-44, 3.7835e-44, 3.7835e-44]],
+
+         [[3.7835e-44, 1.0000e+00, 1.0000e+00, 1.0000e+0...   [[[1.0000e+00, 3.7835e-44, 3.7835e-44, 3.7835e-44]],
+
+         [[3.7835e-44, 1.0000e+00, 1.0000e+00, 1.0000e+00]]]])
+target = tensor([[[   0,    0, -100, -100]],
+
+        [[   0,    0, -100, -100]]])
+
+    def forward(self, pred: Tensor, target: Tensor) -> Tensor:
+        pred = torch.softmax(pred, dim=1)
+>       target_one_hot = torch.nn.functional.one_hot(target, num_classes=pred.shape[1]).permute(0, 3, 1, 2).float()
+E       RuntimeError: Class values must be non-negative.
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/losses/dice.py:146: RuntimeError
+_______________ TestDiceLoss.test_ignore_index[cpu-float32-255] ________________
+
+self = <test_dice.TestDiceLoss object at 0x78fe7eb2aec0>
+device = device(type='cpu'), dtype = torch.float32, ignore_index = 255
+
+    @pytest.mark.parametrize("ignore_index", [-100, 255])
+    def test_ignore_index(self, device, dtype, ignore_index):
+        num_classes = 2
+        eps = 1e-8
+    
+        logits = torch.zeros(2, num_classes, 1, 4, device=device, dtype=dtype)
+        logits[:, 0, :, 0] = 100.0
+        logits[:, 1, :, 1:] = 100.0
+        labels = torch.zeros(2, 1, 4, device=device, dtype=torch.int64)
+    
+        labels[..., 2:] = ignore_index
+        expected_loss = torch.tensor([1.0 / 2.0], device=device, dtype=dtype).squeeze()
+        criterion = kornia.losses.DiceLoss(average="micro", eps=eps, ignore_index=ignore_index)
+>       loss = criterion(logits, labels)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py:177: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1736: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1747: in _call_impl
+    return forward_call(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = DiceLoss()
+pred = tensor([[[[1.0000e+00, 3.7835e-44, 3.7835e-44, 3.7835e-44]],
+
+         [[3.7835e-44, 1.0000e+00, 1.0000e+00, 1.0000e+0...   [[[1.0000e+00, 3.7835e-44, 3.7835e-44, 3.7835e-44]],
+
+         [[3.7835e-44, 1.0000e+00, 1.0000e+00, 1.0000e+00]]]])
+target = tensor([[[  0,   0, 255, 255]],
+
+        [[  0,   0, 255, 255]]])
+
+    def forward(self, pred: Tensor, target: Tensor) -> Tensor:
+        pred = torch.softmax(pred, dim=1)
+>       target_one_hot = torch.nn.functional.one_hot(target, num_classes=pred.shape[1]).permute(0, 3, 1, 2).float()
+E       RuntimeError: Class values must be smaller than num_classes.
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/losses/dice.py:146: RuntimeError
+____________________ TestDiceLoss.test_module[cpu-float32] _____________________
+
+self = <test_dice.TestDiceLoss object at 0x78fe7eb2b670>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_module(self, device, dtype):
+        num_classes = 3
+        logits = torch.rand(2, num_classes, 1, 2, device=device, dtype=dtype)
+        labels = torch.rand(2, 1, 2) * num_classes
+        labels = labels.to(device).long()
+    
+        op = kornia.losses.dice_loss
+        op_module = kornia.losses.DiceLoss()
+    
+>       self.assert_close(op(logits, labels), op_module(logits, labels))
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py:208: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:106: in assert_close
+    return assert_close(actual, expected, rtol=rtol, atol=atol)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+actual = tensor(0.6785), expected = tensor(0.7445), rtol = 0.0001, atol = 1e-05
+kwargs = {}
+
+    def assert_close(
+        actual: Tensor, expected: Tensor, *, rtol: Optional[float] = None, atol: Optional[float] = None, **kwargs: Any
+    ) -> None:
+        if rtol is None and atol is None:
+            # `torch.testing.assert_close` used different default tolerances than `torch.testing.assert_allclose`.
+            # TODO: remove this special handling as soon as https://github.com/kornia/kornia/issues/1134 is resolved
+            #  Basically, this whole wrapper function can be removed and `torch.testing.assert_close` can be used
+            #  directly.
+            rtol, atol = _default_tolerances(actual, expected)
+    
+>       return _assert_close(
+            actual,
+            expected,
+            rtol=rtol,
+            atol=atol,
+            # this is the default value for torch>=1.10, but not for torch==1.9
+            # TODO: remove this if kornia relies on torch>=1.10
+            check_stride=False,
+            equal_nan=False,
+            **kwargs,
+        )
+E       AssertionError: Scalars are not close!
+E       
+E       Expected 0.7444653511047363 but got 0.6785070896148682.
+E       Absolute difference: 0.06595826148986816 (up to 1e-05 allowed)
+E       Relative difference: 0.0885981616095236 (up to 0.0001 allowed)
+
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:37: AssertionError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_all_zeros[cpu-float32--100]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_all_zeros[cpu-float32-None]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_exception
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_averaging_micro[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_weight[cpu-float32-micro]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_weight[cpu-float32-macro]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_averaging_macro[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_ignore_index[cpu-float32--100]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_ignore_index[cpu-float32-255]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_module[cpu-float32]
+========================= 10 failed, 3 passed in 2.20s =========================
+
+
+Final Test Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python3
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'tvm', 'cudagraphs', 'openxla', 'jit', 'onnxrt', 'inductor', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 13 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_smoke[cpu-float32] PASSED [  7%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_all_zeros[cpu-float32--100] PASSED [ 15%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_all_zeros[cpu-float32-None] PASSED [ 23%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_exception PASSED [ 30%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_averaging_micro[cpu-float32] PASSED [ 38%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_weight[cpu-float32-micro] PASSED [ 46%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_weight[cpu-float32-macro] PASSED [ 53%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_averaging_macro[cpu-float32] PASSED [ 61%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_ignore_index[cpu-float32--100] PASSED [ 69%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_ignore_index[cpu-float32-255] PASSED [ 76%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_gradcheck[cpu] PASSED [ 84%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_dynamo[cpu-float32-inductor] PASSED [ 92%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_module[cpu-float32] PASSED [100%]
+
+============================== 13 passed in 2.06s ==============================
+
+
+Initial Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python3
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'openxla', 'inductor', 'cudagraphs', 'jit', 'onnxrt', 'tvm', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 13 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_smoke[cpu-float32] PASSED [  7%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_all_zeros[cpu-float32--100] PASSED [ 15%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_all_zeros[cpu-float32-None] PASSED [ 23%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_exception PASSED [ 30%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_averaging_micro[cpu-float32] PASSED [ 38%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_weight[cpu-float32-micro] PASSED [ 46%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_weight[cpu-float32-macro] PASSED [ 53%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_averaging_macro[cpu-float32] PASSED [ 61%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_ignore_index[cpu-float32--100] PASSED [ 69%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_ignore_index[cpu-float32-255] PASSED [ 76%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_gradcheck[cpu] PASSED [ 84%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_dynamo[cpu-float32-inductor] PASSED [ 92%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/losses/test_dice.py::TestDiceLoss::test_module[cpu-float32] PASSED [100%]
+
+============================== 13 passed in 8.82s ==============================

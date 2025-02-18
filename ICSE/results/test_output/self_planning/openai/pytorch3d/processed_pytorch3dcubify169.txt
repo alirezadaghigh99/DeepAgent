@@ -1,0 +1,264 @@
+output file:
+processed_pytorch3dcubify169.json
+function:
+cubify
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_cubify.py::TestCubify::test_align', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_cubify.py::TestCubify::test_align FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_cubify.py::TestCubify::test_cubify_with_feats', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_cubify.py::TestCubify::test_cubify FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_cubify.py::TestCubify::test_cubify', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_cubify.py::TestCubify::test_cubify_with_feats FAILED'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 4 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cubify.py::TestCubify::test_align FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cubify.py::TestCubify::test_allempty PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cubify.py::TestCubify::test_cubify FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cubify.py::TestCubify::test_cubify_with_feats FAILED
+
+=================================== FAILURES ===================================
+____________________________ TestCubify.test_align _____________________________
+
+self = <tests.test_cubify.TestCubify testMethod=test_align>
+
+    def test_align(self):
+        N, V = 1, 2
+        device = torch.device("cuda:0")
+        voxels = torch.ones((N, V, V, V), dtype=torch.float32, device=device)
+    
+        # topleft align
+>       mesh = cubify(voxels, 0.5)
+
+/local/data0/moved_data/pytorch3d/tests/test_cubify.py:272: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/venv/lib/python3.8/site-packages/torch/utils/_contextlib.py:116: in decorate_context
+    return func(*args, **kwargs)
+/local/data0/moved_data/pytorch3d/pytorch3d/ops/cubify.py:46: in cubify
+    return cubify(voxels, thresh)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+voxels = tensor([[[[1., 1.],
+          [1., 1.]],
+
+         [[1., 1.],
+          [1., 1.]]]], device='cuda:0')
+thresh = 0.5, feats = None, device = 'cpu', align = 'center'
+
+    def cubify(voxels, thresh, feats=None, device='cpu', align='center'):
+        assert voxels.ndim == 4, 'voxels must be a 4D tensor of shape (N, D, H, W)'
+        assert isinstance(thresh, (int, float)), 'thresh must be a scalar'
+        if feats is not None:
+            assert feats.ndim == 5, 'feats must be a 5D tensor of shape (N, K, D, H, W)'
+        assert align in ['topleft', 'corner', 'center'], "align must be 'topleft', 'corner', or 'center'"
+        occupied = voxels > thresh
+        all_vertices = []
+        all_faces = []
+        for i in range(voxels.shape[0]):
+            vertices = []
+            faces = []
+            voxel_grid = occupied[i]
+            for d in range(voxel_grid.shape[0]):
+                for h in range(voxel_grid.shape[1]):
+                    for w in range(voxel_grid.shape[2]):
+                        if voxel_grid[d, h, w]:
+                            cube_vertices, cube_faces = generate_cube(d, h, w, align)
+                            vertices.extend(cube_vertices)
+                            faces.extend(cube_faces)
+            vertices, faces = merge_and_clean(vertices, faces)
+            all_vertices.append(torch.tensor(vertices, device=device))
+>           all_faces.append(torch.tensor(faces, device=device))
+E           RuntimeError: Could not infer dtype of generator
+
+/local/data0/moved_data/pytorch3d/pytorch3d/ops/temp.py:30: RuntimeError
+____________________________ TestCubify.test_cubify ____________________________
+
+self = <tests.test_cubify.TestCubify testMethod=test_cubify>
+
+    def test_cubify(self):
+        N, V = 4, 2
+        device = torch.device("cuda:0")
+        voxels = torch.zeros((N, V, V, V), dtype=torch.float32, device=device)
+    
+        # 1st example: (top left corner, znear) is on
+        voxels[0, 0, 0, 0] = 1.0
+        # 2nd example: all are on
+        voxels[1] = 1.0
+        # 3rd example: empty
+        # 4th example
+        voxels[3, :, :, 1] = 1.0
+        voxels[3, 1, 1, 0] = 1.0
+    
+        # compute cubify
+>       meshes = cubify(voxels, 0.5)
+
+/local/data0/moved_data/pytorch3d/tests/test_cubify.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/venv/lib/python3.8/site-packages/torch/utils/_contextlib.py:116: in decorate_context
+    return func(*args, **kwargs)
+/local/data0/moved_data/pytorch3d/pytorch3d/ops/cubify.py:46: in cubify
+    return cubify(voxels, thresh)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+voxels = tensor([[[[1., 0.],
+          [0., 0.]],
+
+         [[0., 0.],
+          [0., 0.]]],
+
+
+        [[[1., 1.],
+          [1...    [0., 0.]]],
+
+
+        [[[0., 1.],
+          [0., 1.]],
+
+         [[0., 1.],
+          [1., 1.]]]], device='cuda:0')
+thresh = 0.5, feats = None, device = 'cpu', align = 'center'
+
+    def cubify(voxels, thresh, feats=None, device='cpu', align='center'):
+        assert voxels.ndim == 4, 'voxels must be a 4D tensor of shape (N, D, H, W)'
+        assert isinstance(thresh, (int, float)), 'thresh must be a scalar'
+        if feats is not None:
+            assert feats.ndim == 5, 'feats must be a 5D tensor of shape (N, K, D, H, W)'
+        assert align in ['topleft', 'corner', 'center'], "align must be 'topleft', 'corner', or 'center'"
+        occupied = voxels > thresh
+        all_vertices = []
+        all_faces = []
+        for i in range(voxels.shape[0]):
+            vertices = []
+            faces = []
+            voxel_grid = occupied[i]
+            for d in range(voxel_grid.shape[0]):
+                for h in range(voxel_grid.shape[1]):
+                    for w in range(voxel_grid.shape[2]):
+                        if voxel_grid[d, h, w]:
+                            cube_vertices, cube_faces = generate_cube(d, h, w, align)
+                            vertices.extend(cube_vertices)
+                            faces.extend(cube_faces)
+            vertices, faces = merge_and_clean(vertices, faces)
+            all_vertices.append(torch.tensor(vertices, device=device))
+>           all_faces.append(torch.tensor(faces, device=device))
+E           RuntimeError: Could not infer dtype of generator
+
+/local/data0/moved_data/pytorch3d/pytorch3d/ops/temp.py:30: RuntimeError
+______________________ TestCubify.test_cubify_with_feats _______________________
+
+self = <tests.test_cubify.TestCubify testMethod=test_cubify_with_feats>
+
+    def test_cubify_with_feats(self):
+        N, V = 3, 2
+        device = torch.device("cuda:0")
+        voxels = torch.zeros((N, V, V, V), dtype=torch.float32, device=device)
+        feats = torch.zeros((N, 3, V, V, V), dtype=torch.float32, device=device)
+        # fill the feats with red color
+        feats[:, 0, :, :, :] = 255
+    
+        # 1st example: (top left corner, znear) is on
+        voxels[0, 0, 0, 0] = 1.0
+        # the color is set to green
+        feats[0, :, 0, 0, 0] = torch.Tensor([0, 255, 0])
+        # 2nd example: all are on
+        voxels[1] = 1.0
+    
+        # 3rd example
+        voxels[2, :, :, 1] = 1.0
+        voxels[2, 1, 1, 0] = 1.0
+        # the color is set to yellow and blue respectively
+        feats[2, 1, :, :, 1] = 255
+        feats[2, :, 1, 1, 0] = torch.Tensor([0, 0, 255])
+>       meshes = cubify(voxels, 0.5, feats=feats, align="center")
+
+/local/data0/moved_data/pytorch3d/tests/test_cubify.py:339: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/venv/lib/python3.8/site-packages/torch/utils/_contextlib.py:116: in decorate_context
+    return func(*args, **kwargs)
+/local/data0/moved_data/pytorch3d/pytorch3d/ops/cubify.py:46: in cubify
+    return cubify(voxels, thresh)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+voxels = tensor([[[[1., 0.],
+          [0., 0.]],
+
+         [[0., 0.],
+          [0., 0.]]],
+
+
+        [[[1., 1.],
+          [1...    [1., 1.]]],
+
+
+        [[[0., 1.],
+          [0., 1.]],
+
+         [[0., 1.],
+          [1., 1.]]]], device='cuda:0')
+thresh = 0.5, feats = None, device = 'cpu', align = 'center'
+
+    def cubify(voxels, thresh, feats=None, device='cpu', align='center'):
+        assert voxels.ndim == 4, 'voxels must be a 4D tensor of shape (N, D, H, W)'
+        assert isinstance(thresh, (int, float)), 'thresh must be a scalar'
+        if feats is not None:
+            assert feats.ndim == 5, 'feats must be a 5D tensor of shape (N, K, D, H, W)'
+        assert align in ['topleft', 'corner', 'center'], "align must be 'topleft', 'corner', or 'center'"
+        occupied = voxels > thresh
+        all_vertices = []
+        all_faces = []
+        for i in range(voxels.shape[0]):
+            vertices = []
+            faces = []
+            voxel_grid = occupied[i]
+            for d in range(voxel_grid.shape[0]):
+                for h in range(voxel_grid.shape[1]):
+                    for w in range(voxel_grid.shape[2]):
+                        if voxel_grid[d, h, w]:
+                            cube_vertices, cube_faces = generate_cube(d, h, w, align)
+                            vertices.extend(cube_vertices)
+                            faces.extend(cube_faces)
+            vertices, faces = merge_and_clean(vertices, faces)
+            all_vertices.append(torch.tensor(vertices, device=device))
+>           all_faces.append(torch.tensor(faces, device=device))
+E           RuntimeError: Could not infer dtype of generator
+
+/local/data0/moved_data/pytorch3d/pytorch3d/ops/temp.py:30: RuntimeError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_cubify.py::TestCubify::test_align
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_cubify.py::TestCubify::test_cubify
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_cubify.py::TestCubify::test_cubify_with_feats
+========================= 3 failed, 1 passed in 2.15s ==========================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 4 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cubify.py::TestCubify::test_align PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cubify.py::TestCubify::test_allempty PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cubify.py::TestCubify::test_cubify PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cubify.py::TestCubify::test_cubify_with_feats PASSED
+
+============================== 4 passed in 1.37s ===============================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 4 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cubify.py::TestCubify::test_align PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cubify.py::TestCubify::test_allempty PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cubify.py::TestCubify::test_cubify PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_cubify.py::TestCubify::test_cubify_with_feats PASSED
+
+============================== 4 passed in 1.44s ===============================

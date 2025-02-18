@@ -1,0 +1,16 @@
+stage: Pre-Post processing
+task: 
+data: 
+
+prompt:
+Generate a Python function called cast_like that takes in two parameters, tensor1 and tensor2. The function casts tensor1 to the same data type as tensor2.
+
+You should be aware that input can be list or tuple aswell.
+
+ ground Truth:pennylane/math/utils.py
+
+ repo:pennylane
+
+ function:cast_like
+ 
+ test_cases:tests/math/test_matrix_manipulation.py::TestPartialTrace

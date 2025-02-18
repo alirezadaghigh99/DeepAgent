@@ -1,0 +1,380 @@
+output file:
+processed_pyrodct381.json
+function:
+dct
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct--3] FAILED', '../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct-2] FAILED', '../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct-1] FAILED', '../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct--4] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct--4]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct-3]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct-2]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct--1]', '../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct--1] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct-1]', '../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct-3] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct-0]', '../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct--2] FAILED', '../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct-0] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct--3]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct--2]'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/pyro/pyro/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/pyro/pyro
+configfile: setup.cfg
+plugins: typeguard-4.4.1, jaxtyping-0.2.19
+collecting ... collected 16 items
+
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct--4] FAILED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct--3] FAILED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct--2] FAILED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct--1] FAILED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct-0] FAILED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct-1] FAILED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct-2] FAILED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct-3] FAILED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[idct--4] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[idct--3] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[idct--2] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[idct--1] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[idct-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[idct-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[idct-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[idct-3] PASSED
+
+=================================== FAILURES ===================================
+_____________________________ test_dct_dim[dct--4] _____________________________
+
+fn = <function dct at 0x761c8fcd5e40>, dim = -4
+
+    @pytest.mark.parametrize("dim", [-4, -3, -2, -1, 0, 1, 2, 3])
+    @pytest.mark.parametrize("fn", [dct, idct])
+    def test_dct_dim(fn, dim):
+        x = torch.randn(4, 5, 6, 7)
+>       actual = fn(x, dim=dim)
+
+/local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py:171: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/ops/tensor_utils.py:239: in dct
+    return dct(x, dim)
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/ops/temp.py:23: in dct
+    result = torch.matmul(cos_basis, x.transpose(dim, -1))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <torch.utils._device.DeviceContext object at 0x761c7eaab250>
+func = <built-in method matmul of type object at 0x761cdc0d0240>, types = ()
+args = (tensor([[ 1.0000,  1.0000,  1.0000,  1.0000],
+        [ 0.9239,  0.3827, -0.3827, -0.9239],
+        [ 0.7071, -0.7071...4139e+00, -6.5697e-01],
+          [ 1.1732e+00,  5.2012e-01, -9.8522e-01,  5.1280e-01]]]],
+       dtype=torch.float32))
+kwargs = {}
+
+    def __torch_function__(self, func, types, args=(), kwargs=None):
+        kwargs = kwargs or {}
+        if func in _device_constructors() and kwargs.get('device') is None:
+            kwargs['device'] = self.device
+>       return func(*args, **kwargs)
+E       RuntimeError: Expected size for first two dimensions of batch2 tensor to be: [35, 4] but got: [35, 6].
+
+/local/data0/moved_data/publishablew/pyro/pyro/venv/lib/python3.11/site-packages/torch/utils/_device.py:106: RuntimeError
+_____________________________ test_dct_dim[dct--3] _____________________________
+
+fn = <function dct at 0x761c8fcd5e40>, dim = -3
+
+    @pytest.mark.parametrize("dim", [-4, -3, -2, -1, 0, 1, 2, 3])
+    @pytest.mark.parametrize("fn", [dct, idct])
+    def test_dct_dim(fn, dim):
+        x = torch.randn(4, 5, 6, 7)
+>       actual = fn(x, dim=dim)
+
+/local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py:171: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/ops/tensor_utils.py:239: in dct
+    return dct(x, dim)
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/ops/temp.py:23: in dct
+    result = torch.matmul(cos_basis, x.transpose(dim, -1))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <torch.utils._device.DeviceContext object at 0x761c7eaab250>
+func = <built-in method matmul of type object at 0x761cdc0d0240>, types = ()
+args = (tensor([[ 1.0000e+00,  1.0000e+00,  1.0000e+00,  1.0000e+00,  1.0000e+00],
+        [ 9.5106e-01,  5.8779e-01, -4.3711...5697e-01],
+          [ 5.0013e-01, -1.3427e-01,  1.4570e+00, -7.0184e-02,  5.1280e-01]]]],
+       dtype=torch.float32))
+kwargs = {}
+
+    def __torch_function__(self, func, types, args=(), kwargs=None):
+        kwargs = kwargs or {}
+        if func in _device_constructors() and kwargs.get('device') is None:
+            kwargs['device'] = self.device
+>       return func(*args, **kwargs)
+E       RuntimeError: Expected size for first two dimensions of batch2 tensor to be: [28, 5] but got: [28, 6].
+
+/local/data0/moved_data/publishablew/pyro/pyro/venv/lib/python3.11/site-packages/torch/utils/_device.py:106: RuntimeError
+_____________________________ test_dct_dim[dct--2] _____________________________
+
+fn = <function dct at 0x761c8fcd5e40>, dim = -2
+
+    @pytest.mark.parametrize("dim", [-4, -3, -2, -1, 0, 1, 2, 3])
+    @pytest.mark.parametrize("fn", [dct, idct])
+    def test_dct_dim(fn, dim):
+        x = torch.randn(4, 5, 6, 7)
+>       actual = fn(x, dim=dim)
+
+/local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py:171: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/ops/tensor_utils.py:239: in dct
+    return dct(x, dim)
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/ops/temp.py:23: in dct
+    result = torch.matmul(cos_basis, x.transpose(dim, -1))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <torch.utils._device.DeviceContext object at 0x761c7eaab250>
+func = <built-in method matmul of type object at 0x761cdc0d0240>, types = ()
+args = (tensor([[ 1.0000e+00,  1.0000e+00,  1.0000e+00,  1.0000e+00,  1.0000e+00,
+          1.0000e+00],
+        [ 9.6593e-01...    [ 3.1222e-01,  6.1507e-01, -5.2613e-01,  1.3442e+00, -6.5697e-01,
+            5.1280e-01]]]], dtype=torch.float32))
+kwargs = {}
+
+    def __torch_function__(self, func, types, args=(), kwargs=None):
+        kwargs = kwargs or {}
+        if func in _device_constructors() and kwargs.get('device') is None:
+            kwargs['device'] = self.device
+>       return func(*args, **kwargs)
+E       RuntimeError: Expected size for first two dimensions of batch2 tensor to be: [20, 6] but got: [20, 7].
+
+/local/data0/moved_data/publishablew/pyro/pyro/venv/lib/python3.11/site-packages/torch/utils/_device.py:106: RuntimeError
+_____________________________ test_dct_dim[dct--1] _____________________________
+
+fn = <function dct at 0x761c8fcd5e40>, dim = -1
+
+    @pytest.mark.parametrize("dim", [-4, -3, -2, -1, 0, 1, 2, 3])
+    @pytest.mark.parametrize("fn", [dct, idct])
+    def test_dct_dim(fn, dim):
+        x = torch.randn(4, 5, 6, 7)
+>       actual = fn(x, dim=dim)
+
+/local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py:171: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/ops/tensor_utils.py:239: in dct
+    return dct(x, dim)
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/ops/temp.py:23: in dct
+    result = torch.matmul(cos_basis, x.transpose(dim, -1))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <torch.utils._device.DeviceContext object at 0x761c7eaab250>
+func = <built-in method matmul of type object at 0x761cdc0d0240>, types = ()
+args = (tensor([[ 1.0000e+00,  1.0000e+00,  1.0000e+00,  1.0000e+00,  1.0000e+00,
+          1.0000e+00,  1.0000e+00],
+       ...-01, -8.0425e-01, -6.8659e-01, -1.6405e+00,  4.8227e-01,
+           -3.0693e-01,  5.1280e-01]]]], dtype=torch.float32))
+kwargs = {}
+
+    def __torch_function__(self, func, types, args=(), kwargs=None):
+        kwargs = kwargs or {}
+        if func in _device_constructors() and kwargs.get('device') is None:
+            kwargs['device'] = self.device
+>       return func(*args, **kwargs)
+E       RuntimeError: Expected size for first two dimensions of batch2 tensor to be: [20, 7] but got: [20, 6].
+
+/local/data0/moved_data/publishablew/pyro/pyro/venv/lib/python3.11/site-packages/torch/utils/_device.py:106: RuntimeError
+_____________________________ test_dct_dim[dct-0] ______________________________
+
+fn = <function dct at 0x761c8fcd5e40>, dim = 0
+
+    @pytest.mark.parametrize("dim", [-4, -3, -2, -1, 0, 1, 2, 3])
+    @pytest.mark.parametrize("fn", [dct, idct])
+    def test_dct_dim(fn, dim):
+        x = torch.randn(4, 5, 6, 7)
+>       actual = fn(x, dim=dim)
+
+/local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py:171: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/ops/tensor_utils.py:239: in dct
+    return dct(x, dim)
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/ops/temp.py:23: in dct
+    result = torch.matmul(cos_basis, x.transpose(dim, -1))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <torch.utils._device.DeviceContext object at 0x761c7eaab250>
+func = <built-in method matmul of type object at 0x761cdc0d0240>, types = ()
+args = (tensor([[ 1.0000,  1.0000,  1.0000,  1.0000],
+        [ 0.9239,  0.3827, -0.3827, -0.9239],
+        [ 0.7071, -0.7071...4139e+00, -6.5697e-01],
+          [ 1.1732e+00,  5.2012e-01, -9.8522e-01,  5.1280e-01]]]],
+       dtype=torch.float32))
+kwargs = {}
+
+    def __torch_function__(self, func, types, args=(), kwargs=None):
+        kwargs = kwargs or {}
+        if func in _device_constructors() and kwargs.get('device') is None:
+            kwargs['device'] = self.device
+>       return func(*args, **kwargs)
+E       RuntimeError: Expected size for first two dimensions of batch2 tensor to be: [35, 4] but got: [35, 6].
+
+/local/data0/moved_data/publishablew/pyro/pyro/venv/lib/python3.11/site-packages/torch/utils/_device.py:106: RuntimeError
+_____________________________ test_dct_dim[dct-1] ______________________________
+
+fn = <function dct at 0x761c8fcd5e40>, dim = 1
+
+    @pytest.mark.parametrize("dim", [-4, -3, -2, -1, 0, 1, 2, 3])
+    @pytest.mark.parametrize("fn", [dct, idct])
+    def test_dct_dim(fn, dim):
+        x = torch.randn(4, 5, 6, 7)
+>       actual = fn(x, dim=dim)
+
+/local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py:171: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/ops/tensor_utils.py:239: in dct
+    return dct(x, dim)
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/ops/temp.py:23: in dct
+    result = torch.matmul(cos_basis, x.transpose(dim, -1))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <torch.utils._device.DeviceContext object at 0x761c7eaab250>
+func = <built-in method matmul of type object at 0x761cdc0d0240>, types = ()
+args = (tensor([[ 1.0000e+00,  1.0000e+00,  1.0000e+00,  1.0000e+00,  1.0000e+00],
+        [ 9.5106e-01,  5.8779e-01, -4.3711...5697e-01],
+          [ 5.0013e-01, -1.3427e-01,  1.4570e+00, -7.0184e-02,  5.1280e-01]]]],
+       dtype=torch.float32))
+kwargs = {}
+
+    def __torch_function__(self, func, types, args=(), kwargs=None):
+        kwargs = kwargs or {}
+        if func in _device_constructors() and kwargs.get('device') is None:
+            kwargs['device'] = self.device
+>       return func(*args, **kwargs)
+E       RuntimeError: Expected size for first two dimensions of batch2 tensor to be: [28, 5] but got: [28, 6].
+
+/local/data0/moved_data/publishablew/pyro/pyro/venv/lib/python3.11/site-packages/torch/utils/_device.py:106: RuntimeError
+_____________________________ test_dct_dim[dct-2] ______________________________
+
+fn = <function dct at 0x761c8fcd5e40>, dim = 2
+
+    @pytest.mark.parametrize("dim", [-4, -3, -2, -1, 0, 1, 2, 3])
+    @pytest.mark.parametrize("fn", [dct, idct])
+    def test_dct_dim(fn, dim):
+        x = torch.randn(4, 5, 6, 7)
+>       actual = fn(x, dim=dim)
+
+/local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py:171: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/ops/tensor_utils.py:239: in dct
+    return dct(x, dim)
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/ops/temp.py:23: in dct
+    result = torch.matmul(cos_basis, x.transpose(dim, -1))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <torch.utils._device.DeviceContext object at 0x761c7eaab250>
+func = <built-in method matmul of type object at 0x761cdc0d0240>, types = ()
+args = (tensor([[ 1.0000e+00,  1.0000e+00,  1.0000e+00,  1.0000e+00,  1.0000e+00,
+          1.0000e+00],
+        [ 9.6593e-01...    [ 3.1222e-01,  6.1507e-01, -5.2613e-01,  1.3442e+00, -6.5697e-01,
+            5.1280e-01]]]], dtype=torch.float32))
+kwargs = {}
+
+    def __torch_function__(self, func, types, args=(), kwargs=None):
+        kwargs = kwargs or {}
+        if func in _device_constructors() and kwargs.get('device') is None:
+            kwargs['device'] = self.device
+>       return func(*args, **kwargs)
+E       RuntimeError: Expected size for first two dimensions of batch2 tensor to be: [20, 6] but got: [20, 7].
+
+/local/data0/moved_data/publishablew/pyro/pyro/venv/lib/python3.11/site-packages/torch/utils/_device.py:106: RuntimeError
+_____________________________ test_dct_dim[dct-3] ______________________________
+
+fn = <function dct at 0x761c8fcd5e40>, dim = 3
+
+    @pytest.mark.parametrize("dim", [-4, -3, -2, -1, 0, 1, 2, 3])
+    @pytest.mark.parametrize("fn", [dct, idct])
+    def test_dct_dim(fn, dim):
+        x = torch.randn(4, 5, 6, 7)
+>       actual = fn(x, dim=dim)
+
+/local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py:171: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/ops/tensor_utils.py:239: in dct
+    return dct(x, dim)
+/local/data0/moved_data/publishablew/pyro/pyro/pyro/ops/temp.py:23: in dct
+    result = torch.matmul(cos_basis, x.transpose(dim, -1))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <torch.utils._device.DeviceContext object at 0x761c7eaab250>
+func = <built-in method matmul of type object at 0x761cdc0d0240>, types = ()
+args = (tensor([[ 1.0000e+00,  1.0000e+00,  1.0000e+00,  1.0000e+00,  1.0000e+00,
+          1.0000e+00,  1.0000e+00],
+       ...-01, -8.0425e-01, -6.8659e-01, -1.6405e+00,  4.8227e-01,
+           -3.0693e-01,  5.1280e-01]]]], dtype=torch.float32))
+kwargs = {}
+
+    def __torch_function__(self, func, types, args=(), kwargs=None):
+        kwargs = kwargs or {}
+        if func in _device_constructors() and kwargs.get('device') is None:
+            kwargs['device'] = self.device
+>       return func(*args, **kwargs)
+E       RuntimeError: Expected size for first two dimensions of batch2 tensor to be: [20, 7] but got: [20, 6].
+
+/local/data0/moved_data/publishablew/pyro/pyro/venv/lib/python3.11/site-packages/torch/utils/_device.py:106: RuntimeError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct--4]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct--3]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct--2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct--1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct-0]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct-1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct-2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct-3]
+========================= 8 failed, 8 passed in 0.68s ==========================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/pyro/pyro/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/pyro/pyro
+configfile: setup.cfg
+plugins: typeguard-4.4.1, jaxtyping-0.2.19
+collecting ... collected 16 items
+
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct--4] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct--3] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct--2] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct--1] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[idct--4] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[idct--3] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[idct--2] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[idct--1] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[idct-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[idct-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[idct-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[idct-3] PASSED
+
+============================== 16 passed in 0.43s ==============================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/pyro/pyro/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/pyro/pyro
+configfile: setup.cfg
+plugins: typeguard-4.4.1, jaxtyping-0.2.19
+collecting ... collected 16 items
+
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct--4] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct--3] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct--2] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct--1] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[dct-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[idct--4] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[idct--3] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[idct--2] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[idct--1] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[idct-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[idct-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[idct-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/pyro/pyro/tests/ops/test_tensor_utils.py::test_dct_dim[idct-3] PASSED
+
+============================== 16 passed in 0.42s ==============================

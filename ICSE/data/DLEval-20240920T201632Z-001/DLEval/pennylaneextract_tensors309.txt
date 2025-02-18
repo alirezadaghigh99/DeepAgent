@@ -1,0 +1,22 @@
+stage: Pre-Post processing
+task: 
+data: 
+
+prompt:
+Generate a Python function called extract_tensors that Iterate through an iterable, and extract any PennyLane
+    tensors that appear.
+
+    Args:
+        x (.tensor or Sequence): an input tensor or sequence
+
+    Yields:
+        tensor: the next tensor in the sequence. If the input was a single
+        tensor, than the tensor is yielded and the iterator completes.
+
+ ground Truth:pennylane/numpy/wrapper.py
+
+ repo:pennylane
+
+ function:extract_tensors
+ 
+ test_cases:tests/ops/qubit/test_special_unitary.py 

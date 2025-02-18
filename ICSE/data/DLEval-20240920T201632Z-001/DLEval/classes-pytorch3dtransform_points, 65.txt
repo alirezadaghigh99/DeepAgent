@@ -1,0 +1,31 @@
+stage: 
+task: 
+data: pre-post process
+
+prompt:
+
+Generate a Python method `transform_points` for the `Transform3d` class that transforms a set of 3D points using the transformation matrix. The method should handle points in either 2D (P, 3) or 3D (N, P, 3) format, where P is the number of points and N is the batch size. It should perform a homogeneous transformation, adding a fourth coordinate to the points, applying the transformation matrix using batched matrix multiplication, and then dividing by the homogeneous coordinate. If an optional `eps` argument is provided, it should clamp the homogeneous coordinate to avoid division by zero.
+
+Class structure:
+
+```python
+class Transform3d:
+    def __init__(self, dtype: torch.dtype = torch.float32, device: Device = "cpu", matrix: Optional[torch.Tensor] = None):
+        self._matrix = ...
+        self._transforms = []
+        self.device = ...
+        self.dtype = ...
+
+    def transform_points(self, points, eps: Optional[float] = None) -> torch.Tensor:
+        # Implement the function as described in the prompt
+```
+
+ ground Truth:pytorch3d/transforms/transform3d.py
+
+ repo:pytorch3d
+
+ function:transform_points
+ 
+ test_cases:tests/test_transforms.py
+ 
+ class:Transform3d

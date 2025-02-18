@@ -1,0 +1,29 @@
+stage: Image
+task: 
+data: pre-post process
+
+prompt:
+Generate the `__init__` function for the following class to initialize a 3D translation transform. The function should support two input options: (1) a tensor `xyz` of shape (N, 3) or (2) individual values for `x`, `y`, and `z` which can be scalars or 1D tensors. The function should create a translation matrix accordingly.
+
+```python
+class Translate(Transform3d):
+    def __init__(
+        self,
+        x,
+        y=None,
+        z=None,
+        dtype: torch.dtype = torch.float32,
+        device: Optional[Device] = None,
+    ) -> None:
+```
+
+ ground Truth:pytorch3d/transforms/transform3d.py
+
+ repo:pytorch3d
+
+ function:__init__
+ 
+ test_cases:tests/test_transforms.py::TestTranslate
+ 
+ class:Translate
+ 

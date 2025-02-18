@@ -1,0 +1,483 @@
+output file:
+processed_korniafundamental_from_projections331.json
+function:
+fundamental_from_projections
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-2] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_smoke[cpu-float32] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_gradcheck[cpu]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape_large[cpu-float32]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_batch_support_check[cpu-float32]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-7]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_from_to_projections[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_gradcheck[cpu] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-4] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-4]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape_large[cpu-float32] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_batch_support_check[cpu-float32] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-2]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_smoke[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_from_to_projections[cpu-float32] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-7] FAILED'}
+
+All Test Cases On Generated code:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'inductor', 'jit', 'onnxrt', 'cudagraphs', 'openxla', 'tvm', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 9 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_smoke[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-1] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-2] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-4] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-7] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape_large[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_from_to_projections[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_gradcheck[cpu] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_batch_support_check[cpu-float32] FAILED
+
+=================================== FAILURES ===================================
+____________ TestFundamentalFromProjections.test_smoke[cpu-float32] ____________
+
+self = <test_fundamental.TestFundamentalFromProjections object at 0x771b5c11ead0>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_smoke(self, device, dtype):
+        P1 = torch.rand(1, 3, 4, device=device, dtype=dtype)
+        P2 = torch.rand(1, 3, 4, device=device, dtype=dtype)
+>       F_mat = epi.fundamental_from_projections(P1, P2)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py:388: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:273: in fundamental_from_projections
+    return fundamental_from_projections(P1, P2)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:30: in fundamental_from_projections
+    F[..., i, j] = determinant_3x3(torch.cat((M1, M2), dim=-1))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+M = tensor([[[0.4627, 0.2394, 0.2615, 0.5133, 0.7519, 0.0061],
+         [0.4215, 0.8233, 0.5488, 0.6604, 0.2732, 0.0369],
+         [0.6941, 0.9342, 0.4208, 0.5485, 0.1395, 0.6874]]])
+
+    def determinant_3x3(M):
+>       return torch.det(M)
+E       RuntimeError: linalg.det: A must be batches of square matrices, but they are 3 by 6 matrices
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:24: RuntimeError
+___________ TestFundamentalFromProjections.test_shape[cpu-float32-1] ___________
+
+self = <test_fundamental.TestFundamentalFromProjections object at 0x771b5c11ef80>
+batch_size = 1, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 4, 7])
+    def test_shape(self, batch_size, device, dtype):
+        B: int = batch_size
+        P1 = torch.rand(B, 3, 4, device=device, dtype=dtype)
+        P2 = torch.rand(B, 3, 4, device=device, dtype=dtype)
+>       F_mat = epi.fundamental_from_projections(P1, P2)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py:396: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:273: in fundamental_from_projections
+    return fundamental_from_projections(P1, P2)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:30: in fundamental_from_projections
+    F[..., i, j] = determinant_3x3(torch.cat((M1, M2), dim=-1))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+M = tensor([[[0.2435, 0.3313, 0.4624, 0.2764, 0.9989, 0.1132],
+         [0.6281, 0.3577, 0.5070, 0.1266, 0.3539, 0.9893],
+         [0.6352, 0.1477, 0.4039, 0.3284, 0.0751, 0.9645]]])
+
+    def determinant_3x3(M):
+>       return torch.det(M)
+E       RuntimeError: linalg.det: A must be batches of square matrices, but they are 3 by 6 matrices
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:24: RuntimeError
+___________ TestFundamentalFromProjections.test_shape[cpu-float32-2] ___________
+
+self = <test_fundamental.TestFundamentalFromProjections object at 0x771b5c11eec0>
+batch_size = 2, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 4, 7])
+    def test_shape(self, batch_size, device, dtype):
+        B: int = batch_size
+        P1 = torch.rand(B, 3, 4, device=device, dtype=dtype)
+        P2 = torch.rand(B, 3, 4, device=device, dtype=dtype)
+>       F_mat = epi.fundamental_from_projections(P1, P2)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py:396: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:273: in fundamental_from_projections
+    return fundamental_from_projections(P1, P2)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:30: in fundamental_from_projections
+    F[..., i, j] = determinant_3x3(torch.cat((M1, M2), dim=-1))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+M = tensor([[[0.6831, 0.4248, 0.9269, 0.8575, 0.1735, 0.7498],
+         [0.1558, 0.9139, 0.6353, 0.5817, 0.4021, 0.5629],
+...         [0.4566, 0.4940, 0.1885, 0.2622, 0.2578, 0.6644],
+         [0.0243, 0.5506, 0.8085, 0.4240, 0.3408, 0.7510]]])
+
+    def determinant_3x3(M):
+>       return torch.det(M)
+E       RuntimeError: linalg.det: A must be batches of square matrices, but they are 3 by 6 matrices
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:24: RuntimeError
+___________ TestFundamentalFromProjections.test_shape[cpu-float32-4] ___________
+
+self = <test_fundamental.TestFundamentalFromProjections object at 0x771b5c11f250>
+batch_size = 4, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 4, 7])
+    def test_shape(self, batch_size, device, dtype):
+        B: int = batch_size
+        P1 = torch.rand(B, 3, 4, device=device, dtype=dtype)
+        P2 = torch.rand(B, 3, 4, device=device, dtype=dtype)
+>       F_mat = epi.fundamental_from_projections(P1, P2)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py:396: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:273: in fundamental_from_projections
+    return fundamental_from_projections(P1, P2)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:30: in fundamental_from_projections
+    F[..., i, j] = determinant_3x3(torch.cat((M1, M2), dim=-1))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+M = tensor([[[0.8427, 0.7181, 0.2440, 0.5239, 0.6427, 0.8498],
+         [0.7153, 0.3784, 0.9667, 0.4041, 0.4295, 0.9904],
+...         [0.9028, 0.9312, 0.5501, 0.2144, 0.9885, 0.4829],
+         [0.7668, 0.6359, 0.9000, 0.5410, 0.9764, 0.1434]]])
+
+    def determinant_3x3(M):
+>       return torch.det(M)
+E       RuntimeError: linalg.det: A must be batches of square matrices, but they are 3 by 6 matrices
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:24: RuntimeError
+___________ TestFundamentalFromProjections.test_shape[cpu-float32-7] ___________
+
+self = <test_fundamental.TestFundamentalFromProjections object at 0x771b5c11f310>
+batch_size = 7, device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 4, 7])
+    def test_shape(self, batch_size, device, dtype):
+        B: int = batch_size
+        P1 = torch.rand(B, 3, 4, device=device, dtype=dtype)
+        P2 = torch.rand(B, 3, 4, device=device, dtype=dtype)
+>       F_mat = epi.fundamental_from_projections(P1, P2)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py:396: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:273: in fundamental_from_projections
+    return fundamental_from_projections(P1, P2)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:30: in fundamental_from_projections
+    F[..., i, j] = determinant_3x3(torch.cat((M1, M2), dim=-1))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+M = tensor([[[0.4508, 0.6043, 0.0098, 0.5811, 0.3718, 0.7934],
+         [0.1355, 0.4894, 0.6529, 0.2638, 0.6444, 0.6771],
+...         [0.7063, 0.0228, 0.2917, 0.6825, 0.6391, 0.5396],
+         [0.8470, 0.0409, 0.1147, 0.4199, 0.7186, 0.9320]]])
+
+    def determinant_3x3(M):
+>       return torch.det(M)
+E       RuntimeError: linalg.det: A must be batches of square matrices, but they are 3 by 6 matrices
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:24: RuntimeError
+_________ TestFundamentalFromProjections.test_shape_large[cpu-float32] _________
+
+self = <test_fundamental.TestFundamentalFromProjections object at 0x771b5c11f5e0>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_shape_large(self, device, dtype):
+        P1 = torch.rand(1, 2, 3, 4, device=device, dtype=dtype)
+        P2 = torch.rand(1, 2, 3, 4, device=device, dtype=dtype)
+>       F_mat = epi.fundamental_from_projections(P1, P2)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py:402: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:273: in fundamental_from_projections
+    return fundamental_from_projections(P1, P2)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:30: in fundamental_from_projections
+    F[..., i, j] = determinant_3x3(torch.cat((M1, M2), dim=-1))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+M = tensor([[[[0.3887, 0.2387, 0.0288, 0.1451, 0.3121, 0.4801],
+          [0.6020, 0.6317, 0.2160, 0.7685, 0.5780, 0.1043]...       [0.8148, 0.7532, 0.7285, 0.1342, 0.3299, 0.1779],
+          [0.4650, 0.0517, 0.2882, 0.6007, 0.6562, 0.5947]]]])
+
+    def determinant_3x3(M):
+>       return torch.det(M)
+E       RuntimeError: linalg.det: A must be batches of square matrices, but they are 3 by 6 matrices
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:24: RuntimeError
+_____ TestFundamentalFromProjections.test_from_to_projections[cpu-float32] _____
+
+self = <test_fundamental.TestFundamentalFromProjections object at 0x771b5c11f910>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_from_to_projections(self, device, dtype):
+        P1 = torch.tensor(
+            [[[1.0, 0.0, 0.0, 0.0], [0.0, 1.0, 0.0, 0.0], [1.0, 0.0, 1.0, 0.0]]], device=device, dtype=dtype
+        )
+    
+        P2 = torch.tensor(
+            [[[1.0, 1.0, 1.0, 3.0], [0.0, 2.0, 0.0, 3.0], [0.0, 1.0, 1.0, 0.0]]], device=device, dtype=dtype
+        )
+    
+>       F_mat = epi.fundamental_from_projections(P1, P2)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py:414: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:273: in fundamental_from_projections
+    return fundamental_from_projections(P1, P2)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:30: in fundamental_from_projections
+    F[..., i, j] = determinant_3x3(torch.cat((M1, M2), dim=-1))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+M = tensor([[[0., 0., 0., 1., 1., 3.],
+         [1., 0., 0., 2., 0., 3.],
+         [0., 1., 0., 1., 1., 0.]]])
+
+    def determinant_3x3(M):
+>       return torch.det(M)
+E       RuntimeError: linalg.det: A must be batches of square matrices, but they are 3 by 6 matrices
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:24: RuntimeError
+______________ TestFundamentalFromProjections.test_gradcheck[cpu] ______________
+
+self = <test_fundamental.TestFundamentalFromProjections object at 0x771b5c11fbe0>
+device = device(type='cpu')
+
+    def test_gradcheck(self, device):
+        P1 = torch.rand(1, 3, 4, device=device, dtype=torch.float64, requires_grad=True)
+        P2 = torch.rand(1, 3, 4, device=device, dtype=torch.float64)
+>       self.gradcheck(epi.fundamental_from_projections, (P1, P2), requires_grad=(True, False))
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py:425: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:143: in gradcheck
+    return gradcheck(func, inputs, raise_exception=raise_exception, fast_mode=fast_mode, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2052: in gradcheck
+    return _gradcheck_helper(**args)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2074: in _gradcheck_helper
+    func_out = func(*tupled_inputs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:273: in fundamental_from_projections
+    return fundamental_from_projections(P1, P2)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:30: in fundamental_from_projections
+    F[..., i, j] = determinant_3x3(torch.cat((M1, M2), dim=-1))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+M = tensor([[[0.0967, 0.8281, 0.3414, 0.3320, 0.5315, 0.2718],
+         [0.6599, 0.3433, 0.7139, 0.0298, 0.6986, 0.3879],
+         [0.1982, 0.2797, 0.4104, 0.3662, 0.2205, 0.3540]]],
+       dtype=torch.float64, grad_fn=<CatBackward0>)
+
+    def determinant_3x3(M):
+>       return torch.det(M)
+E       RuntimeError: linalg.det: A must be batches of square matrices, but they are 3 by 6 matrices
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:24: RuntimeError
+_____ TestFundamentalFromProjections.test_batch_support_check[cpu-float32] _____
+
+self = <test_fundamental.TestFundamentalFromProjections object at 0x771b5c11fee0>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_batch_support_check(self, device, dtype):
+        P1_batch = torch.tensor(
+            [
+                [
+                    [9.4692e02, -9.6658e02, 6.0862e02, -2.3076e05],
+                    [-2.1829e02, 5.4163e02, 1.3445e03, -6.4387e05],
+                    [-6.0675e-01, -6.9807e-01, 3.8021e-01, 3.8896e02],
+                ],
+                [
+                    [9.4692e02, -9.6658e02, 6.0862e02, -2.3076e05],
+                    [-2.1829e02, 5.4163e02, 1.3445e03, -6.4387e05],
+                    [-6.0675e-01, -6.9807e-01, 3.8021e-01, 3.8896e02],
+                ],
+            ],
+            device=device,
+            dtype=dtype,
+        )
+        P1 = torch.tensor(
+            [
+                [
+                    [9.4692e02, -9.6658e02, 6.0862e02, -2.3076e05],
+                    [-2.1829e02, 5.4163e02, 1.3445e03, -6.4387e05],
+                    [-6.0675e-01, -6.9807e-01, 3.8021e-01, 3.8896e02],
+                ]
+            ],
+            device=device,
+            dtype=dtype,
+        )
+        P2_batch = torch.tensor(
+            [
+                [
+                    [1.1518e03, -7.5822e02, 5.4764e02, -1.9764e05],
+                    [-2.1548e02, 5.3102e02, 1.3492e03, -6.4731e05],
+                    [-4.3727e-01, -7.8632e-01, 4.3646e-01, 3.4515e02],
+                ],
+                [
+                    [9.9595e02, -8.6464e02, 6.7959e02, -2.7517e05],
+                    [-8.1716e01, 7.7826e02, 1.2395e03, -5.8137e05],
+                    [-5.7090e-01, -6.0416e-01, 5.5594e-01, 2.8111e02],
+                ],
+            ],
+            device=device,
+            dtype=dtype,
+        )
+        P2 = torch.tensor(
+            [
+                [
+                    [1.1518e03, -7.5822e02, 5.4764e02, -1.9764e05],
+                    [-2.1548e02, 5.3102e02, 1.3492e03, -6.4731e05],
+                    [-4.3727e-01, -7.8632e-01, 4.3646e-01, 3.4515e02],
+                ]
+            ],
+            device=device,
+            dtype=dtype,
+        )
+    
+>       F_batch = epi.fundamental_from_projections(P1_batch, P2_batch)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py:483: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:273: in fundamental_from_projections
+    return fundamental_from_projections(P1, P2)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:30: in fundamental_from_projections
+    F[..., i, j] = determinant_3x3(torch.cat((M1, M2), dim=-1))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+M = tensor([[[-9.6658e+02,  6.0862e+02, -2.3076e+05, -7.5822e+02,  5.4764e+02,
+          -1.9764e+05],
+         [ 5.4163e+...     -5.8137e+05],
+         [-6.9807e-01,  3.8021e-01,  3.8896e+02, -6.0416e-01,  5.5594e-01,
+           2.8111e+02]]])
+
+    def determinant_3x3(M):
+>       return torch.det(M)
+E       RuntimeError: linalg.det: A must be batches of square matrices, but they are 3 by 6 matrices
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:24: RuntimeError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_smoke[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-4]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-7]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape_large[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_from_to_projections[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_gradcheck[cpu]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_batch_support_check[cpu-float32]
+============================== 9 failed in 0.47s ===============================
+
+
+Final Test Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'onnxrt', 'openxla', 'tvm', None, 'jit', 'inductor', 'cudagraphs'}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 9 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_smoke[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-4] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-7] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape_large[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_from_to_projections[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_gradcheck[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_batch_support_check[cpu-float32] PASSED
+
+============================== 9 passed in 0.17s ===============================
+
+
+Initial Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'onnxrt', 'cudagraphs', 'tvm', 'openxla', 'jit', 'inductor', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 9 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_smoke[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-4] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape[cpu-float32-7] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_shape_large[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_from_to_projections[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_gradcheck[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections::test_batch_support_check[cpu-float32] PASSED
+
+============================== 9 passed in 0.17s ===============================

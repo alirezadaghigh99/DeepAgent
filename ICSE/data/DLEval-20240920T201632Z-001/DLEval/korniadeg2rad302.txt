@@ -1,0 +1,23 @@
+stage: Pre-Post processing
+task: 
+data: 
+
+prompt:
+Generate a Python function called deg2rad Function that converts angles from degrees to radians.
+
+    Args:
+        tensor: Tensor of arbitrary shape.
+
+    Returns:
+        tensor with same shape as input.
+if not isinstance(tensor, Tensor):
+        raise TypeError(f"Input type is not a Tensor. Got {type(tensor)}")
+
+ ground Truth:kornia/geometry/conversions.py#L83
+
+ repo:kornia
+
+ function:deg2rad
+ 
+ test_cases:tests/geometry/test_conversions.py::TestRadDegConversions::test_deg2rad_gradcheck
+

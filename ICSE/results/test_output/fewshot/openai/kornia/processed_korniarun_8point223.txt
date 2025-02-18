@@ -1,0 +1,561 @@
+output file:
+processed_korniarun_8point223.json
+function:
+run_8point
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_noweights[cpu-float32-2-8]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_noweights[cpu-float32-2-8] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_gradcheck[cpu]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_gradcheck[cpu] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_opencv_svd[cpu-float32] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_noweights[cpu-float32-3-10] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_noweights[cpu-float32-3-10]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_opencv_svd[cpu-float32]'}
+
+All Test Cases On Generated code:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'onnxrt', 'tvm', 'inductor', 'cudagraphs', 'openxla', 'jit', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 16 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_smoke[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape[cpu-float32-1-8] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape[cpu-float32-2-9] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape[cpu-float32-3-10] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_noweights[cpu-float32-1-8] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_noweights[cpu-float32-2-8] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_noweights[cpu-float32-3-10] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_7point[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_7point[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_7point[cpu-float32-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_opencv_svd[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_7point_opencv[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_synthetic_sampson_7point[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_epipolar_constraint_7point[cpu-float32] XFAIL
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_synthetic_sampson[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_gradcheck[cpu] FAILED
+
+=================================== FAILURES ===================================
+__________ TestFindFundamental.test_shape_noweights[cpu-float32-1-8] ___________
+
+self = <test_fundamental.TestFindFundamental object at 0x7b5d33b2f760>
+batch_size = 1, num_points = 8, device = device(type='cpu')
+dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size, num_points", [(1, 8), (2, 8), (3, 10)])
+    def test_shape_noweights(self, batch_size, num_points, device, dtype):
+        B, N = batch_size, num_points
+        points1 = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points2 = torch.rand(B, N, 2, device=device, dtype=dtype)
+        weights = None
+>       F_mat = epi.find_fundamental(points1, points2, weights)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py:99: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:173: in find_fundamental
+    result = run_8point(points1, points2, weights)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:112: in run_8point
+    return run_8point(points1, points2, weights)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+points1 = tensor([[[0.8682, 0.7807],
+         [0.5586, 0.3129],
+         [0.9846, 0.4440],
+         [0.8095, 0.9678],
+         [0.9015, 0.2997],
+         [0.2357, 0.0385],
+         [0.8371, 0.0214],
+         [0.9340, 0.2220]]])
+points2 = tensor([[[0.6654, 0.5620],
+         [0.1605, 0.4732],
+         [0.4299, 0.6378],
+         [0.0942, 0.1819],
+         [0.3565, 0.3509],
+         [0.0197, 0.8569],
+         [0.9758, 0.7322],
+         [0.9894, 0.6655]]])
+weights = None
+
+    def run_8point(points1: torch.Tensor, points2: torch.Tensor, weights: torch.Tensor) -> torch.Tensor:
+        """
+        Compute the fundamental matrix using the DLT formulation with Weighted Least Squares.
+    
+        Args:
+            points1: A set of points in the first image with a tensor shape (B, N, 2), N>=8.
+            points2: A set of points in the second image with a tensor shape (B, N, 2), N>=8.
+            weights: Tensor containing the weights per point correspondence with a shape of (B, N).
+    
+        Returns:
+            The computed fundamental matrix with shape (B, 3, 3).
+        """
+        B, N, _ = points1.shape
+        ones = torch.ones((B, N, 1), dtype=points1.dtype, device=points1.device)
+        points1_h = torch.cat([points1, ones], dim=-1)
+        points2_h = torch.cat([points2, ones], dim=-1)
+        A = torch.zeros((B, N, 9), dtype=points1.dtype, device=points1.device)
+        A[:, :, 0] = points2_h[:, :, 0] * points1_h[:, :, 0]
+        A[:, :, 1] = points2_h[:, :, 0] * points1_h[:, :, 1]
+        A[:, :, 2] = points2_h[:, :, 0]
+        A[:, :, 3] = points2_h[:, :, 1] * points1_h[:, :, 0]
+        A[:, :, 4] = points2_h[:, :, 1] * points1_h[:, :, 1]
+        A[:, :, 5] = points2_h[:, :, 1]
+        A[:, :, 6] = points1_h[:, :, 0]
+        A[:, :, 7] = points1_h[:, :, 1]
+        A[:, :, 8] = 1
+>       W = weights.unsqueeze(-1)
+E       AttributeError: 'NoneType' object has no attribute 'unsqueeze'
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:37: AttributeError
+__________ TestFindFundamental.test_shape_noweights[cpu-float32-2-8] ___________
+
+self = <test_fundamental.TestFindFundamental object at 0x7b5d33b2f6a0>
+batch_size = 2, num_points = 8, device = device(type='cpu')
+dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size, num_points", [(1, 8), (2, 8), (3, 10)])
+    def test_shape_noweights(self, batch_size, num_points, device, dtype):
+        B, N = batch_size, num_points
+        points1 = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points2 = torch.rand(B, N, 2, device=device, dtype=dtype)
+        weights = None
+>       F_mat = epi.find_fundamental(points1, points2, weights)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py:99: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:173: in find_fundamental
+    result = run_8point(points1, points2, weights)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:112: in run_8point
+    return run_8point(points1, points2, weights)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+points1 = tensor([[[0.6134, 0.6993],
+         [0.8371, 0.5355],
+         [0.4541, 0.8187],
+         [0.4240, 0.6205],
+         [... 0.9686],
+         [0.4510, 0.7327],
+         [0.0556, 0.4175],
+         [0.8705, 0.6984],
+         [0.0928, 0.6079]]])
+points2 = tensor([[[0.7217, 0.2242],
+         [0.9403, 0.1180],
+         [0.9990, 0.3165],
+         [0.7450, 0.7644],
+         [... 0.4771],
+         [0.5015, 0.5060],
+         [0.7583, 0.3293],
+         [0.5870, 0.2979],
+         [0.8390, 0.1217]]])
+weights = None
+
+    def run_8point(points1: torch.Tensor, points2: torch.Tensor, weights: torch.Tensor) -> torch.Tensor:
+        """
+        Compute the fundamental matrix using the DLT formulation with Weighted Least Squares.
+    
+        Args:
+            points1: A set of points in the first image with a tensor shape (B, N, 2), N>=8.
+            points2: A set of points in the second image with a tensor shape (B, N, 2), N>=8.
+            weights: Tensor containing the weights per point correspondence with a shape of (B, N).
+    
+        Returns:
+            The computed fundamental matrix with shape (B, 3, 3).
+        """
+        B, N, _ = points1.shape
+        ones = torch.ones((B, N, 1), dtype=points1.dtype, device=points1.device)
+        points1_h = torch.cat([points1, ones], dim=-1)
+        points2_h = torch.cat([points2, ones], dim=-1)
+        A = torch.zeros((B, N, 9), dtype=points1.dtype, device=points1.device)
+        A[:, :, 0] = points2_h[:, :, 0] * points1_h[:, :, 0]
+        A[:, :, 1] = points2_h[:, :, 0] * points1_h[:, :, 1]
+        A[:, :, 2] = points2_h[:, :, 0]
+        A[:, :, 3] = points2_h[:, :, 1] * points1_h[:, :, 0]
+        A[:, :, 4] = points2_h[:, :, 1] * points1_h[:, :, 1]
+        A[:, :, 5] = points2_h[:, :, 1]
+        A[:, :, 6] = points1_h[:, :, 0]
+        A[:, :, 7] = points1_h[:, :, 1]
+        A[:, :, 8] = 1
+>       W = weights.unsqueeze(-1)
+E       AttributeError: 'NoneType' object has no attribute 'unsqueeze'
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:37: AttributeError
+__________ TestFindFundamental.test_shape_noweights[cpu-float32-3-10] __________
+
+self = <test_fundamental.TestFindFundamental object at 0x7b5d33b2fa00>
+batch_size = 3, num_points = 10, device = device(type='cpu')
+dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_size, num_points", [(1, 8), (2, 8), (3, 10)])
+    def test_shape_noweights(self, batch_size, num_points, device, dtype):
+        B, N = batch_size, num_points
+        points1 = torch.rand(B, N, 2, device=device, dtype=dtype)
+        points2 = torch.rand(B, N, 2, device=device, dtype=dtype)
+        weights = None
+>       F_mat = epi.find_fundamental(points1, points2, weights)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py:99: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:173: in find_fundamental
+    result = run_8point(points1, points2, weights)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/fundamental.py:112: in run_8point
+    return run_8point(points1, points2, weights)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+points1 = tensor([[[0.9332, 0.7580],
+         [0.1594, 0.8633],
+         [0.7360, 0.6704],
+         [0.5675, 0.0761],
+         [... 0.8016],
+         [0.9968, 0.2090],
+         [0.3212, 0.8354],
+         [0.1663, 0.6515],
+         [0.7426, 0.8274]]])
+points2 = tensor([[[0.3722, 0.0238],
+         [0.8258, 0.1718],
+         [0.6014, 0.4421],
+         [0.3194, 0.4333],
+         [... 0.3464],
+         [0.4116, 0.8150],
+         [0.3581, 0.0254],
+         [0.1729, 0.6079],
+         [0.4462, 0.6020]]])
+weights = None
+
+    def run_8point(points1: torch.Tensor, points2: torch.Tensor, weights: torch.Tensor) -> torch.Tensor:
+        """
+        Compute the fundamental matrix using the DLT formulation with Weighted Least Squares.
+    
+        Args:
+            points1: A set of points in the first image with a tensor shape (B, N, 2), N>=8.
+            points2: A set of points in the second image with a tensor shape (B, N, 2), N>=8.
+            weights: Tensor containing the weights per point correspondence with a shape of (B, N).
+    
+        Returns:
+            The computed fundamental matrix with shape (B, 3, 3).
+        """
+        B, N, _ = points1.shape
+        ones = torch.ones((B, N, 1), dtype=points1.dtype, device=points1.device)
+        points1_h = torch.cat([points1, ones], dim=-1)
+        points2_h = torch.cat([points2, ones], dim=-1)
+        A = torch.zeros((B, N, 9), dtype=points1.dtype, device=points1.device)
+        A[:, :, 0] = points2_h[:, :, 0] * points1_h[:, :, 0]
+        A[:, :, 1] = points2_h[:, :, 0] * points1_h[:, :, 1]
+        A[:, :, 2] = points2_h[:, :, 0]
+        A[:, :, 3] = points2_h[:, :, 1] * points1_h[:, :, 0]
+        A[:, :, 4] = points2_h[:, :, 1] * points1_h[:, :, 1]
+        A[:, :, 5] = points2_h[:, :, 1]
+        A[:, :, 6] = points1_h[:, :, 0]
+        A[:, :, 7] = points1_h[:, :, 1]
+        A[:, :, 8] = 1
+>       W = weights.unsqueeze(-1)
+E       AttributeError: 'NoneType' object has no attribute 'unsqueeze'
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:37: AttributeError
+_______________ TestFindFundamental.test_opencv_svd[cpu-float32] _______________
+
+self = <test_fundamental.TestFindFundamental object at 0x7b5d33b642e0>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_opencv_svd(self, device, dtype):
+        points1 = torch.tensor(
+            [
+                [
+                    [0.8569, 0.5982],
+                    [0.0059, 0.9649],
+                    [0.1968, 0.8846],
+                    [0.6084, 0.3467],
+                    [0.9633, 0.5274],
+                    [0.8941, 0.8939],
+                    [0.0863, 0.5133],
+                    [0.2645, 0.8882],
+                    [0.2411, 0.3045],
+                    [0.8199, 0.4107],
+                ]
+            ],
+            device=device,
+            dtype=dtype,
+        )
+    
+        points2 = torch.tensor(
+            [
+                [
+                    [0.0928, 0.3013],
+                    [0.0989, 0.9649],
+                    [0.0341, 0.4827],
+                    [0.8294, 0.4469],
+                    [0.2230, 0.2998],
+                    [0.1722, 0.8182],
+                    [0.5264, 0.8869],
+                    [0.8908, 0.1233],
+                    [0.2338, 0.7663],
+                    [0.4466, 0.5696],
+                ]
+            ],
+            device=device,
+            dtype=dtype,
+        )
+    
+        weights = torch.ones(1, 10, device=device, dtype=dtype)
+    
+        # generated with OpenCV using above points
+        # import cv2
+        # Fm_expected, _ = cv2.findFundamentalMat(
+        #   points1.detach().numpy().reshape(-1, 1, 2),
+        #   points2.detach().numpy().reshape(-1, 1, 2), cv2.FM_8POINT)
+    
+        Fm_expected = torch.tensor(
+            [
+                [
+                    [-0.47408533, 0.22033807, -0.00346677],
+                    [0.54935973, 1.31080955, -1.25028275],
+                    [-0.36690215, -1.08143769, 1.0],
+                ]
+            ],
+            device=device,
+            dtype=dtype,
+        )
+    
+        F_mat = epi.find_fundamental(points1, points2, weights)
+>       self.assert_close(F_mat, Fm_expected, rtol=1e-4, atol=1e-4)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py:171: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:106: in assert_close
+    return assert_close(actual, expected, rtol=rtol, atol=atol)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+actual = tensor([[[-0.1734,  0.1002, -0.0169],
+         [ 0.2148,  0.5340, -0.5009],
+         [-0.1486, -0.4399,  0.4024]]])
+expected = tensor([[[-0.4741,  0.2203, -0.0035],
+         [ 0.5494,  1.3108, -1.2503],
+         [-0.3669, -1.0814,  1.0000]]])
+rtol = 0.0001, atol = 0.0001, kwargs = {}
+
+    def assert_close(
+        actual: Tensor, expected: Tensor, *, rtol: Optional[float] = None, atol: Optional[float] = None, **kwargs: Any
+    ) -> None:
+        if rtol is None and atol is None:
+            # `torch.testing.assert_close` used different default tolerances than `torch.testing.assert_allclose`.
+            # TODO: remove this special handling as soon as https://github.com/kornia/kornia/issues/1134 is resolved
+            #  Basically, this whole wrapper function can be removed and `torch.testing.assert_close` can be used
+            #  directly.
+            rtol, atol = _default_tolerances(actual, expected)
+    
+>       return _assert_close(
+            actual,
+            expected,
+            rtol=rtol,
+            atol=atol,
+            # this is the default value for torch>=1.10, but not for torch==1.9
+            # TODO: remove this if kornia relies on torch>=1.10
+            check_stride=False,
+            equal_nan=False,
+            **kwargs,
+        )
+E       AssertionError: Tensor-likes are not close!
+E       
+E       Mismatched elements: 9 / 9 (100.0%)
+E       Greatest absolute difference: 0.7768387794494629 at index (0, 1, 1) (up to 0.0001 allowed)
+E       Greatest relative difference: 3.878894805908203 at index (0, 0, 2) (up to 0.0001 allowed)
+
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:37: AssertionError
+___________________ TestFindFundamental.test_gradcheck[cpu] ____________________
+
+self = <test_fundamental.TestFindFundamental object at 0x7b5d33b64f10>
+device = device(type='cpu')
+
+    def test_gradcheck(self, device):
+        points1 = torch.rand(1, 10, 2, device=device, dtype=torch.float64, requires_grad=True)
+        points2 = torch.rand(1, 10, 2, device=device, dtype=torch.float64)
+        weights = torch.ones(1, 10, device=device, dtype=torch.float64)
+>       self.gradcheck(epi.find_fundamental, (points1, points2, weights))
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py:279: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:143: in gradcheck
+    return gradcheck(func, inputs, raise_exception=raise_exception, fast_mode=fast_mode, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2052: in gradcheck
+    return _gradcheck_helper(**args)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2081: in _gradcheck_helper
+    _gradcheck_real_imag(
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:1491: in _gradcheck_real_imag
+    gradcheck_fn(
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:1921: in _fast_gradcheck
+    analytical_vJu = _get_analytical_vJu_backward_mode(
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:804: in _get_analytical_vJu_backward_mode
+    all_vJ = _check_analytical_jacobian_attributes(
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:772: in _check_analytical_jacobian_attributes
+    vjps1 = _get_analytical_vjps_wrt_specific_output(vjp_fn, output.clone(), v)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:907: in _get_analytical_vjps_wrt_specific_output
+    grad_inputs = vjp_fn(v.reshape(sample_output.shape))
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:766: in vjp_fn
+    return torch.autograd.grad(
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/__init__.py:496: in grad
+    result = _engine_run_backward(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+t_outputs = (tensor([[[-0.2448, -0.6218,  0.5272],
+         [-0.1164,  0.1248, -0.0099],
+         [ 0.1736,  0.3434, -0.3134]]], dtype=torch.float64,
+       grad_fn=<UnsafeViewBackward0>),)
+args = ((tensor([[[0.0298, 0.3039, 0.1444],
+         [0.2582, 0.1851, 0.4766],
+         [0.6157, 0.1481, 0.3959]]], dtype=tor..._grad=True), tensor([[1., 1., 1., 1., 1., 1., 1., 1., 1., 1.]], dtype=torch.float64,
+       requires_grad=True)), True)
+kwargs = {'accumulate_grad': False}, attach_logging_hooks = False
+
+    def _engine_run_backward(
+        t_outputs: Sequence[Union[torch.Tensor, GradientEdge]],
+        *args: Any,
+        **kwargs: Any,
+    ) -> Tuple[torch.Tensor, ...]:
+        attach_logging_hooks = log.getEffectiveLevel() <= logging.DEBUG
+        if attach_logging_hooks:
+            unregister_hooks = _register_logging_hooks_on_whole_graph(t_outputs)
+        try:
+>           return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+                t_outputs, *args, **kwargs
+            )  # Calls into the C++ engine to run the backward pass
+E           RuntimeError: one of the variables needed for gradient computation has been modified by an inplace operation: [torch.DoubleTensor [1, 3]], which is output 1 of LinalgSvdBackward0, is at version 1; expected version 0 instead. Hint: enable anomaly detection to find the operation that failed to compute its gradient, with torch.autograd.set_detect_anomaly(True).
+
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/graph.py:825: RuntimeError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_noweights[cpu-float32-1-8]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_noweights[cpu-float32-2-8]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_noweights[cpu-float32-3-10]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_opencv_svd[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_gradcheck[cpu]
+=================== 5 failed, 10 passed, 1 xfailed in 0.47s ====================
+
+
+Final Test Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'jit', 'inductor', 'openxla', 'tvm', 'onnxrt', None, 'cudagraphs'}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 16 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_smoke[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape[cpu-float32-1-8] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape[cpu-float32-2-9] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape[cpu-float32-3-10] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_noweights[cpu-float32-1-8] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_noweights[cpu-float32-2-8] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_noweights[cpu-float32-3-10] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_7point[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_7point[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_7point[cpu-float32-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_opencv_svd[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_7point_opencv[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_synthetic_sampson_7point[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_epipolar_constraint_7point[cpu-float32] XPASS
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_synthetic_sampson[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_gradcheck[cpu] PASSED
+
+======================== 15 passed, 1 xpassed in 0.22s =========================
+
+
+Initial Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'onnxrt', 'jit', 'openxla', 'cudagraphs', 'inductor', None, 'tvm'}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 16 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_smoke[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape[cpu-float32-1-8] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape[cpu-float32-2-9] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape[cpu-float32-3-10] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_noweights[cpu-float32-1-8] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_noweights[cpu-float32-2-8] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_noweights[cpu-float32-3-10] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_7point[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_7point[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_shape_7point[cpu-float32-3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_opencv_svd[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_7point_opencv[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_synthetic_sampson_7point[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_epipolar_constraint_7point[cpu-float32] XPASS
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_synthetic_sampson[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_fundamental.py::TestFindFundamental::test_gradcheck[cpu] PASSED
+
+======================== 15 passed, 1 xpassed in 0.22s =========================

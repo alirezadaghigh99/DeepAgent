@@ -1,0 +1,14 @@
+stage: Model Construction
+task: Segmentation
+data: Image
+
+prompt:
+Create a Python function called `_create_identity_grid` that generates a grid of normalized coordinates for a given image size. The input should be a list of integers representing the dimensions of the grid (height and width), and the function should return a PyTorch Tensor containing the grid coordinates, ready for use in spatial transformations.
+
+ ground Truth:torchvision/transforms/_functional_tensor.py
+
+ repo:vision
+
+ function:_create_identity_grid
+ 
+ test_cases:test/test_functional_tensor.py::test_elastic_transform_consistency

@@ -1,0 +1,26 @@
+stage: Model Construction
+task: 
+data: Table
+
+prompt:
+Generate a Python function called _initialize_nmf that computes an initial guess for the non-negative rank k matrix approximation for a given data matrix X using Non-negative Matrix Factorization (NMF) initialization algorithms. The function takes the following parameters:
+
+- X: array-like of shape (n_samples, n_features) - The data matrix to be decomposed.
+- n_components: int - The number of components desired in the approximation.
+- init: {'random', 'nndsvd', 'nndsvda', 'nndsvdar'}, default=None - Method used to initialize the procedure.
+- eps: float, default=1e-6 - Truncate all values less than this in the output to zero.
+- random_state: int, RandomState instance or None, default=None - Used for reproducible results.
+
+The function returns two arrays:
+- W: array-like of shape (n_samples, n_components) - Initial guesses for solving X ~= WH.
+- H: array-like of shape (n_components, n_features) - Initial guesses for solving X ~= WH.
+
+The function implements different initialization methods based on the 'init' parameter, such as random initialization, NNDSVD initialization, and custom initialization. It also handles cases where the 'init' parameter is set to 'nndsvd', 'nndsvda', or 'nndsvdar'.
+
+ ground Truth:sklearn/decomposition/_nmf.py
+
+ repo:scikit-learn
+
+ function:_initialize_nmf
+ 
+ test_cases:sklearn/decomposition/tests/test_nmf.py::test_nmf_minibatchnmf_equivalence

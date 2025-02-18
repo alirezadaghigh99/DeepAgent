@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: 
+
+prompt:
+Generate a Python function called kron that computes the Kronecker product between two torch tensors. The input parameters are two torch tensors t1 and t2. The function returns a torch tensor called kron_product, which is the result of the Kronecker product operation between t1 and t2.
+
+ ground Truth:laplace/utils/utils.py
+
+ repo:Laplace
+
+ function:kron
+ 
+ test_cases:tests/test_matrix.py

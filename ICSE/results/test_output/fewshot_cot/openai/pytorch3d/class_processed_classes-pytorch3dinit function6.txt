@@ -1,0 +1,551 @@
+output file:
+processed_classes-pytorch3dinit function6.json
+function:
+__init__
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_inverse FAILED [ 23%]', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_mixed_scalars FAILED [ 61%]', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_torch_vectors', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_python_scalar', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_bad_broadcast', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_torch_scalar FAILED [ 76%]', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_torch_scalar', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_torch_vectors FAILED [ 92%]', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_vector_broadcast FAILED [100%]', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_matrix', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_get_item', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_get_item FAILED [ 15%]', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_matrix FAILED [ 30%]', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_bad_broadcast FAILED [  7%]', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_python_scalar FAILED [ 69%]', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_matrix_extra_args FAILED [ 38%]', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_mixed_broadcast', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_torch_scalar_grads FAILED [ 84%]', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_mixed_scalars', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_vector_broadcast', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_mixed_broadcast_grad FAILED [ 53%]', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_matrix_extra_args', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_inverse', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_torch_scalar_grads', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_mixed_broadcast FAILED [ 46%]', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_mixed_broadcast_grad'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 13 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_bad_broadcast FAILED [  7%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_get_item FAILED [ 15%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_inverse FAILED [ 23%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_matrix FAILED [ 30%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_matrix_extra_args FAILED [ 38%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_mixed_broadcast FAILED [ 46%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_mixed_broadcast_grad FAILED [ 53%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_mixed_scalars FAILED [ 61%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_python_scalar FAILED [ 69%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_torch_scalar FAILED [ 76%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_torch_scalar_grads FAILED [ 84%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_torch_vectors FAILED [ 92%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_vector_broadcast FAILED [100%]
+
+=================================== FAILURES ===================================
+_______________________ TestTranslate.test_bad_broadcast _______________________
+
+self = <tests.test_transforms.TestTranslate testMethod=test_bad_broadcast>
+
+    def test_bad_broadcast(self):
+        x = torch.tensor([0.2, 2.0, 20.0])
+        y = torch.tensor([0.3, 3.0])
+        z = torch.tensor([0.4])
+        with self.assertRaises(ValueError):
+>           Translate(x, y, z)
+E           AssertionError: ValueError not raised
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:611: AssertionError
+_________________________ TestTranslate.test_get_item __________________________
+
+self = <tests.test_transforms.TestTranslate testMethod=test_get_item>
+batch_size = 5
+
+    def test_get_item(self, batch_size=5):
+        device = torch.device("cuda:0")
+        xyz = torch.randn(size=[batch_size, 3], device=device, dtype=torch.float32)
+>       t3d = Translate(xyz)
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:691: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pytorch3d.transforms.transform3d.Translate object at 0x75936fd23970>
+x = tensor([[ 0.9524,  0.9828,  0.4524],
+        [-1.0384,  1.2276, -0.9538],
+        [ 1.6265,  0.4239,  0.9345],
+        [-1.3331, -2.7838, -0.2224],
+        [ 0.5495,  0.0036,  0.6172]], device='cuda:0')
+y = None, z = None, dtype = torch.float32, device = None
+
+    def __init__(self, x, y=None, z=None, dtype: torch.dtype=torch.float32, device: Optional[torch.device]=None) -> None:
+        """
+        Initialize a 3D translation transform.
+    
+        Args:
+            x (Union[torch.Tensor, float]): If a tensor, should be of shape (N, 3).
+                                             If a float, represents the x translation.
+            y (Optional[Union[torch.Tensor, float]]): y translation value if x, y, z are provided separately.
+            z (Optional[Union[torch.Tensor, float]]): z translation value if x, y, z are provided separately.
+            dtype (torch.dtype): Data type for the translation matrix. Defaults to torch.float32.
+            device (Optional[torch.device]): Device for the translation matrix. Defaults to None.
+        """
+        if isinstance(x, torch.Tensor) and x.shape[-1] == 3:
+            self.translation = x.to(dtype=dtype, device=device)
+        elif y is not None and z is not None:
+            x = torch.tensor(x, dtype=dtype, device=device) if not isinstance(x, torch.Tensor) else x.to(dtype=dtype, device=device)
+            y = torch.tensor(y, dtype=dtype, device=device) if not isinstance(y, torch.Tensor) else y.to(dtype=dtype, device=device)
+            z = torch.tensor(z, dtype=dtype, device=device) if not isinstance(z, torch.Tensor) else z.to(dtype=dtype, device=device)
+            self.translation = torch.stack((x, y, z), dim=-1)
+        else:
+            raise ValueError('Invalid input: Provide either a tensor of shape (N, 3) or individual x, y, z values.')
+        self.translation_matrix = torch.eye(4, dtype=dtype, device=device)
+>       self.translation_matrix[:3, 3] = self.translation
+E       RuntimeError: expand(torch.cuda.FloatTensor{[5, 3]}, size=[3]): the number of sizes provided (1) must be greater or equal to the number of dimensions in the tensor (2)
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:461: RuntimeError
+__________________________ TestTranslate.test_inverse __________________________
+
+self = <tests.test_transforms.TestTranslate testMethod=test_inverse>
+
+    def test_inverse(self):
+        xyz = torch.tensor([[0.2, 0.3, 0.4], [2.0, 3.0, 4.0]])
+>       t = Translate(xyz)
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:681: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pytorch3d.transforms.transform3d.Translate object at 0x75936fdff2b0>
+x = tensor([[0.2000, 0.3000, 0.4000],
+        [2.0000, 3.0000, 4.0000]])
+y = None, z = None, dtype = torch.float32, device = None
+
+    def __init__(self, x, y=None, z=None, dtype: torch.dtype=torch.float32, device: Optional[torch.device]=None) -> None:
+        """
+        Initialize a 3D translation transform.
+    
+        Args:
+            x (Union[torch.Tensor, float]): If a tensor, should be of shape (N, 3).
+                                             If a float, represents the x translation.
+            y (Optional[Union[torch.Tensor, float]]): y translation value if x, y, z are provided separately.
+            z (Optional[Union[torch.Tensor, float]]): z translation value if x, y, z are provided separately.
+            dtype (torch.dtype): Data type for the translation matrix. Defaults to torch.float32.
+            device (Optional[torch.device]): Device for the translation matrix. Defaults to None.
+        """
+        if isinstance(x, torch.Tensor) and x.shape[-1] == 3:
+            self.translation = x.to(dtype=dtype, device=device)
+        elif y is not None and z is not None:
+            x = torch.tensor(x, dtype=dtype, device=device) if not isinstance(x, torch.Tensor) else x.to(dtype=dtype, device=device)
+            y = torch.tensor(y, dtype=dtype, device=device) if not isinstance(y, torch.Tensor) else y.to(dtype=dtype, device=device)
+            z = torch.tensor(z, dtype=dtype, device=device) if not isinstance(z, torch.Tensor) else z.to(dtype=dtype, device=device)
+            self.translation = torch.stack((x, y, z), dim=-1)
+        else:
+            raise ValueError('Invalid input: Provide either a tensor of shape (N, 3) or individual x, y, z values.')
+        self.translation_matrix = torch.eye(4, dtype=dtype, device=device)
+>       self.translation_matrix[:3, 3] = self.translation
+E       RuntimeError: expand(torch.FloatTensor{[2, 3]}, size=[3]): the number of sizes provided (1) must be greater or equal to the number of dimensions in the tensor (2)
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:461: RuntimeError
+__________________________ TestTranslate.test_matrix ___________________________
+
+self = <tests.test_transforms.TestTranslate testMethod=test_matrix>
+
+    def test_matrix(self):
+        xyz = torch.tensor([[0.2, 0.3, 0.4], [2.0, 3.0, 4.0]])
+>       t = Translate(xyz)
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:654: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pytorch3d.transforms.transform3d.Translate object at 0x75941cb68be0>
+x = tensor([[0.2000, 0.3000, 0.4000],
+        [2.0000, 3.0000, 4.0000]])
+y = None, z = None, dtype = torch.float32, device = None
+
+    def __init__(self, x, y=None, z=None, dtype: torch.dtype=torch.float32, device: Optional[torch.device]=None) -> None:
+        """
+        Initialize a 3D translation transform.
+    
+        Args:
+            x (Union[torch.Tensor, float]): If a tensor, should be of shape (N, 3).
+                                             If a float, represents the x translation.
+            y (Optional[Union[torch.Tensor, float]]): y translation value if x, y, z are provided separately.
+            z (Optional[Union[torch.Tensor, float]]): z translation value if x, y, z are provided separately.
+            dtype (torch.dtype): Data type for the translation matrix. Defaults to torch.float32.
+            device (Optional[torch.device]): Device for the translation matrix. Defaults to None.
+        """
+        if isinstance(x, torch.Tensor) and x.shape[-1] == 3:
+            self.translation = x.to(dtype=dtype, device=device)
+        elif y is not None and z is not None:
+            x = torch.tensor(x, dtype=dtype, device=device) if not isinstance(x, torch.Tensor) else x.to(dtype=dtype, device=device)
+            y = torch.tensor(y, dtype=dtype, device=device) if not isinstance(y, torch.Tensor) else y.to(dtype=dtype, device=device)
+            z = torch.tensor(z, dtype=dtype, device=device) if not isinstance(z, torch.Tensor) else z.to(dtype=dtype, device=device)
+            self.translation = torch.stack((x, y, z), dim=-1)
+        else:
+            raise ValueError('Invalid input: Provide either a tensor of shape (N, 3) or individual x, y, z values.')
+        self.translation_matrix = torch.eye(4, dtype=dtype, device=device)
+>       self.translation_matrix[:3, 3] = self.translation
+E       RuntimeError: expand(torch.FloatTensor{[2, 3]}, size=[3]): the number of sizes provided (1) must be greater or equal to the number of dimensions in the tensor (2)
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:461: RuntimeError
+_____________________ TestTranslate.test_matrix_extra_args _____________________
+
+self = <tests.test_transforms.TestTranslate testMethod=test_matrix_extra_args>
+
+    def test_matrix_extra_args(self):
+        xyz = torch.tensor([[0.2, 0.3, 0.4], [2.0, 3.0, 4.0]])
+        with self.assertRaises(ValueError):
+>           Translate(xyz, xyz[:, 1], xyz[:, 2])
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:677: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def __init__(self, x, y=None, z=None, dtype: torch.dtype=torch.float32, device: Optional[torch.device]=None) -> None:
+        """
+        Initialize a 3D translation transform.
+    
+        Args:
+            x (Union[torch.Tensor, float]): If a tensor, should be of shape (N, 3).
+                                             If a float, represents the x translation.
+            y (Optional[Union[torch.Tensor, float]]): y translation value if x, y, z are provided separately.
+            z (Optional[Union[torch.Tensor, float]]): z translation value if x, y, z are provided separately.
+            dtype (torch.dtype): Data type for the translation matrix. Defaults to torch.float32.
+            device (Optional[torch.device]): Device for the translation matrix. Defaults to None.
+        """
+        if isinstance(x, torch.Tensor) and x.shape[-1] == 3:
+            self.translation = x.to(dtype=dtype, device=device)
+        elif y is not None and z is not None:
+            x = torch.tensor(x, dtype=dtype, device=device) if not isinstance(x, torch.Tensor) else x.to(dtype=dtype, device=device)
+            y = torch.tensor(y, dtype=dtype, device=device) if not isinstance(y, torch.Tensor) else y.to(dtype=dtype, device=device)
+            z = torch.tensor(z, dtype=dtype, device=device) if not isinstance(z, torch.Tensor) else z.to(dtype=dtype, device=device)
+            self.translation = torch.stack((x, y, z), dim=-1)
+        else:
+            raise ValueError('Invalid input: Provide either a tensor of shape (N, 3) or individual x, y, z values.')
+        self.translation_matrix = torch.eye(4, dtype=dtype, device=device)
+>       self.translation_matrix[:3, 3] = self.translation
+E       RuntimeError: expand(torch.FloatTensor{[2, 3]}, size=[3]): the number of sizes provided (1) must be greater or equal to the number of dimensions in the tensor (2)
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:461: RuntimeError
+______________________ TestTranslate.test_mixed_broadcast ______________________
+
+self = <tests.test_transforms.TestTranslate testMethod=test_mixed_broadcast>
+
+    def test_mixed_broadcast(self):
+        x = 0.2
+        y = torch.tensor(0.3)
+        z = torch.tensor([0.4, 4.0])
+>       t = Translate(x, y, z)
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:617: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pytorch3d.transforms.transform3d.Translate object at 0x7593681bc670>
+x = tensor(0.2000), y = tensor(0.3000), z = tensor([0.4000, 4.0000])
+dtype = torch.float32, device = None
+
+    def __init__(self, x, y=None, z=None, dtype: torch.dtype=torch.float32, device: Optional[torch.device]=None) -> None:
+        """
+        Initialize a 3D translation transform.
+    
+        Args:
+            x (Union[torch.Tensor, float]): If a tensor, should be of shape (N, 3).
+                                             If a float, represents the x translation.
+            y (Optional[Union[torch.Tensor, float]]): y translation value if x, y, z are provided separately.
+            z (Optional[Union[torch.Tensor, float]]): z translation value if x, y, z are provided separately.
+            dtype (torch.dtype): Data type for the translation matrix. Defaults to torch.float32.
+            device (Optional[torch.device]): Device for the translation matrix. Defaults to None.
+        """
+        if isinstance(x, torch.Tensor) and x.shape[-1] == 3:
+            self.translation = x.to(dtype=dtype, device=device)
+        elif y is not None and z is not None:
+            x = torch.tensor(x, dtype=dtype, device=device) if not isinstance(x, torch.Tensor) else x.to(dtype=dtype, device=device)
+            y = torch.tensor(y, dtype=dtype, device=device) if not isinstance(y, torch.Tensor) else y.to(dtype=dtype, device=device)
+            z = torch.tensor(z, dtype=dtype, device=device) if not isinstance(z, torch.Tensor) else z.to(dtype=dtype, device=device)
+>           self.translation = torch.stack((x, y, z), dim=-1)
+E           RuntimeError: stack expects each tensor to be equal size, but got [] at entry 0 and [2] at entry 2
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:457: RuntimeError
+___________________ TestTranslate.test_mixed_broadcast_grad ____________________
+
+self = <tests.test_transforms.TestTranslate testMethod=test_mixed_broadcast_grad>
+
+    def test_mixed_broadcast_grad(self):
+        x = 0.2
+        y = torch.tensor(0.3, requires_grad=True)
+        z = torch.tensor([0.4, 4.0], requires_grad=True)
+>       t = Translate(x, y, z)
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:641: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pytorch3d.transforms.transform3d.Translate object at 0x75941cb6efd0>
+x = tensor(0.2000), y = tensor(0.3000, requires_grad=True)
+z = tensor([0.4000, 4.0000], requires_grad=True), dtype = torch.float32
+device = None
+
+    def __init__(self, x, y=None, z=None, dtype: torch.dtype=torch.float32, device: Optional[torch.device]=None) -> None:
+        """
+        Initialize a 3D translation transform.
+    
+        Args:
+            x (Union[torch.Tensor, float]): If a tensor, should be of shape (N, 3).
+                                             If a float, represents the x translation.
+            y (Optional[Union[torch.Tensor, float]]): y translation value if x, y, z are provided separately.
+            z (Optional[Union[torch.Tensor, float]]): z translation value if x, y, z are provided separately.
+            dtype (torch.dtype): Data type for the translation matrix. Defaults to torch.float32.
+            device (Optional[torch.device]): Device for the translation matrix. Defaults to None.
+        """
+        if isinstance(x, torch.Tensor) and x.shape[-1] == 3:
+            self.translation = x.to(dtype=dtype, device=device)
+        elif y is not None and z is not None:
+            x = torch.tensor(x, dtype=dtype, device=device) if not isinstance(x, torch.Tensor) else x.to(dtype=dtype, device=device)
+            y = torch.tensor(y, dtype=dtype, device=device) if not isinstance(y, torch.Tensor) else y.to(dtype=dtype, device=device)
+            z = torch.tensor(z, dtype=dtype, device=device) if not isinstance(z, torch.Tensor) else z.to(dtype=dtype, device=device)
+>           self.translation = torch.stack((x, y, z), dim=-1)
+E           RuntimeError: stack expects each tensor to be equal size, but got [] at entry 0 and [2] at entry 2
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:457: RuntimeError
+_______________________ TestTranslate.test_mixed_scalars _______________________
+
+self = <tests.test_transforms.TestTranslate testMethod=test_mixed_scalars>
+
+    def test_mixed_scalars(self):
+        x = 0.2
+        y = torch.tensor(0.3)
+        z = 0.4
+        t = Translate(x, y, z)
+        matrix = torch.tensor(
+            [
+                [
+                    [1.0, 0.0, 0.0, 0],
+                    [0.0, 1.0, 0.0, 0],
+                    [0.0, 0.0, 1.0, 0],
+                    [0.2, 0.3, 0.4, 1],
+                ]
+            ],
+            dtype=torch.float32,
+        )
+>       self.assertTrue(torch.allclose(t._matrix, matrix))
+E       AttributeError: 'Translate' object has no attribute '_matrix'
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:544: AttributeError
+_______________________ TestTranslate.test_python_scalar _______________________
+
+self = <tests.test_transforms.TestTranslate testMethod=test_python_scalar>
+
+    def test_python_scalar(self):
+        t = Translate(0.2, 0.3, 0.4)
+        matrix = torch.tensor(
+            [
+                [
+                    [1.0, 0.0, 0.0, 0],
+                    [0.0, 1.0, 0.0, 0],
+                    [0.0, 0.0, 1.0, 0],
+                    [0.2, 0.3, 0.4, 1],
+                ]
+            ],
+            dtype=torch.float32,
+        )
+>       self.assertTrue(torch.allclose(t._matrix, matrix))
+E       AttributeError: 'Translate' object has no attribute '_matrix'
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:508: AttributeError
+_______________________ TestTranslate.test_torch_scalar ________________________
+
+self = <tests.test_transforms.TestTranslate testMethod=test_torch_scalar>
+
+    def test_torch_scalar(self):
+        x = torch.tensor(0.2)
+        y = torch.tensor(0.3)
+        z = torch.tensor(0.4)
+>       t = Translate(x, y, z)
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:514: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pytorch3d.transforms.transform3d.Translate object at 0x75936fdff550>
+x = tensor(0.2000), y = tensor(0.3000), z = tensor(0.4000)
+dtype = torch.float32, device = None
+
+    def __init__(self, x, y=None, z=None, dtype: torch.dtype=torch.float32, device: Optional[torch.device]=None) -> None:
+        """
+        Initialize a 3D translation transform.
+    
+        Args:
+            x (Union[torch.Tensor, float]): If a tensor, should be of shape (N, 3).
+                                             If a float, represents the x translation.
+            y (Optional[Union[torch.Tensor, float]]): y translation value if x, y, z are provided separately.
+            z (Optional[Union[torch.Tensor, float]]): z translation value if x, y, z are provided separately.
+            dtype (torch.dtype): Data type for the translation matrix. Defaults to torch.float32.
+            device (Optional[torch.device]): Device for the translation matrix. Defaults to None.
+        """
+>       if isinstance(x, torch.Tensor) and x.shape[-1] == 3:
+E       IndexError: tuple index out of range
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:451: IndexError
+____________________ TestTranslate.test_torch_scalar_grads _____________________
+
+self = <tests.test_transforms.TestTranslate testMethod=test_torch_scalar_grads>
+
+    def test_torch_scalar_grads(self):
+        # Make sure backprop works if we give torch scalars
+        x = torch.tensor(0.2, requires_grad=True)
+        y = torch.tensor(0.3, requires_grad=True)
+        z = torch.tensor(0.4)
+>       t = Translate(x, y, z)
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:551: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pytorch3d.transforms.transform3d.Translate object at 0x75941cb74c10>
+x = tensor(0.2000, requires_grad=True), y = tensor(0.3000, requires_grad=True)
+z = tensor(0.4000), dtype = torch.float32, device = None
+
+    def __init__(self, x, y=None, z=None, dtype: torch.dtype=torch.float32, device: Optional[torch.device]=None) -> None:
+        """
+        Initialize a 3D translation transform.
+    
+        Args:
+            x (Union[torch.Tensor, float]): If a tensor, should be of shape (N, 3).
+                                             If a float, represents the x translation.
+            y (Optional[Union[torch.Tensor, float]]): y translation value if x, y, z are provided separately.
+            z (Optional[Union[torch.Tensor, float]]): z translation value if x, y, z are provided separately.
+            dtype (torch.dtype): Data type for the translation matrix. Defaults to torch.float32.
+            device (Optional[torch.device]): Device for the translation matrix. Defaults to None.
+        """
+>       if isinstance(x, torch.Tensor) and x.shape[-1] == 3:
+E       IndexError: tuple index out of range
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:451: IndexError
+_______________________ TestTranslate.test_torch_vectors _______________________
+
+self = <tests.test_transforms.TestTranslate testMethod=test_torch_vectors>
+
+    def test_torch_vectors(self):
+        x = torch.tensor([0.2, 2.0])
+        y = torch.tensor([0.3, 3.0])
+        z = torch.tensor([0.4, 4.0])
+>       t = Translate(x, y, z)
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:562: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pytorch3d.transforms.transform3d.Translate object at 0x7593680c38e0>
+x = tensor([0.2000, 2.0000]), y = tensor([0.3000, 3.0000])
+z = tensor([0.4000, 4.0000]), dtype = torch.float32, device = None
+
+    def __init__(self, x, y=None, z=None, dtype: torch.dtype=torch.float32, device: Optional[torch.device]=None) -> None:
+        """
+        Initialize a 3D translation transform.
+    
+        Args:
+            x (Union[torch.Tensor, float]): If a tensor, should be of shape (N, 3).
+                                             If a float, represents the x translation.
+            y (Optional[Union[torch.Tensor, float]]): y translation value if x, y, z are provided separately.
+            z (Optional[Union[torch.Tensor, float]]): z translation value if x, y, z are provided separately.
+            dtype (torch.dtype): Data type for the translation matrix. Defaults to torch.float32.
+            device (Optional[torch.device]): Device for the translation matrix. Defaults to None.
+        """
+        if isinstance(x, torch.Tensor) and x.shape[-1] == 3:
+            self.translation = x.to(dtype=dtype, device=device)
+        elif y is not None and z is not None:
+            x = torch.tensor(x, dtype=dtype, device=device) if not isinstance(x, torch.Tensor) else x.to(dtype=dtype, device=device)
+            y = torch.tensor(y, dtype=dtype, device=device) if not isinstance(y, torch.Tensor) else y.to(dtype=dtype, device=device)
+            z = torch.tensor(z, dtype=dtype, device=device) if not isinstance(z, torch.Tensor) else z.to(dtype=dtype, device=device)
+            self.translation = torch.stack((x, y, z), dim=-1)
+        else:
+            raise ValueError('Invalid input: Provide either a tensor of shape (N, 3) or individual x, y, z values.')
+        self.translation_matrix = torch.eye(4, dtype=dtype, device=device)
+>       self.translation_matrix[:3, 3] = self.translation
+E       RuntimeError: expand(torch.FloatTensor{[2, 3]}, size=[3]): the number of sizes provided (1) must be greater or equal to the number of dimensions in the tensor (2)
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:461: RuntimeError
+_____________________ TestTranslate.test_vector_broadcast ______________________
+
+self = <tests.test_transforms.TestTranslate testMethod=test_vector_broadcast>
+
+    def test_vector_broadcast(self):
+        x = torch.tensor([0.2, 2.0])
+        y = torch.tensor([0.3, 3.0])
+        z = torch.tensor([0.4])
+>       t = Translate(x, y, z)
+
+/local/data0/moved_data/pytorch3d/tests/test_transforms.py:586: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pytorch3d.transforms.transform3d.Translate object at 0x7593681f83a0>
+x = tensor([0.2000, 2.0000]), y = tensor([0.3000, 3.0000]), z = tensor([0.4000])
+dtype = torch.float32, device = None
+
+    def __init__(self, x, y=None, z=None, dtype: torch.dtype=torch.float32, device: Optional[torch.device]=None) -> None:
+        """
+        Initialize a 3D translation transform.
+    
+        Args:
+            x (Union[torch.Tensor, float]): If a tensor, should be of shape (N, 3).
+                                             If a float, represents the x translation.
+            y (Optional[Union[torch.Tensor, float]]): y translation value if x, y, z are provided separately.
+            z (Optional[Union[torch.Tensor, float]]): z translation value if x, y, z are provided separately.
+            dtype (torch.dtype): Data type for the translation matrix. Defaults to torch.float32.
+            device (Optional[torch.device]): Device for the translation matrix. Defaults to None.
+        """
+        if isinstance(x, torch.Tensor) and x.shape[-1] == 3:
+            self.translation = x.to(dtype=dtype, device=device)
+        elif y is not None and z is not None:
+            x = torch.tensor(x, dtype=dtype, device=device) if not isinstance(x, torch.Tensor) else x.to(dtype=dtype, device=device)
+            y = torch.tensor(y, dtype=dtype, device=device) if not isinstance(y, torch.Tensor) else y.to(dtype=dtype, device=device)
+            z = torch.tensor(z, dtype=dtype, device=device) if not isinstance(z, torch.Tensor) else z.to(dtype=dtype, device=device)
+>           self.translation = torch.stack((x, y, z), dim=-1)
+E           RuntimeError: stack expects each tensor to be equal size, but got [2] at entry 0 and [1] at entry 2
+
+/local/data0/moved_data/pytorch3d/pytorch3d/transforms/transform3d.py:457: RuntimeError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_bad_broadcast
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_get_item
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_inverse
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_matrix
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_matrix_extra_args
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_mixed_broadcast
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_mixed_broadcast_grad
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_mixed_scalars
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_python_scalar
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_torch_scalar
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_torch_scalar_grads
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_torch_vectors
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_vector_broadcast
+============================== 13 failed in 1.46s ==============================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 13 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_bad_broadcast PASSED [  7%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_get_item PASSED [ 15%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_inverse PASSED [ 23%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_matrix PASSED [ 30%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_matrix_extra_args PASSED [ 38%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_mixed_broadcast PASSED [ 46%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_mixed_broadcast_grad PASSED [ 53%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_mixed_scalars PASSED [ 61%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_python_scalar PASSED [ 69%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_torch_scalar PASSED [ 76%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_torch_scalar_grads PASSED [ 84%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_torch_vectors PASSED [ 92%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_vector_broadcast PASSED [100%]
+
+============================== 13 passed in 1.12s ==============================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 13 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_bad_broadcast PASSED [  7%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_get_item PASSED [ 15%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_inverse PASSED [ 23%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_matrix PASSED [ 30%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_matrix_extra_args PASSED [ 38%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_mixed_broadcast PASSED [ 46%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_mixed_broadcast_grad PASSED [ 53%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_mixed_scalars PASSED [ 61%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_python_scalar PASSED [ 69%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_torch_scalar PASSED [ 76%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_torch_scalar_grads PASSED [ 84%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_torch_vectors PASSED [ 92%]
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_transforms.py::TestTranslate::test_vector_broadcast PASSED [100%]
+
+============================== 13 passed in 1.11s ==============================

@@ -1,0 +1,18 @@
+stage: Pre-Post processing
+task: Classification
+data: 
+
+prompt:
+Generate a Python function called value_counts that takes in a list or numpy array x and optional parameters num_classes (default: None) and multi_label (default: False). The function returns an np.ndarray of shape (K, 1), where K is the number of unique entries in x, containing the value counts for every unique item in the input list/array.
+
+If multi_label is set to True, the function assumes that x is a list of iterables and flattens it before calculating the value counts. If num_classes is provided and there are missing classes in the input, the function fills in the value counts for those missing classes with zeros.
+
+The function handles both single-labeled and multi-labeled data, supporting classification tasks where an example can have one or more labels. The output includes the counts for each unique item in the input list/array, with zeros for any missing classes when num_classes is specified.
+
+ ground Truth:cleanlab/internal/util.py
+
+ repo:cleanlab
+
+ function:value_counts
+ 
+ test_cases:tests/test_util.py

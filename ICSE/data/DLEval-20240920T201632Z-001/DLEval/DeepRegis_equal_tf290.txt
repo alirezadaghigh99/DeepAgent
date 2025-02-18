@@ -1,0 +1,15 @@
+stage: Evaluating&Metrics
+task: 
+data: 
+
+prompt:
+Generate a Python function called is_equal_tf that checks if two TensorFlow tensors are nearly equal within a specified tolerance. The function takes in two TensorFlow tensors x and y, along with an optional error margin atol.The output of the function is a boolean value indicating whether the two tensors are nearly equal.
+
+ ground Truth:test/unit/util.py
+
+ repo:DeepReg
+
+ function:is_equal_tf
+ 
+ test_cases:test/unit/test_layer_util.py
+

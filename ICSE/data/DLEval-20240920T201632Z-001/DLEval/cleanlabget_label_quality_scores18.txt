@@ -1,0 +1,31 @@
+stage: Evaluating&Metrics
+task: Regression
+data: Table
+
+prompt:
+Create a Python function called get_label_quality_scores that calculates label quality scores for each example in a regression dataset. The function takes in two array-like inputs: labels (raw labels from the original dataset) and predictions (predicted labels for each example). Additionally, the function has an optional keyword argument method, which specifies the scoring method to use (default is "outre").
+
+The function returns an array of label quality scores, where each score is a continuous value between 0 and 1. A score of 1 indicates a clean label (likely correct), while a score of 0 indicates a dirty label (likely incorrect).
+
+Ensure that the inputs are valid and then use the specified scoring method to calculate the label quality scores. The output is an array of scores with one score per example in the dataset.
+
+Example usage:
+```python
+import numpy as np
+from cleanlab.regression.rank import get_label_quality_scores
+
+labels = np.array([1, 2, 3, 4])
+predictions = np.array([2, 2, 5, 4.1])
+
+label_quality_scores = get_label_quality_scores(labels, predictions)
+print(label_quality_scores)
+# Output: array([0.00323821, 0.33692597, 0.00191686, 0.33692597])
+```
+
+ ground Truth:cleanlab/regression/rank.py
+
+ repo:cleanlab
+
+ function:get_label_quality_scores
+ 
+ test_cases:tests/test_object_detection.py

@@ -1,0 +1,27 @@
+stage: Model Construction
+task: 
+data: Image
+
+prompt:
+Generate a Python function called undistort_image that compensates an image for lens distortion. The function takes in three inputs: image (a torch.Tensor representing the input image with shape (*, C, H, W)), K (a torch.Tensor representing the intrinsic camera matrix with shape (*, 3, 3)), and dist (a torch.Tensor representing the distortion coefficients with shape (*, n)). The distortion coefficients include radial, tangential, thin prism, and tilt distortion models.
+
+The function returns an undistorted image with the same shape as the input image (*, C, H, W). 
+
+For example:
+```python
+img = torch.rand(1, 3, 5, 5)
+K = torch.eye(3)[None]
+dist_coeff = torch.rand(1, 4)
+out = undistort_image(img, K, dist_coeff)
+out.shape
+```
+
+The output shape of the undistorted image will be torch.Size([1, 3, 5, 5).
+
+ ground Truth:kornia/geometry/calibration/undistort.py
+
+ repo:kornia
+
+ function:undistort_image
+ 
+ test_cases:tests/geometry/calibration/test_undistort.py::TestUndistortImage

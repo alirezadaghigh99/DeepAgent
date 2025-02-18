@@ -1,0 +1,732 @@
+output file:
+processed_pytorch3dchamfer_distance5.json
+function:
+chamfer_distance
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_single_directional_chamfer_point_reduction_max', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_pointcloud_object_withnormals', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_point_reduction_mean', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_point_reduction_sum', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_single_directional_chamfer_point_reduction_max FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_point_batch_reduction_mean', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_point_reduction_none FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_vs_naive_pointcloud', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_incorrect_weights FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_empty_clouds', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_point_reduction_none', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_point_reduction_mean FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_incorrect_weights', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_incorrect_inputs FAILED', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_invalid_norm FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_invalid_norm', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_incorrect_inputs', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_joint_reduction FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_single_direction_chamfer_point_reduction_none', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_single_directional_chamfer_point_reduction_sum', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_pointcloud_object_nonormals FAILED', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_empty_clouds FAILED', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_single_direction_chamfer_point_reduction_mean FAILED', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_single_directional_chamfer_point_reduction_sum FAILED', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_single_directional_chamfer_vs_naive_pointcloud FAILED', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_point_reduction_max FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_single_direction_chamfer_point_reduction_mean', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_joint_reduction', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_vs_naive_pointcloud FAILED', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_pointcloud_object_withnormals FAILED', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_single_direction_chamfer_point_reduction_none FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_point_reduction_max', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_single_directional_chamfer_vs_naive_pointcloud', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_pointcloud_object_nonormals', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_point_batch_reduction_mean FAILED', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_point_reduction_sum FAILED'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 18 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_joint_reduction FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_point_batch_reduction_mean FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_point_reduction_max FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_point_reduction_mean FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_point_reduction_none FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_point_reduction_sum FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_pointcloud_object_nonormals FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_pointcloud_object_withnormals FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_vs_naive_pointcloud FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_empty_clouds FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_incorrect_inputs FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_incorrect_weights FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_invalid_norm FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_single_direction_chamfer_point_reduction_mean FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_single_direction_chamfer_point_reduction_none FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_single_directional_chamfer_point_reduction_max FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_single_directional_chamfer_point_reduction_sum FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_single_directional_chamfer_vs_naive_pointcloud FAILED
+
+=================================== FAILURES ===================================
+___________________ TestChamfer.test_chamfer_joint_reduction ___________________
+
+self = <tests.test_chamfer.TestChamfer testMethod=test_chamfer_joint_reduction>
+
+    def test_chamfer_joint_reduction(self):
+        """
+        Compare output of vectorized chamfer loss with naive implementation
+        when batch_reduction in ["mean", "sum"] and
+        point_reduction in ["mean", "sum"].
+        """
+        N, max_P1, max_P2 = 7, 10, 18
+        device = get_random_cuda_device()
+    
+        points_normals = TestChamfer.init_pointclouds(N, max_P1, max_P2, device)
+        p1 = points_normals.p1
+        p2 = points_normals.p2
+        p1_normals = points_normals.n1
+        p2_normals = points_normals.n2
+        weights = points_normals.weights
+    
+        P1 = p1.shape[1]
+        P2 = p2.shape[1]
+    
+        pred_loss, pred_loss_norm = TestChamfer.chamfer_distance_naive(
+            p1, p2, x_normals=p1_normals, y_normals=p2_normals
+        )
+    
+        # batch_reduction = "sum", point_reduction = "sum".
+>       loss, loss_norm = chamfer_distance(
+            p1,
+            p2,
+            x_normals=p1_normals,
+            y_normals=p2_normals,
+            weights=weights,
+            batch_reduction="sum",
+            point_reduction="sum",
+        )
+E       TypeError: cannot unpack non-iterable NoneType object
+
+/local/data0/moved_data/pytorch3d/tests/test_chamfer.py:1041: TypeError
+_____________ TestChamfer.test_chamfer_point_batch_reduction_mean ______________
+
+self = <tests.test_chamfer.TestChamfer testMethod=test_chamfer_point_batch_reduction_mean>
+
+    def test_chamfer_point_batch_reduction_mean(self):
+        """
+        Compare output of vectorized chamfer loss with naive implementation
+        for the default settings (point_reduction = "mean" and batch_reduction = "mean")
+        and no normals.
+        This tests only uses homogeneous pointclouds.
+        """
+        import time
+        start = time.time()
+        N, max_P1, max_P2 = 7, 10, 18
+        device = get_random_cuda_device()
+    
+        for norm in [1, 2]:
+            points_normals = TestChamfer.init_pointclouds(N, max_P1, max_P2, device)
+            p1 = points_normals.p1
+            p2 = points_normals.p2
+            weights = points_normals.weights
+            p11 = p1.detach().clone()
+            p22 = p2.detach().clone()
+            p11.requires_grad = True
+            p22.requires_grad = True
+            P1 = p1.shape[1]
+            P2 = p2.shape[1]
+    
+            pred_loss, pred_loss_norm = TestChamfer.chamfer_distance_naive(
+                p1, p2, norm=norm
+            )
+    
+            # point_reduction = "mean".
+>           loss, loss_norm = chamfer_distance(p11, p22, weights=weights, norm=norm)
+E           TypeError: cannot unpack non-iterable NoneType object
+
+/local/data0/moved_data/pytorch3d/tests/test_chamfer.py:258: TypeError
+_________________ TestChamfer.test_chamfer_point_reduction_max _________________
+
+self = <tests.test_chamfer.TestChamfer testMethod=test_chamfer_point_reduction_max>
+
+    def test_chamfer_point_reduction_max(self):
+        """
+        Compare output of vectorized chamfer loss with naive implementation
+        for point_reduction = "max" and batch_reduction = None.
+        """
+        N, P1, P2 = 7, 10, 18
+        device = get_random_cuda_device()
+        points_normals = TestChamfer.init_pointclouds(N, P1, P2, device)
+        p1 = points_normals.p1
+        p2 = points_normals.p2
+        weights = points_normals.weights
+        p11 = p1.detach().clone()
+        p22 = p2.detach().clone()
+        p11.requires_grad = True
+        p22.requires_grad = True
+    
+        pred_loss, unused_pred_loss_norm = TestChamfer.chamfer_distance_naive(
+            p1, p2, x_normals=None, y_normals=None
+        )
+    
+>       loss, loss_norm = chamfer_distance(
+            p11,
+            p22,
+            x_normals=None,
+            y_normals=None,
+            weights=weights,
+            batch_reduction=None,
+            point_reduction="max",
+        )
+E       TypeError: cannot unpack non-iterable NoneType object
+
+/local/data0/moved_data/pytorch3d/tests/test_chamfer.py:888: TypeError
+________________ TestChamfer.test_chamfer_point_reduction_mean _________________
+
+self = <tests.test_chamfer.TestChamfer testMethod=test_chamfer_point_reduction_mean>
+
+    def test_chamfer_point_reduction_mean(self):
+        """
+        Compare output of vectorized chamfer loss with naive implementation
+        for point_reduction = "mean" and batch_reduction = None.
+        """
+        import time
+        start = time.time()
+        N, max_P1, max_P2 = 7, 10, 18
+        device = get_random_cuda_device()
+        points_normals = TestChamfer.init_pointclouds(N, max_P1, max_P2, device)
+        p1 = points_normals.p1
+        p2 = points_normals.p2
+        p1_normals = points_normals.n1
+        p2_normals = points_normals.n2
+        weights = points_normals.weights
+        p11 = p1.detach().clone()
+        p22 = p2.detach().clone()
+        p11.requires_grad = True
+        p22.requires_grad = True
+        P1 = p1.shape[1]
+        P2 = p2.shape[1]
+    
+        pred_loss, pred_loss_norm = TestChamfer.chamfer_distance_naive(
+            p1, p2, x_normals=p1_normals, y_normals=p2_normals
+        )
+    
+        # point_reduction = "mean".
+>       loss, loss_norm = chamfer_distance(
+            p11,
+            p22,
+            x_normals=p1_normals,
+            y_normals=p2_normals,
+            weights=weights,
+            batch_reduction=None,
+            point_reduction="mean",
+        )
+E       TypeError: cannot unpack non-iterable NoneType object
+
+/local/data0/moved_data/pytorch3d/tests/test_chamfer.py:614: TypeError
+________________ TestChamfer.test_chamfer_point_reduction_none _________________
+
+self = <tests.test_chamfer.TestChamfer testMethod=test_chamfer_point_reduction_none>
+
+    def test_chamfer_point_reduction_none(self):
+        """
+        Compare output of vectorized chamfer loss with naive implementation
+        for point_reduction = None and batch_reduction = None.
+        """
+        N, max_P1, max_P2 = 7, 10, 18
+        device = get_random_cuda_device()
+        points_normals = TestChamfer.init_pointclouds(N, max_P1, max_P2, device)
+        p1 = points_normals.p1
+        p2 = points_normals.p2
+        p1_normals = points_normals.n1
+        p2_normals = points_normals.n2
+        p11 = p1.detach().clone()
+        p22 = p2.detach().clone()
+        p11.requires_grad = True
+        p22.requires_grad = True
+    
+        pred_loss, pred_loss_norm = TestChamfer.chamfer_distance_naive(
+            p1, p2, x_normals=p1_normals, y_normals=p2_normals
+        )
+    
+        # point_reduction = None
+>       loss, loss_norm = chamfer_distance(
+            p11,
+            p22,
+            x_normals=p1_normals,
+            y_normals=p2_normals,
+            batch_reduction=None,
+            point_reduction=None,
+        )
+E       TypeError: cannot unpack non-iterable NoneType object
+
+/local/data0/moved_data/pytorch3d/tests/test_chamfer.py:797: TypeError
+_________________ TestChamfer.test_chamfer_point_reduction_sum _________________
+
+self = <tests.test_chamfer.TestChamfer testMethod=test_chamfer_point_reduction_sum>
+
+    def test_chamfer_point_reduction_sum(self):
+        """
+        Compare output of vectorized chamfer loss with naive implementation
+        for point_reduction = "sum" and batch_reduction = None.
+        """
+        N, P1, P2 = 7, 10, 18
+        device = get_random_cuda_device()
+        points_normals = TestChamfer.init_pointclouds(N, P1, P2, device)
+        p1 = points_normals.p1
+        p2 = points_normals.p2
+        p1_normals = points_normals.n1
+        p2_normals = points_normals.n2
+        weights = points_normals.weights
+        p11 = p1.detach().clone()
+        p22 = p2.detach().clone()
+        p11.requires_grad = True
+        p22.requires_grad = True
+    
+        pred_loss, pred_loss_norm = TestChamfer.chamfer_distance_naive(
+            p1, p2, x_normals=p1_normals, y_normals=p2_normals
+        )
+    
+>       loss, loss_norm = chamfer_distance(
+            p11,
+            p22,
+            x_normals=p1_normals,
+            y_normals=p2_normals,
+            weights=weights,
+            batch_reduction=None,
+            point_reduction="sum",
+        )
+E       TypeError: cannot unpack non-iterable NoneType object
+
+/local/data0/moved_data/pytorch3d/tests/test_chamfer.py:708: TypeError
+_____________ TestChamfer.test_chamfer_pointcloud_object_nonormals _____________
+
+self = <tests.test_chamfer.TestChamfer testMethod=test_chamfer_pointcloud_object_nonormals>
+
+    def test_chamfer_pointcloud_object_nonormals(self):
+        import time
+        start = time.time()
+        N = 5
+        P1, P2 = 100, 100
+        device = get_random_cuda_device()
+    
+        reductions = [
+            ("sum", "sum"),
+            ("mean", "sum"),
+            ("sum", "mean"),
+            ("mean", "mean"),
+            ("sum", None),
+            ("mean", None),
+            (None, None),
+        ]
+        for point_reduction, batch_reduction in reductions:
+            # Reinitialize all the tensors so that the
+            # backward pass can be computed.
+            points_normals = TestChamfer.init_pointclouds(
+                N, P1, P2, device, allow_empty=False
+            )
+    
+            # Chamfer with pointclouds as input.
+>           cham_cloud, _ = chamfer_distance(
+                points_normals.cloud1,
+                points_normals.cloud2,
+                point_reduction=point_reduction,
+                batch_reduction=batch_reduction,
+            )
+E           TypeError: cannot unpack non-iterable NoneType object
+
+/local/data0/moved_data/pytorch3d/tests/test_chamfer.py:536: TypeError
+____________ TestChamfer.test_chamfer_pointcloud_object_withnormals ____________
+
+self = <tests.test_chamfer.TestChamfer testMethod=test_chamfer_pointcloud_object_withnormals>
+
+    def test_chamfer_pointcloud_object_withnormals(self):
+        import time
+        start = time.time()
+        N = 5
+        P1, P2 = 100, 100
+        device = get_random_cuda_device()
+    
+        reductions = [
+            ("sum", "sum"),
+            ("mean", "sum"),
+            ("sum", "mean"),
+            ("mean", "mean"),
+            ("sum", None),
+            ("mean", None),
+            (None, None),
+        ]
+        for point_reduction, batch_reduction in reductions:
+            # Reinitialize all the tensors so that the
+            # backward pass can be computed.
+            points_normals = TestChamfer.init_pointclouds(
+                N, P1, P2, device, allow_empty=False
+            )
+    
+            # Chamfer with pointclouds as input.
+>           cham_cloud, norm_cloud = chamfer_distance(
+                points_normals.cloud1,
+                points_normals.cloud2,
+                point_reduction=point_reduction,
+                batch_reduction=batch_reduction,
+            )
+E           TypeError: cannot unpack non-iterable NoneType object
+
+/local/data0/moved_data/pytorch3d/tests/test_chamfer.py:445: TypeError
+_________________ TestChamfer.test_chamfer_vs_naive_pointcloud _________________
+
+self = <tests.test_chamfer.TestChamfer testMethod=test_chamfer_vs_naive_pointcloud>
+
+    def test_chamfer_vs_naive_pointcloud(self):
+        """
+        Test the default settings for chamfer_distance
+        (point reduction = "mean" and batch_reduction="mean") but with heterogeneous
+        pointclouds as input. Compare with the naive implementation of chamfer
+        which supports heterogeneous pointcloud objects.
+        """
+        import time
+        start = time.time()
+        N, max_P1, max_P2 = 3, 70, 70
+        device = get_random_cuda_device()
+    
+        for norm in [1, 2]:
+            points_normals = TestChamfer.init_pointclouds(N, max_P1, max_P2, device)
+            weights = points_normals.weights
+            x_lengths = points_normals.p1_lengths
+            y_lengths = points_normals.p2_lengths
+    
+            # Chamfer with tensors as input for heterogeneous pointclouds.
+>           cham_tensor, norm_tensor = chamfer_distance(
+                points_normals.p1,
+                points_normals.p2,
+                x_normals=points_normals.n1,
+                y_normals=points_normals.n2,
+                x_lengths=points_normals.p1_lengths,
+                y_lengths=points_normals.p2_lengths,
+                weights=weights,
+                norm=norm,
+            )
+E           TypeError: cannot unpack non-iterable NoneType object
+
+/local/data0/moved_data/pytorch3d/tests/test_chamfer.py:289: TypeError
+________________________ TestChamfer.test_empty_clouds _________________________
+
+self = <tests.test_chamfer.TestChamfer testMethod=test_empty_clouds>
+
+    def test_empty_clouds(self):
+        # Check that point_reduction doesn't divide by zero
+        points1 = Pointclouds(points=[torch.zeros(0, 3), torch.zeros(10, 3)])
+        points2 = Pointclouds(points=torch.ones(2, 40, 3))
+>       loss, _ = chamfer_distance(points1, points2, batch_reduction=None)
+E       TypeError: cannot unpack non-iterable NoneType object
+
+/local/data0/moved_data/pytorch3d/tests/test_chamfer.py:1200: TypeError
+______________________ TestChamfer.test_incorrect_inputs _______________________
+
+self = <tests.test_chamfer.TestChamfer testMethod=test_incorrect_inputs>
+
+    def test_incorrect_inputs(self):
+        N, P1, P2 = 7, 10, 18
+        device = get_random_cuda_device()
+        points_normals = TestChamfer.init_pointclouds(N, P1, P2, device)
+        p1 = points_normals.p1
+        p2 = points_normals.p2
+        p1_normals = points_normals.n1
+    
+        # Normals of wrong shape
+        with self.assertRaisesRegex(ValueError, "Expected normals to be of shape"):
+>           chamfer_distance(p1, p2, x_normals=p1_normals[None])
+E           AssertionError: ValueError not raised
+
+/local/data0/moved_data/pytorch3d/tests/test_chamfer.py:1169: AssertionError
+______________________ TestChamfer.test_incorrect_weights ______________________
+
+self = <tests.test_chamfer.TestChamfer testMethod=test_incorrect_weights>
+
+    def test_incorrect_weights(self):
+        N, P1, P2 = 16, 64, 128
+        device = get_random_cuda_device()
+        p1 = torch.rand(
+            (N, P1, 3), dtype=torch.float32, device=device, requires_grad=True
+        )
+        p2 = torch.rand(
+            (N, P2, 3), dtype=torch.float32, device=device, requires_grad=True
+        )
+    
+        weights = torch.zeros((N,), dtype=torch.float32, device=device)
+>       loss, loss_norm = chamfer_distance(
+            p1, p2, weights=weights, batch_reduction="mean"
+        )
+E       TypeError: cannot unpack non-iterable NoneType object
+
+/local/data0/moved_data/pytorch3d/tests/test_chamfer.py:1135: TypeError
+________________________ TestChamfer.test_invalid_norm _________________________
+
+self = <tests.test_chamfer.TestChamfer testMethod=test_invalid_norm>
+
+    def test_invalid_norm(self):
+        N, P1, P2 = 7, 10, 18
+        device = get_random_cuda_device()
+        points_normals = TestChamfer.init_pointclouds(N, P1, P2, device)
+        p1 = points_normals.p1
+        p2 = points_normals.p2
+    
+        with self.assertRaisesRegex(ValueError, "Support for 1 or 2 norm."):
+>           chamfer_distance(p1, p2, norm=0)
+E           AssertionError: ValueError not raised
+
+/local/data0/moved_data/pytorch3d/tests/test_chamfer.py:1191: AssertionError
+________ TestChamfer.test_single_direction_chamfer_point_reduction_mean ________
+
+self = <tests.test_chamfer.TestChamfer testMethod=test_single_direction_chamfer_point_reduction_mean>
+
+    def test_single_direction_chamfer_point_reduction_mean(self):
+        """
+        Compare output of vectorized chamfer loss with naive implementation
+        for point_reduction = "mean" and batch_reduction = None.
+        """
+        N, max_P1, max_P2 = 7, 10, 18
+        device = get_random_cuda_device()
+        points_normals = TestChamfer.init_pointclouds(N, max_P1, max_P2, device)
+        p1 = points_normals.p1
+        p2 = points_normals.p2
+        p1_normals = points_normals.n1
+        p2_normals = points_normals.n2
+        weights = points_normals.weights
+        p11 = p1.detach().clone()
+        p22 = p2.detach().clone()
+        p11.requires_grad = True
+        p22.requires_grad = True
+        P1 = p1.shape[1]
+    
+        pred_loss, pred_loss_norm = TestChamfer.chamfer_distance_naive(
+            p1, p2, x_normals=p1_normals, y_normals=p2_normals
+        )
+    
+        # point_reduction = "mean".
+>       loss, loss_norm = chamfer_distance(
+            p11,
+            p22,
+            x_normals=p1_normals,
+            y_normals=p2_normals,
+            weights=weights,
+            batch_reduction=None,
+            point_reduction="mean",
+            single_directional=True,
+        )
+E       TypeError: cannot unpack non-iterable NoneType object
+
+/local/data0/moved_data/pytorch3d/tests/test_chamfer.py:663: TypeError
+________ TestChamfer.test_single_direction_chamfer_point_reduction_none ________
+
+self = <tests.test_chamfer.TestChamfer testMethod=test_single_direction_chamfer_point_reduction_none>
+
+    def test_single_direction_chamfer_point_reduction_none(self):
+        """
+        Compare output of vectorized chamfer loss with naive implementation
+        for point_reduction = None and batch_reduction = None.
+        """
+        N, max_P1, max_P2 = 7, 10, 18
+        device = get_random_cuda_device()
+        points_normals = TestChamfer.init_pointclouds(N, max_P1, max_P2, device)
+        p1 = points_normals.p1
+        p2 = points_normals.p2
+        p1_normals = points_normals.n1
+        p2_normals = points_normals.n2
+        p11 = p1.detach().clone()
+        p22 = p2.detach().clone()
+        p11.requires_grad = True
+        p22.requires_grad = True
+    
+        pred_loss, pred_loss_norm = TestChamfer.chamfer_distance_naive(
+            p1, p2, x_normals=p1_normals, y_normals=p2_normals
+        )
+    
+        # point_reduction = None
+>       loss, loss_norm = chamfer_distance(
+            p11,
+            p22,
+            x_normals=p1_normals,
+            y_normals=p2_normals,
+            batch_reduction=None,
+            point_reduction=None,
+            single_directional=True,
+        )
+E       TypeError: cannot unpack non-iterable NoneType object
+
+/local/data0/moved_data/pytorch3d/tests/test_chamfer.py:850: TypeError
+_______ TestChamfer.test_single_directional_chamfer_point_reduction_max ________
+
+self = <tests.test_chamfer.TestChamfer testMethod=test_single_directional_chamfer_point_reduction_max>
+
+    def test_single_directional_chamfer_point_reduction_max(self):
+        """
+        Compare output of vectorized single directional chamfer loss with naive implementation
+        for point_reduction = "max" and batch_reduction = None.
+        """
+        N, P1, P2 = 7, 10, 18
+        device = get_random_cuda_device()
+        points_normals = TestChamfer.init_pointclouds(N, P1, P2, device)
+        p1 = points_normals.p1
+        p2 = points_normals.p2
+        weights = points_normals.weights
+        p11 = p1.detach().clone()
+        p22 = p2.detach().clone()
+        p11.requires_grad = True
+        p22.requires_grad = True
+    
+        pred_loss, unused_pred_loss_norm = TestChamfer.chamfer_distance_naive(
+            p1, p2, x_normals=None, y_normals=None
+        )
+    
+>       loss, loss_norm = chamfer_distance(
+            p11,
+            p22,
+            x_normals=None,
+            y_normals=None,
+            weights=weights,
+            batch_reduction=None,
+            point_reduction="max",
+            single_directional=True,
+        )
+E       TypeError: cannot unpack non-iterable NoneType object
+
+/local/data0/moved_data/pytorch3d/tests/test_chamfer.py:928: TypeError
+_______ TestChamfer.test_single_directional_chamfer_point_reduction_sum ________
+
+self = <tests.test_chamfer.TestChamfer testMethod=test_single_directional_chamfer_point_reduction_sum>
+
+    def test_single_directional_chamfer_point_reduction_sum(self):
+        """
+        Compare output of vectorized single directional chamfer loss with naive implementation
+        for point_reduction = "sum" and batch_reduction = None.
+        """
+        N, P1, P2 = 7, 10, 18
+        device = get_random_cuda_device()
+        points_normals = TestChamfer.init_pointclouds(N, P1, P2, device)
+        p1 = points_normals.p1
+        p2 = points_normals.p2
+        p1_normals = points_normals.n1
+        p2_normals = points_normals.n2
+        weights = points_normals.weights
+        p11 = p1.detach().clone()
+        p22 = p2.detach().clone()
+        p11.requires_grad = True
+        p22.requires_grad = True
+    
+        pred_loss, pred_loss_norm = TestChamfer.chamfer_distance_naive(
+            p1, p2, x_normals=p1_normals, y_normals=p2_normals
+        )
+    
+>       loss, loss_norm = chamfer_distance(
+            p11,
+            p22,
+            x_normals=p1_normals,
+            y_normals=p2_normals,
+            weights=weights,
+            batch_reduction=None,
+            point_reduction="sum",
+            single_directional=True,
+        )
+E       TypeError: cannot unpack non-iterable NoneType object
+
+/local/data0/moved_data/pytorch3d/tests/test_chamfer.py:752: TypeError
+_______ TestChamfer.test_single_directional_chamfer_vs_naive_pointcloud ________
+
+self = <tests.test_chamfer.TestChamfer testMethod=test_single_directional_chamfer_vs_naive_pointcloud>
+
+    def test_single_directional_chamfer_vs_naive_pointcloud(self):
+        """
+        Test the single directional settings for chamfer_distance
+        (point reduction = "mean" and batch_reduction="mean") but with heterogeneous
+        pointclouds as input. Compare with the naive implementation of chamfer
+        which supports heterogeneous pointcloud objects.
+        """
+        import time
+        start = time.time()
+        N, max_P1, max_P2 = 3, 70, 70
+        device = get_random_cuda_device()
+    
+        for norm in [1, 2]:
+            for abs_cosine in [True, False]:
+                points_normals = TestChamfer.init_pointclouds(N, max_P1, max_P2, device)
+                weights = points_normals.weights
+                x_lengths = points_normals.p1_lengths
+                y_lengths = points_normals.p2_lengths
+    
+                # Chamfer with tensors as input for heterogeneous pointclouds.
+>               cham_tensor, norm_tensor = chamfer_distance(
+                    points_normals.p1,
+                    points_normals.p2,
+                    x_normals=points_normals.n1,
+                    y_normals=points_normals.n2,
+                    x_lengths=points_normals.p1_lengths,
+                    y_lengths=points_normals.p2_lengths,
+                    weights=weights,
+                    norm=norm,
+                    single_directional=True,
+                    abs_cosine=abs_cosine,
+                )
+E               TypeError: cannot unpack non-iterable NoneType object
+
+/local/data0/moved_data/pytorch3d/tests/test_chamfer.py:364: TypeError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_joint_reduction
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_point_batch_reduction_mean
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_point_reduction_max
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_point_reduction_mean
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_point_reduction_none
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_point_reduction_sum
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_pointcloud_object_nonormals
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_pointcloud_object_withnormals
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_vs_naive_pointcloud
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_empty_clouds
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_incorrect_inputs
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_incorrect_weights
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_invalid_norm
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_single_direction_chamfer_point_reduction_mean
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_single_direction_chamfer_point_reduction_none
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_single_directional_chamfer_point_reduction_max
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_single_directional_chamfer_point_reduction_sum
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_single_directional_chamfer_vs_naive_pointcloud
+============================== 18 failed in 2.25s ==============================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 18 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_joint_reduction PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_point_batch_reduction_mean gpu 0.23380804061889648
+gpu 0.4587428569793701
+PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_point_reduction_max PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_point_reduction_mean gpu 0.23182129859924316
+PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_point_reduction_none PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_point_reduction_sum PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_pointcloud_object_nonormals gpu 0.050835371017456055
+PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_pointcloud_object_withnormals gpu 0.0718839168548584
+PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_vs_naive_pointcloud gpu 1.6965911388397217
+PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_empty_clouds PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_incorrect_inputs PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_incorrect_weights PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_invalid_norm PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_single_direction_chamfer_point_reduction_mean PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_single_direction_chamfer_point_reduction_none PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_single_directional_chamfer_point_reduction_max PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_single_directional_chamfer_point_reduction_sum PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_single_directional_chamfer_vs_naive_pointcloud gpu 3.2403724193573
+PASSED
+
+============================== 18 passed in 8.81s ==============================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 18 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_joint_reduction PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_point_batch_reduction_mean gpu 0.2503657341003418
+gpu 0.47705531120300293
+PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_point_reduction_max PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_point_reduction_mean gpu 0.23147201538085938
+PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_point_reduction_none PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_point_reduction_sum PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_pointcloud_object_nonormals gpu 0.0514981746673584
+PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_pointcloud_object_withnormals gpu 0.07146143913269043
+PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_chamfer_vs_naive_pointcloud gpu 1.7027559280395508
+PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_empty_clouds PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_incorrect_inputs PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_incorrect_weights PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_invalid_norm PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_single_direction_chamfer_point_reduction_mean PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_single_direction_chamfer_point_reduction_none PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_single_directional_chamfer_point_reduction_max PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_single_directional_chamfer_point_reduction_sum PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_chamfer.py::TestChamfer::test_single_directional_chamfer_vs_naive_pointcloud gpu 3.2233574390411377
+PASSED
+
+============================== 18 passed in 8.85s ==============================

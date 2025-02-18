@@ -1,0 +1,23 @@
+stage: Pre-Post processing
+task: Segmentation
+data: Image
+
+prompt:
+Create a Python function `preprocess_input` that preprocesses RGB images, foreground probability maps, and depth maps. The function should take the following inputs:
+- `image_rgb` (Optional[torch.Tensor]): A batch of RGB images with shape `(B, 3, H, W)`.
+- `fg_probability` (Optional[torch.Tensor]): A batch of foreground masks with shape `(B, 1, H, W)`.
+- `depth_map` (Optional[torch.Tensor]): A batch of depth maps with shape `(B, 1, H, W)`.
+- `mask_images` (bool): Whether to mask the background of the RGB images based on the foreground mask.
+- `mask_depths` (bool): Whether to mask the background of the depth maps based on the foreground mask.
+- `mask_threshold` (float): Threshold value to binarize the foreground masks before applying them.
+- `bg_color` (Tuple[float, float, float]): RGB values used as the background color when masking images.
+
+The function should return a tuple containing the modified `image_rgb`, `fg_mask`, and `depth_map`. Raise a `ValueError` if the `image_rgb` input is not batched correctly. The function should also issue warnings when thresholding masks or masking images/depths.
+
+ ground Truth:pytorch3d/implicitron/models/utils.py
+
+ repo:pytorch3d
+
+ function:preprocess_input
+ 
+ test_cases:tests/implicitron/models/test_utils.py

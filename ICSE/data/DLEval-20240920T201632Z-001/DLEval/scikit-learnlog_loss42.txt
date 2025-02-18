@@ -1,0 +1,22 @@
+stage: Evaluating&Metrics
+task: Classification
+data: Table
+
+prompt:
+Generate a Python function called log_loss that calculates the log loss, also known as logistic loss or cross-entropy loss. The function takes in the following parameters:
+
+- y_true: Ground truth labels for n_samples samples.
+- y_pred: Predicted probabilities from a classifier's predict_proba method.
+- normalize: A boolean indicating whether to return the mean loss per sample or the sum of per-sample losses.
+- sample_weight: Optional sample weights.
+- labels: Optional labels for the classes.
+
+The function calculates the log loss based on the predicted probabilities and true labels. It returns the log loss as a float value. The function also includes examples, notes, and references for further information.
+
+ ground Truth:sklearn/metrics/_classification.py
+
+ repo:scikit-learn
+
+ function:log_loss
+ 
+ test_cases:sklearn/metrics/tests/test_classification.py

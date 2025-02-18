@@ -1,0 +1,18 @@
+stage: Inference
+task: 
+data: Image
+
+prompt:
+Create a Python function called draw_line that draws a single line into an image. The function takes in four parameters: image (a torch.Tensor representing the input image with shape (C,H,W)), p1 (the start point [x y] of the line with shape (2, ) or (B, 2)), p2 (the end point [x y] of the line with shape (2, ) or (B, 2)), and color (the color of the line with shape (C) where C is the number of channels of the image). The function returns the image with the drawn line.
+
+Ensure that the input points p1 and p2 are 2D points with shape (2, ) or (B, 2) and have the same batch sizes. Check that the points are within the bounds of the image. The image must have 3 dimensions (C,H,W) and the color must have the same number of channels as the image.
+
+The function calculates the coordinates of the line based on the start and end points, and then updates the image with the specified color along the line. The updated image is returned as the output.
+
+ ground Truth:kornia/utils/draw.py
+
+ repo:kornia
+
+ function:draw_line
+ 
+ test_cases:tests/utils/test_draw.py

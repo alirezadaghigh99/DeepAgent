@@ -1,0 +1,26 @@
+stage: Tabular
+task: Classification
+data: Model construction
+
+prompt:
+Create the __init__ method for the FCNN class, a subclass of nn.Module. This method initializes a fully connected neural network with parameters for input and output units, activation functions, and a tuple specifying the number of units in each hidden layer. Handle deprecated parameters n_hidden_units and n_hidden_layers by warning the user and suggesting the use of hidden_units. If hidden_units is not provided, default to (32, 32). Construct the network as a sequence of linear layers and activation functions, with no activation after the last layer, and store it in the attribute NN.
+
+Here is the necessary part of the class definition for context:
+
+import torch
+import torch.nn as nn
+from warnings import warn
+
+class FCNN(nn.Module):
+    def __init__(self, n_input_units=1, n_output_units=1, n_hidden_units=None, n_hidden_layers=None,
+                 actv=nn.Tanh, hidden_units=None):
+
+ ground Truth:neurodiffeq/networks.py
+
+ repo:neurodiffeq
+
+ function:__init__
+ 
+ test_cases:tests/test_networks.py
+ 
+ class:FCNN

@@ -1,0 +1,16 @@
+stage: Pre-Post processing
+task: 
+data: 
+
+prompt:
+Generate a Python function called U2 that returns the matrix representation of the U2 gate. The function takes two input parameters: phi (float) representing the azimuthal angle and delta (float) representing the quantum phase. The output is a 2x2 matrix in the form of a NumPy array, calculated as:
+
+U2(phi, delta) = 1/sqrt(2) * [[1, -exp(i*delta)], [exp(i*phi), exp(i*(phi + delta))]]
+
+ ground Truth:tests/gate_data.py
+
+ repo:pennylane
+
+ function:U2
+ 
+ test_cases:tests/ops/qubit/test_parametric_ops.py::TestOperations

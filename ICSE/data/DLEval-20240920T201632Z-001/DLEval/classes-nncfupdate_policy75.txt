@@ -1,0 +1,40 @@
+stage: 
+task: 
+data: Training
+
+prompt:
+Generate a Python function `update_policy` for the class `DDPG` that updates the actor and critic networks based on a sampled batch of experiences from the replay buffer. The function should normalize the reward, calculate the target Q-values for the critic, and then update the critic and actor networks accordingly. After updating the networks, it should also perform a soft update on the target networks. The function should update the internal attributes `value_loss` and `policy_loss` for logging purposes.
+
+Class structure:
+
+```python
+class DDPG:
+    def __init__(self, nb_states, nb_actions, iter_number: int = None, hparam_override: dict = None):
+        self.memory = None  # replay buffer
+        self.actor = None  # actor network
+        self.actor_target = None  # target actor network
+        self.actor_optim = None  # optimizer for actor network
+        self.critic = None  # critic network
+        self.critic_target = None  # target critic network
+        self.critic_optim = None  # optimizer for critic network
+        self.batch_size = None  # batch size for training
+        self.discount = None  # discount factor
+        self.moving_average = None  # moving average of rewards
+        self.moving_alpha = None  # smoothing factor for moving average
+        self.value_loss = 0.0  # loss for critic network
+        self.policy_loss = 0.0  # loss for actor network
+        pass
+
+    def update_policy(self):
+        # Implement the function as described in the prompt
+```
+
+ ground Truth:nncf/torch/automl/agent/ddpg/ddpg.py
+
+ repo:nncf
+
+ function:update_policy
+ 
+ test_cases:tests/torch/automl/test_ddpg.py::test_update_policy
+ 
+ class:DDPG

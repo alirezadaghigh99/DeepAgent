@@ -1,0 +1,32 @@
+stage: 
+task: 
+data: Model construction
+
+prompt:
+
+Generate a Python method `get_matrix` for the `Transform3d` class that returns the 4x4 transformation matrix corresponding to each transform in the batch. If the transform is a composition of multiple transformations, the method should return the matrix representing the composite transform. The method must handle broadcasting of the transformations where necessary. The method should iterate through the stored transforms in `self._transforms`, multiply their matrices with the current transformation matrix, and return the resulting matrix. 
+
+Class structure:
+
+```python
+class Transform3d:
+    def __init__(self, dtype: torch.dtype = torch.float32, device: Device = "cpu", matrix: Optional[torch.Tensor] = None):
+        self._matrix = ...
+        self._transforms = []
+        self.device = ...
+        self.dtype = ...
+
+    def get_matrix(self) -> torch.Tensor:
+        # Implement the function as described in the prompt
+```
+
+
+ ground Truth:pytorch3d/transforms/transform3d.py
+
+ repo:pytorch3d
+
+ function:get_matrix
+ 
+ class:Transform3d
+ 
+ test_cases:tests/test_transforms.py

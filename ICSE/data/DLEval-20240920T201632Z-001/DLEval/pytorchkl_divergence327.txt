@@ -1,0 +1,14 @@
+stage: Evaluating&Metrics
+task: 
+data: 
+
+prompt:
+Generate a Python function called kl_divergence that computes the Kullback-Leibler divergence KL(p \| q) between two distributions. The function takes two input parameters, p and q, which are objects of the class torch.distributions.Distribution. The output is a torch.Tensor representing a batch of KL divergences with shape `batch_shape`. If the specific KL divergence calculation for the given distribution types has not been implemented, a NotImplementedError will be raised.
+
+ ground Truth:torch/distributions/kl.py
+
+ repo:pytorch
+
+ function:kl_divergence
+ 
+ test_cases:test/distributions/test_distributions.py::TestKL

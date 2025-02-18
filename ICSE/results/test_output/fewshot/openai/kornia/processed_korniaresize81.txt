@@ -1,0 +1,785 @@
+output file:
+processed_korniaresize81.json
+function:
+resize
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_one_param[cpu-float32] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_dynamo[cpu-float32-inductor-True]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_dynamo[cpu-float32-inductor-True] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_dynamo[cpu-float32-inductor-False] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_one_param_vert[cpu-float32] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_one_param_horz[cpu-float32]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_gradcheck[cpu]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_dynamo[cpu-float32-inductor-False]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_one_param_vert[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_gradcheck[cpu] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_downsizeAA[cpu-float32] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_upsize[cpu-float32] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_smoke[cpu-float32]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_downsizeAA[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_one_param_long[cpu-float32] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_downsize[cpu-float32]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_one_param[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_one_param_horz[cpu-float32] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_upsize[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_downsize[cpu-float32] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_one_param_long[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_smoke[cpu-float32] FAILED'}
+
+All Test Cases On Generated code:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'inductor', 'jit', 'tvm', 'onnxrt', 'cudagraphs', 'openxla', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 11 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_smoke[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_upsize[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_downsize[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_downsizeAA[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_one_param[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_one_param_long[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_one_param_vert[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_one_param_horz[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_gradcheck[cpu] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_dynamo[cpu-float32-inductor-True] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_dynamo[cpu-float32-inductor-False] FAILED
+
+=================================== FAILURES ===================================
+______________________ TestResize.test_smoke[cpu-float32] ______________________
+
+self = <test_affine.TestResize object at 0x7e37e5136e60>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_smoke(self, device, dtype):
+        inp = torch.rand(1, 3, 3, 4, device=device, dtype=dtype)
+>       out = kornia.geometry.transform.resize(inp, (3, 4), align_corners=False)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/affwarp.py:366: in resize
+    return resize(input, size, interpolation, align_corners, side, antialias)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input_tensor = tensor([[[[0.4395, 0.5568, 0.3281, 0.7021],
+          [0.5967, 0.1836, 0.2342, 0.9193],
+          [0.3733, 0.2016, 0.5...23, 0.4227, 0.4363, 0.7807],
+          [0.5754, 0.9254, 0.1295, 0.6048],
+          [0.0470, 0.3779, 0.2628, 0.9072]]]])
+size = (3, 4), interpolation = 'bilinear', align_corners = False, side = 'short'
+antialias = False
+
+    def resize(input_tensor: torch.Tensor, size: Union[int, Tuple[int, int]], interpolation: str='bilinear', align_corners: Optional[bool]=None, side: str='both', antialias: bool=False) -> torch.Tensor:
+        """
+        Resizes an input torch.Tensor to a specified size.
+    
+        Args:
+            input_tensor (torch.Tensor): The input tensor of shape (C, H, W) or (N, C, H, W).
+            size (int or Tuple[int, int]): Desired output size. If int, a square output is produced.
+            interpolation (str): Interpolation method. Options: "nearest", "bilinear", "bicubic". Default is "bilinear".
+            align_corners (bool, optional): If True, the corner pixels of the input and output tensors are aligned.
+            side (str): Side for resizing. Options: "both", "height", "width". Default is "both".
+            antialias (bool): If True, applies antialiasing. Default is False.
+    
+        Returns:
+            torch.Tensor: Resized tensor with the specified size.
+    
+        Raises:
+            ValueError: If the input tensor is not 3D or 4D, or if the side parameter is invalid.
+        """
+        if input_tensor.dim() not in {3, 4}:
+            raise ValueError('Input tensor must be 3D (C, H, W) or 4D (N, C, H, W).')
+        if isinstance(size, int):
+            size = (size, size)
+        if side not in {'both', 'height', 'width'}:
+>           raise ValueError("Invalid side parameter. Choose from 'both', 'height', 'width'.")
+E           ValueError: Invalid side parameter. Choose from 'both', 'height', 'width'.
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/temp.py:37: ValueError
+_____________________ TestResize.test_upsize[cpu-float32] ______________________
+
+self = <test_affine.TestResize object at 0x7e37e5137250>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_upsize(self, device, dtype):
+        inp = torch.rand(1, 3, 3, 4, device=device, dtype=dtype)
+>       out = kornia.geometry.transform.resize(inp, (6, 8), align_corners=False)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py:32: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/affwarp.py:366: in resize
+    return resize(input, size, interpolation, align_corners, side, antialias)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input_tensor = tensor([[[[0.2886, 0.1806, 0.9868, 0.2709],
+          [0.7486, 0.7310, 0.0608, 0.7359],
+          [0.1403, 0.5408, 0.2...75, 0.2555, 0.4478, 0.8748],
+          [0.8107, 0.8286, 0.0685, 0.4681],
+          [0.6925, 0.6333, 0.6615, 0.8467]]]])
+size = (6, 8), interpolation = 'bilinear', align_corners = False, side = 'short'
+antialias = False
+
+    def resize(input_tensor: torch.Tensor, size: Union[int, Tuple[int, int]], interpolation: str='bilinear', align_corners: Optional[bool]=None, side: str='both', antialias: bool=False) -> torch.Tensor:
+        """
+        Resizes an input torch.Tensor to a specified size.
+    
+        Args:
+            input_tensor (torch.Tensor): The input tensor of shape (C, H, W) or (N, C, H, W).
+            size (int or Tuple[int, int]): Desired output size. If int, a square output is produced.
+            interpolation (str): Interpolation method. Options: "nearest", "bilinear", "bicubic". Default is "bilinear".
+            align_corners (bool, optional): If True, the corner pixels of the input and output tensors are aligned.
+            side (str): Side for resizing. Options: "both", "height", "width". Default is "both".
+            antialias (bool): If True, applies antialiasing. Default is False.
+    
+        Returns:
+            torch.Tensor: Resized tensor with the specified size.
+    
+        Raises:
+            ValueError: If the input tensor is not 3D or 4D, or if the side parameter is invalid.
+        """
+        if input_tensor.dim() not in {3, 4}:
+            raise ValueError('Input tensor must be 3D (C, H, W) or 4D (N, C, H, W).')
+        if isinstance(size, int):
+            size = (size, size)
+        if side not in {'both', 'height', 'width'}:
+>           raise ValueError("Invalid side parameter. Choose from 'both', 'height', 'width'.")
+E           ValueError: Invalid side parameter. Choose from 'both', 'height', 'width'.
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/temp.py:37: ValueError
+____________________ TestResize.test_downsize[cpu-float32] _____________________
+
+self = <test_affine.TestResize object at 0x7e37e5137580>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_downsize(self, device, dtype):
+        inp = torch.rand(1, 3, 5, 2, device=device, dtype=dtype)
+>       out = kornia.geometry.transform.resize(inp, (3, 1), align_corners=False)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py:52: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/affwarp.py:366: in resize
+    return resize(input, size, interpolation, align_corners, side, antialias)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input_tensor = tensor([[[[2.9200e-04, 8.5170e-02],
+          [7.3292e-02, 9.8184e-01],
+          [9.1389e-01, 2.4454e-01],
+          ...56e-01],
+          [6.1134e-01, 6.9859e-01],
+          [7.5065e-01, 7.0293e-01],
+          [7.2935e-02, 2.8011e-01]]]])
+size = (3, 1), interpolation = 'bilinear', align_corners = False, side = 'short'
+antialias = False
+
+    def resize(input_tensor: torch.Tensor, size: Union[int, Tuple[int, int]], interpolation: str='bilinear', align_corners: Optional[bool]=None, side: str='both', antialias: bool=False) -> torch.Tensor:
+        """
+        Resizes an input torch.Tensor to a specified size.
+    
+        Args:
+            input_tensor (torch.Tensor): The input tensor of shape (C, H, W) or (N, C, H, W).
+            size (int or Tuple[int, int]): Desired output size. If int, a square output is produced.
+            interpolation (str): Interpolation method. Options: "nearest", "bilinear", "bicubic". Default is "bilinear".
+            align_corners (bool, optional): If True, the corner pixels of the input and output tensors are aligned.
+            side (str): Side for resizing. Options: "both", "height", "width". Default is "both".
+            antialias (bool): If True, applies antialiasing. Default is False.
+    
+        Returns:
+            torch.Tensor: Resized tensor with the specified size.
+    
+        Raises:
+            ValueError: If the input tensor is not 3D or 4D, or if the side parameter is invalid.
+        """
+        if input_tensor.dim() not in {3, 4}:
+            raise ValueError('Input tensor must be 3D (C, H, W) or 4D (N, C, H, W).')
+        if isinstance(size, int):
+            size = (size, size)
+        if side not in {'both', 'height', 'width'}:
+>           raise ValueError("Invalid side parameter. Choose from 'both', 'height', 'width'.")
+E           ValueError: Invalid side parameter. Choose from 'both', 'height', 'width'.
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/temp.py:37: ValueError
+___________________ TestResize.test_downsizeAA[cpu-float32] ____________________
+
+self = <test_affine.TestResize object at 0x7e37e51378b0>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_downsizeAA(self, device, dtype):
+        inp = torch.rand(1, 3, 10, 8, device=device, dtype=dtype)
+>       out = kornia.geometry.transform.resize(inp, (5, 3), align_corners=False, antialias=True)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py:72: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/affwarp.py:366: in resize
+    return resize(input, size, interpolation, align_corners, side, antialias)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input_tensor = tensor([[[[0.6320, 0.9881, 0.8769, 0.5866, 0.0457, 0.4120, 0.7342, 0.9682],
+          [0.0383, 0.8877, 0.5151, 0.2597,...0.9136, 0.8809, 0.4609, 0.4527, 0.5401],
+          [0.1773, 0.8540, 0.9711, 0.2081, 0.9734, 0.0667, 0.9052, 0.5553]]]])
+size = (5, 3), interpolation = 'bilinear', align_corners = False, side = 'short'
+antialias = True
+
+    def resize(input_tensor: torch.Tensor, size: Union[int, Tuple[int, int]], interpolation: str='bilinear', align_corners: Optional[bool]=None, side: str='both', antialias: bool=False) -> torch.Tensor:
+        """
+        Resizes an input torch.Tensor to a specified size.
+    
+        Args:
+            input_tensor (torch.Tensor): The input tensor of shape (C, H, W) or (N, C, H, W).
+            size (int or Tuple[int, int]): Desired output size. If int, a square output is produced.
+            interpolation (str): Interpolation method. Options: "nearest", "bilinear", "bicubic". Default is "bilinear".
+            align_corners (bool, optional): If True, the corner pixels of the input and output tensors are aligned.
+            side (str): Side for resizing. Options: "both", "height", "width". Default is "both".
+            antialias (bool): If True, applies antialiasing. Default is False.
+    
+        Returns:
+            torch.Tensor: Resized tensor with the specified size.
+    
+        Raises:
+            ValueError: If the input tensor is not 3D or 4D, or if the side parameter is invalid.
+        """
+        if input_tensor.dim() not in {3, 4}:
+            raise ValueError('Input tensor must be 3D (C, H, W) or 4D (N, C, H, W).')
+        if isinstance(size, int):
+            size = (size, size)
+        if side not in {'both', 'height', 'width'}:
+>           raise ValueError("Invalid side parameter. Choose from 'both', 'height', 'width'.")
+E           ValueError: Invalid side parameter. Choose from 'both', 'height', 'width'.
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/temp.py:37: ValueError
+____________________ TestResize.test_one_param[cpu-float32] ____________________
+
+self = <test_affine.TestResize object at 0x7e37e5137be0>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_one_param(self, device, dtype):
+        inp = torch.rand(1, 3, 5, 2, device=device, dtype=dtype)
+>       out = kornia.geometry.transform.resize(inp, 10, align_corners=False)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/affwarp.py:366: in resize
+    return resize(input, size, interpolation, align_corners, side, antialias)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input_tensor = tensor([[[[0.6572, 0.1501],
+          [0.8094, 0.9439],
+          [0.6916, 0.5977],
+          [0.4019, 0.0013],
+      ...77],
+          [0.3741, 0.6240],
+          [0.4168, 0.8758],
+          [0.4819, 0.3919],
+          [0.9700, 0.5985]]]])
+size = (10, 10), interpolation = 'bilinear', align_corners = False
+side = 'short', antialias = False
+
+    def resize(input_tensor: torch.Tensor, size: Union[int, Tuple[int, int]], interpolation: str='bilinear', align_corners: Optional[bool]=None, side: str='both', antialias: bool=False) -> torch.Tensor:
+        """
+        Resizes an input torch.Tensor to a specified size.
+    
+        Args:
+            input_tensor (torch.Tensor): The input tensor of shape (C, H, W) or (N, C, H, W).
+            size (int or Tuple[int, int]): Desired output size. If int, a square output is produced.
+            interpolation (str): Interpolation method. Options: "nearest", "bilinear", "bicubic". Default is "bilinear".
+            align_corners (bool, optional): If True, the corner pixels of the input and output tensors are aligned.
+            side (str): Side for resizing. Options: "both", "height", "width". Default is "both".
+            antialias (bool): If True, applies antialiasing. Default is False.
+    
+        Returns:
+            torch.Tensor: Resized tensor with the specified size.
+    
+        Raises:
+            ValueError: If the input tensor is not 3D or 4D, or if the side parameter is invalid.
+        """
+        if input_tensor.dim() not in {3, 4}:
+            raise ValueError('Input tensor must be 3D (C, H, W) or 4D (N, C, H, W).')
+        if isinstance(size, int):
+            size = (size, size)
+        if side not in {'both', 'height', 'width'}:
+>           raise ValueError("Invalid side parameter. Choose from 'both', 'height', 'width'.")
+E           ValueError: Invalid side parameter. Choose from 'both', 'height', 'width'.
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/temp.py:37: ValueError
+_________________ TestResize.test_one_param_long[cpu-float32] __________________
+
+self = <test_affine.TestResize object at 0x7e37e5137f10>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_one_param_long(self, device, dtype):
+        inp = torch.rand(1, 3, 5, 2, device=device, dtype=dtype)
+>       out = kornia.geometry.transform.resize(inp, 10, align_corners=False, side="long")
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py:116: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/affwarp.py:366: in resize
+    return resize(input, size, interpolation, align_corners, side, antialias)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input_tensor = tensor([[[[0.6929, 0.1950],
+          [0.1397, 0.7861],
+          [0.8484, 0.2790],
+          [0.0700, 0.0735],
+      ...41],
+          [0.8186, 0.1547],
+          [0.5068, 0.4835],
+          [0.3237, 0.3114],
+          [0.1642, 0.1039]]]])
+size = (10, 10), interpolation = 'bilinear', align_corners = False
+side = 'long', antialias = False
+
+    def resize(input_tensor: torch.Tensor, size: Union[int, Tuple[int, int]], interpolation: str='bilinear', align_corners: Optional[bool]=None, side: str='both', antialias: bool=False) -> torch.Tensor:
+        """
+        Resizes an input torch.Tensor to a specified size.
+    
+        Args:
+            input_tensor (torch.Tensor): The input tensor of shape (C, H, W) or (N, C, H, W).
+            size (int or Tuple[int, int]): Desired output size. If int, a square output is produced.
+            interpolation (str): Interpolation method. Options: "nearest", "bilinear", "bicubic". Default is "bilinear".
+            align_corners (bool, optional): If True, the corner pixels of the input and output tensors are aligned.
+            side (str): Side for resizing. Options: "both", "height", "width". Default is "both".
+            antialias (bool): If True, applies antialiasing. Default is False.
+    
+        Returns:
+            torch.Tensor: Resized tensor with the specified size.
+    
+        Raises:
+            ValueError: If the input tensor is not 3D or 4D, or if the side parameter is invalid.
+        """
+        if input_tensor.dim() not in {3, 4}:
+            raise ValueError('Input tensor must be 3D (C, H, W) or 4D (N, C, H, W).')
+        if isinstance(size, int):
+            size = (size, size)
+        if side not in {'both', 'height', 'width'}:
+>           raise ValueError("Invalid side parameter. Choose from 'both', 'height', 'width'.")
+E           ValueError: Invalid side parameter. Choose from 'both', 'height', 'width'.
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/temp.py:37: ValueError
+_________________ TestResize.test_one_param_vert[cpu-float32] __________________
+
+self = <test_affine.TestResize object at 0x7e37e516c280>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_one_param_vert(self, device, dtype):
+        inp = torch.rand(1, 3, 5, 2, device=device, dtype=dtype)
+>       out = kornia.geometry.transform.resize(inp, 10, align_corners=False, side="vert")
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py:136: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/affwarp.py:366: in resize
+    return resize(input, size, interpolation, align_corners, side, antialias)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input_tensor = tensor([[[[0.8474, 0.7847],
+          [0.5371, 0.7400],
+          [0.5775, 0.4577],
+          [0.0570, 0.7704],
+      ...36],
+          [0.4525, 0.1403],
+          [0.5432, 0.3054],
+          [0.0545, 0.6537],
+          [0.3049, 0.3026]]]])
+size = (10, 10), interpolation = 'bilinear', align_corners = False
+side = 'vert', antialias = False
+
+    def resize(input_tensor: torch.Tensor, size: Union[int, Tuple[int, int]], interpolation: str='bilinear', align_corners: Optional[bool]=None, side: str='both', antialias: bool=False) -> torch.Tensor:
+        """
+        Resizes an input torch.Tensor to a specified size.
+    
+        Args:
+            input_tensor (torch.Tensor): The input tensor of shape (C, H, W) or (N, C, H, W).
+            size (int or Tuple[int, int]): Desired output size. If int, a square output is produced.
+            interpolation (str): Interpolation method. Options: "nearest", "bilinear", "bicubic". Default is "bilinear".
+            align_corners (bool, optional): If True, the corner pixels of the input and output tensors are aligned.
+            side (str): Side for resizing. Options: "both", "height", "width". Default is "both".
+            antialias (bool): If True, applies antialiasing. Default is False.
+    
+        Returns:
+            torch.Tensor: Resized tensor with the specified size.
+    
+        Raises:
+            ValueError: If the input tensor is not 3D or 4D, or if the side parameter is invalid.
+        """
+        if input_tensor.dim() not in {3, 4}:
+            raise ValueError('Input tensor must be 3D (C, H, W) or 4D (N, C, H, W).')
+        if isinstance(size, int):
+            size = (size, size)
+        if side not in {'both', 'height', 'width'}:
+>           raise ValueError("Invalid side parameter. Choose from 'both', 'height', 'width'.")
+E           ValueError: Invalid side parameter. Choose from 'both', 'height', 'width'.
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/temp.py:37: ValueError
+_________________ TestResize.test_one_param_horz[cpu-float32] __________________
+
+self = <test_affine.TestResize object at 0x7e37e516c5b0>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_one_param_horz(self, device, dtype):
+        inp = torch.rand(1, 3, 2, 5, device=device, dtype=dtype)
+>       out = kornia.geometry.transform.resize(inp, 10, align_corners=False, side="horz")
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py:156: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/affwarp.py:366: in resize
+    return resize(input, size, interpolation, align_corners, side, antialias)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input_tensor = tensor([[[[0.6699, 0.4470, 0.3341, 0.1970, 0.5663],
+          [0.0747, 0.1580, 0.2387, 0.2040, 0.8500]],
+
+         [[0..., 0.0984]],
+
+         [[0.3938, 0.6632, 0.4720, 0.4260, 0.5444],
+          [0.3848, 0.5732, 0.8229, 0.9877, 0.9917]]]])
+size = (10, 10), interpolation = 'bilinear', align_corners = False
+side = 'horz', antialias = False
+
+    def resize(input_tensor: torch.Tensor, size: Union[int, Tuple[int, int]], interpolation: str='bilinear', align_corners: Optional[bool]=None, side: str='both', antialias: bool=False) -> torch.Tensor:
+        """
+        Resizes an input torch.Tensor to a specified size.
+    
+        Args:
+            input_tensor (torch.Tensor): The input tensor of shape (C, H, W) or (N, C, H, W).
+            size (int or Tuple[int, int]): Desired output size. If int, a square output is produced.
+            interpolation (str): Interpolation method. Options: "nearest", "bilinear", "bicubic". Default is "bilinear".
+            align_corners (bool, optional): If True, the corner pixels of the input and output tensors are aligned.
+            side (str): Side for resizing. Options: "both", "height", "width". Default is "both".
+            antialias (bool): If True, applies antialiasing. Default is False.
+    
+        Returns:
+            torch.Tensor: Resized tensor with the specified size.
+    
+        Raises:
+            ValueError: If the input tensor is not 3D or 4D, or if the side parameter is invalid.
+        """
+        if input_tensor.dim() not in {3, 4}:
+            raise ValueError('Input tensor must be 3D (C, H, W) or 4D (N, C, H, W).')
+        if isinstance(size, int):
+            size = (size, size)
+        if side not in {'both', 'height', 'width'}:
+>           raise ValueError("Invalid side parameter. Choose from 'both', 'height', 'width'.")
+E           ValueError: Invalid side parameter. Choose from 'both', 'height', 'width'.
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/temp.py:37: ValueError
+________________________ TestResize.test_gradcheck[cpu] ________________________
+
+self = <test_affine.TestResize object at 0x7e37e516c880>
+device = device(type='cpu')
+
+    def test_gradcheck(self, device):
+        # test parameters
+        new_size = 4
+        inp = torch.rand(1, 2, 3, 4, device=device, dtype=torch.float64)
+>       self.gradcheck(kornia.geometry.transform.Resize(new_size, align_corners=False), (inp,))
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py:178: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:143: in gradcheck
+    return gradcheck(func, inputs, raise_exception=raise_exception, fast_mode=fast_mode, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2052: in gradcheck
+    return _gradcheck_helper(**args)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2074: in _gradcheck_helper
+    func_out = func(*tupled_inputs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:274: in __call__
+    _output_image = decorated_forward(*inputs, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/module.py:63: in wrapper
+    tensor_outputs = func(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1736: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/nn/modules/module.py:1747: in _call_impl
+    return forward_call(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/affwarp.py:521: in forward
+    return resize(input, self.size, self.interpolation, align_corners=self.align_corners, side=self.side, antialias=self.antialias)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/affwarp.py:366: in resize
+    return resize(input, size, interpolation, align_corners, side, antialias)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input_tensor = tensor([[[[0.9091, 0.0375, 0.6806, 0.4325],
+          [0.8952, 0.2425, 0.0328, 0.1861],
+          [0.4768, 0.8300, 0.4...0.7725, 0.2108, 0.1007],
+          [0.1163, 0.3760, 0.1859, 0.9558]]]], dtype=torch.float64,
+       requires_grad=True)
+size = (4, 4), interpolation = 'bilinear', align_corners = False, side = 'short'
+antialias = False
+
+    def resize(input_tensor: torch.Tensor, size: Union[int, Tuple[int, int]], interpolation: str='bilinear', align_corners: Optional[bool]=None, side: str='both', antialias: bool=False) -> torch.Tensor:
+        """
+        Resizes an input torch.Tensor to a specified size.
+    
+        Args:
+            input_tensor (torch.Tensor): The input tensor of shape (C, H, W) or (N, C, H, W).
+            size (int or Tuple[int, int]): Desired output size. If int, a square output is produced.
+            interpolation (str): Interpolation method. Options: "nearest", "bilinear", "bicubic". Default is "bilinear".
+            align_corners (bool, optional): If True, the corner pixels of the input and output tensors are aligned.
+            side (str): Side for resizing. Options: "both", "height", "width". Default is "both".
+            antialias (bool): If True, applies antialiasing. Default is False.
+    
+        Returns:
+            torch.Tensor: Resized tensor with the specified size.
+    
+        Raises:
+            ValueError: If the input tensor is not 3D or 4D, or if the side parameter is invalid.
+        """
+        if input_tensor.dim() not in {3, 4}:
+            raise ValueError('Input tensor must be 3D (C, H, W) or 4D (N, C, H, W).')
+        if isinstance(size, int):
+            size = (size, size)
+        if side not in {'both', 'height', 'width'}:
+>           raise ValueError("Invalid side parameter. Choose from 'both', 'height', 'width'.")
+E           ValueError: Invalid side parameter. Choose from 'both', 'height', 'width'.
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/temp.py:37: ValueError
+______________ TestResize.test_dynamo[cpu-float32-inductor-True] _______________
+
+self = <test_affine.TestResize object at 0x7e37e516ccd0>
+device = device(type='cpu'), dtype = torch.float32, anti_alias = True
+torch_optimizer = functools.partial(<function compile at 0x7e38ba52b2e0>, backend='inductor')
+
+    @pytest.mark.parametrize("anti_alias", [True, False])
+    def test_dynamo(self, device, dtype, anti_alias, torch_optimizer):
+        new_size = (5, 6)
+        inp = torch.rand(1, 2, 3, 4, device=device, dtype=dtype)
+        op = torch_optimizer(kornia.geometry.transform.resize)
+>       out = op(inp, new_size, align_corners=False, antialias=anti_alias)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py:185: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/_dynamo/eval_frame.py:465: in _fn
+    return fn(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/affwarp.py:366: in resize
+    return resize(input, size, interpolation, align_corners, side, antialias)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input_tensor = tensor([[[[0.5912, 0.0205, 0.7605, 0.5260],
+          [0.6819, 0.6192, 0.2079, 0.9340],
+          [0.4546, 0.9913, 0.1...89, 0.7435, 0.8537, 0.9265],
+          [0.4661, 0.6001, 0.4775, 0.8782],
+          [0.2257, 0.7145, 0.5143, 0.2578]]]])
+size = (5, 6), interpolation = 'bilinear', align_corners = False, side = 'short'
+antialias = True
+
+    def resize(input_tensor: torch.Tensor, size: Union[int, Tuple[int, int]], interpolation: str='bilinear', align_corners: Optional[bool]=None, side: str='both', antialias: bool=False) -> torch.Tensor:
+        """
+        Resizes an input torch.Tensor to a specified size.
+    
+        Args:
+            input_tensor (torch.Tensor): The input tensor of shape (C, H, W) or (N, C, H, W).
+            size (int or Tuple[int, int]): Desired output size. If int, a square output is produced.
+            interpolation (str): Interpolation method. Options: "nearest", "bilinear", "bicubic". Default is "bilinear".
+            align_corners (bool, optional): If True, the corner pixels of the input and output tensors are aligned.
+            side (str): Side for resizing. Options: "both", "height", "width". Default is "both".
+            antialias (bool): If True, applies antialiasing. Default is False.
+    
+        Returns:
+            torch.Tensor: Resized tensor with the specified size.
+    
+        Raises:
+            ValueError: If the input tensor is not 3D or 4D, or if the side parameter is invalid.
+        """
+        if input_tensor.dim() not in {3, 4}:
+            raise ValueError('Input tensor must be 3D (C, H, W) or 4D (N, C, H, W).')
+        if isinstance(size, int):
+            size = (size, size)
+        if side not in {'both', 'height', 'width'}:
+>           raise ValueError("Invalid side parameter. Choose from 'both', 'height', 'width'.")
+E           ValueError: Invalid side parameter. Choose from 'both', 'height', 'width'.
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/temp.py:37: ValueError
+______________ TestResize.test_dynamo[cpu-float32-inductor-False] ______________
+
+self = <test_affine.TestResize object at 0x7e37e516cc40>
+device = device(type='cpu'), dtype = torch.float32, anti_alias = False
+torch_optimizer = functools.partial(<function compile at 0x7e38ba52b2e0>, backend='inductor')
+
+    @pytest.mark.parametrize("anti_alias", [True, False])
+    def test_dynamo(self, device, dtype, anti_alias, torch_optimizer):
+        new_size = (5, 6)
+        inp = torch.rand(1, 2, 3, 4, device=device, dtype=dtype)
+        op = torch_optimizer(kornia.geometry.transform.resize)
+>       out = op(inp, new_size, align_corners=False, antialias=anti_alias)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py:185: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/_dynamo/eval_frame.py:465: in _fn
+    return fn(*args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/utils/image.py:272: in _wrapper
+    output = f(input, *args, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/affwarp.py:366: in resize
+    return resize(input, size, interpolation, align_corners, side, antialias)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input_tensor = tensor([[[[0.5076, 0.7527, 0.6513, 0.6131],
+          [0.1138, 0.3696, 0.4483, 0.2878],
+          [0.3850, 0.0824, 0.4...13, 0.2790, 0.5001, 0.0217],
+          [0.7872, 0.9708, 0.1626, 0.7649],
+          [0.2093, 0.6982, 0.6731, 0.5558]]]])
+size = (5, 6), interpolation = 'bilinear', align_corners = False, side = 'short'
+antialias = False
+
+    def resize(input_tensor: torch.Tensor, size: Union[int, Tuple[int, int]], interpolation: str='bilinear', align_corners: Optional[bool]=None, side: str='both', antialias: bool=False) -> torch.Tensor:
+        """
+        Resizes an input torch.Tensor to a specified size.
+    
+        Args:
+            input_tensor (torch.Tensor): The input tensor of shape (C, H, W) or (N, C, H, W).
+            size (int or Tuple[int, int]): Desired output size. If int, a square output is produced.
+            interpolation (str): Interpolation method. Options: "nearest", "bilinear", "bicubic". Default is "bilinear".
+            align_corners (bool, optional): If True, the corner pixels of the input and output tensors are aligned.
+            side (str): Side for resizing. Options: "both", "height", "width". Default is "both".
+            antialias (bool): If True, applies antialiasing. Default is False.
+    
+        Returns:
+            torch.Tensor: Resized tensor with the specified size.
+    
+        Raises:
+            ValueError: If the input tensor is not 3D or 4D, or if the side parameter is invalid.
+        """
+        if input_tensor.dim() not in {3, 4}:
+            raise ValueError('Input tensor must be 3D (C, H, W) or 4D (N, C, H, W).')
+        if isinstance(size, int):
+            size = (size, size)
+        if side not in {'both', 'height', 'width'}:
+>           raise ValueError("Invalid side parameter. Choose from 'both', 'height', 'width'.")
+E           ValueError: Invalid side parameter. Choose from 'both', 'height', 'width'.
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/temp.py:37: ValueError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_smoke[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_upsize[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_downsize[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_downsizeAA[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_one_param[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_one_param_long[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_one_param_vert[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_one_param_horz[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_gradcheck[cpu]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_dynamo[cpu-float32-inductor-True]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_dynamo[cpu-float32-inductor-False]
+============================== 11 failed in 0.71s ==============================
+
+
+Final Test Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'jit', 'openxla', 'tvm', 'cudagraphs', 'inductor', 'onnxrt', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 11 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_smoke[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_upsize[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_downsize[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_downsizeAA[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_one_param[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_one_param_long[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_one_param_vert[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_one_param_horz[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_gradcheck[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_dynamo[cpu-float32-inductor-True] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_dynamo[cpu-float32-inductor-False] PASSED
+
+============================== 11 passed in 2.08s ==============================
+
+
+Initial Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'jit', 'inductor', 'tvm', 'cudagraphs', 'openxla', 'onnxrt', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 11 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_smoke[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_upsize[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_downsize[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_downsizeAA[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_one_param[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_one_param_long[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_one_param_vert[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_one_param_horz[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_gradcheck[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_dynamo[cpu-float32-inductor-True] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_affine.py::TestResize::test_dynamo[cpu-float32-inductor-False] PASSED
+
+============================== 11 passed in 2.11s ==============================

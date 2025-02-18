@@ -1,0 +1,15 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+
+Write a Python function _compute_tiles that takes a batch of 2D images as a PyTorch tensor, a grid size tuple representing the number of tiles to crop in each direction, and an optional boolean even_tile_size to ensure the tiles have even dimensions. The function should return a tuple containing two tensors: one with the computed tiles and another with the padded batch of images. The tile tensor should have the shape (B, GH, GW, C, TH, TW), where B is the batch size. Ensure that the image is padded appropriately if the grid size does not perfectly fit the image dimensions. Raise a ValueError if the grid size exceeds the image dimensions after padding.
+
+ ground Truth:kornia/enhance/equalization.py#L15
+
+ repo:kornia
+
+ function:_compute_tiles
+ 
+ test_cases:tests/enhance/test_equalization.py::TestEqualization

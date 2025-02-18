@@ -1,0 +1,11 @@
+{
+    "result": "Certainly! Below is a Python function called `deg2rad` that converts angles from degrees to radians. It takes a PyTorch tensor as input and returns a tensor with the same shape, where each element is converted from degrees to radians.\n\n```python\nimport torch\nfrom torch import Tensor\n\ndef deg2rad(tensor: Tensor) -> Tensor:\n    \"\"\"\n    Convert angles from degrees to radians.\n\n    Args:\n        tensor (Tensor): Tensor of arbitrary shape containing angles in degrees.\n\n    Returns:\n        Tensor: Tensor with the same shape as input, with angles converted to radians.\n    \"\"\"\n    if not isinstance(tensor, Tensor):\n        raise TypeError(f\"Input type is not a Tensor. Got {type(tensor)}\")\n    \n    return tensor * (torch.pi / 180.0)\n```\n\n### Explanation:\n- **Import Statements**: The function imports `torch` and `Tensor` from the PyTorch library.\n- **Function Definition**: The function `deg2rad` takes a single argument `tensor`, which is expected to be a PyTorch tensor.\n- **Type Check**: It checks if the input is a PyTorch tensor. If not, it raises a `TypeError`.\n- **Conversion**: The conversion from degrees to radians is done by multiplying the tensor by \\(\\pi / 180\\).\n- **Return**: The function returns a tensor with the same shape as the input, with each element converted to radians.",
+    "prompt": "Generate a Python function called deg2rad Function that converts angles from degrees to radians.\n\n    Args:\n        tensor: Tensor of arbitrary shape.\n\n    Returns:\n        tensor with same shape as input.\nif not isinstance(tensor, Tensor):\n        raise TypeError(f\"Input type is not a Tensor. Got {type(tensor)}\")",
+    "function_name": "deg2rad",
+    "ground_truth": "kornia/geometry/conversions.py#L83",
+    "test": "tests/geometry/test_conversions.py::TestRadDegConversions::test_deg2rad_gradcheck",
+    "class": "",
+    "stage": "Pre-Post processing",
+    "task": "",
+    "data": ""
+}

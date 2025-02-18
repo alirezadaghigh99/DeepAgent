@@ -1,0 +1,438 @@
+output file:
+processed_korniargb_to_rgba352.json
+function:
+rgb_to_rgba
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_back_and_forth_rgb[cpu-float32] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_back_and_forth_rgb[cpu-float32]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_back_and_forth_bgr[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_back_and_forth_bgr[cpu-float32] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_cardinality[cpu-float32-shape3] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_cardinality[cpu-float32-shape3]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_smoke[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_smoke[cpu-float32] FAILED'}
+
+All Test Cases On Generated code:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'openxla', 'jit', 'onnxrt', 'tvm', 'cudagraphs', 'inductor', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 19 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_smoke[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_cardinality[cpu-float32-shape0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_cardinality[cpu-float32-shape1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_cardinality[cpu-float32-shape2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_cardinality[cpu-float32-shape3] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_exception[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_back_and_forth_rgb[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_back_and_forth_bgr[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_unit[cpu-float32-0.4] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_unit[cpu-float32-45.0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_unit_aval_th[cpu-float32-0.4] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_unit_aval_th[cpu-float32-45.0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_gradcheck[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_gradcheck_th[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_jit[cpu-float32] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_module[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_module_bgr[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_module_bgra2rgb[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_module_bgra2bgr[cpu-float32] PASSED
+
+=================================== FAILURES ===================================
+____________________ TestRgbToRgba.test_smoke[cpu-float32] _____________________
+
+self = <test_rgb.TestRgbToRgba object at 0x79ceb8139e70>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_smoke(self, device, dtype):
+        C, H, W = 3, 4, 5
+        img = torch.rand(C, H, W, device=device, dtype=dtype)
+>       assert isinstance(kornia.color.rgb_to_rgba(img, 0.0), torch.Tensor)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py:107: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/color/rgb.py:51: in rgb_to_rgba
+    return rgb_to_rgba(image, alpha_val)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+image = tensor([[[0.9006, 0.2913, 0.2693, 0.2483, 0.3474],
+         [0.1045, 0.3973, 0.9027, 0.4023, 0.4597],
+         [0.5369....3272, 0.3752],
+         [0.4297, 0.4840, 0.3357, 0.4433, 0.2653],
+         [0.2587, 0.8347, 0.2544, 0.2408, 0.8720]]])
+alpha_val = 0.0
+
+    def rgb_to_rgba(image: torch.Tensor, alpha_val: Union[float, torch.Tensor]) -> torch.Tensor:
+        """
+        Convert an image from RGB to RGBA.
+    
+        Args:
+            image (torch.Tensor): RGB Image to be converted to RGBA of shape :math:`(*, 3, H, W)`.
+            alpha_val (Union[float, torch.Tensor]): A float number for the alpha value or a tensor
+              of shape :math:`(*, 1, H, W)`.
+    
+        Returns:
+            torch.Tensor: RGBA version of the image with shape :math:`(*, 4, H, W)`.
+    
+        .. note:: The current functionality is NOT supported by Torchscript.
+    
+        Example:
+            >>> input = torch.rand(2, 3, 4, 5)
+            >>> output = rgb_to_rgba(input, 1.) # 2x4x4x5
+        """
+        if image.shape[-3] != 3:
+            raise ValueError('Input image must have 3 channels in the last dimension for RGB format.')
+        if isinstance(alpha_val, float):
+>           alpha_val = torch.full_like(image[:, :1, :, :], alpha_val)
+E           IndexError: too many indices for tensor of dimension 3
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/color/temp.py:30: IndexError
+______________ TestRgbToRgba.test_cardinality[cpu-float32-shape3] ______________
+
+self = <test_rgb.TestRgbToRgba object at 0x79ceb813a680>
+device = device(type='cpu'), dtype = torch.float32, shape = (3, 2, 1)
+
+    @pytest.mark.parametrize("shape", [(1, 3, 4, 4), (2, 3, 2, 4), (3, 3, 4, 1), (3, 2, 1)])
+    def test_cardinality(self, device, dtype, shape):
+        out_shape = list(shape)
+        out_shape[-3] += 1
+        img = torch.ones(shape, device=device, dtype=dtype)
+>       assert kornia.color.rgb_to_rgba(img, 0.0).shape == tuple(out_shape)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py:114: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/color/rgb.py:51: in rgb_to_rgba
+    return rgb_to_rgba(image, alpha_val)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+image = tensor([[[1.],
+         [1.]],
+
+        [[1.],
+         [1.]],
+
+        [[1.],
+         [1.]]])
+alpha_val = 0.0
+
+    def rgb_to_rgba(image: torch.Tensor, alpha_val: Union[float, torch.Tensor]) -> torch.Tensor:
+        """
+        Convert an image from RGB to RGBA.
+    
+        Args:
+            image (torch.Tensor): RGB Image to be converted to RGBA of shape :math:`(*, 3, H, W)`.
+            alpha_val (Union[float, torch.Tensor]): A float number for the alpha value or a tensor
+              of shape :math:`(*, 1, H, W)`.
+    
+        Returns:
+            torch.Tensor: RGBA version of the image with shape :math:`(*, 4, H, W)`.
+    
+        .. note:: The current functionality is NOT supported by Torchscript.
+    
+        Example:
+            >>> input = torch.rand(2, 3, 4, 5)
+            >>> output = rgb_to_rgba(input, 1.) # 2x4x4x5
+        """
+        if image.shape[-3] != 3:
+            raise ValueError('Input image must have 3 channels in the last dimension for RGB format.')
+        if isinstance(alpha_val, float):
+>           alpha_val = torch.full_like(image[:, :1, :, :], alpha_val)
+E           IndexError: too many indices for tensor of dimension 3
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/color/temp.py:30: IndexError
+__________________ TestRgbToRgba.test_exception[cpu-float32] ___________________
+
+self = <test_rgb.TestRgbToRgba object at 0x79ceb813a950>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_exception(self, device, dtype):
+        # rgb to rgba
+        with pytest.raises(TypeError):
+>           assert kornia.color.rgb_to_rgba([0.0], 0.0)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py:119: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/color/rgb.py:51: in rgb_to_rgba
+    return rgb_to_rgba(image, alpha_val)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+image = [0.0], alpha_val = 0.0
+
+    def rgb_to_rgba(image: torch.Tensor, alpha_val: Union[float, torch.Tensor]) -> torch.Tensor:
+        """
+        Convert an image from RGB to RGBA.
+    
+        Args:
+            image (torch.Tensor): RGB Image to be converted to RGBA of shape :math:`(*, 3, H, W)`.
+            alpha_val (Union[float, torch.Tensor]): A float number for the alpha value or a tensor
+              of shape :math:`(*, 1, H, W)`.
+    
+        Returns:
+            torch.Tensor: RGBA version of the image with shape :math:`(*, 4, H, W)`.
+    
+        .. note:: The current functionality is NOT supported by Torchscript.
+    
+        Example:
+            >>> input = torch.rand(2, 3, 4, 5)
+            >>> output = rgb_to_rgba(input, 1.) # 2x4x4x5
+        """
+>       if image.shape[-3] != 3:
+E       AttributeError: 'list' object has no attribute 'shape'
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/color/temp.py:27: AttributeError
+______________ TestRgbToRgba.test_back_and_forth_rgb[cpu-float32] ______________
+
+self = <test_rgb.TestRgbToRgba object at 0x79ceb8139cf0>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_back_and_forth_rgb(self, device, dtype):
+        a_val: float = 1.0
+        x_rgb = torch.ones(3, 4, 4, device=device, dtype=dtype)
+>       x_rgba = kornia.color.rgb_to_rgba(x_rgb, a_val)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py:152: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/color/rgb.py:51: in rgb_to_rgba
+    return rgb_to_rgba(image, alpha_val)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+image = tensor([[[1., 1., 1., 1.],
+         [1., 1., 1., 1.],
+         [1., 1., 1., 1.],
+         [1., 1., 1., 1.]],
+
+        ...., 1.]],
+
+        [[1., 1., 1., 1.],
+         [1., 1., 1., 1.],
+         [1., 1., 1., 1.],
+         [1., 1., 1., 1.]]])
+alpha_val = 1.0
+
+    def rgb_to_rgba(image: torch.Tensor, alpha_val: Union[float, torch.Tensor]) -> torch.Tensor:
+        """
+        Convert an image from RGB to RGBA.
+    
+        Args:
+            image (torch.Tensor): RGB Image to be converted to RGBA of shape :math:`(*, 3, H, W)`.
+            alpha_val (Union[float, torch.Tensor]): A float number for the alpha value or a tensor
+              of shape :math:`(*, 1, H, W)`.
+    
+        Returns:
+            torch.Tensor: RGBA version of the image with shape :math:`(*, 4, H, W)`.
+    
+        .. note:: The current functionality is NOT supported by Torchscript.
+    
+        Example:
+            >>> input = torch.rand(2, 3, 4, 5)
+            >>> output = rgb_to_rgba(input, 1.) # 2x4x4x5
+        """
+        if image.shape[-3] != 3:
+            raise ValueError('Input image must have 3 channels in the last dimension for RGB format.')
+        if isinstance(alpha_val, float):
+>           alpha_val = torch.full_like(image[:, :1, :, :], alpha_val)
+E           IndexError: too many indices for tensor of dimension 3
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/color/temp.py:30: IndexError
+______________ TestRgbToRgba.test_back_and_forth_bgr[cpu-float32] ______________
+
+self = <test_rgb.TestRgbToRgba object at 0x79ceb813ae00>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_back_and_forth_bgr(self, device, dtype):
+        a_val: float = 1.0
+        x_bgr = torch.ones(3, 4, 4, device=device, dtype=dtype)
+>       x_rgba = kornia.color.bgr_to_rgba(x_bgr, a_val)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py:159: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/color/rgb.py:106: in bgr_to_rgba
+    return rgb_to_rgba(x_rgb, alpha_val)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/color/rgb.py:51: in rgb_to_rgba
+    return rgb_to_rgba(image, alpha_val)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+image = tensor([[[1., 1., 1., 1.],
+         [1., 1., 1., 1.],
+         [1., 1., 1., 1.],
+         [1., 1., 1., 1.]],
+
+        ...., 1.]],
+
+        [[1., 1., 1., 1.],
+         [1., 1., 1., 1.],
+         [1., 1., 1., 1.],
+         [1., 1., 1., 1.]]])
+alpha_val = 1.0
+
+    def rgb_to_rgba(image: torch.Tensor, alpha_val: Union[float, torch.Tensor]) -> torch.Tensor:
+        """
+        Convert an image from RGB to RGBA.
+    
+        Args:
+            image (torch.Tensor): RGB Image to be converted to RGBA of shape :math:`(*, 3, H, W)`.
+            alpha_val (Union[float, torch.Tensor]): A float number for the alpha value or a tensor
+              of shape :math:`(*, 1, H, W)`.
+    
+        Returns:
+            torch.Tensor: RGBA version of the image with shape :math:`(*, 4, H, W)`.
+    
+        .. note:: The current functionality is NOT supported by Torchscript.
+    
+        Example:
+            >>> input = torch.rand(2, 3, 4, 5)
+            >>> output = rgb_to_rgba(input, 1.) # 2x4x4x5
+        """
+        if image.shape[-3] != 3:
+            raise ValueError('Input image must have 3 channels in the last dimension for RGB format.')
+        if isinstance(alpha_val, float):
+>           alpha_val = torch.full_like(image[:, :1, :, :], alpha_val)
+E           IndexError: too many indices for tensor of dimension 3
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/color/temp.py:30: IndexError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_smoke[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_cardinality[cpu-float32-shape3]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_exception[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_back_and_forth_rgb[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_back_and_forth_bgr[cpu-float32]
+=================== 5 failed, 13 passed, 1 skipped in 0.38s ====================
+
+
+Final Test Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'onnxrt', 'openxla', 'inductor', 'cudagraphs', 'tvm', 'jit', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 19 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_smoke[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_cardinality[cpu-float32-shape0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_cardinality[cpu-float32-shape1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_cardinality[cpu-float32-shape2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_cardinality[cpu-float32-shape3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_exception[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_back_and_forth_rgb[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_back_and_forth_bgr[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_unit[cpu-float32-0.4] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_unit[cpu-float32-45.0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_unit_aval_th[cpu-float32-0.4] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_unit_aval_th[cpu-float32-45.0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_gradcheck[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_gradcheck_th[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_jit[cpu-float32] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_module[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_module_bgr[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_module_bgra2rgb[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_module_bgra2bgr[cpu-float32] PASSED
+
+======================== 18 passed, 1 skipped in 0.18s =========================
+
+
+Initial Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'jit', 'tvm', 'onnxrt', 'openxla', 'inductor', 'cudagraphs', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 19 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_smoke[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_cardinality[cpu-float32-shape0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_cardinality[cpu-float32-shape1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_cardinality[cpu-float32-shape2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_cardinality[cpu-float32-shape3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_exception[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_back_and_forth_rgb[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_back_and_forth_bgr[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_unit[cpu-float32-0.4] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_unit[cpu-float32-45.0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_unit_aval_th[cpu-float32-0.4] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_unit_aval_th[cpu-float32-45.0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_gradcheck[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_gradcheck_th[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_jit[cpu-float32] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_module[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_module_bgr[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_module_bgra2rgb[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/color/test_rgb.py::TestRgbToRgba::test_module_bgra2bgr[cpu-float32] PASSED
+
+======================== 18 passed, 1 skipped in 0.18s =========================

@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: Classification
+data: Table
+
+prompt:
+Generate a Python function called find_label_issues that identifies potentially mislabeled examples in a multi-label classification dataset. The function takes in several parameters including labels (a list of noisy labels for multi-label classification), pred_probs (an array of model-predicted class probabilities), return_indices_ranked_by (specifies how to rank the identified examples with label issues), rank_by_kwargs (optional keyword arguments for ranking), filter_by (method to determine examples with label issues), frac_noise (fraction of label issues to return), num_to_remove_per_class (number of mislabeled examples to return per class), min_examples_per_class (minimum number of examples required per class), confident_joint (confident joint array for multi-label classification), n_jobs (number of processing threads), verbose (print multiprocessing information), and low_memory (flag for using limited memory). The function returns an array of indices of examples identified with label issues, sorted by the likelihood that all classes are correctly annotated for each example.
+
+ ground Truth:cleanlab/multilabel_classification/filter.py
+
+ repo:cleanlab
+
+ function:find_label_issues
+ 
+ test_cases:tests/test_multilabel_classification.py

@@ -1,0 +1,16 @@
+stage: Training
+task: 
+data: 
+
+prompt:
+Generate a Python function called forgetting that calculates forgetting based on an accuracy matrix and boundary indices. The function takes in a 2D accuracy matrix with shape <time, experiences> and an optional list of boundary indices. If boundary_indices is not provided, it is assumed to be a list ranging from 0 to the number of experiences in the accuracy matrix. 
+
+The forgetting calculation is done by subtracting the accuracy at the time the experience was learned from the current accuracy for each experience. Forgetting is set to zero before learning on the experience. The function returns a forgetting matrix with the same shape as the input accuracy matrix.
+
+ ground Truth:avalanche/evaluation/functional.py
+
+ repo:avalanche
+
+ function:forgetting
+ 
+ test_cases:tests/evaluation/test_functional.py

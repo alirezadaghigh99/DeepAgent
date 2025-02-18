@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Write a Python function _box_cxcywh_to_xyxy that converts bounding boxes from the (cx, cy, w, h) format, where (cx, cy) represents the center and (w, h) represents the width and height, to the (x1, y1, x2, y2) format, where (x1, y1) and (x2, y2) represent the top-left and bottom-right corners, respectively. The function should return a tensor with the converted bounding boxes.
+
+ ground Truth:torchvision/ops/_box_convert.py
+
+ repo:vision
+
+ function:_box_cxcywh_to_xyxy
+ 
+ test_cases:test/test_ops.py::TestBoxConvert

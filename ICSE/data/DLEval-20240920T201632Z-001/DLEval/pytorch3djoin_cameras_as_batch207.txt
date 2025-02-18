@@ -1,0 +1,24 @@
+stage: Model Construction
+task: 
+data: Image
+
+prompt:
+Create a Python function `join_cameras_as_batch` that:
+
+- Takes a list of camera objects (`cameras_list`), all of the same type and on the same device.
+- Concatenates the tensor attributes of these cameras along the batch dimension to create a single batched camera object.
+- Returns the batched camera object, which is of the same type as the input cameras.
+
+Errors:
+- Raises `ValueError` if any camera in `cameras_list` does not inherit from `CamerasBase`.
+- Raises `ValueError` if the cameras are not of the same type.
+- Raises `ValueError` if the cameras are not on the same device.
+- Raises `ValueError` if any attribute is inconsistently present across cameras or if the attributes are not compatible for batching.
+
+ ground Truth:pytorch3d/renderer/camera_utils.py
+
+ repo:pytorch3d
+
+ function:join_cameras_as_batch
+ 
+ test_cases:tests/test_cameras.py

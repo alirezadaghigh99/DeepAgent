@@ -1,0 +1,58 @@
+stage: 
+task: 
+data: Training
+
+prompt:
+Generate a Python method `forward` for the `GaussianConditional` class that processes input values using quantization and calculates the likelihood of those values under a Gaussian distribution. The method should take as input tensors `inputs`, `scales`, and optionally `means`. It should return a tuple containing the quantized output values and their corresponding likelihoods.
+
+The class structure should include the following:
+
+- `quantize`: A method to quantize the inputs based on a specified mode (`noise` or `dequantize`).
+- `_likelihood`: A method that calculates the likelihood of the quantized outputs using the Gaussian distribution.
+- `likelihood_lower_bound`: A method to apply a lower bound to the likelihood if `use_likelihood_bound` is enabled.
+
+Class structure:
+
+```python
+class GaussianConditional(EntropyModel):
+    def __init__(
+        self,
+        scale_table: Optional[Union[List, Tuple]],
+        *args: Any,
+        scale_bound: float = 0.11,
+        tail_mass: float = 1e-9,
+        **kwargs: Any,
+    ):
+        self.lower_bound_scale = LowerBound(scale_bound)
+
+    def quantize(self, inputs: Tensor, mode: str, means: Optional[Tensor] = None) -> Tensor:
+        # Implement quantization logic based on the mode (e.g., "noise" or "dequantize")
+        pass
+
+    def _likelihood(
+        self, inputs: Tensor, scales: Tensor, means: Optional[Tensor] = None
+    ) -> Tensor:
+        # Implement the likelihood calculation
+        pass
+
+    def likelihood_lower_bound(self, likelihood: Tensor) -> Tensor:
+        # Apply a lower bound to the likelihood if needed
+        pass
+
+    def forward(
+        self,
+        inputs: Tensor,
+        scales: Tensor,
+        means: Optional[Tensor] = None,
+        training: Optional[bool] = None,
+    ) -> Tuple[Tensor, Tensor]:
+        # Implement the function as described in the prompt
+```
+
+ ground Truth:compressai/entropy_models/entropy_models.py
+
+ repo:CompressAI
+ 
+ class:GaussianConditional
+
+ function:forward

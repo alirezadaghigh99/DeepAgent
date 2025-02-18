@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: 
+
+prompt:
+Generate a Python function called cluster_qr that finds the discrete partition closest to the eigenvector embedding. The input is an array-like object called vectors with shape (n_samples, n_clusters) representing the embedding space of the samples. The output is an array of integers called labels with shape n_samples, representing the cluster labels of the vectors. 
+
+ ground Truth:sklearn/cluster/_spectral.py
+
+ repo:scikit-learn
+
+ function:cluster_qr
+ 
+ test_cases:sklearn/cluster/tests/test_spectral.py::test_spectral_clustering

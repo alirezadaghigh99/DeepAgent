@@ -1,0 +1,37 @@
+stage: Image
+task: Classification
+data: Inference
+
+prompt:
+Write a Python `forward` function for a class named `ConvNet`. The class contains a sequence of convolutional layers followed by activation functions, defined in the `Sequential` module named `seq`, an adaptive average pooling layer named `pool`, and an MLP (multi-layer perceptron) defined in the `Sequential` module named `mlp`. The `forward` function should take an input tensor `inp`, pass it through the convolutional layers, apply the pooling, flatten the output, and then pass it through the MLP to obtain class scores. Here's the class structure:
+
+```python
+class ConvNet(Module):
+    def __init__(self):
+        super().__init__()
+        self.seq = Sequential(
+            OrderedDict(
+                [
+                    ("conv1", Conv2d(3, 16, kernel_size=3, stride=2, padding=1, bias=True)),
+                    ("act1", ReLU()),
+                    ("conv2", Conv2d(16, 32, kernel_size=3, stride=2, padding=1, bias=True)),
+                    ("act2", ReLU()),
+                ]
+            )
+        )
+        self.pool = AdaptiveAvgPool2d(1)
+        self.mlp = Sequential(
+            OrderedDict([("fc", Linear(32, 10, bias=True)), ("sig", Sigmoid())])
+        )
+
+    def forward(self, inp: Tensor):
+        # your code here
+```
+
+ ground Truth:tests/sparseml/pytorch/helpers.py
+
+ repo:sparseml
+
+ function:forward
+
+ class:ConvNet

@@ -1,0 +1,279 @@
+output file:
+processed_classes-deepchemcompute_torch121.json
+function:
+_create_pytorch_loss
+Error Cases:
+ERROR: found no collectors for /local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses
+
+
+Pass or Failed: 1
+
+Related Failed Test Cases:
+set()
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/deepchem/deepchem/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/deepchem/deepchem
+configfile: setup.cfg
+plugins: flaky-3.8.1
+collecting ... collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+____________ ERROR collecting deepchem/models/tests/test_losses.py _____________
+/usr/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1204: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1176: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1126: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:241: in _call_with_frames_removed
+    ???
+<frozen importlib._bootstrap>:1204: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1176: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1126: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:241: in _call_with_frames_removed
+    ???
+<frozen importlib._bootstrap>:1204: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1176: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1126: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:241: in _call_with_frames_removed
+    ???
+<frozen importlib._bootstrap>:1204: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1176: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1147: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:690: in _load_unlocked
+    ???
+<frozen importlib._bootstrap_external>:940: in exec_module
+    ???
+<frozen importlib._bootstrap>:241: in _call_with_frames_removed
+    ???
+/local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/__init__.py:10: in <module>
+    import deepchem.hyper
+/local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/hyper/__init__.py:2: in <module>
+    from deepchem.hyper.base_classes import HyperparamOpt
+/local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/hyper/base_classes.py:6: in <module>
+    from deepchem.models import Model
+/local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/__init__.py:16: in <module>
+    from deepchem.models.keras_model import KerasModel
+/local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/keras_model.py:11: in <module>
+    from deepchem.models.losses import Loss
+/local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/losses.py:187: in <module>
+    class SigmoidCrossEntropy(Loss):
+/local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/losses.py:201: in SigmoidCrossEntropy
+    def _create_pytorch_loss(self, logits: torch.Tensor, labels: torch.Tensor) -> torch.Tensor:
+E   NameError: name 'torch' is not defined
+------------------------------- Captured stderr --------------------------------
+2025-02-14 10:19:02.280430: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739546342.291752 2496930 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1739546342.295218 2496930 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-02-14 10:19:02.307816: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+=========================== short test summary info ============================
+ERROR ../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py
+=============================== 1 error in 3.11s ===============================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/deepchem/deepchem/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/deepchem/deepchem
+configfile: setup.cfg
+plugins: flaky-3.8.1
+collecting ... collected 36 items
+
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_GlobalMutualInformation_pytorch PASSED [  2%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_LocalInformation_pytorch PASSED [  5%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_NTXentMultiplePositives_loss PASSED [  8%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_ShannonEntropy_pytorch PASSED [ 11%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_ShannonEntropy_tf PASSED [ 13%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_VAE_ELBO_pytorch PASSED [ 16%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_VAE_ELBO_tf PASSED [ 19%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_VAE_KLDivergence_pytorch PASSED [ 22%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_VAE_KLDivergence_tf PASSED [ 25%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_binary_cross_entropy_pytorch PASSED [ 27%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_binary_cross_entropy_tf PASSED [ 30%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_categorical_cross_entropy_pytorch PASSED [ 33%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_categorical_cross_entropy_tf PASSED [ 36%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_deep_graph_infomax_loss PASSED [ 38%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_get_negative_expectation PASSED [ 41%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_get_positive_expectation PASSED [ 44%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_graph_context_pred_loss PASSED [ 47%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_grover_pretrain_loss PASSED [ 50%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_hinge_loss_pytorch PASSED [ 52%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_hinge_loss_tf PASSED [ 55%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_huber_loss_pytorch PASSED [ 58%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_huber_loss_tf PASSED [ 61%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_l1_loss_pytorch PASSED [ 63%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_l1_loss_tf PASSED [ 66%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_l2_loss_pytorch PASSED [ 69%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_l2_loss_tf PASSED [ 72%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_poisson_loss_pytorch PASSED [ 75%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_poisson_loss_tf FAILED [ 77%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_sigmoid_cross_entropy_pytorch PASSED [ 80%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_sigmoid_cross_entropy_tf PASSED [ 83%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_softmax_cross_entropy_pytorch PASSED [ 86%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_softmax_cross_entropy_tf PASSED [ 88%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_sparse_softmax_cross_entropy_pytorch PASSED [ 91%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_sparse_softmax_cross_entropy_tf PASSED [ 94%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_squared_hinge_loss_pytorch PASSED [ 97%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_squared_hinge_loss_tf PASSED [100%]
+
+=================================== FAILURES ===================================
+_______________________ TestLosses.test_poisson_loss_tf ________________________
+
+self = <deepchem.models.tests.test_losses.TestLosses testMethod=test_poisson_loss_tf>
+
+    @pytest.mark.tensorflow
+    def test_poisson_loss_tf(self):
+        """Test PoissonLoss."""
+        loss = losses.PoissonLoss()
+        outputs = tf.constant([[0.1, 0.8], [0.4, 0.6]])
+        labels = tf.constant([[0.0, 1.0], [1.0, 0.0]])
+>       result = loss._compute_tf_loss(outputs, labels).numpy()
+
+/local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py:131: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/losses.py:150: in _compute_tf_loss
+    loss = tf.keras.losses.Poisson(reduction='auto')
+/local/data0/moved_data/publishablew/deepchem/deepchem/venv/lib/python3.11/site-packages/keras/src/losses/losses.py:570: in __init__
+    super().__init__(poisson, name=name, reduction=reduction, dtype=dtype)
+/local/data0/moved_data/publishablew/deepchem/deepchem/venv/lib/python3.11/site-packages/keras/src/losses/losses.py:23: in __init__
+    super().__init__(name=name, reduction=reduction, dtype=dtype)
+/local/data0/moved_data/publishablew/deepchem/deepchem/venv/lib/python3.11/site-packages/keras/src/losses/loss.py:48: in __init__
+    self.reduction = standardize_reduction(reduction)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+reduction = 'auto'
+
+    def standardize_reduction(reduction):
+        allowed = {
+            "sum_over_batch_size",
+            "sum",
+            None,
+            "none",
+            "mean",
+            "mean_with_sample_weight",
+        }
+        if reduction not in allowed:
+>           raise ValueError(
+                "Invalid value for argument `reduction`. "
+                f"Expected one of {allowed}. Received: "
+                f"reduction={reduction}"
+            )
+E           ValueError: Invalid value for argument `reduction`. Expected one of {None, 'mean_with_sample_weight', 'mean', 'none', 'sum', 'sum_over_batch_size'}. Received: reduction=auto
+
+/local/data0/moved_data/publishablew/deepchem/deepchem/venv/lib/python3.11/site-packages/keras/src/losses/loss.py:111: ValueError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_poisson_loss_tf
+========================= 1 failed, 35 passed in 5.46s =========================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/deepchem/deepchem/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/deepchem/deepchem
+configfile: setup.cfg
+plugins: flaky-3.8.1
+collecting ... collected 36 items
+
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_GlobalMutualInformation_pytorch PASSED [  2%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_LocalInformation_pytorch PASSED [  5%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_NTXentMultiplePositives_loss PASSED [  8%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_ShannonEntropy_pytorch PASSED [ 11%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_ShannonEntropy_tf PASSED [ 13%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_VAE_ELBO_pytorch PASSED [ 16%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_VAE_ELBO_tf PASSED [ 19%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_VAE_KLDivergence_pytorch PASSED [ 22%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_VAE_KLDivergence_tf PASSED [ 25%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_binary_cross_entropy_pytorch PASSED [ 27%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_binary_cross_entropy_tf PASSED [ 30%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_categorical_cross_entropy_pytorch PASSED [ 33%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_categorical_cross_entropy_tf PASSED [ 36%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_deep_graph_infomax_loss PASSED [ 38%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_get_negative_expectation PASSED [ 41%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_get_positive_expectation PASSED [ 44%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_graph_context_pred_loss PASSED [ 47%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_grover_pretrain_loss PASSED [ 50%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_hinge_loss_pytorch PASSED [ 52%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_hinge_loss_tf PASSED [ 55%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_huber_loss_pytorch PASSED [ 58%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_huber_loss_tf PASSED [ 61%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_l1_loss_pytorch PASSED [ 63%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_l1_loss_tf PASSED [ 66%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_l2_loss_pytorch PASSED [ 69%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_l2_loss_tf PASSED [ 72%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_poisson_loss_pytorch PASSED [ 75%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_poisson_loss_tf FAILED [ 77%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_sigmoid_cross_entropy_pytorch PASSED [ 80%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_sigmoid_cross_entropy_tf PASSED [ 83%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_softmax_cross_entropy_pytorch PASSED [ 86%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_softmax_cross_entropy_tf PASSED [ 88%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_sparse_softmax_cross_entropy_pytorch PASSED [ 91%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_sparse_softmax_cross_entropy_tf PASSED [ 94%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_squared_hinge_loss_pytorch PASSED [ 97%]
+../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_squared_hinge_loss_tf PASSED [100%]
+
+=================================== FAILURES ===================================
+_______________________ TestLosses.test_poisson_loss_tf ________________________
+
+self = <deepchem.models.tests.test_losses.TestLosses testMethod=test_poisson_loss_tf>
+
+    @pytest.mark.tensorflow
+    def test_poisson_loss_tf(self):
+        """Test PoissonLoss."""
+        loss = losses.PoissonLoss()
+        outputs = tf.constant([[0.1, 0.8], [0.4, 0.6]])
+        labels = tf.constant([[0.0, 1.0], [1.0, 0.0]])
+>       result = loss._compute_tf_loss(outputs, labels).numpy()
+
+/local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py:131: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/losses.py:150: in _compute_tf_loss
+    loss = tf.keras.losses.Poisson(reduction='auto')
+/local/data0/moved_data/publishablew/deepchem/deepchem/venv/lib/python3.11/site-packages/keras/src/losses/losses.py:570: in __init__
+    super().__init__(poisson, name=name, reduction=reduction, dtype=dtype)
+/local/data0/moved_data/publishablew/deepchem/deepchem/venv/lib/python3.11/site-packages/keras/src/losses/losses.py:23: in __init__
+    super().__init__(name=name, reduction=reduction, dtype=dtype)
+/local/data0/moved_data/publishablew/deepchem/deepchem/venv/lib/python3.11/site-packages/keras/src/losses/loss.py:48: in __init__
+    self.reduction = standardize_reduction(reduction)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+reduction = 'auto'
+
+    def standardize_reduction(reduction):
+        allowed = {
+            "sum_over_batch_size",
+            "sum",
+            None,
+            "none",
+            "mean",
+            "mean_with_sample_weight",
+        }
+        if reduction not in allowed:
+>           raise ValueError(
+                "Invalid value for argument `reduction`. "
+                f"Expected one of {allowed}. Received: "
+                f"reduction={reduction}"
+            )
+E           ValueError: Invalid value for argument `reduction`. Expected one of {'mean_with_sample_weight', None, 'mean', 'sum', 'sum_over_batch_size', 'none'}. Received: reduction=auto
+
+/local/data0/moved_data/publishablew/deepchem/deepchem/venv/lib/python3.11/site-packages/keras/src/losses/loss.py:111: ValueError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/deepchem/deepchem/deepchem/models/tests/test_losses.py::TestLosses::test_poisson_loss_tf
+========================= 1 failed, 35 passed in 5.42s =========================

@@ -1,0 +1,14 @@
+stage: Training
+task: 
+data: Image
+
+prompt:
+Generate a Python function called spatial_gradient that computes the first-order image derivative in both x and y using a Sobel operator. The function takes in an input image tensor with shape (B, C, H, W), a mode parameter specifying the derivatives modality (either 'sobel' or 'diff'), an order parameter indicating the order of the derivatives, and a normalized parameter determining whether the output is normalized. The function returns the derivatives of the input feature map with shape (B, C, 2, H, W). The function also includes examples demonstrating its usage.
+
+ ground Truth:kornia/filters/sobel.py
+
+ repo:kornia
+
+ function:spatial_gradient
+ 
+ test_cases:tests/filters/test_sobel.py::TestSpatialGradient

@@ -1,0 +1,37 @@
+strict digraph  {
+label="Propagating quantizers: 2, 1\nNext quantizer to be propagated: 1\nFinished quantizers: ";
+labelloc=t;
+"0 /nncf_model_input_0";
+"5 /nncf_model_output_0";
+"POST HOOK 0 /nncf_model_input_0" [color=red, label="TP: /nncf_model_input_0|OUTPUT"];
+"PRE HOOK 0 1 SharedLayersModel/NNCFConv2d[shared_conv]/conv2d_0" [color=red, label="TP: SharedLayersModel/NNCFConv2d[shared_conv]/conv2d_0|INPUT0"];
+"Quantizer #1" [color=blue, label="Quantizer #1
+T: [B:8 M:S SGN:ANY PC:N]
+Q-input sink ops: 1 SharedLayersModel/NNCFConv2d[shared_conv]/conv2d_0
+2 SharedLayersModel/__add___0
+"];
+"POST HOOK 2 SharedLayersModel/__add___0" [color=red, label="TP: SharedLayersModel/__add___0|OUTPUT"];
+"PRE HOOK 0 3 SharedLayersModel/NNCFConv2d[shared_conv]/conv2d_1" [color=red, label="TP: SharedLayersModel/NNCFConv2d[shared_conv]/conv2d_1|INPUT0"];
+"Quantizer #2" [color=blue, label="Quantizer #2
+T: [B:8 M:S SGN:ANY PC:N]
+Q-input sink ops: 3 SharedLayersModel/NNCFConv2d[shared_conv]/conv2d_1
+4 SharedLayersModel/__mul___0
+"];
+"POST HOOK 4 SharedLayersModel/__mul___0" [color=red, label="TP: SharedLayersModel/__mul___0|OUTPUT"];
+"PRE HOOK 0 5 /nncf_model_output_0" [color=red, label="TP: /nncf_model_output_0|INPUT0"];
+"POST HOOK 5 /nncf_model_output_0" [color=red, label="TP: /nncf_model_output_0|OUTPUT"];
+"1 SharedLayersModel/NNCFConv2d[shared_conv]/conv2d_0\n2 SharedLayersModel/__add___0\n";
+"3 SharedLayersModel/NNCFConv2d[shared_conv]/conv2d_1\n4 SharedLayersModel/__mul___0\n";
+"0 /nncf_model_input_0" -> "POST HOOK 0 /nncf_model_input_0";
+"5 /nncf_model_output_0" -> "POST HOOK 5 /nncf_model_output_0";
+"POST HOOK 0 /nncf_model_input_0" -> "PRE HOOK 0 1 SharedLayersModel/NNCFConv2d[shared_conv]/conv2d_0";
+"PRE HOOK 0 1 SharedLayersModel/NNCFConv2d[shared_conv]/conv2d_0" -> "1 SharedLayersModel/NNCFConv2d[shared_conv]/conv2d_0\n2 SharedLayersModel/__add___0\n"  [color=blue, label=1];
+"Quantizer #1" -> "PRE HOOK 0 1 SharedLayersModel/NNCFConv2d[shared_conv]/conv2d_0"  [style=dashed];
+"POST HOOK 2 SharedLayersModel/__add___0" -> "PRE HOOK 0 3 SharedLayersModel/NNCFConv2d[shared_conv]/conv2d_1";
+"PRE HOOK 0 3 SharedLayersModel/NNCFConv2d[shared_conv]/conv2d_1" -> "3 SharedLayersModel/NNCFConv2d[shared_conv]/conv2d_1\n4 SharedLayersModel/__mul___0\n"  [color=blue, label=2];
+"Quantizer #2" -> "PRE HOOK 0 3 SharedLayersModel/NNCFConv2d[shared_conv]/conv2d_1"  [style=dashed];
+"POST HOOK 4 SharedLayersModel/__mul___0" -> "PRE HOOK 0 5 /nncf_model_output_0";
+"PRE HOOK 0 5 /nncf_model_output_0" -> "5 /nncf_model_output_0";
+"1 SharedLayersModel/NNCFConv2d[shared_conv]/conv2d_0\n2 SharedLayersModel/__add___0\n" -> "POST HOOK 2 SharedLayersModel/__add___0";
+"3 SharedLayersModel/NNCFConv2d[shared_conv]/conv2d_1\n4 SharedLayersModel/__mul___0\n" -> "POST HOOK 4 SharedLayersModel/__mul___0";
+}

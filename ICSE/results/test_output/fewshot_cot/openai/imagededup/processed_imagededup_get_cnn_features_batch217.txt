@@ -1,0 +1,1202 @@
+output file:
+processed_imagededup_get_cnn_features_batch217.json
+function:
+_get_cnn_features_batch
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'tests/test_cnn.py::test_recursive_on_flat_directory FAILED               [ 43%]', 'FAILED tests/test_cnn.py::test_find_duplicates_to_remove_encoding_integration', 'FAILED tests/test_cnn.py::test_finds_non_recursive - TypeError: expected Tens...', 'tests/test_cnn.py::test_find_duplicates_to_remove_encoding_integration FAILED [ 97%]', 'tests/test_cnn.py::test_find_duplicates_dir_integration FAILED           [ 86%]', 'FAILED tests/test_cnn.py::test_recursive_find_duplicates_dir_integration - Ty...', 'tests/test_cnn.py::test__get_cnn_features_batch_nondefault_models FAILED [ 21%]', 'tests/test_cnn.py::test_finds_non_recursive FAILED                       [ 45%]', 'tests/test_cnn.py::test_recursive_find_duplicates_to_remove_dir_integration FAILED [ 95%]', 'tests/test_cnn.py::test_scores_saving FAILED                             [100%]', 'FAILED tests/test_cnn.py::test__get_cnn_features_batch_nondefault_models - as...', 'FAILED tests/test_cnn.py::test_scores_saving - TypeError: expected Tensor as ...', 'FAILED tests/test_cnn.py::test_find_duplicates_dir_integration - TypeError: e...', 'tests/test_cnn.py::test_find_duplicates_to_remove_dir_integration FAILED [ 93%]', 'FAILED tests/test_cnn.py::test_recursive_find_duplicates_to_remove_dir_integration', 'tests/test_cnn.py::test_recursive_find_duplicates_dir_integration FAILED [ 89%]', 'tests/test_cnn.py::test__get_cnn_features_batch FAILED                   [ 19%]', 'tests/test_cnn.py::test_encode_images FAILED                             [ 36%]', 'FAILED tests/test_cnn.py::test_recursive_on_flat_directory - assert (1000,) =...', 'FAILED tests/test_cnn.py::test_find_duplicates_to_remove_dir_integration - Ty...', 'FAILED tests/test_cnn.py::test_encode_images - assert (1000,) == (576,)', 'FAILED tests/test_cnn.py::test__get_cnn_features_batch - assert (1000,) == (5...'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.3, pluggy-1.5.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/imagededup/imagededup
+plugins: hydra-core-1.3.2, cov-6.0.0, mock-3.14.0, anyio-4.6.2.post1
+collecting ... collected 46 items
+
+tests/test_cnn.py::test__init_defaults PASSED                            [  2%]
+tests/test_cnn.py::test__init_custom PASSED                              [  4%]
+tests/test_cnn.py::test__init_missing_custom_args_raises_exception PASSED [  6%]
+tests/test_cnn.py::test_default_custom_name_raises_warning PASSED        [  8%]
+tests/test_cnn.py::test_positional_init PASSED                           [ 10%]
+tests/test_cnn.py::test_call_method_accepted PASSED                      [ 13%]
+tests/test_cnn.py::test_forward_method_accepted PASSED                   [ 15%]
+tests/test_cnn.py::test__get_cnn_features_single PASSED                  [ 17%]
+tests/test_cnn.py::test__get_cnn_features_batch FAILED                   [ 19%]
+tests/test_cnn.py::test__get_cnn_features_batch_nondefault_models FAILED [ 21%]
+tests/test_cnn.py::test__get_cnn_features_batch_num_workers_do_not_change_final_result PASSED [ 23%]
+tests/test_cnn.py::test_encode_image_expand_image_array_cnn_gets_called PASSED [ 26%]
+tests/test_cnn.py::test_encode_image_wrong_dim_input_array PASSED        [ 28%]
+tests/test_cnn.py::test_encode_image_2_dim_array_encoded PASSED          [ 30%]
+tests/test_cnn.py::test_encode_image_2_dim_file_equals_array PASSED      [ 32%]
+tests/test_cnn.py::test_encode_image PASSED                              [ 34%]
+tests/test_cnn.py::test_encode_images FAILED                             [ 36%]
+tests/test_cnn.py::test_encode_images_num_workers PASSED                 [ 39%]
+tests/test_cnn.py::test_encode_images_num_workers_default_override_on_nonlinux SKIPPED [ 41%]
+tests/test_cnn.py::test_recursive_on_flat_directory FAILED               [ 43%]
+tests/test_cnn.py::test_finds_non_recursive FAILED                       [ 45%]
+tests/test_cnn.py::test__check_threshold_bounds_input_not_float PASSED   [ 47%]
+tests/test_cnn.py::test__check_threshold_bounds_input_out_of_range PASSED [ 50%]
+tests/test_cnn.py::test__find_duplicates_dict_scores_false PASSED        [ 52%]
+tests/test_cnn.py::test__find_duplicates_dict_scores_true PASSED         [ 54%]
+tests/test_cnn.py::test__find_duplicates_dict_outfile_true PASSED        [ 56%]
+tests/test_cnn.py::test_find_duplicates_dir PASSED                       [ 58%]
+tests/test_cnn.py::test_find_duplicates_dir_num_enc_workers PASSED       [ 60%]
+tests/test_cnn.py::test_find_duplicates_mp PASSED                        [ 63%]
+tests/test_cnn.py::test_find_duplicates_with_dir PASSED                  [ 65%]
+tests/test_cnn.py::test_find_duplicates_dict PASSED                      [ 67%]
+tests/test_cnn.py::test_find_duplicates_dict_num_worker_has_impact PASSED [ 69%]
+tests/test_cnn.py::test_find_duplicates_dict_recursive_warning PASSED    [ 71%]
+tests/test_cnn.py::test_find_duplicates_dict_num_enc_workers_warning PASSED [ 73%]
+tests/test_cnn.py::test_find_duplicates_wrong_threhsold_input PASSED     [ 76%]
+tests/test_cnn.py::test_find_duplicates_wrong_input PASSED               [ 78%]
+tests/test_cnn.py::test_find_duplicates_to_remove_outfile_false PASSED   [ 80%]
+tests/test_cnn.py::test_find_duplicates_to_remove_outfile_true PASSED    [ 82%]
+tests/test_cnn.py::test_find_duplicates_to_remove_encoding_map PASSED    [ 84%]
+tests/test_cnn.py::test_find_duplicates_dir_integration FAILED           [ 86%]
+tests/test_cnn.py::test_recursive_find_duplicates_dir_integration FAILED [ 89%]
+tests/test_cnn.py::test_find_duplicates_encoding_integration FAILED      [ 91%]
+tests/test_cnn.py::test_find_duplicates_to_remove_dir_integration FAILED [ 93%]
+tests/test_cnn.py::test_recursive_find_duplicates_to_remove_dir_integration FAILED [ 95%]
+tests/test_cnn.py::test_find_duplicates_to_remove_encoding_integration FAILED [ 97%]
+tests/test_cnn.py::test_scores_saving FAILED                             [100%]
+
+=================================== FAILURES ===================================
+_________________________ test__get_cnn_features_batch _________________________
+
+cnn = <imagededup.methods.cnn.CNN object at 0x7a8ef1e4f710>
+
+    def test__get_cnn_features_batch(cnn):
+    
+        result = cnn._get_cnn_features_batch(TEST_IMAGE_DIR)
+    
+        expected_predicted_files = [
+            'ukbench00120.jpg',
+            'ukbench01380.jpg',
+            'ukbench08976.jpg',
+            'ukbench08996.jpg',
+            'ukbench09012.jpg',
+            'ukbench09040.jpg',
+            'ukbench09060.jpg',
+            'ukbench09268.jpg',
+            'ukbench09348.jpg',
+            'ukbench09380.jpg',
+        ]
+    
+        assert list(sorted(result.keys(), key=str.lower)) == expected_predicted_files
+    
+        for i in result.values():
+            assert isinstance(i, np.ndarray)
+>           assert i.shape == (576,)
+E           assert (1000,) == (576,)
+E             
+E             At index 0 diff: 1000 != 576
+E             
+E             Full diff:
+E               (
+E             -     576,
+E             +     1000,
+E               )
+
+tests/test_cnn.py:173: AssertionError
+________________ test__get_cnn_features_batch_nondefault_models ________________
+
+    def test__get_cnn_features_batch_nondefault_models():
+        cnn = CNN(model_config=CustomModel(model=EfficientNet(),
+                                           transform=EfficientNet.transform,
+                                           name=EfficientNet.name))
+        result = cnn._get_cnn_features_batch(TEST_IMAGE_DIR)
+    
+        for i in result.values():
+            assert isinstance(i, np.ndarray)
+>           assert i.shape == (1792,)
+E           assert (1000,) == (1792,)
+E             
+E             At index 0 diff: 1000 != 1792
+E             
+E             Full diff:
+E               (
+E             -     1792,
+E             +     1000,
+E               )
+
+tests/test_cnn.py:206: AssertionError
+----------------------------- Captured stderr call -----------------------------
+2025-02-13 21:36:18,295: INFO Device set to cuda ..
+2025-02-13 21:36:18,315: INFO Initialized: efficientnet_b4 for feature extraction ..
+------------------------------ Captured log call -------------------------------
+INFO     imagededup.methods.cnn:cnn.py:47 Device set to cuda ..
+INFO     imagededup.methods.cnn:cnn.py:51 Initialized: efficientnet_b4 for feature extraction ..
+______________________________ test_encode_images ______________________________
+
+cnn = <imagededup.methods.cnn.CNN object at 0x7a8ef1e4f710>
+
+    def test_encode_images(cnn):
+        result = cnn.encode_images(TEST_IMAGE_DIR)
+    
+        expected_predicted_files = [
+            'ukbench00120.jpg',
+            'ukbench01380.jpg',
+            'ukbench08976.jpg',
+            'ukbench08996.jpg',
+            'ukbench09012.jpg',
+            'ukbench09040.jpg',
+            'ukbench09060.jpg',
+            'ukbench09268.jpg',
+            'ukbench09348.jpg',
+            'ukbench09380.jpg',
+        ]
+    
+        assert list(sorted(result.keys(), key=str.lower)) == expected_predicted_files
+    
+        for i in result.values():
+            assert isinstance(i, np.ndarray)
+>           assert i.shape == (576,)
+E           assert (1000,) == (576,)
+E             
+E             At index 0 diff: 1000 != 576
+E             
+E             Full diff:
+E               (
+E             -     576,
+E             +     1000,
+E               )
+
+tests/test_cnn.py:307: AssertionError
+_______________________ test_recursive_on_flat_directory _______________________
+
+cnn = <imagededup.methods.cnn.CNN object at 0x7a8ef1e4f710>
+
+    def test_recursive_on_flat_directory(cnn):
+        result = cnn.encode_images(TEST_IMAGE_DIR, recursive=True)
+    
+        expected_predicted_files = [
+            'ukbench00120.jpg',
+            'ukbench01380.jpg',
+            'ukbench08976.jpg',
+            'ukbench08996.jpg',
+            'ukbench09012.jpg',
+            'ukbench09040.jpg',
+            'ukbench09060.jpg',
+            'ukbench09268.jpg',
+            'ukbench09348.jpg',
+            'ukbench09380.jpg',
+        ]
+    
+        assert list(sorted(result.keys(), key=str.lower)) == expected_predicted_files
+    
+        for i in result.values():
+            assert isinstance(i, np.ndarray)
+>           assert i.shape == (576,)
+E           assert (1000,) == (576,)
+E             
+E             At index 0 diff: 1000 != 576
+E             
+E             Full diff:
+E               (
+E             -     576,
+E             +     1000,
+E               )
+
+tests/test_cnn.py:393: AssertionError
+___________________________ test_finds_non_recursive ___________________________
+
+cnn = <imagededup.methods.cnn.CNN object at 0x7a8ef1e4f710>
+
+    def test_finds_non_recursive(cnn):
+>       result = cnn.encode_images(TEST_IMAGE_DIR_MIXED_NESTED)
+
+tests/test_cnn.py:397: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+imagededup/methods/cnn.py:188: in encode_images
+    return self._get_cnn_features_batch(image_dir=image_dir, recursive=recursive, num_workers=num_enc_workers)
+imagededup/methods/cnn.py:94: in _get_cnn_features_batch
+    return _get_cnn_features_batch(image_dir, recursive, num_workers)
+imagededup/methods/temp.py:60: in _get_cnn_features_batch
+    for images, filenames in dataloader:
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/dataloader.py:701: in __next__
+    data = self._next_data()
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/dataloader.py:757: in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py:55: in fetch
+    return self.collate_fn(data)
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:398: in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:211: in collate
+    return [
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:212: in <listcomp>
+    collate(samples, collate_fn_map=collate_fn_map)
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:155: in collate
+    return collate_fn_map[elem_type](batch, collate_fn_map=collate_fn_map)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+batch = (tensor([[[-0.2342, -0.1828, -0.1828,  ...,  0.1083,  0.0912,  0.0741],
+         [-0.1999, -0.1828, -0.2171,  ...,  0....3045,  ..., -0.3404, -0.6367, -0.7761],
+         [ 1.0888,  0.6879,  0.2348,  ..., -0.1138, -0.8981, -0.7238]]]), None)
+
+    def collate_tensor_fn(
+        batch,
+        *,
+        collate_fn_map: Optional[Dict[Union[Type, Tuple[Type, ...]], Callable]] = None,
+    ):
+        elem = batch[0]
+        out = None
+        if elem.is_nested:
+            raise RuntimeError(
+                "Batches of nested tensors are not currently supported by the default collate_fn; "
+                "please provide a custom collate_fn to handle them appropriately."
+            )
+        if elem.layout in {
+            torch.sparse_coo,
+            torch.sparse_csr,
+            torch.sparse_bsr,
+            torch.sparse_csc,
+            torch.sparse_bsc,
+        }:
+            raise RuntimeError(
+                "Batches of sparse tensors are not currently supported by the default collate_fn; "
+                "please provide a custom collate_fn to handle them appropriately."
+            )
+        if torch.utils.data.get_worker_info() is not None:
+            # If we're in a background process, concatenate directly into a
+            # shared memory tensor to avoid an extra copy
+            numel = sum(x.numel() for x in batch)
+            storage = elem._typed_storage()._new_shared(numel, device=elem.device)
+            out = elem.new(storage).resize_(len(batch), *list(elem.size()))
+>       return torch.stack(batch, 0, out=out)
+E       TypeError: expected Tensor as element 1 in argument 0, but got NoneType
+
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:272: TypeError
+------------------------------ Captured log call -------------------------------
+WARNING  root:temp.py:48 Failed to process image /local/data0/moved_data/publishablew/imagededup/imagededup/tests/data/mixed_nested_images/ukbench09268_corrupt.jpg: cannot identify image file '/local/data0/moved_data/publishablew/imagededup/imagededup/tests/data/mixed_nested_images/ukbench09268_corrupt.jpg'
+_____________________ test_find_duplicates_dir_integration _____________________
+
+cnn = <imagededup.methods.cnn.CNN object at 0x7a8ef1e4f710>
+
+    def test_find_duplicates_dir_integration(cnn):
+        expected_duplicates = {
+            'ukbench00120.jpg': [
+                ('ukbench00120_hflip.jpg', 0.9672552),
+                ('ukbench00120_resize.jpg', 0.98120844),
+                ('ukbench00120_rotation.jpg',  0.90708774)
+            ],
+            'ukbench00120_hflip.jpg': [
+                ('ukbench00120.jpg', 0.9672552),
+                ('ukbench00120_resize.jpg', 0.95676106),
+                ('ukbench00120_rotation.jpg',  0.9030868)
+            ],
+            'ukbench00120_resize.jpg': [
+                ('ukbench00120.jpg', 0.98120844),
+                ('ukbench00120_hflip.jpg', 0.95676106),
+                ('ukbench00120_rotation.jpg',  0.9102372),
+            ],
+            'ukbench00120_rotation.jpg': [('ukbench00120.jpg', 0.90708774),
+                                          ('ukbench00120_hflip.jpg', 0.9030868),
+                                          ('ukbench00120_resize.jpg',  0.9102372)],
+            'ukbench09268.jpg': [],
+        }
+>       duplicates = cnn.find_duplicates(
+            image_dir=TEST_IMAGE_DIR_MIXED,
+            min_similarity_threshold=0.9,
+            scores=True,
+            outfile=False,
+        )
+
+tests/test_cnn.py:802: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+imagededup/methods/cnn.py:315: in find_duplicates
+    result = self._find_duplicates_dir(image_dir=image_dir, min_similarity_threshold=min_similarity_threshold, scores=scores, outfile=outfile, recursive=recursive, num_enc_workers=num_enc_workers, num_sim_workers=num_sim_workers)
+imagededup/methods/cnn.py:269: in _find_duplicates_dir
+    self.encode_images(image_dir=image_dir, recursive=recursive, num_enc_workers=num_enc_workers)
+imagededup/methods/cnn.py:188: in encode_images
+    return self._get_cnn_features_batch(image_dir=image_dir, recursive=recursive, num_workers=num_enc_workers)
+imagededup/methods/cnn.py:94: in _get_cnn_features_batch
+    return _get_cnn_features_batch(image_dir, recursive, num_workers)
+imagededup/methods/temp.py:60: in _get_cnn_features_batch
+    for images, filenames in dataloader:
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/dataloader.py:701: in __next__
+    data = self._next_data()
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/dataloader.py:757: in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py:55: in fetch
+    return self.collate_fn(data)
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:398: in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:211: in collate
+    return [
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:212: in <listcomp>
+    collate(samples, collate_fn_map=collate_fn_map)
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:155: in collate
+    return collate_fn_map[elem_type](batch, collate_fn_map=collate_fn_map)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+batch = (tensor([[[ 0.0569,  0.0912,  0.1254,  ..., -0.2171, -0.2171, -0.2513],
+         [ 0.0741,  0.1083,  0.1426,  ..., -0....0550,  ..., -1.2641, -1.2990, -1.2293],
+         [-0.9853, -1.2641, -0.9504,  ..., -1.0550, -1.4036, -1.2467]]]), None)
+
+    def collate_tensor_fn(
+        batch,
+        *,
+        collate_fn_map: Optional[Dict[Union[Type, Tuple[Type, ...]], Callable]] = None,
+    ):
+        elem = batch[0]
+        out = None
+        if elem.is_nested:
+            raise RuntimeError(
+                "Batches of nested tensors are not currently supported by the default collate_fn; "
+                "please provide a custom collate_fn to handle them appropriately."
+            )
+        if elem.layout in {
+            torch.sparse_coo,
+            torch.sparse_csr,
+            torch.sparse_bsr,
+            torch.sparse_csc,
+            torch.sparse_bsc,
+        }:
+            raise RuntimeError(
+                "Batches of sparse tensors are not currently supported by the default collate_fn; "
+                "please provide a custom collate_fn to handle them appropriately."
+            )
+        if torch.utils.data.get_worker_info() is not None:
+            # If we're in a background process, concatenate directly into a
+            # shared memory tensor to avoid an extra copy
+            numel = sum(x.numel() for x in batch)
+            storage = elem._typed_storage()._new_shared(numel, device=elem.device)
+            out = elem.new(storage).resize_(len(batch), *list(elem.size()))
+>       return torch.stack(batch, 0, out=out)
+E       TypeError: expected Tensor as element 5 in argument 0, but got NoneType
+
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:272: TypeError
+------------------------------ Captured log call -------------------------------
+WARNING  root:temp.py:48 Failed to process image /local/data0/moved_data/publishablew/imagededup/imagededup/tests/data/mixed_images/ukbench09268_corrupt.jpg: cannot identify image file '/local/data0/moved_data/publishablew/imagededup/imagededup/tests/data/mixed_images/ukbench09268_corrupt.jpg'
+________________ test_recursive_find_duplicates_dir_integration ________________
+
+cnn = <imagededup.methods.cnn.CNN object at 0x7a8ef1e4f710>
+
+    def test_recursive_find_duplicates_dir_integration(cnn):
+        expected_duplicates = {
+            str(Path('lvl1/ukbench00120.jpg')): [
+                ('ukbench00120_hflip.jpg',  0.9891392),
+                (str(Path('lvl1/lvl2b/ukbench00120_resize.jpg')), 0.99194086),
+                (str(Path('lvl1/lvl2a/ukbench00120_rotation.jpg')),  0.90708774),
+            ],
+            'ukbench00120_hflip.jpg': [
+                (str(Path('lvl1/lvl2a/ukbench00120_rotation.jpg')), 0.9030868),
+                (str(Path('lvl1/ukbench00120.jpg')), 0.9891392),
+                (str(Path('lvl1/lvl2b/ukbench00120_resize.jpg')),  0.9793916),
+            ],
+            str(Path('lvl1/lvl2b/ukbench00120_resize.jpg')): [
+                (str(Path('lvl1/lvl2a/ukbench00120_rotation.jpg')), 0.9102372),
+                (str(Path('lvl1/ukbench00120.jpg')), 0.99194086),
+                ('ukbench00120_hflip.jpg',  0.9793916),
+            ],
+            str(Path('lvl1/lvl2a/ukbench00120_rotation.jpg')): [('ukbench00120_hflip.jpg',  0.9030868),
+                                                                (str(Path('lvl1/ukbench00120.jpg')), 0.90708774),
+                                                                (str(Path('lvl1/lvl2b/ukbench00120_resize.jpg')), 0.9102372)],
+            str(Path('lvl1/lvl2b/ukbench09268.jpg')): [],
+        }
+>       duplicates = cnn.find_duplicates(
+            image_dir=TEST_IMAGE_DIR_MIXED_NESTED,
+            min_similarity_threshold=0.9,
+            scores=True,
+            outfile=False,
+            recursive=True,
+        )
+
+tests/test_cnn.py:847: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+imagededup/methods/cnn.py:315: in find_duplicates
+    result = self._find_duplicates_dir(image_dir=image_dir, min_similarity_threshold=min_similarity_threshold, scores=scores, outfile=outfile, recursive=recursive, num_enc_workers=num_enc_workers, num_sim_workers=num_sim_workers)
+imagededup/methods/cnn.py:269: in _find_duplicates_dir
+    self.encode_images(image_dir=image_dir, recursive=recursive, num_enc_workers=num_enc_workers)
+imagededup/methods/cnn.py:188: in encode_images
+    return self._get_cnn_features_batch(image_dir=image_dir, recursive=recursive, num_workers=num_enc_workers)
+imagededup/methods/cnn.py:94: in _get_cnn_features_batch
+    return _get_cnn_features_batch(image_dir, recursive, num_workers)
+imagededup/methods/temp.py:60: in _get_cnn_features_batch
+    for images, filenames in dataloader:
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/dataloader.py:701: in __next__
+    data = self._next_data()
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/dataloader.py:757: in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py:55: in fetch
+    return self.collate_fn(data)
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:398: in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:211: in collate
+    return [
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:212: in <listcomp>
+    collate(samples, collate_fn_map=collate_fn_map)
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:155: in collate
+    return collate_fn_map[elem_type](batch, collate_fn_map=collate_fn_map)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+batch = (tensor([[[-0.2342, -0.1828, -0.1828,  ...,  0.1083,  0.0912,  0.0741],
+         [-0.1999, -0.1828, -0.2171,  ...,  0....1, -1.0550,  ..., -1.2641, -1.2990, -1.2293],
+         [-0.9853, -1.2641, -0.9504,  ..., -1.0550, -1.4036, -1.2467]]]))
+
+    def collate_tensor_fn(
+        batch,
+        *,
+        collate_fn_map: Optional[Dict[Union[Type, Tuple[Type, ...]], Callable]] = None,
+    ):
+        elem = batch[0]
+        out = None
+        if elem.is_nested:
+            raise RuntimeError(
+                "Batches of nested tensors are not currently supported by the default collate_fn; "
+                "please provide a custom collate_fn to handle them appropriately."
+            )
+        if elem.layout in {
+            torch.sparse_coo,
+            torch.sparse_csr,
+            torch.sparse_bsr,
+            torch.sparse_csc,
+            torch.sparse_bsc,
+        }:
+            raise RuntimeError(
+                "Batches of sparse tensors are not currently supported by the default collate_fn; "
+                "please provide a custom collate_fn to handle them appropriately."
+            )
+        if torch.utils.data.get_worker_info() is not None:
+            # If we're in a background process, concatenate directly into a
+            # shared memory tensor to avoid an extra copy
+            numel = sum(x.numel() for x in batch)
+            storage = elem._typed_storage()._new_shared(numel, device=elem.device)
+            out = elem.new(storage).resize_(len(batch), *list(elem.size()))
+>       return torch.stack(batch, 0, out=out)
+E       TypeError: expected Tensor as element 1 in argument 0, but got NoneType
+
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:272: TypeError
+------------------------------ Captured log call -------------------------------
+WARNING  root:temp.py:48 Failed to process image /local/data0/moved_data/publishablew/imagededup/imagededup/tests/data/mixed_nested_images/ukbench09268_corrupt.jpg: cannot identify image file '/local/data0/moved_data/publishablew/imagededup/imagededup/tests/data/mixed_nested_images/ukbench09268_corrupt.jpg'
+__________________ test_find_duplicates_encoding_integration ___________________
+
+cnn = <imagededup.methods.cnn.CNN object at 0x7a8ef1e4f710>
+
+    def test_find_duplicates_encoding_integration(cnn):
+        expected_duplicates = {
+            'ukbench00120.jpg': [
+                ('ukbench00120_hflip.jpg', 0.9672552),
+                ('ukbench00120_resize.jpg', 0.98120844),
+                ('ukbench00120_rotation.jpg', 0.95676106),
+            ],
+            'ukbench00120_hflip.jpg': [
+                ('ukbench00120.jpg', 0.9672552),
+                ('ukbench00120_resize.jpg', 0.95676106),
+                ('ukbench00120_rotation.jpg', 0.95676106),
+            ],
+            'ukbench00120_resize.jpg': [
+                ('ukbench00120.jpg', 0.98120844),
+                ('ukbench00120_hflip.jpg', 0.95676106),
+                ('ukbench00120_rotation.jpg', 0.95676106),
+            ],
+            'ukbench00120_rotation.jpg': [('ukbench00120.jpg', 0.98120844),
+                                          ('ukbench00120_hflip.jpg', 0.98120844),
+                                          ('ukbench00120_resize.jpg', 0.98120844),],
+            'ukbench09268.jpg': [],
+        }
+    
+>       encodings = cnn.encode_images(TEST_IMAGE_DIR_MIXED)
+
+tests/test_cnn.py:893: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+imagededup/methods/cnn.py:188: in encode_images
+    return self._get_cnn_features_batch(image_dir=image_dir, recursive=recursive, num_workers=num_enc_workers)
+imagededup/methods/cnn.py:94: in _get_cnn_features_batch
+    return _get_cnn_features_batch(image_dir, recursive, num_workers)
+imagededup/methods/temp.py:60: in _get_cnn_features_batch
+    for images, filenames in dataloader:
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/dataloader.py:701: in __next__
+    data = self._next_data()
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/dataloader.py:757: in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py:55: in fetch
+    return self.collate_fn(data)
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:398: in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:211: in collate
+    return [
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:212: in <listcomp>
+    collate(samples, collate_fn_map=collate_fn_map)
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:155: in collate
+    return collate_fn_map[elem_type](batch, collate_fn_map=collate_fn_map)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+batch = (tensor([[[ 0.0569,  0.0912,  0.1254,  ..., -0.2171, -0.2171, -0.2513],
+         [ 0.0741,  0.1083,  0.1426,  ..., -0....0550,  ..., -1.2641, -1.2990, -1.2293],
+         [-0.9853, -1.2641, -0.9504,  ..., -1.0550, -1.4036, -1.2467]]]), None)
+
+    def collate_tensor_fn(
+        batch,
+        *,
+        collate_fn_map: Optional[Dict[Union[Type, Tuple[Type, ...]], Callable]] = None,
+    ):
+        elem = batch[0]
+        out = None
+        if elem.is_nested:
+            raise RuntimeError(
+                "Batches of nested tensors are not currently supported by the default collate_fn; "
+                "please provide a custom collate_fn to handle them appropriately."
+            )
+        if elem.layout in {
+            torch.sparse_coo,
+            torch.sparse_csr,
+            torch.sparse_bsr,
+            torch.sparse_csc,
+            torch.sparse_bsc,
+        }:
+            raise RuntimeError(
+                "Batches of sparse tensors are not currently supported by the default collate_fn; "
+                "please provide a custom collate_fn to handle them appropriately."
+            )
+        if torch.utils.data.get_worker_info() is not None:
+            # If we're in a background process, concatenate directly into a
+            # shared memory tensor to avoid an extra copy
+            numel = sum(x.numel() for x in batch)
+            storage = elem._typed_storage()._new_shared(numel, device=elem.device)
+            out = elem.new(storage).resize_(len(batch), *list(elem.size()))
+>       return torch.stack(batch, 0, out=out)
+E       TypeError: expected Tensor as element 5 in argument 0, but got NoneType
+
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:272: TypeError
+------------------------------ Captured log call -------------------------------
+WARNING  root:temp.py:48 Failed to process image /local/data0/moved_data/publishablew/imagededup/imagededup/tests/data/mixed_images/ukbench09268_corrupt.jpg: cannot identify image file '/local/data0/moved_data/publishablew/imagededup/imagededup/tests/data/mixed_images/ukbench09268_corrupt.jpg'
+________________ test_find_duplicates_to_remove_dir_integration ________________
+
+cnn = <imagededup.methods.cnn.CNN object at 0x7a8ef1e4f710>
+
+    def test_find_duplicates_to_remove_dir_integration(cnn):
+>       duplicates_list = cnn.find_duplicates_to_remove(
+            image_dir=TEST_IMAGE_DIR_MIXED, min_similarity_threshold=0.9, outfile=False
+        )
+
+tests/test_cnn.py:915: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+imagededup/methods/cnn.py:360: in find_duplicates_to_remove
+    duplicates = self.find_duplicates(image_dir=image_dir, encoding_map=encoding_map, min_similarity_threshold=min_similarity_threshold, scores=False, recursive=recursive, num_enc_workers=num_enc_workers, num_sim_workers=num_sim_workers)
+imagededup/methods/cnn.py:315: in find_duplicates
+    result = self._find_duplicates_dir(image_dir=image_dir, min_similarity_threshold=min_similarity_threshold, scores=scores, outfile=outfile, recursive=recursive, num_enc_workers=num_enc_workers, num_sim_workers=num_sim_workers)
+imagededup/methods/cnn.py:269: in _find_duplicates_dir
+    self.encode_images(image_dir=image_dir, recursive=recursive, num_enc_workers=num_enc_workers)
+imagededup/methods/cnn.py:188: in encode_images
+    return self._get_cnn_features_batch(image_dir=image_dir, recursive=recursive, num_workers=num_enc_workers)
+imagededup/methods/cnn.py:94: in _get_cnn_features_batch
+    return _get_cnn_features_batch(image_dir, recursive, num_workers)
+imagededup/methods/temp.py:60: in _get_cnn_features_batch
+    for images, filenames in dataloader:
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/dataloader.py:701: in __next__
+    data = self._next_data()
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/dataloader.py:757: in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py:55: in fetch
+    return self.collate_fn(data)
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:398: in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:211: in collate
+    return [
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:212: in <listcomp>
+    collate(samples, collate_fn_map=collate_fn_map)
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:155: in collate
+    return collate_fn_map[elem_type](batch, collate_fn_map=collate_fn_map)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+batch = (tensor([[[ 0.0569,  0.0912,  0.1254,  ..., -0.2171, -0.2171, -0.2513],
+         [ 0.0741,  0.1083,  0.1426,  ..., -0....0550,  ..., -1.2641, -1.2990, -1.2293],
+         [-0.9853, -1.2641, -0.9504,  ..., -1.0550, -1.4036, -1.2467]]]), None)
+
+    def collate_tensor_fn(
+        batch,
+        *,
+        collate_fn_map: Optional[Dict[Union[Type, Tuple[Type, ...]], Callable]] = None,
+    ):
+        elem = batch[0]
+        out = None
+        if elem.is_nested:
+            raise RuntimeError(
+                "Batches of nested tensors are not currently supported by the default collate_fn; "
+                "please provide a custom collate_fn to handle them appropriately."
+            )
+        if elem.layout in {
+            torch.sparse_coo,
+            torch.sparse_csr,
+            torch.sparse_bsr,
+            torch.sparse_csc,
+            torch.sparse_bsc,
+        }:
+            raise RuntimeError(
+                "Batches of sparse tensors are not currently supported by the default collate_fn; "
+                "please provide a custom collate_fn to handle them appropriately."
+            )
+        if torch.utils.data.get_worker_info() is not None:
+            # If we're in a background process, concatenate directly into a
+            # shared memory tensor to avoid an extra copy
+            numel = sum(x.numel() for x in batch)
+            storage = elem._typed_storage()._new_shared(numel, device=elem.device)
+            out = elem.new(storage).resize_(len(batch), *list(elem.size()))
+>       return torch.stack(batch, 0, out=out)
+E       TypeError: expected Tensor as element 5 in argument 0, but got NoneType
+
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:272: TypeError
+------------------------------ Captured log call -------------------------------
+WARNING  root:temp.py:48 Failed to process image /local/data0/moved_data/publishablew/imagededup/imagededup/tests/data/mixed_images/ukbench09268_corrupt.jpg: cannot identify image file '/local/data0/moved_data/publishablew/imagededup/imagededup/tests/data/mixed_images/ukbench09268_corrupt.jpg'
+___________ test_recursive_find_duplicates_to_remove_dir_integration ___________
+
+cnn = <imagededup.methods.cnn.CNN object at 0x7a8ef1e4f710>
+
+    def test_recursive_find_duplicates_to_remove_dir_integration(cnn):
+>       duplicates_list = cnn.find_duplicates_to_remove(
+            image_dir=TEST_IMAGE_DIR_MIXED_NESTED,
+            min_similarity_threshold=0.9,
+            outfile=False,
+            recursive=True,
+        )
+
+tests/test_cnn.py:925: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+imagededup/methods/cnn.py:360: in find_duplicates_to_remove
+    duplicates = self.find_duplicates(image_dir=image_dir, encoding_map=encoding_map, min_similarity_threshold=min_similarity_threshold, scores=False, recursive=recursive, num_enc_workers=num_enc_workers, num_sim_workers=num_sim_workers)
+imagededup/methods/cnn.py:315: in find_duplicates
+    result = self._find_duplicates_dir(image_dir=image_dir, min_similarity_threshold=min_similarity_threshold, scores=scores, outfile=outfile, recursive=recursive, num_enc_workers=num_enc_workers, num_sim_workers=num_sim_workers)
+imagededup/methods/cnn.py:269: in _find_duplicates_dir
+    self.encode_images(image_dir=image_dir, recursive=recursive, num_enc_workers=num_enc_workers)
+imagededup/methods/cnn.py:188: in encode_images
+    return self._get_cnn_features_batch(image_dir=image_dir, recursive=recursive, num_workers=num_enc_workers)
+imagededup/methods/cnn.py:94: in _get_cnn_features_batch
+    return _get_cnn_features_batch(image_dir, recursive, num_workers)
+imagededup/methods/temp.py:60: in _get_cnn_features_batch
+    for images, filenames in dataloader:
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/dataloader.py:701: in __next__
+    data = self._next_data()
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/dataloader.py:757: in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py:55: in fetch
+    return self.collate_fn(data)
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:398: in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:211: in collate
+    return [
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:212: in <listcomp>
+    collate(samples, collate_fn_map=collate_fn_map)
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:155: in collate
+    return collate_fn_map[elem_type](batch, collate_fn_map=collate_fn_map)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+batch = (tensor([[[-0.2342, -0.1828, -0.1828,  ...,  0.1083,  0.0912,  0.0741],
+         [-0.1999, -0.1828, -0.2171,  ...,  0....1, -1.0550,  ..., -1.2641, -1.2990, -1.2293],
+         [-0.9853, -1.2641, -0.9504,  ..., -1.0550, -1.4036, -1.2467]]]))
+
+    def collate_tensor_fn(
+        batch,
+        *,
+        collate_fn_map: Optional[Dict[Union[Type, Tuple[Type, ...]], Callable]] = None,
+    ):
+        elem = batch[0]
+        out = None
+        if elem.is_nested:
+            raise RuntimeError(
+                "Batches of nested tensors are not currently supported by the default collate_fn; "
+                "please provide a custom collate_fn to handle them appropriately."
+            )
+        if elem.layout in {
+            torch.sparse_coo,
+            torch.sparse_csr,
+            torch.sparse_bsr,
+            torch.sparse_csc,
+            torch.sparse_bsc,
+        }:
+            raise RuntimeError(
+                "Batches of sparse tensors are not currently supported by the default collate_fn; "
+                "please provide a custom collate_fn to handle them appropriately."
+            )
+        if torch.utils.data.get_worker_info() is not None:
+            # If we're in a background process, concatenate directly into a
+            # shared memory tensor to avoid an extra copy
+            numel = sum(x.numel() for x in batch)
+            storage = elem._typed_storage()._new_shared(numel, device=elem.device)
+            out = elem.new(storage).resize_(len(batch), *list(elem.size()))
+>       return torch.stack(batch, 0, out=out)
+E       TypeError: expected Tensor as element 1 in argument 0, but got NoneType
+
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:272: TypeError
+------------------------------ Captured log call -------------------------------
+WARNING  root:temp.py:48 Failed to process image /local/data0/moved_data/publishablew/imagededup/imagededup/tests/data/mixed_nested_images/ukbench09268_corrupt.jpg: cannot identify image file '/local/data0/moved_data/publishablew/imagededup/imagededup/tests/data/mixed_nested_images/ukbench09268_corrupt.jpg'
+_____________ test_find_duplicates_to_remove_encoding_integration ______________
+
+cnn = <imagededup.methods.cnn.CNN object at 0x7a8ef1e4f710>
+
+    def test_find_duplicates_to_remove_encoding_integration(cnn):
+>       encodings = cnn.encode_images(TEST_IMAGE_DIR_MIXED)
+
+tests/test_cnn.py:938: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+imagededup/methods/cnn.py:188: in encode_images
+    return self._get_cnn_features_batch(image_dir=image_dir, recursive=recursive, num_workers=num_enc_workers)
+imagededup/methods/cnn.py:94: in _get_cnn_features_batch
+    return _get_cnn_features_batch(image_dir, recursive, num_workers)
+imagededup/methods/temp.py:60: in _get_cnn_features_batch
+    for images, filenames in dataloader:
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/dataloader.py:701: in __next__
+    data = self._next_data()
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/dataloader.py:757: in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py:55: in fetch
+    return self.collate_fn(data)
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:398: in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:211: in collate
+    return [
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:212: in <listcomp>
+    collate(samples, collate_fn_map=collate_fn_map)
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:155: in collate
+    return collate_fn_map[elem_type](batch, collate_fn_map=collate_fn_map)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+batch = (tensor([[[ 0.0569,  0.0912,  0.1254,  ..., -0.2171, -0.2171, -0.2513],
+         [ 0.0741,  0.1083,  0.1426,  ..., -0....0550,  ..., -1.2641, -1.2990, -1.2293],
+         [-0.9853, -1.2641, -0.9504,  ..., -1.0550, -1.4036, -1.2467]]]), None)
+
+    def collate_tensor_fn(
+        batch,
+        *,
+        collate_fn_map: Optional[Dict[Union[Type, Tuple[Type, ...]], Callable]] = None,
+    ):
+        elem = batch[0]
+        out = None
+        if elem.is_nested:
+            raise RuntimeError(
+                "Batches of nested tensors are not currently supported by the default collate_fn; "
+                "please provide a custom collate_fn to handle them appropriately."
+            )
+        if elem.layout in {
+            torch.sparse_coo,
+            torch.sparse_csr,
+            torch.sparse_bsr,
+            torch.sparse_csc,
+            torch.sparse_bsc,
+        }:
+            raise RuntimeError(
+                "Batches of sparse tensors are not currently supported by the default collate_fn; "
+                "please provide a custom collate_fn to handle them appropriately."
+            )
+        if torch.utils.data.get_worker_info() is not None:
+            # If we're in a background process, concatenate directly into a
+            # shared memory tensor to avoid an extra copy
+            numel = sum(x.numel() for x in batch)
+            storage = elem._typed_storage()._new_shared(numel, device=elem.device)
+            out = elem.new(storage).resize_(len(batch), *list(elem.size()))
+>       return torch.stack(batch, 0, out=out)
+E       TypeError: expected Tensor as element 5 in argument 0, but got NoneType
+
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:272: TypeError
+------------------------------ Captured log call -------------------------------
+WARNING  root:temp.py:48 Failed to process image /local/data0/moved_data/publishablew/imagededup/imagededup/tests/data/mixed_images/ukbench09268_corrupt.jpg: cannot identify image file '/local/data0/moved_data/publishablew/imagededup/imagededup/tests/data/mixed_images/ukbench09268_corrupt.jpg'
+______________________________ test_scores_saving ______________________________
+
+cnn = <imagededup.methods.cnn.CNN object at 0x7a8ef1e4f710>
+
+    def test_scores_saving(cnn):
+        save_file = 'myduplicates.json'
+>       cnn.find_duplicates(
+            image_dir=TEST_IMAGE_DIR_MIXED,
+            min_similarity_threshold=0.7,
+            scores=True,
+            outfile=save_file,
+        )
+
+tests/test_cnn.py:949: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+imagededup/methods/cnn.py:315: in find_duplicates
+    result = self._find_duplicates_dir(image_dir=image_dir, min_similarity_threshold=min_similarity_threshold, scores=scores, outfile=outfile, recursive=recursive, num_enc_workers=num_enc_workers, num_sim_workers=num_sim_workers)
+imagededup/methods/cnn.py:269: in _find_duplicates_dir
+    self.encode_images(image_dir=image_dir, recursive=recursive, num_enc_workers=num_enc_workers)
+imagededup/methods/cnn.py:188: in encode_images
+    return self._get_cnn_features_batch(image_dir=image_dir, recursive=recursive, num_workers=num_enc_workers)
+imagededup/methods/cnn.py:94: in _get_cnn_features_batch
+    return _get_cnn_features_batch(image_dir, recursive, num_workers)
+imagededup/methods/temp.py:60: in _get_cnn_features_batch
+    for images, filenames in dataloader:
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/dataloader.py:701: in __next__
+    data = self._next_data()
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/dataloader.py:757: in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py:55: in fetch
+    return self.collate_fn(data)
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:398: in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:211: in collate
+    return [
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:212: in <listcomp>
+    collate(samples, collate_fn_map=collate_fn_map)
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:155: in collate
+    return collate_fn_map[elem_type](batch, collate_fn_map=collate_fn_map)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+batch = (tensor([[[ 0.0569,  0.0912,  0.1254,  ..., -0.2171, -0.2171, -0.2513],
+         [ 0.0741,  0.1083,  0.1426,  ..., -0....0550,  ..., -1.2641, -1.2990, -1.2293],
+         [-0.9853, -1.2641, -0.9504,  ..., -1.0550, -1.4036, -1.2467]]]), None)
+
+    def collate_tensor_fn(
+        batch,
+        *,
+        collate_fn_map: Optional[Dict[Union[Type, Tuple[Type, ...]], Callable]] = None,
+    ):
+        elem = batch[0]
+        out = None
+        if elem.is_nested:
+            raise RuntimeError(
+                "Batches of nested tensors are not currently supported by the default collate_fn; "
+                "please provide a custom collate_fn to handle them appropriately."
+            )
+        if elem.layout in {
+            torch.sparse_coo,
+            torch.sparse_csr,
+            torch.sparse_bsr,
+            torch.sparse_csc,
+            torch.sparse_bsc,
+        }:
+            raise RuntimeError(
+                "Batches of sparse tensors are not currently supported by the default collate_fn; "
+                "please provide a custom collate_fn to handle them appropriately."
+            )
+        if torch.utils.data.get_worker_info() is not None:
+            # If we're in a background process, concatenate directly into a
+            # shared memory tensor to avoid an extra copy
+            numel = sum(x.numel() for x in batch)
+            storage = elem._typed_storage()._new_shared(numel, device=elem.device)
+            out = elem.new(storage).resize_(len(batch), *list(elem.size()))
+>       return torch.stack(batch, 0, out=out)
+E       TypeError: expected Tensor as element 5 in argument 0, but got NoneType
+
+/home/aliredaq/.local/lib/python3.11/site-packages/torch/utils/data/_utils/collate.py:272: TypeError
+------------------------------ Captured log call -------------------------------
+WARNING  root:temp.py:48 Failed to process image /local/data0/moved_data/publishablew/imagededup/imagededup/tests/data/mixed_images/ukbench09268_corrupt.jpg: cannot identify image file '/local/data0/moved_data/publishablew/imagededup/imagededup/tests/data/mixed_images/ukbench09268_corrupt.jpg'
+=============================== warnings summary ===============================
+../../../../../../usr/lib/python3/dist-packages/pytz/__init__.py:31
+  /usr/lib/python3/dist-packages/pytz/__init__.py:31: DeprecationWarning: invalid escape sequence '\s'
+    match = re.match("^#\s*version\s*([0-9a-z]*)\s*$", line)
+
+tests/test_cnn.py: 15 warnings
+  /home/aliredaq/.local/lib/python3.11/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+    warnings.warn(
+
+tests/test_cnn.py: 15 warnings
+  /home/aliredaq/.local/lib/python3.11/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+    warnings.warn(msg)
+
+tests/test_cnn.py::test_find_duplicates_dict
+tests/test_cnn.py::test_find_duplicates_dict_num_worker_has_impact
+tests/test_cnn.py::test_find_duplicates_dict_recursive_warning
+  /local/data0/moved_data/publishablew/imagededup/imagededup/imagededup/methods/cnn.py:319: RuntimeWarning: Parameter num_enc_workers has no effect since encodings are already provided
+    warnings.warn('Parameter num_enc_workers has no effect since encodings are already provided', RuntimeWarning)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_cnn.py::test__get_cnn_features_batch - assert (1000,) == (5...
+FAILED tests/test_cnn.py::test__get_cnn_features_batch_nondefault_models - as...
+FAILED tests/test_cnn.py::test_encode_images - assert (1000,) == (576,)
+FAILED tests/test_cnn.py::test_recursive_on_flat_directory - assert (1000,) =...
+FAILED tests/test_cnn.py::test_finds_non_recursive - TypeError: expected Tens...
+FAILED tests/test_cnn.py::test_find_duplicates_dir_integration - TypeError: e...
+FAILED tests/test_cnn.py::test_recursive_find_duplicates_dir_integration - Ty...
+FAILED tests/test_cnn.py::test_find_duplicates_encoding_integration - TypeErr...
+FAILED tests/test_cnn.py::test_find_duplicates_to_remove_dir_integration - Ty...
+FAILED tests/test_cnn.py::test_recursive_find_duplicates_to_remove_dir_integration
+FAILED tests/test_cnn.py::test_find_duplicates_to_remove_encoding_integration
+FAILED tests/test_cnn.py::test_scores_saving - TypeError: expected Tensor as ...
+============ 12 failed, 33 passed, 1 skipped, 34 warnings in 12.04s ============
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.3, pluggy-1.5.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/imagededup/imagededup
+plugins: hydra-core-1.3.2, cov-6.0.0, mock-3.14.0, anyio-4.6.2.post1
+collecting ... collected 46 items
+
+tests/test_cnn.py::test__init_defaults PASSED                            [  2%]
+tests/test_cnn.py::test__init_custom PASSED                              [  4%]
+tests/test_cnn.py::test__init_missing_custom_args_raises_exception PASSED [  6%]
+tests/test_cnn.py::test_default_custom_name_raises_warning PASSED        [  8%]
+tests/test_cnn.py::test_positional_init PASSED                           [ 10%]
+tests/test_cnn.py::test_call_method_accepted PASSED                      [ 13%]
+tests/test_cnn.py::test_forward_method_accepted PASSED                   [ 15%]
+tests/test_cnn.py::test__get_cnn_features_single PASSED                  [ 17%]
+tests/test_cnn.py::test__get_cnn_features_batch PASSED                   [ 19%]
+tests/test_cnn.py::test__get_cnn_features_batch_nondefault_models PASSED [ 21%]
+tests/test_cnn.py::test__get_cnn_features_batch_num_workers_do_not_change_final_result PASSED [ 23%]
+tests/test_cnn.py::test_encode_image_expand_image_array_cnn_gets_called PASSED [ 26%]
+tests/test_cnn.py::test_encode_image_wrong_dim_input_array PASSED        [ 28%]
+tests/test_cnn.py::test_encode_image_2_dim_array_encoded PASSED          [ 30%]
+tests/test_cnn.py::test_encode_image_2_dim_file_equals_array PASSED      [ 32%]
+tests/test_cnn.py::test_encode_image PASSED                              [ 34%]
+tests/test_cnn.py::test_encode_images PASSED                             [ 36%]
+tests/test_cnn.py::test_encode_images_num_workers PASSED                 [ 39%]
+tests/test_cnn.py::test_encode_images_num_workers_default_override_on_nonlinux SKIPPED [ 41%]
+tests/test_cnn.py::test_recursive_on_flat_directory PASSED               [ 43%]
+tests/test_cnn.py::test_finds_non_recursive PASSED                       [ 45%]
+tests/test_cnn.py::test__check_threshold_bounds_input_not_float PASSED   [ 47%]
+tests/test_cnn.py::test__check_threshold_bounds_input_out_of_range PASSED [ 50%]
+tests/test_cnn.py::test__find_duplicates_dict_scores_false PASSED        [ 52%]
+tests/test_cnn.py::test__find_duplicates_dict_scores_true PASSED         [ 54%]
+tests/test_cnn.py::test__find_duplicates_dict_outfile_true PASSED        [ 56%]
+tests/test_cnn.py::test_find_duplicates_dir PASSED                       [ 58%]
+tests/test_cnn.py::test_find_duplicates_dir_num_enc_workers PASSED       [ 60%]
+tests/test_cnn.py::test_find_duplicates_mp PASSED                        [ 63%]
+tests/test_cnn.py::test_find_duplicates_with_dir PASSED                  [ 65%]
+tests/test_cnn.py::test_find_duplicates_dict PASSED                      [ 67%]
+tests/test_cnn.py::test_find_duplicates_dict_num_worker_has_impact PASSED [ 69%]
+tests/test_cnn.py::test_find_duplicates_dict_recursive_warning PASSED    [ 71%]
+tests/test_cnn.py::test_find_duplicates_dict_num_enc_workers_warning PASSED [ 73%]
+tests/test_cnn.py::test_find_duplicates_wrong_threhsold_input PASSED     [ 76%]
+tests/test_cnn.py::test_find_duplicates_wrong_input PASSED               [ 78%]
+tests/test_cnn.py::test_find_duplicates_to_remove_outfile_false PASSED   [ 80%]
+tests/test_cnn.py::test_find_duplicates_to_remove_outfile_true PASSED    [ 82%]
+tests/test_cnn.py::test_find_duplicates_to_remove_encoding_map PASSED    [ 84%]
+tests/test_cnn.py::test_find_duplicates_dir_integration PASSED           [ 86%]
+tests/test_cnn.py::test_recursive_find_duplicates_dir_integration PASSED [ 89%]
+tests/test_cnn.py::test_find_duplicates_encoding_integration FAILED      [ 91%]
+tests/test_cnn.py::test_find_duplicates_to_remove_dir_integration PASSED [ 93%]
+tests/test_cnn.py::test_recursive_find_duplicates_to_remove_dir_integration PASSED [ 95%]
+tests/test_cnn.py::test_find_duplicates_to_remove_encoding_integration PASSED [ 97%]
+tests/test_cnn.py::test_scores_saving PASSED                             [100%]
+
+=================================== FAILURES ===================================
+__________________ test_find_duplicates_encoding_integration ___________________
+
+cnn = <imagededup.methods.cnn.CNN object at 0x7070a938ef90>
+
+    def test_find_duplicates_encoding_integration(cnn):
+        expected_duplicates = {
+            'ukbench00120.jpg': [
+                ('ukbench00120_hflip.jpg', 0.9672552),
+                ('ukbench00120_resize.jpg', 0.98120844),
+                ('ukbench00120_rotation.jpg', 0.95676106),
+            ],
+            'ukbench00120_hflip.jpg': [
+                ('ukbench00120.jpg', 0.9672552),
+                ('ukbench00120_resize.jpg', 0.95676106),
+                ('ukbench00120_rotation.jpg', 0.95676106),
+            ],
+            'ukbench00120_resize.jpg': [
+                ('ukbench00120.jpg', 0.98120844),
+                ('ukbench00120_hflip.jpg', 0.95676106),
+                ('ukbench00120_rotation.jpg', 0.95676106),
+            ],
+            'ukbench00120_rotation.jpg': [('ukbench00120.jpg', 0.98120844),
+                                          ('ukbench00120_hflip.jpg', 0.98120844),
+                                          ('ukbench00120_resize.jpg', 0.98120844),],
+            'ukbench09268.jpg': [],
+        }
+    
+        encodings = cnn.encode_images(TEST_IMAGE_DIR_MIXED)
+>       with pytest.warns(None):
+
+tests/test_cnn.py:894: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = WarningsChecker(record=True), expected_warning = None, match_expr = None
+
+    def __init__(
+        self,
+        expected_warning: type[Warning] | tuple[type[Warning], ...] = Warning,
+        match_expr: str | Pattern[str] | None = None,
+        *,
+        _ispytest: bool = False,
+    ) -> None:
+        check_ispytest(_ispytest)
+        super().__init__(_ispytest=True)
+    
+        msg = "exceptions must be derived from Warning, not %s"
+        if isinstance(expected_warning, tuple):
+            for exc in expected_warning:
+                if not issubclass(exc, Warning):
+                    raise TypeError(msg % type(exc))
+            expected_warning_tup = expected_warning
+        elif isinstance(expected_warning, type) and issubclass(
+            expected_warning, Warning
+        ):
+            expected_warning_tup = (expected_warning,)
+        else:
+>           raise TypeError(msg % type(expected_warning))
+E           TypeError: exceptions must be derived from Warning, not <class 'NoneType'>
+
+/home/aliredaq/.local/lib/python3.11/site-packages/_pytest/recwarn.py:280: TypeError
+----------------------------- Captured stderr call -----------------------------
+2025-02-13 21:36:31,942: INFO Start: Image encoding generation
+2025-02-13 21:36:31,959: WARNING Invalid image file /local/data0/moved_data/publishablew/imagededup/imagededup/tests/data/mixed_images/ukbench09268_corrupt.jpg:
+cannot identify image file '/local/data0/moved_data/publishablew/imagededup/imagededup/tests/data/mixed_images/ukbench09268_corrupt.jpg'
+2025-02-13 21:36:31,964: INFO Found 1 bad images, ignoring for encoding generation ..
+2025-02-13 21:36:31,964: INFO End: Image encoding generation
+------------------------------ Captured log call -------------------------------
+INFO     imagededup.methods.cnn:cnn.py:135 Start: Image encoding generation
+WARNING  imagededup.utils.image_utils:image_utils.py:160 Invalid image file /local/data0/moved_data/publishablew/imagededup/imagededup/tests/data/mixed_images/ukbench09268_corrupt.jpg:
+cannot identify image file '/local/data0/moved_data/publishablew/imagededup/imagededup/tests/data/mixed_images/ukbench09268_corrupt.jpg'
+INFO     imagededup.methods.cnn:cnn.py:156 Found 1 bad images, ignoring for encoding generation ..
+INFO     imagededup.methods.cnn:cnn.py:167 End: Image encoding generation
+=============================== warnings summary ===============================
+../../../../../../usr/lib/python3/dist-packages/pytz/__init__.py:31
+  /usr/lib/python3/dist-packages/pytz/__init__.py:31: DeprecationWarning: invalid escape sequence '\s'
+    match = re.match("^#\s*version\s*([0-9a-z]*)\s*$", line)
+
+tests/test_cnn.py::test_find_duplicates_dict
+tests/test_cnn.py::test_find_duplicates_dict_num_worker_has_impact
+tests/test_cnn.py::test_find_duplicates_dict_recursive_warning
+tests/test_cnn.py::test_find_duplicates_to_remove_encoding_integration
+  /local/data0/moved_data/publishablew/imagededup/imagededup/imagededup/methods/cnn.py:463: RuntimeWarning: Parameter num_enc_workers has no effect since encodings are already provided
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_cnn.py::test_find_duplicates_encoding_integration - TypeErr...
+============= 1 failed, 44 passed, 1 skipped, 5 warnings in 8.07s ==============
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.3, pluggy-1.5.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/imagededup/imagededup
+plugins: hydra-core-1.3.2, cov-6.0.0, mock-3.14.0, anyio-4.6.2.post1
+collecting ... collected 46 items
+
+tests/test_cnn.py::test__init_defaults PASSED                            [  2%]
+tests/test_cnn.py::test__init_custom PASSED                              [  4%]
+tests/test_cnn.py::test__init_missing_custom_args_raises_exception PASSED [  6%]
+tests/test_cnn.py::test_default_custom_name_raises_warning PASSED        [  8%]
+tests/test_cnn.py::test_positional_init PASSED                           [ 10%]
+tests/test_cnn.py::test_call_method_accepted PASSED                      [ 13%]
+tests/test_cnn.py::test_forward_method_accepted PASSED                   [ 15%]
+tests/test_cnn.py::test__get_cnn_features_single PASSED                  [ 17%]
+tests/test_cnn.py::test__get_cnn_features_batch PASSED                   [ 19%]
+tests/test_cnn.py::test__get_cnn_features_batch_nondefault_models PASSED [ 21%]
+tests/test_cnn.py::test__get_cnn_features_batch_num_workers_do_not_change_final_result PASSED [ 23%]
+tests/test_cnn.py::test_encode_image_expand_image_array_cnn_gets_called PASSED [ 26%]
+tests/test_cnn.py::test_encode_image_wrong_dim_input_array PASSED        [ 28%]
+tests/test_cnn.py::test_encode_image_2_dim_array_encoded PASSED          [ 30%]
+tests/test_cnn.py::test_encode_image_2_dim_file_equals_array PASSED      [ 32%]
+tests/test_cnn.py::test_encode_image PASSED                              [ 34%]
+tests/test_cnn.py::test_encode_images PASSED                             [ 36%]
+tests/test_cnn.py::test_encode_images_num_workers PASSED                 [ 39%]
+tests/test_cnn.py::test_encode_images_num_workers_default_override_on_nonlinux SKIPPED [ 41%]
+tests/test_cnn.py::test_recursive_on_flat_directory PASSED               [ 43%]
+tests/test_cnn.py::test_finds_non_recursive PASSED                       [ 45%]
+tests/test_cnn.py::test__check_threshold_bounds_input_not_float PASSED   [ 47%]
+tests/test_cnn.py::test__check_threshold_bounds_input_out_of_range PASSED [ 50%]
+tests/test_cnn.py::test__find_duplicates_dict_scores_false PASSED        [ 52%]
+tests/test_cnn.py::test__find_duplicates_dict_scores_true PASSED         [ 54%]
+tests/test_cnn.py::test__find_duplicates_dict_outfile_true PASSED        [ 56%]
+tests/test_cnn.py::test_find_duplicates_dir PASSED                       [ 58%]
+tests/test_cnn.py::test_find_duplicates_dir_num_enc_workers PASSED       [ 60%]
+tests/test_cnn.py::test_find_duplicates_mp PASSED                        [ 63%]
+tests/test_cnn.py::test_find_duplicates_with_dir PASSED                  [ 65%]
+tests/test_cnn.py::test_find_duplicates_dict PASSED                      [ 67%]
+tests/test_cnn.py::test_find_duplicates_dict_num_worker_has_impact PASSED [ 69%]
+tests/test_cnn.py::test_find_duplicates_dict_recursive_warning PASSED    [ 71%]
+tests/test_cnn.py::test_find_duplicates_dict_num_enc_workers_warning PASSED [ 73%]
+tests/test_cnn.py::test_find_duplicates_wrong_threhsold_input PASSED     [ 76%]
+tests/test_cnn.py::test_find_duplicates_wrong_input PASSED               [ 78%]
+tests/test_cnn.py::test_find_duplicates_to_remove_outfile_false PASSED   [ 80%]
+tests/test_cnn.py::test_find_duplicates_to_remove_outfile_true PASSED    [ 82%]
+tests/test_cnn.py::test_find_duplicates_to_remove_encoding_map PASSED    [ 84%]
+tests/test_cnn.py::test_find_duplicates_dir_integration PASSED           [ 86%]
+tests/test_cnn.py::test_recursive_find_duplicates_dir_integration PASSED [ 89%]
+tests/test_cnn.py::test_find_duplicates_encoding_integration FAILED      [ 91%]
+tests/test_cnn.py::test_find_duplicates_to_remove_dir_integration PASSED [ 93%]
+tests/test_cnn.py::test_recursive_find_duplicates_to_remove_dir_integration PASSED [ 95%]
+tests/test_cnn.py::test_find_duplicates_to_remove_encoding_integration PASSED [ 97%]
+tests/test_cnn.py::test_scores_saving PASSED                             [100%]
+
+=================================== FAILURES ===================================
+__________________ test_find_duplicates_encoding_integration ___________________
+
+cnn = <imagededup.methods.cnn.CNN object at 0x749f1d8b6f50>
+
+    def test_find_duplicates_encoding_integration(cnn):
+        expected_duplicates = {
+            'ukbench00120.jpg': [
+                ('ukbench00120_hflip.jpg', 0.9672552),
+                ('ukbench00120_resize.jpg', 0.98120844),
+                ('ukbench00120_rotation.jpg', 0.95676106),
+            ],
+            'ukbench00120_hflip.jpg': [
+                ('ukbench00120.jpg', 0.9672552),
+                ('ukbench00120_resize.jpg', 0.95676106),
+                ('ukbench00120_rotation.jpg', 0.95676106),
+            ],
+            'ukbench00120_resize.jpg': [
+                ('ukbench00120.jpg', 0.98120844),
+                ('ukbench00120_hflip.jpg', 0.95676106),
+                ('ukbench00120_rotation.jpg', 0.95676106),
+            ],
+            'ukbench00120_rotation.jpg': [('ukbench00120.jpg', 0.98120844),
+                                          ('ukbench00120_hflip.jpg', 0.98120844),
+                                          ('ukbench00120_resize.jpg', 0.98120844),],
+            'ukbench09268.jpg': [],
+        }
+    
+        encodings = cnn.encode_images(TEST_IMAGE_DIR_MIXED)
+>       with pytest.warns(None):
+
+tests/test_cnn.py:894: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = WarningsChecker(record=True), expected_warning = None, match_expr = None
+
+    def __init__(
+        self,
+        expected_warning: type[Warning] | tuple[type[Warning], ...] = Warning,
+        match_expr: str | Pattern[str] | None = None,
+        *,
+        _ispytest: bool = False,
+    ) -> None:
+        check_ispytest(_ispytest)
+        super().__init__(_ispytest=True)
+    
+        msg = "exceptions must be derived from Warning, not %s"
+        if isinstance(expected_warning, tuple):
+            for exc in expected_warning:
+                if not issubclass(exc, Warning):
+                    raise TypeError(msg % type(exc))
+            expected_warning_tup = expected_warning
+        elif isinstance(expected_warning, type) and issubclass(
+            expected_warning, Warning
+        ):
+            expected_warning_tup = (expected_warning,)
+        else:
+>           raise TypeError(msg % type(expected_warning))
+E           TypeError: exceptions must be derived from Warning, not <class 'NoneType'>
+
+/home/aliredaq/.local/lib/python3.11/site-packages/_pytest/recwarn.py:280: TypeError
+----------------------------- Captured stderr call -----------------------------
+2025-02-13 21:36:09,687: INFO Start: Image encoding generation
+2025-02-13 21:36:09,702: WARNING Invalid image file /local/data0/moved_data/publishablew/imagededup/imagededup/tests/data/mixed_images/ukbench09268_corrupt.jpg:
+cannot identify image file '/local/data0/moved_data/publishablew/imagededup/imagededup/tests/data/mixed_images/ukbench09268_corrupt.jpg'
+2025-02-13 21:36:09,705: INFO Found 1 bad images, ignoring for encoding generation ..
+2025-02-13 21:36:09,706: INFO End: Image encoding generation
+------------------------------ Captured log call -------------------------------
+INFO     imagededup.methods.cnn:cnn.py:135 Start: Image encoding generation
+WARNING  imagededup.utils.image_utils:image_utils.py:160 Invalid image file /local/data0/moved_data/publishablew/imagededup/imagededup/tests/data/mixed_images/ukbench09268_corrupt.jpg:
+cannot identify image file '/local/data0/moved_data/publishablew/imagededup/imagededup/tests/data/mixed_images/ukbench09268_corrupt.jpg'
+INFO     imagededup.methods.cnn:cnn.py:156 Found 1 bad images, ignoring for encoding generation ..
+INFO     imagededup.methods.cnn:cnn.py:167 End: Image encoding generation
+=============================== warnings summary ===============================
+../../../../../../usr/lib/python3/dist-packages/pytz/__init__.py:31
+  /usr/lib/python3/dist-packages/pytz/__init__.py:31: DeprecationWarning: invalid escape sequence '\s'
+    match = re.match("^#\s*version\s*([0-9a-z]*)\s*$", line)
+
+tests/test_cnn.py::test_find_duplicates_dict
+tests/test_cnn.py::test_find_duplicates_dict_num_worker_has_impact
+tests/test_cnn.py::test_find_duplicates_dict_recursive_warning
+tests/test_cnn.py::test_find_duplicates_to_remove_encoding_integration
+  /local/data0/moved_data/publishablew/imagededup/imagededup/imagededup/methods/cnn.py:463: RuntimeWarning: Parameter num_enc_workers has no effect since encodings are already provided
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_cnn.py::test_find_duplicates_encoding_integration - TypeErr...
+============= 1 failed, 44 passed, 1 skipped, 5 warnings in 8.50s ==============

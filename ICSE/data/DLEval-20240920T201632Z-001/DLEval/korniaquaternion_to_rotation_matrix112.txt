@@ -1,0 +1,18 @@
+stage: Model Construction
+task: 
+data: Image
+
+prompt:
+Generate a Python function called quaternion_to_rotation_matrix that converts a quaternion to a rotation matrix. The input is a tensor called quaternion containing a quaternion in (w, x, y, z) format with shape (*, 4). The output is a rotation matrix of shape (*, 3, 3). The function first normalizes the input quaternion, then unpacks its components to compute the conversion using specific mathematical operations. Finally, it reshapes the output matrix and returns it. An example usage of the function is provided in the code snippet. >>> quaternion = tensor((0., 0., 0., 1.))
+        >>> quaternion_to_rotation_matrix(quaternion)
+        tensor([[-1.,  0.,  0.],
+                [ 0., -1.,  0.],
+                [ 0.,  0.,  1.]])
+
+ ground Truth:kornia/geometry/conversions.py
+
+ repo:kornia
+
+ function:quaternion_to_rotation_matrix
+ 
+ test_cases:tests/geometry/test_conversions.py::TestQuaternionToRotationMatrix

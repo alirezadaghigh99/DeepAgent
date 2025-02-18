@@ -1,0 +1,27 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+
+Create a Python function vert_align that performs "vertex alignment" or "perceptual feature pooling," which samples vertex features from a feature map based on vertex positions. The function takes the following parameters:
+
+feats: A tensor of shape (N, C, H, W) representing image features from which to sample, or a list of such tensors, each with potentially different C, H, or W dimensions.
+verts: A tensor of shape (N, V, 3) representing the (x, y, z) vertex positions, or an object with verts_padded or points_padded attributes. The (x, y) coordinates should be normalized such that (-1, -1) corresponds to the top-left and (1, 1) to the bottom-right of the feature map.
+return_packed: A boolean flag indicating whether to return packed features. Defaults to False.
+interp_mode: A string specifying the interpolation mode ('bilinear' or 'nearest'). Defaults to 'bilinear'.
+padding_mode: A string specifying how to handle vertices outside the [-1, 1] range ('zeros', 'reflection', or 'border'). Defaults to 'zeros'.
+align_corners: A boolean indicating whether to align corners geometrically. If True, extrema refer to the center points of corner pixels; if False, they refer to the corner points of the input's corner pixels. Defaults to True.
+Returns:
+feats_sampled: A tensor of shape (N, V, C) giving sampled features for each vertex. If feats is a list, the function returns concatenated features in shape (N, V, sum(C_n)) where C_n = feats[n].shape[1]. If return_packed = True, the features are transformed to a packed representation of shape (sum(V), C).
+Error Handling:
+Raise a ValueError if verts does not have the expected shape or attributes.
+Raise a ValueError if feats does not have the expected shape (N, C, H, W) or if the batch dimensions of feats and verts do not match.
+
+ ground Truth:pytorch3d/ops/vert_align.py
+
+ repo:pytorch3d
+
+ function:vert_align
+ 
+ test_cases:tests/test_vert_align.py

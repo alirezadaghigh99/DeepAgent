@@ -1,0 +1,775 @@
+output file:
+processed_pytorch3drasterize_meshes336.json
+function:
+rasterize_meshes
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cpu_naive', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_order_of_ties FAILED', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cpu_naive FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpp_bary_clip', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpu_vs_cuda_naive', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpp_perspective_correct FAILED', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_bary_clip FAILED', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cuda_binned FAILED', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_bin_size_error FAILED', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_perspective_correct FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cuda_naive', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_naive_vs_cuda_binned', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_bary_clip', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpp_perspective_correct', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpp_bary_clip FAILED', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cuda_naive_vs_binned_perspective_correct FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpu_vs_cuda', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cuda_binned', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpu_vs_cuda FAILED', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cuda_naive FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cuda_naive_vs_binned_perspective_correct', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_order_of_ties', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpu_vs_cuda_naive FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_bin_size_error', '../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_naive_vs_cuda_binned FAILED', 'FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_perspective_correct'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 17 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_bin_size_error FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_coarse_cpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_coarse_cuda PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_compare_coarse_cpu_vs_cuda PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_bary_clip FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_naive_vs_cuda_binned FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_perspective_correct FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpu_vs_cuda_naive FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cuda_naive_vs_binned_perspective_correct FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_order_of_ties FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpp_bary_clip FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpp_perspective_correct FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpu_vs_cuda FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cpu_naive FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cuda_binned FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cuda_naive FAILED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_python PASSED
+
+=================================== FAILURES ===================================
+___________________ TestRasterizeMeshes.test_bin_size_error ____________________
+
+self = <tests.test_rasterize_meshes.TestRasterizeMeshes testMethod=test_bin_size_error>
+
+    def test_bin_size_error(self):
+        meshes = ico_sphere(2)
+        image_size = 1024
+        bin_size = 16
+        with self.assertRaisesRegex(ValueError, "bin_size too small"):
+>           rasterize_meshes(meshes, image_size, 0.0, 2, bin_size)
+
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:466: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/mesh/rasterize_meshes.py:12: in rasterize_meshes
+    return rasterize_meshes(meshes, image_size, blur_radius, faces_per_pixel, bin_size, max_faces_per_bin, perspective_correct, clip_barycentric_coords, cull_backfaces, z_clip_value, cull_to_frustum)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def rasterize_meshes(meshes, image_size: Union[int, List[int], Tuple[int, int]]=256, blur_radius: float=0.0, faces_per_pixel: int=8, bin_size: Optional[int]=None, max_faces_per_bin: Optional[int]=None, perspective_correct: bool=False, clip_barycentric_coords: bool=False, cull_backfaces: bool=False, z_clip_value: Optional[float]=None, cull_to_frustum: bool=False):
+        if isinstance(image_size, int):
+            image_size = (image_size, image_size)
+        elif isinstance(image_size, (list, tuple)) and len(image_size) == 2:
+            image_size = tuple(image_size)
+        else:
+            raise ValueError('image_size must be an int or a tuple/list of two ints.')
+        pix_to_face = np.full((len(meshes), *image_size, faces_per_pixel), -1, dtype=int)
+        zbuf = np.full((len(meshes), *image_size, faces_per_pixel), np.inf, dtype=float)
+        barycentric = np.zeros((len(meshes), *image_size, faces_per_pixel, 3), dtype=float)
+        pix_dists = np.full((len(meshes), *image_size, faces_per_pixel), np.inf, dtype=float)
+        for mesh_idx, mesh in enumerate(meshes):
+>           vertices = mesh.vertices
+E           AttributeError: 'Meshes' object has no attribute 'vertices'
+
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/mesh/temp.py:22: AttributeError
+________________ TestRasterizeMeshes.test_cpp_vs_cuda_bary_clip ________________
+
+self = <tests.test_rasterize_meshes.TestRasterizeMeshes testMethod=test_cpp_vs_cuda_bary_clip>
+
+    def test_cpp_vs_cuda_bary_clip(self):
+        meshes = ico_sphere(2, device=torch.device("cpu"))
+        verts1, faces1 = meshes.get_mesh_verts_faces(0)
+        verts1.requires_grad = True
+        meshes1 = Meshes(verts=[verts1], faces=[faces1])
+        device = get_random_cuda_device()
+        verts2 = verts1.detach().to(device).requires_grad_(True)
+        faces2 = faces1.detach().clone().to(device)
+        meshes2 = Meshes(verts=[verts2], faces=[faces2])
+    
+        kwargs = {"image_size": 64, "clip_barycentric_coords": True}
+        fn1 = functools.partial(rasterize_meshes, meshes1, **kwargs)
+        fn2 = functools.partial(rasterize_meshes, meshes2, bin_size=0, **kwargs)
+        args = ()
+>       self._compare_impls(fn1, fn2, args, args, verts1, verts2, compare_grads=True)
+
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:410: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:553: in _compare_impls
+    idx1, zbuf1, bary1, dist1 = fn1(*args1)
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/mesh/rasterize_meshes.py:12: in rasterize_meshes
+    return rasterize_meshes(meshes, image_size, blur_radius, faces_per_pixel, bin_size, max_faces_per_bin, perspective_correct, clip_barycentric_coords, cull_backfaces, z_clip_value, cull_to_frustum)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+meshes = <pytorch3d.structures.meshes.Meshes object at 0x7a6cfcfb54f0>
+image_size = (64, 64), blur_radius = 0.0, faces_per_pixel = 8, bin_size = None
+max_faces_per_bin = None, perspective_correct = False
+clip_barycentric_coords = True, cull_backfaces = False, z_clip_value = None
+cull_to_frustum = False
+
+    def rasterize_meshes(meshes, image_size: Union[int, List[int], Tuple[int, int]]=256, blur_radius: float=0.0, faces_per_pixel: int=8, bin_size: Optional[int]=None, max_faces_per_bin: Optional[int]=None, perspective_correct: bool=False, clip_barycentric_coords: bool=False, cull_backfaces: bool=False, z_clip_value: Optional[float]=None, cull_to_frustum: bool=False):
+        if isinstance(image_size, int):
+            image_size = (image_size, image_size)
+        elif isinstance(image_size, (list, tuple)) and len(image_size) == 2:
+            image_size = tuple(image_size)
+        else:
+            raise ValueError('image_size must be an int or a tuple/list of two ints.')
+        pix_to_face = np.full((len(meshes), *image_size, faces_per_pixel), -1, dtype=int)
+        zbuf = np.full((len(meshes), *image_size, faces_per_pixel), np.inf, dtype=float)
+        barycentric = np.zeros((len(meshes), *image_size, faces_per_pixel, 3), dtype=float)
+        pix_dists = np.full((len(meshes), *image_size, faces_per_pixel), np.inf, dtype=float)
+        for mesh_idx, mesh in enumerate(meshes):
+>           vertices = mesh.vertices
+E           AttributeError: 'Meshes' object has no attribute 'vertices'
+
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/mesh/temp.py:22: AttributeError
+__________ TestRasterizeMeshes.test_cpp_vs_cuda_naive_vs_cuda_binned ___________
+
+self = <tests.test_rasterize_meshes.TestRasterizeMeshes testMethod=test_cpp_vs_cuda_naive_vs_cuda_binned>
+
+    def test_cpp_vs_cuda_naive_vs_cuda_binned(self):
+        # Make sure that the backward pass runs for all pathways
+        image_size = 64  # test is too slow for very large images.
+        N = 1
+        radius = 0.1**2
+        faces_per_pixel = 3
+    
+        grad_zbuf = torch.randn(N, image_size, image_size, faces_per_pixel)
+        grad_dist = torch.randn(N, image_size, image_size, faces_per_pixel)
+        grad_bary = torch.randn(N, image_size, image_size, faces_per_pixel, 3)
+    
+        device = torch.device("cpu")
+        meshes = ico_sphere(0, device)
+        verts, faces = meshes.get_mesh_verts_faces(0)
+        verts.requires_grad = True
+        meshes = Meshes(verts=[verts], faces=[faces])
+    
+        # Option I: CPU, naive
+        args = (meshes, image_size, radius, faces_per_pixel)
+>       idx1, zbuf1, bary1, dist1 = rasterize_meshes(*args)
+
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:253: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/mesh/rasterize_meshes.py:12: in rasterize_meshes
+    return rasterize_meshes(meshes, image_size, blur_radius, faces_per_pixel, bin_size, max_faces_per_bin, perspective_correct, clip_barycentric_coords, cull_backfaces, z_clip_value, cull_to_frustum)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+meshes = <pytorch3d.structures.meshes.Meshes object at 0x7a6cfcf31850>
+image_size = (64, 64), blur_radius = 0.010000000000000002, faces_per_pixel = 3
+bin_size = None, max_faces_per_bin = None, perspective_correct = False
+clip_barycentric_coords = False, cull_backfaces = False, z_clip_value = None
+cull_to_frustum = False
+
+    def rasterize_meshes(meshes, image_size: Union[int, List[int], Tuple[int, int]]=256, blur_radius: float=0.0, faces_per_pixel: int=8, bin_size: Optional[int]=None, max_faces_per_bin: Optional[int]=None, perspective_correct: bool=False, clip_barycentric_coords: bool=False, cull_backfaces: bool=False, z_clip_value: Optional[float]=None, cull_to_frustum: bool=False):
+        if isinstance(image_size, int):
+            image_size = (image_size, image_size)
+        elif isinstance(image_size, (list, tuple)) and len(image_size) == 2:
+            image_size = tuple(image_size)
+        else:
+            raise ValueError('image_size must be an int or a tuple/list of two ints.')
+        pix_to_face = np.full((len(meshes), *image_size, faces_per_pixel), -1, dtype=int)
+        zbuf = np.full((len(meshes), *image_size, faces_per_pixel), np.inf, dtype=float)
+        barycentric = np.zeros((len(meshes), *image_size, faces_per_pixel, 3), dtype=float)
+        pix_dists = np.full((len(meshes), *image_size, faces_per_pixel), np.inf, dtype=float)
+        for mesh_idx, mesh in enumerate(meshes):
+>           vertices = mesh.vertices
+E           AttributeError: 'Meshes' object has no attribute 'vertices'
+
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/mesh/temp.py:22: AttributeError
+___________ TestRasterizeMeshes.test_cpp_vs_cuda_perspective_correct ___________
+
+self = <tests.test_rasterize_meshes.TestRasterizeMeshes testMethod=test_cpp_vs_cuda_perspective_correct>
+
+    def test_cpp_vs_cuda_perspective_correct(self):
+        meshes = ico_sphere(2, device=torch.device("cpu"))
+        verts1, faces1 = meshes.get_mesh_verts_faces(0)
+        verts1.requires_grad = True
+        meshes1 = Meshes(verts=[verts1], faces=[faces1])
+        device = get_random_cuda_device()
+        verts2 = verts1.detach().to(device).requires_grad_(True)
+        faces2 = faces1.detach().clone().to(device)
+        meshes2 = Meshes(verts=[verts2], faces=[faces2])
+    
+        kwargs = {"image_size": 64, "perspective_correct": True}
+        fn1 = functools.partial(rasterize_meshes, meshes1, **kwargs)
+        fn2 = functools.partial(rasterize_meshes, meshes2, bin_size=0, **kwargs)
+        args = ()
+>       self._compare_impls(fn1, fn2, args, args, verts1, verts2, compare_grads=True)
+
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:443: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:553: in _compare_impls
+    idx1, zbuf1, bary1, dist1 = fn1(*args1)
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/mesh/rasterize_meshes.py:12: in rasterize_meshes
+    return rasterize_meshes(meshes, image_size, blur_radius, faces_per_pixel, bin_size, max_faces_per_bin, perspective_correct, clip_barycentric_coords, cull_backfaces, z_clip_value, cull_to_frustum)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+meshes = <pytorch3d.structures.meshes.Meshes object at 0x7a6db1f199d0>
+image_size = (64, 64), blur_radius = 0.0, faces_per_pixel = 8, bin_size = None
+max_faces_per_bin = None, perspective_correct = True
+clip_barycentric_coords = False, cull_backfaces = False, z_clip_value = None
+cull_to_frustum = False
+
+    def rasterize_meshes(meshes, image_size: Union[int, List[int], Tuple[int, int]]=256, blur_radius: float=0.0, faces_per_pixel: int=8, bin_size: Optional[int]=None, max_faces_per_bin: Optional[int]=None, perspective_correct: bool=False, clip_barycentric_coords: bool=False, cull_backfaces: bool=False, z_clip_value: Optional[float]=None, cull_to_frustum: bool=False):
+        if isinstance(image_size, int):
+            image_size = (image_size, image_size)
+        elif isinstance(image_size, (list, tuple)) and len(image_size) == 2:
+            image_size = tuple(image_size)
+        else:
+            raise ValueError('image_size must be an int or a tuple/list of two ints.')
+        pix_to_face = np.full((len(meshes), *image_size, faces_per_pixel), -1, dtype=int)
+        zbuf = np.full((len(meshes), *image_size, faces_per_pixel), np.inf, dtype=float)
+        barycentric = np.zeros((len(meshes), *image_size, faces_per_pixel, 3), dtype=float)
+        pix_dists = np.full((len(meshes), *image_size, faces_per_pixel), np.inf, dtype=float)
+        for mesh_idx, mesh in enumerate(meshes):
+>           vertices = mesh.vertices
+E           AttributeError: 'Meshes' object has no attribute 'vertices'
+
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/mesh/temp.py:22: AttributeError
+__________________ TestRasterizeMeshes.test_cpu_vs_cuda_naive __________________
+
+self = <tests.test_rasterize_meshes.TestRasterizeMeshes testMethod=test_cpu_vs_cuda_naive>
+
+    def test_cpu_vs_cuda_naive(self):
+        """
+        Compare naive versions of cuda and cpp
+        """
+    
+        torch.manual_seed(231)
+        image_size = 64
+        radius = 0.1**2
+        faces_per_pixel = 3
+        device = torch.device("cpu")
+        meshes_cpu = ico_sphere(0, device)
+        verts1, faces1 = meshes_cpu.get_mesh_verts_faces(0)
+        verts1.requires_grad = True
+        meshes_cpu = Meshes(verts=[verts1], faces=[faces1])
+    
+        device = get_random_cuda_device()
+        meshes_cuda = ico_sphere(0, device)
+        verts2, faces2 = meshes_cuda.get_mesh_verts_faces(0)
+        verts2.requires_grad = True
+        meshes_cuda = Meshes(verts=[verts2], faces=[faces2])
+    
+        barycentric_clip = True
+        args_cpu = (
+            meshes_cpu,
+            image_size,
+            radius,
+            faces_per_pixel,
+            None,
+            None,
+            False,
+            barycentric_clip,
+            False,
+        )
+        args_cuda = (
+            meshes_cuda,
+            image_size,
+            radius,
+            faces_per_pixel,
+            0,
+            0,
+            False,
+            barycentric_clip,
+            False,
+        )
+>       self._compare_impls(
+            rasterize_meshes,
+            rasterize_meshes,
+            args_cpu,
+            args_cuda,
+            verts1,
+            verts2,
+            compare_grads=True,
+        )
+
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:218: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:553: in _compare_impls
+    idx1, zbuf1, bary1, dist1 = fn1(*args1)
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/mesh/rasterize_meshes.py:12: in rasterize_meshes
+    return rasterize_meshes(meshes, image_size, blur_radius, faces_per_pixel, bin_size, max_faces_per_bin, perspective_correct, clip_barycentric_coords, cull_backfaces, z_clip_value, cull_to_frustum)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+meshes = <pytorch3d.structures.meshes.Meshes object at 0x7a6cfcf8b490>
+image_size = (64, 64), blur_radius = 0.010000000000000002, faces_per_pixel = 3
+bin_size = None, max_faces_per_bin = None, perspective_correct = False
+clip_barycentric_coords = True, cull_backfaces = False, z_clip_value = None
+cull_to_frustum = False
+
+    def rasterize_meshes(meshes, image_size: Union[int, List[int], Tuple[int, int]]=256, blur_radius: float=0.0, faces_per_pixel: int=8, bin_size: Optional[int]=None, max_faces_per_bin: Optional[int]=None, perspective_correct: bool=False, clip_barycentric_coords: bool=False, cull_backfaces: bool=False, z_clip_value: Optional[float]=None, cull_to_frustum: bool=False):
+        if isinstance(image_size, int):
+            image_size = (image_size, image_size)
+        elif isinstance(image_size, (list, tuple)) and len(image_size) == 2:
+            image_size = tuple(image_size)
+        else:
+            raise ValueError('image_size must be an int or a tuple/list of two ints.')
+        pix_to_face = np.full((len(meshes), *image_size, faces_per_pixel), -1, dtype=int)
+        zbuf = np.full((len(meshes), *image_size, faces_per_pixel), np.inf, dtype=float)
+        barycentric = np.zeros((len(meshes), *image_size, faces_per_pixel, 3), dtype=float)
+        pix_dists = np.full((len(meshes), *image_size, faces_per_pixel), np.inf, dtype=float)
+        for mesh_idx, mesh in enumerate(meshes):
+>           vertices = mesh.vertices
+E           AttributeError: 'Meshes' object has no attribute 'vertices'
+
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/mesh/temp.py:22: AttributeError
+______ TestRasterizeMeshes.test_cuda_naive_vs_binned_perspective_correct _______
+
+self = <tests.test_rasterize_meshes.TestRasterizeMeshes testMethod=test_cuda_naive_vs_binned_perspective_correct>
+
+    def test_cuda_naive_vs_binned_perspective_correct(self):
+        device = get_random_cuda_device()
+        meshes = ico_sphere(2, device=device)
+        verts1, faces1 = meshes.get_mesh_verts_faces(0)
+        verts1.requires_grad = True
+        meshes1 = Meshes(verts=[verts1], faces=[faces1])
+        verts2 = verts1.detach().clone().requires_grad_(True)
+        faces2 = faces1.detach().clone()
+        meshes2 = Meshes(verts=[verts2], faces=[faces2])
+    
+        kwargs = {"image_size": 64, "perspective_correct": True}
+        fn1 = functools.partial(rasterize_meshes, meshes1, bin_size=0, **kwargs)
+        fn2 = functools.partial(rasterize_meshes, meshes2, bin_size=8, **kwargs)
+        args = ()
+>       self._compare_impls(fn1, fn2, args, args, verts1, verts2, compare_grads=True)
+
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:459: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:553: in _compare_impls
+    idx1, zbuf1, bary1, dist1 = fn1(*args1)
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/mesh/rasterize_meshes.py:12: in rasterize_meshes
+    return rasterize_meshes(meshes, image_size, blur_radius, faces_per_pixel, bin_size, max_faces_per_bin, perspective_correct, clip_barycentric_coords, cull_backfaces, z_clip_value, cull_to_frustum)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+meshes = <pytorch3d.structures.meshes.Meshes object at 0x7a6db1f8d9d0>
+image_size = (64, 64), blur_radius = 0.0, faces_per_pixel = 8, bin_size = 0
+max_faces_per_bin = None, perspective_correct = True
+clip_barycentric_coords = False, cull_backfaces = False, z_clip_value = None
+cull_to_frustum = False
+
+    def rasterize_meshes(meshes, image_size: Union[int, List[int], Tuple[int, int]]=256, blur_radius: float=0.0, faces_per_pixel: int=8, bin_size: Optional[int]=None, max_faces_per_bin: Optional[int]=None, perspective_correct: bool=False, clip_barycentric_coords: bool=False, cull_backfaces: bool=False, z_clip_value: Optional[float]=None, cull_to_frustum: bool=False):
+        if isinstance(image_size, int):
+            image_size = (image_size, image_size)
+        elif isinstance(image_size, (list, tuple)) and len(image_size) == 2:
+            image_size = tuple(image_size)
+        else:
+            raise ValueError('image_size must be an int or a tuple/list of two ints.')
+        pix_to_face = np.full((len(meshes), *image_size, faces_per_pixel), -1, dtype=int)
+        zbuf = np.full((len(meshes), *image_size, faces_per_pixel), np.inf, dtype=float)
+        barycentric = np.zeros((len(meshes), *image_size, faces_per_pixel, 3), dtype=float)
+        pix_dists = np.full((len(meshes), *image_size, faces_per_pixel), np.inf, dtype=float)
+        for mesh_idx, mesh in enumerate(meshes):
+>           vertices = mesh.vertices
+E           AttributeError: 'Meshes' object has no attribute 'vertices'
+
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/mesh/temp.py:22: AttributeError
+____________________ TestRasterizeMeshes.test_order_of_ties ____________________
+
+self = <tests.test_rasterize_meshes.TestRasterizeMeshes testMethod=test_order_of_ties>
+
+    def test_order_of_ties(self):
+        # Tied faces are rasterized in index order
+        # We rasterize a mesh with many faces.
+        device = torch.device("cuda:0")
+        verts = -5 * torch.eye(3, dtype=torch.float32, device=device)[None]
+        faces = torch.arange(3, device=device, dtype=torch.int64).expand(1, 100, 3)
+        mesh = Meshes(verts=verts, faces=faces)
+    
+        R, T = look_at_view_transform(2.7, 0.0, 0.0)
+        cameras = FoVPerspectiveCameras(device=device, R=R, T=T)
+    
+        raster_settings = RasterizationSettings(
+            image_size=28, faces_per_pixel=100, bin_size=0
+        )
+        rasterizer = MeshRasterizer(raster_settings=raster_settings)
+    
+>       out = rasterizer(mesh, cameras=cameras)
+
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:1181: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/venv/lib/python3.8/site-packages/torch/nn/modules/module.py:1553: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+/local/data0/moved_data/pytorch3d/venv/lib/python3.8/site-packages/torch/nn/modules/module.py:1562: in _call_impl
+    return forward_call(*args, **kwargs)
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/mesh/rasterizer.py:254: in forward
+    pix_to_face, zbuf, bary_coords, dists = rasterize_meshes(
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/mesh/rasterize_meshes.py:12: in rasterize_meshes
+    return rasterize_meshes(meshes, image_size, blur_radius, faces_per_pixel, bin_size, max_faces_per_bin, perspective_correct, clip_barycentric_coords, cull_backfaces, z_clip_value, cull_to_frustum)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+meshes = <pytorch3d.structures.meshes.Meshes object at 0x7a6cfcf96910>
+image_size = (28, 28), blur_radius = 0.0, faces_per_pixel = 100, bin_size = 0
+max_faces_per_bin = None, perspective_correct = True
+clip_barycentric_coords = False, cull_backfaces = False, z_clip_value = 0.5
+cull_to_frustum = False
+
+    def rasterize_meshes(meshes, image_size: Union[int, List[int], Tuple[int, int]]=256, blur_radius: float=0.0, faces_per_pixel: int=8, bin_size: Optional[int]=None, max_faces_per_bin: Optional[int]=None, perspective_correct: bool=False, clip_barycentric_coords: bool=False, cull_backfaces: bool=False, z_clip_value: Optional[float]=None, cull_to_frustum: bool=False):
+        if isinstance(image_size, int):
+            image_size = (image_size, image_size)
+        elif isinstance(image_size, (list, tuple)) and len(image_size) == 2:
+            image_size = tuple(image_size)
+        else:
+            raise ValueError('image_size must be an int or a tuple/list of two ints.')
+        pix_to_face = np.full((len(meshes), *image_size, faces_per_pixel), -1, dtype=int)
+        zbuf = np.full((len(meshes), *image_size, faces_per_pixel), np.inf, dtype=float)
+        barycentric = np.zeros((len(meshes), *image_size, faces_per_pixel, 3), dtype=float)
+        pix_dists = np.full((len(meshes), *image_size, faces_per_pixel), np.inf, dtype=float)
+        for mesh_idx, mesh in enumerate(meshes):
+>           vertices = mesh.vertices
+E           AttributeError: 'Meshes' object has no attribute 'vertices'
+
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/mesh/temp.py:22: AttributeError
+_______________ TestRasterizeMeshes.test_python_vs_cpp_bary_clip _______________
+
+self = <tests.test_rasterize_meshes.TestRasterizeMeshes testMethod=test_python_vs_cpp_bary_clip>
+
+    def test_python_vs_cpp_bary_clip(self):
+        torch.manual_seed(232)
+        N = 2
+        V = 10
+        F = 5
+        verts1 = torch.randn(N, V, 3, requires_grad=True)
+        verts2 = verts1.detach().clone().requires_grad_(True)
+        faces = torch.randint(V, size=(N, F, 3))
+        meshes1 = Meshes(verts1, faces)
+        meshes2 = Meshes(verts2, faces)
+    
+        kwargs = {"image_size": 24, "clip_barycentric_coords": True}
+        fn1 = functools.partial(rasterize_meshes, meshes1, **kwargs)
+        fn2 = functools.partial(rasterize_meshes_python, meshes2, **kwargs)
+        args = ()
+>       self._compare_impls(fn1, fn2, args, args, verts1, verts2, compare_grads=True)
+
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:394: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:553: in _compare_impls
+    idx1, zbuf1, bary1, dist1 = fn1(*args1)
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/mesh/rasterize_meshes.py:12: in rasterize_meshes
+    return rasterize_meshes(meshes, image_size, blur_radius, faces_per_pixel, bin_size, max_faces_per_bin, perspective_correct, clip_barycentric_coords, cull_backfaces, z_clip_value, cull_to_frustum)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+meshes = <pytorch3d.structures.meshes.Meshes object at 0x7a6cfcc7be50>
+image_size = (24, 24), blur_radius = 0.0, faces_per_pixel = 8, bin_size = None
+max_faces_per_bin = None, perspective_correct = False
+clip_barycentric_coords = True, cull_backfaces = False, z_clip_value = None
+cull_to_frustum = False
+
+    def rasterize_meshes(meshes, image_size: Union[int, List[int], Tuple[int, int]]=256, blur_radius: float=0.0, faces_per_pixel: int=8, bin_size: Optional[int]=None, max_faces_per_bin: Optional[int]=None, perspective_correct: bool=False, clip_barycentric_coords: bool=False, cull_backfaces: bool=False, z_clip_value: Optional[float]=None, cull_to_frustum: bool=False):
+        if isinstance(image_size, int):
+            image_size = (image_size, image_size)
+        elif isinstance(image_size, (list, tuple)) and len(image_size) == 2:
+            image_size = tuple(image_size)
+        else:
+            raise ValueError('image_size must be an int or a tuple/list of two ints.')
+        pix_to_face = np.full((len(meshes), *image_size, faces_per_pixel), -1, dtype=int)
+        zbuf = np.full((len(meshes), *image_size, faces_per_pixel), np.inf, dtype=float)
+        barycentric = np.zeros((len(meshes), *image_size, faces_per_pixel, 3), dtype=float)
+        pix_dists = np.full((len(meshes), *image_size, faces_per_pixel), np.inf, dtype=float)
+        for mesh_idx, mesh in enumerate(meshes):
+>           vertices = mesh.vertices
+E           AttributeError: 'Meshes' object has no attribute 'vertices'
+
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/mesh/temp.py:22: AttributeError
+__________ TestRasterizeMeshes.test_python_vs_cpp_perspective_correct __________
+
+self = <tests.test_rasterize_meshes.TestRasterizeMeshes testMethod=test_python_vs_cpp_perspective_correct>
+
+    def test_python_vs_cpp_perspective_correct(self):
+        torch.manual_seed(232)
+        N = 2
+        V = 10
+        F = 5
+        verts1 = torch.randn(N, V, 3, requires_grad=True)
+        verts2 = verts1.detach().clone().requires_grad_(True)
+        faces = torch.randint(V, size=(N, F, 3))
+        meshes1 = Meshes(verts1, faces)
+        meshes2 = Meshes(verts2, faces)
+    
+        kwargs = {"image_size": 24, "perspective_correct": True}
+        fn1 = functools.partial(rasterize_meshes, meshes1, **kwargs)
+        fn2 = functools.partial(rasterize_meshes_python, meshes2, **kwargs)
+        args = ()
+>       self._compare_impls(fn1, fn2, args, args, verts1, verts2, compare_grads=True)
+
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:427: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:553: in _compare_impls
+    idx1, zbuf1, bary1, dist1 = fn1(*args1)
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/mesh/rasterize_meshes.py:12: in rasterize_meshes
+    return rasterize_meshes(meshes, image_size, blur_radius, faces_per_pixel, bin_size, max_faces_per_bin, perspective_correct, clip_barycentric_coords, cull_backfaces, z_clip_value, cull_to_frustum)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+meshes = <pytorch3d.structures.meshes.Meshes object at 0x7a6cfcce84f0>
+image_size = (24, 24), blur_radius = 0.0, faces_per_pixel = 8, bin_size = None
+max_faces_per_bin = None, perspective_correct = True
+clip_barycentric_coords = False, cull_backfaces = False, z_clip_value = None
+cull_to_frustum = False
+
+    def rasterize_meshes(meshes, image_size: Union[int, List[int], Tuple[int, int]]=256, blur_radius: float=0.0, faces_per_pixel: int=8, bin_size: Optional[int]=None, max_faces_per_bin: Optional[int]=None, perspective_correct: bool=False, clip_barycentric_coords: bool=False, cull_backfaces: bool=False, z_clip_value: Optional[float]=None, cull_to_frustum: bool=False):
+        if isinstance(image_size, int):
+            image_size = (image_size, image_size)
+        elif isinstance(image_size, (list, tuple)) and len(image_size) == 2:
+            image_size = tuple(image_size)
+        else:
+            raise ValueError('image_size must be an int or a tuple/list of two ints.')
+        pix_to_face = np.full((len(meshes), *image_size, faces_per_pixel), -1, dtype=int)
+        zbuf = np.full((len(meshes), *image_size, faces_per_pixel), np.inf, dtype=float)
+        barycentric = np.zeros((len(meshes), *image_size, faces_per_pixel, 3), dtype=float)
+        pix_dists = np.full((len(meshes), *image_size, faces_per_pixel), np.inf, dtype=float)
+        for mesh_idx, mesh in enumerate(meshes):
+>           vertices = mesh.vertices
+E           AttributeError: 'Meshes' object has no attribute 'vertices'
+
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/mesh/temp.py:22: AttributeError
+________________ TestRasterizeMeshes.test_python_vs_cpu_vs_cuda ________________
+
+self = <tests.test_rasterize_meshes.TestRasterizeMeshes testMethod=test_python_vs_cpu_vs_cuda>
+
+    def test_python_vs_cpu_vs_cuda(self):
+        torch.manual_seed(231)
+        device = torch.device("cpu")
+        image_size = 32
+        blur_radius = 0.1**2
+        faces_per_pixel = 3
+    
+        for d in ["cpu", get_random_cuda_device()]:
+            device = torch.device(d)
+            compare_grads = True
+            # Mesh with a single face.
+            verts1 = torch.tensor(
+                [[0.0, 0.6, 0.1], [-0.7, -0.4, 0.5], [0.7, -0.4, 0.7]],
+                dtype=torch.float32,
+                requires_grad=True,
+                device=device,
+            )
+            faces1 = torch.tensor([[0, 1, 2]], dtype=torch.int64, device=device)
+            meshes1 = Meshes(verts=[verts1], faces=[faces1])
+            args1 = (meshes1, image_size, blur_radius, faces_per_pixel)
+            verts2 = verts1.detach().clone()
+            verts2.requires_grad = True
+            meshes2 = Meshes(verts=[verts2], faces=[faces1])
+            args2 = (meshes2, image_size, blur_radius, faces_per_pixel)
+>           self._compare_impls(
+                rasterize_meshes_python,
+                rasterize_meshes,
+                args1,
+                args2,
+                verts1,
+                verts2,
+                compare_grads=compare_grads,
+            )
+
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:554: in _compare_impls
+    idx2, zbuf2, bary2, dist2 = fn2(*args2)
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/mesh/rasterize_meshes.py:12: in rasterize_meshes
+    return rasterize_meshes(meshes, image_size, blur_radius, faces_per_pixel, bin_size, max_faces_per_bin, perspective_correct, clip_barycentric_coords, cull_backfaces, z_clip_value, cull_to_frustum)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+meshes = <pytorch3d.structures.meshes.Meshes object at 0x7a6cfd511760>
+image_size = (32, 32), blur_radius = 0.010000000000000002, faces_per_pixel = 3
+bin_size = None, max_faces_per_bin = None, perspective_correct = False
+clip_barycentric_coords = False, cull_backfaces = False, z_clip_value = None
+cull_to_frustum = False
+
+    def rasterize_meshes(meshes, image_size: Union[int, List[int], Tuple[int, int]]=256, blur_radius: float=0.0, faces_per_pixel: int=8, bin_size: Optional[int]=None, max_faces_per_bin: Optional[int]=None, perspective_correct: bool=False, clip_barycentric_coords: bool=False, cull_backfaces: bool=False, z_clip_value: Optional[float]=None, cull_to_frustum: bool=False):
+        if isinstance(image_size, int):
+            image_size = (image_size, image_size)
+        elif isinstance(image_size, (list, tuple)) and len(image_size) == 2:
+            image_size = tuple(image_size)
+        else:
+            raise ValueError('image_size must be an int or a tuple/list of two ints.')
+        pix_to_face = np.full((len(meshes), *image_size, faces_per_pixel), -1, dtype=int)
+        zbuf = np.full((len(meshes), *image_size, faces_per_pixel), np.inf, dtype=float)
+        barycentric = np.zeros((len(meshes), *image_size, faces_per_pixel, 3), dtype=float)
+        pix_dists = np.full((len(meshes), *image_size, faces_per_pixel), np.inf, dtype=float)
+        for mesh_idx, mesh in enumerate(meshes):
+>           vertices = mesh.vertices
+E           AttributeError: 'Meshes' object has no attribute 'vertices'
+
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/mesh/temp.py:22: AttributeError
+__________________ TestRasterizeMeshes.test_simple_cpu_naive ___________________
+
+self = <tests.test_rasterize_meshes.TestRasterizeMeshes testMethod=test_simple_cpu_naive>
+
+    def test_simple_cpu_naive(self):
+        n_threads = torch.get_num_threads()
+        torch.set_num_threads(1)  # single threaded
+>       self._test_simple_cpu_naive_instance()
+
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:40: in _test_simple_cpu_naive_instance
+    self._simple_triangle_raster(rasterize_meshes, device, bin_size=0)
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:996: in _simple_triangle_raster
+    p2face, zbuf, bary, pix_dists = raster_fn(
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/mesh/rasterize_meshes.py:12: in rasterize_meshes
+    return rasterize_meshes(meshes, image_size, blur_radius, faces_per_pixel, bin_size, max_faces_per_bin, perspective_correct, clip_barycentric_coords, cull_backfaces, z_clip_value, cull_to_frustum)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+meshes = <pytorch3d.structures.meshes.Meshes object at 0x7a6cfbff2c10>
+image_size = (10, 10), blur_radius = 0.0, faces_per_pixel = 2, bin_size = 0
+max_faces_per_bin = None, perspective_correct = False
+clip_barycentric_coords = False, cull_backfaces = False, z_clip_value = None
+cull_to_frustum = False
+
+    def rasterize_meshes(meshes, image_size: Union[int, List[int], Tuple[int, int]]=256, blur_radius: float=0.0, faces_per_pixel: int=8, bin_size: Optional[int]=None, max_faces_per_bin: Optional[int]=None, perspective_correct: bool=False, clip_barycentric_coords: bool=False, cull_backfaces: bool=False, z_clip_value: Optional[float]=None, cull_to_frustum: bool=False):
+        if isinstance(image_size, int):
+            image_size = (image_size, image_size)
+        elif isinstance(image_size, (list, tuple)) and len(image_size) == 2:
+            image_size = tuple(image_size)
+        else:
+            raise ValueError('image_size must be an int or a tuple/list of two ints.')
+        pix_to_face = np.full((len(meshes), *image_size, faces_per_pixel), -1, dtype=int)
+        zbuf = np.full((len(meshes), *image_size, faces_per_pixel), np.inf, dtype=float)
+        barycentric = np.zeros((len(meshes), *image_size, faces_per_pixel, 3), dtype=float)
+        pix_dists = np.full((len(meshes), *image_size, faces_per_pixel), np.inf, dtype=float)
+        for mesh_idx, mesh in enumerate(meshes):
+>           vertices = mesh.vertices
+E           AttributeError: 'Meshes' object has no attribute 'vertices'
+
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/mesh/temp.py:22: AttributeError
+_________________ TestRasterizeMeshes.test_simple_cuda_binned __________________
+
+self = <tests.test_rasterize_meshes.TestRasterizeMeshes testMethod=test_simple_cuda_binned>
+
+    def test_simple_cuda_binned(self):
+        device = get_random_cuda_device()
+>       self._simple_triangle_raster(rasterize_meshes, device, bin_size=5)
+
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:66: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:996: in _simple_triangle_raster
+    p2face, zbuf, bary, pix_dists = raster_fn(
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/mesh/rasterize_meshes.py:12: in rasterize_meshes
+    return rasterize_meshes(meshes, image_size, blur_radius, faces_per_pixel, bin_size, max_faces_per_bin, perspective_correct, clip_barycentric_coords, cull_backfaces, z_clip_value, cull_to_frustum)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+meshes = <pytorch3d.structures.meshes.Meshes object at 0x7a6cfccf0610>
+image_size = (10, 10), blur_radius = 0.0, faces_per_pixel = 2, bin_size = 5
+max_faces_per_bin = None, perspective_correct = False
+clip_barycentric_coords = False, cull_backfaces = False, z_clip_value = None
+cull_to_frustum = False
+
+    def rasterize_meshes(meshes, image_size: Union[int, List[int], Tuple[int, int]]=256, blur_radius: float=0.0, faces_per_pixel: int=8, bin_size: Optional[int]=None, max_faces_per_bin: Optional[int]=None, perspective_correct: bool=False, clip_barycentric_coords: bool=False, cull_backfaces: bool=False, z_clip_value: Optional[float]=None, cull_to_frustum: bool=False):
+        if isinstance(image_size, int):
+            image_size = (image_size, image_size)
+        elif isinstance(image_size, (list, tuple)) and len(image_size) == 2:
+            image_size = tuple(image_size)
+        else:
+            raise ValueError('image_size must be an int or a tuple/list of two ints.')
+        pix_to_face = np.full((len(meshes), *image_size, faces_per_pixel), -1, dtype=int)
+        zbuf = np.full((len(meshes), *image_size, faces_per_pixel), np.inf, dtype=float)
+        barycentric = np.zeros((len(meshes), *image_size, faces_per_pixel, 3), dtype=float)
+        pix_dists = np.full((len(meshes), *image_size, faces_per_pixel), np.inf, dtype=float)
+        for mesh_idx, mesh in enumerate(meshes):
+>           vertices = mesh.vertices
+E           AttributeError: 'Meshes' object has no attribute 'vertices'
+
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/mesh/temp.py:22: AttributeError
+__________________ TestRasterizeMeshes.test_simple_cuda_naive __________________
+
+self = <tests.test_rasterize_meshes.TestRasterizeMeshes testMethod=test_simple_cuda_naive>
+
+    def test_simple_cuda_naive(self):
+        device = get_random_cuda_device()
+>       self._simple_triangle_raster(rasterize_meshes, device, bin_size=0)
+
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:58: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py:996: in _simple_triangle_raster
+    p2face, zbuf, bary, pix_dists = raster_fn(
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/mesh/rasterize_meshes.py:12: in rasterize_meshes
+    return rasterize_meshes(meshes, image_size, blur_radius, faces_per_pixel, bin_size, max_faces_per_bin, perspective_correct, clip_barycentric_coords, cull_backfaces, z_clip_value, cull_to_frustum)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+meshes = <pytorch3d.structures.meshes.Meshes object at 0x7a6db1f8d310>
+image_size = (10, 10), blur_radius = 0.0, faces_per_pixel = 2, bin_size = 0
+max_faces_per_bin = None, perspective_correct = False
+clip_barycentric_coords = False, cull_backfaces = False, z_clip_value = None
+cull_to_frustum = False
+
+    def rasterize_meshes(meshes, image_size: Union[int, List[int], Tuple[int, int]]=256, blur_radius: float=0.0, faces_per_pixel: int=8, bin_size: Optional[int]=None, max_faces_per_bin: Optional[int]=None, perspective_correct: bool=False, clip_barycentric_coords: bool=False, cull_backfaces: bool=False, z_clip_value: Optional[float]=None, cull_to_frustum: bool=False):
+        if isinstance(image_size, int):
+            image_size = (image_size, image_size)
+        elif isinstance(image_size, (list, tuple)) and len(image_size) == 2:
+            image_size = tuple(image_size)
+        else:
+            raise ValueError('image_size must be an int or a tuple/list of two ints.')
+        pix_to_face = np.full((len(meshes), *image_size, faces_per_pixel), -1, dtype=int)
+        zbuf = np.full((len(meshes), *image_size, faces_per_pixel), np.inf, dtype=float)
+        barycentric = np.zeros((len(meshes), *image_size, faces_per_pixel, 3), dtype=float)
+        pix_dists = np.full((len(meshes), *image_size, faces_per_pixel), np.inf, dtype=float)
+        for mesh_idx, mesh in enumerate(meshes):
+>           vertices = mesh.vertices
+E           AttributeError: 'Meshes' object has no attribute 'vertices'
+
+/local/data0/moved_data/pytorch3d/pytorch3d/renderer/mesh/temp.py:22: AttributeError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_bin_size_error
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_bary_clip
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_naive_vs_cuda_binned
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_perspective_correct
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpu_vs_cuda_naive
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cuda_naive_vs_binned_perspective_correct
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_order_of_ties
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpp_bary_clip
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpp_perspective_correct
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpu_vs_cuda
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cpu_naive
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cuda_binned
+FAILED ../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cuda_naive
+========================= 13 failed, 4 passed in 2.59s =========================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 17 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_bin_size_error PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_coarse_cpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_coarse_cuda PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_compare_coarse_cpu_vs_cuda PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_bary_clip PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_naive_vs_cuda_binned PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_perspective_correct PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpu_vs_cuda_naive PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cuda_naive_vs_binned_perspective_correct PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_order_of_ties PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpp_bary_clip PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpp_perspective_correct PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpu_vs_cuda PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cpu_naive PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cuda_binned PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cuda_naive PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_python PASSED
+
+============================= 17 passed in 14.09s ==============================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/pytorch3d/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/pytorch3d
+collecting ... collected 17 items
+
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_bin_size_error PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_coarse_cpu PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_coarse_cuda PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_compare_coarse_cpu_vs_cuda PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_bary_clip PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_naive_vs_cuda_binned PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpp_vs_cuda_perspective_correct PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cpu_vs_cuda_naive PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_cuda_naive_vs_binned_perspective_correct PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_order_of_ties PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpp_bary_clip PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpp_perspective_correct PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_python_vs_cpu_vs_cuda PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cpu_naive PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cuda_binned PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_cuda_naive PASSED
+../../../../../../local/data0/moved_data/pytorch3d/tests/test_rasterize_meshes.py::TestRasterizeMeshes::test_simple_python PASSED
+
+============================= 17 passed in 14.07s ==============================

@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: Segmentation
+data: Image
+
+prompt:
+Create a Python function named `fundamental_from_projections` that calculates the fundamental matrix from two projection matrices (`P1` and `P2`). The function should ensure that both projection matrices have the correct shape of `(*, 3, 4)` and matching batch dimensions, raising an `AssertionError` if these conditions are not met. The function computes the fundamental matrix using the determinants of specific submatrices derived from the input projections and returns a tensor of shape `(*, 3, 3)`. The function should handle different data types, converting the inputs to `torch.float32` if they are not already in `float32` or `float64`.
+
+ ground Truth:kornia/geometry/epipolar/fundamental.py
+
+ repo:kornia
+
+ function:fundamental_from_projections
+ 
+ test_cases:tests/geometry/epipolar/test_fundamental.py::TestFundamentalFromProjections

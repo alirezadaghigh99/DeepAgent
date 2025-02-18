@@ -1,0 +1,822 @@
+output file:
+processed_scikit-learnbrier_score_loss303.json
+function:
+brier_score_loss
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_brier_score_loss_deprecation_warning FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_brier_score_loss_deprecation_warning', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_brier_score_loss', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_brier_score_loss FAILED'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.9.0, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/scikit-learn/scikit-learn
+configfile: setup.cfg
+plugins: cov-6.0.0
+collecting ... collected 208 items
+
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_dictionary_output I: Seeding RNGs with 1548441206
+PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_output_dict_empty_input PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_zero_division_warning[warn] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_zero_division_warning[0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_zero_division_warning[1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_zero_division_warning[nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_labels_subset_superset[labels0-True] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_labels_subset_superset[labels1-False] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_labels_subset_superset[labels2-False] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_accuracy_score_subset_accuracy PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_score_binary PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f_binary_single_class PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f_extra_labels PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f_ignored_labels PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_average_precision_score_non_binary_class PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_average_precision_score_duplicate_values[y_true0-y_score0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_average_precision_score_duplicate_values[y_true1-y_score1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_average_precision_score_tied_values[y_true0-y_score0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_average_precision_score_tied_values[y_true1-y_score1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f_unused_pos_label PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_binary PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_confusion_matrix_binary PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_confusion_matrix_multiclass PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_confusion_matrix_multilabel[csr_matrix-csc_matrix] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_confusion_matrix_multilabel[csr_matrix-csc_array] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_confusion_matrix_multilabel[csr_array-csc_matrix] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_confusion_matrix_multilabel[csr_array-csc_array] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_confusion_matrix_errors PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_normalize[true-f-0.333333333] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_normalize[pred-f-0.333333333] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_normalize[all-f-0.1111111111] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_normalize[None-i-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_normalize_single_class PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_single_label PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_likelihood_ratios_warnings[params0-samples of only one class were seen during testing] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_likelihood_ratios_warnings[params1-positive_likelihood_ratio ill-defined and being set to nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_likelihood_ratios_warnings[params2-no samples predicted for the positive class] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_likelihood_ratios_warnings[params3-negative_likelihood_ratio ill-defined and being set to nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_likelihood_ratios_warnings[params4-no samples of the positive class were present in the testing set] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_likelihood_ratios_errors[params0-class_likelihood_ratios only supports binary classification problems, got targets of type: multiclass] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_likelihood_ratios PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_cohen_kappa PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[f1_score-y_true0-y_pred0-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[f1_score-y_true0-y_pred0-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[f1_score-y_true0-y_pred0-nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[metric1-y_true0-y_pred0-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[metric1-y_true0-y_pred0-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[metric1-y_true0-y_pred0-nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[precision_score-y_true0-y_pred0-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[precision_score-y_true0-y_pred0-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[precision_score-y_true0-y_pred0-nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[recall_score-y_true0-y_pred0-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[recall_score-y_true0-y_pred0-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[recall_score-y_true0-y_pred0-nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_warning[f1_score-y_true0-y_pred0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_warning[metric1-y_true0-y_pred0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_warning[precision_score-y_true0-y_pred0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_warning[recall_score-y_true0-y_pred0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_matthews_corrcoef_against_numpy_corrcoef PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_matthews_corrcoef_against_jurman PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_matthews_corrcoef PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_matthews_corrcoef_multiclass PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_matthews_corrcoef_overflow[100] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_matthews_corrcoef_overflow[10000] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_score_multiclass PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_refcall_f1_score_multilabel_unordered_labels[samples] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_refcall_f1_score_multilabel_unordered_labels[micro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_refcall_f1_score_multilabel_unordered_labels[macro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_refcall_f1_score_multilabel_unordered_labels[weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_refcall_f1_score_multilabel_unordered_labels[None] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_score_binary_averaged PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_precision_recall PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_multiclass_subset_labels PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_error[empty list] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_error[unknown labels] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_on_zero_length_input[None] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_on_zero_length_input[binary] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_on_zero_length_input[multiclass] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_dtype PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_pandas_nullable[Int64] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_pandas_nullable[Float64] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_pandas_nullable[boolean] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_multiclass PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_multiclass_balanced PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_multiclass_with_label_detection PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_multiclass_with_digits PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_multiclass_with_string_label PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_multiclass_with_unicode_label PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_multiclass_with_long_string_label PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_labels_target_names_unequal_length PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_no_labels_target_names_unequal_length PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_classification_report PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_zero_one_loss_subset PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_hamming_loss PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_jaccard_score_validation PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_jaccard_score PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multiclass_jaccard_score PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_average_binary_jaccard_score PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_jaccard_score_zero_division_warning PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_jaccard_score_zero_division_set_value[0-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_jaccard_score_zero_division_set_value[1-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_score_multilabel_1 PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_score_multilabel_2 PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_score_with_an_empty_prediction[warn-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_score_with_an_empty_prediction[0-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_score_with_an_empty_prediction[1-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_score_with_an_empty_prediction[nan-nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[0-macro-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[0-micro-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[0-weighted-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[0-samples-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[1-macro-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[1-micro-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[1-weighted-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[1-samples-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[nan-macro-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[nan-micro-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[nan-weighted-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[nan-samples-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels_check_warnings[macro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels_check_warnings[micro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels_check_warnings[weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels_check_warnings[samples] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels_average_none[0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels_average_none[1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels_average_none[nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels_average_none_warn PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_prf_warnings PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_prf_no_warnings_if_zero_division_set[0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_prf_no_warnings_if_zero_division_set[1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_prf_no_warnings_if_zero_division_set[nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_recall_warnings[warn] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_recall_warnings[0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_recall_warnings[1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_recall_warnings[nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_warnings[warn] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_warnings[0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_warnings[1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_warnings[nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_fscore_warnings[warn] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_fscore_warnings[0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_fscore_warnings[1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_fscore_warnings[nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_prf_average_binary_data_non_binary PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test__check_targets PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test__check_targets_multiclass_with_both_y_true_and_y_pred_binary PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_hinge_loss_binary PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_hinge_loss_multiclass PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_hinge_loss_multiclass_missing_labels_with_labels_none PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_hinge_loss_multiclass_no_consistent_pred_decision_shape PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_hinge_loss_multiclass_with_missing_labels PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_hinge_loss_multiclass_missing_labels_only_two_unq_in_y_true PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_hinge_loss_multiclass_invariance_lists PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_log_loss PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_log_loss_eps[float64] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_log_loss_eps[float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_log_loss_eps[float16] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_log_loss_not_probabilities_warning[float64] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_log_loss_not_probabilities_warning[float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_log_loss_not_probabilities_warning[float16] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_log_loss_perfect_predictions[y_true0-y_pred0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_log_loss_perfect_predictions[y_true1-y_pred1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_log_loss_perfect_predictions[y_true2-y_pred2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_log_loss_pandas_input PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_brier_score_loss FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_balanced_accuracy_score_unseen PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_balanced_accuracy_score[y_true0-y_pred0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_balanced_accuracy_score[y_true1-y_pred1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_balanced_accuracy_score[y_true2-y_pred2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes0-jaccard_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes0-f1_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes0-metric2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes0-precision_recall_fscore_support] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes0-precision_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes0-recall_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes0-brier_score_loss] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes1-jaccard_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes1-f1_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes1-metric2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes1-precision_recall_fscore_support] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes1-precision_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes1-recall_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes1-brier_score_loss] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes2-jaccard_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes2-f1_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes2-metric2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes2-precision_recall_fscore_support] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes2-precision_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes2-recall_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes2-brier_score_loss] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes3-jaccard_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes3-f1_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes3-metric2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes3-precision_recall_fscore_support] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes3-precision_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes3-recall_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes3-brier_score_loss] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_f1_for_small_binary_inputs_with_zero_division[y_true0-y_pred0-0.0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_f1_for_small_binary_inputs_with_zero_division[y_true1-y_pred1-1.0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_f1_for_small_binary_inputs_with_zero_division[y_true2-y_pred2-0.0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_f1_for_small_binary_inputs_with_zero_division[y_true3-y_pred3-1.0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_division_by_zero_nan_validaton[scoring0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_division_by_zero_nan_validaton[scoring1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_division_by_zero_nan_validaton[scoring2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_division_by_zero_nan_validaton[scoring3] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_brier_score_loss_deprecation_warning FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_d2_log_loss_score PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_d2_log_loss_score_raises PASSED
+
+=================================== FAILURES ===================================
+____________________________ test_brier_score_loss _____________________________
+
+    def test_brier_score_loss():
+        # Check brier_score_loss function
+        y_true = np.array([0, 1, 1, 0, 1, 1])
+        y_pred = np.array([0.1, 0.8, 0.9, 0.3, 1.0, 0.95])
+        true_score = linalg.norm(y_true - y_pred) ** 2 / len(y_true)
+    
+        assert_almost_equal(brier_score_loss(y_true, y_true), 0.0)
+        assert_almost_equal(brier_score_loss(y_true, y_pred), true_score)
+        assert_almost_equal(brier_score_loss(1.0 + y_true, y_pred), true_score)
+        assert_almost_equal(brier_score_loss(2 * y_true - 1, y_pred), true_score)
+        with pytest.raises(ValueError):
+            brier_score_loss(y_true, y_pred[1:])
+        with pytest.raises(ValueError):
+            brier_score_loss(y_true, y_pred + 1.0)
+        with pytest.raises(ValueError):
+            brier_score_loss(y_true, y_pred - 1.0)
+    
+        # ensure to raise an error for multiclass y_true
+        y_true = np.array([0, 1, 2, 0])
+        y_pred = np.array([0.8, 0.6, 0.4, 0.2])
+        error_message = (
+            "Only binary classification is supported. The type of the target is multiclass"
+        )
+    
+        with pytest.raises(ValueError, match=error_message):
+>           brier_score_loss(y_true, y_pred)
+E           Failed: DID NOT RAISE <class 'ValueError'>
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py:2766: Failed
+__________________ test_brier_score_loss_deprecation_warning ___________________
+
+    def test_brier_score_loss_deprecation_warning():
+        """Check the message for future deprecation."""
+        # Check brier_score_loss function
+        y_true = np.array([0, 1, 1, 0, 1, 1])
+        y_pred = np.array([0.1, 0.8, 0.9, 0.3, 1.0, 0.95])
+    
+        warn_msg = "y_prob was deprecated in version 1.5"
+        with pytest.warns(FutureWarning, match=warn_msg):
+>           brier_score_loss(
+                y_true,
+                y_prob=y_pred,
+            )
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py:2887: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/_classification.py:2420: in brier_score_loss
+    return brier_score_loss(y_true, y_proba)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/validation.py:63: in inner_f
+    return f(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/temp.py:45: in brier_score_loss
+    y_proba = column_or_1d(y_proba)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+y = array(None, dtype=object)
+
+    def column_or_1d(y, *, dtype=None, warn=False):
+        """Ravel column or 1d numpy array, else raises an error.
+    
+        Parameters
+        ----------
+        y : array-like
+           Input data.
+    
+        dtype : data-type, default=None
+            Data type for `y`.
+    
+            .. versionadded:: 1.2
+    
+        warn : bool, default=False
+           To control display of warnings.
+    
+        Returns
+        -------
+        y : ndarray
+           Output data.
+    
+        Raises
+        ------
+        ValueError
+            If `y` is not a 1D array or a 2D array with a single row or column.
+    
+        Examples
+        --------
+        >>> from sklearn.utils.validation import column_or_1d
+        >>> column_or_1d([1, 1])
+        array([1, 1])
+        """
+        xp, _ = get_namespace(y)
+        y = check_array(
+            y,
+            ensure_2d=False,
+            dtype=dtype,
+            input_name="y",
+            ensure_all_finite=False,
+            ensure_min_samples=0,
+        )
+    
+        shape = y.shape
+        if len(shape) == 1:
+            return _asarray_with_order(xp.reshape(y, (-1,)), order="C", xp=xp)
+        if len(shape) == 2 and shape[1] == 1:
+            if warn:
+                warnings.warn(
+                    (
+                        "A column-vector y was passed when a 1d array was"
+                        " expected. Please change the shape of y to "
+                        "(n_samples, ), for example using ravel()."
+                    ),
+                    DataConversionWarning,
+                    stacklevel=2,
+                )
+            return _asarray_with_order(xp.reshape(y, (-1,)), order="C", xp=xp)
+    
+>       raise ValueError(
+            "y should be a 1d array, got an array of shape {} instead.".format(shape)
+        )
+E       ValueError: y should be a 1d array, got an array of shape () instead.
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/validation.py:1474: ValueError
+
+During handling of the above exception, another exception occurred:
+
+    def test_brier_score_loss_deprecation_warning():
+        """Check the message for future deprecation."""
+        # Check brier_score_loss function
+        y_true = np.array([0, 1, 1, 0, 1, 1])
+        y_pred = np.array([0.1, 0.8, 0.9, 0.3, 1.0, 0.95])
+    
+        warn_msg = "y_prob was deprecated in version 1.5"
+        with pytest.warns(FutureWarning, match=warn_msg):
+>           brier_score_loss(
+                y_true,
+                y_prob=y_pred,
+            )
+E           Failed: DID NOT WARN. No warnings of type (<class 'FutureWarning'>,) were emitted.
+E            Emitted warnings: [].
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py:2887: Failed
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_brier_score_loss
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_brier_score_loss_deprecation_warning
+============ 2 failed, 203 passed, 3 skipped, 19 warnings in 2.45s =============
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.9.0, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/scikit-learn/scikit-learn
+configfile: setup.cfg
+plugins: cov-6.0.0
+collecting ... collected 208 items
+
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_dictionary_output I: Seeding RNGs with 1649681126
+PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_output_dict_empty_input PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_zero_division_warning[warn] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_zero_division_warning[0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_zero_division_warning[1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_zero_division_warning[nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_labels_subset_superset[labels0-True] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_labels_subset_superset[labels1-False] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_labels_subset_superset[labels2-False] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_accuracy_score_subset_accuracy PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_score_binary PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f_binary_single_class PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f_extra_labels PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f_ignored_labels PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_average_precision_score_non_binary_class PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_average_precision_score_duplicate_values[y_true0-y_score0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_average_precision_score_duplicate_values[y_true1-y_score1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_average_precision_score_tied_values[y_true0-y_score0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_average_precision_score_tied_values[y_true1-y_score1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f_unused_pos_label PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_binary PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_confusion_matrix_binary PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_confusion_matrix_multiclass PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_confusion_matrix_multilabel[csr_matrix-csc_matrix] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_confusion_matrix_multilabel[csr_matrix-csc_array] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_confusion_matrix_multilabel[csr_array-csc_matrix] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_confusion_matrix_multilabel[csr_array-csc_array] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_confusion_matrix_errors PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_normalize[true-f-0.333333333] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_normalize[pred-f-0.333333333] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_normalize[all-f-0.1111111111] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_normalize[None-i-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_normalize_single_class PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_single_label PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_likelihood_ratios_warnings[params0-samples of only one class were seen during testing] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_likelihood_ratios_warnings[params1-positive_likelihood_ratio ill-defined and being set to nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_likelihood_ratios_warnings[params2-no samples predicted for the positive class] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_likelihood_ratios_warnings[params3-negative_likelihood_ratio ill-defined and being set to nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_likelihood_ratios_warnings[params4-no samples of the positive class were present in the testing set] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_likelihood_ratios_errors[params0-class_likelihood_ratios only supports binary classification problems, got targets of type: multiclass] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_likelihood_ratios PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_cohen_kappa PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[f1_score-y_true0-y_pred0-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[f1_score-y_true0-y_pred0-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[f1_score-y_true0-y_pred0-nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[metric1-y_true0-y_pred0-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[metric1-y_true0-y_pred0-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[metric1-y_true0-y_pred0-nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[precision_score-y_true0-y_pred0-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[precision_score-y_true0-y_pred0-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[precision_score-y_true0-y_pred0-nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[recall_score-y_true0-y_pred0-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[recall_score-y_true0-y_pred0-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[recall_score-y_true0-y_pred0-nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_warning[f1_score-y_true0-y_pred0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_warning[metric1-y_true0-y_pred0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_warning[precision_score-y_true0-y_pred0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_warning[recall_score-y_true0-y_pred0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_matthews_corrcoef_against_numpy_corrcoef PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_matthews_corrcoef_against_jurman PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_matthews_corrcoef PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_matthews_corrcoef_multiclass PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_matthews_corrcoef_overflow[100] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_matthews_corrcoef_overflow[10000] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_score_multiclass PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_refcall_f1_score_multilabel_unordered_labels[samples] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_refcall_f1_score_multilabel_unordered_labels[micro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_refcall_f1_score_multilabel_unordered_labels[macro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_refcall_f1_score_multilabel_unordered_labels[weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_refcall_f1_score_multilabel_unordered_labels[None] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_score_binary_averaged PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_precision_recall PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_multiclass_subset_labels PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_error[empty list] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_error[unknown labels] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_on_zero_length_input[None] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_on_zero_length_input[binary] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_on_zero_length_input[multiclass] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_dtype PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_pandas_nullable[Int64] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_pandas_nullable[Float64] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_pandas_nullable[boolean] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_multiclass PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_multiclass_balanced PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_multiclass_with_label_detection PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_multiclass_with_digits PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_multiclass_with_string_label PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_multiclass_with_unicode_label PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_multiclass_with_long_string_label PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_labels_target_names_unequal_length PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_no_labels_target_names_unequal_length PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_classification_report PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_zero_one_loss_subset PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_hamming_loss PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_jaccard_score_validation PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_jaccard_score PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multiclass_jaccard_score PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_average_binary_jaccard_score PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_jaccard_score_zero_division_warning PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_jaccard_score_zero_division_set_value[0-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_jaccard_score_zero_division_set_value[1-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_score_multilabel_1 PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_score_multilabel_2 PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_score_with_an_empty_prediction[warn-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_score_with_an_empty_prediction[0-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_score_with_an_empty_prediction[1-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_score_with_an_empty_prediction[nan-nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[0-macro-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[0-micro-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[0-weighted-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[0-samples-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[1-macro-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[1-micro-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[1-weighted-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[1-samples-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[nan-macro-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[nan-micro-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[nan-weighted-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[nan-samples-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels_check_warnings[macro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels_check_warnings[micro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels_check_warnings[weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels_check_warnings[samples] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels_average_none[0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels_average_none[1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels_average_none[nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels_average_none_warn PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_prf_warnings PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_prf_no_warnings_if_zero_division_set[0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_prf_no_warnings_if_zero_division_set[1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_prf_no_warnings_if_zero_division_set[nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_recall_warnings[warn] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_recall_warnings[0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_recall_warnings[1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_recall_warnings[nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_warnings[warn] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_warnings[0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_warnings[1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_warnings[nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_fscore_warnings[warn] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_fscore_warnings[0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_fscore_warnings[1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_fscore_warnings[nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_prf_average_binary_data_non_binary PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test__check_targets PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test__check_targets_multiclass_with_both_y_true_and_y_pred_binary PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_hinge_loss_binary PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_hinge_loss_multiclass PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_hinge_loss_multiclass_missing_labels_with_labels_none PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_hinge_loss_multiclass_no_consistent_pred_decision_shape PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_hinge_loss_multiclass_with_missing_labels PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_hinge_loss_multiclass_missing_labels_only_two_unq_in_y_true PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_hinge_loss_multiclass_invariance_lists PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_log_loss PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_log_loss_eps[float64] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_log_loss_eps[float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_log_loss_eps[float16] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_log_loss_not_probabilities_warning[float64] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_log_loss_not_probabilities_warning[float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_log_loss_not_probabilities_warning[float16] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_log_loss_perfect_predictions[y_true0-y_pred0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_log_loss_perfect_predictions[y_true1-y_pred1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_log_loss_perfect_predictions[y_true2-y_pred2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_log_loss_pandas_input PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_brier_score_loss PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_balanced_accuracy_score_unseen PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_balanced_accuracy_score[y_true0-y_pred0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_balanced_accuracy_score[y_true1-y_pred1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_balanced_accuracy_score[y_true2-y_pred2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes0-jaccard_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes0-f1_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes0-metric2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes0-precision_recall_fscore_support] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes0-precision_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes0-recall_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes0-brier_score_loss] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes1-jaccard_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes1-f1_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes1-metric2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes1-precision_recall_fscore_support] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes1-precision_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes1-recall_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes1-brier_score_loss] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes2-jaccard_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes2-f1_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes2-metric2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes2-precision_recall_fscore_support] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes2-precision_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes2-recall_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes2-brier_score_loss] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes3-jaccard_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes3-f1_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes3-metric2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes3-precision_recall_fscore_support] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes3-precision_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes3-recall_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes3-brier_score_loss] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_f1_for_small_binary_inputs_with_zero_division[y_true0-y_pred0-0.0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_f1_for_small_binary_inputs_with_zero_division[y_true1-y_pred1-1.0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_f1_for_small_binary_inputs_with_zero_division[y_true2-y_pred2-0.0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_f1_for_small_binary_inputs_with_zero_division[y_true3-y_pred3-1.0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_division_by_zero_nan_validaton[scoring0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_division_by_zero_nan_validaton[scoring1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_division_by_zero_nan_validaton[scoring2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_division_by_zero_nan_validaton[scoring3] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_brier_score_loss_deprecation_warning PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_d2_log_loss_score PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_d2_log_loss_score_raises PASSED
+
+================= 205 passed, 3 skipped, 19 warnings in 2.23s ==================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.9.0, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/scikit-learn/scikit-learn
+configfile: setup.cfg
+plugins: cov-6.0.0
+collecting ... collected 208 items
+
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_dictionary_output I: Seeding RNGs with 1935939509
+PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_output_dict_empty_input PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_zero_division_warning[warn] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_zero_division_warning[0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_zero_division_warning[1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_zero_division_warning[nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_labels_subset_superset[labels0-True] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_labels_subset_superset[labels1-False] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_labels_subset_superset[labels2-False] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_accuracy_score_subset_accuracy PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_score_binary PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f_binary_single_class PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f_extra_labels PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f_ignored_labels PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_average_precision_score_non_binary_class PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_average_precision_score_duplicate_values[y_true0-y_score0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_average_precision_score_duplicate_values[y_true1-y_score1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_average_precision_score_tied_values[y_true0-y_score0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_average_precision_score_tied_values[y_true1-y_score1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f_unused_pos_label PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_binary PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_confusion_matrix_binary PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_confusion_matrix_multiclass PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_confusion_matrix_multilabel[csr_matrix-csc_matrix] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_confusion_matrix_multilabel[csr_matrix-csc_array] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_confusion_matrix_multilabel[csr_array-csc_matrix] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_confusion_matrix_multilabel[csr_array-csc_array] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_confusion_matrix_errors PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_normalize[true-f-0.333333333] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_normalize[pred-f-0.333333333] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_normalize[all-f-0.1111111111] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_normalize[None-i-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_normalize_single_class PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_single_label PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_likelihood_ratios_warnings[params0-samples of only one class were seen during testing] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_likelihood_ratios_warnings[params1-positive_likelihood_ratio ill-defined and being set to nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_likelihood_ratios_warnings[params2-no samples predicted for the positive class] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_likelihood_ratios_warnings[params3-negative_likelihood_ratio ill-defined and being set to nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_likelihood_ratios_warnings[params4-no samples of the positive class were present in the testing set] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_likelihood_ratios_errors[params0-class_likelihood_ratios only supports binary classification problems, got targets of type: multiclass] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_likelihood_ratios PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_cohen_kappa PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[f1_score-y_true0-y_pred0-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[f1_score-y_true0-y_pred0-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[f1_score-y_true0-y_pred0-nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[metric1-y_true0-y_pred0-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[metric1-y_true0-y_pred0-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[metric1-y_true0-y_pred0-nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[precision_score-y_true0-y_pred0-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[precision_score-y_true0-y_pred0-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[precision_score-y_true0-y_pred0-nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[recall_score-y_true0-y_pred0-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[recall_score-y_true0-y_pred0-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_no_warning[recall_score-y_true0-y_pred0-nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_warning[f1_score-y_true0-y_pred0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_warning[metric1-y_true0-y_pred0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_warning[precision_score-y_true0-y_pred0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_division_nan_warning[recall_score-y_true0-y_pred0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_matthews_corrcoef_against_numpy_corrcoef PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_matthews_corrcoef_against_jurman PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_matthews_corrcoef PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_matthews_corrcoef_multiclass PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_matthews_corrcoef_overflow[100] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_matthews_corrcoef_overflow[10000] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_score_multiclass PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_refcall_f1_score_multilabel_unordered_labels[samples] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_refcall_f1_score_multilabel_unordered_labels[micro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_refcall_f1_score_multilabel_unordered_labels[macro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_refcall_f1_score_multilabel_unordered_labels[weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_refcall_f1_score_multilabel_unordered_labels[None] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_score_binary_averaged PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_zero_precision_recall PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_multiclass_subset_labels PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_error[empty list] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_error[unknown labels] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_on_zero_length_input[None] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_on_zero_length_input[binary] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_on_zero_length_input[multiclass] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_dtype PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_pandas_nullable[Int64] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_pandas_nullable[Float64] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_confusion_matrix_pandas_nullable[boolean] SKIPPED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_multiclass PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_multiclass_balanced PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_multiclass_with_label_detection PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_multiclass_with_digits PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_multiclass_with_string_label PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_multiclass_with_unicode_label PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_multiclass_with_long_string_label PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_labels_target_names_unequal_length PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_report_no_labels_target_names_unequal_length PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_classification_report PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_zero_one_loss_subset PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_hamming_loss PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_jaccard_score_validation PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multilabel_jaccard_score PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_multiclass_jaccard_score PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_average_binary_jaccard_score PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_jaccard_score_zero_division_warning PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_jaccard_score_zero_division_set_value[0-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_jaccard_score_zero_division_set_value[1-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_score_multilabel_1 PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_score_multilabel_2 PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_score_with_an_empty_prediction[warn-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_score_with_an_empty_prediction[0-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_score_with_an_empty_prediction[1-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_score_with_an_empty_prediction[nan-nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[0-macro-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[0-micro-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[0-weighted-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[0-samples-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[1-macro-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[1-micro-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[1-weighted-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[1-samples-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[nan-macro-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[nan-micro-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[nan-weighted-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels[nan-samples-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels_check_warnings[macro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels_check_warnings[micro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels_check_warnings[weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels_check_warnings[samples] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels_average_none[0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels_average_none[1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels_average_none[nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_recall_f1_no_labels_average_none_warn PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_prf_warnings PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_prf_no_warnings_if_zero_division_set[0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_prf_no_warnings_if_zero_division_set[1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_prf_no_warnings_if_zero_division_set[nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_recall_warnings[warn] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_recall_warnings[0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_recall_warnings[1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_recall_warnings[nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_warnings[warn] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_warnings[0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_warnings[1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_precision_warnings[nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_fscore_warnings[warn] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_fscore_warnings[0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_fscore_warnings[1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_fscore_warnings[nan] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_prf_average_binary_data_non_binary PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test__check_targets PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test__check_targets_multiclass_with_both_y_true_and_y_pred_binary PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_hinge_loss_binary PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_hinge_loss_multiclass PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_hinge_loss_multiclass_missing_labels_with_labels_none PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_hinge_loss_multiclass_no_consistent_pred_decision_shape PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_hinge_loss_multiclass_with_missing_labels PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_hinge_loss_multiclass_missing_labels_only_two_unq_in_y_true PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_hinge_loss_multiclass_invariance_lists PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_log_loss PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_log_loss_eps[float64] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_log_loss_eps[float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_log_loss_eps[float16] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_log_loss_not_probabilities_warning[float64] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_log_loss_not_probabilities_warning[float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_log_loss_not_probabilities_warning[float16] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_log_loss_perfect_predictions[y_true0-y_pred0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_log_loss_perfect_predictions[y_true1-y_pred1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_log_loss_perfect_predictions[y_true2-y_pred2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_log_loss_pandas_input PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_brier_score_loss PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_balanced_accuracy_score_unseen PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_balanced_accuracy_score[y_true0-y_pred0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_balanced_accuracy_score[y_true1-y_pred1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_balanced_accuracy_score[y_true2-y_pred2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes0-jaccard_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes0-f1_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes0-metric2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes0-precision_recall_fscore_support] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes0-precision_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes0-recall_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes0-brier_score_loss] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes1-jaccard_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes1-f1_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes1-metric2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes1-precision_recall_fscore_support] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes1-precision_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes1-recall_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes1-brier_score_loss] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes2-jaccard_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes2-f1_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes2-metric2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes2-precision_recall_fscore_support] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes2-precision_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes2-recall_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes2-brier_score_loss] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes3-jaccard_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes3-f1_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes3-metric2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes3-precision_recall_fscore_support] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes3-precision_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes3-recall_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_pos_label_types[classes3-brier_score_loss] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_f1_for_small_binary_inputs_with_zero_division[y_true0-y_pred0-0.0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_f1_for_small_binary_inputs_with_zero_division[y_true1-y_pred1-1.0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_f1_for_small_binary_inputs_with_zero_division[y_true2-y_pred2-0.0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_f1_for_small_binary_inputs_with_zero_division[y_true3-y_pred3-1.0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_division_by_zero_nan_validaton[scoring0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_division_by_zero_nan_validaton[scoring1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_division_by_zero_nan_validaton[scoring2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_classification_metric_division_by_zero_nan_validaton[scoring3] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_brier_score_loss_deprecation_warning PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_d2_log_loss_score PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_classification.py::test_d2_log_loss_score_raises PASSED
+
+================= 205 passed, 3 skipped, 19 warnings in 2.22s ==================

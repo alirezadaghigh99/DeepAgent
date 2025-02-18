@@ -1,0 +1,11 @@
+{
+    "result": "Certainly! Below is a Python function `_compute_tf_loss` for the class `L2Loss` that calculates the L2 loss using TensorFlow. The function ensures that the shapes of `output` and `labels` are consistent and that they are of float type before computing the squared difference between them.\n\n```python\nimport tensorflow as tf\nfrom tensorflow.keras.losses import Loss\n\nclass L2Loss(Loss):\n    def _compute_tf_loss(self, output, labels):\n        \"\"\"\n        Compute the L2 loss between the output and labels.\n\n        Args:\n            output (tf.Tensor): The predicted output tensor.\n            labels (tf.Tensor): The true labels tensor.\n\n        Returns:\n            tf.Tensor: The computed L2 loss.\n        \"\"\"\n        # Ensure the output and labels are of float type\n        output = tf.convert_to_tensor(output, dtype=tf.float32)\n        labels = tf.convert_to_tensor(labels, dtype=tf.float32)\n\n        # Check if the shapes of output and labels are consistent\n        tf.debugging.assert_shapes([(output, labels.shape)], message=\"Output and labels must have the same shape.\")\n\n        # Compute the squared difference\n        squared_difference = tf.square(output - labels)\n\n        # Compute the mean of the squared differences\n        l2_loss = tf.reduce_mean(squared_difference)\n\n        return l2_loss\n```\n\nThis function uses TensorFlow's operations to ensure that the inputs are tensors of float type and checks that their shapes are consistent. It then calculates the squared difference between the `output` and `labels` and returns the mean of these squared differences as the L2 loss.",
+    "prompt": "Generate a Python function `_compute_tf_loss` for the class `L2Loss` that calculates the L2 loss using TensorFlow. Ensure the shapes of `output` and `labels` are consistent and they are of float type, then compute the squared difference between them.\n\nOutput format:\n\n```python\nclass L2Loss(Loss):\n    def _compute_tf_loss(self, output, labels):\n```",
+    "function_name": "_compute_tf_loss",
+    "ground_truth": "deepchem/models/losses.py",
+    "test": "deepchem/models/tests/test_losses.py",
+    "class": "L2Loss",
+    "stage": "",
+    "task": "Regression",
+    "data": "Training"
+}

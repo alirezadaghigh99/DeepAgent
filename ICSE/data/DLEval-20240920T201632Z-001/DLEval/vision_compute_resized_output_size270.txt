@@ -1,0 +1,15 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Write a Python function `_compute_resized_output_size` that calculates the new size of an image after resizing, based on the original `image_size` (height and width). The function accepts parameters: `size`, an optional list specifying the desired size of the smaller edge or both dimensions; `max_size`, an optional integer that limits the size of the longer edge; and `allow_size_none`, a boolean that permits `size` to be `None` (only used in version 2). The function should handle different cases where `size` is `None`, a single value, or a pair of values, and return a list with the new height and width. The function should include checks to raise a `ValueError` if `size` is `None` but `max_size` is not an integer, if `max_size` is smaller than the requested size, or if any other invalid configuration is encountered.
+
+ ground Truth:torchvision/transforms/functional.py#L357
+
+ repo:vision
+
+ function:_compute_resized_output_size
+ 
+ test_cases:test/test_transforms.py::test_resize
+

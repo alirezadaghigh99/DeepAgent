@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: Detection
+data: Image
+
+prompt:
+Generate a Python function called set_laf_orientation that changes the orientation of the Local Affine Frames (LAFs). The function takes in two arguments: LAF, a tensor of shape (B, N, 2, 3) representing the LAFs, and angles_degrees, a tensor of shape (B, N, 1) representing the angles in degrees. The function returns a tensor of shape (B, N, 2, 3) representing the LAFs oriented with the specified angles. T
+
+ ground Truth:kornia/feature/laf.py
+
+ repo:kornia
+
+ function:set_laf_orientation
+ 
+ test_cases:tests/feature/test_laf.py::TestSetLAFOri

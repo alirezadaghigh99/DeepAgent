@@ -1,0 +1,306 @@
+output file:
+processed_kornialaf_from_center_scale_ori237.json
+function:
+laf_from_center_scale_ori
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_shape[cpu]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_cross_consistency[cpu] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_laf[cpu]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_cross_consistency[cpu]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_laf[cpu] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_gradcheck[cpu]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_shape[cpu] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_laf_def[cpu]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_laf_def[cpu] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_gradcheck[cpu] FAILED'}
+
+All Test Cases On Generated code:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'cudagraphs', 'inductor', 'tvm', 'jit', 'onnxrt', 'openxla', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 6 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_shape[cpu] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_laf[cpu] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_laf_def[cpu] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_cross_consistency[cpu] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_gradcheck[cpu] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_jit[cpu-float32] SKIPPED
+
+=================================== FAILURES ===================================
+_______________________ TestGetCreateLAF.test_shape[cpu] _______________________
+
+self = <test_laf.TestGetCreateLAF object at 0x798960537b50>
+device = device(type='cpu')
+
+    def test_shape(self, device):
+        xy = torch.ones(1, 3, 2, device=device)
+        ori = torch.ones(1, 3, 1, device=device)
+        scale = torch.ones(1, 3, 1, 1, device=device)
+        laf = kornia.feature.laf_from_center_scale_ori(xy, scale, ori)
+>       assert laf.shape == (1, 3, 2, 3)
+E       AttributeError: 'NoneType' object has no attribute 'shape'
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py:488: AttributeError
+________________________ TestGetCreateLAF.test_laf[cpu] ________________________
+
+self = <test_laf.TestGetCreateLAF object at 0x798960537e80>
+device = device(type='cpu')
+
+    def test_laf(self, device):
+        xy = torch.ones(1, 1, 2, device=device)
+        ori = torch.zeros(1, 1, 1, device=device)
+        scale = 5 * torch.ones(1, 1, 1, 1, device=device)
+        expected = torch.tensor([[[[5, 0, 1], [0, 5, 1]]]], device=device).float()
+        laf = kornia.feature.laf_from_center_scale_ori(xy, scale, ori)
+>       self.assert_close(laf, expected)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py:496: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:106: in assert_close
+    return assert_close(actual, expected, rtol=rtol, atol=atol)
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:35: in assert_close
+    rtol, atol = _default_tolerances(actual, expected)
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:23: in _default_tolerances
+    rtols, atols = zip(*[_DTYPE_PRECISIONS.get(torch.as_tensor(input_).dtype, (0.0, 0.0)) for input_ in inputs])
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <tuple_iterator object at 0x7989606f71f0>
+
+>   rtols, atols = zip(*[_DTYPE_PRECISIONS.get(torch.as_tensor(input_).dtype, (0.0, 0.0)) for input_ in inputs])
+E   RuntimeError: Could not infer dtype of NoneType
+
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:23: RuntimeError
+______________________ TestGetCreateLAF.test_laf_def[cpu] ______________________
+
+self = <test_laf.TestGetCreateLAF object at 0x798960574160>
+device = device(type='cpu')
+
+    def test_laf_def(self, device):
+        xy = torch.ones(1, 1, 2, device=device)
+        expected = torch.tensor([[[[1, 0, 1], [0, 1, 1]]]], device=device).float()
+        laf = kornia.feature.laf_from_center_scale_ori(xy)
+>       self.assert_close(laf, expected)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py:502: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:106: in assert_close
+    return assert_close(actual, expected, rtol=rtol, atol=atol)
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:35: in assert_close
+    rtol, atol = _default_tolerances(actual, expected)
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:23: in _default_tolerances
+    rtols, atols = zip(*[_DTYPE_PRECISIONS.get(torch.as_tensor(input_).dtype, (0.0, 0.0)) for input_ in inputs])
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <tuple_iterator object at 0x7989606f7820>
+
+>   rtols, atols = zip(*[_DTYPE_PRECISIONS.get(torch.as_tensor(input_).dtype, (0.0, 0.0)) for input_ in inputs])
+E   RuntimeError: Could not infer dtype of NoneType
+
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:23: RuntimeError
+_________________ TestGetCreateLAF.test_cross_consistency[cpu] _________________
+
+self = <test_laf.TestGetCreateLAF object at 0x798960574400>
+device = device(type='cpu')
+
+    def test_cross_consistency(self, device):
+        batch_size, channels = 3, 2
+        xy = torch.rand(batch_size, channels, 2, device=device)
+        ori = torch.rand(batch_size, channels, 1, device=device)
+        scale = torch.abs(torch.rand(batch_size, channels, 1, 1, device=device))
+        laf = kornia.feature.laf_from_center_scale_ori(xy, scale, ori)
+>       scale2 = kornia.feature.get_laf_scale(laf)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py:510: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/feature/laf.py:24: in get_laf_scale
+    KORNIA_CHECK_LAF(LAF)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/check.py:429: in KORNIA_CHECK_LAF
+    return KORNIA_CHECK_SHAPE(laf, ["B", "N", "2", "3"], raises)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+x = None, shape = ['B', 'N', '2', '3'], raises = True
+
+    def KORNIA_CHECK_SHAPE(x: Tensor, shape: list[str], raises: bool = True) -> bool:
+        """Check whether a tensor has a specified shape.
+    
+        The shape can be specified with a implicit or explicit list of strings.
+        The guard also check whether the variable is a type `Tensor`.
+    
+        Args:
+            x: the tensor to evaluate.
+            shape: a list with strings with the expected shape.
+            raises: bool indicating whether an exception should be raised upon failure.
+    
+        Raises:
+            Exception: if the input tensor is has not the expected shape and raises is True.
+    
+        Example:
+            >>> x = torch.rand(2, 3, 4, 4)
+            >>> KORNIA_CHECK_SHAPE(x, ["B", "C", "H", "W"])  # implicit
+            True
+    
+            >>> x = torch.rand(2, 3, 4, 4)
+            >>> KORNIA_CHECK_SHAPE(x, ["2", "3", "H", "W"])  # explicit
+            True
+        """
+        if "*" == shape[0]:
+            shape_to_check = shape[1:]
+            x_shape_to_check = x.shape[-len(shape) + 1 :]
+        elif "*" == shape[-1]:
+            shape_to_check = shape[:-1]
+            x_shape_to_check = x.shape[: len(shape) - 1]
+        else:
+            shape_to_check = shape
+>           x_shape_to_check = x.shape
+E           AttributeError: 'NoneType' object has no attribute 'shape'
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/core/check.py:63: AttributeError
+_____________________ TestGetCreateLAF.test_gradcheck[cpu] _____________________
+
+self = <test_laf.TestGetCreateLAF object at 0x7989605746a0>
+device = device(type='cpu')
+
+    def test_gradcheck(self, device):
+        batch_size, channels = 3, 2
+        xy = torch.rand(batch_size, channels, 2, device=device, dtype=torch.float64)
+        ori = torch.rand(batch_size, channels, 1, device=device, dtype=torch.float64)
+        scale = torch.abs(torch.rand(batch_size, channels, 1, 1, device=device, dtype=torch.float64))
+>       self.gradcheck(kornia.feature.laf_from_center_scale_ori, (xy, scale, ori))
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py:522: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:143: in gradcheck
+    return gradcheck(func, inputs, raise_exception=raise_exception, fast_mode=fast_mode, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2052: in gradcheck
+    return _gradcheck_helper(**args)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2075: in _gradcheck_helper
+    outputs = _differentiable_outputs(func_out)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:1369: in _differentiable_outputs
+    return tuple(o for o in _as_tuple(x) if o.requires_grad)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+.0 = <tuple_iterator object at 0x79896040bb20>
+
+>   return tuple(o for o in _as_tuple(x) if o.requires_grad)
+E   AttributeError: 'NoneType' object has no attribute 'requires_grad'
+
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:1369: AttributeError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_shape[cpu]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_laf[cpu]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_laf_def[cpu]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_cross_consistency[cpu]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_gradcheck[cpu]
+========================= 5 failed, 1 skipped in 0.39s =========================
+
+
+Final Test Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'inductor', None, 'jit', 'openxla', 'onnxrt', 'tvm', 'cudagraphs'}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 6 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_shape[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_laf[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_laf_def[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_cross_consistency[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_gradcheck[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_jit[cpu-float32] SKIPPED
+
+========================= 5 passed, 1 skipped in 0.17s =========================
+
+
+Initial Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'jit', 'onnxrt', 'cudagraphs', 'openxla', 'inductor', 'tvm', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 6 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_shape[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_laf[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_laf_def[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_cross_consistency[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_gradcheck[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/feature/test_laf.py::TestGetCreateLAF::test_jit[cpu-float32] SKIPPED
+
+========================= 5 passed, 1 skipped in 0.17s =========================

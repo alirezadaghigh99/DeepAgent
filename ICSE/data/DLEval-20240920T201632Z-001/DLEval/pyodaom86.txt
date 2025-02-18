@@ -1,0 +1,22 @@
+stage: Model Construction
+task: 
+data: Table
+
+prompt:
+Generate a Python function called aom that implements the Average of Maximum ensemble method for combining multiple estimators. The function takes in the following parameters:
+
+- scores: a numpy array of shape (n_samples, n_estimators) representing the score matrix outputted from various estimators
+- n_buckets: an integer specifying the number of subgroups to build (default value is 5)
+- method: a string specifying the method for building subgroups ('static' or 'dynamic', default value is 'static')
+- bootstrap_estimators: a boolean indicating whether estimators are drawn with replacement (default value is False)
+- random_state: an integer, RandomState instance, or None specifying the seed for the random number generator (default value is None)
+
+The function returns a numpy array called combined_scores of shape (n_samples,) representing the combined outlier scores calculated using the Average of Maximum method.
+
+ ground Truth:pyod/models/combination.py
+
+ repo:pyod
+
+ function:aom
+ 
+ test_cases:pyod/test/test_combination.py::TestAOM

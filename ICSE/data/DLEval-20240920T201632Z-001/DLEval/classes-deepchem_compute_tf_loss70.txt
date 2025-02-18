@@ -1,0 +1,23 @@
+stage: 
+task: Regression
+data: Training
+
+prompt:
+Generate a Python function `_compute_tf_loss` for the class `L2Loss` that calculates the L2 loss using TensorFlow. Ensure the shapes of `output` and `labels` are consistent and they are of float type, then compute the squared difference between them.
+
+Output format:
+
+```python
+class L2Loss(Loss):
+    def _compute_tf_loss(self, output, labels):
+```
+
+ ground Truth:deepchem/models/losses.py
+
+ repo:deepchem
+
+ function:_compute_tf_loss
+ 
+ test_cases:deepchem/models/tests/test_losses.py
+ 
+ class:L2Loss

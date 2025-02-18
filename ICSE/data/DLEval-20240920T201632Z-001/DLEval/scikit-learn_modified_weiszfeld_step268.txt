@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: 
+
+prompt:
+Generate a Python function called _modified_weiszfeld_step that defines one iteration step in order to approximate the spatial median (L1 median) using an iteratively re-weighted least squares method. The function takes two parameters: X, an array-like of shape (n_samples, n_features) representing the training vector, and x_old, a ndarray of shape = (n_features,) representing the current start vector. The function returns a ndarray of shape (n_features,) representing the new iteration step. The function calculates the new direction based on the input parameters and returns the updated direction for the next iteration. The function is based on the paper "On Computation of Spatial Median for Robust Data Mining, 2005" by T. Kärkkäinen and S. Äyrämö.
+
+ ground Truth:sklearn/linear_model/_theil_sen.py
+
+ repo:scikit-learn
+
+ function:_modified_weiszfeld_step
+ 
+ test_cases:sklearn/linear_model/tests/test_theil_sen.py

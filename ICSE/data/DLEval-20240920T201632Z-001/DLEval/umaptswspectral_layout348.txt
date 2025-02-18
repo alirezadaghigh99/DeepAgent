@@ -1,0 +1,14 @@
+stage: Model Construction
+task: Classification
+data: 
+
+prompt:
+Generate a Python function called tswspectral_layout that computes the spectral embedding of a graph. The function takes in various parameters such as data, graph, dim, random_state, metric, metric_kwds, method, tol, and maxiter. It utilizes the normalized Laplacian and a truncated SVD-based approach to find the eigenvectors of the graph. The function aims to provide results similar to the spectral_layout function but may converge more quickly for certain types of graph Laplacians. The output is an array representing the spectral embedding of the graph.
+
+ ground Truth:umap/spectral.py
+
+ repo:umap
+
+ function:tswspectral_layout
+ 
+ test_cases:umap/tests/test_spectral.py

@@ -1,0 +1,14 @@
+stage: Model Construction
+task: 
+data: 
+
+prompt:
+Write a Python function named `toy_model` that builds and optionally trains a simple neural network using PyTorch. The function receives a `DataLoader` for the training data, the number of epochs (`n_epochs`), input and output dimensions (`in_dim`, `out_dim`), and flags for whether to fit the model (`fit`) and whether it's a regression task (`regression`). If `fit` is `True`, the model is trained using either Mean Squared Error loss for regression or Cross-Entropy loss for classification, with an Adam optimizer. The function should return the trained `nn.Sequential` model. Inputs include `train_loader` (PyTorch DataLoader), `n_epochs` (default 500), `fit` (default True), `in_dim` and `out_dim` (default 1), and `regression` (default True), and the output is the trained PyTorch model.
+
+ ground Truth:tests/utils.py
+
+ repo:Laplace
+
+ function:toy_model
+ 
+ test_cases:tests/test_functional_laplace.py

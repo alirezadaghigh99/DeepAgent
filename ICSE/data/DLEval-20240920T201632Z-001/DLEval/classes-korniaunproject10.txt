@@ -1,0 +1,25 @@
+stage: Image
+task: 
+data: Inference
+
+prompt:
+Generate the `unproject` function for the following class to transform coordinates in the pixel frame to the world frame. The input is `self`, a `point_2d` tensor with shape `(*, 2)`, and a `depth` tensor with shape `(*, 1)`. The output is a tensor of `(x, y, z)` world coordinates with shape `(*, 3)`.
+
+```python
+class PinholeCamera:
+    def __init__(self, intrinsics: Tensor, extrinsics: Tensor, height: Tensor, width: Tensor) -> None:
+        self.height: Tensor = height
+        self.width: Tensor = width
+        self._intrinsics: Tensor = intrinsics
+        self._extrinsics: Tensor = extrinsics
+```
+
+ ground Truth:kornia/geometry/camera/pinhole.py
+
+ repo:kornia
+
+ function:unproject
+ 
+ test_cases:tests/geometry/camera/test_pinhole.py
+ 
+ class:PinholeCamera

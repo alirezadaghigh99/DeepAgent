@@ -1,0 +1,28 @@
+stage: Image
+task: Classification
+data: pre-post process
+
+prompt:
+Write a Python `__init__` function for the `Normalize` class, which initializes a normalization module that normalizes a tensor image with a given mean and standard deviation. The function accepts `mean` and `std`, which can be a tensor, tuple, list, or float. The `mean` and `std` values are converted to tensors if they are not already, and are then stored as attributes of the class.
+
+```python
+class Normalize(nn.Module):
+    def __init__(
+        self,
+        mean: Union[torch.Tensor, Tuple[float], List[float], float],
+        std: Union[torch.Tensor, Tuple[float], List[float], float],
+    ) -> None:
+        super().__init__()
+```
+
+This function checks the types of `mean` and `std`, converts them to tensors if necessary, and assigns them to `self.mean` and `self.std`.
+
+ ground Truth:kornia/enhance/normalize.py
+
+ repo:kornia
+
+ function:__init__
+ 
+ class:Normalize
+ 
+ test_cases:tests/enhance/test_normalize.py::TestNormalize

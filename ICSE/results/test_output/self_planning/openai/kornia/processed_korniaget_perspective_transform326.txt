@@ -1,0 +1,580 @@
+output file:
+processed_korniaget_perspective_transform326.json
+function:
+get_perspective_transform
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_smoke[cpu-float32-2]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_smoke[cpu-float32-5] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_gradcheck[cpu]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_dynamo[cpu-float32-inductor]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_back_and_forth[cpu-float32] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_hflip[cpu-float32] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_back_and_forth[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_smoke[cpu-float32-2] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_hflip[cpu-float32]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_dynamo[cpu-float32-inductor] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_smoke[cpu-float32-5]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_gradcheck[cpu] FAILED'}
+
+All Test Cases On Generated code:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'cudagraphs', 'openxla', 'onnxrt', 'inductor', 'jit', 'tvm', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 9 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_smoke[cpu-float32-1] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_smoke[cpu-float32-2] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_smoke[cpu-float32-5] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_crop_src_dst_type_mismatch[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_crop_src_dst_type_mismatch[cpu-float32-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_back_and_forth[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_hflip[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_dynamo[cpu-float32-inductor] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_gradcheck[cpu] FAILED
+
+=================================== FAILURES ===================================
+____________ TestGetPerspectiveTransform.test_smoke[cpu-float32-1] _____________
+
+self = <test_imgwarp.TestGetPerspectiveTransform object at 0x7a2f15d1f250>
+device = device(type='cpu'), dtype = torch.float32, batch_size = 1
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 5])
+    def test_smoke(self, device, dtype, batch_size):
+        points_src = torch.rand(batch_size, 4, 2, device=device, dtype=dtype)
+        points_dst = torch.rand(batch_size, 4, 2, device=device, dtype=dtype)
+    
+>       dst_trans_src = kornia.geometry.get_perspective_transform(points_src, points_dst)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py:29: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/imgwarp.py:186: in get_perspective_transform
+    return get_perspective_transform(points_src, points_dst)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+points_src = tensor([[[0.5019, 0.3228],
+         [0.8580, 0.1151],
+         [0.3868, 0.1031],
+         [0.5540, 0.4556]]])
+points_dst = tensor([[[0.7592, 0.4873],
+         [0.4423, 0.2030],
+         [0.2004, 0.7692],
+         [0.2129, 0.7418]]])
+
+    def get_perspective_transform(points_src, points_dst):
+        """
+        Calculate a perspective transform from four pairs of the corresponding points using DLT.
+    
+        Args:
+            points_src: coordinates of quadrangle vertices in the source image with shape (B, 4, 2).
+            points_dst: coordinates of the corresponding quadrangle vertices in the destination image with shape (B, 4, 2).
+    
+        Returns:
+            The perspective transformation with shape (B, 3, 3).
+        """
+        if points_src.shape != points_dst.shape or points_src.shape[1:] != (4, 2):
+            raise ValueError('Input points must have shape (B, 4, 2)')
+        B = points_src.shape[0]
+        A = torch.zeros((B, 8, 9), dtype=points_src.dtype, device=points_src.device)
+        for i in range(4):
+            X, Y = (points_src[:, i, 0], points_src[:, i, 1])
+            x, y = (points_dst[:, i, 0], points_dst[:, i, 1])
+            A[:, 2 * i, 0:3] = torch.stack([X, Y, torch.ones_like(X)], dim=1)
+            A[:, 2 * i, 6:9] = torch.stack([-x * X, -x * Y, -x], dim=1)
+            A[:, 2 * i + 1, 3:6] = torch.stack([X, Y, torch.ones_like(X)], dim=1)
+            A[:, 2 * i + 1, 6:9] = torch.stack([-y * X, -y * Y, -y], dim=1)
+        U, S, V = torch.svd(A)
+>       H = V[:, -1].reshape(B, 3, 3)
+E       RuntimeError: shape '[1, 3, 3]' is invalid for input of size 8
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/temp.py:36: RuntimeError
+____________ TestGetPerspectiveTransform.test_smoke[cpu-float32-2] _____________
+
+self = <test_imgwarp.TestGetPerspectiveTransform object at 0x7a2f15d1f1c0>
+device = device(type='cpu'), dtype = torch.float32, batch_size = 2
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 5])
+    def test_smoke(self, device, dtype, batch_size):
+        points_src = torch.rand(batch_size, 4, 2, device=device, dtype=dtype)
+        points_dst = torch.rand(batch_size, 4, 2, device=device, dtype=dtype)
+    
+>       dst_trans_src = kornia.geometry.get_perspective_transform(points_src, points_dst)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py:29: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/imgwarp.py:186: in get_perspective_transform
+    return get_perspective_transform(points_src, points_dst)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+points_src = tensor([[[0.0119, 0.3895],
+         [0.2291, 0.0739],
+         [0.3069, 0.9682],
+         [0.0915, 0.4239]],
+
+        [[0.2667, 0.3068],
+         [0.1228, 0.3880],
+         [0.7805, 0.7082],
+         [0.7288, 0.0906]]])
+points_dst = tensor([[[0.5767, 0.7000],
+         [0.3761, 0.7140],
+         [0.2400, 0.5448],
+         [0.0403, 0.6045]],
+
+        [[0.9511, 0.4770],
+         [0.2497, 0.4466],
+         [0.6893, 0.2755],
+         [0.3189, 0.1881]]])
+
+    def get_perspective_transform(points_src, points_dst):
+        """
+        Calculate a perspective transform from four pairs of the corresponding points using DLT.
+    
+        Args:
+            points_src: coordinates of quadrangle vertices in the source image with shape (B, 4, 2).
+            points_dst: coordinates of the corresponding quadrangle vertices in the destination image with shape (B, 4, 2).
+    
+        Returns:
+            The perspective transformation with shape (B, 3, 3).
+        """
+        if points_src.shape != points_dst.shape or points_src.shape[1:] != (4, 2):
+            raise ValueError('Input points must have shape (B, 4, 2)')
+        B = points_src.shape[0]
+        A = torch.zeros((B, 8, 9), dtype=points_src.dtype, device=points_src.device)
+        for i in range(4):
+            X, Y = (points_src[:, i, 0], points_src[:, i, 1])
+            x, y = (points_dst[:, i, 0], points_dst[:, i, 1])
+            A[:, 2 * i, 0:3] = torch.stack([X, Y, torch.ones_like(X)], dim=1)
+            A[:, 2 * i, 6:9] = torch.stack([-x * X, -x * Y, -x], dim=1)
+            A[:, 2 * i + 1, 3:6] = torch.stack([X, Y, torch.ones_like(X)], dim=1)
+            A[:, 2 * i + 1, 6:9] = torch.stack([-y * X, -y * Y, -y], dim=1)
+        U, S, V = torch.svd(A)
+>       H = V[:, -1].reshape(B, 3, 3)
+E       RuntimeError: shape '[2, 3, 3]' is invalid for input of size 16
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/temp.py:36: RuntimeError
+____________ TestGetPerspectiveTransform.test_smoke[cpu-float32-5] _____________
+
+self = <test_imgwarp.TestGetPerspectiveTransform object at 0x7a2f15d1f460>
+device = device(type='cpu'), dtype = torch.float32, batch_size = 5
+
+    @pytest.mark.parametrize("batch_size", [1, 2, 5])
+    def test_smoke(self, device, dtype, batch_size):
+        points_src = torch.rand(batch_size, 4, 2, device=device, dtype=dtype)
+        points_dst = torch.rand(batch_size, 4, 2, device=device, dtype=dtype)
+    
+>       dst_trans_src = kornia.geometry.get_perspective_transform(points_src, points_dst)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py:29: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/imgwarp.py:186: in get_perspective_transform
+    return get_perspective_transform(points_src, points_dst)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+points_src = tensor([[[0.0794, 0.4390],
+         [0.7475, 0.8548],
+         [0.1071, 0.4363],
+         [0.6380, 0.1924]],
+
+        ....2719]],
+
+        [[0.4706, 0.0591],
+         [0.9062, 0.1086],
+         [0.1301, 0.6418],
+         [0.9601, 0.5575]]])
+points_dst = tensor([[[0.9838, 0.7572],
+         [0.2132, 0.6950],
+         [0.3361, 0.6408],
+         [0.7536, 0.9292]],
+
+        ....3211]],
+
+        [[0.9620, 0.5334],
+         [0.8498, 0.4445],
+         [0.2401, 0.0903],
+         [0.4430, 0.0030]]])
+
+    def get_perspective_transform(points_src, points_dst):
+        """
+        Calculate a perspective transform from four pairs of the corresponding points using DLT.
+    
+        Args:
+            points_src: coordinates of quadrangle vertices in the source image with shape (B, 4, 2).
+            points_dst: coordinates of the corresponding quadrangle vertices in the destination image with shape (B, 4, 2).
+    
+        Returns:
+            The perspective transformation with shape (B, 3, 3).
+        """
+        if points_src.shape != points_dst.shape or points_src.shape[1:] != (4, 2):
+            raise ValueError('Input points must have shape (B, 4, 2)')
+        B = points_src.shape[0]
+        A = torch.zeros((B, 8, 9), dtype=points_src.dtype, device=points_src.device)
+        for i in range(4):
+            X, Y = (points_src[:, i, 0], points_src[:, i, 1])
+            x, y = (points_dst[:, i, 0], points_dst[:, i, 1])
+            A[:, 2 * i, 0:3] = torch.stack([X, Y, torch.ones_like(X)], dim=1)
+            A[:, 2 * i, 6:9] = torch.stack([-x * X, -x * Y, -x], dim=1)
+            A[:, 2 * i + 1, 3:6] = torch.stack([X, Y, torch.ones_like(X)], dim=1)
+            A[:, 2 * i + 1, 6:9] = torch.stack([-y * X, -y * Y, -y], dim=1)
+        U, S, V = torch.svd(A)
+>       H = V[:, -1].reshape(B, 3, 3)
+E       RuntimeError: shape '[5, 3, 3]' is invalid for input of size 40
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/temp.py:36: RuntimeError
+_________ TestGetPerspectiveTransform.test_back_and_forth[cpu-float32] _________
+
+self = <test_imgwarp.TestGetPerspectiveTransform object at 0x7a2f15d1fbe0>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_back_and_forth(self, device, dtype):
+        # generate input data
+        h_max, w_max = 64, 32  # height, width
+        h = h_max * torch.rand(1, device=device, dtype=dtype)
+        w = w_max * torch.rand(1, device=device, dtype=dtype)
+    
+        norm = torch.rand(1, 4, 2, device=device, dtype=dtype)
+        points_src = torch.zeros_like(norm, device=device, dtype=dtype)
+        points_src[:, 1, 0] = h
+        points_src[:, 2, 1] = w
+        points_src[:, 3, 0] = h
+        points_src[:, 3, 1] = w
+        points_dst = points_src + norm
+    
+        # compute transform from source to target
+>       dst_trans_src = kornia.geometry.get_perspective_transform(points_src, points_dst)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py:70: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/imgwarp.py:186: in get_perspective_transform
+    return get_perspective_transform(points_src, points_dst)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+points_src = tensor([[[ 0.0000,  0.0000],
+         [59.1611,  0.0000],
+         [ 0.0000, 27.2642],
+         [59.1611, 27.2642]]])
+points_dst = tensor([[[ 0.9087,  0.4615],
+         [59.7914,  0.7206],
+         [ 0.7787, 27.7903],
+         [59.6498, 28.2391]]])
+
+    def get_perspective_transform(points_src, points_dst):
+        """
+        Calculate a perspective transform from four pairs of the corresponding points using DLT.
+    
+        Args:
+            points_src: coordinates of quadrangle vertices in the source image with shape (B, 4, 2).
+            points_dst: coordinates of the corresponding quadrangle vertices in the destination image with shape (B, 4, 2).
+    
+        Returns:
+            The perspective transformation with shape (B, 3, 3).
+        """
+        if points_src.shape != points_dst.shape or points_src.shape[1:] != (4, 2):
+            raise ValueError('Input points must have shape (B, 4, 2)')
+        B = points_src.shape[0]
+        A = torch.zeros((B, 8, 9), dtype=points_src.dtype, device=points_src.device)
+        for i in range(4):
+            X, Y = (points_src[:, i, 0], points_src[:, i, 1])
+            x, y = (points_dst[:, i, 0], points_dst[:, i, 1])
+            A[:, 2 * i, 0:3] = torch.stack([X, Y, torch.ones_like(X)], dim=1)
+            A[:, 2 * i, 6:9] = torch.stack([-x * X, -x * Y, -x], dim=1)
+            A[:, 2 * i + 1, 3:6] = torch.stack([X, Y, torch.ones_like(X)], dim=1)
+            A[:, 2 * i + 1, 6:9] = torch.stack([-y * X, -y * Y, -y], dim=1)
+        U, S, V = torch.svd(A)
+>       H = V[:, -1].reshape(B, 3, 3)
+E       RuntimeError: shape '[1, 3, 3]' is invalid for input of size 8
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/temp.py:36: RuntimeError
+_____________ TestGetPerspectiveTransform.test_hflip[cpu-float32] ______________
+
+self = <test_imgwarp.TestGetPerspectiveTransform object at 0x7a2f15d1ff10>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_hflip(self, device, dtype):
+        points_src = torch.tensor([[[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.0, 1.0]]], device=device, dtype=dtype)
+    
+        points_dst = torch.tensor([[[1.0, 0.0], [0.0, 0.0], [0.0, 1.0], [1.0, 1.0]]], device=device, dtype=dtype)
+    
+>       dst_trans_src = kornia.geometry.get_perspective_transform(points_src, points_dst)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py:79: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/imgwarp.py:186: in get_perspective_transform
+    return get_perspective_transform(points_src, points_dst)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+points_src = tensor([[[0., 0.],
+         [1., 0.],
+         [1., 1.],
+         [0., 1.]]])
+points_dst = tensor([[[1., 0.],
+         [0., 0.],
+         [0., 1.],
+         [1., 1.]]])
+
+    def get_perspective_transform(points_src, points_dst):
+        """
+        Calculate a perspective transform from four pairs of the corresponding points using DLT.
+    
+        Args:
+            points_src: coordinates of quadrangle vertices in the source image with shape (B, 4, 2).
+            points_dst: coordinates of the corresponding quadrangle vertices in the destination image with shape (B, 4, 2).
+    
+        Returns:
+            The perspective transformation with shape (B, 3, 3).
+        """
+        if points_src.shape != points_dst.shape or points_src.shape[1:] != (4, 2):
+            raise ValueError('Input points must have shape (B, 4, 2)')
+        B = points_src.shape[0]
+        A = torch.zeros((B, 8, 9), dtype=points_src.dtype, device=points_src.device)
+        for i in range(4):
+            X, Y = (points_src[:, i, 0], points_src[:, i, 1])
+            x, y = (points_dst[:, i, 0], points_dst[:, i, 1])
+            A[:, 2 * i, 0:3] = torch.stack([X, Y, torch.ones_like(X)], dim=1)
+            A[:, 2 * i, 6:9] = torch.stack([-x * X, -x * Y, -x], dim=1)
+            A[:, 2 * i + 1, 3:6] = torch.stack([X, Y, torch.ones_like(X)], dim=1)
+            A[:, 2 * i + 1, 6:9] = torch.stack([-y * X, -y * Y, -y], dim=1)
+        U, S, V = torch.svd(A)
+>       H = V[:, -1].reshape(B, 3, 3)
+E       RuntimeError: shape '[1, 3, 3]' is invalid for input of size 8
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/temp.py:36: RuntimeError
+________ TestGetPerspectiveTransform.test_dynamo[cpu-float32-inductor] _________
+
+self = <test_imgwarp.TestGetPerspectiveTransform object at 0x7a2f15d54340>
+device = device(type='cpu'), dtype = torch.float32
+torch_optimizer = functools.partial(<function compile at 0x7a2feb1132e0>, backend='inductor')
+
+    def test_dynamo(self, device, dtype, torch_optimizer):
+        points_src = torch.rand(1, 4, 2, device=device, dtype=dtype)
+        points_dst = torch.rand(1, 4, 2, device=device, dtype=dtype)
+    
+        op = kornia.geometry.get_perspective_transform
+        op_optimized = torch_optimizer(op)
+    
+>       self.assert_close(op(points_src, points_dst), op_optimized(points_src, points_dst))
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/imgwarp.py:186: in get_perspective_transform
+    return get_perspective_transform(points_src, points_dst)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+points_src = tensor([[[0.4887, 0.5319],
+         [0.3409, 0.1290],
+         [0.2164, 0.5087],
+         [0.9945, 0.2573]]])
+points_dst = tensor([[[0.7673, 0.2477],
+         [0.0805, 0.3463],
+         [0.3434, 0.3261],
+         [0.7000, 0.2707]]])
+
+    def get_perspective_transform(points_src, points_dst):
+        """
+        Calculate a perspective transform from four pairs of the corresponding points using DLT.
+    
+        Args:
+            points_src: coordinates of quadrangle vertices in the source image with shape (B, 4, 2).
+            points_dst: coordinates of the corresponding quadrangle vertices in the destination image with shape (B, 4, 2).
+    
+        Returns:
+            The perspective transformation with shape (B, 3, 3).
+        """
+        if points_src.shape != points_dst.shape or points_src.shape[1:] != (4, 2):
+            raise ValueError('Input points must have shape (B, 4, 2)')
+        B = points_src.shape[0]
+        A = torch.zeros((B, 8, 9), dtype=points_src.dtype, device=points_src.device)
+        for i in range(4):
+            X, Y = (points_src[:, i, 0], points_src[:, i, 1])
+            x, y = (points_dst[:, i, 0], points_dst[:, i, 1])
+            A[:, 2 * i, 0:3] = torch.stack([X, Y, torch.ones_like(X)], dim=1)
+            A[:, 2 * i, 6:9] = torch.stack([-x * X, -x * Y, -x], dim=1)
+            A[:, 2 * i + 1, 3:6] = torch.stack([X, Y, torch.ones_like(X)], dim=1)
+            A[:, 2 * i + 1, 6:9] = torch.stack([-y * X, -y * Y, -y], dim=1)
+        U, S, V = torch.svd(A)
+>       H = V[:, -1].reshape(B, 3, 3)
+E       RuntimeError: shape '[1, 3, 3]' is invalid for input of size 8
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/temp.py:36: RuntimeError
+_______________ TestGetPerspectiveTransform.test_gradcheck[cpu] ________________
+
+self = <test_imgwarp.TestGetPerspectiveTransform object at 0x7a2f15d545e0>
+device = device(type='cpu')
+
+    @pytest.mark.skipif(torch_version_lt(1, 11, 0), reason="backward for LSTSQ not supported in pytorch < 1.11.0")
+    def test_gradcheck(self, device):
+        # compute gradient check
+        points_src = torch.rand(1, 4, 2, device=device, dtype=torch.float64, requires_grad=True)
+        points_dst = torch.rand(1, 4, 2, device=device, dtype=torch.float64, requires_grad=True)
+>       self.gradcheck(kornia.geometry.get_perspective_transform, (points_src, points_dst))
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py:100: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:143: in gradcheck
+    return gradcheck(func, inputs, raise_exception=raise_exception, fast_mode=fast_mode, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2052: in gradcheck
+    return _gradcheck_helper(**args)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2074: in _gradcheck_helper
+    func_out = func(*tupled_inputs)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/imgwarp.py:186: in get_perspective_transform
+    return get_perspective_transform(points_src, points_dst)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+points_src = tensor([[[0.6589, 0.3674],
+         [0.2661, 0.9621],
+         [0.3532, 0.8725],
+         [0.5905, 0.2529]]], dtype=torch.float64, requires_grad=True)
+points_dst = tensor([[[0.3009, 0.1472],
+         [0.0079, 0.3760],
+         [0.5928, 0.3071],
+         [0.7592, 0.3196]]], dtype=torch.float64, requires_grad=True)
+
+    def get_perspective_transform(points_src, points_dst):
+        """
+        Calculate a perspective transform from four pairs of the corresponding points using DLT.
+    
+        Args:
+            points_src: coordinates of quadrangle vertices in the source image with shape (B, 4, 2).
+            points_dst: coordinates of the corresponding quadrangle vertices in the destination image with shape (B, 4, 2).
+    
+        Returns:
+            The perspective transformation with shape (B, 3, 3).
+        """
+        if points_src.shape != points_dst.shape or points_src.shape[1:] != (4, 2):
+            raise ValueError('Input points must have shape (B, 4, 2)')
+        B = points_src.shape[0]
+        A = torch.zeros((B, 8, 9), dtype=points_src.dtype, device=points_src.device)
+        for i in range(4):
+            X, Y = (points_src[:, i, 0], points_src[:, i, 1])
+            x, y = (points_dst[:, i, 0], points_dst[:, i, 1])
+            A[:, 2 * i, 0:3] = torch.stack([X, Y, torch.ones_like(X)], dim=1)
+            A[:, 2 * i, 6:9] = torch.stack([-x * X, -x * Y, -x], dim=1)
+            A[:, 2 * i + 1, 3:6] = torch.stack([X, Y, torch.ones_like(X)], dim=1)
+            A[:, 2 * i + 1, 6:9] = torch.stack([-y * X, -y * Y, -y], dim=1)
+        U, S, V = torch.svd(A)
+>       H = V[:, -1].reshape(B, 3, 3)
+E       RuntimeError: shape '[1, 3, 3]' is invalid for input of size 8
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/transform/temp.py:36: RuntimeError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_smoke[cpu-float32-1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_smoke[cpu-float32-2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_smoke[cpu-float32-5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_back_and_forth[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_hflip[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_dynamo[cpu-float32-inductor]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_gradcheck[cpu]
+========================= 7 failed, 2 passed in 0.44s ==========================
+
+
+Final Test Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'jit', 'openxla', 'inductor', 'cudagraphs', 'onnxrt', 'tvm', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 9 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_smoke[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_smoke[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_smoke[cpu-float32-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_crop_src_dst_type_mismatch[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_crop_src_dst_type_mismatch[cpu-float32-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_back_and_forth[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_hflip[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_dynamo[cpu-float32-inductor] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_gradcheck[cpu] PASSED
+
+============================== 9 passed in 2.18s ===============================
+
+
+Initial Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'tvm', 'cudagraphs', 'jit', 'inductor', 'onnxrt', 'openxla', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 9 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_smoke[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_smoke[cpu-float32-2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_smoke[cpu-float32-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_crop_src_dst_type_mismatch[cpu-float32-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_crop_src_dst_type_mismatch[cpu-float32-5] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_back_and_forth[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_hflip[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_dynamo[cpu-float32-inductor] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/transform/test_imgwarp.py::TestGetPerspectiveTransform::test_gradcheck[cpu] PASSED
+
+============================== 9 passed in 2.20s ===============================

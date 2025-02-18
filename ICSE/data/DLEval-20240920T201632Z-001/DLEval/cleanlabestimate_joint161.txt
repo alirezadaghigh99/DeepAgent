@@ -1,0 +1,23 @@
+stage: Evaluating&Metrics
+task: 
+data: Table
+
+prompt:
+Generate a Python function called estimate_joint that estimates the joint distribution of label noise P(label=i, true_label=j) based on the given inputs. The function takes in the following parameters:
+
+- labels: an array or list of class labels for each example in the dataset
+- pred_probs: an array of model-predicted class probabilities for each example in the dataset
+- confident_joint: an optional array of estimated class label error statistics
+- multi_label: a boolean indicating whether the dataset is for regular (multi-class) classification or multi-label classification
+
+The function returns confident_joint_distribution, an array representing an estimate of the true joint distribution of noisy and true labels. The shape of the array depends on the value of multi_label - it will be (K, K) if multi_label is False, and (K, 2, 2) if multi_label is True. The function ensures that the sum of the joint distribution is 1 and satisfies certain conditions.
+
+The function internally computes the confident_joint if it is not provided, and calibrates it based on the input labels and pred_probs. If multi_label is True, the function calls _estimate_joint_multilabel to handle multi-label classification.
+
+ ground Truth:cleanlab/count.py
+
+ repo:cleanlab
+
+ function:estimate_joint
+ 
+ test_cases:tests/test_filter_count.py

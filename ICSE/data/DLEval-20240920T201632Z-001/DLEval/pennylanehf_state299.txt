@@ -1,0 +1,24 @@
+stage: Model Construction
+task: 
+data: 
+
+prompt:
+This function hf_state generates the Hartree-Fock (HF) state vector for a given number of electrons and orbitals in different basis representations.
+
+Inputs:
+electrons: Number of active electrons. Must be greater than zero and less than or equal to the number of orbitals.
+orbitals: Number of spin orbitals.
+basis: The basis in which the HF state is represented. Options are "occupation_number", "parity", and "bravyi_kitaev".
+Outputs:
+Returns a NumPy array representing the HF state vector in the specified basis.
+Error Handling:
+Raises a ValueError if the number of electrons is less than or equal to zero.
+Raises a ValueError if the number of electrons exceeds the number of orbitals.
+
+ ground Truth:pennylane/qchem/structure.py
+
+ repo:pennylane
+
+ function:hf_state
+ 
+ test_cases:tests/qchem/test_structure.py::test_hf_state

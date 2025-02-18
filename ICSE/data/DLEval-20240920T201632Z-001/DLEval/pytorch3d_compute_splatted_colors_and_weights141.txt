@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: Segmentation
+data: Image
+
+prompt:
+Generate a Python function called _compute_splatted_colors_and_weights that accumulates splatted colors in background, surface, and foreground occlusion buffers. The function takes in two arguments: occlusion_layers, a tensor of shape (N, H, W, 9), and splat_colors_and_weights, a tensor of shape (N, H, W, K, 9, 5). The function returns a tuple of two tensors: splatted_colors, a tensor of shape (N, H, W, 4, 3) representing background, surface, and foreground splat colors, and splatted_weights, a tensor of shape (N, H, W, 1, 3) representing background, surface, and foreground splat weights used for normalization.
+
+ ground Truth:pytorch3d/renderer/splatter_blend.py
+
+ repo:pytorch3d
+
+ function:_compute_splatted_colors_and_weights
+ 
+ test_cases:tests/test_splatter_blend.py

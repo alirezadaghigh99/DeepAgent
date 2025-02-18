@@ -1,0 +1,240 @@
+output file:
+processed_classes-torchgeoforward25.json
+function:
+forward
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_rcf.py::TestRCF::test_in_channels FAILED [ 14%]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_rcf.py::TestRCF::test_num_features', '../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_rcf.py::TestRCF::test_num_features FAILED [ 28%]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_rcf.py::TestRCF::test_in_channels'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/torchgeo/torchgeo/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/torchgeo/torchgeo
+configfile: pyproject.toml
+plugins: hydra-core-1.3.2
+collecting ... collected 7 items
+
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_rcf.py::TestRCF::test_in_channels FAILED [ 14%]
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_rcf.py::TestRCF::test_num_features FAILED [ 28%]
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_rcf.py::TestRCF::test_untrainable PASSED [ 42%]
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_rcf.py::TestRCF::test_biases PASSED [ 57%]
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_rcf.py::TestRCF::test_seed PASSED [ 71%]
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_rcf.py::TestRCF::test_empirical FAILED [ 85%]
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_rcf.py::TestRCF::test_empirical_no_dataset PASSED [100%]
+
+=================================== FAILURES ===================================
+___________________________ TestRCF.test_in_channels ___________________________
+
+self = <tests.models.test_rcf.TestRCF object at 0x78989106c510>
+
+    def test_in_channels(self) -> None:
+        model = RCF(in_channels=5, features=4, kernel_size=3, mode='gaussian')
+        x = torch.randn(2, 5, 64, 64)
+>       model(x)
+
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_rcf.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/venv/lib/python3.11/site-packages/torch/nn/modules/module.py:1736: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/venv/lib/python3.11/site-packages/torch/nn/modules/module.py:1747: in _call_impl
+    return forward_call(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = RCF()
+x = tensor([[[[ 4.0605e-01, -1.1452e+00, -1.1397e+00,  ..., -2.1470e+00,
+            9.2103e-01,  1.5840e+00],
+          [...527e-01],
+          [ 1.8664e+00, -5.5733e-01, -1.1055e-02,  ..., -8.4038e-03,
+           -3.8178e-01, -7.6683e-01]]]])
+
+    def forward(self, x: Tensor) -> Tensor:
+>       out1 = F.conv2d(x, self.weights[0], self.biases[0], padding=1)
+E       RuntimeError: expected stride to be a single integer value or a list of 1 values to match the convolution dimensions, but got stride=[1, 1]
+
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/torchgeo/models/rcf.py:109: RuntimeError
+__________________________ TestRCF.test_num_features ___________________________
+
+self = <tests.models.test_rcf.TestRCF object at 0x78989120f110>
+
+    def test_num_features(self) -> None:
+        model = RCF(in_channels=5, features=4, kernel_size=3, mode='gaussian')
+        x = torch.randn(2, 5, 64, 64)
+>       y = model(x)
+
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_rcf.py:27: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/venv/lib/python3.11/site-packages/torch/nn/modules/module.py:1736: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/venv/lib/python3.11/site-packages/torch/nn/modules/module.py:1747: in _call_impl
+    return forward_call(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = RCF()
+x = tensor([[[[ 1.1755e+00,  2.4620e-01, -6.0155e-01,  ...,  1.1537e+00,
+            1.9118e+00, -7.0456e-01],
+          [...265e-01],
+          [-1.9654e+00, -6.4113e-01, -9.7082e-01,  ...,  1.8264e+00,
+           -4.9755e-01,  1.4082e+00]]]])
+
+    def forward(self, x: Tensor) -> Tensor:
+>       out1 = F.conv2d(x, self.weights[0], self.biases[0], padding=1)
+E       RuntimeError: expected stride to be a single integer value or a list of 1 values to match the convolution dimensions, but got stride=[1, 1]
+
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/torchgeo/models/rcf.py:109: RuntimeError
+____________________________ TestRCF.test_empirical ____________________________
+
+self = <tests.models.test_rcf.TestRCF object at 0x7898901387d0>
+
+    def test_empirical(self) -> None:
+        root = os.path.join('tests', 'data', 'eurosat')
+>       ds = EuroSAT(root=root, bands=EuroSAT.rgb_bands, split='train')
+
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_rcf.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/torchgeo/datasets/eurosat.py:141: in __init__
+    self._verify()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <[AttributeError("'EuroSAT' object has no attribute 'imgs'") raised in repr()] EuroSAT object at 0x78989106c750>
+
+    def _verify(self) -> None:
+        """Verify the integrity of the dataset."""
+        # Check if the files already exist
+        filepath = os.path.join(self.root, self.base_dir)
+        if os.path.exists(filepath):
+            return
+    
+        # Check if zip file already exists (if so then extract)
+        if self._check_integrity():
+            self._extract()
+            return
+    
+        # Check if the user requested to download the dataset
+        if not self.download:
+>           raise DatasetNotFoundError(self)
+E           torchgeo.datasets.errors.DatasetNotFoundError: Dataset not found in `root='tests/data/eurosat'` and `download=False`, either specify a different `root` or use `download=True` to automatically download the dataset.
+
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/torchgeo/datasets/eurosat.py:201: DatasetNotFoundError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_rcf.py::TestRCF::test_in_channels
+FAILED ../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_rcf.py::TestRCF::test_num_features
+FAILED ../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_rcf.py::TestRCF::test_empirical
+========================= 3 failed, 4 passed in 1.49s ==========================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/torchgeo/torchgeo/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/torchgeo/torchgeo
+configfile: pyproject.toml
+plugins: hydra-core-1.3.2
+collecting ... collected 7 items
+
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_rcf.py::TestRCF::test_in_channels PASSED [ 14%]
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_rcf.py::TestRCF::test_num_features PASSED [ 28%]
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_rcf.py::TestRCF::test_untrainable PASSED [ 42%]
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_rcf.py::TestRCF::test_biases PASSED [ 57%]
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_rcf.py::TestRCF::test_seed PASSED [ 71%]
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_rcf.py::TestRCF::test_empirical FAILED [ 85%]
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_rcf.py::TestRCF::test_empirical_no_dataset PASSED [100%]
+
+=================================== FAILURES ===================================
+____________________________ TestRCF.test_empirical ____________________________
+
+self = <tests.models.test_rcf.TestRCF object at 0x7c7eefb414d0>
+
+    def test_empirical(self) -> None:
+        root = os.path.join('tests', 'data', 'eurosat')
+>       ds = EuroSAT(root=root, bands=EuroSAT.rgb_bands, split='train')
+
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_rcf.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/torchgeo/datasets/eurosat.py:141: in __init__
+    self._verify()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <[AttributeError("'EuroSAT' object has no attribute 'imgs'") raised in repr()] EuroSAT object at 0x7c7eefb539d0>
+
+    def _verify(self) -> None:
+        """Verify the integrity of the dataset."""
+        # Check if the files already exist
+        filepath = os.path.join(self.root, self.base_dir)
+        if os.path.exists(filepath):
+            return
+    
+        # Check if zip file already exists (if so then extract)
+        if self._check_integrity():
+            self._extract()
+            return
+    
+        # Check if the user requested to download the dataset
+        if not self.download:
+>           raise DatasetNotFoundError(self)
+E           torchgeo.datasets.errors.DatasetNotFoundError: Dataset not found in `root='tests/data/eurosat'` and `download=False`, either specify a different `root` or use `download=True` to automatically download the dataset.
+
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/torchgeo/datasets/eurosat.py:201: DatasetNotFoundError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_rcf.py::TestRCF::test_empirical
+========================= 1 failed, 6 passed in 1.44s ==========================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/torchgeo/torchgeo/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/torchgeo/torchgeo
+configfile: pyproject.toml
+plugins: hydra-core-1.3.2
+collecting ... collected 7 items
+
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_rcf.py::TestRCF::test_in_channels PASSED [ 14%]
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_rcf.py::TestRCF::test_num_features PASSED [ 28%]
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_rcf.py::TestRCF::test_untrainable PASSED [ 42%]
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_rcf.py::TestRCF::test_biases PASSED [ 57%]
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_rcf.py::TestRCF::test_seed PASSED [ 71%]
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_rcf.py::TestRCF::test_empirical FAILED [ 85%]
+../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_rcf.py::TestRCF::test_empirical_no_dataset PASSED [100%]
+
+=================================== FAILURES ===================================
+____________________________ TestRCF.test_empirical ____________________________
+
+self = <tests.models.test_rcf.TestRCF object at 0x79a18492f750>
+
+    def test_empirical(self) -> None:
+        root = os.path.join('tests', 'data', 'eurosat')
+>       ds = EuroSAT(root=root, bands=EuroSAT.rgb_bands, split='train')
+
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_rcf.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/torchgeo/datasets/eurosat.py:141: in __init__
+    self._verify()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <[AttributeError("'EuroSAT' object has no attribute 'imgs'") raised in repr()] EuroSAT object at 0x79a18494b310>
+
+    def _verify(self) -> None:
+        """Verify the integrity of the dataset."""
+        # Check if the files already exist
+        filepath = os.path.join(self.root, self.base_dir)
+        if os.path.exists(filepath):
+            return
+    
+        # Check if zip file already exists (if so then extract)
+        if self._check_integrity():
+            self._extract()
+            return
+    
+        # Check if the user requested to download the dataset
+        if not self.download:
+>           raise DatasetNotFoundError(self)
+E           torchgeo.datasets.errors.DatasetNotFoundError: Dataset not found in `root='tests/data/eurosat'` and `download=False`, either specify a different `root` or use `download=True` to automatically download the dataset.
+
+/local/data0/moved_data/publishablew/torchgeo/torchgeo/torchgeo/datasets/eurosat.py:201: DatasetNotFoundError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/torchgeo/torchgeo/tests/models/test_rcf.py::TestRCF::test_empirical
+========================= 1 failed, 6 passed in 1.43s ==========================

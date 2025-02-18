@@ -1,0 +1,15 @@
+stage: Inference
+task: prediction
+data: Table
+
+prompt:
+Generate a Python function maximum_weight_matching that takes logits as a tensor and returns a tensor of optimal assignments based on a maximum-weight matching. The function performs a matching process and returns the best assignment for each element in the input without computing gradients.
+
+ ground Truth:pyro/distributions/one_two_matching.py
+
+ repo:pyro
+
+ function:maximum_weight_matching
+ 
+ test_cases:tests/distributions/test_one_two_matching.py::test_mode_phylo
+

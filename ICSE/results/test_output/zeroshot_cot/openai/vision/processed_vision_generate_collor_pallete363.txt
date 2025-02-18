@@ -1,0 +1,501 @@
+output file:
+processed_vision_generate_collor_pallete363.json
+function:
+_generate_color_palette
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_warning FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_dtypes[True]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks_dtypes', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks_dtypes FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_dtypes[False]', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_dtypes[False] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_warning', '../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_dtypes[True] FAILED'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/vision/vision/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/vision/vision
+configfile: pytest.ini
+plugins: mock-3.14.0
+collecting ... collected 92 items
+
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_make_grid_not_inplace PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_normalize_in_make_grid PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_save_image PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_save_image_single_pixel PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_save_image_file_object PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_save_image_single_pixel_file_object PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_with_coloured_labels PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_dtypes[True] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_dtypes[False] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_colors[None] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_colors[colors1] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_colors[red] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_colors[#FF00FF] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_colors[colors4] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_vanilla PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_grayscale PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_invalid_boxes PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_warning FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_no_boxes PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0-None] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0-blue] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0-#FF00FF] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0-colors3] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0-colors4] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0-colors5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.5-None] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.5-blue] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.5-#FF00FF] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.5-colors3] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.5-colors4] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.5-colors5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.7-None] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.7-blue] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.7-#FF00FF] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.7-colors3] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.7-colors4] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.7-colors5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-1-None] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-1-blue] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-1-#FF00FF] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-1-colors3] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-1-colors4] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-1-colors5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0-None] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0-blue] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0-#FF00FF] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0-colors3] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0-colors4] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0-colors5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.5-None] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.5-blue] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.5-#FF00FF] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.5-colors3] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.5-colors4] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.5-colors5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.7-None] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.7-blue] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.7-#FF00FF] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.7-colors3] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.7-colors4] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.7-colors5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-1-None] FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-1-blue] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-1-#FF00FF] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-1-colors3] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-1-colors4] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-1-colors5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks_dtypes FAILED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks_errors[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks_errors[cuda] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_no_segmention_mask[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_no_segmention_mask[cuda] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoints_vanilla PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoins_K_equals_one PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoints_colored[red] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoints_colored[#FF00FF] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoints_colored[colors2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoints_visibility[vis0-connectivity0] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoints_visibility[vis0-connectivity1] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoints_visibility[vis1-connectivity0] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoints_visibility[vis1-connectivity1] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoints_visibility_default PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoints_dtypes PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoints_errors PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_flow_to_image[True] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_flow_to_image[False] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_flow_to_image_errors[input_flow0-Input flow should have shape] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_flow_to_image_errors[input_flow1-Input flow should have shape] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_flow_to_image_errors[input_flow2-Input flow should have shape] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_flow_to_image_errors[input_flow3-Input flow should have shape] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_flow_to_image_errors[input_flow4-Flow should be of dtype torch.float] PASSED
+
+=================================== FAILURES ===================================
+_________________________ test_draw_boxes_dtypes[True] _________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_utils.py:137: in test_draw_boxes_dtypes
+    out_uint8 = utils.draw_bounding_boxes(img_uint8, boxes, fill=fill)
+/local/data0/moved_data/publishablew/vision/vision/venv/lib/python3.11/site-packages/torch/utils/_contextlib.py:116: in decorate_context
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:164: in draw_bounding_boxes
+    colors = _parse_colors(colors, num_objects=num_boxes)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:462: in _parse_colors
+    colors = _generate_color_palette(num_objects)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:432: in _generate_color_palette
+    from .temp import _generate_color_palette
+E   ImportError: cannot import name '_generate_color_palette' from 'torchvision.temp' (/local/data0/moved_data/publishablew/vision/vision/torchvision/temp.py)
+________________________ test_draw_boxes_dtypes[False] _________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_utils.py:137: in test_draw_boxes_dtypes
+    out_uint8 = utils.draw_bounding_boxes(img_uint8, boxes, fill=fill)
+/local/data0/moved_data/publishablew/vision/vision/venv/lib/python3.11/site-packages/torch/utils/_contextlib.py:116: in decorate_context
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:164: in draw_bounding_boxes
+    colors = _parse_colors(colors, num_objects=num_boxes)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:462: in _parse_colors
+    colors = _generate_color_palette(num_objects)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:432: in _generate_color_palette
+    from .temp import _generate_color_palette
+E   ImportError: cannot import name '_generate_color_palette' from 'torchvision.temp' (/local/data0/moved_data/publishablew/vision/vision/torchvision/temp.py)
+_________________________ test_draw_boxes_colors[None] _________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_utils.py:154: in test_draw_boxes_colors
+    utils.draw_bounding_boxes(img, boxes, fill=False, width=7, colors=colors)
+/local/data0/moved_data/publishablew/vision/vision/venv/lib/python3.11/site-packages/torch/utils/_contextlib.py:116: in decorate_context
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:164: in draw_bounding_boxes
+    colors = _parse_colors(colors, num_objects=num_boxes)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:462: in _parse_colors
+    colors = _generate_color_palette(num_objects)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:432: in _generate_color_palette
+    from .temp import _generate_color_palette
+E   ImportError: cannot import name '_generate_color_palette' from 'torchvision.temp' (/local/data0/moved_data/publishablew/vision/vision/torchvision/temp.py)
+___________________________ test_draw_boxes_warning ____________________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_utils.py:212: in test_draw_boxes_warning
+    utils.draw_bounding_boxes(img, boxes, font_size=11)
+/local/data0/moved_data/publishablew/vision/vision/venv/lib/python3.11/site-packages/torch/utils/_contextlib.py:116: in decorate_context
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:164: in draw_bounding_boxes
+    colors = _parse_colors(colors, num_objects=num_boxes)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:462: in _parse_colors
+    colors = _generate_color_palette(num_objects)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:432: in _generate_color_palette
+    from .temp import _generate_color_palette
+E   ImportError: cannot import name '_generate_color_palette' from 'torchvision.temp' (/local/data0/moved_data/publishablew/vision/vision/torchvision/temp.py)
+
+During handling of the above exception, another exception occurred:
+/local/data0/moved_data/publishablew/vision/vision/test/test_utils.py:211: in test_draw_boxes_warning
+    with pytest.warns(UserWarning, match=re.escape("Argument 'font_size' will be ignored since 'font' is not set.")):
+E   Failed: DID NOT WARN. No warnings of type (<class 'UserWarning'>,) were emitted.
+E    Emitted warnings: [].
+___________________ test_draw_segmentation_masks[cpu-0-None] ___________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_utils.py:248: in test_draw_segmentation_masks
+    out = utils.draw_segmentation_masks(img, masks, colors=colors, alpha=alpha)
+/local/data0/moved_data/publishablew/vision/vision/venv/lib/python3.11/site-packages/torch/utils/_contextlib.py:116: in decorate_context
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:243: in draw_segmentation_masks
+    colors = [torch.tensor(color, dtype=original_dtype, device=image.device) for color in _parse_colors(colors, num_objects=num_masks, dtype=original_dtype)]
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:462: in _parse_colors
+    colors = _generate_color_palette(num_objects)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:432: in _generate_color_palette
+    from .temp import _generate_color_palette
+E   ImportError: cannot import name '_generate_color_palette' from 'torchvision.temp' (/local/data0/moved_data/publishablew/vision/vision/torchvision/temp.py)
+__________________ test_draw_segmentation_masks[cpu-0.5-None] __________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_utils.py:248: in test_draw_segmentation_masks
+    out = utils.draw_segmentation_masks(img, masks, colors=colors, alpha=alpha)
+/local/data0/moved_data/publishablew/vision/vision/venv/lib/python3.11/site-packages/torch/utils/_contextlib.py:116: in decorate_context
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:243: in draw_segmentation_masks
+    colors = [torch.tensor(color, dtype=original_dtype, device=image.device) for color in _parse_colors(colors, num_objects=num_masks, dtype=original_dtype)]
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:462: in _parse_colors
+    colors = _generate_color_palette(num_objects)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:432: in _generate_color_palette
+    from .temp import _generate_color_palette
+E   ImportError: cannot import name '_generate_color_palette' from 'torchvision.temp' (/local/data0/moved_data/publishablew/vision/vision/torchvision/temp.py)
+__________________ test_draw_segmentation_masks[cpu-0.7-None] __________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_utils.py:248: in test_draw_segmentation_masks
+    out = utils.draw_segmentation_masks(img, masks, colors=colors, alpha=alpha)
+/local/data0/moved_data/publishablew/vision/vision/venv/lib/python3.11/site-packages/torch/utils/_contextlib.py:116: in decorate_context
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:243: in draw_segmentation_masks
+    colors = [torch.tensor(color, dtype=original_dtype, device=image.device) for color in _parse_colors(colors, num_objects=num_masks, dtype=original_dtype)]
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:462: in _parse_colors
+    colors = _generate_color_palette(num_objects)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:432: in _generate_color_palette
+    from .temp import _generate_color_palette
+E   ImportError: cannot import name '_generate_color_palette' from 'torchvision.temp' (/local/data0/moved_data/publishablew/vision/vision/torchvision/temp.py)
+___________________ test_draw_segmentation_masks[cpu-1-None] ___________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_utils.py:248: in test_draw_segmentation_masks
+    out = utils.draw_segmentation_masks(img, masks, colors=colors, alpha=alpha)
+/local/data0/moved_data/publishablew/vision/vision/venv/lib/python3.11/site-packages/torch/utils/_contextlib.py:116: in decorate_context
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:243: in draw_segmentation_masks
+    colors = [torch.tensor(color, dtype=original_dtype, device=image.device) for color in _parse_colors(colors, num_objects=num_masks, dtype=original_dtype)]
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:462: in _parse_colors
+    colors = _generate_color_palette(num_objects)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:432: in _generate_color_palette
+    from .temp import _generate_color_palette
+E   ImportError: cannot import name '_generate_color_palette' from 'torchvision.temp' (/local/data0/moved_data/publishablew/vision/vision/torchvision/temp.py)
+__________________ test_draw_segmentation_masks[cuda-0-None] ___________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_utils.py:248: in test_draw_segmentation_masks
+    out = utils.draw_segmentation_masks(img, masks, colors=colors, alpha=alpha)
+/local/data0/moved_data/publishablew/vision/vision/venv/lib/python3.11/site-packages/torch/utils/_contextlib.py:116: in decorate_context
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:243: in draw_segmentation_masks
+    colors = [torch.tensor(color, dtype=original_dtype, device=image.device) for color in _parse_colors(colors, num_objects=num_masks, dtype=original_dtype)]
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:462: in _parse_colors
+    colors = _generate_color_palette(num_objects)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:432: in _generate_color_palette
+    from .temp import _generate_color_palette
+E   ImportError: cannot import name '_generate_color_palette' from 'torchvision.temp' (/local/data0/moved_data/publishablew/vision/vision/torchvision/temp.py)
+_________________ test_draw_segmentation_masks[cuda-0.5-None] __________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_utils.py:248: in test_draw_segmentation_masks
+    out = utils.draw_segmentation_masks(img, masks, colors=colors, alpha=alpha)
+/local/data0/moved_data/publishablew/vision/vision/venv/lib/python3.11/site-packages/torch/utils/_contextlib.py:116: in decorate_context
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:243: in draw_segmentation_masks
+    colors = [torch.tensor(color, dtype=original_dtype, device=image.device) for color in _parse_colors(colors, num_objects=num_masks, dtype=original_dtype)]
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:462: in _parse_colors
+    colors = _generate_color_palette(num_objects)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:432: in _generate_color_palette
+    from .temp import _generate_color_palette
+E   ImportError: cannot import name '_generate_color_palette' from 'torchvision.temp' (/local/data0/moved_data/publishablew/vision/vision/torchvision/temp.py)
+_________________ test_draw_segmentation_masks[cuda-0.7-None] __________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_utils.py:248: in test_draw_segmentation_masks
+    out = utils.draw_segmentation_masks(img, masks, colors=colors, alpha=alpha)
+/local/data0/moved_data/publishablew/vision/vision/venv/lib/python3.11/site-packages/torch/utils/_contextlib.py:116: in decorate_context
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:243: in draw_segmentation_masks
+    colors = [torch.tensor(color, dtype=original_dtype, device=image.device) for color in _parse_colors(colors, num_objects=num_masks, dtype=original_dtype)]
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:462: in _parse_colors
+    colors = _generate_color_palette(num_objects)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:432: in _generate_color_palette
+    from .temp import _generate_color_palette
+E   ImportError: cannot import name '_generate_color_palette' from 'torchvision.temp' (/local/data0/moved_data/publishablew/vision/vision/torchvision/temp.py)
+__________________ test_draw_segmentation_masks[cuda-1-None] ___________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_utils.py:248: in test_draw_segmentation_masks
+    out = utils.draw_segmentation_masks(img, masks, colors=colors, alpha=alpha)
+/local/data0/moved_data/publishablew/vision/vision/venv/lib/python3.11/site-packages/torch/utils/_contextlib.py:116: in decorate_context
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:243: in draw_segmentation_masks
+    colors = [torch.tensor(color, dtype=original_dtype, device=image.device) for color in _parse_colors(colors, num_objects=num_masks, dtype=original_dtype)]
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:462: in _parse_colors
+    colors = _generate_color_palette(num_objects)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:432: in _generate_color_palette
+    from .temp import _generate_color_palette
+E   ImportError: cannot import name '_generate_color_palette' from 'torchvision.temp' (/local/data0/moved_data/publishablew/vision/vision/torchvision/temp.py)
+_____________________ test_draw_segmentation_masks_dtypes ______________________
+/local/data0/moved_data/publishablew/vision/vision/test/test_utils.py:285: in test_draw_segmentation_masks_dtypes
+    out_uint8 = utils.draw_segmentation_masks(img_uint8, masks)
+/local/data0/moved_data/publishablew/vision/vision/venv/lib/python3.11/site-packages/torch/utils/_contextlib.py:116: in decorate_context
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:243: in draw_segmentation_masks
+    colors = [torch.tensor(color, dtype=original_dtype, device=image.device) for color in _parse_colors(colors, num_objects=num_masks, dtype=original_dtype)]
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:462: in _parse_colors
+    colors = _generate_color_palette(num_objects)
+/local/data0/moved_data/publishablew/vision/vision/torchvision/utils.py:432: in _generate_color_palette
+    from .temp import _generate_color_palette
+E   ImportError: cannot import name '_generate_color_palette' from 'torchvision.temp' (/local/data0/moved_data/publishablew/vision/vision/torchvision/temp.py)
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_dtypes[True]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_dtypes[False]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_colors[None]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_warning
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0-None]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.5-None]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.7-None]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-1-None]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0-None]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.5-None]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.7-None]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-1-None]
+FAILED ../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks_dtypes
+======================== 13 failed, 79 passed in 0.82s =========================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/vision/vision/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/vision/vision
+configfile: pytest.ini
+plugins: mock-3.14.0
+collecting ... collected 92 items
+
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_make_grid_not_inplace PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_normalize_in_make_grid PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_save_image PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_save_image_single_pixel PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_save_image_file_object PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_save_image_single_pixel_file_object PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_with_coloured_labels PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_dtypes[True] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_dtypes[False] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_colors[None] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_colors[colors1] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_colors[red] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_colors[#FF00FF] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_colors[colors4] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_vanilla PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_grayscale PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_invalid_boxes PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_warning PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_no_boxes PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0-None] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0-blue] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0-#FF00FF] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0-colors3] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0-colors4] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0-colors5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.5-None] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.5-blue] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.5-#FF00FF] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.5-colors3] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.5-colors4] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.5-colors5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.7-None] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.7-blue] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.7-#FF00FF] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.7-colors3] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.7-colors4] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.7-colors5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-1-None] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-1-blue] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-1-#FF00FF] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-1-colors3] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-1-colors4] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-1-colors5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0-None] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0-blue] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0-#FF00FF] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0-colors3] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0-colors4] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0-colors5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.5-None] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.5-blue] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.5-#FF00FF] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.5-colors3] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.5-colors4] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.5-colors5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.7-None] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.7-blue] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.7-#FF00FF] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.7-colors3] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.7-colors4] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.7-colors5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-1-None] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-1-blue] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-1-#FF00FF] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-1-colors3] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-1-colors4] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-1-colors5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks_dtypes PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks_errors[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks_errors[cuda] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_no_segmention_mask[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_no_segmention_mask[cuda] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoints_vanilla PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoins_K_equals_one PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoints_colored[red] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoints_colored[#FF00FF] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoints_colored[colors2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoints_visibility[vis0-connectivity0] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoints_visibility[vis0-connectivity1] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoints_visibility[vis1-connectivity0] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoints_visibility[vis1-connectivity1] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoints_visibility_default PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoints_dtypes PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoints_errors PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_flow_to_image[True] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_flow_to_image[False] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_flow_to_image_errors[input_flow0-Input flow should have shape] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_flow_to_image_errors[input_flow1-Input flow should have shape] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_flow_to_image_errors[input_flow2-Input flow should have shape] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_flow_to_image_errors[input_flow3-Input flow should have shape] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_flow_to_image_errors[input_flow4-Flow should be of dtype torch.float] PASSED
+
+============================== 92 passed in 0.56s ==============================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.11.10, pytest-8.3.4, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/vision/vision/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/vision/vision
+configfile: pytest.ini
+plugins: mock-3.14.0
+collecting ... collected 92 items
+
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_make_grid_not_inplace PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_normalize_in_make_grid PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_save_image PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_save_image_single_pixel PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_save_image_file_object PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_save_image_single_pixel_file_object PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_with_coloured_labels PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_dtypes[True] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_dtypes[False] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_colors[None] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_colors[colors1] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_colors[red] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_colors[#FF00FF] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_colors[colors4] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_vanilla PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_grayscale PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_invalid_boxes PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_boxes_warning PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_no_boxes PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0-None] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0-blue] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0-#FF00FF] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0-colors3] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0-colors4] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0-colors5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.5-None] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.5-blue] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.5-#FF00FF] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.5-colors3] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.5-colors4] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.5-colors5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.7-None] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.7-blue] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.7-#FF00FF] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.7-colors3] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.7-colors4] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-0.7-colors5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-1-None] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-1-blue] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-1-#FF00FF] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-1-colors3] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-1-colors4] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cpu-1-colors5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0-None] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0-blue] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0-#FF00FF] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0-colors3] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0-colors4] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0-colors5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.5-None] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.5-blue] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.5-#FF00FF] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.5-colors3] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.5-colors4] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.5-colors5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.7-None] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.7-blue] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.7-#FF00FF] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.7-colors3] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.7-colors4] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-0.7-colors5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-1-None] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-1-blue] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-1-#FF00FF] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-1-colors3] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-1-colors4] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks[cuda-1-colors5] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks_dtypes PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks_errors[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_segmentation_masks_errors[cuda] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_no_segmention_mask[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_no_segmention_mask[cuda] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoints_vanilla PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoins_K_equals_one PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoints_colored[red] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoints_colored[#FF00FF] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoints_colored[colors2] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoints_visibility[vis0-connectivity0] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoints_visibility[vis0-connectivity1] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoints_visibility[vis1-connectivity0] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoints_visibility[vis1-connectivity1] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoints_visibility_default PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoints_dtypes PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_draw_keypoints_errors PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_flow_to_image[True] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_flow_to_image[False] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_flow_to_image_errors[input_flow0-Input flow should have shape] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_flow_to_image_errors[input_flow1-Input flow should have shape] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_flow_to_image_errors[input_flow2-Input flow should have shape] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_flow_to_image_errors[input_flow3-Input flow should have shape] PASSED
+../../../../../../local/data0/moved_data/publishablew/vision/vision/test/test_utils.py::test_flow_to_image_errors[input_flow4-Flow should be of dtype torch.float] PASSED
+
+============================== 92 passed in 0.80s ==============================

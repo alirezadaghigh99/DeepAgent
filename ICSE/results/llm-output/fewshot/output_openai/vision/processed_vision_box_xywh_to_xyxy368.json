@@ -1,0 +1,11 @@
+{
+    "result": "To convert bounding boxes from the (x, y, w, h) format to the (x1, y1, x2, y2) format, you can write a function that takes a tensor of bounding boxes and performs the necessary calculations. Here's a Python function that accomplishes this:\n\n```python\nimport torch\n\ndef _box_xywh_to_xyxy(boxes: torch.Tensor) -> torch.Tensor:\n    \"\"\"\n    Convert bounding boxes from (x, y, w, h) format to (x1, y1, x2, y2) format.\n\n    Args:\n        boxes (Tensor): A tensor of shape (N, 4) where each row represents a bounding box\n                        in the format (x, y, w, h).\n\n    Returns:\n        Tensor: A tensor of shape (N, 4) where each row represents a bounding box\n                in the format (x1, y1, x2, y2).\n    \"\"\"\n    x, y, w, h = boxes.unbind(dim=1)\n    x1 = x\n    y1 = y\n    x2 = x + w\n    y2 = y + h\n    return torch.stack((x1, y1, x2, y2), dim=1)\n```\n\n### Explanation:\n- **Input**: The function takes a tensor `boxes` of shape (N, 4), where each row contains a bounding box in the (x, y, w, h) format.\n- **Output**: It returns a tensor of the same shape (N, 4), where each row contains a bounding box in the (x1, y1, x2, y2) format.\n- **Conversion**:\n  - `x1` and `y1` are the same as `x` and `y`, respectively, since they represent the top-left corner.\n  - `x2` is calculated as `x + w`, and `y2` is calculated as `y + h`, representing the bottom-right corner.\n- **Tensor Operations**: The function uses `torch.unbind` to split the input tensor into individual components and `torch.stack` to combine the converted components back into a tensor.",
+    "prompt": "Write a Python function _box_xywh_to_xyxy that converts bounding boxes from the (x, y, w, h) format, where (x, y) represents the top-left corner and (w, h) represents the width and height, to the (x1, y1, x2, y2) format, where (x1, y1) and (x2, y2) represent the top-left and bottom-right corners. The function should return a tensor with the converted bounding boxes.",
+    "function_name": "_box_xywh_to_xyxy",
+    "ground_truth": "torchvision/ops/_box_convert.py",
+    "test": "test/test_ops.py::TestBoxConvert",
+    "class": "",
+    "stage": "Pre-Post processing",
+    "task": "Detection",
+    "data": "Image"
+}

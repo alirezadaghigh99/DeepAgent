@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: Detection
+data: Image
+
+prompt:
+Write a Python function `draw_point2d` that sets specified `[x, y]` coordinates in an image tensor to a given color. The image can be either grayscale `(H, W)` or multi-channel `(C, H, W)`, and the color tensor must match the image's channels. The function should return the modified image with the points colored.
+
+ ground Truth:kornia/utils/draw.py
+
+ repo:kornia
+
+ function:draw_point2d
+ 
+ test_cases:tests/utils/test_draw.py::TestDrawPoint

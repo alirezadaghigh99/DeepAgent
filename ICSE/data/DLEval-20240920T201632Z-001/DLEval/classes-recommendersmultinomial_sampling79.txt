@@ -1,0 +1,25 @@
+stage: 
+task: Recommendation
+data: pre-post process
+
+prompt:
+
+Generate a Python function `multinomial_sampling` for the class `RBM` that performs multinomial sampling of ratings using a rejection method. The function should take as input a tensor `pr` of shape `(m, n, r)`, representing the distribution of ratings, where `m` is the number of examples, `n` is the number of features, and `r` is the number of classes (ratings).  The function should return an `(m, n)` tf.tensor of sampled ratings, where each rating is determined by looking up the integer index of the maximum value in the sampled tensor.
+```python
+class RBM:
+    def __init__(self, possible_ratings, visible_units, hidden_units=500, keep_prob=0.7, init_stdv=0.1, learning_rate=0.004, minibatch_size=100, training_epoch=20, display_epoch=10, sampling_protocol=[50, 70, 80, 90, 100], debug=False, with_metrics=False, seed=42):
+        pass
+
+    def multinomial_sampling(self, pr):
+        # Implement the function as described in the prompt
+```
+
+ ground Truth:recommenders/models/rbm/rbm.py
+
+ repo:recommenders
+
+ function:multinomial_sampling
+ 
+ class:RBM
+ 
+  test_cases:tests/unit/recommenders/models/test_rbm.py

@@ -1,0 +1,18 @@
+stage: Model Construction
+task: 
+data: 
+
+prompt:
+Generate a Python function called einsum that implements the Einstein summation convention for multi-dimensional linear algebraic array operations. The function takes in an equation string and a variable number of operands (tensors) and computes the sum of the product of the elements of the operands along dimensions specified in the equation. The output is a tensor.
+
+The equation string specifies the subscripts for each dimension of the operands, with optional output subscripts defined using an arrow ('->'). The function supports broadcasting, ellipsis ('...') for dimensions, and sublist format for subscripts. It uses opt_einsum for optimized contraction order when there are at least three inputs. 
+
+Examples of using the einsum function include computing matrix multiplication, diagonal, outer product, batch matrix multiplication, batch permute, and equivalent operations to torch.nn.functional.bilinear.
+
+ ground Truth:torch/functional.py
+
+ repo:pytorch
+
+ function:einsum
+ 
+ test_cases:test/torch_np/numpy_tests/core/test_einsum.py

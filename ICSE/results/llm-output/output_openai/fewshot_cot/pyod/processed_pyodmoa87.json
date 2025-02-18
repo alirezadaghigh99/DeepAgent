@@ -1,0 +1,11 @@
+{
+    "result": "Error",
+    "prompt": "Generate a Python function called moa that implements the Maximization of Average ensemble method for combining multiple estimators. The function takes in the following parameters:\n\n1. scores: a numpy array of shape (n_samples, n_estimators) representing the score matrix outputted from various estimators\n2. n_buckets: an integer specifying the number of subgroups to build (default value is 5)\n3. method: a string specifying the method to build subgroups ('static' or 'dynamic', default value is 'static')\n4. bootstrap_estimators: a boolean indicating whether estimators are drawn with replacement (default value is False)\n5. random_state: an integer, RandomState instance, or None specifying the seed for the random number generator (default value is None)\n\nThe function returns a numpy array called combined_scores of shape (n_samples,) representing the combined outlier scores. The function internally calls another function called combo_moa with the specified parameters.",
+    "function_name": "moa",
+    "ground_truth": "pyod/models/combination.py",
+    "test": "pyod/test/test_combination.py::TestMOA",
+    "class": "",
+    "stage": "Model Construction",
+    "task": "",
+    "data": "Table"
+}

@@ -1,0 +1,962 @@
+output file:
+processed_scikit-learnmake_scorer153.json
+function:
+make_scorer
+Error Cases:
+
+Pass or Failed: 1
+
+Related Failed Test Cases:
+set()
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.9.0, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/scikit-learn/scikit-learn
+configfile: setup.cfg
+plugins: cov-6.0.0
+collecting ... collected 0 items / 2 errors
+
+==================================== ERRORS ====================================
+_________ ERROR collecting sklearn/metrics/tests/test_score_objects.py _________
+/usr/local/lib/python3.9/importlib/__init__.py:127: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1030: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1007: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:972: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:228: in _call_with_frames_removed
+    ???
+<frozen importlib._bootstrap>:1030: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1007: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:972: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:228: in _call_with_frames_removed
+    ???
+<frozen importlib._bootstrap>:1030: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1007: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:986: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:680: in _load_unlocked
+    ???
+<frozen importlib._bootstrap_external>:790: in exec_module
+    ???
+<frozen importlib._bootstrap>:228: in _call_with_frames_removed
+    ???
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/__init__.py:68: in <module>
+    from ._scorer import check_scoring, get_scorer, get_scorer_names, make_scorer
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/_scorer.py:521: in <module>
+    max_error_scorer._deprecation_msg = deprecation_msg
+E   AttributeError: 'NoneType' object has no attribute '_deprecation_msg'
+_________ ERROR collecting sklearn/metrics/tests/test_score_objects.py _________
+/usr/local/lib/python3.9/importlib/__init__.py:127: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1030: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1007: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:972: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:228: in _call_with_frames_removed
+    ???
+<frozen importlib._bootstrap>:1030: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1007: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:972: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:228: in _call_with_frames_removed
+    ???
+<frozen importlib._bootstrap>:1030: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1007: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:986: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:680: in _load_unlocked
+    ???
+<frozen importlib._bootstrap_external>:790: in exec_module
+    ???
+<frozen importlib._bootstrap>:228: in _call_with_frames_removed
+    ???
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/__init__.py:68: in <module>
+    from ._scorer import check_scoring, get_scorer, get_scorer_names, make_scorer
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/_scorer.py:521: in <module>
+    max_error_scorer._deprecation_msg = deprecation_msg
+E   AttributeError: 'NoneType' object has no attribute '_deprecation_msg'
+=========================== short test summary info ============================
+ERROR ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py
+ERROR ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 2 errors during collection !!!!!!!!!!!!!!!!!!!!
+============================== 2 errors in 0.29s ===============================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.9.0, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/scikit-learn/scikit-learn
+configfile: setup.cfg
+plugins: cov-6.0.0
+collecting ... collected 273 items
+
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_all_scorers_repr I: Seeding RNGs with 1086740032
+PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_check_scoring_and_check_multimetric_scoring[single_tuple] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_check_scoring_and_check_multimetric_scoring[single_list] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_check_scoring_and_check_multimetric_scoring[dict_str] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_check_scoring_and_check_multimetric_scoring[multi_tuple] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_check_scoring_and_check_multimetric_scoring[multi_list] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_check_scoring_and_check_multimetric_scoring[dict_callable] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_check_scoring_and_check_multimetric_scoring_errors[tuple of callables] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_check_scoring_and_check_multimetric_scoring_errors[list of int] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_check_scoring_and_check_multimetric_scoring_errors[tuple of one callable] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_check_scoring_and_check_multimetric_scoring_errors[empty tuple] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_check_scoring_and_check_multimetric_scoring_errors[non-unique str] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_check_scoring_and_check_multimetric_scoring_errors[non-string key dict] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_check_scoring_and_check_multimetric_scoring_errors[empty dict] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_check_scoring_gridsearchcv PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[f1-f1_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[f1_weighted-metric1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[f1_macro-metric2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[f1_micro-metric3] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[precision-precision_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[precision_weighted-metric5] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[precision_macro-metric6] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[precision_micro-metric7] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[recall-recall_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[recall_weighted-metric9] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[recall_macro-metric10] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[recall_micro-metric11] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[jaccard-jaccard_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[jaccard_weighted-metric13] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[jaccard_macro-metric14] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[jaccard_micro-metric15] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[top_k_accuracy-top_k_accuracy_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[matthews_corrcoef-matthews_corrcoef] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_multiclass_scores[accuracy-accuracy_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_multiclass_scores[balanced_accuracy-balanced_accuracy_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_multiclass_scores[f1_weighted-metric2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_multiclass_scores[f1_macro-metric3] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_multiclass_scores[f1_micro-metric4] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_multiclass_scores[precision_weighted-metric5] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_multiclass_scores[precision_macro-metric6] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_multiclass_scores[precision_micro-metric7] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_multiclass_scores[recall_weighted-metric8] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_multiclass_scores[recall_macro-metric9] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_multiclass_scores[recall_micro-metric10] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_multiclass_scores[jaccard_weighted-metric11] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_multiclass_scores[jaccard_macro-metric12] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_multiclass_scores[jaccard_micro-metric13] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_custom_scorer_pickling PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_regression_scorers PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_thresholded_scorers PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_thresholded_scorers_multilabel_indicator_data PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_supervised_cluster_scorers FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_raises_on_score_list PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_scorer_sample_weight PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_regression_scorer_sample_weight PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[accuracy] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[adjusted_mutual_info_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[adjusted_rand_score] FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[average_precision] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[balanced_accuracy] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[completeness_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[d2_absolute_error_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[explained_variance] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[f1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[f1_macro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[f1_micro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[f1_samples] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[f1_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[fowlkes_mallows_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[homogeneity_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[jaccard] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[jaccard_macro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[jaccard_micro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[jaccard_samples] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[jaccard_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[matthews_corrcoef] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[mutual_info_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[neg_brier_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[neg_log_loss] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[neg_max_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[neg_mean_absolute_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[neg_mean_absolute_percentage_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[neg_mean_gamma_deviance] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[neg_mean_poisson_deviance] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[neg_mean_squared_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[neg_mean_squared_log_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[neg_median_absolute_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[neg_negative_likelihood_ratio] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[neg_root_mean_squared_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[neg_root_mean_squared_log_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[normalized_mutual_info_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[positive_likelihood_ratio] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[precision] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[precision_macro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[precision_micro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[precision_samples] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[precision_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[r2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[rand_score] FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[recall] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[recall_macro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[recall_micro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[recall_samples] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[recall_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[roc_auc] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[roc_auc_ovo] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[roc_auc_ovo_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[roc_auc_ovr] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[roc_auc_ovr_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[top_k_accuracy] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[v_measure_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scoring_is_not_metric PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_deprecated_scorer PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multimetric_scorer_calls_method_once[scorers0-1-1-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multimetric_scorer_calls_method_once[scorers1-1-0-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multimetric_scorer_calls_method_once[scorers2-1-1-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multimetric_scorer_calls_method_once_classifier_no_decision[scorers0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multimetric_scorer_calls_method_once_classifier_no_decision[scorers1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multimetric_scorer_calls_method_once_regressor_threshold PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multimetric_scorer_sanity_check PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multimetric_scorer_exception_handling[True] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multimetric_scorer_exception_handling[False] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multiclass_roc_proba_scorer[roc_auc_ovr-metric0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multiclass_roc_proba_scorer[roc_auc_ovo-metric1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multiclass_roc_proba_scorer[roc_auc_ovr_weighted-metric2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multiclass_roc_proba_scorer[roc_auc_ovo_weighted-metric3] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multiclass_roc_proba_scorer_label PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multiclass_roc_no_proba_scorer_errors[roc_auc_ovr] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multiclass_roc_no_proba_scorer_errors[roc_auc_ovo] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multiclass_roc_no_proba_scorer_errors[roc_auc_ovr_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multiclass_roc_no_proba_scorer_errors[roc_auc_ovo_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_average_precision_pos_label PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_brier_score_loss_pos_label PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_non_symmetric_metric_pos_label[f1_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_non_symmetric_metric_pos_label[precision_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_non_symmetric_metric_pos_label[recall_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_non_symmetric_metric_pos_label[jaccard_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_select_proba_error[non-thresholded scorer] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_select_proba_error[probability scorer] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_select_proba_error[thresholded scorer] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_get_scorer_return_copy PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_no_op_multiclass_select_proba PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[accuracy] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[adjusted_mutual_info_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[adjusted_rand_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[average_precision] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[balanced_accuracy] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[completeness_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[d2_absolute_error_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[explained_variance] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[f1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[f1_macro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[f1_micro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[f1_samples] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[f1_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[fowlkes_mallows_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[homogeneity_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[jaccard] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[jaccard_macro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[jaccard_micro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[jaccard_samples] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[jaccard_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[matthews_corrcoef] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[mutual_info_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[neg_brier_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[neg_log_loss] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[neg_max_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[neg_mean_absolute_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[neg_mean_absolute_percentage_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[neg_mean_gamma_deviance] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[neg_mean_poisson_deviance] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[neg_mean_squared_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[neg_mean_squared_log_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[neg_median_absolute_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[neg_negative_likelihood_ratio] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[neg_root_mean_squared_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[neg_root_mean_squared_log_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[normalized_mutual_info_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[positive_likelihood_ratio] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[precision] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[precision_macro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[precision_micro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[precision_samples] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[precision_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[r2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[rand_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[recall] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[recall_macro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[recall_micro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[recall_samples] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[recall_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[roc_auc] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[roc_auc_ovo] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[roc_auc_ovo_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[roc_auc_ovr] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[roc_auc_ovr_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[top_k_accuracy] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[v_measure_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[accuracy] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[adjusted_mutual_info_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[adjusted_rand_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[average_precision] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[balanced_accuracy] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[completeness_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[d2_absolute_error_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[explained_variance] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[f1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[f1_macro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[f1_micro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[f1_samples] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[f1_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[fowlkes_mallows_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[homogeneity_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[jaccard] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[jaccard_macro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[jaccard_micro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[jaccard_samples] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[jaccard_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[matthews_corrcoef] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[mutual_info_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[neg_brier_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[neg_log_loss] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[neg_max_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[neg_mean_absolute_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[neg_mean_absolute_percentage_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[neg_mean_gamma_deviance] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[neg_mean_poisson_deviance] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[neg_mean_squared_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[neg_mean_squared_log_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[neg_median_absolute_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[neg_negative_likelihood_ratio] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[neg_root_mean_squared_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[neg_root_mean_squared_log_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[normalized_mutual_info_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[positive_likelihood_ratio] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[precision] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[precision_macro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[precision_micro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[precision_samples] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[precision_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[r2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[rand_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[recall] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[recall_macro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[recall_micro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[recall_samples] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[recall_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[roc_auc] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[roc_auc_ovo] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[roc_auc_ovo_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[roc_auc_ovr] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[roc_auc_ovr_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[top_k_accuracy] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[v_measure_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_metadata_kwarg_conflict PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_PassthroughScorer_set_score_request PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_PassthroughScorer_set_score_request_raises_without_routing_enabled PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multimetric_scoring_metadata_routing PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_kwargs_without_metadata_routing_error PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_get_scorer_multilabel_indicator PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_make_scorer_repr[scorer0-make_scorer(accuracy_score, response_method='predict')] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_make_scorer_repr[scorer1-make_scorer(log_loss, greater_is_better=False, response_method='predict_proba')] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_make_scorer_repr[scorer2-make_scorer(roc_auc_score, response_method=('decision_function', 'predict_proba'))] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_make_scorer_repr[scorer3-make_scorer(fbeta_score, response_method='predict', beta=2)] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_get_scorer_multimetric[True] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_get_scorer_multimetric[False] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multimetric_scorer_repr PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_check_scoring_multimetric_raise_exc PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_metadata_routing_multimetric_metadata_routing[True] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_metadata_routing_multimetric_metadata_routing[False] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_curve_scorer PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_curve_scorer_pos_label[42] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_make_scorer_reponse_method_default_warning PASSED
+
+=================================== FAILURES ===================================
+_______________________ test_supervised_cluster_scorers ________________________
+
+    def test_supervised_cluster_scorers():
+        # Test clustering scorers against gold standard labeling.
+        X, y = make_blobs(random_state=0, centers=2)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
+        km = KMeans(n_clusters=3, n_init="auto")
+        km.fit(X_train)
+        for name in CLUSTER_SCORERS:
+>           score1 = get_scorer(name)(km, X_test, y_test)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py:550: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/_scorer.py:288: in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/_scorer.py:388: in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:361: in adjusted_rand_score
+    ((tn, fp), (fn, tp)) = pair_confusion_matrix(labels_true, labels_pred)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:189: in wrapper
+    return func(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+labels_true = array([1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0,
+       0, 1, 1])
+labels_pred = array([2, 2, 1, 1, 1, 2, 2, 1, 0, 1, 1, 0, 1, 1, 2, 2, 0, 2, 2, 1, 0, 1,
+       0, 2, 2], dtype=int32)
+
+    @validate_params({'labels_true': ['array-like'], 'labels_pred': ['array-like']}, prefer_skip_nested_validation=True)
+    def pair_confusion_matrix(labels_true, labels_pred):
+>       from .temp import pair_confusion_matrix
+E       ImportError: cannot import name 'pair_confusion_matrix' from 'sklearn.metrics.cluster.temp' (/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/temp.py)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:121: ImportError
+________________ test_scorer_memmap_input[adjusted_rand_score] _________________
+
+name = 'adjusted_rand_score'
+memmap_data_and_estimators = (memmap([[ 0.84726844,  1.05445173, -1.38667072, -0.58147661,  1.52127328],
+        [ 0.60950495,  0.70657317, -1.0846...rand_score': DecisionTreeClassifier(random_state=0), 'average_precision': DecisionTreeClassifier(random_state=0), ...})
+
+    @pytest.mark.parametrize("name", get_scorer_names())
+    def test_scorer_memmap_input(name, memmap_data_and_estimators):
+        # Non-regression test for #6147: some score functions would
+        # return singleton memmap when computed on memmap data instead of scalar
+        # float values.
+        X_mm, y_mm, y_ml_mm, estimators = memmap_data_and_estimators
+    
+        if name in REQUIRE_POSITIVE_Y_SCORERS:
+            y_mm_1 = _require_positive_y(y_mm)
+            y_ml_mm_1 = _require_positive_y(y_ml_mm)
+        else:
+            y_mm_1, y_ml_mm_1 = y_mm, y_ml_mm
+    
+        # UndefinedMetricWarning for P / R scores
+        with ignore_warnings():
+            scorer, estimator = get_scorer(name), estimators[name]
+            if name in MULTILABEL_ONLY_SCORERS:
+                score = scorer(estimator, X_mm, y_ml_mm_1)
+            else:
+>               score = scorer(estimator, X_mm, y_mm_1)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py:693: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/_scorer.py:288: in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/_scorer.py:388: in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:361: in adjusted_rand_score
+    ((tn, fp), (fn, tp)) = pair_confusion_matrix(labels_true, labels_pred)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:189: in wrapper
+    return func(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+labels_true = memmap([1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1,
+        1, 0, 1, 0, 0, 1, 0, 1])
+labels_pred = array([1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1,
+       1, 0, 1, 0, 0, 1, 0, 1])
+
+    @validate_params({'labels_true': ['array-like'], 'labels_pred': ['array-like']}, prefer_skip_nested_validation=True)
+    def pair_confusion_matrix(labels_true, labels_pred):
+>       from .temp import pair_confusion_matrix
+E       ImportError: cannot import name 'pair_confusion_matrix' from 'sklearn.metrics.cluster.temp' (/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/temp.py)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:121: ImportError
+_____________________ test_scorer_memmap_input[rand_score] _____________________
+
+name = 'rand_score'
+memmap_data_and_estimators = (memmap([[ 0.84726844,  1.05445173, -1.38667072, -0.58147661,  1.52127328],
+        [ 0.60950495,  0.70657317, -1.0846...rand_score': DecisionTreeClassifier(random_state=0), 'average_precision': DecisionTreeClassifier(random_state=0), ...})
+
+    @pytest.mark.parametrize("name", get_scorer_names())
+    def test_scorer_memmap_input(name, memmap_data_and_estimators):
+        # Non-regression test for #6147: some score functions would
+        # return singleton memmap when computed on memmap data instead of scalar
+        # float values.
+        X_mm, y_mm, y_ml_mm, estimators = memmap_data_and_estimators
+    
+        if name in REQUIRE_POSITIVE_Y_SCORERS:
+            y_mm_1 = _require_positive_y(y_mm)
+            y_ml_mm_1 = _require_positive_y(y_ml_mm)
+        else:
+            y_mm_1, y_ml_mm_1 = y_mm, y_ml_mm
+    
+        # UndefinedMetricWarning for P / R scores
+        with ignore_warnings():
+            scorer, estimator = get_scorer(name), estimators[name]
+            if name in MULTILABEL_ONLY_SCORERS:
+                score = scorer(estimator, X_mm, y_ml_mm_1)
+            else:
+>               score = scorer(estimator, X_mm, y_mm_1)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py:693: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/_scorer.py:288: in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/_scorer.py:388: in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:259: in rand_score
+    contingency = pair_confusion_matrix(labels_true, labels_pred)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:189: in wrapper
+    return func(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+labels_true = memmap([1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1,
+        1, 0, 1, 0, 0, 1, 0, 1])
+labels_pred = array([1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1,
+       1, 0, 1, 0, 0, 1, 0, 1])
+
+    @validate_params({'labels_true': ['array-like'], 'labels_pred': ['array-like']}, prefer_skip_nested_validation=True)
+    def pair_confusion_matrix(labels_true, labels_pred):
+>       from .temp import pair_confusion_matrix
+E       ImportError: cannot import name 'pair_confusion_matrix' from 'sklearn.metrics.cluster.temp' (/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/temp.py)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:121: ImportError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_supervised_cluster_scorers
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[adjusted_rand_score]
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[rand_score]
+================== 3 failed, 270 passed, 16 warnings in 1.32s ==================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.9.0, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/scikit-learn/scikit-learn
+configfile: setup.cfg
+plugins: cov-6.0.0
+collecting ... collected 273 items
+
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_all_scorers_repr I: Seeding RNGs with 1299783695
+PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_check_scoring_and_check_multimetric_scoring[single_tuple] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_check_scoring_and_check_multimetric_scoring[single_list] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_check_scoring_and_check_multimetric_scoring[dict_str] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_check_scoring_and_check_multimetric_scoring[multi_tuple] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_check_scoring_and_check_multimetric_scoring[multi_list] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_check_scoring_and_check_multimetric_scoring[dict_callable] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_check_scoring_and_check_multimetric_scoring_errors[tuple of callables] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_check_scoring_and_check_multimetric_scoring_errors[list of int] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_check_scoring_and_check_multimetric_scoring_errors[tuple of one callable] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_check_scoring_and_check_multimetric_scoring_errors[empty tuple] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_check_scoring_and_check_multimetric_scoring_errors[non-unique str] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_check_scoring_and_check_multimetric_scoring_errors[non-string key dict] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_check_scoring_and_check_multimetric_scoring_errors[empty dict] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_check_scoring_gridsearchcv PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[f1-f1_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[f1_weighted-metric1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[f1_macro-metric2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[f1_micro-metric3] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[precision-precision_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[precision_weighted-metric5] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[precision_macro-metric6] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[precision_micro-metric7] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[recall-recall_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[recall_weighted-metric9] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[recall_macro-metric10] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[recall_micro-metric11] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[jaccard-jaccard_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[jaccard_weighted-metric13] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[jaccard_macro-metric14] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[jaccard_micro-metric15] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[top_k_accuracy-top_k_accuracy_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_binary_scores[matthews_corrcoef-matthews_corrcoef] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_multiclass_scores[accuracy-accuracy_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_multiclass_scores[balanced_accuracy-balanced_accuracy_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_multiclass_scores[f1_weighted-metric2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_multiclass_scores[f1_macro-metric3] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_multiclass_scores[f1_micro-metric4] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_multiclass_scores[precision_weighted-metric5] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_multiclass_scores[precision_macro-metric6] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_multiclass_scores[precision_micro-metric7] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_multiclass_scores[recall_weighted-metric8] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_multiclass_scores[recall_macro-metric9] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_multiclass_scores[recall_micro-metric10] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_multiclass_scores[jaccard_weighted-metric11] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_multiclass_scores[jaccard_macro-metric12] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_multiclass_scores[jaccard_micro-metric13] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_custom_scorer_pickling PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_regression_scorers PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_thresholded_scorers PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_thresholded_scorers_multilabel_indicator_data PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_supervised_cluster_scorers FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_raises_on_score_list PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_classification_scorer_sample_weight PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_regression_scorer_sample_weight PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[accuracy] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[adjusted_mutual_info_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[adjusted_rand_score] FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[average_precision] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[balanced_accuracy] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[completeness_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[d2_absolute_error_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[explained_variance] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[f1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[f1_macro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[f1_micro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[f1_samples] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[f1_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[fowlkes_mallows_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[homogeneity_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[jaccard] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[jaccard_macro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[jaccard_micro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[jaccard_samples] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[jaccard_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[matthews_corrcoef] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[mutual_info_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[neg_brier_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[neg_log_loss] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[neg_max_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[neg_mean_absolute_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[neg_mean_absolute_percentage_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[neg_mean_gamma_deviance] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[neg_mean_poisson_deviance] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[neg_mean_squared_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[neg_mean_squared_log_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[neg_median_absolute_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[neg_negative_likelihood_ratio] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[neg_root_mean_squared_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[neg_root_mean_squared_log_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[normalized_mutual_info_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[positive_likelihood_ratio] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[precision] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[precision_macro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[precision_micro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[precision_samples] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[precision_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[r2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[rand_score] FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[recall] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[recall_macro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[recall_micro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[recall_samples] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[recall_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[roc_auc] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[roc_auc_ovo] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[roc_auc_ovo_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[roc_auc_ovr] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[roc_auc_ovr_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[top_k_accuracy] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[v_measure_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scoring_is_not_metric PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_deprecated_scorer PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multimetric_scorer_calls_method_once[scorers0-1-1-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multimetric_scorer_calls_method_once[scorers1-1-0-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multimetric_scorer_calls_method_once[scorers2-1-1-0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multimetric_scorer_calls_method_once_classifier_no_decision[scorers0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multimetric_scorer_calls_method_once_classifier_no_decision[scorers1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multimetric_scorer_calls_method_once_regressor_threshold PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multimetric_scorer_sanity_check PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multimetric_scorer_exception_handling[True] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multimetric_scorer_exception_handling[False] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multiclass_roc_proba_scorer[roc_auc_ovr-metric0] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multiclass_roc_proba_scorer[roc_auc_ovo-metric1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multiclass_roc_proba_scorer[roc_auc_ovr_weighted-metric2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multiclass_roc_proba_scorer[roc_auc_ovo_weighted-metric3] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multiclass_roc_proba_scorer_label PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multiclass_roc_no_proba_scorer_errors[roc_auc_ovr] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multiclass_roc_no_proba_scorer_errors[roc_auc_ovo] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multiclass_roc_no_proba_scorer_errors[roc_auc_ovr_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multiclass_roc_no_proba_scorer_errors[roc_auc_ovo_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_average_precision_pos_label PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_brier_score_loss_pos_label PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_non_symmetric_metric_pos_label[f1_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_non_symmetric_metric_pos_label[precision_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_non_symmetric_metric_pos_label[recall_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_non_symmetric_metric_pos_label[jaccard_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_select_proba_error[non-thresholded scorer] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_select_proba_error[probability scorer] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_select_proba_error[thresholded scorer] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_get_scorer_return_copy PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_no_op_multiclass_select_proba PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[accuracy] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[adjusted_mutual_info_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[adjusted_rand_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[average_precision] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[balanced_accuracy] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[completeness_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[d2_absolute_error_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[explained_variance] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[f1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[f1_macro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[f1_micro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[f1_samples] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[f1_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[fowlkes_mallows_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[homogeneity_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[jaccard] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[jaccard_macro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[jaccard_micro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[jaccard_samples] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[jaccard_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[matthews_corrcoef] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[mutual_info_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[neg_brier_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[neg_log_loss] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[neg_max_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[neg_mean_absolute_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[neg_mean_absolute_percentage_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[neg_mean_gamma_deviance] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[neg_mean_poisson_deviance] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[neg_mean_squared_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[neg_mean_squared_log_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[neg_median_absolute_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[neg_negative_likelihood_ratio] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[neg_root_mean_squared_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[neg_root_mean_squared_log_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[normalized_mutual_info_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[positive_likelihood_ratio] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[precision] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[precision_macro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[precision_micro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[precision_samples] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[precision_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[r2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[rand_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[recall] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[recall_macro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[recall_micro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[recall_samples] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[recall_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[roc_auc] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[roc_auc_ovo] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[roc_auc_ovo_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[roc_auc_ovr] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[roc_auc_ovr_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[top_k_accuracy] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_set_score_request_raises[v_measure_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[accuracy] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[adjusted_mutual_info_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[adjusted_rand_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[average_precision] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[balanced_accuracy] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[completeness_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[d2_absolute_error_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[explained_variance] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[f1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[f1_macro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[f1_micro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[f1_samples] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[f1_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[fowlkes_mallows_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[homogeneity_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[jaccard] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[jaccard_macro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[jaccard_micro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[jaccard_samples] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[jaccard_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[matthews_corrcoef] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[mutual_info_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[neg_brier_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[neg_log_loss] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[neg_max_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[neg_mean_absolute_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[neg_mean_absolute_percentage_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[neg_mean_gamma_deviance] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[neg_mean_poisson_deviance] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[neg_mean_squared_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[neg_mean_squared_log_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[neg_median_absolute_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[neg_negative_likelihood_ratio] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[neg_root_mean_squared_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[neg_root_mean_squared_log_error] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[normalized_mutual_info_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[positive_likelihood_ratio] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[precision] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[precision_macro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[precision_micro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[precision_samples] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[precision_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[r2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[rand_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[recall] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[recall_macro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[recall_micro] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[recall_samples] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[recall_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[roc_auc] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[roc_auc_ovo] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[roc_auc_ovo_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[roc_auc_ovr] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[roc_auc_ovr_weighted] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[top_k_accuracy] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_metadata_request[v_measure_score] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_metadata_kwarg_conflict PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_PassthroughScorer_set_score_request PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_PassthroughScorer_set_score_request_raises_without_routing_enabled PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multimetric_scoring_metadata_routing PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_kwargs_without_metadata_routing_error PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_get_scorer_multilabel_indicator PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_make_scorer_repr[scorer0-make_scorer(accuracy_score, response_method='predict')] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_make_scorer_repr[scorer1-make_scorer(log_loss, greater_is_better=False, response_method='predict_proba')] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_make_scorer_repr[scorer2-make_scorer(roc_auc_score, response_method=('decision_function', 'predict_proba'))] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_make_scorer_repr[scorer3-make_scorer(fbeta_score, response_method='predict', beta=2)] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_get_scorer_multimetric[True] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_get_scorer_multimetric[False] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_multimetric_scorer_repr PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_check_scoring_multimetric_raise_exc PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_metadata_routing_multimetric_metadata_routing[True] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_metadata_routing_multimetric_metadata_routing[False] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_curve_scorer PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_curve_scorer_pos_label[42] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_make_scorer_reponse_method_default_warning PASSED
+
+=================================== FAILURES ===================================
+_______________________ test_supervised_cluster_scorers ________________________
+
+    def test_supervised_cluster_scorers():
+        # Test clustering scorers against gold standard labeling.
+        X, y = make_blobs(random_state=0, centers=2)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
+        km = KMeans(n_clusters=3, n_init="auto")
+        km.fit(X_train)
+        for name in CLUSTER_SCORERS:
+>           score1 = get_scorer(name)(km, X_test, y_test)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py:550: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/_scorer.py:288: in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/_scorer.py:388: in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:361: in adjusted_rand_score
+    ((tn, fp), (fn, tp)) = pair_confusion_matrix(labels_true, labels_pred)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:189: in wrapper
+    return func(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+labels_true = array([1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0,
+       0, 1, 1])
+labels_pred = array([2, 2, 1, 1, 1, 2, 2, 1, 0, 1, 1, 0, 1, 1, 2, 2, 0, 2, 2, 1, 1, 1,
+       0, 2, 2], dtype=int32)
+
+    @validate_params({'labels_true': ['array-like'], 'labels_pred': ['array-like']}, prefer_skip_nested_validation=True)
+    def pair_confusion_matrix(labels_true, labels_pred):
+>       from .temp import pair_confusion_matrix
+E       ImportError: cannot import name 'pair_confusion_matrix' from 'sklearn.metrics.cluster.temp' (/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/temp.py)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:121: ImportError
+________________ test_scorer_memmap_input[adjusted_rand_score] _________________
+
+name = 'adjusted_rand_score'
+memmap_data_and_estimators = (memmap([[ 0.84726844,  1.05445173, -1.38667072, -0.58147661,  1.52127328],
+        [ 0.60950495,  0.70657317, -1.0846...rand_score': DecisionTreeClassifier(random_state=0), 'average_precision': DecisionTreeClassifier(random_state=0), ...})
+
+    @pytest.mark.parametrize("name", get_scorer_names())
+    def test_scorer_memmap_input(name, memmap_data_and_estimators):
+        # Non-regression test for #6147: some score functions would
+        # return singleton memmap when computed on memmap data instead of scalar
+        # float values.
+        X_mm, y_mm, y_ml_mm, estimators = memmap_data_and_estimators
+    
+        if name in REQUIRE_POSITIVE_Y_SCORERS:
+            y_mm_1 = _require_positive_y(y_mm)
+            y_ml_mm_1 = _require_positive_y(y_ml_mm)
+        else:
+            y_mm_1, y_ml_mm_1 = y_mm, y_ml_mm
+    
+        # UndefinedMetricWarning for P / R scores
+        with ignore_warnings():
+            scorer, estimator = get_scorer(name), estimators[name]
+            if name in MULTILABEL_ONLY_SCORERS:
+                score = scorer(estimator, X_mm, y_ml_mm_1)
+            else:
+>               score = scorer(estimator, X_mm, y_mm_1)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py:693: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/_scorer.py:288: in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/_scorer.py:388: in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:361: in adjusted_rand_score
+    ((tn, fp), (fn, tp)) = pair_confusion_matrix(labels_true, labels_pred)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:189: in wrapper
+    return func(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+labels_true = memmap([1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1,
+        1, 0, 1, 0, 0, 1, 0, 1])
+labels_pred = array([1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1,
+       1, 0, 1, 0, 0, 1, 0, 1])
+
+    @validate_params({'labels_true': ['array-like'], 'labels_pred': ['array-like']}, prefer_skip_nested_validation=True)
+    def pair_confusion_matrix(labels_true, labels_pred):
+>       from .temp import pair_confusion_matrix
+E       ImportError: cannot import name 'pair_confusion_matrix' from 'sklearn.metrics.cluster.temp' (/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/temp.py)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:121: ImportError
+_____________________ test_scorer_memmap_input[rand_score] _____________________
+
+name = 'rand_score'
+memmap_data_and_estimators = (memmap([[ 0.84726844,  1.05445173, -1.38667072, -0.58147661,  1.52127328],
+        [ 0.60950495,  0.70657317, -1.0846...rand_score': DecisionTreeClassifier(random_state=0), 'average_precision': DecisionTreeClassifier(random_state=0), ...})
+
+    @pytest.mark.parametrize("name", get_scorer_names())
+    def test_scorer_memmap_input(name, memmap_data_and_estimators):
+        # Non-regression test for #6147: some score functions would
+        # return singleton memmap when computed on memmap data instead of scalar
+        # float values.
+        X_mm, y_mm, y_ml_mm, estimators = memmap_data_and_estimators
+    
+        if name in REQUIRE_POSITIVE_Y_SCORERS:
+            y_mm_1 = _require_positive_y(y_mm)
+            y_ml_mm_1 = _require_positive_y(y_ml_mm)
+        else:
+            y_mm_1, y_ml_mm_1 = y_mm, y_ml_mm
+    
+        # UndefinedMetricWarning for P / R scores
+        with ignore_warnings():
+            scorer, estimator = get_scorer(name), estimators[name]
+            if name in MULTILABEL_ONLY_SCORERS:
+                score = scorer(estimator, X_mm, y_ml_mm_1)
+            else:
+>               score = scorer(estimator, X_mm, y_mm_1)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py:693: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/_scorer.py:288: in __call__
+    return self._score(partial(_cached_call, None), estimator, X, y_true, **_kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/_scorer.py:388: in _score
+    return self._sign * self._score_func(y_true, y_pred, **scoring_kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:259: in rand_score
+    contingency = pair_confusion_matrix(labels_true, labels_pred)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:189: in wrapper
+    return func(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+labels_true = memmap([1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1,
+        1, 0, 1, 0, 0, 1, 0, 1])
+labels_pred = array([1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1,
+       1, 0, 1, 0, 0, 1, 0, 1])
+
+    @validate_params({'labels_true': ['array-like'], 'labels_pred': ['array-like']}, prefer_skip_nested_validation=True)
+    def pair_confusion_matrix(labels_true, labels_pred):
+>       from .temp import pair_confusion_matrix
+E       ImportError: cannot import name 'pair_confusion_matrix' from 'sklearn.metrics.cluster.temp' (/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/temp.py)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/cluster/_supervised.py:121: ImportError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_supervised_cluster_scorers
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[adjusted_rand_score]
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[rand_score]
+================== 3 failed, 270 passed, 16 warnings in 1.33s ==================

@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: 
+
+prompt:
+Generate a python function called get_available_cpu_count that returns the number of CPUs in the system. The input parameter is a boolean called logical, which determines whether to return the number of physical cores only (if False) or the number of logical cores (if True). The output is an integer representing the number of CPUs. If an exception occurs, the function will return 1. Default value of logical is True
+
+ ground Truth:nncf/common/utils/os.py
+
+ repo:nncf
+
+ function:get_available_cpu_count
+ 
+ test_cases:tests/common/utils/test_os.py

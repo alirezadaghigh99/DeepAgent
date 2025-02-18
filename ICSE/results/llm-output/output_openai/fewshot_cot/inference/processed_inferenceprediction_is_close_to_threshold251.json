@@ -1,0 +1,11 @@
+{
+    "result": "Error",
+    "prompt": "Generate a Python function called prediction_is_close_to_threshold that takes in parameters including a Prediction object, PredictionType object, a set of selected class names, a threshold value, an epsilon value, a boolean flag for only top classes, and an integer for minimum objects close to the threshold. The function returns a boolean value.\n\nWithin the function, it checks if the prediction type is not a classification task, in which case it calls the detections_are_close_to_threshold function with specific parameters. It then determines the appropriate checker function based on the prediction type and whether \"top\" is in the prediction. Finally, it calls the selected checker function with the provided parameters and returns the result.",
+    "function_name": "prediction_is_close_to_threshold",
+    "ground_truth": "inference/core/active_learning/samplers/close_to_threshold.py",
+    "test": "tests/inference/unit_tests/core/active_learning/samplers/test_close_to_threshold.py::test_detection_prediction_is_close_to_threshold_when_minimum_objects_criterion_not_met",
+    "class": "",
+    "stage": "Inference",
+    "task": "Classification",
+    "data": ""
+}

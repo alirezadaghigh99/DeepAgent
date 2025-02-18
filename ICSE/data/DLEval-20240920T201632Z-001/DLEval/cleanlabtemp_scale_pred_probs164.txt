@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: Classification
+data: Table
+
+prompt:
+You need to implement a function named `temp_scale_pred_probs` that adjusts predicted probabilities using a temperature scaling technique. Temperature factor less than 1 sharpens the predictions, making them more confident, while a temperature greater than 1 smoothens the predictions, making them less confident. The function takes a 2D NumPy array of predicted probabilities (`pred_probs`) and a float (`temp`) representing the temperature factor. The probabilities are first clipped to avoid logarithm of zero and normalized. Then, the temperature scaling is applied using the softmax function after taking the logarithm of the probabilities. The function returns the scaled and normalized probabilities as a 2D NumPy array.
+
+ ground Truth:cleanlab/internal/multiannotator_utils.py#L353
+
+ repo:cleanlab
+
+ function:temp_scale_pred_probs
+ 
+ test_cases:tests/test_multiannotator.py

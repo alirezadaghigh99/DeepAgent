@@ -1,0 +1,24 @@
+stage: Evaluating&Metrics
+task: Regression
+data: Table
+
+prompt:
+Generate a Python function called average_precision_score that computes the average precision (AP) from prediction scores. The function takes in the following parameters:
+
+- y_true: array-like of shape (n_samples,) or (n_samples, n_classes) representing true binary labels or binary label indicators.
+- y_score: array-like of shape (n_samples,) or (n_samples, n_classes) representing target scores.
+- average: {'micro', 'samples', 'weighted', 'macro'} or None, default='macro' determining the type of averaging performed on the data.
+- pos_label: int, float, bool, or str, default=1 representing the label of the positive class.
+- sample_weight: array-like of shape (n_samples,), default=None representing sample weights.
+
+The function returns the average precision score as a float value. It also includes a helper function called _binary_uninterpolated_average_precision to calculate the average precision for binary classification. The function handles different types of input data such as binary, multilabel-indicator, and multiclass.
+
+Additionally, the function provides examples of how to use it with input arrays for y_true and y_score.
+
+ ground Truth:sklearn/metrics/_ranking.py
+
+ repo:scikit-learn
+
+ function:average_precision_score
+ 
+ test_cases:sklearn/metrics/tests/test_ranking.py

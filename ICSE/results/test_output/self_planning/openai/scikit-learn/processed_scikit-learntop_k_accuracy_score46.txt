@@ -1,0 +1,413 @@
+output file:
+processed_scikit-learntop_k_accuracy_score46.json
+function:
+top_k_accuracy_score
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary[y_score2-2-1]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary[y_score3-1-1]', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary[y_score4-1-0.5] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary[y_score4-1-0.5]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary[y_score0-1-1]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary[y_score1-1-0.5]', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary[y_score1-1-0.5] FAILED', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary[y_score3-1-1] FAILED', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary[y_score2-2-1] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary[y_score5-2-1]', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary[y_score5-2-1] FAILED', 'FAILED'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.9.0, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/scikit-learn/scikit-learn
+configfile: setup.cfg
+plugins: cov-6.0.0
+collecting ... collected 6 items
+
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary[y_score0-1-1] I: Seeding RNGs with 393938667
+FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary[y_score1-1-0.5] FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary[y_score2-2-1] FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary[y_score3-1-1] FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary[y_score4-1-0.5] FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary[y_score5-2-1] FAILED
+
+=================================== FAILURES ===================================
+________________ test_top_k_accuracy_score_binary[y_score0-1-1] ________________
+
+y_score = array([-1, -1,  1,  1]), k = 1, true_score = 1
+
+    @pytest.mark.parametrize(
+        "y_score, k, true_score",
+        [
+            (np.array([-1, -1, 1, 1]), 1, 1),
+            (np.array([-1, 1, -1, 1]), 1, 0.5),
+            (np.array([-1, 1, -1, 1]), 2, 1),
+            (np.array([0.2, 0.2, 0.7, 0.7]), 1, 1),
+            (np.array([0.2, 0.7, 0.2, 0.7]), 1, 0.5),
+            (np.array([0.2, 0.7, 0.2, 0.7]), 2, 1),
+        ],
+    )
+    def test_top_k_accuracy_score_binary(y_score, k, true_score):
+        y_true = [0, 0, 1, 1]
+    
+        threshold = 0.5 if y_score.min() >= 0 and y_score.max() <= 1 else 0
+        y_pred = (y_score > threshold).astype(np.int64) if k == 1 else y_true
+    
+>       score = top_k_accuracy_score(y_true, y_score, k=k)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py:2014: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/_ranking.py:1460: in top_k_accuracy_score
+    return top_k_accuracy_score(y_true, y_score)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+y_true = array([0, 0, 1, 1]), y_score = array([-1, -1,  1,  1]), k = 1
+normalize = True, sample_weight = None, labels = None
+
+    def top_k_accuracy_score(y_true, y_score, k=1, normalize=True, sample_weight=None, labels=None):
+        """
+        Calculate the top-k accuracy score.
+    
+        Parameters:
+        - y_true: array-like of shape (n_samples,) representing the true labels.
+        - y_score: array-like of shape (n_samples, n_classes) representing the target scores.
+        - k: int, number of most likely outcomes considered to find the correct label.
+        - normalize: bool, whether to return the fraction of correctly classified samples or the number of correctly classified samples.
+        - sample_weight: array-like of shape (n_samples,), sample weights.
+        - labels: array-like of shape (n_classes,), list of labels that index the classes in y_score.
+    
+        Returns:
+        - float, top-k accuracy score.
+        """
+        y_true = np.asarray(y_true)
+        y_score = np.asarray(y_score)
+        if y_score.ndim == 1:
+>           raise ValueError('y_score must be a 2D array with shape (n_samples, n_classes).')
+E           ValueError: y_score must be a 2D array with shape (n_samples, n_classes).
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/temp.py:38: ValueError
+_______________ test_top_k_accuracy_score_binary[y_score1-1-0.5] _______________
+
+y_score = array([-1,  1, -1,  1]), k = 1, true_score = 0.5
+
+    @pytest.mark.parametrize(
+        "y_score, k, true_score",
+        [
+            (np.array([-1, -1, 1, 1]), 1, 1),
+            (np.array([-1, 1, -1, 1]), 1, 0.5),
+            (np.array([-1, 1, -1, 1]), 2, 1),
+            (np.array([0.2, 0.2, 0.7, 0.7]), 1, 1),
+            (np.array([0.2, 0.7, 0.2, 0.7]), 1, 0.5),
+            (np.array([0.2, 0.7, 0.2, 0.7]), 2, 1),
+        ],
+    )
+    def test_top_k_accuracy_score_binary(y_score, k, true_score):
+        y_true = [0, 0, 1, 1]
+    
+        threshold = 0.5 if y_score.min() >= 0 and y_score.max() <= 1 else 0
+        y_pred = (y_score > threshold).astype(np.int64) if k == 1 else y_true
+    
+>       score = top_k_accuracy_score(y_true, y_score, k=k)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py:2014: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/_ranking.py:1460: in top_k_accuracy_score
+    return top_k_accuracy_score(y_true, y_score)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+y_true = array([0, 0, 1, 1]), y_score = array([-1,  1, -1,  1]), k = 1
+normalize = True, sample_weight = None, labels = None
+
+    def top_k_accuracy_score(y_true, y_score, k=1, normalize=True, sample_weight=None, labels=None):
+        """
+        Calculate the top-k accuracy score.
+    
+        Parameters:
+        - y_true: array-like of shape (n_samples,) representing the true labels.
+        - y_score: array-like of shape (n_samples, n_classes) representing the target scores.
+        - k: int, number of most likely outcomes considered to find the correct label.
+        - normalize: bool, whether to return the fraction of correctly classified samples or the number of correctly classified samples.
+        - sample_weight: array-like of shape (n_samples,), sample weights.
+        - labels: array-like of shape (n_classes,), list of labels that index the classes in y_score.
+    
+        Returns:
+        - float, top-k accuracy score.
+        """
+        y_true = np.asarray(y_true)
+        y_score = np.asarray(y_score)
+        if y_score.ndim == 1:
+>           raise ValueError('y_score must be a 2D array with shape (n_samples, n_classes).')
+E           ValueError: y_score must be a 2D array with shape (n_samples, n_classes).
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/temp.py:38: ValueError
+________________ test_top_k_accuracy_score_binary[y_score2-2-1] ________________
+
+y_score = array([-1,  1, -1,  1]), k = 2, true_score = 1
+
+    @pytest.mark.parametrize(
+        "y_score, k, true_score",
+        [
+            (np.array([-1, -1, 1, 1]), 1, 1),
+            (np.array([-1, 1, -1, 1]), 1, 0.5),
+            (np.array([-1, 1, -1, 1]), 2, 1),
+            (np.array([0.2, 0.2, 0.7, 0.7]), 1, 1),
+            (np.array([0.2, 0.7, 0.2, 0.7]), 1, 0.5),
+            (np.array([0.2, 0.7, 0.2, 0.7]), 2, 1),
+        ],
+    )
+    def test_top_k_accuracy_score_binary(y_score, k, true_score):
+        y_true = [0, 0, 1, 1]
+    
+        threshold = 0.5 if y_score.min() >= 0 and y_score.max() <= 1 else 0
+        y_pred = (y_score > threshold).astype(np.int64) if k == 1 else y_true
+    
+>       score = top_k_accuracy_score(y_true, y_score, k=k)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py:2014: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/_ranking.py:1460: in top_k_accuracy_score
+    return top_k_accuracy_score(y_true, y_score)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+y_true = array([0, 0, 1, 1]), y_score = array([-1,  1, -1,  1]), k = 1
+normalize = True, sample_weight = None, labels = None
+
+    def top_k_accuracy_score(y_true, y_score, k=1, normalize=True, sample_weight=None, labels=None):
+        """
+        Calculate the top-k accuracy score.
+    
+        Parameters:
+        - y_true: array-like of shape (n_samples,) representing the true labels.
+        - y_score: array-like of shape (n_samples, n_classes) representing the target scores.
+        - k: int, number of most likely outcomes considered to find the correct label.
+        - normalize: bool, whether to return the fraction of correctly classified samples or the number of correctly classified samples.
+        - sample_weight: array-like of shape (n_samples,), sample weights.
+        - labels: array-like of shape (n_classes,), list of labels that index the classes in y_score.
+    
+        Returns:
+        - float, top-k accuracy score.
+        """
+        y_true = np.asarray(y_true)
+        y_score = np.asarray(y_score)
+        if y_score.ndim == 1:
+>           raise ValueError('y_score must be a 2D array with shape (n_samples, n_classes).')
+E           ValueError: y_score must be a 2D array with shape (n_samples, n_classes).
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/temp.py:38: ValueError
+________________ test_top_k_accuracy_score_binary[y_score3-1-1] ________________
+
+y_score = array([0.2, 0.2, 0.7, 0.7]), k = 1, true_score = 1
+
+    @pytest.mark.parametrize(
+        "y_score, k, true_score",
+        [
+            (np.array([-1, -1, 1, 1]), 1, 1),
+            (np.array([-1, 1, -1, 1]), 1, 0.5),
+            (np.array([-1, 1, -1, 1]), 2, 1),
+            (np.array([0.2, 0.2, 0.7, 0.7]), 1, 1),
+            (np.array([0.2, 0.7, 0.2, 0.7]), 1, 0.5),
+            (np.array([0.2, 0.7, 0.2, 0.7]), 2, 1),
+        ],
+    )
+    def test_top_k_accuracy_score_binary(y_score, k, true_score):
+        y_true = [0, 0, 1, 1]
+    
+        threshold = 0.5 if y_score.min() >= 0 and y_score.max() <= 1 else 0
+        y_pred = (y_score > threshold).astype(np.int64) if k == 1 else y_true
+    
+>       score = top_k_accuracy_score(y_true, y_score, k=k)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py:2014: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/_ranking.py:1460: in top_k_accuracy_score
+    return top_k_accuracy_score(y_true, y_score)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+y_true = array([0, 0, 1, 1]), y_score = array([0.2, 0.2, 0.7, 0.7]), k = 1
+normalize = True, sample_weight = None, labels = None
+
+    def top_k_accuracy_score(y_true, y_score, k=1, normalize=True, sample_weight=None, labels=None):
+        """
+        Calculate the top-k accuracy score.
+    
+        Parameters:
+        - y_true: array-like of shape (n_samples,) representing the true labels.
+        - y_score: array-like of shape (n_samples, n_classes) representing the target scores.
+        - k: int, number of most likely outcomes considered to find the correct label.
+        - normalize: bool, whether to return the fraction of correctly classified samples or the number of correctly classified samples.
+        - sample_weight: array-like of shape (n_samples,), sample weights.
+        - labels: array-like of shape (n_classes,), list of labels that index the classes in y_score.
+    
+        Returns:
+        - float, top-k accuracy score.
+        """
+        y_true = np.asarray(y_true)
+        y_score = np.asarray(y_score)
+        if y_score.ndim == 1:
+>           raise ValueError('y_score must be a 2D array with shape (n_samples, n_classes).')
+E           ValueError: y_score must be a 2D array with shape (n_samples, n_classes).
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/temp.py:38: ValueError
+_______________ test_top_k_accuracy_score_binary[y_score4-1-0.5] _______________
+
+y_score = array([0.2, 0.7, 0.2, 0.7]), k = 1, true_score = 0.5
+
+    @pytest.mark.parametrize(
+        "y_score, k, true_score",
+        [
+            (np.array([-1, -1, 1, 1]), 1, 1),
+            (np.array([-1, 1, -1, 1]), 1, 0.5),
+            (np.array([-1, 1, -1, 1]), 2, 1),
+            (np.array([0.2, 0.2, 0.7, 0.7]), 1, 1),
+            (np.array([0.2, 0.7, 0.2, 0.7]), 1, 0.5),
+            (np.array([0.2, 0.7, 0.2, 0.7]), 2, 1),
+        ],
+    )
+    def test_top_k_accuracy_score_binary(y_score, k, true_score):
+        y_true = [0, 0, 1, 1]
+    
+        threshold = 0.5 if y_score.min() >= 0 and y_score.max() <= 1 else 0
+        y_pred = (y_score > threshold).astype(np.int64) if k == 1 else y_true
+    
+>       score = top_k_accuracy_score(y_true, y_score, k=k)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py:2014: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/_ranking.py:1460: in top_k_accuracy_score
+    return top_k_accuracy_score(y_true, y_score)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+y_true = array([0, 0, 1, 1]), y_score = array([0.2, 0.7, 0.2, 0.7]), k = 1
+normalize = True, sample_weight = None, labels = None
+
+    def top_k_accuracy_score(y_true, y_score, k=1, normalize=True, sample_weight=None, labels=None):
+        """
+        Calculate the top-k accuracy score.
+    
+        Parameters:
+        - y_true: array-like of shape (n_samples,) representing the true labels.
+        - y_score: array-like of shape (n_samples, n_classes) representing the target scores.
+        - k: int, number of most likely outcomes considered to find the correct label.
+        - normalize: bool, whether to return the fraction of correctly classified samples or the number of correctly classified samples.
+        - sample_weight: array-like of shape (n_samples,), sample weights.
+        - labels: array-like of shape (n_classes,), list of labels that index the classes in y_score.
+    
+        Returns:
+        - float, top-k accuracy score.
+        """
+        y_true = np.asarray(y_true)
+        y_score = np.asarray(y_score)
+        if y_score.ndim == 1:
+>           raise ValueError('y_score must be a 2D array with shape (n_samples, n_classes).')
+E           ValueError: y_score must be a 2D array with shape (n_samples, n_classes).
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/temp.py:38: ValueError
+________________ test_top_k_accuracy_score_binary[y_score5-2-1] ________________
+
+y_score = array([0.2, 0.7, 0.2, 0.7]), k = 2, true_score = 1
+
+    @pytest.mark.parametrize(
+        "y_score, k, true_score",
+        [
+            (np.array([-1, -1, 1, 1]), 1, 1),
+            (np.array([-1, 1, -1, 1]), 1, 0.5),
+            (np.array([-1, 1, -1, 1]), 2, 1),
+            (np.array([0.2, 0.2, 0.7, 0.7]), 1, 1),
+            (np.array([0.2, 0.7, 0.2, 0.7]), 1, 0.5),
+            (np.array([0.2, 0.7, 0.2, 0.7]), 2, 1),
+        ],
+    )
+    def test_top_k_accuracy_score_binary(y_score, k, true_score):
+        y_true = [0, 0, 1, 1]
+    
+        threshold = 0.5 if y_score.min() >= 0 and y_score.max() <= 1 else 0
+        y_pred = (y_score > threshold).astype(np.int64) if k == 1 else y_true
+    
+>       score = top_k_accuracy_score(y_true, y_score, k=k)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py:2014: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/_ranking.py:1460: in top_k_accuracy_score
+    return top_k_accuracy_score(y_true, y_score)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+y_true = array([0, 0, 1, 1]), y_score = array([0.2, 0.7, 0.2, 0.7]), k = 1
+normalize = True, sample_weight = None, labels = None
+
+    def top_k_accuracy_score(y_true, y_score, k=1, normalize=True, sample_weight=None, labels=None):
+        """
+        Calculate the top-k accuracy score.
+    
+        Parameters:
+        - y_true: array-like of shape (n_samples,) representing the true labels.
+        - y_score: array-like of shape (n_samples, n_classes) representing the target scores.
+        - k: int, number of most likely outcomes considered to find the correct label.
+        - normalize: bool, whether to return the fraction of correctly classified samples or the number of correctly classified samples.
+        - sample_weight: array-like of shape (n_samples,), sample weights.
+        - labels: array-like of shape (n_classes,), list of labels that index the classes in y_score.
+    
+        Returns:
+        - float, top-k accuracy score.
+        """
+        y_true = np.asarray(y_true)
+        y_score = np.asarray(y_score)
+        if y_score.ndim == 1:
+>           raise ValueError('y_score must be a 2D array with shape (n_samples, n_classes).')
+E           ValueError: y_score must be a 2D array with shape (n_samples, n_classes).
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/temp.py:38: ValueError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary[y_score0-1-1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary[y_score1-1-0.5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary[y_score2-2-1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary[y_score3-1-1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary[y_score4-1-0.5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary[y_score5-2-1]
+============================== 6 failed in 0.59s ===============================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.9.0, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/scikit-learn/scikit-learn
+configfile: setup.cfg
+plugins: cov-6.0.0
+collecting ... collected 6 items
+
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary[y_score0-1-1] I: Seeding RNGs with 773865219
+PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary[y_score1-1-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary[y_score2-2-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary[y_score3-1-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary[y_score4-1-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary[y_score5-2-1] PASSED
+
+======================== 6 passed, 2 warnings in 0.23s =========================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.9.0, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/scikit-learn/scikit-learn
+configfile: setup.cfg
+plugins: cov-6.0.0
+collecting ... collected 6 items
+
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary[y_score0-1-1] I: Seeding RNGs with 2000591807
+PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary[y_score1-1-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary[y_score2-2-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary[y_score3-1-1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary[y_score4-1-0.5] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_ranking.py::test_top_k_accuracy_score_binary[y_score5-2-1] PASSED
+
+======================== 6 passed, 2 warnings in 0.25s =========================

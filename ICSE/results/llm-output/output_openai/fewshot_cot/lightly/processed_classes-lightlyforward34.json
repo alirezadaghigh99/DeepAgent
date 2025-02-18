@@ -1,0 +1,11 @@
+{
+    "result": "Error",
+    "prompt": "Write a Python function `forward` for the class `SwaVLoss` that computes the SwaV loss using high-resolution and low-resolution outputs. The function should handle optional queue outputs and calculate the final loss by averaging sublosses across different views. The function should return the SwaV loss as a `torch.Tensor`. Here is the class structure:\n\n```python\nclass SwaVLoss(nn.Module):\n    def subloss(self, z: torch.Tensor, q: torch.Tensor):\n        # Returns the cross entropy between predictions z and codes q as a tensor.\n    def forward(self, high_resolution_outputs: List[torch.Tensor], low_resolution_outputs: List[torch.Tensor], queue_outputs: List[torch.Tensor] = None) -> torch.Tensor:\n```",
+    "function_name": "forward",
+    "ground_truth": "lightly/loss/swav_loss.py",
+    "test": "tests/loss/test_SwaVLoss.py",
+    "class": "SwaVLoss",
+    "stage": "Image",
+    "task": "",
+    "data": "Training"
+}

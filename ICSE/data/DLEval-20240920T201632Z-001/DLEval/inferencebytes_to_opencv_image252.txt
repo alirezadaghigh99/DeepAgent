@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Generate a python function called bytes_to_opencv_image that takes in a bytes object called payload and an optional array_type parameter with a default value of np.uint8. The function returns a numpy array representing an OpenCV image. The function first converts the bytes object into a numpy array using np.frombuffer, then decodes the array using cv2.imdecode with the flag cv2.IMREAD_UNCHANGED. If the decoding result is None, an EncodingError is raised. The output of the function is the decoded OpenCV image as a numpy array.
+
+ ground Truth:inference_sdk/http/utils/encoding.py
+
+ repo:inference
+
+ function:bytes_to_opencv_image
+ 
+ test_cases:tests/inference_sdk/unit_tests/http/utils/test_encoding.py

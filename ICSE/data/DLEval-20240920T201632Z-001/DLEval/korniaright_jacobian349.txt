@@ -1,0 +1,16 @@
+stage: Evaluating&Metrics
+task: 
+data: Image
+
+prompt:
+Generate a Python function called right_jacobian that computes the right Jacobian of So3. The input is a tensor called vec of shape (B, 3) and the output is a tensor of shape (3, 3) representing the right Jacobian matrix. The function uses vector_to_skew_symmetric_matrix, torch.norm, torch.eye, and matrix multiplication to calculate the right Jacobian matrix.
+
+ ground Truth:kornia/geometry/liegroup/so3.py
+
+ repo:kornia
+
+ function:right_jacobian
+ 
+ test_cases:tests/geometry/liegroup/test_so3.py::TestSo3
+ 
+ class:So3

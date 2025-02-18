@@ -1,0 +1,38 @@
+stage: Model Construction
+task: 
+data: Table
+
+prompt:
+write a python function that return Graph of the pixel-to-pixel connections.
+
+    Edges exist if 2 voxels are connected.
+
+    Parameters
+    ----------
+    n_x : int
+        Dimension in x axis.
+    n_y : int
+        Dimension in y axis.
+    n_z : int, default=1
+        Dimension in z axis.
+    mask : ndarray of shape (n_x, n_y, n_z), dtype=bool, default=None
+        An optional mask of the image, to consider only part of the
+        pixels.
+    return_as : np.ndarray or a sparse matrix class, \
+            default=sparse.coo_matrix
+        The class to use to build the returned adjacency matrix.
+    dtype : dtype, default=int
+        The data of the returned sparse matrix. By default it is int.
+
+    Returns
+    -------
+    graph : np.ndarray or a sparse matrix class
+        The computed adjacency matrix.
+
+ ground Truth:sklearn/feature_extraction/image.py
+
+ repo:scikit-learn
+
+ function:grid_to_graph
+ 
+ test_cases:sklearn/cluster/tests/test_hierarchical.py

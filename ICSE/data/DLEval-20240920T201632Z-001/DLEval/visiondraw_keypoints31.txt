@@ -1,0 +1,27 @@
+stage: Pre-Post processing
+task: Segmentation
+data: Image
+
+prompt:Create a Python function draw_keypoints that overlays keypoints on a given RGB image tensor. The function should accept the following parameters:
+
+image: A tensor of shape (3, H, W) and dtype uint8 or float, representing the image.
+keypoints: A tensor of shape (num_instances, K, 2), where K denotes the number of keypoints per instance, and each keypoint is represented by its (x, y) coordinates.
+connectivity: An optional list of tuples, where each tuple contains two integers representing keypoints that should be connected with a line.
+colors: An optional string or tuple specifying the color for the keypoints and lines. The color can be a string (e.g., "red") or an RGB tuple.
+radius: An integer specifying the radius of each keypoint.
+width: An integer specifying the width of the lines connecting the keypoints.
+visibility: An optional tensor of shape (num_instances, K) that indicates whether each keypoint is visible (True) or not (False).
+The function should validate the input tensors and ensure the image is in the correct format. It should draw each visible keypoint on the image, and if connectivity is provided, draw lines connecting the keypoints based on their visibility. The resulting image tensor should be returned with the keypoints and connections drawn.
+
+Error Handling:
+Raise a TypeError if the input image is not a tensor.
+Raise a ValueError if the image dtype is not uint8 or float, if the image shape is incorrect, or if the keypoints tensor has an incorrect shape.
+Raise a ValueError if the visibility tensor does not match the shape of the keypoints tensor.
+
+ ground Truth:torchvision/utils.py
+
+ repo:vision
+
+ function:draw_keypoints
+ 
+ test_cases:test/test_utils.py::test_draw_keypoints_visibility

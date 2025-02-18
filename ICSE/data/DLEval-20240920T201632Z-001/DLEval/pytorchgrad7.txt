@@ -1,0 +1,25 @@
+stage: Training
+task: 
+data: 
+
+prompt:
+Define a Python function called grad that computes and returns the sum of gradients of outputs with respect to the inputs. The function takes the following arguments:
+- outputs: a sequence of Tensors representing the outputs of the function being differentiated.
+- inputs: a sequence of Tensors or GradientEdges representing the inputs with respect to which the gradient will be returned.
+- grad_outputs: a sequence of Tensors representing the "vector" in the vector-Jacobian product. Default is None.
+- retain_graph: a boolean indicating whether the graph used to compute the gradient will be freed. Defaults to the value of create_graph.
+- create_graph: a boolean indicating whether the graph of the derivative will be constructed for computing higher order derivatives. Default is False.
+- only_inputs: a boolean (deprecated and ignored) that defaults to True.
+- allow_unused: a boolean indicating whether specifying unused inputs is an error. Defaults to the value of materialize_grads.
+- is_grads_batched: a boolean indicating whether the first dimension of each tensor in grad_outputs will be interpreted as the batch dimension. Default is False.
+- materialize_grads: a boolean indicating whether to set the gradient for unused inputs to zero instead of None. Default is False.
+
+The function returns a tuple of Tensors representing the computed gradients. If materialize_grads is True and allow_unused is False, an error will be raised. If allow_unused is None, it will be set to the value of materialize_grads. The
+
+ ground Truth:torch/autograd/__init__.py
+
+ repo:pytorch
+
+ function:grad
+ 
+ test_cases:test/autograd/test_functional.py::TestAutogradFunctional

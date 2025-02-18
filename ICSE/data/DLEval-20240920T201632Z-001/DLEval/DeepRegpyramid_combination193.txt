@@ -1,0 +1,16 @@
+stage: Model Construction
+task: Classification
+data: 
+
+prompt:
+Create a Python function `pyramid_combination` that performs linear interpolation based on values at the corners of a hypercube in an n-dimensional space. The function accepts three main inputs: `values` (a list of tensors representing values at the corners), `weight_floor`, and `weight_ceil` (lists of tensors representing the interpolation weights). The function ensures that the shapes of the inputs are compatible, with `values` needing to have a length of `2^n` where `n` is the length of `weight_floor` and `weight_ceil`. It returns a tensor with the same shape as the elements in `values`.
+
+The function includes error handling to check for mismatched dimensions between `values`, `weight_floor`, and `weight_ceil`, and also validates that the length of `values` matches the expected `2^n` based on the dimension of the weights. If these conditions are not met, the function raises a `ValueError`.
+
+ ground Truth:deepreg/model/layer_util.py
+
+ repo:DeepReg
+
+ function:pyramid_combination
+ 
+ test_cases:test/unit/test_layer_util.py::TestPyramidCombination

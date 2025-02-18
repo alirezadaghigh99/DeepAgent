@@ -1,0 +1,37 @@
+stage: 
+task: Recommendation
+data: Training
+
+prompt:
+
+
+Generate a Python function `calculate` for the class `SparseLoss` that computes a loss value based on the sparsity of layers. The function should first check if `self.disabled` is `True` and return `0` if so. Otherwise, iterate over `self._sparse_layers`, and for each layer that is not frozen, accumulate the loss and sparse probabilities. After iterating, update `self.mean_sparse_prob` as the average sparse probability and compute `self.current_sparsity` as `1 - loss / params`. Finally, return a tensor value computed using the formula `((loss / params - self.target) / self.p).pow(2)`.
+
+Class structure:
+
+```python
+class SparseLoss(PTCompressionLoss):
+    def __init__(self, sparse_layers=None, target=1.0, p=0.05):
+        super().__init__()
+        self._sparse_layers = sparse_layers
+        self.target = target
+        self.p = p
+        self.disabled = False
+        self.current_sparsity: float = 0.0
+        self.mean_sparse_prob = 0.0
+
+    def calculate(self) -> torch.Tensor:
+        # Implement the function as described in the prompt
+```
+
+
+
+ ground Truth:nncf/torch/sparsity/rb/loss.py
+
+ repo:nncf
+
+ function:calculate
+ 
+ test_cases:tests/torch/sparsity/rb/test_components.py::TestSparseModules::test_calc_loss
+ 
+ class:SparseLoss

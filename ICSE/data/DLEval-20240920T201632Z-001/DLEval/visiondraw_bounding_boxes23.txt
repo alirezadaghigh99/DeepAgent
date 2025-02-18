@@ -1,0 +1,20 @@
+stage: Pre-Post processing
+task: Segmentation
+data: Image
+
+prompt:Create a Python function `draw_bounding_boxes` that draws bounding boxes on a given RGB or grayscale image represented as a PyTorch tensor. The function should accept an image tensor (`image`) of shape `(C, H, W)` and dtype `uint8` or float, a tensor of bounding boxes (`boxes`) in `(xmin, ymin, xmax, ymax)` format, and optional parameters such as labels, colors, fill option, box width, font, and font size. The function should return the image tensor with the bounding boxes drawn on it.
+
+### Error Handling:
+- Raise a `TypeError` if the input `image` is not a tensor.
+- Raise a `ValueError` if the image dtype is not `uint8` or float, if the image dimensions are incorrect, or if the bounding boxes are not in the correct format.
+- Warn if no bounding boxes are provided or if the number of labels does not match the number of boxes.
+
+The function should support options like filling the bounding boxes with a color, specifying the width of the bounding box edges, and adding labels with custom fonts. The output should be a tensor with the bounding boxes applied, suitable for further processing or visualization.
+
+ ground Truth:torchvision/utils.py
+
+ repo:vision
+
+ function:draw_bounding_boxes
+ 
+ test_cases:test/test_utils.py

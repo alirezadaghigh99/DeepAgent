@@ -1,0 +1,23 @@
+stage: Training
+task: Prediction
+data: 
+
+prompt:
+Write a python function differentiable_clipping implements a differentiable and soft approximation of the clipping operation.
+
+    Args:
+        input (Tensor): Input tensor of any shape.
+        min_val (Optional[float]): Minimum value.
+        max_val (Optional[float]): Maximum value.
+        scale (float): Scale value. Default 0.02.
+
+    Returns:
+        output (Tensor): Clipped output tensor of the same shape as the input tensor.
+
+ ground Truth:kornia/utils/misc.py#L91
+
+ repo:kornia
+
+ function:differentiable_clipping
+ 
+ test_cases:tests/utils/test_misc.py::TestDifferentiableClipping

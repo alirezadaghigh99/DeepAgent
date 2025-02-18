@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: Table
+
+prompt:
+Create a Python function called convert_x_list_to_array that takes in a list of numpy arrays called x_list and returns a numpy array with all features and the zero-based fidelity index appended as the last column. The input should be a list of numpy arrays with dimensions (n_points x n_dims) ordered from lowest to highest fidelity. The output should be a numpy array with the features and fidelity index concatenated. If any of the arrays in x_list do not have 2 dimensions, a ValueError should be raised. raise value error of All x arrays must have 2 dimensions
+
+ ground Truth:emukit/multi_fidelity/convert_lists_to_array.py
+
+ repo:emukit
+
+ function:convert_x_list_to_array
+ 
+ test_cases:tests/emukit/multi_fidelity/test_convert_list_to_array.py

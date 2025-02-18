@@ -1,0 +1,25 @@
+stage: Pre-Post processing
+task: Segmentation
+data: Image
+
+prompt:
+Generate the python function that Convert three points to local affine frame :
+def laf_from_three_points(threepts: Tensor) -> Tensor:
+    """Convert three points to local affine frame.
+
+    Order is (0,0), (0, 1), (1, 0).
+
+    Args:
+        threepts: :math:`(B, N, 2, 3)`.
+
+    Returns:
+        laf :math:`(B, N, 2, 3)`.
+    """
+
+ ground Truth:kornia/feature/laf.py
+
+ repo:kornia
+
+ function:laf_from_three_points
+ 
+ test_cases:tests/feature/test_laf.py::TestTransformLAFs::test_transform_points

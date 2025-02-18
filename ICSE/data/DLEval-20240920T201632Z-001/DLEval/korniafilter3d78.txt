@@ -1,0 +1,14 @@
+stage: Model Construction
+task: Segmentation
+data: Image
+
+prompt:
+Create a Python function called filter3d that convolves a 3D kernel with a given input tensor. The function takes in parameters input (a tensor with shape (B, C, D, H, W)), kernel (the kernel to be convolved with the input tensor), border_type (the padding mode to be applied before convolving), and normalized (a boolean indicating if the kernel should be L1 normalized). The function returns the convolved tensor of the same size and number of channels as the input tensor. The output shape is (B, C, D, H, W). The function applies padding according to the specified mode before convolving the kernel with the input tensor.
+
+ ground Truth:kornia/filters/filter.py
+
+ repo:kornia
+
+ function:filter3d
+ 
+ test_cases:tests/filters/test_filters.py::TestFilter3D

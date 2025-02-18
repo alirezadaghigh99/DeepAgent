@@ -1,0 +1,11 @@
+{
+    "result": "To convert bounding boxes from the (x1, y1, x2, y2) format to the (cx, cy, w, h) format, you can follow these steps:\n\n1. Calculate the center coordinates `(cx, cy)` by averaging the top-left and bottom-right corners.\n2. Calculate the width `w` and height `h` by subtracting the top-left coordinates from the bottom-right coordinates.\n3. Return the converted bounding boxes as a tensor.\n\nHere's how you can implement this in a Python function:\n\n```python\nimport torch\n\ndef _box_xyxy_to_cxcywh(boxes: torch.Tensor) -> torch.Tensor:\n    \"\"\"\n    Convert bounding boxes from (x1, y1, x2, y2) format to (cx, cy, w, h) format.\n\n    Args:\n        boxes (Tensor): Tensor of shape (N, 4) containing bounding boxes in (x1, y1, x2, y2) format.\n\n    Returns:\n        Tensor: Tensor of shape (N, 4) containing bounding boxes in (cx, cy, w, h) format.\n    \"\"\"\n    # 1. Calculate the center coordinates (cx, cy)\n    cx = (boxes[:, 0] + boxes[:, 2]) / 2\n    cy = (boxes[:, 1] + boxes[:, 3]) / 2\n\n    # 2. Calculate the width (w) and height (h)\n    w = boxes[:, 2] - boxes[:, 0]\n    h = boxes[:, 3] - boxes[:, 1]\n\n    # 3. Stack the results into a single tensor\n    converted_boxes = torch.stack((cx, cy, w, h), dim=1)\n\n    # 4. Return the converted bounding boxes\n    return converted_boxes\n```\n\nThis function takes a tensor of bounding boxes in the (x1, y1, x2, y2) format and returns a tensor with the bounding boxes in the (cx, cy, w, h) format. The calculations for the center coordinates and dimensions are vectorized for efficiency.",
+    "prompt": "Write a Python function _box_xyxy_to_cxcywh that converts bounding boxes from the (x1, y1, x2, y2) format, where (x1, y1) and (x2, y2) represent the top-left and bottom-right corners, to the (cx, cy, w, h) format, where (cx, cy) represents the center and (w, h) represents the width and height. The function should return a tensor with the converted bounding boxes.",
+    "function_name": "_box_xyxy_to_cxcywh",
+    "ground_truth": "torchvision/ops/_box_convert.py",
+    "test": "test/test_ops.py::TestBoxConvert",
+    "class": "",
+    "stage": "Pre-Post processing",
+    "task": "",
+    "data": "Image"
+}

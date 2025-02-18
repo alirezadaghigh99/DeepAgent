@@ -1,0 +1,56 @@
+stage: Model Construction
+task: 
+data: 
+
+prompt:
+Write a python function su2_generators that The function computes the generators of the SU(2) group for a specific representation
+    determined by the value of 'k'. These generators are commonly used in the study of
+    quantum mechanics, angular momentum, and related areas of physics and mathematics.
+    The generators are represented as matrices.
+
+    The SU(2) group is a fundamental concept in quantum mechanics and symmetry theory.
+    The generators of the group, denoted as J_x, J_y, and J_z, represent the three
+    components of angular momentum operators. These generators play a key role in
+    describing the transformation properties of physical systems under rotations.
+
+    The returned tensor contains three matrices corresponding to the x, y, and z generators,
+    usually denoted as J_x, J_y, and J_z. These matrices form a basis for the Lie algebra
+    of the SU(2) group.
+
+    In linear algebra, specifically within the context of quantum mechanics, lowering and
+    raising operators are fundamental concepts that play a crucial role in altering the
+    eigenvalues of certain operators while acting on quantum states. These operators are
+    often referred to collectively as "ladder operators."
+
+    A lowering operator is an operator that, when applied to a quantum state, reduces the
+    eigenvalue associated with a particular observable. In the context of SU(2), the lowering
+    operator corresponds to J_-.
+
+    Conversely, a raising operator is an operator that increases the eigenvalue of an
+    observable when applied to a quantum state. In the context of SU(2), the raising operator
+    corresponds to J_+.
+
+    The z-generator matrix represents the component of angular momentum along the z-axis,
+    often denoted as J_z. It commutes with both J_x and J_y and is responsible for quantizing
+    the angular momentum.
+
+    Note that the dimensions of the returned tensor will be (3, 2j+1, 2j+1), where each matrix
+    has a size of (2j+1) x (2j+1).
+    Parameters
+    ----------
+    k : int
+        The representation index, which determines the order of the representation.
+
+    Returns
+    -------
+    torch.Tensor
+        A stack of three SU(2) generators, corresponding to J_x, J_z, and J_y.
+
+
+ ground Truth:deepchem/utils/equivariance_utils.py
+
+ repo:deepchem
+ 
+ test_cases:deepchem/utils/test/test_equivariance_utils.py
+
+ function:su2_generators

@@ -1,0 +1,802 @@
+output file:
+processed_korniamatrix_cofactor_tensor170.json
+function:
+matrix_cofactor_tensor
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_shape[cpu-float32-batch_shape1]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_shape[cpu-float32-batch_shape3] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_gradcheck[cpu] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_shape[cpu-float32-batch_shape0] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_shape[cpu-float32-batch_shape2] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_shape[cpu-float32-batch_shape2]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_smoke[cpu-float32] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_shape[cpu-float32-batch_shape3]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_shape[cpu-float32-batch_shape0]', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_correct_decompose FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_shape[cpu-float32-batch_shape1] FAILED', '../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_shape[cpu-float32-batch_shape4] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_smoke[cpu-float32]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_shape[cpu-float32-batch_shape4]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_correct_decompose', 'FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_gradcheck[cpu]'}
+
+All Test Cases On Generated code:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'cudagraphs', 'jit', 'openxla', 'tvm', 'onnxrt', None, 'inductor'}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 9 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_smoke[cpu-float32] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_shape[cpu-float32-batch_shape0] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_shape[cpu-float32-batch_shape1] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_shape[cpu-float32-batch_shape2] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_shape[cpu-float32-batch_shape3] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_shape[cpu-float32-batch_shape4] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_gradcheck[cpu] FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_correct_decompose FAILED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_consistency[cpu-float32] XFAIL
+
+=================================== FAILURES ===================================
+__________ TestDecomposeEssentialMatrixNoSVD.test_smoke[cpu-float32] ___________
+
+self = <test_essential.TestDecomposeEssentialMatrixNoSVD object at 0x796303322d10>
+device = device(type='cpu'), dtype = torch.float32
+
+    def test_smoke(self, device, dtype):
+        E_mat = torch.rand(1, 3, 3, device=device, dtype=dtype)
+>       R1, R2, t = epi.decompose_essential_matrix_no_svd(E_mat)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py:277: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+E_mat = tensor([[[0.7981, 0.9329, 0.4910],
+         [0.9283, 0.4153, 0.8120],
+         [0.3739, 0.3201, 0.5634]]])
+
+    def decompose_essential_matrix_no_svd(E_mat: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
+        r"""Decompose the essential matrix to rotation and translation.
+    
+           Recover rotation and translation from essential matrices without SVD
+          reference: Horn, Berthold KP. Recovering baseline and orientation from essential matrix[J].
+          J. Opt. Soc. Am, 1990, 110.
+    
+          Args:
+           E_mat: The essential matrix in the form of :math:`(*, 3, 3)`.
+    
+        Returns:
+           A tuple containing the first and second possible rotation matrices and the translation vector.
+           The shape of the tensors with be same input :math:`[(*, 3, 3), (*, 3, 3), (*, 3, 1)]`.
+        """
+        KORNIA_CHECK_SHAPE(E_mat, ["*", "3", "3"])
+        if len(E_mat.shape) != 3:
+            E_mat = E_mat.view(-1, 3, 3)
+    
+        B = E_mat.shape[0]
+    
+        # Eq.18, choose the largest of the three possible pairwise cross-products
+        e1, e2, e3 = E_mat[..., 0], E_mat[..., 1], E_mat[..., 2]
+    
+        # sqrt(1/2 trace(EE^T)), B
+        scale_factor = torch.sqrt(0.5 * torch.diagonal(E_mat @ E_mat.transpose(-1, -2), dim1=-1, dim2=-2).sum(-1))
+    
+        # B, 3, 3
+        cross_products = torch.stack([torch.cross(e1, e2), torch.cross(e2, e3), torch.cross(e3, e1)], dim=1)
+        # B, 3, 1
+        norms = torch.norm(cross_products, dim=-1, keepdim=True)
+    
+        # B, to select which b1
+        largest = torch.argmax(norms, dim=-2)
+    
+        # B, 3, 3
+        e_cross_products = scale_factor[:, None, None] * cross_products / norms
+    
+        # broadcast the index
+        index_expanded = largest.unsqueeze(-1).expand(-1, -1, e_cross_products.size(-1))
+    
+        # slice at dim=1, select for each batch one b (e1*e2 or e2*e3 or e3*e1), B, 1, 3
+        b1 = torch.gather(e_cross_products, dim=1, index=index_expanded).squeeze(1)
+        # normalization
+        b1_ = b1 / torch.norm(b1, dim=-1, keepdim=True)
+    
+        # skew-symmetric matrix
+        B1 = torch.zeros((B, 3, 3), device=E_mat.device, dtype=E_mat.dtype)
+        t0, t1, t2 = b1[:, 0], b1[:, 1], b1[:, 2]
+        B1[:, 0, 1], B1[:, 1, 0] = -t2, t2
+        B1[:, 0, 2], B1[:, 2, 0] = t1, -t1
+        B1[:, 1, 2], B1[:, 2, 1] = -t0, t0
+    
+        # the second translation and rotation
+        B2 = -B1
+        b2 = -b1
+    
+        # Eq.24, recover R
+        # (bb)R = Cofactors(E)^T - BE
+>       R1 = (matrix_cofactor_tensor(E_mat) - B1 @ E_mat) / (b1 * b1).sum().unsqueeze(-1)
+E       TypeError: unsupported operand type(s) for -: 'numpy.ndarray' and 'Tensor'
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/essential.py:382: TypeError
+____ TestDecomposeEssentialMatrixNoSVD.test_shape[cpu-float32-batch_shape0] ____
+
+self = <test_essential.TestDecomposeEssentialMatrixNoSVD object at 0x7963033231c0>
+batch_shape = (3, 3), device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_shape", [(3, 3), (1, 3, 3), (2, 3, 3), (2, 1, 3, 3), (3, 2, 1, 3, 3)])
+    def test_shape(self, batch_shape, device, dtype):
+        E_mat = torch.rand(batch_shape, device=device, dtype=dtype)
+>       R1, R2, t = epi.decompose_essential_matrix_no_svd(E_mat)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py:285: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+E_mat = tensor([[[0.0600, 0.7343, 0.3841],
+         [0.6613, 0.7514, 0.6826],
+         [0.0468, 0.2826, 0.9587]]])
+
+    def decompose_essential_matrix_no_svd(E_mat: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
+        r"""Decompose the essential matrix to rotation and translation.
+    
+           Recover rotation and translation from essential matrices without SVD
+          reference: Horn, Berthold KP. Recovering baseline and orientation from essential matrix[J].
+          J. Opt. Soc. Am, 1990, 110.
+    
+          Args:
+           E_mat: The essential matrix in the form of :math:`(*, 3, 3)`.
+    
+        Returns:
+           A tuple containing the first and second possible rotation matrices and the translation vector.
+           The shape of the tensors with be same input :math:`[(*, 3, 3), (*, 3, 3), (*, 3, 1)]`.
+        """
+        KORNIA_CHECK_SHAPE(E_mat, ["*", "3", "3"])
+        if len(E_mat.shape) != 3:
+            E_mat = E_mat.view(-1, 3, 3)
+    
+        B = E_mat.shape[0]
+    
+        # Eq.18, choose the largest of the three possible pairwise cross-products
+        e1, e2, e3 = E_mat[..., 0], E_mat[..., 1], E_mat[..., 2]
+    
+        # sqrt(1/2 trace(EE^T)), B
+        scale_factor = torch.sqrt(0.5 * torch.diagonal(E_mat @ E_mat.transpose(-1, -2), dim1=-1, dim2=-2).sum(-1))
+    
+        # B, 3, 3
+        cross_products = torch.stack([torch.cross(e1, e2), torch.cross(e2, e3), torch.cross(e3, e1)], dim=1)
+        # B, 3, 1
+        norms = torch.norm(cross_products, dim=-1, keepdim=True)
+    
+        # B, to select which b1
+        largest = torch.argmax(norms, dim=-2)
+    
+        # B, 3, 3
+        e_cross_products = scale_factor[:, None, None] * cross_products / norms
+    
+        # broadcast the index
+        index_expanded = largest.unsqueeze(-1).expand(-1, -1, e_cross_products.size(-1))
+    
+        # slice at dim=1, select for each batch one b (e1*e2 or e2*e3 or e3*e1), B, 1, 3
+        b1 = torch.gather(e_cross_products, dim=1, index=index_expanded).squeeze(1)
+        # normalization
+        b1_ = b1 / torch.norm(b1, dim=-1, keepdim=True)
+    
+        # skew-symmetric matrix
+        B1 = torch.zeros((B, 3, 3), device=E_mat.device, dtype=E_mat.dtype)
+        t0, t1, t2 = b1[:, 0], b1[:, 1], b1[:, 2]
+        B1[:, 0, 1], B1[:, 1, 0] = -t2, t2
+        B1[:, 0, 2], B1[:, 2, 0] = t1, -t1
+        B1[:, 1, 2], B1[:, 2, 1] = -t0, t0
+    
+        # the second translation and rotation
+        B2 = -B1
+        b2 = -b1
+    
+        # Eq.24, recover R
+        # (bb)R = Cofactors(E)^T - BE
+>       R1 = (matrix_cofactor_tensor(E_mat) - B1 @ E_mat) / (b1 * b1).sum().unsqueeze(-1)
+E       TypeError: unsupported operand type(s) for -: 'numpy.ndarray' and 'Tensor'
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/essential.py:382: TypeError
+____ TestDecomposeEssentialMatrixNoSVD.test_shape[cpu-float32-batch_shape1] ____
+
+self = <test_essential.TestDecomposeEssentialMatrixNoSVD object at 0x796303323100>
+batch_shape = (1, 3, 3), device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_shape", [(3, 3), (1, 3, 3), (2, 3, 3), (2, 1, 3, 3), (3, 2, 1, 3, 3)])
+    def test_shape(self, batch_shape, device, dtype):
+        E_mat = torch.rand(batch_shape, device=device, dtype=dtype)
+>       R1, R2, t = epi.decompose_essential_matrix_no_svd(E_mat)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py:285: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+E_mat = tensor([[[0.4716, 0.2378, 0.5157],
+         [0.7876, 0.9172, 0.3056],
+         [0.5626, 0.0876, 0.3973]]])
+
+    def decompose_essential_matrix_no_svd(E_mat: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
+        r"""Decompose the essential matrix to rotation and translation.
+    
+           Recover rotation and translation from essential matrices without SVD
+          reference: Horn, Berthold KP. Recovering baseline and orientation from essential matrix[J].
+          J. Opt. Soc. Am, 1990, 110.
+    
+          Args:
+           E_mat: The essential matrix in the form of :math:`(*, 3, 3)`.
+    
+        Returns:
+           A tuple containing the first and second possible rotation matrices and the translation vector.
+           The shape of the tensors with be same input :math:`[(*, 3, 3), (*, 3, 3), (*, 3, 1)]`.
+        """
+        KORNIA_CHECK_SHAPE(E_mat, ["*", "3", "3"])
+        if len(E_mat.shape) != 3:
+            E_mat = E_mat.view(-1, 3, 3)
+    
+        B = E_mat.shape[0]
+    
+        # Eq.18, choose the largest of the three possible pairwise cross-products
+        e1, e2, e3 = E_mat[..., 0], E_mat[..., 1], E_mat[..., 2]
+    
+        # sqrt(1/2 trace(EE^T)), B
+        scale_factor = torch.sqrt(0.5 * torch.diagonal(E_mat @ E_mat.transpose(-1, -2), dim1=-1, dim2=-2).sum(-1))
+    
+        # B, 3, 3
+        cross_products = torch.stack([torch.cross(e1, e2), torch.cross(e2, e3), torch.cross(e3, e1)], dim=1)
+        # B, 3, 1
+        norms = torch.norm(cross_products, dim=-1, keepdim=True)
+    
+        # B, to select which b1
+        largest = torch.argmax(norms, dim=-2)
+    
+        # B, 3, 3
+        e_cross_products = scale_factor[:, None, None] * cross_products / norms
+    
+        # broadcast the index
+        index_expanded = largest.unsqueeze(-1).expand(-1, -1, e_cross_products.size(-1))
+    
+        # slice at dim=1, select for each batch one b (e1*e2 or e2*e3 or e3*e1), B, 1, 3
+        b1 = torch.gather(e_cross_products, dim=1, index=index_expanded).squeeze(1)
+        # normalization
+        b1_ = b1 / torch.norm(b1, dim=-1, keepdim=True)
+    
+        # skew-symmetric matrix
+        B1 = torch.zeros((B, 3, 3), device=E_mat.device, dtype=E_mat.dtype)
+        t0, t1, t2 = b1[:, 0], b1[:, 1], b1[:, 2]
+        B1[:, 0, 1], B1[:, 1, 0] = -t2, t2
+        B1[:, 0, 2], B1[:, 2, 0] = t1, -t1
+        B1[:, 1, 2], B1[:, 2, 1] = -t0, t0
+    
+        # the second translation and rotation
+        B2 = -B1
+        b2 = -b1
+    
+        # Eq.24, recover R
+        # (bb)R = Cofactors(E)^T - BE
+>       R1 = (matrix_cofactor_tensor(E_mat) - B1 @ E_mat) / (b1 * b1).sum().unsqueeze(-1)
+E       TypeError: unsupported operand type(s) for -: 'numpy.ndarray' and 'Tensor'
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/essential.py:382: TypeError
+____ TestDecomposeEssentialMatrixNoSVD.test_shape[cpu-float32-batch_shape2] ____
+
+self = <test_essential.TestDecomposeEssentialMatrixNoSVD object at 0x7963033234c0>
+batch_shape = (2, 3, 3), device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_shape", [(3, 3), (1, 3, 3), (2, 3, 3), (2, 1, 3, 3), (3, 2, 1, 3, 3)])
+    def test_shape(self, batch_shape, device, dtype):
+        E_mat = torch.rand(batch_shape, device=device, dtype=dtype)
+>       R1, R2, t = epi.decompose_essential_matrix_no_svd(E_mat)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py:285: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+E_mat = tensor([[[0.9475, 0.6454, 0.8568],
+         [0.4521, 0.0768, 0.0704],
+         [0.4654, 0.9181, 0.5441]],
+
+        [[0.8124, 0.1390, 0.6211],
+         [0.6632, 0.0534, 0.0270],
+         [0.0162, 0.2024, 0.0863]]])
+
+    def decompose_essential_matrix_no_svd(E_mat: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
+        r"""Decompose the essential matrix to rotation and translation.
+    
+           Recover rotation and translation from essential matrices without SVD
+          reference: Horn, Berthold KP. Recovering baseline and orientation from essential matrix[J].
+          J. Opt. Soc. Am, 1990, 110.
+    
+          Args:
+           E_mat: The essential matrix in the form of :math:`(*, 3, 3)`.
+    
+        Returns:
+           A tuple containing the first and second possible rotation matrices and the translation vector.
+           The shape of the tensors with be same input :math:`[(*, 3, 3), (*, 3, 3), (*, 3, 1)]`.
+        """
+        KORNIA_CHECK_SHAPE(E_mat, ["*", "3", "3"])
+        if len(E_mat.shape) != 3:
+            E_mat = E_mat.view(-1, 3, 3)
+    
+        B = E_mat.shape[0]
+    
+        # Eq.18, choose the largest of the three possible pairwise cross-products
+        e1, e2, e3 = E_mat[..., 0], E_mat[..., 1], E_mat[..., 2]
+    
+        # sqrt(1/2 trace(EE^T)), B
+        scale_factor = torch.sqrt(0.5 * torch.diagonal(E_mat @ E_mat.transpose(-1, -2), dim1=-1, dim2=-2).sum(-1))
+    
+        # B, 3, 3
+        cross_products = torch.stack([torch.cross(e1, e2), torch.cross(e2, e3), torch.cross(e3, e1)], dim=1)
+        # B, 3, 1
+        norms = torch.norm(cross_products, dim=-1, keepdim=True)
+    
+        # B, to select which b1
+        largest = torch.argmax(norms, dim=-2)
+    
+        # B, 3, 3
+        e_cross_products = scale_factor[:, None, None] * cross_products / norms
+    
+        # broadcast the index
+        index_expanded = largest.unsqueeze(-1).expand(-1, -1, e_cross_products.size(-1))
+    
+        # slice at dim=1, select for each batch one b (e1*e2 or e2*e3 or e3*e1), B, 1, 3
+        b1 = torch.gather(e_cross_products, dim=1, index=index_expanded).squeeze(1)
+        # normalization
+        b1_ = b1 / torch.norm(b1, dim=-1, keepdim=True)
+    
+        # skew-symmetric matrix
+        B1 = torch.zeros((B, 3, 3), device=E_mat.device, dtype=E_mat.dtype)
+        t0, t1, t2 = b1[:, 0], b1[:, 1], b1[:, 2]
+        B1[:, 0, 1], B1[:, 1, 0] = -t2, t2
+        B1[:, 0, 2], B1[:, 2, 0] = t1, -t1
+        B1[:, 1, 2], B1[:, 2, 1] = -t0, t0
+    
+        # the second translation and rotation
+        B2 = -B1
+        b2 = -b1
+    
+        # Eq.24, recover R
+        # (bb)R = Cofactors(E)^T - BE
+>       R1 = (matrix_cofactor_tensor(E_mat) - B1 @ E_mat) / (b1 * b1).sum().unsqueeze(-1)
+E       TypeError: unsupported operand type(s) for -: 'numpy.ndarray' and 'Tensor'
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/essential.py:382: TypeError
+____ TestDecomposeEssentialMatrixNoSVD.test_shape[cpu-float32-batch_shape3] ____
+
+self = <test_essential.TestDecomposeEssentialMatrixNoSVD object at 0x796303323580>
+batch_shape = (2, 1, 3, 3), device = device(type='cpu'), dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_shape", [(3, 3), (1, 3, 3), (2, 3, 3), (2, 1, 3, 3), (3, 2, 1, 3, 3)])
+    def test_shape(self, batch_shape, device, dtype):
+        E_mat = torch.rand(batch_shape, device=device, dtype=dtype)
+>       R1, R2, t = epi.decompose_essential_matrix_no_svd(E_mat)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py:285: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+E_mat = tensor([[[0.0018, 0.7966, 0.5841],
+         [0.6007, 0.5430, 0.8401],
+         [0.3170, 0.6395, 0.6778]],
+
+        [[0.2216, 0.0618, 0.9987],
+         [0.6255, 0.0580, 0.0201],
+         [0.2356, 0.9738, 0.4909]]])
+
+    def decompose_essential_matrix_no_svd(E_mat: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
+        r"""Decompose the essential matrix to rotation and translation.
+    
+           Recover rotation and translation from essential matrices without SVD
+          reference: Horn, Berthold KP. Recovering baseline and orientation from essential matrix[J].
+          J. Opt. Soc. Am, 1990, 110.
+    
+          Args:
+           E_mat: The essential matrix in the form of :math:`(*, 3, 3)`.
+    
+        Returns:
+           A tuple containing the first and second possible rotation matrices and the translation vector.
+           The shape of the tensors with be same input :math:`[(*, 3, 3), (*, 3, 3), (*, 3, 1)]`.
+        """
+        KORNIA_CHECK_SHAPE(E_mat, ["*", "3", "3"])
+        if len(E_mat.shape) != 3:
+            E_mat = E_mat.view(-1, 3, 3)
+    
+        B = E_mat.shape[0]
+    
+        # Eq.18, choose the largest of the three possible pairwise cross-products
+        e1, e2, e3 = E_mat[..., 0], E_mat[..., 1], E_mat[..., 2]
+    
+        # sqrt(1/2 trace(EE^T)), B
+        scale_factor = torch.sqrt(0.5 * torch.diagonal(E_mat @ E_mat.transpose(-1, -2), dim1=-1, dim2=-2).sum(-1))
+    
+        # B, 3, 3
+        cross_products = torch.stack([torch.cross(e1, e2), torch.cross(e2, e3), torch.cross(e3, e1)], dim=1)
+        # B, 3, 1
+        norms = torch.norm(cross_products, dim=-1, keepdim=True)
+    
+        # B, to select which b1
+        largest = torch.argmax(norms, dim=-2)
+    
+        # B, 3, 3
+        e_cross_products = scale_factor[:, None, None] * cross_products / norms
+    
+        # broadcast the index
+        index_expanded = largest.unsqueeze(-1).expand(-1, -1, e_cross_products.size(-1))
+    
+        # slice at dim=1, select for each batch one b (e1*e2 or e2*e3 or e3*e1), B, 1, 3
+        b1 = torch.gather(e_cross_products, dim=1, index=index_expanded).squeeze(1)
+        # normalization
+        b1_ = b1 / torch.norm(b1, dim=-1, keepdim=True)
+    
+        # skew-symmetric matrix
+        B1 = torch.zeros((B, 3, 3), device=E_mat.device, dtype=E_mat.dtype)
+        t0, t1, t2 = b1[:, 0], b1[:, 1], b1[:, 2]
+        B1[:, 0, 1], B1[:, 1, 0] = -t2, t2
+        B1[:, 0, 2], B1[:, 2, 0] = t1, -t1
+        B1[:, 1, 2], B1[:, 2, 1] = -t0, t0
+    
+        # the second translation and rotation
+        B2 = -B1
+        b2 = -b1
+    
+        # Eq.24, recover R
+        # (bb)R = Cofactors(E)^T - BE
+>       R1 = (matrix_cofactor_tensor(E_mat) - B1 @ E_mat) / (b1 * b1).sum().unsqueeze(-1)
+E       TypeError: unsupported operand type(s) for -: 'numpy.ndarray' and 'Tensor'
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/essential.py:382: TypeError
+____ TestDecomposeEssentialMatrixNoSVD.test_shape[cpu-float32-batch_shape4] ____
+
+self = <test_essential.TestDecomposeEssentialMatrixNoSVD object at 0x796303323640>
+batch_shape = (3, 2, 1, 3, 3), device = device(type='cpu')
+dtype = torch.float32
+
+    @pytest.mark.parametrize("batch_shape", [(3, 3), (1, 3, 3), (2, 3, 3), (2, 1, 3, 3), (3, 2, 1, 3, 3)])
+    def test_shape(self, batch_shape, device, dtype):
+        E_mat = torch.rand(batch_shape, device=device, dtype=dtype)
+>       R1, R2, t = epi.decompose_essential_matrix_no_svd(E_mat)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py:285: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+E_mat = tensor([[[0.7213, 0.6989, 0.7228],
+         [0.1058, 0.2779, 0.3500],
+         [0.7597, 0.4014, 0.8917]],
+
+        [[0..., 0.0185]],
+
+        [[0.0742, 0.1068, 0.3999],
+         [0.1669, 0.2993, 0.3176],
+         [0.2290, 0.0687, 0.1812]]])
+
+    def decompose_essential_matrix_no_svd(E_mat: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
+        r"""Decompose the essential matrix to rotation and translation.
+    
+           Recover rotation and translation from essential matrices without SVD
+          reference: Horn, Berthold KP. Recovering baseline and orientation from essential matrix[J].
+          J. Opt. Soc. Am, 1990, 110.
+    
+          Args:
+           E_mat: The essential matrix in the form of :math:`(*, 3, 3)`.
+    
+        Returns:
+           A tuple containing the first and second possible rotation matrices and the translation vector.
+           The shape of the tensors with be same input :math:`[(*, 3, 3), (*, 3, 3), (*, 3, 1)]`.
+        """
+        KORNIA_CHECK_SHAPE(E_mat, ["*", "3", "3"])
+        if len(E_mat.shape) != 3:
+            E_mat = E_mat.view(-1, 3, 3)
+    
+        B = E_mat.shape[0]
+    
+        # Eq.18, choose the largest of the three possible pairwise cross-products
+        e1, e2, e3 = E_mat[..., 0], E_mat[..., 1], E_mat[..., 2]
+    
+        # sqrt(1/2 trace(EE^T)), B
+        scale_factor = torch.sqrt(0.5 * torch.diagonal(E_mat @ E_mat.transpose(-1, -2), dim1=-1, dim2=-2).sum(-1))
+    
+        # B, 3, 3
+        cross_products = torch.stack([torch.cross(e1, e2), torch.cross(e2, e3), torch.cross(e3, e1)], dim=1)
+        # B, 3, 1
+        norms = torch.norm(cross_products, dim=-1, keepdim=True)
+    
+        # B, to select which b1
+        largest = torch.argmax(norms, dim=-2)
+    
+        # B, 3, 3
+        e_cross_products = scale_factor[:, None, None] * cross_products / norms
+    
+        # broadcast the index
+        index_expanded = largest.unsqueeze(-1).expand(-1, -1, e_cross_products.size(-1))
+    
+        # slice at dim=1, select for each batch one b (e1*e2 or e2*e3 or e3*e1), B, 1, 3
+        b1 = torch.gather(e_cross_products, dim=1, index=index_expanded).squeeze(1)
+        # normalization
+        b1_ = b1 / torch.norm(b1, dim=-1, keepdim=True)
+    
+        # skew-symmetric matrix
+        B1 = torch.zeros((B, 3, 3), device=E_mat.device, dtype=E_mat.dtype)
+        t0, t1, t2 = b1[:, 0], b1[:, 1], b1[:, 2]
+        B1[:, 0, 1], B1[:, 1, 0] = -t2, t2
+        B1[:, 0, 2], B1[:, 2, 0] = t1, -t1
+        B1[:, 1, 2], B1[:, 2, 1] = -t0, t0
+    
+        # the second translation and rotation
+        B2 = -B1
+        b2 = -b1
+    
+        # Eq.24, recover R
+        # (bb)R = Cofactors(E)^T - BE
+>       R1 = (matrix_cofactor_tensor(E_mat) - B1 @ E_mat) / (b1 * b1).sum().unsqueeze(-1)
+E       TypeError: unsupported operand type(s) for -: 'numpy.ndarray' and 'Tensor'
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/essential.py:382: TypeError
+____________ TestDecomposeEssentialMatrixNoSVD.test_gradcheck[cpu] _____________
+
+self = <test_essential.TestDecomposeEssentialMatrixNoSVD object at 0x7963033238b0>
+device = device(type='cpu')
+
+    def test_gradcheck(self, device):
+        E_mat = torch.rand(1, 3, 3, device=device, dtype=torch.float64, requires_grad=True)
+    
+        def eval_rot1(input):
+            return epi.decompose_essential_matrix_no_svd(input)[0]
+    
+        def eval_rot2(input):
+            return epi.decompose_essential_matrix_no_svd(input)[1]
+    
+        def eval_vec(input):
+            return epi.decompose_essential_matrix_no_svd(input)[2]
+    
+>       self.gradcheck(eval_rot1, (E_mat,))
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py:304: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/kornia/kornia/testing/base.py:143: in gradcheck
+    return gradcheck(func, inputs, raise_exception=raise_exception, fast_mode=fast_mode, **kwargs)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2052: in gradcheck
+    return _gradcheck_helper(**args)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/autograd/gradcheck.py:2074: in _gradcheck_helper
+    func_out = func(*tupled_inputs)
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py:296: in eval_rot1
+    return epi.decompose_essential_matrix_no_svd(input)[0]
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/essential.py:382: in decompose_essential_matrix_no_svd
+    R1 = (matrix_cofactor_tensor(E_mat) - B1 @ E_mat) / (b1 * b1).sum().unsqueeze(-1)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/numeric.py:26: in matrix_cofactor_tensor
+    return matrix_cofactor_tensor(matrix)
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/temp.py:8: in matrix_cofactor_tensor
+    determinants = np.linalg.det(matrix)
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/numpy/linalg/linalg.py:2175: in det
+    a = asarray(a)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = tensor([[[0.4863, 0.2759, 0.2949],
+         [0.7225, 0.9245, 0.8314],
+         [0.7663, 0.2604, 0.5588]]], dtype=torch.float64, requires_grad=True)
+dtype = None
+
+    def __array__(self, dtype=None):
+        if has_torch_function_unary(self):
+            return handle_torch_function(Tensor.__array__, (self,), self, dtype=dtype)
+        if dtype is None:
+>           return self.numpy()
+E           RuntimeError: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+
+/local/data0/moved_data/publishablew/kornia/kornia/venv/lib/python3.10/site-packages/torch/_tensor.py:1149: RuntimeError
+___________ TestDecomposeEssentialMatrixNoSVD.test_correct_decompose ___________
+
+self = <test_essential.TestDecomposeEssentialMatrixNoSVD object at 0x796303323a90>
+
+    def test_correct_decompose(self):
+        E_mat = torch.tensor([[[0.2057, -3.8266, 3.1615], [4.5417, -1.0707, -2.2023], [-1.0975, 1.6386, -0.6590]]])
+        R1, R2, t = epi.decompose_essential_matrix(E_mat)
+>       R1_1, R2_1, t_1 = epi.decompose_essential_matrix_no_svd(E_mat)
+
+/local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py:311: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+E_mat = tensor([[[ 0.2057, -3.8266,  3.1615],
+         [ 4.5417, -1.0707, -2.2023],
+         [-1.0975,  1.6386, -0.6590]]])
+
+    def decompose_essential_matrix_no_svd(E_mat: torch.Tensor) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
+        r"""Decompose the essential matrix to rotation and translation.
+    
+           Recover rotation and translation from essential matrices without SVD
+          reference: Horn, Berthold KP. Recovering baseline and orientation from essential matrix[J].
+          J. Opt. Soc. Am, 1990, 110.
+    
+          Args:
+           E_mat: The essential matrix in the form of :math:`(*, 3, 3)`.
+    
+        Returns:
+           A tuple containing the first and second possible rotation matrices and the translation vector.
+           The shape of the tensors with be same input :math:`[(*, 3, 3), (*, 3, 3), (*, 3, 1)]`.
+        """
+        KORNIA_CHECK_SHAPE(E_mat, ["*", "3", "3"])
+        if len(E_mat.shape) != 3:
+            E_mat = E_mat.view(-1, 3, 3)
+    
+        B = E_mat.shape[0]
+    
+        # Eq.18, choose the largest of the three possible pairwise cross-products
+        e1, e2, e3 = E_mat[..., 0], E_mat[..., 1], E_mat[..., 2]
+    
+        # sqrt(1/2 trace(EE^T)), B
+        scale_factor = torch.sqrt(0.5 * torch.diagonal(E_mat @ E_mat.transpose(-1, -2), dim1=-1, dim2=-2).sum(-1))
+    
+        # B, 3, 3
+        cross_products = torch.stack([torch.cross(e1, e2), torch.cross(e2, e3), torch.cross(e3, e1)], dim=1)
+        # B, 3, 1
+        norms = torch.norm(cross_products, dim=-1, keepdim=True)
+    
+        # B, to select which b1
+        largest = torch.argmax(norms, dim=-2)
+    
+        # B, 3, 3
+        e_cross_products = scale_factor[:, None, None] * cross_products / norms
+    
+        # broadcast the index
+        index_expanded = largest.unsqueeze(-1).expand(-1, -1, e_cross_products.size(-1))
+    
+        # slice at dim=1, select for each batch one b (e1*e2 or e2*e3 or e3*e1), B, 1, 3
+        b1 = torch.gather(e_cross_products, dim=1, index=index_expanded).squeeze(1)
+        # normalization
+        b1_ = b1 / torch.norm(b1, dim=-1, keepdim=True)
+    
+        # skew-symmetric matrix
+        B1 = torch.zeros((B, 3, 3), device=E_mat.device, dtype=E_mat.dtype)
+        t0, t1, t2 = b1[:, 0], b1[:, 1], b1[:, 2]
+        B1[:, 0, 1], B1[:, 1, 0] = -t2, t2
+        B1[:, 0, 2], B1[:, 2, 0] = t1, -t1
+        B1[:, 1, 2], B1[:, 2, 1] = -t0, t0
+    
+        # the second translation and rotation
+        B2 = -B1
+        b2 = -b1
+    
+        # Eq.24, recover R
+        # (bb)R = Cofactors(E)^T - BE
+>       R1 = (matrix_cofactor_tensor(E_mat) - B1 @ E_mat) / (b1 * b1).sum().unsqueeze(-1)
+E       TypeError: unsupported operand type(s) for -: 'numpy.ndarray' and 'Tensor'
+
+/local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/essential.py:382: TypeError
+=============================== warnings summary ===============================
+tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_smoke[cpu-float32]
+  /local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/essential.py:351: UserWarning: Using torch.cross without specifying the dim arg is deprecated.
+  Please either pass the dim explicitly or simply use torch.linalg.cross.
+  The default value of dim will change to agree with that of linalg.cross in a future release. (Triggered internally at ../aten/src/ATen/native/Cross.cpp:62.)
+    cross_products = torch.stack([torch.cross(e1, e2), torch.cross(e2, e3), torch.cross(e3, e1)], dim=1)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_smoke[cpu-float32]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_shape[cpu-float32-batch_shape0]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_shape[cpu-float32-batch_shape1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_shape[cpu-float32-batch_shape2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_shape[cpu-float32-batch_shape3]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_shape[cpu-float32-batch_shape4]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_gradcheck[cpu]
+FAILED ../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_correct_decompose
+=================== 8 failed, 1 xfailed, 1 warning in 0.63s ====================
+
+
+Final Test Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'onnxrt', 'jit', 'cudagraphs', 'tvm', 'inductor', 'openxla', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 9 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_smoke[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_shape[cpu-float32-batch_shape0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_shape[cpu-float32-batch_shape1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_shape[cpu-float32-batch_shape2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_shape[cpu-float32-batch_shape3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_shape[cpu-float32-batch_shape4] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_gradcheck[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_correct_decompose PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_consistency[cpu-float32] XPASS
+
+=============================== warnings summary ===============================
+tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_smoke[cpu-float32]
+  /local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/essential.py:351: UserWarning: Using torch.cross without specifying the dim arg is deprecated.
+  Please either pass the dim explicitly or simply use torch.linalg.cross.
+  The default value of dim will change to agree with that of linalg.cross in a future release. (Triggered internally at ../aten/src/ATen/native/Cross.cpp:62.)
+    cross_products = torch.stack([torch.cross(e1, e2), torch.cross(e2, e3), torch.cross(e3, e1)], dim=1)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=================== 8 passed, 1 xpassed, 1 warning in 0.18s ====================
+
+
+Initial Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'jit', 'inductor', 'openxla', 'cudagraphs', 'onnxrt', 'tvm', None}
+model weights cached: []
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 9 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_smoke[cpu-float32] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_shape[cpu-float32-batch_shape0] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_shape[cpu-float32-batch_shape1] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_shape[cpu-float32-batch_shape2] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_shape[cpu-float32-batch_shape3] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_shape[cpu-float32-batch_shape4] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_gradcheck[cpu] PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_correct_decompose PASSED
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_consistency[cpu-float32] XPASS
+
+=============================== warnings summary ===============================
+tests/geometry/epipolar/test_essential.py::TestDecomposeEssentialMatrixNoSVD::test_smoke[cpu-float32]
+  /local/data0/moved_data/publishablew/kornia/kornia/kornia/geometry/epipolar/essential.py:351: UserWarning: Using torch.cross without specifying the dim arg is deprecated.
+  Please either pass the dim explicitly or simply use torch.linalg.cross.
+  The default value of dim will change to agree with that of linalg.cross in a future release. (Triggered internally at ../aten/src/ATen/native/Cross.cpp:62.)
+    cross_products = torch.stack([torch.cross(e1, e2), torch.cross(e2, e3), torch.cross(e3, e1)], dim=1)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=================== 8 passed, 1 xpassed, 1 warning in 0.21s ====================

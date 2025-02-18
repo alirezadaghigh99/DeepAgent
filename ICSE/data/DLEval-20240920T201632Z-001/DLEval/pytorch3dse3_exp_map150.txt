@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Generate a Python function called se3_exp_map that converts a batch of logarithmic representations of SE(3) matrices to a batch of 4x4 SE(3) matrices using the exponential map. The input is a torch.Tensor log_transform representing the logarithmic representations of SE(3) matrices and an optional float eps for clamping the rotation logarithm. The output is a torch.Tensor batch of transformation matrices of shape (minibatch, 4, 4). The function handles the conversion from the 6D representation to a 4x4 SE(3) matrix by computing the rotation and translation components using helper functions _so3_exp_map and _se3_V_matrix. The function also performs error checking on the input shape and raises a ValueError if the input is of incorrect shape.
+
+ ground Truth:pytorch3d/transforms/se3.py
+
+ repo:pytorch3d
+
+ function:se3_exp_map
+ 
+ test_cases:tests/test_se3.py

@@ -1,0 +1,42 @@
+stage: 
+task: Recommendation
+data: Inference
+
+prompt:
+Generate a Python function `eval_out` for the class `RBM` that implements multinomial sampling from a trained model. The function should return the sampled visible units (`v`) and the conditional probability of the visible units given the hidden units (`pvh`). The function involves first sampling the hidden units (`h`) using `sample_hidden_units` based on the visible units (`self.vu`). It then computes the linear combination of `h` with the weights (`self.w`) and biases (`self.bv`) to obtain `phi_h`. Using `phi_h`, the function calculates the conditional probability `pvh` with `multinomial_distribution` and finally samples the visible units using `multinomial_sampling`.
+
+Class structure:
+
+```python
+class RBM:
+    def __init__(self, possible_ratings, visible_units, hidden_units=500, keep_prob=0.7, init_stdv=0.1, learning_rate=0.004, minibatch_size=100, training_epoch=20, display_epoch=10, sampling_protocol=[50, 70, 80, 90, 100], debug=False, with_metrics=False, seed=42):
+        self.vu = None  # visible units input placeholder
+        self.w = None  # weights between visible and hidden units
+        self.bv = None  # biases of the visible units
+        pass
+
+    def sample_hidden_units(self, vv):
+        # Outputs activation probability of the hidden units and the sampled hidden units
+        pass
+
+    def multinomial_distribution(self, phi):
+        # Outputs a tensor representing the probability distribution over the visible units
+        pass
+
+    def multinomial_sampling(self, pr):
+        # Outputs a tensor representing sampled values of the visible units
+        pass
+
+    def eval_out(self):
+        # Implement the function as described in the prompt
+```
+
+ ground Truth:recommenders/models/rbm/rbm.py
+
+ repo:recommenders
+
+ function:eval_out
+ 
+ class:RBM
+ 
+  test_cases:tests/unit/recommenders/models/test_rbm.py

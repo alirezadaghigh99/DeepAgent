@@ -1,0 +1,14 @@
+stage: Model Construction
+task: Detection
+data: Image
+
+prompt:
+Generate a Python function called camera_position_from_spherical_angles that calculates the location of the camera based on the distance away from the target point, the elevation and azimuth angles. The function takes in parameters distance (float), elevation (float), azimuth (float), degrees (bool = True), and device (Device = "cpu") and returns a torch.Tensor representing the (N, 3) xyz location of the camera. The angles can be specified in either degrees or radians, and the function handles broadcasting the input arguments to have shape (N, 1) before performing the calculations.
+
+ ground Truth:pytorch3d/renderer/cameras.py
+
+ repo:pytorch3d
+
+ function:camera_position_from_spherical_angles
+ 
+ test_cases:tests/test_cameras.py 

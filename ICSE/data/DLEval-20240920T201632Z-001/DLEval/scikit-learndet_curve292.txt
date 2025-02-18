@@ -1,0 +1,27 @@
+stage: Evaluating&Metrics
+task: Classification
+data: 
+
+prompt:
+Generate a Python function called det_curve that computes error rates for different probability thresholds in a binary classification task. The function takes in the following parameters:
+
+- y_true: ndarray of shape (n_samples), representing the true binary labels.
+- y_score: ndarray of shape (n_samples), representing target scores.
+- pos_label: int, float, bool, or str, default=None, indicating the label of the positive class.
+- sample_weight: array-like of shape (n_samples), default=None, representing sample weights.
+
+The function returns the following outputs:
+
+- fpr: ndarray of shape (n_thresholds), representing the false positive rate.
+- fnr: ndarray of shape (n_thresholds), representing the false negative rate.
+- thresholds: ndarray of shape (n_thresholds), representing decreasing score values.
+
+The det_curve function is used for evaluating ranking and error tradeoffs in binary classification tasks. It is recommended to read more about it in the User Guide. Additionally, the function provides examples on how to use it with sample data.
+
+ ground Truth:sklearn/metrics/_ranking.py
+
+ repo:scikit-learn
+
+ function:det_curve
+ 
+ test_cases:sklearn/metrics/tests/test_ranking.py

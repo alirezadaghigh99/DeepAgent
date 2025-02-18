@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: Image
+
+prompt:
+Generate a python function called convert_gray_image_to_bgr that takes in a numpy array grayscale image as input and returns a numpy array BGR image. The function checks if the input image is grayscale and converts it to BGR format using OpenCV's cv2.cvtColor function if necessary. The output is the converted BGR image.
+
+ ground Truth:inference/core/utils/image_utils.py
+
+ repo:inference
+
+ function:convert_gray_image_to_bgr
+ 
+ test_cases:tests/inference/unit_tests/core/utils/test_image_utils.py

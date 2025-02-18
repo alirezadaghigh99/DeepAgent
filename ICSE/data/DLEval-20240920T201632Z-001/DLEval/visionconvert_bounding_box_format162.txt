@@ -1,0 +1,21 @@
+stage: Model Construction
+task: 
+data: Image
+
+prompt:Generate a Python function called convert_bounding_box_format that takes in four parameters: inpt (a torch.Tensor), old_format (an optional BoundingBoxFormat), new_format (an optional BoundingBoxFormat), and inplace (a boolean with a default value of False). The function returns a torch.Tensor.
+
+The function first checks if new_format is None and raises a TypeError if it is. It then logs API usage if not in a scripting environment. It converts old_format and new_format to uppercase if they are strings. 
+
+If the input is a pure tensor or in a scripting environment, it checks if old_format is None and raises a ValueError if it is. It then calls the _convert_bounding_box_format function with the appropriate parameters and returns the result.
+
+If the input is a tv_tensors.BoundingBoxes object, it checks if old_format is not None and raises a ValueError if it is. It then calls the _convert_bounding_box_format function with the appropriate parameters, wraps the output in a tv_tensors object with the new_format, and returns it.
+
+If the input is neither a pure tensor nor a tv_tensors.BoundingBoxes object, it raises a TypeError.
+
+ ground Truth:torchvision/transforms/v2/functional/_meta.py
+
+ repo:vision
+
+ function:convert_bounding_box_format
+ 
+ test_cases:test/test_transforms_v2.py::TestResize::test_bounding_boxes_correctness

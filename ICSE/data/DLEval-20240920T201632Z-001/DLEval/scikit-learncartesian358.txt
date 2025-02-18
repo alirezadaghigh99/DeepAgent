@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: Classification
+data: Table
+
+prompt:
+Generate a Python function called cartesian that generates a cartesian product of input arrays. The function takes two parameters: arrays, a list of array-like objects to form the cartesian product of, and out, an ndarray of shape (M, len(arrays)) where the cartesian product will be placed. If out is not provided, the function will create an output array with the most permissive dtype of the input arrays. The function returns an ndarray of shape (M, len(arrays)) containing the cartesian products formed from the input arrays. Note that this function may not be used on more than 32 arrays due to limitations in the underlying numpy functions. An example usage of this function is shown in the code snippet provided.
+
+ ground Truth:sklearn/utils/extmath.py
+
+ repo:scikit-learn
+
+ function:cartesian
+ 
+ test_cases:sklearn/utils/tests/test_extmath.py

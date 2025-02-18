@@ -1,0 +1,21 @@
+stage: Model Construction
+task: 
+data: tabular
+
+prompt:
+complete the following functoin in torch :
+def rinverse(M, sym=False):
+    """Matrix inversion of rightmost dimensions (batched).
+
+    For 1, 2, and 3 dimensions this uses the formulae.
+    For larger matrices, it uses blockwise inversion to reduce to
+    smaller matrices.
+    """
+
+ ground Truth:pyro/ops/linalg.py
+
+ repo:pyro
+
+ function:rinverse
+ 
+ test_cases:tests/ops/test_linalg.py 

@@ -1,0 +1,29 @@
+stage: Pre-Post processing
+task: 
+data: 
+
+prompt:
+Write a python function named convert_like Convert a tensor to the same type as another.
+
+    Args:
+        tensor1 (tensor_like): tensor to convert
+        tensor2 (tensor_like): tensor with corresponding type to convert to
+
+    Returns:
+        tensor_like: a tensor with the same shape, values, and dtype as ``tensor1`` and the
+        same type as ``tensor2``.
+
+    **Example**
+
+    >>> x = np.array([1, 2])
+    >>> y = tf.Variable([3, 4])
+    >>> convert_like(x, y)
+    <tf.Tensor: shape=(2,), dtype=int64, numpy=array([1, 2])>
+
+ ground Truth:pennylane/math/utils.py
+
+ repo:pennylane
+
+ function:convert_like
+ 
+ test_cases:tests/math/test_matrix_manipulation.py::TestPartialTrace

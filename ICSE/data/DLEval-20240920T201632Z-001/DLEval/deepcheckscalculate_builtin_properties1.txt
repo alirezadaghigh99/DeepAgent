@@ -1,0 +1,12 @@
+stage: Inference
+task: 
+data: Text
+
+prompt:
+Generate a Python function called calculate_builtin_properties that calculates various properties on provided text samples. The function takes in raw_text as a sequence of strings and optional parameters include_properties, ignore_properties, include_long_calculation_properties, ignore_non_english_samples_for_english_properties, device, models_storage, batch_size, cache_models, and use_onnx_models. The function returns a tuple containing a dictionary with the property name as key and a list of property values for each text as value, and a dictionary with the property name as key and the property's type as value. The function handles the calculation of properties such as text length, average word length, sentiment, toxicity, fluency, formality, and more.
+
+ ground Truth:deepchecks/nlp/utils/text_properties.py
+
+ repo:deepchecks
+
+ function:calculate_builtin_properties

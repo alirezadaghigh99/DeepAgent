@@ -1,0 +1,31 @@
+stage: Model Construction
+task: 
+data: 
+
+prompt:
+Write a python function The `safe_solve_with_mask` function is designed to solve a system of linear equations \( AX = B \) while handling potential issues related to singular matrices. The function provides a safe mechanism to avoid crashes due to singular matrices by returning a mask that indicates valid solutions. Here's a breakdown of the input, output, and error handling:
+
+### Input:
+- **`B` (Tensor):** The right-hand side tensor in the equation \( AX = B \).
+- **`A` (Tensor):** The matrix tensor that will be solved against \( B \).
+  
+### Output:
+- **`X` (Tensor):** The solution tensor that satisfies \( AX = B \), or a closest approximation if the matrix is near-singular.
+- **`A_LU` (Tensor):** The LU decomposition of matrix `A`, which is useful for numerical stability.
+- **`valid_mask` (Tensor):** A boolean tensor indicating which rows of the batch were solved successfully (i.e., without encountering a singular matrix).
+
+### Error Handling:
+- If the PyTorch version is less than 1.10, the function falls back to a different solution method (`_torch_solve_cast`) and issues a warning that the validity mask might not be correct.
+- If `B` is not a tensor, an `AssertionError` is raised.
+- If the data type of `B` is not `torch.float32` or `torch.float64`, it is cast to `torch.float32` for compatibility with the solution functions.
+- The function includes branches for compatibility with different PyTorch versions, ensuring that it can handle LU decomposition and solving in a way that is consistent with the PyTorch version in use.
+
+This function is useful in scenarios where solving linear equations might encounter singular matrices, and you need a robust method to handle such cases gracefully.
+
+ ground Truth:kornia/utils/helpers.py#L238
+
+ repo:kornia
+
+ function:safe_solve_with_mask
+ 
+ test_cases:tests/utils/test_helpers.py::TestSolveWithMask

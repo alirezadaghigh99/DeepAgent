@@ -1,0 +1,18 @@
+stage: Pre-Post processing
+task: Classification
+data: Image
+
+prompt:
+Generate a Python function called get_rotation_matrix2d that calculates an affine matrix of 2D rotation. The function takes three inputs: center (center of the rotation in the source image with shape (B, 2)), angle (rotation angle in degrees with shape (B)), and scale (scale factor for x, y scaling with shape (B, 2)). 
+
+The function returns the affine matrix of 2D rotation with shape (B, 2, 3). The rotation matrix is calculated based on the provided center, angle, and scale values. The transformation maps the rotation center to itself, but adjustments can be made if needed.
+
+Ensure that the inputs are of type Tensor and have the correct shapes before performing the calculations. The function also includes an example usage with sample input values. This function is often used in conjunction with the warp_affine function.
+
+ ground Truth:kornia/geometry/transform/imgwarp.py
+
+ repo:kornia
+
+ function:get_rotation_matrix2d
+ 
+ test_cases:tests/geometry/transform/test_imgwarp.py::TestRotationMatrix2d

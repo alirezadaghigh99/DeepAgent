@@ -1,0 +1,24 @@
+stage: Model Construction
+task: Detection
+data: Image
+
+prompt:
+Write a python functoin run_8point Compute the fundamental matrix using the DLT formulation.
+
+    The linear system is solved by using the Weighted Least Squares Solution for the 8 Points algorithm.
+
+    Args:
+        points1: A set of points in the first image with a tensor shape :math:`(B, N, 2), N>=8`.
+        points2: A set of points in the second image with a tensor shape :math:`(B, N, 2), N>=8`.
+        weights: Tensor containing the weights per point correspondence with a shape of :math:`(B, N)`.
+
+    Returns:
+        the computed fundamental matrix with shape :math:`(B, 3, 3)`.
+
+ ground Truth:kornia/geometry/epipolar/fundamental.py#L169
+
+ repo:kornia
+
+ function:run_8point
+ 
+ test_cases:tests/geometry/epipolar/test_fundamental.py::TestFindFundamental

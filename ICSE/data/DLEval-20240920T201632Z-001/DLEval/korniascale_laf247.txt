@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: Detection
+data: image
+
+prompt:
+Create a function `scale_laf` that multiplies the region part of a Local Affine Frame (LAF) by a `scale_coef`, keeping the center, shape, and orientation unchanged but altering the region area. The function accepts a tensor `laf` of shape `(B, N, 2, 3)` and a `scale_coef`, which can be either a float or a tensor. It returns the scaled LAF of the same shape. A `TypeError` is raised if `scale_coef` is neither a float nor a tensor.
+
+ ground Truth:kornia/feature/laf.py#L133
+
+ repo:kornia
+
+ function:scale_laf
+ 
+ test_cases:tests/feature/test_laf.py::TestScaleLAF

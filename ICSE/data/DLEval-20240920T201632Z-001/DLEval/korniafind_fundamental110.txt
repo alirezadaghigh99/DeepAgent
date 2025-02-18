@@ -1,0 +1,26 @@
+stage: Inference
+task: 
+data: Image
+
+prompt:
+Generate a Python function called find_fundamental 
+Args:
+        points1: A set of points in the first image with a tensor shape :math:`(B, N, 2), N>=8`.
+        points2: A set of points in the second image with a tensor shape :math:`(B, N, 2), N>=8`.
+        weights: Tensor containing the weights per point correspondence with a shape of :math:`(B, N)`.
+        method: The method to use for computing the fundamental matrix. Supported methods are "7POINT" and "8POINT".
+
+    Returns:
+        the computed fundamental matrix with shape :math:`(B, 3*m, 3)`, where `m` number of fundamental matrix.
+
+    Raises:
+        ValueError: If an invalid method is provided.
+
+
+ ground Truth:kornia/geometry/epipolar/fundamental.py
+
+ repo:kornia
+
+ function:find_fundamental
+ 
+ test_cases:tests/geometry/epipolar/test_fundamental.py::TestFindFundamental

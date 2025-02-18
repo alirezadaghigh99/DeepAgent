@@ -1,0 +1,11 @@
+{
+    "result": "To implement the `forward` method for the `Rot180` class, you need to rotate the input tensor by 180 degrees. This can be achieved by flipping the tensor both vertically and horizontally. In PyTorch, you can use the `torch.flip` function to accomplish this. Here's how you can implement the `forward` method:\n\n```python\nimport torch\nfrom torch import Tensor\nfrom torch.nn import Module\n\nclass Rot180(Module):\n    def forward(self, input: Tensor) -> Tensor:\n        # Flip the tensor along the last two dimensions (H and W) to rotate by 180 degrees\n        return torch.flip(input, dims=(-2, -1))\n```\n\n### Explanation:\n- **`torch.flip`**: This function is used to reverse the order of elements in the specified dimensions of the tensor.\n- **`dims=(-2, -1)`**: This specifies that the flip should occur along the last two dimensions, which correspond to the height (H) and width (W) of the image. This effectively rotates the image by 180 degrees.\n- **Handling Different Shapes**: The method works for both single images of shape `(C, H, W)` and batches of images with shape `(*, C, H, W)` because it only flips the last two dimensions, regardless of the number of leading dimensions.\n\nThis implementation is efficient and leverages PyTorch's built-in operations to perform the rotation.",
+    "prompt": "**Task:** Write the `forward` method for the `Rot180` class. This method should rotate the input tensor by 180 degrees.\n\n**Class Context:**\n```python\nclass Rot180(Module):\n    def forward(self, input: Tensor) -> Tensor:\n        # Implement this function\n```\n\n**Requirements:**\n- The input tensor can be of shape `(C, H, W)` or a batch of tensors of shape `(*, C, H, W)`.\n\n---\n\nThis prompt guides the user to implement the `forward` method that performs a 180-degree rotation on the input tensor.",
+    "function_name": "forward",
+    "ground_truth": "kornia/geometry/transform/flips.py",
+    "test": "tests/geometry/transform/test_flip.py::TestRot180",
+    "class": "Rot180",
+    "stage": "Image",
+    "task": "",
+    "data": "Training"
+}

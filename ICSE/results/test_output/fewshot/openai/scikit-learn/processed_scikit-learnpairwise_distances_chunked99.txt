@@ -1,0 +1,543 @@
+output file:
+processed_scikit-learnpairwise_distances_chunked99.json
+function:
+pairwise_distances_chunked
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>4]', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>3] FAILED', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>5] FAILED', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>4] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>3]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>0]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>5]', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>1] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>6]', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>6] FAILED', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>2] FAILED', 'FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>2]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>1]'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.9.0, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/scikit-learn/scikit-learn
+configfile: setup.cfg
+plugins: cov-6.0.0
+collecting ... collected 7 items
+
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>0] I: Seeding RNGs with 468098313
+FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>1] FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>2] FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>3] FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>4] FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>5] FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>6] FAILED
+
+=================================== FAILURES ===================================
+___________ test_pairwise_distances_chunked_reduce_valid[<lambda>0] ____________
+
+good_reduce = <function <lambda> at 0x7c27342b0ee0>
+
+    @pytest.mark.parametrize(
+        "good_reduce",
+        [
+            lambda D, start: list(D),
+            lambda D, start: np.array(D),
+            lambda D, start: (list(D), list(D)),
+        ]
+        + [
+            lambda D, start, scipy_csr_type=scipy_csr_type: scipy_csr_type(D)
+            for scipy_csr_type in CSR_CONTAINERS
+        ]
+        + [
+            lambda D, start, scipy_dok_type=scipy_dok_type: (
+                scipy_dok_type(D),
+                np.array(D),
+                list(D),
+            )
+            for scipy_dok_type in DOK_CONTAINERS
+        ],
+    )
+    def test_pairwise_distances_chunked_reduce_valid(good_reduce):
+        X = np.arange(10).reshape(-1, 1)
+>       S_chunks = pairwise_distances_chunked(
+            X, None, reduce_func=good_reduce, working_memory=64
+        )
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py:635: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/pairwise.py:1544: in pairwise_distances_chunked
+    from .temp import pairwise_distances_chunked
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    import itertools
+    import warnings
+    from functools import partial
+    from numbers import Integral, Real
+    import numpy as np
+    from joblib import effective_n_jobs
+    from scipy.sparse import csr_matrix, issparse
+    from scipy.spatial import distance
+    from .. import config_context
+    from ..exceptions import DataConversionWarning
+    from ..preprocessing import normalize
+    from ..utils import check_array, gen_batches, gen_even_slices
+    from ..utils._array_api import _fill_or_add_to_diagonal, _find_matching_floating_dtype, _is_numpy_namespace, _max_precision_float_dtype, _modify_in_place_if_numpy, device, get_namespace, get_namespace_and_device
+    from ..utils._chunking import get_chunk_n_rows
+    from ..utils._mask import _get_mask
+    from ..utils._missing import is_scalar_nan
+    from ..utils._param_validation import Hidden, Interval, MissingValues, Options, StrOptions, validate_params
+    from ..utils.deprecation import _deprecate_force_all_finite
+    from ..utils.extmath import row_norms, safe_sparse_dot
+    from ..utils.fixes import parse_version, sp_base_version
+    from ..utils.parallel import Parallel, delayed
+    from ..utils.validation import _num_samples, check_non_negative
+    from ._pairwise_distances_reduction import ArgKmin
+    from ._pairwise_fast import _chi2_kernel_fast, _sparse_manhattan
+>   from sklearn.metrics import pairwise_distances_chunked1
+E   ImportError: cannot import name 'pairwise_distances_chunked1' from 'sklearn.metrics' (/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/__init__.py)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/temp.py:25: ImportError
+___________ test_pairwise_distances_chunked_reduce_valid[<lambda>1] ____________
+
+good_reduce = <function <lambda> at 0x7c27342b0f70>
+
+    @pytest.mark.parametrize(
+        "good_reduce",
+        [
+            lambda D, start: list(D),
+            lambda D, start: np.array(D),
+            lambda D, start: (list(D), list(D)),
+        ]
+        + [
+            lambda D, start, scipy_csr_type=scipy_csr_type: scipy_csr_type(D)
+            for scipy_csr_type in CSR_CONTAINERS
+        ]
+        + [
+            lambda D, start, scipy_dok_type=scipy_dok_type: (
+                scipy_dok_type(D),
+                np.array(D),
+                list(D),
+            )
+            for scipy_dok_type in DOK_CONTAINERS
+        ],
+    )
+    def test_pairwise_distances_chunked_reduce_valid(good_reduce):
+        X = np.arange(10).reshape(-1, 1)
+>       S_chunks = pairwise_distances_chunked(
+            X, None, reduce_func=good_reduce, working_memory=64
+        )
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py:635: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/pairwise.py:1544: in pairwise_distances_chunked
+    from .temp import pairwise_distances_chunked
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    import itertools
+    import warnings
+    from functools import partial
+    from numbers import Integral, Real
+    import numpy as np
+    from joblib import effective_n_jobs
+    from scipy.sparse import csr_matrix, issparse
+    from scipy.spatial import distance
+    from .. import config_context
+    from ..exceptions import DataConversionWarning
+    from ..preprocessing import normalize
+    from ..utils import check_array, gen_batches, gen_even_slices
+    from ..utils._array_api import _fill_or_add_to_diagonal, _find_matching_floating_dtype, _is_numpy_namespace, _max_precision_float_dtype, _modify_in_place_if_numpy, device, get_namespace, get_namespace_and_device
+    from ..utils._chunking import get_chunk_n_rows
+    from ..utils._mask import _get_mask
+    from ..utils._missing import is_scalar_nan
+    from ..utils._param_validation import Hidden, Interval, MissingValues, Options, StrOptions, validate_params
+    from ..utils.deprecation import _deprecate_force_all_finite
+    from ..utils.extmath import row_norms, safe_sparse_dot
+    from ..utils.fixes import parse_version, sp_base_version
+    from ..utils.parallel import Parallel, delayed
+    from ..utils.validation import _num_samples, check_non_negative
+    from ._pairwise_distances_reduction import ArgKmin
+    from ._pairwise_fast import _chi2_kernel_fast, _sparse_manhattan
+>   from sklearn.metrics import pairwise_distances_chunked1
+E   ImportError: cannot import name 'pairwise_distances_chunked1' from 'sklearn.metrics' (/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/__init__.py)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/temp.py:25: ImportError
+___________ test_pairwise_distances_chunked_reduce_valid[<lambda>2] ____________
+
+good_reduce = <function <lambda> at 0x7c2734295040>
+
+    @pytest.mark.parametrize(
+        "good_reduce",
+        [
+            lambda D, start: list(D),
+            lambda D, start: np.array(D),
+            lambda D, start: (list(D), list(D)),
+        ]
+        + [
+            lambda D, start, scipy_csr_type=scipy_csr_type: scipy_csr_type(D)
+            for scipy_csr_type in CSR_CONTAINERS
+        ]
+        + [
+            lambda D, start, scipy_dok_type=scipy_dok_type: (
+                scipy_dok_type(D),
+                np.array(D),
+                list(D),
+            )
+            for scipy_dok_type in DOK_CONTAINERS
+        ],
+    )
+    def test_pairwise_distances_chunked_reduce_valid(good_reduce):
+        X = np.arange(10).reshape(-1, 1)
+>       S_chunks = pairwise_distances_chunked(
+            X, None, reduce_func=good_reduce, working_memory=64
+        )
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py:635: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/pairwise.py:1544: in pairwise_distances_chunked
+    from .temp import pairwise_distances_chunked
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    import itertools
+    import warnings
+    from functools import partial
+    from numbers import Integral, Real
+    import numpy as np
+    from joblib import effective_n_jobs
+    from scipy.sparse import csr_matrix, issparse
+    from scipy.spatial import distance
+    from .. import config_context
+    from ..exceptions import DataConversionWarning
+    from ..preprocessing import normalize
+    from ..utils import check_array, gen_batches, gen_even_slices
+    from ..utils._array_api import _fill_or_add_to_diagonal, _find_matching_floating_dtype, _is_numpy_namespace, _max_precision_float_dtype, _modify_in_place_if_numpy, device, get_namespace, get_namespace_and_device
+    from ..utils._chunking import get_chunk_n_rows
+    from ..utils._mask import _get_mask
+    from ..utils._missing import is_scalar_nan
+    from ..utils._param_validation import Hidden, Interval, MissingValues, Options, StrOptions, validate_params
+    from ..utils.deprecation import _deprecate_force_all_finite
+    from ..utils.extmath import row_norms, safe_sparse_dot
+    from ..utils.fixes import parse_version, sp_base_version
+    from ..utils.parallel import Parallel, delayed
+    from ..utils.validation import _num_samples, check_non_negative
+    from ._pairwise_distances_reduction import ArgKmin
+    from ._pairwise_fast import _chi2_kernel_fast, _sparse_manhattan
+>   from sklearn.metrics import pairwise_distances_chunked1
+E   ImportError: cannot import name 'pairwise_distances_chunked1' from 'sklearn.metrics' (/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/__init__.py)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/temp.py:25: ImportError
+___________ test_pairwise_distances_chunked_reduce_valid[<lambda>3] ____________
+
+good_reduce = <function <listcomp>.<lambda> at 0x7c2734295160>
+
+    @pytest.mark.parametrize(
+        "good_reduce",
+        [
+            lambda D, start: list(D),
+            lambda D, start: np.array(D),
+            lambda D, start: (list(D), list(D)),
+        ]
+        + [
+            lambda D, start, scipy_csr_type=scipy_csr_type: scipy_csr_type(D)
+            for scipy_csr_type in CSR_CONTAINERS
+        ]
+        + [
+            lambda D, start, scipy_dok_type=scipy_dok_type: (
+                scipy_dok_type(D),
+                np.array(D),
+                list(D),
+            )
+            for scipy_dok_type in DOK_CONTAINERS
+        ],
+    )
+    def test_pairwise_distances_chunked_reduce_valid(good_reduce):
+        X = np.arange(10).reshape(-1, 1)
+>       S_chunks = pairwise_distances_chunked(
+            X, None, reduce_func=good_reduce, working_memory=64
+        )
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py:635: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/pairwise.py:1544: in pairwise_distances_chunked
+    from .temp import pairwise_distances_chunked
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    import itertools
+    import warnings
+    from functools import partial
+    from numbers import Integral, Real
+    import numpy as np
+    from joblib import effective_n_jobs
+    from scipy.sparse import csr_matrix, issparse
+    from scipy.spatial import distance
+    from .. import config_context
+    from ..exceptions import DataConversionWarning
+    from ..preprocessing import normalize
+    from ..utils import check_array, gen_batches, gen_even_slices
+    from ..utils._array_api import _fill_or_add_to_diagonal, _find_matching_floating_dtype, _is_numpy_namespace, _max_precision_float_dtype, _modify_in_place_if_numpy, device, get_namespace, get_namespace_and_device
+    from ..utils._chunking import get_chunk_n_rows
+    from ..utils._mask import _get_mask
+    from ..utils._missing import is_scalar_nan
+    from ..utils._param_validation import Hidden, Interval, MissingValues, Options, StrOptions, validate_params
+    from ..utils.deprecation import _deprecate_force_all_finite
+    from ..utils.extmath import row_norms, safe_sparse_dot
+    from ..utils.fixes import parse_version, sp_base_version
+    from ..utils.parallel import Parallel, delayed
+    from ..utils.validation import _num_samples, check_non_negative
+    from ._pairwise_distances_reduction import ArgKmin
+    from ._pairwise_fast import _chi2_kernel_fast, _sparse_manhattan
+>   from sklearn.metrics import pairwise_distances_chunked1
+E   ImportError: cannot import name 'pairwise_distances_chunked1' from 'sklearn.metrics' (/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/__init__.py)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/temp.py:25: ImportError
+___________ test_pairwise_distances_chunked_reduce_valid[<lambda>4] ____________
+
+good_reduce = <function <listcomp>.<lambda> at 0x7c27342951f0>
+
+    @pytest.mark.parametrize(
+        "good_reduce",
+        [
+            lambda D, start: list(D),
+            lambda D, start: np.array(D),
+            lambda D, start: (list(D), list(D)),
+        ]
+        + [
+            lambda D, start, scipy_csr_type=scipy_csr_type: scipy_csr_type(D)
+            for scipy_csr_type in CSR_CONTAINERS
+        ]
+        + [
+            lambda D, start, scipy_dok_type=scipy_dok_type: (
+                scipy_dok_type(D),
+                np.array(D),
+                list(D),
+            )
+            for scipy_dok_type in DOK_CONTAINERS
+        ],
+    )
+    def test_pairwise_distances_chunked_reduce_valid(good_reduce):
+        X = np.arange(10).reshape(-1, 1)
+>       S_chunks = pairwise_distances_chunked(
+            X, None, reduce_func=good_reduce, working_memory=64
+        )
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py:635: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/pairwise.py:1544: in pairwise_distances_chunked
+    from .temp import pairwise_distances_chunked
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    import itertools
+    import warnings
+    from functools import partial
+    from numbers import Integral, Real
+    import numpy as np
+    from joblib import effective_n_jobs
+    from scipy.sparse import csr_matrix, issparse
+    from scipy.spatial import distance
+    from .. import config_context
+    from ..exceptions import DataConversionWarning
+    from ..preprocessing import normalize
+    from ..utils import check_array, gen_batches, gen_even_slices
+    from ..utils._array_api import _fill_or_add_to_diagonal, _find_matching_floating_dtype, _is_numpy_namespace, _max_precision_float_dtype, _modify_in_place_if_numpy, device, get_namespace, get_namespace_and_device
+    from ..utils._chunking import get_chunk_n_rows
+    from ..utils._mask import _get_mask
+    from ..utils._missing import is_scalar_nan
+    from ..utils._param_validation import Hidden, Interval, MissingValues, Options, StrOptions, validate_params
+    from ..utils.deprecation import _deprecate_force_all_finite
+    from ..utils.extmath import row_norms, safe_sparse_dot
+    from ..utils.fixes import parse_version, sp_base_version
+    from ..utils.parallel import Parallel, delayed
+    from ..utils.validation import _num_samples, check_non_negative
+    from ._pairwise_distances_reduction import ArgKmin
+    from ._pairwise_fast import _chi2_kernel_fast, _sparse_manhattan
+>   from sklearn.metrics import pairwise_distances_chunked1
+E   ImportError: cannot import name 'pairwise_distances_chunked1' from 'sklearn.metrics' (/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/__init__.py)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/temp.py:25: ImportError
+___________ test_pairwise_distances_chunked_reduce_valid[<lambda>5] ____________
+
+good_reduce = <function <listcomp>.<lambda> at 0x7c2734295280>
+
+    @pytest.mark.parametrize(
+        "good_reduce",
+        [
+            lambda D, start: list(D),
+            lambda D, start: np.array(D),
+            lambda D, start: (list(D), list(D)),
+        ]
+        + [
+            lambda D, start, scipy_csr_type=scipy_csr_type: scipy_csr_type(D)
+            for scipy_csr_type in CSR_CONTAINERS
+        ]
+        + [
+            lambda D, start, scipy_dok_type=scipy_dok_type: (
+                scipy_dok_type(D),
+                np.array(D),
+                list(D),
+            )
+            for scipy_dok_type in DOK_CONTAINERS
+        ],
+    )
+    def test_pairwise_distances_chunked_reduce_valid(good_reduce):
+        X = np.arange(10).reshape(-1, 1)
+>       S_chunks = pairwise_distances_chunked(
+            X, None, reduce_func=good_reduce, working_memory=64
+        )
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py:635: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/pairwise.py:1544: in pairwise_distances_chunked
+    from .temp import pairwise_distances_chunked
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    import itertools
+    import warnings
+    from functools import partial
+    from numbers import Integral, Real
+    import numpy as np
+    from joblib import effective_n_jobs
+    from scipy.sparse import csr_matrix, issparse
+    from scipy.spatial import distance
+    from .. import config_context
+    from ..exceptions import DataConversionWarning
+    from ..preprocessing import normalize
+    from ..utils import check_array, gen_batches, gen_even_slices
+    from ..utils._array_api import _fill_or_add_to_diagonal, _find_matching_floating_dtype, _is_numpy_namespace, _max_precision_float_dtype, _modify_in_place_if_numpy, device, get_namespace, get_namespace_and_device
+    from ..utils._chunking import get_chunk_n_rows
+    from ..utils._mask import _get_mask
+    from ..utils._missing import is_scalar_nan
+    from ..utils._param_validation import Hidden, Interval, MissingValues, Options, StrOptions, validate_params
+    from ..utils.deprecation import _deprecate_force_all_finite
+    from ..utils.extmath import row_norms, safe_sparse_dot
+    from ..utils.fixes import parse_version, sp_base_version
+    from ..utils.parallel import Parallel, delayed
+    from ..utils.validation import _num_samples, check_non_negative
+    from ._pairwise_distances_reduction import ArgKmin
+    from ._pairwise_fast import _chi2_kernel_fast, _sparse_manhattan
+>   from sklearn.metrics import pairwise_distances_chunked1
+E   ImportError: cannot import name 'pairwise_distances_chunked1' from 'sklearn.metrics' (/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/__init__.py)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/temp.py:25: ImportError
+___________ test_pairwise_distances_chunked_reduce_valid[<lambda>6] ____________
+
+good_reduce = <function <listcomp>.<lambda> at 0x7c2734295310>
+
+    @pytest.mark.parametrize(
+        "good_reduce",
+        [
+            lambda D, start: list(D),
+            lambda D, start: np.array(D),
+            lambda D, start: (list(D), list(D)),
+        ]
+        + [
+            lambda D, start, scipy_csr_type=scipy_csr_type: scipy_csr_type(D)
+            for scipy_csr_type in CSR_CONTAINERS
+        ]
+        + [
+            lambda D, start, scipy_dok_type=scipy_dok_type: (
+                scipy_dok_type(D),
+                np.array(D),
+                list(D),
+            )
+            for scipy_dok_type in DOK_CONTAINERS
+        ],
+    )
+    def test_pairwise_distances_chunked_reduce_valid(good_reduce):
+        X = np.arange(10).reshape(-1, 1)
+>       S_chunks = pairwise_distances_chunked(
+            X, None, reduce_func=good_reduce, working_memory=64
+        )
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py:635: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/utils/_param_validation.py:216: in wrapper
+    return func(*args, **kwargs)
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/pairwise.py:1544: in pairwise_distances_chunked
+    from .temp import pairwise_distances_chunked
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    import itertools
+    import warnings
+    from functools import partial
+    from numbers import Integral, Real
+    import numpy as np
+    from joblib import effective_n_jobs
+    from scipy.sparse import csr_matrix, issparse
+    from scipy.spatial import distance
+    from .. import config_context
+    from ..exceptions import DataConversionWarning
+    from ..preprocessing import normalize
+    from ..utils import check_array, gen_batches, gen_even_slices
+    from ..utils._array_api import _fill_or_add_to_diagonal, _find_matching_floating_dtype, _is_numpy_namespace, _max_precision_float_dtype, _modify_in_place_if_numpy, device, get_namespace, get_namespace_and_device
+    from ..utils._chunking import get_chunk_n_rows
+    from ..utils._mask import _get_mask
+    from ..utils._missing import is_scalar_nan
+    from ..utils._param_validation import Hidden, Interval, MissingValues, Options, StrOptions, validate_params
+    from ..utils.deprecation import _deprecate_force_all_finite
+    from ..utils.extmath import row_norms, safe_sparse_dot
+    from ..utils.fixes import parse_version, sp_base_version
+    from ..utils.parallel import Parallel, delayed
+    from ..utils.validation import _num_samples, check_non_negative
+    from ._pairwise_distances_reduction import ArgKmin
+    from ._pairwise_fast import _chi2_kernel_fast, _sparse_manhattan
+>   from sklearn.metrics import pairwise_distances_chunked1
+E   ImportError: cannot import name 'pairwise_distances_chunked1' from 'sklearn.metrics' (/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/__init__.py)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/temp.py:25: ImportError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>0]
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>3]
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>4]
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>6]
+============================== 7 failed in 0.48s ===============================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.9.0, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/scikit-learn/scikit-learn
+configfile: setup.cfg
+plugins: cov-6.0.0
+collecting ... collected 7 items
+
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>0] I: Seeding RNGs with 55228814
+PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>3] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>4] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>5] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>6] PASSED
+
+============================== 7 passed in 0.13s ===============================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.9.0, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/scikit-learn/scikit-learn
+configfile: setup.cfg
+plugins: cov-6.0.0
+collecting ... collected 7 items
+
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>0] I: Seeding RNGs with 192696235
+PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>3] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>4] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>5] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>6] PASSED
+
+============================== 7 passed in 0.15s ===============================

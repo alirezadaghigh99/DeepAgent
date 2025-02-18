@@ -1,0 +1,11 @@
+{
+    "result": "Here's a Python function called `intersect_interval` that computes the intersection of two intervals:\n\n```python\nfrom typing import Tuple\n\ndef intersect_interval(interval1: Tuple[float, float], interval2: Tuple[float, float]) -> Tuple[float, float]:\n    \"\"\"\n    Computes the intersection of two intervals.\n\n    Parameters\n    ----------\n    interval1: Tuple[float, float]\n        Should be `(x1_min, x1_max)`\n    interval2: Tuple[float, float]\n        Should be `(x2_min, x2_max)`\n\n    Returns\n    -------\n    x_intersect: Tuple[float, float]\n        Should be the intersection. If the intersection is empty returns\n        `(0, 0)` to represent the empty set. Otherwise is `(max(x1_min,\n        x2_min), min(x1_max, x2_max))`.\n    \"\"\"\n    x1_min, x1_max = interval1\n    x2_min, x2_max = interval2\n\n    # Calculate the intersection\n    intersect_min = max(x1_min, x2_min)\n    intersect_max = min(x1_max, x2_max)\n\n    # Check if the intersection is empty\n    if intersect_min > intersect_max:\n        return (0, 0)\n    else:\n        return (intersect_min, intersect_max)\n\n# Example usage:\n# interval1 = (1.0, 5.0)\n# interval2 = (3.0, 7.0)\n# print(intersect_interval(interval1, interval2))  # Output: (3.0, 5.0)\n```\n\nThis function takes two intervals as input and calculates their intersection. If the intervals do not overlap, it returns `(0, 0)` to represent the empty set. Otherwise, it returns the overlapping interval.",
+    "prompt": "Generate a Python function called intersect_interavl that Computes the intersection of two intervals.\n\n    Parameters\n    ----------\n    interval1: Tuple[float, float]\n        Should be `(x1_min, x1_max)`\n    interval2: Tuple[float, float]\n        Should be `(x2_min, x2_max)`\n\n    Returns\n    -------\n    x_intersect: Tuple[float, float]\n        Should be the intersection. If the intersection is empty returns\n        `(0, 0)` to represent the empty set. Otherwise is `(max(x1_min,\n        x2_min), min(x1_max, x2_max))`.",
+    "function_name": "intersect_interval",
+    "ground_truth": "deepchem/utils/coordinate_box_utils.py#L235",
+    "test": "deepchem/utils/test/test_coordinate_box_utils.py::TestCoordinateBoxUtils",
+    "class": "",
+    "stage": "Model Construction",
+    "task": "",
+    "data": ""
+}

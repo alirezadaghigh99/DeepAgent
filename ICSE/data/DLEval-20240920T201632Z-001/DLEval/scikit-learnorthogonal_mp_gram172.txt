@@ -1,0 +1,25 @@
+stage: Model Construction
+task: Classification
+data: Table
+
+prompt:
+
+Create a Python function `orthogonal_mp_gram` that implements the Orthogonal Matching Pursuit (OMP) algorithm for solving sparse linear regression problems. The function should accept the following parameters:
+- `X`: A 2D array-like of shape `(n_samples, n_features)` representing the input data. Columns should be assumed to have unit norm.
+- `y`: A 1D or 2D array-like of shape `(n_samples,)` or `(n_samples, n_targets)` representing the target values.
+- `n_nonzero_coefs`: An integer specifying the desired number of non-zero coefficients in the solution. If `None`, this defaults to 10% of the number of features.
+- `tol`: A float specifying the maximum squared norm of the residual. If provided, this overrides `n_nonzero_coefs`.
+- `precompute`: A boolean or the string `'auto'` indicating whether to precompute the Gram matrix for faster computation when `n_targets` or `n_samples` is large.
+- `copy_X`: A boolean indicating whether to copy the input matrix `X` (default is `True`).
+- `return_path`: A boolean indicating whether to return the entire coefficient path for each iteration.
+- `return_n_iter`: A boolean indicating whether to return the number of iterations taken for convergence.
+
+The function should return the coefficients of the OMP solution as a 1D or 2D NumPy array, depending on the input, with an option to return the number of iterations if `return_n_iter` is `True`. Handle edge cases such as when the number of non-zero coefficients exceeds the number of features by raising a `ValueError`. The function should use efficient computation techniques, including the option to precompute the Gram matrix if `precompute` is enabled.
+
+ ground Truth:sklearn/linear_model/_omp.py
+
+ repo:scikit-learn
+
+ function:orthogonal_mp_gram
+ 
+ test_cases:sklearn/linear_model/tests/test_omp.py

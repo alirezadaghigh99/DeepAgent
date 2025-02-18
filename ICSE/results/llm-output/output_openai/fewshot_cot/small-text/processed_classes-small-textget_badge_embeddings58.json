@@ -1,0 +1,11 @@
+{
+    "result": "Error",
+    "prompt": "Write a Python function `get_badge_embeddings` for the `BADGE` class. This function should calculate embeddings scaled by class probabilities, enabling the use of the BADGE strategy for batch active learning. The function takes `embeddings` and `proba` (predicted class probabilities) as input and returns the `badge_embeddings`. For multi-class problems, the embeddings are expanded and scaled for each class; for binary problems, the original embeddings are returned.\n\n```python\nclass BADGE(EmbeddingBasedQueryStrategy):\n    def __init__(self, num_classes):\n        self.num_classes = num_classes\n\n    def get_badge_embeddings(self, embeddings, proba):\n``` \n\nThe `get_badge_embeddings` function should generate an embedding matrix where each original embedding is scaled by the negative class probabilities, except for the most likely class, which is scaled differently. For multi-class classification, this scaling is performed for each class, creating a larger embedding matrix. The output is a 2D numpy array where each row corresponds to an embedding.",
+    "function_name": "get_badge_embeddings",
+    "ground_truth": "small_text/integrations/pytorch/query_strategies/strategies.py",
+    "test": "tests/integration/small_text/integrations/pytorch/query_strategies/test_query_strategies.py::QueryStrategiesTest",
+    "class": "BADGE",
+    "stage": "Text",
+    "task": "Classification",
+    "data": "Evaluation/metrics"
+}

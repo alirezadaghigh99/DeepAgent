@@ -1,0 +1,14 @@
+stage: Model Construction
+task: 
+data: 
+
+prompt:
+Generate a Python function called create_compressed_model_and_algo_for_test that takes in a model, a NNCFConfig object called config, an optional compression_state object, and a boolean force_no_init. The function asserts that the config input is an instance of NNCFConfig, clears the TensorFlow backend session, and if force_no_init is True, sets the compression_state to an empty dictionary. It then creates a compressed model and algorithm using the create_compressed_model function, and returns the compressed model and algorithm as outputs.
+
+ ground Truth:tests/tensorflow/helpers.py
+
+ repo:nncf
+
+ function:create_compressed_model_and_algo_for_test
+ 
+ test_cases:tests/torch/quantization/test_algo_quantization.py::test_quantization_preset

@@ -1,0 +1,14 @@
+stage: Model Construction
+task: 
+data: 
+
+prompt:
+Generate a Python function called create_compressed_model_and_algo_for_test that takes in a neural network model, an optional NNCFConfig object, a dummy forward function, a wrap inputs function, and a compression state dictionary. It returns a tuple containing a compressed model and a compression algorithm controller. The function first validates the NNCFConfig object if provided, then creates a compressed model using the input parameters and returns the compressed model along with the compression algorithm controller.
+
+ ground Truth:tests/torch/helpers.py
+
+ repo:nncf
+
+ function:create_compressed_model_and_algo_for_test
+ 
+ test_cases:tests/torch/quantization/test_algo_quantization.py::test_quantization_preset

@@ -1,0 +1,14 @@
+stage: Model Construction
+task: 
+data: Image
+
+prompt:
+Generate a Python function called to_pil_image that converts a tensor or an ndarray to a PIL Image. The function does not support torchscript. The input parameters are pic (Tensor or numpy.ndarray) and mode (optional). The function returns a PIL Image. The function performs various checks and conversions based on the input data before returning the PIL Image.
+
+ ground Truth:torchvision/transforms/functional.py
+
+ repo:vision
+
+ function:to_pil_image
+ 
+ test_cases:test/test_transforms.py::TestToTensor

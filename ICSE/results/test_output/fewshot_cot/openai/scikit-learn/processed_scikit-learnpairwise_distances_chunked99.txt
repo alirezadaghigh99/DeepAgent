@@ -1,0 +1,627 @@
+output file:
+processed_scikit-learnpairwise_distances_chunked99.json
+function:
+pairwise_distances_chunked
+Error Cases:
+
+Pass or Failed: 0
+
+Related Failed Test Cases:
+{'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>3]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>1]', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>0]', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>4] FAILED', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>1] FAILED', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>3] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>2]', 'FAILED', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>5] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>4]', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>6] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>5]', '../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>2] FAILED', 'FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>6]'}
+
+All Test Cases On Generated code:
+============================= test session starts ==============================
+platform linux -- Python 3.9.0, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/scikit-learn/scikit-learn
+configfile: setup.cfg
+plugins: cov-6.0.0
+collecting ... collected 7 items
+
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>0] I: Seeding RNGs with 817768367
+FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>1] FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>2] FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>3] FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>4] FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>5] FAILED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>6] FAILED
+
+=================================== FAILURES ===================================
+___________ test_pairwise_distances_chunked_reduce_valid[<lambda>0] ____________
+
+good_reduce = <function <lambda> at 0x7eb8760adee0>
+
+    @pytest.mark.parametrize(
+        "good_reduce",
+        [
+            lambda D, start: list(D),
+            lambda D, start: np.array(D),
+            lambda D, start: (list(D), list(D)),
+        ]
+        + [
+            lambda D, start, scipy_csr_type=scipy_csr_type: scipy_csr_type(D)
+            for scipy_csr_type in CSR_CONTAINERS
+        ]
+        + [
+            lambda D, start, scipy_dok_type=scipy_dok_type: (
+                scipy_dok_type(D),
+                np.array(D),
+                list(D),
+            )
+            for scipy_dok_type in DOK_CONTAINERS
+        ],
+    )
+    def test_pairwise_distances_chunked_reduce_valid(good_reduce):
+        X = np.arange(10).reshape(-1, 1)
+        S_chunks = pairwise_distances_chunked(
+            X, None, reduce_func=good_reduce, working_memory=64
+        )
+>       next(S_chunks)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py:638: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+X = array([[0],
+       [1],
+       [2],
+       [3],
+       [4],
+       [5],
+       [6],
+       [7],
+       [8],
+       [9]])
+Y = None, reduce_func = None, metric = 'euclidean', n_jobs = 1
+working_memory = 1024, kwds = {}, n_samples_X = 10, n_samples_Y = 10
+chunk_size = 13421772
+
+    def pairwise_distances_chunked(X: np.ndarray, Y: Optional[np.ndarray]=None, reduce_func: Optional[Callable[[np.ndarray, Tuple[int, int]], Any]]=None, metric: str='euclidean', n_jobs: int=1, working_memory: int=1024, **kwds) -> Iterator:
+        """
+        Compute pairwise distances in chunks and optionally apply a reduction function.
+    
+        Parameters:
+        - X: np.ndarray
+            An array of shape (n_samples_X, n_features).
+        - Y: np.ndarray, optional
+            An array of shape (n_samples_Y, n_features). If None, Y is assumed to be equal to X.
+        - reduce_func: callable, optional
+            A function to apply to each chunk of the distance matrix.
+        - metric: str, default='euclidean'
+            The distance metric to use.
+        - n_jobs: int, default=1
+            The number of jobs to use for the computation.
+        - working_memory: int, default=1024
+            The amount of memory (in MB) to use for computing the distance matrix.
+        - **kwds: additional keyword arguments
+            Additional arguments to pass to the distance function.
+    
+        Yields:
+        - A contiguous slice of the distance matrix, optionally processed by reduce_func.
+        """
+        n_samples_X = X.shape[0]
+        n_samples_Y = Y.shape[0] if Y is not None else n_samples_X
+        chunk_size = int(working_memory * 1024 ** 2 / (n_samples_Y * X.itemsize))
+>       for chunk_start, chunk_stop in gen_batches(n_samples_X, chunk_size):
+E       TypeError: cannot unpack non-iterable slice object
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/temp.py:56: TypeError
+___________ test_pairwise_distances_chunked_reduce_valid[<lambda>1] ____________
+
+good_reduce = <function <lambda> at 0x7eb8760adf70>
+
+    @pytest.mark.parametrize(
+        "good_reduce",
+        [
+            lambda D, start: list(D),
+            lambda D, start: np.array(D),
+            lambda D, start: (list(D), list(D)),
+        ]
+        + [
+            lambda D, start, scipy_csr_type=scipy_csr_type: scipy_csr_type(D)
+            for scipy_csr_type in CSR_CONTAINERS
+        ]
+        + [
+            lambda D, start, scipy_dok_type=scipy_dok_type: (
+                scipy_dok_type(D),
+                np.array(D),
+                list(D),
+            )
+            for scipy_dok_type in DOK_CONTAINERS
+        ],
+    )
+    def test_pairwise_distances_chunked_reduce_valid(good_reduce):
+        X = np.arange(10).reshape(-1, 1)
+        S_chunks = pairwise_distances_chunked(
+            X, None, reduce_func=good_reduce, working_memory=64
+        )
+>       next(S_chunks)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py:638: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+X = array([[0],
+       [1],
+       [2],
+       [3],
+       [4],
+       [5],
+       [6],
+       [7],
+       [8],
+       [9]])
+Y = None, reduce_func = None, metric = 'euclidean', n_jobs = 1
+working_memory = 1024, kwds = {}, n_samples_X = 10, n_samples_Y = 10
+chunk_size = 13421772
+
+    def pairwise_distances_chunked(X: np.ndarray, Y: Optional[np.ndarray]=None, reduce_func: Optional[Callable[[np.ndarray, Tuple[int, int]], Any]]=None, metric: str='euclidean', n_jobs: int=1, working_memory: int=1024, **kwds) -> Iterator:
+        """
+        Compute pairwise distances in chunks and optionally apply a reduction function.
+    
+        Parameters:
+        - X: np.ndarray
+            An array of shape (n_samples_X, n_features).
+        - Y: np.ndarray, optional
+            An array of shape (n_samples_Y, n_features). If None, Y is assumed to be equal to X.
+        - reduce_func: callable, optional
+            A function to apply to each chunk of the distance matrix.
+        - metric: str, default='euclidean'
+            The distance metric to use.
+        - n_jobs: int, default=1
+            The number of jobs to use for the computation.
+        - working_memory: int, default=1024
+            The amount of memory (in MB) to use for computing the distance matrix.
+        - **kwds: additional keyword arguments
+            Additional arguments to pass to the distance function.
+    
+        Yields:
+        - A contiguous slice of the distance matrix, optionally processed by reduce_func.
+        """
+        n_samples_X = X.shape[0]
+        n_samples_Y = Y.shape[0] if Y is not None else n_samples_X
+        chunk_size = int(working_memory * 1024 ** 2 / (n_samples_Y * X.itemsize))
+>       for chunk_start, chunk_stop in gen_batches(n_samples_X, chunk_size):
+E       TypeError: cannot unpack non-iterable slice object
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/temp.py:56: TypeError
+___________ test_pairwise_distances_chunked_reduce_valid[<lambda>2] ____________
+
+good_reduce = <function <lambda> at 0x7eb876085040>
+
+    @pytest.mark.parametrize(
+        "good_reduce",
+        [
+            lambda D, start: list(D),
+            lambda D, start: np.array(D),
+            lambda D, start: (list(D), list(D)),
+        ]
+        + [
+            lambda D, start, scipy_csr_type=scipy_csr_type: scipy_csr_type(D)
+            for scipy_csr_type in CSR_CONTAINERS
+        ]
+        + [
+            lambda D, start, scipy_dok_type=scipy_dok_type: (
+                scipy_dok_type(D),
+                np.array(D),
+                list(D),
+            )
+            for scipy_dok_type in DOK_CONTAINERS
+        ],
+    )
+    def test_pairwise_distances_chunked_reduce_valid(good_reduce):
+        X = np.arange(10).reshape(-1, 1)
+        S_chunks = pairwise_distances_chunked(
+            X, None, reduce_func=good_reduce, working_memory=64
+        )
+>       next(S_chunks)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py:638: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+X = array([[0],
+       [1],
+       [2],
+       [3],
+       [4],
+       [5],
+       [6],
+       [7],
+       [8],
+       [9]])
+Y = None, reduce_func = None, metric = 'euclidean', n_jobs = 1
+working_memory = 1024, kwds = {}, n_samples_X = 10, n_samples_Y = 10
+chunk_size = 13421772
+
+    def pairwise_distances_chunked(X: np.ndarray, Y: Optional[np.ndarray]=None, reduce_func: Optional[Callable[[np.ndarray, Tuple[int, int]], Any]]=None, metric: str='euclidean', n_jobs: int=1, working_memory: int=1024, **kwds) -> Iterator:
+        """
+        Compute pairwise distances in chunks and optionally apply a reduction function.
+    
+        Parameters:
+        - X: np.ndarray
+            An array of shape (n_samples_X, n_features).
+        - Y: np.ndarray, optional
+            An array of shape (n_samples_Y, n_features). If None, Y is assumed to be equal to X.
+        - reduce_func: callable, optional
+            A function to apply to each chunk of the distance matrix.
+        - metric: str, default='euclidean'
+            The distance metric to use.
+        - n_jobs: int, default=1
+            The number of jobs to use for the computation.
+        - working_memory: int, default=1024
+            The amount of memory (in MB) to use for computing the distance matrix.
+        - **kwds: additional keyword arguments
+            Additional arguments to pass to the distance function.
+    
+        Yields:
+        - A contiguous slice of the distance matrix, optionally processed by reduce_func.
+        """
+        n_samples_X = X.shape[0]
+        n_samples_Y = Y.shape[0] if Y is not None else n_samples_X
+        chunk_size = int(working_memory * 1024 ** 2 / (n_samples_Y * X.itemsize))
+>       for chunk_start, chunk_stop in gen_batches(n_samples_X, chunk_size):
+E       TypeError: cannot unpack non-iterable slice object
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/temp.py:56: TypeError
+___________ test_pairwise_distances_chunked_reduce_valid[<lambda>3] ____________
+
+good_reduce = <function <listcomp>.<lambda> at 0x7eb876085160>
+
+    @pytest.mark.parametrize(
+        "good_reduce",
+        [
+            lambda D, start: list(D),
+            lambda D, start: np.array(D),
+            lambda D, start: (list(D), list(D)),
+        ]
+        + [
+            lambda D, start, scipy_csr_type=scipy_csr_type: scipy_csr_type(D)
+            for scipy_csr_type in CSR_CONTAINERS
+        ]
+        + [
+            lambda D, start, scipy_dok_type=scipy_dok_type: (
+                scipy_dok_type(D),
+                np.array(D),
+                list(D),
+            )
+            for scipy_dok_type in DOK_CONTAINERS
+        ],
+    )
+    def test_pairwise_distances_chunked_reduce_valid(good_reduce):
+        X = np.arange(10).reshape(-1, 1)
+        S_chunks = pairwise_distances_chunked(
+            X, None, reduce_func=good_reduce, working_memory=64
+        )
+>       next(S_chunks)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py:638: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+X = array([[0],
+       [1],
+       [2],
+       [3],
+       [4],
+       [5],
+       [6],
+       [7],
+       [8],
+       [9]])
+Y = None, reduce_func = None, metric = 'euclidean', n_jobs = 1
+working_memory = 1024, kwds = {}, n_samples_X = 10, n_samples_Y = 10
+chunk_size = 13421772
+
+    def pairwise_distances_chunked(X: np.ndarray, Y: Optional[np.ndarray]=None, reduce_func: Optional[Callable[[np.ndarray, Tuple[int, int]], Any]]=None, metric: str='euclidean', n_jobs: int=1, working_memory: int=1024, **kwds) -> Iterator:
+        """
+        Compute pairwise distances in chunks and optionally apply a reduction function.
+    
+        Parameters:
+        - X: np.ndarray
+            An array of shape (n_samples_X, n_features).
+        - Y: np.ndarray, optional
+            An array of shape (n_samples_Y, n_features). If None, Y is assumed to be equal to X.
+        - reduce_func: callable, optional
+            A function to apply to each chunk of the distance matrix.
+        - metric: str, default='euclidean'
+            The distance metric to use.
+        - n_jobs: int, default=1
+            The number of jobs to use for the computation.
+        - working_memory: int, default=1024
+            The amount of memory (in MB) to use for computing the distance matrix.
+        - **kwds: additional keyword arguments
+            Additional arguments to pass to the distance function.
+    
+        Yields:
+        - A contiguous slice of the distance matrix, optionally processed by reduce_func.
+        """
+        n_samples_X = X.shape[0]
+        n_samples_Y = Y.shape[0] if Y is not None else n_samples_X
+        chunk_size = int(working_memory * 1024 ** 2 / (n_samples_Y * X.itemsize))
+>       for chunk_start, chunk_stop in gen_batches(n_samples_X, chunk_size):
+E       TypeError: cannot unpack non-iterable slice object
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/temp.py:56: TypeError
+___________ test_pairwise_distances_chunked_reduce_valid[<lambda>4] ____________
+
+good_reduce = <function <listcomp>.<lambda> at 0x7eb8760851f0>
+
+    @pytest.mark.parametrize(
+        "good_reduce",
+        [
+            lambda D, start: list(D),
+            lambda D, start: np.array(D),
+            lambda D, start: (list(D), list(D)),
+        ]
+        + [
+            lambda D, start, scipy_csr_type=scipy_csr_type: scipy_csr_type(D)
+            for scipy_csr_type in CSR_CONTAINERS
+        ]
+        + [
+            lambda D, start, scipy_dok_type=scipy_dok_type: (
+                scipy_dok_type(D),
+                np.array(D),
+                list(D),
+            )
+            for scipy_dok_type in DOK_CONTAINERS
+        ],
+    )
+    def test_pairwise_distances_chunked_reduce_valid(good_reduce):
+        X = np.arange(10).reshape(-1, 1)
+        S_chunks = pairwise_distances_chunked(
+            X, None, reduce_func=good_reduce, working_memory=64
+        )
+>       next(S_chunks)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py:638: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+X = array([[0],
+       [1],
+       [2],
+       [3],
+       [4],
+       [5],
+       [6],
+       [7],
+       [8],
+       [9]])
+Y = None, reduce_func = None, metric = 'euclidean', n_jobs = 1
+working_memory = 1024, kwds = {}, n_samples_X = 10, n_samples_Y = 10
+chunk_size = 13421772
+
+    def pairwise_distances_chunked(X: np.ndarray, Y: Optional[np.ndarray]=None, reduce_func: Optional[Callable[[np.ndarray, Tuple[int, int]], Any]]=None, metric: str='euclidean', n_jobs: int=1, working_memory: int=1024, **kwds) -> Iterator:
+        """
+        Compute pairwise distances in chunks and optionally apply a reduction function.
+    
+        Parameters:
+        - X: np.ndarray
+            An array of shape (n_samples_X, n_features).
+        - Y: np.ndarray, optional
+            An array of shape (n_samples_Y, n_features). If None, Y is assumed to be equal to X.
+        - reduce_func: callable, optional
+            A function to apply to each chunk of the distance matrix.
+        - metric: str, default='euclidean'
+            The distance metric to use.
+        - n_jobs: int, default=1
+            The number of jobs to use for the computation.
+        - working_memory: int, default=1024
+            The amount of memory (in MB) to use for computing the distance matrix.
+        - **kwds: additional keyword arguments
+            Additional arguments to pass to the distance function.
+    
+        Yields:
+        - A contiguous slice of the distance matrix, optionally processed by reduce_func.
+        """
+        n_samples_X = X.shape[0]
+        n_samples_Y = Y.shape[0] if Y is not None else n_samples_X
+        chunk_size = int(working_memory * 1024 ** 2 / (n_samples_Y * X.itemsize))
+>       for chunk_start, chunk_stop in gen_batches(n_samples_X, chunk_size):
+E       TypeError: cannot unpack non-iterable slice object
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/temp.py:56: TypeError
+___________ test_pairwise_distances_chunked_reduce_valid[<lambda>5] ____________
+
+good_reduce = <function <listcomp>.<lambda> at 0x7eb876085280>
+
+    @pytest.mark.parametrize(
+        "good_reduce",
+        [
+            lambda D, start: list(D),
+            lambda D, start: np.array(D),
+            lambda D, start: (list(D), list(D)),
+        ]
+        + [
+            lambda D, start, scipy_csr_type=scipy_csr_type: scipy_csr_type(D)
+            for scipy_csr_type in CSR_CONTAINERS
+        ]
+        + [
+            lambda D, start, scipy_dok_type=scipy_dok_type: (
+                scipy_dok_type(D),
+                np.array(D),
+                list(D),
+            )
+            for scipy_dok_type in DOK_CONTAINERS
+        ],
+    )
+    def test_pairwise_distances_chunked_reduce_valid(good_reduce):
+        X = np.arange(10).reshape(-1, 1)
+        S_chunks = pairwise_distances_chunked(
+            X, None, reduce_func=good_reduce, working_memory=64
+        )
+>       next(S_chunks)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py:638: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+X = array([[0],
+       [1],
+       [2],
+       [3],
+       [4],
+       [5],
+       [6],
+       [7],
+       [8],
+       [9]])
+Y = None, reduce_func = None, metric = 'euclidean', n_jobs = 1
+working_memory = 1024, kwds = {}, n_samples_X = 10, n_samples_Y = 10
+chunk_size = 13421772
+
+    def pairwise_distances_chunked(X: np.ndarray, Y: Optional[np.ndarray]=None, reduce_func: Optional[Callable[[np.ndarray, Tuple[int, int]], Any]]=None, metric: str='euclidean', n_jobs: int=1, working_memory: int=1024, **kwds) -> Iterator:
+        """
+        Compute pairwise distances in chunks and optionally apply a reduction function.
+    
+        Parameters:
+        - X: np.ndarray
+            An array of shape (n_samples_X, n_features).
+        - Y: np.ndarray, optional
+            An array of shape (n_samples_Y, n_features). If None, Y is assumed to be equal to X.
+        - reduce_func: callable, optional
+            A function to apply to each chunk of the distance matrix.
+        - metric: str, default='euclidean'
+            The distance metric to use.
+        - n_jobs: int, default=1
+            The number of jobs to use for the computation.
+        - working_memory: int, default=1024
+            The amount of memory (in MB) to use for computing the distance matrix.
+        - **kwds: additional keyword arguments
+            Additional arguments to pass to the distance function.
+    
+        Yields:
+        - A contiguous slice of the distance matrix, optionally processed by reduce_func.
+        """
+        n_samples_X = X.shape[0]
+        n_samples_Y = Y.shape[0] if Y is not None else n_samples_X
+        chunk_size = int(working_memory * 1024 ** 2 / (n_samples_Y * X.itemsize))
+>       for chunk_start, chunk_stop in gen_batches(n_samples_X, chunk_size):
+E       TypeError: cannot unpack non-iterable slice object
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/temp.py:56: TypeError
+___________ test_pairwise_distances_chunked_reduce_valid[<lambda>6] ____________
+
+good_reduce = <function <listcomp>.<lambda> at 0x7eb876085310>
+
+    @pytest.mark.parametrize(
+        "good_reduce",
+        [
+            lambda D, start: list(D),
+            lambda D, start: np.array(D),
+            lambda D, start: (list(D), list(D)),
+        ]
+        + [
+            lambda D, start, scipy_csr_type=scipy_csr_type: scipy_csr_type(D)
+            for scipy_csr_type in CSR_CONTAINERS
+        ]
+        + [
+            lambda D, start, scipy_dok_type=scipy_dok_type: (
+                scipy_dok_type(D),
+                np.array(D),
+                list(D),
+            )
+            for scipy_dok_type in DOK_CONTAINERS
+        ],
+    )
+    def test_pairwise_distances_chunked_reduce_valid(good_reduce):
+        X = np.arange(10).reshape(-1, 1)
+        S_chunks = pairwise_distances_chunked(
+            X, None, reduce_func=good_reduce, working_memory=64
+        )
+>       next(S_chunks)
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py:638: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+X = array([[0],
+       [1],
+       [2],
+       [3],
+       [4],
+       [5],
+       [6],
+       [7],
+       [8],
+       [9]])
+Y = None, reduce_func = None, metric = 'euclidean', n_jobs = 1
+working_memory = 1024, kwds = {}, n_samples_X = 10, n_samples_Y = 10
+chunk_size = 13421772
+
+    def pairwise_distances_chunked(X: np.ndarray, Y: Optional[np.ndarray]=None, reduce_func: Optional[Callable[[np.ndarray, Tuple[int, int]], Any]]=None, metric: str='euclidean', n_jobs: int=1, working_memory: int=1024, **kwds) -> Iterator:
+        """
+        Compute pairwise distances in chunks and optionally apply a reduction function.
+    
+        Parameters:
+        - X: np.ndarray
+            An array of shape (n_samples_X, n_features).
+        - Y: np.ndarray, optional
+            An array of shape (n_samples_Y, n_features). If None, Y is assumed to be equal to X.
+        - reduce_func: callable, optional
+            A function to apply to each chunk of the distance matrix.
+        - metric: str, default='euclidean'
+            The distance metric to use.
+        - n_jobs: int, default=1
+            The number of jobs to use for the computation.
+        - working_memory: int, default=1024
+            The amount of memory (in MB) to use for computing the distance matrix.
+        - **kwds: additional keyword arguments
+            Additional arguments to pass to the distance function.
+    
+        Yields:
+        - A contiguous slice of the distance matrix, optionally processed by reduce_func.
+        """
+        n_samples_X = X.shape[0]
+        n_samples_Y = Y.shape[0] if Y is not None else n_samples_X
+        chunk_size = int(working_memory * 1024 ** 2 / (n_samples_Y * X.itemsize))
+>       for chunk_start, chunk_stop in gen_batches(n_samples_X, chunk_size):
+E       TypeError: cannot unpack non-iterable slice object
+
+/local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/temp.py:56: TypeError
+=========================== short test summary info ============================
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>0]
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>1]
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>2]
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>3]
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>4]
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>5]
+FAILED ../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>6]
+============================== 7 failed in 0.36s ===============================
+
+
+Final Test Result:
+============================= test session starts ==============================
+platform linux -- Python 3.9.0, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/scikit-learn/scikit-learn
+configfile: setup.cfg
+plugins: cov-6.0.0
+collecting ... collected 7 items
+
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>0] I: Seeding RNGs with 239495784
+PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>3] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>4] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>5] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>6] PASSED
+
+============================== 7 passed in 0.14s ===============================
+
+
+Initial Result:
+============================= test session starts ==============================
+platform linux -- Python 3.9.0, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/scikit-learn/scikit-learn/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /local/data0/moved_data/publishablew/scikit-learn/scikit-learn
+configfile: setup.cfg
+plugins: cov-6.0.0
+collecting ... collected 7 items
+
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>0] I: Seeding RNGs with 223855573
+PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>1] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>2] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>3] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>4] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>5] PASSED
+../../../../../../local/data0/moved_data/publishablew/scikit-learn/scikit-learn/sklearn/metrics/tests/test_pairwise.py::test_pairwise_distances_chunked_reduce_valid[<lambda>6] PASSED
+
+============================== 7 passed in 0.14s ===============================

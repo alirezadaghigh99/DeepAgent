@@ -1,0 +1,14 @@
+stage: Training
+task: 
+data: 
+
+prompt:
+Create a Python function called jacobians_naive that calculates the Jacobian matrix of a given model with respect to the input data. The function takes in two parameters: model (the neural network model) and data (the input data). The function first initializes the gradients to zero using model.zero_grad(), then computes the output of the model on the input data. It then iterates through the elements of the output tensor f, computing the gradients of each element with respect to the model parameters. The function handles cases where the output tensor f has multiple dimensions by iterating through each dimension. Finally, the function returns the Jacobian matrix Jacs and the output tensor f, both detached from the computation graph.
+
+ ground Truth:tests/utils.py
+
+ repo:Laplace
+
+ function:jacobians_naive
+ 
+ test_cases:tests/test_jacobians.py

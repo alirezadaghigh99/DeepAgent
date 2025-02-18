@@ -1,0 +1,15 @@
+stage: Model Construction
+task: Prediction
+data: Image
+
+prompt:
+Write a Python function `flow_to_image` that converts an optical flow tensor into an RGB image tensor. The input `flow` tensor should have a shape of either `(2, H, W)` or `(N, 2, H, W)` and must be of type `torch.float`. The function should normalize the flow values, convert the normalized flow into an RGB image, and return the resulting image tensor with a shape of either `(3, H, W)` or `(N, 3, H, W)`, depending on the input. Raise a `ValueError` if the flow tensor does not meet the expected shape or dtype.
+
+ ground Truth:torchvision/utils.py
+
+ repo:vision
+
+ function:flow_to_image
+ 
+ test_cases:test/test_utils.py::test_flow_to_image
+

@@ -1,0 +1,171 @@
+output file:
+processed_classes-korniacompute_transformation,115.json
+function:
+compute_transformation
+Error Cases:
+
+Pass or Failed: 1
+
+Related Failed Test Cases:
+set()
+
+All Test Cases On Generated code:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python3
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'inductor', 'openxla', 'onnxrt', 'tvm', 'jit', None, 'cudagraphs'}
+model weights cached: ['checkpoints']
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 16 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_smoke XFAIL [  6%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_no_padding[cpu-float32] PASSED [ 12%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_no_padding_batch[cpu-float32] PASSED [ 18%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_same_on_batch[cpu-float32] PASSED [ 25%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_padding[cpu-float32] PASSED [ 31%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_padding_batch_1[cpu-float32] PASSED [ 37%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_padding_batch_2[cpu-float32] PASSED [ 43%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_padding_batch_3[cpu-float32] PASSED [ 50%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_padding_no_forward[cpu-float32] PASSED [ 56%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_pad_if_needed_width[cpu-float32] PASSED [ 62%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_pad_if_needed_height[cpu-float32] PASSED [ 68%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_pad_if_needed_both[cpu-float32] PASSED [ 75%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_crop_modes[cpu-float32] PASSED [ 81%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_gradcheck[cpu] SKIPPED [ 87%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_jit[cpu-float32] SKIPPED [ 93%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_jit_trace[cpu-float32] SKIPPED [100%]
+
+=================== 12 passed, 3 skipped, 1 xfailed in 0.41s ===================
+
+
+Final Test Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python3
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'openxla', 'onnxrt', 'cudagraphs', 'tvm', 'jit', 'inductor', None}
+model weights cached: ['checkpoints']
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 16 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_smoke XFAIL [  6%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_no_padding[cpu-float32] PASSED [ 12%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_no_padding_batch[cpu-float32] PASSED [ 18%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_same_on_batch[cpu-float32] PASSED [ 25%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_padding[cpu-float32] PASSED [ 31%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_padding_batch_1[cpu-float32] PASSED [ 37%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_padding_batch_2[cpu-float32] PASSED [ 43%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_padding_batch_3[cpu-float32] PASSED [ 50%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_padding_no_forward[cpu-float32] PASSED [ 56%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_pad_if_needed_width[cpu-float32] PASSED [ 62%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_pad_if_needed_height[cpu-float32] PASSED [ 68%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_pad_if_needed_both[cpu-float32] PASSED [ 75%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_crop_modes[cpu-float32] PASSED [ 81%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_gradcheck[cpu] SKIPPED [ 87%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_jit[cpu-float32] SKIPPED [ 93%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_jit_trace[cpu-float32] SKIPPED [100%]
+
+=================== 12 passed, 3 skipped, 1 xfailed in 0.41s ===================
+
+
+Initial Result:
+Setting up torch compile...
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-8.3.3, pluggy-1.5.0 -- /local/data0/moved_data/publishablew/kornia/kornia/venv/bin/python3
+cachedir: .pytest_cache
+
+cpu info:
+	- Model name: AMD Ryzen 7 PRO 5845 8-Core Processor
+	- Architecture: x86_64
+	- CPU(s): 16
+	- Thread(s) per core: 2
+	- CPU max MHz: 4661.7178
+	- CPU min MHz: 2200.0000
+gpu info: {'GPU 0': 'NVIDIA GeForce RTX 3060'}
+main deps:
+    - kornia-0.7.4
+    - torch-2.5.1+cu124
+        - commit: a8d6afb511a69687bbb2b7e88a3cf67917e1697e
+        - cuda: 12.4
+        - nvidia-driver: 555.42.02
+x deps:
+    - accelerate-1.1.1
+dev deps:
+    - kornia_rs-0.1.7
+    - onnx-1.17.0
+gcc info: (Ubuntu 10.5.0-1ubuntu1~22.04) 10.5.0
+available optimizers: {'', 'cudagraphs', 'onnxrt', 'tvm', 'jit', 'openxla', 'inductor', None}
+model weights cached: ['checkpoints']
+
+rootdir: /local/data0/moved_data/publishablew/kornia/kornia
+configfile: pyproject.toml
+plugins: timeout-2.3.1, jaxtyping-0.2.38
+collecting ... collected 16 items
+
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_smoke XFAIL [  6%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_no_padding[cpu-float32] PASSED [ 12%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_no_padding_batch[cpu-float32] PASSED [ 18%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_same_on_batch[cpu-float32] PASSED [ 25%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_padding[cpu-float32] PASSED [ 31%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_padding_batch_1[cpu-float32] PASSED [ 37%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_padding_batch_2[cpu-float32] PASSED [ 43%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_padding_batch_3[cpu-float32] PASSED [ 50%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_padding_no_forward[cpu-float32] PASSED [ 56%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_pad_if_needed_width[cpu-float32] PASSED [ 62%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_pad_if_needed_height[cpu-float32] PASSED [ 68%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_pad_if_needed_both[cpu-float32] PASSED [ 75%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_crop_modes[cpu-float32] PASSED [ 81%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_gradcheck[cpu] SKIPPED [ 87%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_jit[cpu-float32] SKIPPED [ 93%]
+../../../../../../local/data0/moved_data/publishablew/kornia/kornia/tests/augmentation/test_augmentation.py::TestRandomCrop::test_jit_trace[cpu-float32] SKIPPED [100%]
+
+=================== 12 passed, 3 skipped, 1 xfailed in 0.41s ===================

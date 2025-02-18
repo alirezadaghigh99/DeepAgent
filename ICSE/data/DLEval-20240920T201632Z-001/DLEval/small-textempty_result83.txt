@@ -1,0 +1,24 @@
+stage: Evaluating&Metrics
+task: Classification
+data: Text
+
+prompt:
+Generate a Python function called empty_result that returns an empty classification result. The function takes in the following parameters:
+- multi_label: a boolean indicating a multi-label setting if True, otherwise a single-label setting if False
+- num_classes: an integer representing the number of classes
+- return_prediction: a boolean, defaulting to True, indicating whether to return an empty result of prediction
+- return_proba: a boolean, defaulting to True, indicating whether to return an empty result of probabilities
+
+The function ensures that at least one of 'prediction' and 'proba' must be True. It returns the following outputs:
+- predictions: an empty ndarray of predictions if return_prediction is True, with data type np.int64
+- proba: an empty ndarray of probabilities if return_proba is True, with data type float
+
+If neither return_prediction nor return_proba is True, the function raises a ValueError("Invalid usage: At least one of \'prediction\' or \'proba\' must be True") . Depending on the values of multi_label, return_prediction, and return_proba, the function returns empty arrays using either csr_matrix or np.empty.
+
+ ground Truth:small_text/utils/classification.py
+
+ repo:small-text
+
+ function:empty_result
+ 
+ test_cases:tests/unit/small_text/utils/test_classification.py::ClassificationUtilsTest

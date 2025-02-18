@@ -1,0 +1,27 @@
+stage: Pre-Post processing
+task: Classification
+data: 
+
+prompt:
+Generate a Python function called make_circles that creates a dataset with a large circle containing a smaller circle in 2D. The function takes the following parameters:
+
+- n_samples: an integer or a tuple specifying the number of points in the outer and inner circles.
+- shuffle: a boolean indicating whether to shuffle the samples.
+- noise: a float representing the standard deviation of Gaussian noise added to the data.
+- random_state: an integer, RandomState instance, or None for reproducible random number generation.
+- factor: a float specifying the scale factor between the inner and outer circles.
+
+The function returns two arrays:
+- X: an ndarray of shape (n_samples, 2) containing the generated samples.
+- y: an ndarray of shape (n_samples,) with integer labels (0 or 1) for the class membership of each sample.
+
+The function also includes examples of how to use it, including generating the dataset and accessing the shapes of X and y.if len(n_samples) != 2:
+            raise ValueError("When a tuple, n_samples must have exactly two elements.")
+
+ ground Truth:sklearn/datasets/_samples_generator.py
+
+ repo:scikit-learn
+
+ function:make_circles
+ 
+ test_cases:sklearn/datasets/tests/test_samples_generator.py

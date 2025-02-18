@@ -1,0 +1,14 @@
+stage: Pre-Post processing
+task: 
+data: image
+
+prompt:
+Generate a Python function called perspective that performs a perspective transformation on an image. The function should accept an image input, which can be either a PIL Image or a PyTorch Tensor, along with startpoints and endpoints, each consisting of four coordinate pairs representing the corners of the original and transformed images, respectively. It should include an interpolation parameter to specify how pixel values are calculated during the transformation, defaulting to BILINEAR. Additionally, an optional fill parameter should be provided to determine the pixel values for areas outside the transformed image. The function should handle errors gracefully, such as ensuring exactly four corner points are provided for both startpoints and endpoints, and raise appropriate exceptions for invalid inputs. The function should utilize underlying helper functions like _get_perspective_coeffs to compute the necessary transformation coefficients and apply the transformation using appropriate methods based on the input type, returning the transformed image as a PIL Image or Tensor.
+
+ ground Truth:torchvision/transforms/functional.py
+
+ repo:vision
+
+ function:perspective
+ 
+ test_cases:test/test_transforms.py::test_randomperspective_fill

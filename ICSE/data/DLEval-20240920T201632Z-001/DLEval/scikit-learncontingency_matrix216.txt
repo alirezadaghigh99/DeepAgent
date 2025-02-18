@@ -1,0 +1,18 @@
+stage: Evaluating&Metrics
+task: 
+data: Table
+
+prompt:
+Generate a Python function called contingency_matrix that builds a contingency matrix describing the relationship between ground truth class labels and cluster labels. The function takes in two array-like inputs: labels_true (ground truth class labels) and labels_pred (cluster labels). Additionally, it has optional parameters eps (float), sparse (bool), and dtype (numeric type). 
+
+The function returns a contingency matrix of shape [n_classes_true, n_classes_pred], where each element C[i, j] represents the number of samples in true class i and predicted class j. If eps is not None, the dtype of the output array will be float; otherwise, it will be an integer unless specified with the dtype argument. If sparse is True, a sparse CSR matrix will be returned. 
+
+An example usage of the function is provided in the docstring, where labels_true and labels_pred are given as input, and the resulting contingency matrix is shown.
+
+ ground Truth:sklearn/metrics/cluster/_supervised.py
+
+ repo:scikit-learn
+
+ function:contingency_matrix
+ 
+ test_cases:sklearn/metrics/cluster/tests/test_supervised.py

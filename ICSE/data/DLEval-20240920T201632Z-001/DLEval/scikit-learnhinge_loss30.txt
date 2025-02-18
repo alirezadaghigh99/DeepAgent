@@ -1,0 +1,23 @@
+stage: Evaluating&Metrics
+task: Classificatoin
+data: Table
+
+prompt:
+Create a Python function called hinge_loss that calculates the average hinge loss for binary or multiclass classification tasks. The function takes in the following parameters:
+
+- y_true: an array-like object containing the true target values, encoded as integers (+1 and -1 for binary classification).
+- pred_decision: an array-like object containing the predicted decision values.
+- labels: an optional array-like object containing all the labels for multiclass hinge loss.
+- sample_weight: an optional array-like object containing sample weights.
+
+The function returns the average hinge loss as a float value. The hinge loss is calculated based on the margin between the true and predicted values, and it serves as an upper bound for the number of classification mistakes made by the classifier.
+
+The function handles both binary and multiclass cases, applying different calculations based on the number of unique labels present in the target values. The implementation includes error handling for different scenarios and utilizes NumPy functions for efficient computation.
+
+ ground Truth:sklearn/metrics/_classification.py
+
+ repo:scikit-learn
+
+ function:hinge_loss
+ 
+ test_cases:sklearn/metrics/tests/test_classification.py

@@ -1,0 +1,14 @@
+stage: Evaluating&Metrics
+task: 
+data: Table
+
+prompt:
+Generate a Python function called compute_py that computes the prior probability of true class labels based on observed noisy labels, noise matrices, and inverse noise matrices. The function takes in parameters ps, noise_matrix, inverse_noise_matrix, py_method, and true_labels_class_counts. The function returns an array py of shape (K,) or (1, K) containing the prior probability of each true class label. The function includes error handling for invalid input shapes and missing parameters, and uses different methods (cnt, eqn, marginal, marginal_ps) to compute the prior probabilities based on the specified py_method. The output array py is clipped to ensure values are between 0 and 1.
+
+ ground Truth:cleanlab/internal/latent_algebra.py
+
+ repo:cleanlab
+
+ function:compute_py
+ 
+ test_cases:tests/test_latent_algebra.py
